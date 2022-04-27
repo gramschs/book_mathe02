@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Potenzreihen &#8212; Mathematik 2 Maschinenbau</title>
+    <title>Fourier-Reihen &#8212; Mathematik 2 Maschinenbau</title>
     
   <link href="_static/css/theme.css" rel="stylesheet">
   <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -85,19 +85,19 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="intro.html">
-   Willkommen zum interaktiven Vorlesungsskript Mathematik 2
+   Willkommen zur Materialsammlung Mathematik 2
   </a>
  </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  Funktionenreihen
+  Part 2. Funktionenreihen
  </span>
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="part04a.html">
-   Potenzreihen
+  <a class="reference internal" href="part03.html">
+   Reihen
   </a>
  </li>
 </ul>
@@ -141,7 +141,7 @@ const thebe_selector_output = ".output, .cell_output"
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/part04aold.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="_sources/part05.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
@@ -179,7 +179,7 @@ const thebe_selector_output = ".output, .cell_output"
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/gramschs/book_mathe02/master?urlpath=tree/docs/part04aold.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/gramschs/book_mathe02/master?urlpath=tree/docs/part05.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="_static/images/logo_binder.svg"
@@ -196,6 +196,19 @@ const thebe_selector_output = ".output, .cell_output"
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#lernziele-fourier-reihen">
+   Lernziele Fourier-Reihen
+  </a>
+ </li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -203,63 +216,44 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Potenzreihen</h1>
+                <h1>Fourier-Reihen</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#lernziele-fourier-reihen">
+   Lernziele Fourier-Reihen
+  </a>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
             
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="potenzreihen">
-<h1>Potenzreihen<a class="headerlink" href="#potenzreihen" title="Permalink to this headline">¶</a></h1>
-<p>Blablabla…</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">IFrame</span>
-
-<span class="c1">## Youtube</span>
-<span class="c1">#HTML(&#39;&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/S_f2qV2_U00?rel=0&amp;amp;controls=0&amp;amp;showinfo=0&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;&#39;)</span>
-
-
-<span class="c1">#IFrame(src, width, height, extras: Optional[Iterable[str]] = None, **kwargs)</span>
-<span class="n">IFrame</span><span class="p">(</span><span class="n">src</span><span class="o">=</span><span class="s2">&quot;https://www.youtube.com/embed/S_f2qV2_U00?rel=0&amp;amp;controls=0&amp;amp;showinfo=0&quot;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="s1">&#39;800px&#39;</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="s1">&#39;600px&#39;</span><span class="p">)</span>
-</pre></div>
+  <div class="tex2jax_ignore mathjax_ignore section" id="fourier-reihen">
+<h1>Fourier-Reihen<a class="headerlink" href="#fourier-reihen" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="lernziele-fourier-reihen">
+<h2>Lernziele Fourier-Reihen<a class="headerlink" href="#lernziele-fourier-reihen" title="Permalink to this headline">¶</a></h2>
+<div class="tip admonition">
+<p class="admonition-title">Lernziele</p>
+<ul class="simple">
+<li><p>Sie können erklären, was eine <strong>periodische Funktion</strong> ist.</p></li>
+<li><p>Sie können von einer periodischen Funktion die <strong>Periode</strong> bestimmen.</p></li>
+<li><p>Sie kennen die Kriterien, wann eine Funktion in eine <strong>Fourier-Reihe</strong> entwickelt werden darf.</p></li>
+<li><p>Sie können eine periodische Funktion in eine Fourier-Reihe umschreiben.</p></li>
+<li><p>Sie können die <strong>Fourier-Koeffizienten</strong> berechnen.</p></li>
+</ul>
 </div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_html">
-<iframe
-    width="800px"
-    height="600px"
-    src="https://www.youtube.com/embed/S_f2qV2_U00?rel=0&amp;controls=0&amp;showinfo=0"
-    frameborder="0"
-    allowfullscreen
-
-></iframe>
-</div></div>
-</div>
-<p>Hallo</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">IFrame</span><span class="p">(</span><span class="n">src</span><span class="o">=</span><span class="s1">&#39;https://www.geogebra.org/m/g2yy78pa&#39;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="s1">&#39;800px&#39;</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="s1">&#39;600px&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_html">
-<iframe
-    width="800px"
-    height="600px"
-    src="https://www.geogebra.org/m/g2yy78pa"
-    frameborder="0"
-    allowfullscreen
-
-></iframe>
-</div></div>
 </div>
 </div>
 

@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Potenzreihen und Taylorreihen &#8212; Maschinelles Lernen für Studierende der Ingenieurwissenschaften</title>
+    <title>Reihen &#8212; Mathematik 2 Maschinenbau</title>
     
   <link href="_static/css/theme.css" rel="stylesheet">
   <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -51,7 +51,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="Willkommen zum interaktiven Vorlesungsskript Mathematik 2" href="intro.html" />
+    <link rel="prev" title="Willkommen zur Materialsammlung Mathematik 2" href="intro.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -75,7 +75,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <h1 class="site-logo" id="site-title">Maschinelles Lernen für Studierende der Ingenieurwissenschaften</h1>
+      <h1 class="site-logo" id="site-title">Mathematik 2 Maschinenbau</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
@@ -86,19 +86,19 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="intro.html">
-   Willkommen zum interaktiven Vorlesungsskript Mathematik 2
+   Willkommen zur Materialsammlung Mathematik 2
   </a>
  </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  Funktionenreihen
+  Part 2. Funktionenreihen
  </span>
 </p>
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Potenzreihen und Taylorreihen
+   Reihen
   </a>
  </li>
 </ul>
@@ -142,7 +142,7 @@ const thebe_selector_output = ".output, .cell_output"
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/part04.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="_sources/part03.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
@@ -158,7 +158,7 @@ const thebe_selector_output = ".output, .cell_output"
         aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
     <div class="dropdown-buttons sourcebuttons">
         <a class="repository-button"
-            href="https://github.com/gramschs/book_ml4ing"><button type="button" class="btn btn-secondary topbarbtn"
+            href="https://github.com/gramschs/book_mathe02"><button type="button" class="btn btn-secondary topbarbtn"
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         
@@ -180,7 +180,7 @@ const thebe_selector_output = ".output, .cell_output"
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/gramschs/book_ml4ing/master?urlpath=tree/docs/part04.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/gramschs/book_mathe02/master?urlpath=tree/docs/part03.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="_static/images/logo_binder.svg"
@@ -197,6 +197,34 @@ const thebe_selector_output = ".output, .cell_output"
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#reihen-werden-aus-folgen-gebildet">
+   Reihen werden aus Folgen gebildet
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bekannte-beispiele-sind-die-geometrische-und-die-harmonische-reihe">
+   Bekannte Beispiele sind die geometrische und die harmonische Reihe
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#konvergiert-die-reihe-oder-divergiert-sie">
+   Konvergiert die Reihe oder divergiert sie?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#zusatzmaterial">
+   Zusatzmaterial
+  </a>
+ </li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -204,20 +232,201 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Potenzreihen und Taylorreihen</h1>
+                <h1>Reihen</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#reihen-werden-aus-folgen-gebildet">
+   Reihen werden aus Folgen gebildet
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bekannte-beispiele-sind-die-geometrische-und-die-harmonische-reihe">
+   Bekannte Beispiele sind die geometrische und die harmonische Reihe
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#konvergiert-die-reihe-oder-divergiert-sie">
+   Konvergiert die Reihe oder divergiert sie?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#zusatzmaterial">
+   Zusatzmaterial
+  </a>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
             
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="potenzreihen-und-taylorreihen">
-<h1>Potenzreihen und Taylorreihen<a class="headerlink" href="#potenzreihen-und-taylorreihen" title="Permalink to this headline">¶</a></h1>
-<p>Blablabla…</p>
+  <div class="cell tag_remove-input docutils container">
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="reihen">
+<h1>Reihen<a class="headerlink" href="#reihen" title="Permalink to this headline">¶</a></h1>
+<p>In diesem Kapitel lernen Sie die grundlegenden Begriffe zu Reihen kennen. Neben einigen Beispielen vor allem zu geometrischen und harmonischen Reihen widmen wir uns der Konvergenz von Reihen.</p>
+<div class="tip admonition">
+<p class="admonition-title">Lernziele</p>
+<ul class="simple">
+<li><p>Sie können den Fachbegriff <strong>Reihe</strong> erklären.</p></li>
+<li><p>Sie können den Fachbegriff <strong>Partialsumme</strong> einer Reihe erklären.</p></li>
+<li><p>Sie kennen als Beispiel für Reihen die</p>
+<ul>
+<li><p><strong>arithmetische Reihe</strong>,</p></li>
+<li><p><strong>geometrische Reihe</strong> und</p></li>
+<li><p><strong>harmonische Reihe</strong>.</p></li>
+</ul>
+</li>
+<li><p>Sie können den Fachbegriff <strong>alternierende Reihe</strong> erklären.</p></li>
+<li><p>Sie können den Fachbegriff <strong>Konvergenz</strong> einer Reihe erklären.</p></li>
+<li><p>Sie können mit den <strong>Konvergenzkriterien</strong> überprüfen, ob eine Reihe konvergiert, indem Sie die folgenden Kriterien anwenden können:</p>
+<ul>
+<li><p><strong>Leibniz-Kriterium für alternierende Reihen</strong>,</p></li>
+<li><p><strong>Quotientenkriterium</strong> oder</p></li>
+<li><p><strong>Wurzelkriterium</strong>.</p></li>
+</ul>
+</li>
+<li><p>Sie können den Fachbegriff <strong>absolut konvergente Reihe</strong> erklären.</p></li>
+</ul>
+</div>
+<div class="section" id="reihen-werden-aus-folgen-gebildet">
+<h2>Reihen werden aus Folgen gebildet<a class="headerlink" href="#reihen-werden-aus-folgen-gebildet" title="Permalink to this headline">¶</a></h2>
+<p>In dem folgenden Video werden sowohl die grundlegenden Begriffe zum Thema Reihen erklärt als auch das Thema Konvergenz und Divergenz von Reihen erläutert.</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html">
+<iframe
+    width="560"
+    height="315"
+    src="https://www.youtube.com/embed/1vQ67chDVbU"
+    frameborder="0"
+    allowfullscreen
+
+></iframe>
+</div></div>
+</div>
+</div>
+<div class="section" id="bekannte-beispiele-sind-die-geometrische-und-die-harmonische-reihe">
+<h2>Bekannte Beispiele sind die geometrische und die harmonische Reihe<a class="headerlink" href="#bekannte-beispiele-sind-die-geometrische-und-die-harmonische-reihe" title="Permalink to this headline">¶</a></h2>
+<p>In den folgenden beiden Videos werden zunächst die geometrische Reihe und dann die harmonische Reihe erklärt.</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html">
+<iframe
+    width="560"
+    height="315"
+    src="https://www.youtube.com/embed/y_9ccgrwTZo"
+    frameborder="0"
+    allowfullscreen
+
+></iframe>
+</div></div>
+</div>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html">
+<iframe
+    width="560"
+    height="315"
+    src="https://www.youtube.com/embed/n2ELwRkgKhc"
+    frameborder="0"
+    allowfullscreen
+
+></iframe>
+</div></div>
+</div>
+</div>
+<div class="section" id="konvergiert-die-reihe-oder-divergiert-sie">
+<h2>Konvergiert die Reihe oder divergiert sie?<a class="headerlink" href="#konvergiert-die-reihe-oder-divergiert-sie" title="Permalink to this headline">¶</a></h2>
+<p>In dem ersten Video wird zunächst auf die Konvergenz von Reihen eingegangen. Danach werden die Kriterien zur Bestimmung der Konvergenz</p>
+<ul class="simple">
+<li><p>Leibniz-Kriterium,</p></li>
+<li><p>Wurzelkriterium und</p></li>
+<li><p>Quotientenkriterium</p></li>
+</ul>
+<p>vorgestellt.</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html">
+<iframe
+    width="560"
+    height="315"
+    src="https://www.youtube.com/embed/aGnAseEnfG0"
+    frameborder="0"
+    allowfullscreen
+
+></iframe>
+</div></div>
+</div>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html">
+<iframe
+    width="560"
+    height="315"
+    src="https://www.youtube.com/embed/_8_Q6g8-QxA"
+    frameborder="0"
+    allowfullscreen
+
+></iframe>
+</div></div>
+</div>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html">
+<iframe
+    width="560"
+    height="315"
+    src="https://www.youtube.com/embed/G1GSAFrd6mE"
+    frameborder="0"
+    allowfullscreen
+
+></iframe>
+</div></div>
+</div>
+</div>
+<div class="section" id="zusatzmaterial">
+<h2>Zusatzmaterial<a class="headerlink" href="#zusatzmaterial" title="Permalink to this headline">¶</a></h2>
+<p>Wer es musikalisch mag, kann auch gerne sich den Mathe-Song von DorFuchs zur Konvergenz der geometrischen Reihe anhören:</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html">
+<iframe
+    width="560"
+    height="315"
+    src="https://www.youtube.com/embed/2TCDiK7GpNM"
+    frameborder="0"
+    allowfullscreen
+
+></iframe>
+</div></div>
+</div>
+<p>Hier wird ein Beispiel zur Konvergenz von Reihen mit dem Quotientenkriterium erklärt:</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html">
+<iframe
+    width="560"
+    height="315"
+    src="https://www.youtube.com/embed/p3BPRuk0Wwk"
+    frameborder="0"
+    allowfullscreen
+
+></iframe>
+</div></div>
+</div>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -249,7 +458,7 @@ const thebe_selector_output = ".output, .cell_output"
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Willkommen zum interaktiven Vorlesungsskript Mathematik 2</p>
+            <p class="prev-next-title">Willkommen zur Materialsammlung Mathematik 2</p>
         </div>
     </a>
 </div>
