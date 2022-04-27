@@ -4,11 +4,15 @@
 format: jb-book
 root: intro
 parts:
-- caption: Funktionenreihen
+- caption: Part 2. Funktionenreihen
   chapters:
-  - file: part04a
-    title: Potenzreihen
-  - file: part04b
-    title: Taylorreihen
+  - file: part03
+    title: Reihen
+#  - file: part04a
+#    title: Potenzreihen
+#  - file: part04b
+#    title: Taylorreihen
+#  - file: part05
+#    title: Fourier-Reihen
 
   
