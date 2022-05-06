@@ -8,11 +8,11 @@ parts:
   chapters:
   - file: part03
     title: Reihen
-#  - file: part04a
-#    title: Potenzreihen
-#  - file: part04b
-#    title: Taylorreihen
-#  - file: part05
-#    title: Fourier-Reihen
+  - file: part04a
+    title: Potenzreihen
+  - file: part04b
+    title: Taylorreihen
+  - file: part05
+    title: Fourier-Reihen
 
   
