@@ -29,6 +29,7 @@
     <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="_static/exercise.css" />
+    <link rel="stylesheet" type="text/css" href="_static/proof.css" />
     <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
@@ -38,9 +39,12 @@
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
-    <script src="_static/togglebutton.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
@@ -49,8 +53,12 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Taylorreihen" href="part04b.html" />
+    <link rel="prev" title="Reihen" href="part03.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -94,10 +102,25 @@ const thebe_selector_output = ".output, .cell_output"
   Part 2. Funktionenreihen
  </span>
 </p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="part03.html">
    Reihen
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Potenzreihen
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="part04b.html">
+   Taylorreihen
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="part05.html">
+   Fourier-Reihen
   </a>
  </li>
 </ul>
@@ -196,6 +219,29 @@ const thebe_selector_output = ".output, .cell_output"
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#potenzreihen-sind-auch-nur-reihen-aber-reihen-von-potenzfunktionen">
+   Potenzreihen sind auch nur Reihen, aber Reihen von Potenzfunktionen
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#manchmal-kann-man-eine-funktion-mit-einer-potenzreihe-approximieren-manchmal-nicht">
+   Manchmal kann man eine Funktion mit einer Potenzreihe approximieren, manchmal nicht
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#der-konvergenzradius-entscheidet-ob-und-wo-eine-funktion-durch-potenzreihen-approximiert-werden-kann">
+   Der Konvergenzradius entscheidet, ob und wo eine Funktion durch Potenzreihen approximiert werden kann
+  </a>
+ </li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -208,15 +254,165 @@ const thebe_selector_output = ".output, .cell_output"
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#potenzreihen-sind-auch-nur-reihen-aber-reihen-von-potenzfunktionen">
+   Potenzreihen sind auch nur Reihen, aber Reihen von Potenzfunktionen
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#manchmal-kann-man-eine-funktion-mit-einer-potenzreihe-approximieren-manchmal-nicht">
+   Manchmal kann man eine Funktion mit einer Potenzreihe approximieren, manchmal nicht
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#der-konvergenzradius-entscheidet-ob-und-wo-eine-funktion-durch-potenzreihen-approximiert-werden-kann">
+   Der Konvergenzradius entscheidet, ob und wo eine Funktion durch Potenzreihen approximiert werden kann
+  </a>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
             
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="potenzreihen">
+  <div class="cell tag_remove-input docutils container">
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="potenzreihen">
 <h1>Potenzreihen<a class="headerlink" href="#potenzreihen" title="Permalink to this headline">¶</a></h1>
-<p>TODO</p>
+<p>Polynome haben schöne Eigenschaften, vor allem sind sie einfach abzuleiten oder zu integrieren. In der Praxis ist es daher oft sinnvoll, “schwierige” Funktionen durch Polynome zu ersetzen, auch wenn man dafür Fehler macht.</p>
+<p>Diese Vorgehensweise wird <strong>Approximation</strong> genannt, zu deutsch Annäherung. Für Zahlen haben Sie dies schon kennengelernt. Wenn Sie beispielsweise den Flächeninhalt <span class="math notranslate nohighlight">\(A\)</span> eines Kreises mit Radius <span class="math notranslate nohighlight">\(r = 3 \,\text{m}\)</span> berechnen wollen, so gilt <span class="math notranslate nohighlight">\(A = \pi \cdot r^2 = 9\pi\)</span>. Da aber <span class="math notranslate nohighlight">\(\pi\)</span> unendlich viele Nachkommastellen hat, legen Sie fest, wie genau die Annäherung an den wahren Flächeninhalt sein soll, indem Sie die Anzahl der Nachkommastellen festlegen. Reichen Ihnen beispielsweise 2 Nachkommastellen, also <span class="math notranslate nohighlight">\(\pi \approx 3.14\)</span>, so erhalten Sie <span class="math notranslate nohighlight">\(A = 28.27 \,\text{m}^2\)</span>.</p>
+<p>In diesem Kapitel geht es um Potenzreihen und die Approximation von Funktionen durch Potenzreihen. Um den Inhalt dieses Kapitels zu verstehen, werden Kentnisse zu</p>
+<ul class="simple">
+<li><p>Reihen, insbesondere die geometrische Reihe</p></li>
+<li><p>Konvergenz von Reihen</p></li>
+<li><p>Konvergenzkriterien für Reihen wie beispielsweise</p>
+<ul>
+<li><p>Quotientenkriterium</p></li>
+<li><p>Wurzelkriterium</p></li>
+</ul>
+</li>
+</ul>
+<p>vorausgesetzt.</p>
+<div class="tip admonition">
+<p class="admonition-title">Lernziele</p>
+<ul class="simple">
+<li><p>Sie können den Unterschied zwischen einer <strong>Potenzreihe</strong> und einer Reihe erklären.</p></li>
+<li><p>Sie können die <strong>spezielle Darstellungsform einer Potenzreihe</strong></p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[p(x)=\sum_{k=0}^{\infty}a_k x^k\]</div>
+<p>auswendig aufschreiben.</p>
+<ul class="simple">
+<li><p>Sie können die <strong>allgemeine Darstellungsform einer Potenzreihe</strong></p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[p(x)=\sum_{k=0}^{\infty}a_k (x-x_0)^k\]</div>
+<p>auswendig aufschreiben und erklären, was ein <strong>Entwicklungspunkt</strong> ist.</p>
+<ul class="simple">
+<li><p>Sie können erklären, was der <strong>Konvergenzbereich</strong> einer Potenzreihe ist.</p></li>
+<li><p>Sie können den Konvergenzbereich einer Potenzreihe geometrisch interpretieren und anhand des <strong>Konvergenzradius</strong> entscheiden, ob eine Potenzreihe konvergiert oder divergiert oder berechnen, was in den <strong>Randpunkten</strong> passiert.</p></li>
+<li><p>Sie kennen zwei Formeln auswendig, um den Konvergenzradius <span class="math notranslate nohighlight">\(r\)</span> einer Potenzreihe zu berechnen, nämlich</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[r = \lim_{k\to\infty}\left| \frac{a_k}{a_{k+1}}\right| \quad \text{ und } \quad r = \lim_{k\to\infty}\frac{1}{\sqrt[k]{|a_k|}},\]</div>
+<p>und können diese auch anwenden.</p>
+</div>
+<div class="section" id="potenzreihen-sind-auch-nur-reihen-aber-reihen-von-potenzfunktionen">
+<h2>Potenzreihen sind auch nur Reihen, aber Reihen von Potenzfunktionen<a class="headerlink" href="#potenzreihen-sind-auch-nur-reihen-aber-reihen-von-potenzfunktionen" title="Permalink to this headline">¶</a></h2>
+<p>Bisher haben wir Zahlenfolgen aufsummiert und die Folge der Partialsummen als Reihe bezeichnet. Nun summieren wir Potenzfunktionen auf. Zur Erinnerung, Potenzfunktionen (manchmal auch kurz als Potenz bezeichnet) sind die Funktionen</p>
+<div class="math notranslate nohighlight">
+\[1, x^1, x^2, x^3, \ldots.\]</div>
+<div class="proof definition admonition" id="def:04a:01">
+<p class="admonition-title"><span class="caption-number">Definition 1 </span></p>
+<div class="definition-content section" id="proof-content">
+<p>Eine <strong>Potenzreihe</strong> ist eine Reihe vom Typ</p>
+<div class="math notranslate nohighlight">
+\[p(x)=a_0 + a_1x + a_2x^2 + a_3 x^3 + \ldots = \sum_{k=0}^{\infty}a_k x^k.\]</div>
+<p>Die reellen Zahlen <span class="math notranslate nohighlight">\(a_0, a_1, a_2, \ldots\)</span> nennt man <strong>Koeffizienten</strong> der Potenzreihe.</p>
+</div>
+</div><p>Etwas allgemeiner formulieren wir die Potenzreihe als</p>
+<div class="math notranslate nohighlight">
+\[p(x)=a_0 + a_1\cdot(x-x_0) + a_2\cdot(x-x_0)^2 + a_3\cdot(x-x_0)^3+\ldots = \sum_{k=0}^{\infty}a_k (x-x_0)^k.\]</div>
+<p>Dabei wird der spezielle Punkt <span class="math notranslate nohighlight">\(x_0\)</span> in der Industrie <strong>Arbeitspunkt</strong> genannt, in der Mathematik sagen wir aber <strong>Entwicklungspunkt</strong>.</p>
+</div>
+<div class="section" id="manchmal-kann-man-eine-funktion-mit-einer-potenzreihe-approximieren-manchmal-nicht">
+<h2>Manchmal kann man eine Funktion mit einer Potenzreihe approximieren, manchmal nicht<a class="headerlink" href="#manchmal-kann-man-eine-funktion-mit-einer-potenzreihe-approximieren-manchmal-nicht" title="Permalink to this headline">¶</a></h2>
+<p>Experiment:</p>
+<ol class="simple">
+<li><p>Gehen Sie mit Ihrem Mauszeiger auf das GeoGebra-Applet und klicken Sie darauf (ggf. auf den Pfeil klicken), um es zu aktivieren.</p></li>
+<li><p>Schauen Sie sich zunächst die Approximation der Kosinusfunktion an. Schieben Sie den Slider für n von 1 bis 30 und beobachten Sie? Ab wann ist Ihrer Meinung nach die Potenzreihe eine gute Approximation der Kosinusfunktion?</p></li>
+<li><p>Ändern Sie jetzt die Funktion und geben Sie <code class="docutils literal notranslate"><span class="pre">f(x)</span> <span class="pre">=</span> <span class="pre">ln(x)</span></code> ein. Schieben Sie den Schieberegler wieder von 1 bis 30. Was beobachten Sie diesmal?</p></li>
+</ol>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html">
+<iframe
+    width="800"
+    height="600"
+    src="https://www.geogebra.org/m/s9SkCsvC"
+    frameborder="0"
+    allowfullscreen
+
+></iframe>
+</div></div>
+</div>
+</div>
+<div class="section" id="der-konvergenzradius-entscheidet-ob-und-wo-eine-funktion-durch-potenzreihen-approximiert-werden-kann">
+<h2>Der Konvergenzradius entscheidet, ob und wo eine Funktion durch Potenzreihen approximiert werden kann<a class="headerlink" href="#der-konvergenzradius-entscheidet-ob-und-wo-eine-funktion-durch-potenzreihen-approximiert-werden-kann" title="Permalink to this headline">¶</a></h2>
+<p>Die folgenden Erklärvideos erklären, wann eine Potenzreihe gegen eine Funktion konvergiert und wie die beiden Konvergenzkriterien</p>
+<ul class="simple">
+<li><p>Quotientenkriterium</p></li>
+<li><p>Wurzelkriterium</p></li>
+</ul>
+<p>funktionieren.</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html">
+<iframe
+    width="560"
+    height="315"
+    src="https://www.youtube.com/embed/69PgueE9CI0"
+    frameborder="0"
+    allowfullscreen
+
+></iframe>
+</div></div>
+</div>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html">
+<iframe
+    width="560"
+    height="315"
+    src="https://www.youtube.com/embed/yO2mP5aToMU"
+    frameborder="0"
+    allowfullscreen
+
+></iframe>
+</div></div>
+</div>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html">
+<iframe
+    width="560"
+    height="315"
+    src="https://www.youtube.com/embed/ConZiKDKA9Q"
+    frameborder="0"
+    allowfullscreen
+
+></iframe>
+</div></div>
+</div>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -231,19 +427,33 @@ const thebe_selector_output = ".output, .cell_output"
             mode: "python"
         },
         kernelOptions: {
-            kernelName: "python397jvsc74a57bd01863971d65633e53ca5b74972b86a14fab6d597ce2ac84dc984546545d2d3a9b",
+            kernelName: "python3",
             path: "./."
         },
         predefinedOutput: true
     }
     </script>
-    <script>kernelName = 'python397jvsc74a57bd01863971d65633e53ca5b74972b86a14fab6d597ce2ac84dc984546545d2d3a9b'</script>
+    <script>kernelName = 'python3'</script>
 
               </div>
               
             
                 <!-- Previous / next buttons -->
-<div class='prev-next-area'>
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="part03.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Reihen</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="part04b.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Taylorreihen</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
 </div>
             
         </div>
