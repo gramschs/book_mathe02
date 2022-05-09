@@ -53,6 +53,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="prev" title="Taylorreihen" href="part04b.html" />
@@ -226,6 +228,21 @@ const thebe_selector_output = ".output, .cell_output"
    Lernziele Fourier-Reihen
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#periodische-funktionen-was-ist-das">
+   Periodische Funktionen - was ist das?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#wie-findet-man-zu-einer-periodischen-funktion-die-passende-uberlagerung-von-sinus-und-kosinus-funktionen">
+   Wie findet man zu einer periodischen Funktion die passende Überlagerung von Sinus- und Kosinus-Funktionen?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#wie-werden-die-fourier-koeffizienten-berechnet">
+   Wie werden die Fourier-Koeffizienten berechnet?
+  </a>
+ </li>
 </ul>
 
             </nav>
@@ -251,6 +268,21 @@ const thebe_selector_output = ".output, .cell_output"
    Lernziele Fourier-Reihen
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#periodische-funktionen-was-ist-das">
+   Periodische Funktionen - was ist das?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#wie-findet-man-zu-einer-periodischen-funktion-die-passende-uberlagerung-von-sinus-und-kosinus-funktionen">
+   Wie findet man zu einer periodischen Funktion die passende Überlagerung von Sinus- und Kosinus-Funktionen?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#wie-werden-die-fourier-koeffizienten-berechnet">
+   Wie werden die Fourier-Koeffizienten berechnet?
+  </a>
+ </li>
 </ul>
 
                         </nav>
@@ -262,6 +294,7 @@ const thebe_selector_output = ".output, .cell_output"
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="fourier-reihen">
 <h1>Fourier-Reihen<a class="headerlink" href="#fourier-reihen" title="Permalink to this headline">¶</a></h1>
+<p>Periodische Vorgänge gibt es sowohl in der Natur als auch in der Technik. In der Technik gehören insbesondere Drehbewegungen dazu. Es ist nicht sinnvoll, periodische Funktionen durch Potenzreihen bzw. Taylorpolynome zu approximieren. Stattdessen werden wir periodische Funktionen als Überlagerung von Sinus- und Kosinus-Funktionen approximieren, also sogenannte <strong>Fourier-Reihen</strong>.</p>
 <div class="section" id="lernziele-fourier-reihen">
 <h2>Lernziele Fourier-Reihen<a class="headerlink" href="#lernziele-fourier-reihen" title="Permalink to this headline">¶</a></h2>
 <div class="tip admonition">
@@ -274,6 +307,63 @@ const thebe_selector_output = ".output, .cell_output"
 <li><p>Sie können die <strong>Fourier-Koeffizienten</strong> berechnen.</p></li>
 </ul>
 </div>
+<div class="cell tag_remove-input docutils container">
+</div>
+</div>
+<div class="section" id="periodische-funktionen-was-ist-das">
+<h2>Periodische Funktionen - was ist das?<a class="headerlink" href="#periodische-funktionen-was-ist-das" title="Permalink to this headline">¶</a></h2>
+<p>Bei einer periodischen Funktion wiederholen sich in regelmäßigen Abständen die Funktionswerte wieder. Der Abstand, nachdem sich die Funktionswerte beginnen zu wiederholen, heißt <strong>Periodendauer</strong>.</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html">
+<iframe
+    width="560"
+    height="315"
+    src="https://www.youtube.com/embed/e3lpwsKp75Y"
+    frameborder="0"
+    allowfullscreen
+
+></iframe>
+</div></div>
+</div>
+</div>
+<div class="section" id="wie-findet-man-zu-einer-periodischen-funktion-die-passende-uberlagerung-von-sinus-und-kosinus-funktionen">
+<h2>Wie findet man zu einer periodischen Funktion die passende Überlagerung von Sinus- und Kosinus-Funktionen?<a class="headerlink" href="#wie-findet-man-zu-einer-periodischen-funktion-die-passende-uberlagerung-von-sinus-und-kosinus-funktionen" title="Permalink to this headline">¶</a></h2>
+<p>Kochrezept zur Bestimmung der <strong>Fourier-Reihe</strong>:</p>
+<ol class="simple">
+<li><p>Bestimme <span class="math notranslate nohighlight">\(T\)</span>, also die Periode der Funktion <span class="math notranslate nohighlight">\(f(t)\)</span>.</p></li>
+<li><p>Berechne daraus die Kreisfrequenz der Grundschwingung <span class="math notranslate nohighlight">\(\omega_0 = \frac{2\pi}{T}\)</span>.</p></li>
+<li><p>Berechne die Fourier-Koeffizienten <span class="math notranslate nohighlight">\(a_0\)</span>, <span class="math notranslate nohighlight">\(a_n\)</span> und <span class="math notranslate nohighlight">\(b_n\)</span> entweder allgemein für beliebiges <span class="math notranslate nohighlight">\(n\)</span> oder bis zum geforderten Grad <span class="math notranslate nohighlight">\(n=1, 2, 3, \ldots.\)</span></p></li>
+<li><p>Setze alles in die Formel für die Fourier-Reihe ein:</p></li>
+</ol>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}f(t) = \frac{a_0}{2} &amp;+ a_1\cdot \cos(1\,\omega_0\, t) + b_1\cdot\sin(1\,\omega_0\, t) + \\
+&amp;+ a_2\cdot \cos(2\,\omega_0\, t) + b_2\cdot\sin(2\,\omega_0\, t) +  \\
+&amp;+ a_3\cdot \cos(3\,\omega_0\, t) + b_3\cdot\sin(3\,\omega_0\, t) + \quad \ldots \\
+\end{align*}\]</div>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html">
+<iframe
+    width="560"
+    height="315"
+    src="https://www.youtube.com/embed/-fyxM-mYPkI"
+    frameborder="0"
+    allowfullscreen
+
+></iframe>
+</div></div>
+</div>
+</div>
+<div class="section" id="wie-werden-die-fourier-koeffizienten-berechnet">
+<h2>Wie werden die Fourier-Koeffizienten berechnet?<a class="headerlink" href="#wie-werden-die-fourier-koeffizienten-berechnet" title="Permalink to this headline">¶</a></h2>
+<p>Die Fourier-Koeffizienten werden mit folgenden Formeln berechnet:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+a_0 &amp;= \frac{2}{T}\cdot \int_{T} f(t)\, dt \\
+a_n &amp;= \frac{2}{T}\cdot \int_{T} f(t) \cdot \cos(n\,\omega_0 \,t) \, dt \\
+b_n &amp;= \frac{2}{T}\cdot \int_{T} f(t) \cdot \sin(n\,\omega_0 \,t) \, dt
+\end{align*}\]</div>
 </div>
 </div>
 
