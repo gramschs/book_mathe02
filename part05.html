@@ -39,12 +39,9 @@
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
-    <script>let toggleHintShow = 'Click to show';</script>
-    <script>let toggleHintHide = 'Click to hide';</script>
-    <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
@@ -238,11 +235,6 @@ const thebe_selector_output = ".output, .cell_output"
    Wie findet man zu einer periodischen Funktion die passende Überlagerung von Sinus- und Kosinus-Funktionen?
   </a>
  </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#wie-werden-die-fourier-koeffizienten-berechnet">
-   Wie werden die Fourier-Koeffizienten berechnet?
-  </a>
- </li>
 </ul>
 
             </nav>
@@ -276,11 +268,6 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#wie-findet-man-zu-einer-periodischen-funktion-die-passende-uberlagerung-von-sinus-und-kosinus-funktionen">
    Wie findet man zu einer periodischen Funktion die passende Überlagerung von Sinus- und Kosinus-Funktionen?
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#wie-werden-die-fourier-koeffizienten-berechnet">
-   Wie werden die Fourier-Koeffizienten berechnet?
   </a>
  </li>
 </ul>
@@ -333,36 +320,22 @@ const thebe_selector_output = ".output, .cell_output"
 <ol class="simple">
 <li><p>Bestimme <span class="math notranslate nohighlight">\(T\)</span>, also die Periode der Funktion <span class="math notranslate nohighlight">\(f(t)\)</span>.</p></li>
 <li><p>Berechne daraus die Kreisfrequenz der Grundschwingung <span class="math notranslate nohighlight">\(\omega_0 = \frac{2\pi}{T}\)</span>.</p></li>
-<li><p>Berechne die Fourier-Koeffizienten <span class="math notranslate nohighlight">\(a_0\)</span>, <span class="math notranslate nohighlight">\(a_n\)</span> und <span class="math notranslate nohighlight">\(b_n\)</span> entweder allgemein für beliebiges <span class="math notranslate nohighlight">\(n\)</span> oder bis zum geforderten Grad <span class="math notranslate nohighlight">\(n=1, 2, 3, \ldots.\)</span></p></li>
+<li><p>Berechne die Fourier-Koeffizienten <span class="math notranslate nohighlight">\(a_0\)</span>, <span class="math notranslate nohighlight">\(a_n\)</span> und <span class="math notranslate nohighlight">\(b_n\)</span> entweder allgemein für beliebiges <span class="math notranslate nohighlight">\(n\)</span> oder bis zum geforderten Grad <span class="math notranslate nohighlight">\(n=1, 2, 3, \ldots.\)</span>
+Die Fourier-Koeffizienten werden mit folgenden Formeln berechnet:</p></li>
+</ol>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+a_0 &amp;= \frac{2}{T}\cdot \int_{T} f(t)\, dt \\
+a_n &amp;= \frac{2}{T}\cdot \int_{T} f(t) \cdot \cos(n\,\omega_0 \,t) \, dt \\
+b_n &amp;= \frac{2}{T}\cdot \int_{T} f(t) \cdot \sin(n\,\omega_0 \,t) \, dt
+\end{align*}\]</div>
+<ol class="simple">
 <li><p>Setze alles in die Formel für die Fourier-Reihe ein:</p></li>
 </ol>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}f(t) = \frac{a_0}{2} &amp;+ a_1\cdot \cos(1\,\omega_0\, t) + b_1\cdot\sin(1\,\omega_0\, t) + \\
 &amp;+ a_2\cdot \cos(2\,\omega_0\, t) + b_2\cdot\sin(2\,\omega_0\, t) +  \\
 &amp;+ a_3\cdot \cos(3\,\omega_0\, t) + b_3\cdot\sin(3\,\omega_0\, t) + \quad \ldots \\
-\end{align*}\]</div>
-<div class="cell tag_remove-input docutils container">
-<div class="cell_output docutils container">
-<div class="output text_html">
-<iframe
-    width="560"
-    height="315"
-    src="https://www.youtube.com/embed/-fyxM-mYPkI"
-    frameborder="0"
-    allowfullscreen
-
-></iframe>
-</div></div>
-</div>
-</div>
-<div class="section" id="wie-werden-die-fourier-koeffizienten-berechnet">
-<h2>Wie werden die Fourier-Koeffizienten berechnet?<a class="headerlink" href="#wie-werden-die-fourier-koeffizienten-berechnet" title="Permalink to this headline">¶</a></h2>
-<p>Die Fourier-Koeffizienten werden mit folgenden Formeln berechnet:</p>
-<div class="amsmath math notranslate nohighlight">
-\[\begin{align*}
-a_0 &amp;= \frac{2}{T}\cdot \int_{T} f(t)\, dt \\
-a_n &amp;= \frac{2}{T}\cdot \int_{T} f(t) \cdot \cos(n\,\omega_0 \,t) \, dt \\
-b_n &amp;= \frac{2}{T}\cdot \int_{T} f(t) \cdot \sin(n\,\omega_0 \,t) \, dt
 \end{align*}\]</div>
 </div>
 </div>
