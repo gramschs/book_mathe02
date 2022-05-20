@@ -14,5 +14,9 @@ parts:
     title: Taylorreihen
   - file: part05
     title: Fourier-Reihen
+- caption: Part 3. Mehrdimensionale Analysis
+  chapters:
+  - file: part06
+    title: Partielle Ableitung
 
   
