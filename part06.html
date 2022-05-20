@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Reihen &#8212; Mathematik 2 Maschinenbau</title>
+    <title>Funktionen von mehreren Variablen und partielle Ableitungen &#8212; Mathematik 2 Maschinenbau</title>
     
   <link href="_static/css/theme.css" rel="stylesheet">
   <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -53,10 +53,11 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Potenzreihen" href="part04a.html" />
-    <link rel="prev" title="Willkommen zur Materialsammlung Mathematik 2" href="intro.html" />
+    <link rel="prev" title="Fourier-Reihen" href="part05.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -100,9 +101,9 @@ const thebe_selector_output = ".output, .cell_output"
   Part 2. Funktionenreihen
  </span>
 </p>
-<ul class="current nav bd-sidenav">
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="part03.html">
    Reihen
   </a>
  </li>
@@ -121,8 +122,15 @@ const thebe_selector_output = ".output, .cell_output"
    Fourier-Reihen
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="part06.html">
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Part 3. Mehrdimensionale Analysis
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    Partielle Ableitung
   </a>
  </li>
@@ -167,7 +175,7 @@ const thebe_selector_output = ".output, .cell_output"
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/part03.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="_sources/part06.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
@@ -205,7 +213,7 @@ const thebe_selector_output = ".output, .cell_output"
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/gramschs/book_mathe02/master?urlpath=tree/docs/part03.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/gramschs/book_mathe02/master?urlpath=tree/docs/part06.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="_static/images/logo_binder.svg"
@@ -228,23 +236,28 @@ const thebe_selector_output = ".output, .cell_output"
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#reihen-werden-aus-folgen-gebildet">
-   Reihen werden aus Folgen gebildet
+  <a class="reference internal nav-link" href="#lernziele">
+   Lernziele
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#bekannte-beispiele-sind-die-geometrische-und-die-harmonische-reihe">
-   Bekannte Beispiele sind die geometrische und die harmonische Reihe
+  <a class="reference internal nav-link" href="#mehrdimensionale-funktionen">
+   Mehrdimensionale Funktionen
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#konvergiert-die-reihe-oder-divergiert-sie">
-   Konvergiert die Reihe oder divergiert sie?
+  <a class="reference internal nav-link" href="#partielle-ableitungen">
+   Partielle Ableitungen
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#zusatzmaterial">
-   Zusatzmaterial
+  <a class="reference internal nav-link" href="#beispiele-fur-das-partielle-ableiten">
+   Beispiele für das partielle Ableiten
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#was-sind-hohere-partielle-ableitungen">
+   Was sind höhere partielle Ableitungen?
   </a>
  </li>
 </ul>
@@ -257,7 +270,7 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Reihen</h1>
+                <h1>Funktionen von mehreren Variablen und partielle Ableitungen</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -268,23 +281,28 @@ const thebe_selector_output = ".output, .cell_output"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#reihen-werden-aus-folgen-gebildet">
-   Reihen werden aus Folgen gebildet
+  <a class="reference internal nav-link" href="#lernziele">
+   Lernziele
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#bekannte-beispiele-sind-die-geometrische-und-die-harmonische-reihe">
-   Bekannte Beispiele sind die geometrische und die harmonische Reihe
+  <a class="reference internal nav-link" href="#mehrdimensionale-funktionen">
+   Mehrdimensionale Funktionen
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#konvergiert-die-reihe-oder-divergiert-sie">
-   Konvergiert die Reihe oder divergiert sie?
+  <a class="reference internal nav-link" href="#partielle-ableitungen">
+   Partielle Ableitungen
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#zusatzmaterial">
-   Zusatzmaterial
+  <a class="reference internal nav-link" href="#beispiele-fur-das-partielle-ableiten">
+   Beispiele für das partielle Ableiten
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#was-sind-hohere-partielle-ableitungen">
+   Was sind höhere partielle Ableitungen?
   </a>
  </li>
 </ul>
@@ -298,43 +316,54 @@ const thebe_selector_output = ".output, .cell_output"
                 
   <div class="cell tag_remove-input docutils container">
 </div>
-<div class="tex2jax_ignore mathjax_ignore section" id="reihen">
-<h1>Reihen<a class="headerlink" href="#reihen" title="Permalink to this headline">¶</a></h1>
-<p>In diesem Kapitel lernen Sie die grundlegenden Begriffe zu Reihen kennen. Neben einigen Beispielen vor allem zu geometrischen und harmonischen Reihen widmen wir uns der Konvergenz von Reihen.</p>
+<div class="tex2jax_ignore mathjax_ignore section" id="funktionen-von-mehreren-variablen-und-partielle-ableitungen">
+<h1>Funktionen von mehreren Variablen und partielle Ableitungen<a class="headerlink" href="#funktionen-von-mehreren-variablen-und-partielle-ableitungen" title="Permalink to this headline">¶</a></h1>
+<p>Bisher haben wir nur Funktionen kennengelernt, bei denen eine reelle Zahl in die Funktionsvorschrift hineingesteckt wurde und eine reelle Zahl herauskam. Die mathematische Schreibweise dafür ist <span class="math notranslate nohighlight">\(f:\mathbb{R}\rightarrow\mathbb{R}\)</span>.</p>
+<p>Doch die Welt ist nicht so eindimensional. Die folgende Abbildung zeigt die durchschnittliche Solarstrahlung in Deutschland. Dies ist mathematisch gesehen eine Funktion von mehereren Variablen, nämlich Längen- und Breitengrad, also <span class="math notranslate nohighlight">\(f:\mathbb{R}^2\rightarrow\mathbb{R}\)</span>.</p>
+<div class="figure align-default" id="fig-part06-solar-map">
+<a class="reference internal image-reference" href="_images/part06_solar_map.png"><img alt="_images/part06_solar_map.png" src="_images/part06_solar_map.png" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 1 </span><span class="caption-text">Solarstrahlung in Deutschland</span><a class="headerlink" href="#fig-part06-solar-map" title="Permalink to this image">¶</a></p>
+<div class="legend">
+<p>(<a class="reference external" href="https://commons.wikimedia.org/wiki/File:SolarGIS-Solar-map-Germany-de.png">Quelle:</a> “Solar Radiation Map: Globalstrahlung Deutschland, SolarGIS 2011”, Autor: SolarGIS Lizenz: <a class="reference external" href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>)</p>
+</div>
+</div>
+<p>In diesem Part werden wir uns zunächst mehrdimensionale Funktionen ansehen und uns erarbeiten, was in diesem Zusammenhang partielle Ableitungen sind.</p>
+<div class="section" id="lernziele">
+<h2>Lernziele<a class="headerlink" href="#lernziele" title="Permalink to this headline">¶</a></h2>
 <div class="tip admonition">
 <p class="admonition-title">Lernziele</p>
 <ul class="simple">
-<li><p>Sie können den Fachbegriff <strong>Reihe</strong> erklären.</p></li>
-<li><p>Sie können den Fachbegriff <strong>Partialsumme</strong> einer Reihe erklären.</p></li>
-<li><p>Sie kennen als Beispiel für Reihen die</p>
-<ul>
-<li><p><strong>arithmetische Reihe</strong>,</p></li>
-<li><p><strong>geometrische Reihe</strong> und</p></li>
-<li><p><strong>harmonische Reihe</strong>.</p></li>
-</ul>
-</li>
-<li><p>Sie können den Fachbegriff <strong>alternierende Reihe</strong> erklären.</p></li>
-<li><p>Sie können den Fachbegriff <strong>Konvergenz</strong> einer Reihe erklären.</p></li>
-<li><p>Sie können mit den <strong>Konvergenzkriterien</strong> überprüfen, ob eine Reihe konvergiert, indem Sie die folgenden Kriterien anwenden können:</p>
-<ul>
-<li><p><strong>Leibniz-Kriterium für alternierende Reihen</strong>,</p></li>
-<li><p><strong>Quotientenkriterium</strong> oder</p></li>
-<li><p><strong>Wurzelkriterium</strong>.</p></li>
-</ul>
-</li>
-<li><p>Sie können den Fachbegriff <strong>absolut konvergente Reihe</strong> erklären.</p></li>
+<li><p>Sie können erklären, was eine <strong>Funktion von mehreren unabhängigen Variablen</strong> ist.</p></li>
+<li><p>Sie können eine Funktion <span class="math notranslate nohighlight">\(f:\mathbb{R} \times \mathbb{R} \rightarrow \mathbb{R}\)</span> als Fläche im Raum zeichnen.</p></li>
+<li><p>Sie können die <strong>Schnittkurvendiagramme</strong> einer Funktion <span class="math notranslate nohighlight">\(z = f(x,y)\)</span> zeichnen.</p></li>
+<li><p>Sie können die <strong>partiellen Ableitungen</strong> einer Funktion berechnen.</p></li>
+<li><p>Sie wissen, wann es erlaubt ist, die Differentiationsreihenfolge zu vertauschen (Stichwort: <strong>Satz von Schwarz</strong>).</p></li>
 </ul>
 </div>
-<div class="section" id="reihen-werden-aus-folgen-gebildet">
-<h2>Reihen werden aus Folgen gebildet<a class="headerlink" href="#reihen-werden-aus-folgen-gebildet" title="Permalink to this headline">¶</a></h2>
-<p>In dem folgenden Video werden sowohl die grundlegenden Begriffe zum Thema Reihen erklärt als auch das Thema Konvergenz und Divergenz von Reihen erläutert.</p>
+</div>
+<div class="section" id="mehrdimensionale-funktionen">
+<h2>Mehrdimensionale Funktionen<a class="headerlink" href="#mehrdimensionale-funktionen" title="Permalink to this headline">¶</a></h2>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <div class="output text_html">
 <iframe
     width="560"
     height="315"
-    src="https://www.youtube.com/embed/1vQ67chDVbU"
+    src="https://www.youtube.com/embed/gV5zjtVHIWE"
+    frameborder="0"
+    allowfullscreen
+
+></iframe>
+</div></div>
+</div>
+<p>Leider ist es gar nicht so einfach, Funktionen von mehreren Variablen zu zeichnen. Eine Funktion von zwei Variablen kann man noch ganz gut zeichnen, indem man beispielsweise die Funktionswerte durch Farben darstellt oder die Funktionswerte als Höhe (z-Achse) einzeichnet. Bei drei und gar mehr Variablen klappt es mit Zeichnungen nicht mehr.</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html">
+<iframe
+    width="560"
+    height="315"
+    src="https://www.youtube.com/embed/oJdN_Ics6qs"
     frameborder="0"
     allowfullscreen
 
@@ -342,16 +371,58 @@ const thebe_selector_output = ".output, .cell_output"
 </div></div>
 </div>
 </div>
-<div class="section" id="bekannte-beispiele-sind-die-geometrische-und-die-harmonische-reihe">
-<h2>Bekannte Beispiele sind die geometrische und die harmonische Reihe<a class="headerlink" href="#bekannte-beispiele-sind-die-geometrische-und-die-harmonische-reihe" title="Permalink to this headline">¶</a></h2>
-<p>In den folgenden beiden Videos werden zunächst die geometrische Reihe und dann die harmonische Reihe erklärt.</p>
+<div class="section" id="partielle-ableitungen">
+<h2>Partielle Ableitungen<a class="headerlink" href="#partielle-ableitungen" title="Permalink to this headline">¶</a></h2>
+<p>Was genau meint jetzt wiederum der Fachbegriff partiell? Partiell heißt ja auf deutsch teilweise, vielleicht ist Ihnen der Begriff von einer partiellen Sonnenfinsternis geläufig. Bei Funktionen von mehreren Variablen ist der Ableitungsbegriff komplizierter als bei Funktionen von einer Variable, wie in dem folgenden Video erklärt wird.</p>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <div class="output text_html">
 <iframe
     width="560"
     height="315"
-    src="https://www.youtube.com/embed/y_9ccgrwTZo"
+    src="https://www.youtube.com/embed/4ppZE30P2Yw"
+    frameborder="0"
+    allowfullscreen
+
+></iframe>
+</div></div>
+</div>
+<p>Die partielle Ableitung wird also gebildet, indem nur eine der mehreren Variablen als echte Variable angesehen wird und die übrigen Variablen als Konstanten aufgefasst werden.</p>
+<div class="proof definition admonition" id="def:06:01">
+<p class="admonition-title"><span class="caption-number">Definition 3 </span></p>
+<div class="definition-content section" id="proof-content">
+<p>Die partielle Ableitung der Funktion <span class="math notranslate nohighlight">\(f(x,y)\)</span> nach <span class="math notranslate nohighlight">\(x\)</span> an der Stelle <span class="math notranslate nohighlight">\((x_0,y_0)\)</span> ist definiert als</p>
+<div class="math notranslate nohighlight">
+\[\frac{\partial f}{\partial x}(x_0,y_0) = \lim_{\Delta x\rightarrow 0}\frac{f(x_0+\Delta x, y_0) - f(x_0, y_0)}{\Delta x}.\]</div>
+<p>Die partielle Ableitung der Funktion <span class="math notranslate nohighlight">\(f(x,y)\)</span> nach <span class="math notranslate nohighlight">\(y\)</span> an der Stelle <span class="math notranslate nohighlight">\((x_0,y_0)\)</span> ist definiert als</p>
+<div class="math notranslate nohighlight">
+\[\frac{\partial f}{\partial y}(x_0,y_0) = \lim_{\Delta y \rightarrow 0}\frac{f(x_0, y_0 +\Delta y) - f(x_0, y_0)}{\Delta y}.\]</div>
+<p>Falls die Funktion von mehr als zwei Variablen abhängt, wird dieses Schema fortgeführt.</p>
+</div>
+</div><div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html">
+<iframe
+    width="560"
+    height="315"
+    src="https://www.youtube.com/embed/KqpLPQvboPY"
+    frameborder="0"
+    allowfullscreen
+
+></iframe>
+</div></div>
+</div>
+</div>
+<div class="section" id="beispiele-fur-das-partielle-ableiten">
+<h2>Beispiele für das partielle Ableiten<a class="headerlink" href="#beispiele-fur-das-partielle-ableiten" title="Permalink to this headline">¶</a></h2>
+<p>Die folgenden Videos zeigen Beispiele für das Berechnen der partiellen Ableitungen.</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html">
+<iframe
+    width="560"
+    height="315"
+    src="https://www.youtube.com/embed/9R8xrRuWyTw"
     frameborder="0"
     allowfullscreen
 
@@ -364,7 +435,20 @@ const thebe_selector_output = ".output, .cell_output"
 <iframe
     width="560"
     height="315"
-    src="https://www.youtube.com/embed/n2ELwRkgKhc"
+    src="https://www.youtube.com/embed/i59FBLtGpng"
+    frameborder="0"
+    allowfullscreen
+
+></iframe>
+</div></div>
+</div>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html">
+<iframe
+    width="560"
+    height="315"
+    src="https://www.youtube.com/embed/N0Y9E0wdLKk"
     frameborder="0"
     allowfullscreen
 
@@ -372,79 +456,33 @@ const thebe_selector_output = ".output, .cell_output"
 </div></div>
 </div>
 </div>
-<div class="section" id="konvergiert-die-reihe-oder-divergiert-sie">
-<h2>Konvergiert die Reihe oder divergiert sie?<a class="headerlink" href="#konvergiert-die-reihe-oder-divergiert-sie" title="Permalink to this headline">¶</a></h2>
-<p>In dem ersten Video wird zunächst auf die Konvergenz von Reihen eingegangen. Danach werden die Kriterien zur Bestimmung der Konvergenz</p>
+<div class="section" id="was-sind-hohere-partielle-ableitungen">
+<h2>Was sind höhere partielle Ableitungen?<a class="headerlink" href="#was-sind-hohere-partielle-ableitungen" title="Permalink to this headline">¶</a></h2>
+<p>Eine eindimensionale Funktion kann man oft nicht nur einmal, sondern zweimal, dreimal, manchmal sogar unendlichmal oft ableiten. Das geht natürlich nur, wenn nach dem Ableiten eine Funktion herauskommt, die wieder ableitbar ist, sonst muss man aufhören.</p>
+<p>Bei Funktionen, die von mehreren Variablen abhängen, kann man die partiellen Ableitungen mischen. Beispielsweise leiten wir eine Funktion partiell nach x ab und die Funktion, die dadurch entstanden ist leiten wir nun partiell nach y ab.</p>
+<p>Bei zwei Variablen und partiellen Ableitungen der Ordnung 2 hätten wir dann folgende Kombinationsmöglichkeiten:</p>
 <ul class="simple">
-<li><p>Leibniz-Kriterium,</p></li>
-<li><p>Wurzelkriterium und</p></li>
-<li><p>Quotientenkriterium</p></li>
+<li><p>Ableitung nach x und dann Ableitung nach x</p></li>
+<li><p>Ableitung nach x und dann Ableitung nach y</p></li>
+<li><p>Ableitung nach y und dann Ableitung nach x</p></li>
+<li><p>Ableitung nach y und dann Ableitung nach y</p></li>
 </ul>
-<p>vorgestellt.</p>
+<p>Bei höheren partiellen Ableitungen können wir nicht einfach zwei Striche an die Funktion schreiben, sondern müssen genau angeben, in welcher Reihenfolge nach welcher Variable abgeleitet werden soll. Deshalb schreiben wir</p>
+<ul class="simple">
+<li><p>Ableitung nach x und dann Ableitung nach x: <span class="math notranslate nohighlight">\(\frac{\partial^2}{\partial x \partial x}f(x,y)\)</span></p></li>
+<li><p>Ableitung nach x und dann Ableitung nach y: <span class="math notranslate nohighlight">\(\frac{\partial^2}{\partial y \partial x}f(x,y)\)</span></p></li>
+<li><p>Ableitung nach y und dann Ableitung nach x: <span class="math notranslate nohighlight">\(\frac{\partial^2}{\partial x \partial y}f(x,y)\)</span></p></li>
+<li><p>Ableitung nach y und dann Ableitung nach y: <span class="math notranslate nohighlight">\(\frac{\partial^2}{\partial y \partial y}f(x,y)\)</span></p></li>
+</ul>
+<p>Die Richtung, nach der zuerst abgeleitet wird, steht weiter rechts.</p>
+<p>Wenn wir nun uns die Kombinationsmöglichkeiten für partielle Ableitungen 3. Ordnung ansehen, stellen wir fest, dass da einige Kombinationen möglich sind, genaugenommen 27. Glücklicherweise gibt es einen Trick, einige der Kombinationen kann man sich sparen. Dieser Trick wird in der Mathematik der <strong>Satz von Schwarz</strong> genannt. Im nächsten Video sehen Sie dazu eine Erläuterung.</p>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <div class="output text_html">
 <iframe
     width="560"
     height="315"
-    src="https://www.youtube.com/embed/aGnAseEnfG0"
-    frameborder="0"
-    allowfullscreen
-
-></iframe>
-</div></div>
-</div>
-<div class="cell tag_remove-input docutils container">
-<div class="cell_output docutils container">
-<div class="output text_html">
-<iframe
-    width="560"
-    height="315"
-    src="https://www.youtube.com/embed/_8_Q6g8-QxA"
-    frameborder="0"
-    allowfullscreen
-
-></iframe>
-</div></div>
-</div>
-<div class="cell tag_remove-input docutils container">
-<div class="cell_output docutils container">
-<div class="output text_html">
-<iframe
-    width="560"
-    height="315"
-    src="https://www.youtube.com/embed/G1GSAFrd6mE"
-    frameborder="0"
-    allowfullscreen
-
-></iframe>
-</div></div>
-</div>
-</div>
-<div class="section" id="zusatzmaterial">
-<h2>Zusatzmaterial<a class="headerlink" href="#zusatzmaterial" title="Permalink to this headline">¶</a></h2>
-<p>Wer es musikalisch mag, kann auch gerne sich den Mathe-Song von DorFuchs zur Konvergenz der geometrischen Reihe anhören:</p>
-<div class="cell tag_remove-input docutils container">
-<div class="cell_output docutils container">
-<div class="output text_html">
-<iframe
-    width="560"
-    height="315"
-    src="https://www.youtube.com/embed/2TCDiK7GpNM"
-    frameborder="0"
-    allowfullscreen
-
-></iframe>
-</div></div>
-</div>
-<p>Hier wird ein Beispiel zur Konvergenz von Reihen mit dem Quotientenkriterium erklärt:</p>
-<div class="cell tag_remove-input docutils container">
-<div class="cell_output docutils container">
-<div class="output text_html">
-<iframe
-    width="560"
-    height="315"
-    src="https://www.youtube.com/embed/p3BPRuk0Wwk"
+    src="https://www.youtube.com/embed/XgkmktejS_Y"
     frameborder="0"
     allowfullscreen
 
@@ -479,19 +517,12 @@ const thebe_selector_output = ".output, .cell_output"
             
                 <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="intro.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="part05.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Willkommen zur Materialsammlung Mathematik 2</p>
+            <p class="prev-next-title">Fourier-Reihen</p>
         </div>
-    </a>
-    <a class='right-next' id="next-link" href="part04a.html" title="next page">
-    <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Potenzreihen</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
     </a>
 </div>
             
