@@ -1,0 +1,542 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gradient und Jacobi-Matrix &#8212; Mathematik 2 Maschinenbau</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/exercise.css" />
+    <link rel="stylesheet" type="text/css" href="_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Funktionen von mehreren Variablen und partielle Ableitungen" href="part06.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">Mathematik 2 Maschinenbau</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Willkommen zur Materialsammlung Mathematik 2
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Part 2. Funktionenreihen
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="part03.html">
+   Reihen
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="part04a.html">
+   Potenzreihen
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="part04b.html">
+   Taylorreihen
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="part05.html">
+   Fourier-Reihen
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Part 3. Mehrdimensionale Analysis
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="part06.html">
+   Partielle Ableitung
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Gradient und Jacobi-Matrix
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/part07.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/gramschs/book_mathe02"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/gramschs/book_mathe02/master?urlpath=tree/docs/part07.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#lernziele">
+   Lernziele
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#skalarwertige-und-vektorwertige-funktionen">
+   Skalarwertige und vektorwertige Funktionen
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#der-gradient">
+   Der Gradient
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#jacobi-matrix-einer-vektorwertigen-funktion">
+   Jacobi-Matrix einer vektorwertigen Funktion
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#beispiel-einer-jacobi-matrix">
+   Beispiel einer Jacobi-Matrix
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#mehrdimensionale-kettenregel">
+   Mehrdimensionale Kettenregel
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Gradient und Jacobi-Matrix</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#lernziele">
+   Lernziele
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#skalarwertige-und-vektorwertige-funktionen">
+   Skalarwertige und vektorwertige Funktionen
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#der-gradient">
+   Der Gradient
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#jacobi-matrix-einer-vektorwertigen-funktion">
+   Jacobi-Matrix einer vektorwertigen Funktion
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#beispiel-einer-jacobi-matrix">
+   Beispiel einer Jacobi-Matrix
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#mehrdimensionale-kettenregel">
+   Mehrdimensionale Kettenregel
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="cell tag_remove-input docutils container">
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="gradient-und-jacobi-matrix">
+<h1>Gradient und Jacobi-Matrix<a class="headerlink" href="#gradient-und-jacobi-matrix" title="Permalink to this headline">¶</a></h1>
+<p>Mit den partiellen Ableitungen haben wir Ableitungen kennengelernt, die in Richtung des Achsen des Koordinatensystems gehen. In diesem Kapitel beschäftigen wir uns mit dem <strong>Gradienten</strong>, der die partiellen Ableitungen als Vektor zusammenfasst und sozusagen den Ersatz für die erste Ableitung bei Funktionen mit mehreren Variablen bildet.
+Als zweites Thema werden uns vektorwertige Funktionen beschäftigen. Das Analogon zur ersten Ableitung von vektorwertigen Funktionen ist die <strong>Jacobi-Matrix</strong>. Mit Hilfe von Jacobi-Matrizen kann die <strong>mehrdimensionale Kettenregel</strong> formuliert werden.</p>
+<div class="section" id="lernziele">
+<h2>Lernziele<a class="headerlink" href="#lernziele" title="Permalink to this headline">¶</a></h2>
+<div class="tip admonition">
+<p class="admonition-title">Lernziele</p>
+<ul class="simple">
+<li><p>Sie können den Unterschied zwischen einer <strong>skalarwertigen Funktion</strong> und einer <strong>vektorwertigen Funktion</strong> erklären.</p></li>
+<li><p>Sie können den <strong>Gradienten</strong> einer skalarwertigen Funktion berechnen und wissen, dass man den Gradienten meist mit dem Zeichen <strong>Nabla</strong> <span class="math notranslate nohighlight">\(\nabla\)</span> abkürzt.</p></li>
+<li><p>Sie können die <strong>Jacobi-Matrix</strong> einer vektorwertigen Funktion berechnen.</p></li>
+<li><p>Sie kennen die <strong>mehrdimensionale Kettenregel</strong> und können sie anwenden.</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="skalarwertige-und-vektorwertige-funktionen">
+<h2>Skalarwertige und vektorwertige Funktionen<a class="headerlink" href="#skalarwertige-und-vektorwertige-funktionen" title="Permalink to this headline">¶</a></h2>
+<p>In dem letzten Kapitel haben wir eindimensionale Funktionen <span class="math notranslate nohighlight">\(f:\mathbb{r}\rightarrow \mathbb{R}\)</span> auf mehrdimensionale Funktionen erweitert <span class="math notranslate nohighlight">\(f:\mathbb{R}^n\rightarrow\mathbb{R}\)</span> erweitert. Ein Beispiel aus dem Alltag ist die Wetterkarte mit den prognostizierten Durchschnittstemperaturen für den morgigen Tag. Zu jeder Position spezifiziert durch den Breiten- und den Längengrad gibt es eine Temperatur. Die Temperatur ist eine sogenannte <strong>skalare Größe</strong>, denn sie wird durch eine einzelne Zahl dargestellt. Gerade bei Unwetterwarnungen sind jedoch auch Darstellungen des Windfeldes üblich. Zu jeder Position mit Längen- und Breitengrad wird eine Windrichtung angegeben, also eine <strong>vektorielle Größe</strong>. In den Wetterkarten wird dazu häufig ein Pfeil eingezeichnet ähnlich zu folgenden Abbildung.</p>
+<div class="figure align-default" id="fig-part07-vektorfeld">
+<a class="reference internal image-reference" href="_images/part07_vektorfeld.svg"><img alt="_images/part07_vektorfeld.svg" src="_images/part07_vektorfeld.svg" width="300px" /></a>
+<p class="caption"><span class="caption-number">Fig. 2 </span><span class="caption-text">Visualisierung eines Vektorfeldes (<a class="reference external" href="https://commons.wikimedia.org/wiki/File:VectorField.svg">Quelle:</a> “A portion of the vector field (sin y, sin x)” von Jim.belk. Lizenz: gemeinfrei)</span><a class="headerlink" href="#fig-part07-vektorfeld" title="Permalink to this image">¶</a></p>
+</div>
+<p>Wir unterscheiden Funktionen also nicht nur nach der Anzahl ihrer Variablen, sondern auch danach, ob die Funktionswerte ein- oder mehrdimensional sind. Wir verwenden zur Unterschiedung der beiden Kategorien die folgenden Fachbegriffe.</p>
+<div class="proof definition admonition" id="def:07:01">
+<p class="admonition-title"><span class="caption-number">Definition 4 </span> (Was ist … eine skalarwertige Funktion?)</p>
+<div class="definition-content section" id="proof-content">
+<p>Eine skalarwertige Funktion ist eine Funktion, deren Funktionswerte reelle Zahlen sind.</p>
+<p>Die mathematische Notation dafür ist <span class="math notranslate nohighlight">\(f:\mathbb{R}^m \rightarrow \mathbb{R}\)</span>, wobei <span class="math notranslate nohighlight">\(m\)</span> sowohl 1 (eindimensional) als auch <span class="math notranslate nohighlight">\(\geq 2\)</span> (mehrdimensional) sein kann.</p>
+</div>
+</div><div class="proof definition admonition" id="def:07:02">
+<p class="admonition-title"><span class="caption-number">Definition 5 </span> (Was ist … eine vektorwertige Funktion?)</p>
+<div class="definition-content section" id="proof-content">
+<p>Eine vektorwertige Funktion ist eine Funktion, deren Funktionswerte Vektoren sind.</p>
+<p>Die mathematische Notation dafür ist <span class="math notranslate nohighlight">\(f:\mathbb{R}^m \rightarrow \mathbb{R}^n\)</span>, wobei <span class="math notranslate nohighlight">\(m\)</span> sowohl 1 (eindimensional) als auch <span class="math notranslate nohighlight">\(\geq 2\)</span> (mehrdimensional) sein kann. Aber <span class="math notranslate nohighlight">\(n\)</span> muss mindestens 2 sein, sonst wäre es ja eine skalarwertige Funktion.</p>
+</div>
+</div></div>
+<div class="section" id="der-gradient">
+<h2>Der Gradient<a class="headerlink" href="#der-gradient" title="Permalink to this headline">¶</a></h2>
+<p>Der Gradient einer skalarwertigen Funktion von mehreren Variablen ist der Zeilenvektor, in dem alle partiellen Ableitungen gesammelt werden. Als Abkürzung für den Gradienten vwerwenden wir das Symbol Nabla:</p>
+<div class="math notranslate nohighlight">
+\[\nabla f(x,y,z) = \left(\frac{\partial f(x,y,z)}{\partial x}, \frac{\partial f(x,y,z)}{\partial y}, \frac{\partial f(x,y,z)}{\partial z} \right).\]</div>
+<p>Manchmal wird auch die Schreibweise <span class="math notranslate nohighlight">\(\text{grad}f(x,y,z)\)</span> verwendet. Der Gradient ist sozusagen die 1. Ableitung einer <em>skalar</em>wertigen Funktion von mehreren Variablen.</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html">
+<iframe
+    width="560"
+    height="315"
+    src="https://www.youtube.com/embed/627f_DgQJpY"
+    frameborder="0"
+    allowfullscreen
+
+></iframe>
+</div></div>
+</div>
+</div>
+<div class="section" id="jacobi-matrix-einer-vektorwertigen-funktion">
+<h2>Jacobi-Matrix einer vektorwertigen Funktion<a class="headerlink" href="#jacobi-matrix-einer-vektorwertigen-funktion" title="Permalink to this headline">¶</a></h2>
+<p>Die Jacobi-Matrix einer vektorwertigen Funktion von mehreren Variablen ist eine Matrix, die genau wie der Gradient alle partiellen Ableitungen einsammelt. Da aber die Funktionswerte der Matrix selbst Vektoren sind, entsteht eine Matrix.</p>
+<p>Kochrezept zur Berechnung der Jacobi-Matrix:</p>
+<ul class="simple">
+<li><p>Interpretiere die vektorwertige Funktion zeilenweise als skalarwertige Funktion.</p></li>
+<li><p>Bilde den Gradienten für jede Zeile.</p></li>
+<li><p>Schreibe die Gradienten untereinander in eine Matrix.</p></li>
+</ul>
+<p>Die Jacobi-Matrix ist sozusagen die 1. Ableitung einer <em>vektor</em>wertigen Funktion von mehreren Variablen.</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html">
+<iframe
+    width="560"
+    height="315"
+    src="https://www.youtube.com/embed/FqaCPP8OZWU"
+    frameborder="0"
+    allowfullscreen
+
+></iframe>
+</div></div>
+</div>
+</div>
+<div class="section" id="beispiel-einer-jacobi-matrix">
+<h2>Beispiel einer Jacobi-Matrix<a class="headerlink" href="#beispiel-einer-jacobi-matrix" title="Permalink to this headline">¶</a></h2>
+<p>Wir schauen uns an dem folgenden Beispiel an, wie die Jacobi-Matrix der vektorwertigen Funktion</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}f:\mathbb{R}^3\longrightarrow\mathbb{R}^2 \quad \text{mit} \quad f(x,y,z)=\begin{pmatrix} x^2 + y^3 + \sin(z) \\ z^2\end{pmatrix}\end{split}\]</div>
+<p>berechnet wird.</p>
+<ol class="simple">
+<li><p>Die erste Zeile enthält die Funktion <span class="math notranslate nohighlight">\(f_1(x,y,z)=x^2 + y^3 + \sin(z)\)</span> mit dem Gradienten
+<span class="math notranslate nohighlight">\(\left(2x , 3y^2, \cos(z)\right).\)</span></p></li>
+<li><p>Die zweite Zeile enthält die Funktion <span class="math notranslate nohighlight">\(f_2(x,y,z)=z^2\)</span> mit dem Gradienten
+<span class="math notranslate nohighlight">\(\left(0, 0, 2z\right).\)</span></p></li>
+<li><p>Aus beiden Zeilen wird dann die Matrix zusammengesetzt, die Jacobi-Matrix lautet also
+$<span class="math notranslate nohighlight">\(J(f)(x,y,z)=\begin{pmatrix} 2x &amp; 3x^2 &amp; \cos(z)\\ 0 &amp; 0 &amp; 2z \end{pmatrix}.\)</span>$</p></li>
+</ol>
+<p>Weitere Beispiele finden Sie in den folgenden Videos.</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html">
+<iframe
+    width="560"
+    height="315"
+    src="https://www.youtube.com/embed/LiFyUo6snK8"
+    frameborder="0"
+    allowfullscreen
+
+></iframe>
+</div></div>
+</div>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html">
+<iframe
+    width="560"
+    height="315"
+    src="https://www.youtube.com/embed/kMizXsfSK2o"
+    frameborder="0"
+    allowfullscreen
+
+></iframe>
+</div></div>
+</div>
+</div>
+<div class="section" id="mehrdimensionale-kettenregel">
+<h2>Mehrdimensionale Kettenregel<a class="headerlink" href="#mehrdimensionale-kettenregel" title="Permalink to this headline">¶</a></h2>
+<p>Zur Erinnerung, die eindimensionale Kettenregel lautet wie folgt:
+Die Ableitung der verketten Funktion <span class="math notranslate nohighlight">\(f(g(x))\)</span> ist äußere Ableitung mal innere Ableitung, d.h.</p>
+<div class="math notranslate nohighlight">
+\[f(g(x))' = f'(g(x))\cdot g'(x).\]</div>
+<p>Mit den Jacobi-Matrizen können wir die mehrdimensionale Kettenregel nun wie folgt formulieren:</p>
+<p>Die Jacobi-Matrix der verketten Funktionen <span class="math notranslate nohighlight">\(f(g(x,y,z))\)</span> ist Jacobi-Matrix der äußeren Funktion mal Jacobi-Matrix der inneren Funktion, d.h.</p>
+<div class="math notranslate nohighlight">
+\[J(f(g(x,y,z)) = J(f) \cdot J(g).\]</div>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html">
+<iframe
+    width="560"
+    height="315"
+    src="https://www.youtube.com/embed/LkWAGcGGDD8"
+    frameborder="0"
+    allowfullscreen
+
+></iframe>
+</div></div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="part06.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Funktionen von mehreren Variablen und partielle Ableitungen</p>
+        </div>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Simone Gramsch<br/>
+    
+        &copy; Copyright 2022.<br/>
+      <div class="extra_footer">
+        <div>
+<a href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img class="license" alt="Creative Commons License" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a> This book is licensed under a <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons BY-NC-SA 4.0 License</a>.
+</div>
+
+      </div>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
