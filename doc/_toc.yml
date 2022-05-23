@@ -20,5 +20,7 @@ parts:
     title: Partielle Ableitung
   - file: part07
     title: Gradient und Jacobi-Matrix
+  - file: part08
+    title: Linearisierung und Extremwerte
 
   
