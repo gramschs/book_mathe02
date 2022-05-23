@@ -18,5 +18,7 @@ parts:
   chapters:
   - file: part06
     title: Partielle Ableitung
+  - file: part07
+    title: Gradient und Jacobi-Matrix
 
   
