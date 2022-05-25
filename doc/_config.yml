@@ -39,6 +39,8 @@ html:
 # https://ebp-sphinx-exercise.readthedocs.io/en/latest/
 
 sphinx:
+  config:
+    html_extra_path: ['assets']
   extra_extensions:
     - sphinx_exercise
     - sphinx_proof
@@ -59,3 +61,6 @@ parse:
     - replacements
     - smartquotes
     - substitution
+    
+    
+
