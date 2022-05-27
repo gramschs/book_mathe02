@@ -1,0 +1,46 @@
+\documentclass[11pt]{standalone}
+
+% Layout
+
+\usepackage[no-math]{fontspec}
+%\renewcommand{\logofooter}{}
+
+
+\usepackage{unicode-math}
+\usepackage{libertinus}
+
+\usepackage{pgf,xcolor}
+\definecolor{itwm_blue_04}{HTML}{005A94}
+\definecolor{itwm_red}{HTML}{C00000}
+
+\usepackage{tikz}
+\usetikzlibrary{shapes.misc, shadows, decorations}
+\usetikzlibrary{backgrounds}
+\usetikzlibrary{calc}
+\usepackage{pgfplots}
+\pgfplotsset{compat=newest}
+\usepgfplotslibrary{fillbetween}
+\usepackage{tikzpagenodes}
+
+
+
+
+\begin{document}
+\begin{tikzpicture}[scale=0.6]
+\begin{axis}[
+    domain=-2:2,
+    axis lines = center,
+    xlabel = {$x$},
+    ylabel = {$y=x^3$},
+    height=8cm, width=8cm, 
+    xmin=-2, xmax=2, ymin=-9, ymax=9, 
+    ytick={-9,-7,...,9},
+    xtick={-2, -1,...,2}
+]
+\path [name path=xaxis]
+      (\pgfkeysvalueof{/pgfplots/xmin},0) --
+      (\pgfkeysvalueof{/pgfplots/xmax},0);
+\addplot[draw=itwm_blue_04, smooth, thick, name path=f, samples=501]{x^3};
+\end{axis}
+\end{tikzpicture}
+\end{document}
