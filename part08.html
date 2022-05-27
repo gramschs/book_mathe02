@@ -39,9 +39,12 @@
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
-    <script src="_static/togglebutton.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
@@ -247,6 +250,41 @@ const thebe_selector_output = ".output, .cell_output"
    Lernziele
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#linearisierung-tangentialebene">
+   Linearisierung/Tangentialebene
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#extremwerte-bei-1d-funktionen-notwendige-bedingung-und-hinreichende-bedingung">
+   Extremwerte bei 1D-Funktionen: notwendige Bedingung und hinreichende Bedingung
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#extremwerte-bei-mehrdimensionalen-funktionen-notwendige-bedingung">
+   Extremwerte bei mehrdimensionalen Funktionen: notwendige Bedingung
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#hesse-matrix">
+   Hesse-Matrix
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#extremwerte-bei-mehrdimensionalen-funktionen-hinreichende-bedingung">
+   Extremwerte bei mehrdimensionalen Funktionen: hinreichende Bedingung
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#kochrezept-zur-bestimmung-der-extrema-mehrdimensionaler-funktionen">
+   Kochrezept zur Bestimmung der Extrema mehrdimensionaler Funktionen
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ausfuhrliches-beispiel">
+   Ausführliches Beispiel
+  </a>
+ </li>
 </ul>
 
             </nav>
@@ -272,6 +310,41 @@ const thebe_selector_output = ".output, .cell_output"
    Lernziele
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#linearisierung-tangentialebene">
+   Linearisierung/Tangentialebene
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#extremwerte-bei-1d-funktionen-notwendige-bedingung-und-hinreichende-bedingung">
+   Extremwerte bei 1D-Funktionen: notwendige Bedingung und hinreichende Bedingung
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#extremwerte-bei-mehrdimensionalen-funktionen-notwendige-bedingung">
+   Extremwerte bei mehrdimensionalen Funktionen: notwendige Bedingung
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#hesse-matrix">
+   Hesse-Matrix
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#extremwerte-bei-mehrdimensionalen-funktionen-hinreichende-bedingung">
+   Extremwerte bei mehrdimensionalen Funktionen: hinreichende Bedingung
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#kochrezept-zur-bestimmung-der-extrema-mehrdimensionaler-funktionen">
+   Kochrezept zur Bestimmung der Extrema mehrdimensionaler Funktionen
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ausfuhrliches-beispiel">
+   Ausführliches Beispiel
+  </a>
+ </li>
 </ul>
 
                         </nav>
@@ -281,8 +354,15 @@ const thebe_selector_output = ".output, .cell_output"
             
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="linearisierung-tangentialebene-und-extremwerte">
+  <div class="cell tag_remove-input docutils container">
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="linearisierung-tangentialebene-und-extremwerte">
 <h1>Linearisierung/Tangentialebene und Extremwerte<a class="headerlink" href="#linearisierung-tangentialebene-und-extremwerte" title="Permalink to this headline">¶</a></h1>
+<p>Für eindimensionale Funktionen haben wir die Linearisierung und die Annährung einer Funktion durch eine Tangente bereits kennengelernt. Am einfachsten lässt sich die Tangente einer eindimensionalen Funktion berechnen, indem wir das 1. Taylor-Polynom im Entwicklungspunkt <span class="math notranslate nohighlight">\(x_0\)</span> berechnen:</p>
+<div class="math notranslate nohighlight">
+\[f(x) \approx f(x_0) + f'(x_0)\cdot (x-x_0).\]</div>
+<p>Aus der Tangente wird für eine Funktion <span class="math notranslate nohighlight">\(f: \mathbb{R}^2 \rightarrow \mathbb{R}\)</span> eine Tangentialebene.</p>
+<p>Neben der Linearisierung einer mehrdimensionalen Funktion ist auch die Berechnung von Minima (Tiefpunkten) und Maxima (Hochpunkten) interessant für die Praxis. In diesem Kapitel lernen wir, was die 2. Ableitung einer mehrdimensionalen Funktion ist und wie sie genutzt werden kann, um Extremwerte zu berechnen.</p>
 <div class="section" id="lernziele">
 <h2>Lernziele<a class="headerlink" href="#lernziele" title="Permalink to this headline">¶</a></h2>
 <div class="tip admonition">
@@ -321,6 +401,205 @@ const thebe_selector_output = ".output, .cell_output"
 \frac{\partial^2 f(x_0,y_0)}{\partial x\partial x} &lt; 0 &amp; \qquad \Rightarrow \text{relatives Maximum} \\
 \frac{\partial^2 f(x_0,y_0)}{\partial x\partial x} &gt; 0 &amp; \qquad \Rightarrow \text{relatives Minimum} \\
 \end{align*}\]</div>
+</div>
+</div>
+<div class="section" id="linearisierung-tangentialebene">
+<h2>Linearisierung/Tangentialebene<a class="headerlink" href="#linearisierung-tangentialebene" title="Permalink to this headline">¶</a></h2>
+<p>Ziel dieses Abschnitts ist es, eine skalarwertige Funktion <span class="math notranslate nohighlight">\(f(x,y)\)</span> in einem Arbeitspunkt <span class="math notranslate nohighlight">\((x_0,y_0)\)</span> zu <strong>linearisieren</strong> oder anders ausgedrückt, ihre <strong>Tangentialebene</strong></p>
+<div class="math notranslate nohighlight">
+\[T_{f,1}(x,y) = f(x_0,y_0) + \frac{\partial f(x_0,y_0)}{\partial x} (x-x_0) + \frac{\partial f(x_0,y_0)}{\partial y}(y-y_0)\]</div>
+<p>auszurechnen.</p>
+<p>Mit Hilfe des Gradienten können wir die Gleichung der Tangentialebene auch vektoriell schreiben</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}T_{f,1}(x,y) = f(x_0,y_0) + \nabla f(x,y)\cdot \begin{pmatrix}x-x_0\\y-y_0\end{pmatrix}.\end{split}\]</div>
+<p>In dem folgenden Video wird gezeigt, wie aus der Formel für das Taylor-Polynom Grad 1 für eindimensionale Funktionen die Formel für mehrdimensionale Funktionen entsteht.</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html">
+<iframe
+    width="560"
+    height="315"
+    src="https://www.youtube.com/embed/RFbjuIDKHG0"
+    frameborder="0"
+    allowfullscreen
+
+></iframe>
+</div></div>
+</div>
+<p>In dem folgenden Video wird ein Beispiel zur Berechnung der Tangentialebene vorgeführt.</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html">
+<iframe
+    width="560"
+    height="315"
+    src="https://www.youtube.com/embed/Cms3lsrG0cM"
+    frameborder="0"
+    allowfullscreen
+
+></iframe>
+</div></div>
+</div>
+</div>
+<div class="section" id="extremwerte-bei-1d-funktionen-notwendige-bedingung-und-hinreichende-bedingung">
+<h2>Extremwerte bei 1D-Funktionen: notwendige Bedingung und hinreichende Bedingung<a class="headerlink" href="#extremwerte-bei-1d-funktionen-notwendige-bedingung-und-hinreichende-bedingung" title="Permalink to this headline">¶</a></h2>
+<p>Um herauszufinden, welche x-Werte als Extrema (Maximum/Hochpunkt oder Minimum/Tiefpunkt) möglich sind, wird die 1. Ableitung Null gesetzt:</p>
+<div class="math notranslate nohighlight">
+\[f'(x)=0.\]</div>
+<p>Diese Bedingung ist <em>notwendig</em>, damit überhaupt ein Maximum oder Minimum vorliegen kann. Leider reicht diese Bedingung noch nicht aus. Alle Nullstellen der 1. Ableitung sind <em>mögliche</em> Extrema, es könnten aber auch Sattelpunkte sein wie in der folgenden Abbildung der Funktion <span class="math notranslate nohighlight">\(f(x)=x^3\)</span>:</p>
+<div class="figure align-default" id="fig-part06-sattelpunkt1d">
+<a class="reference internal image-reference" href="_images/part08_sattelpunkt1D.svg"><img alt="_images/part08_sattelpunkt1D.svg" src="_images/part08_sattelpunkt1D.svg" width="300px" /></a>
+<p class="caption"><span class="caption-number">Fig. 3 </span><span class="caption-text">Sattelpunkt</span><a class="headerlink" href="#fig-part06-sattelpunkt1d" title="Permalink to this image">¶</a></p>
+</div>
+<p>Daher müssen wir noch zusätzliche Bedingungen überprüfen, bevor wir entscheiden können, ob ein Minimum oder Maximum vorliegt. Die möglichen Extremwerte müssen noch zusätzlich mit der 2. Ableitung geprüft werden:</p>
+<ul class="simple">
+<li><p>Der Punkt <span class="math notranslate nohighlight">\(\tilde{x}\)</span> ist ein <strong>Maximum/Hochpunkt</strong>, wenn</p>
+<ul>
+<li><p>die 1. Ableitung Null ist, d.h. <span class="math notranslate nohighlight">\(f'(\tilde{x})=0\)</span> und</p></li>
+<li><p>die 2. Ableitung <strong>negativ</strong> ist, d.h. <span class="math notranslate nohighlight">\(f''(\tilde{x}) &lt; 0\)</span>.</p></li>
+</ul>
+</li>
+<li><p>Der Punkt <span class="math notranslate nohighlight">\(\tilde{x}\)</span> ist ein <strong>Minimum/Tiefpunkt</strong>, wenn</p>
+<ul>
+<li><p>die 1. Ableitung Null ist, d.h. <span class="math notranslate nohighlight">\(f'(\tilde{x})=0\)</span> und</p></li>
+<li><p>die 2. Ableitung <strong>positiv</strong> ist, d.h. <span class="math notranslate nohighlight">\(f''(\tilde{x}) &gt; 0\)</span>.</p></li>
+</ul>
+</li>
+</ul>
+<p>Diese beiden Bedingungen nennt man dann <strong>hinreichende</strong> Bedingungen. Wenn allerdings die zweite Ableitung Null ist, also <span class="math notranslate nohighlight">\(f''(\tilde{x})=0\)</span>, kann man keine Entscheidung treffen und muss weitere Bedingungen überprüfen.</p>
+</div>
+<div class="section" id="extremwerte-bei-mehrdimensionalen-funktionen-notwendige-bedingung">
+<h2>Extremwerte bei mehrdimensionalen Funktionen: notwendige Bedingung<a class="headerlink" href="#extremwerte-bei-mehrdimensionalen-funktionen-notwendige-bedingung" title="Permalink to this headline">¶</a></h2>
+<p>Die notwendige Bedingung für Extremwerte eindimensionaler Funktion lässt sich sofort auf mehrdimensionale Funktionen übertragen. Wir müssen uns nur in Erinnerung rufen, dass die 1. Ableitung eindimensionaler Funktionen dem Gradienten entspricht. Und da der Gradient der Zeilenvektor ist, der alle partielle Ableitungen zusammenfasst, lautet die <strong>notwendige Bedingung für einen Extremwert</strong> der skalarwertigen Funktion <span class="math notranslate nohighlight">\(f(x,y)\)</span></p>
+<div class="math notranslate nohighlight">
+\[\frac{\partial f(\tilde{x}, \tilde{y})}{\partial x} = 0 \quad \text{ und } \quad \frac{\partial f(\tilde{x},\tilde{y})}{\partial y} = 0.\]</div>
+<p>Diese Gleichung können wir auch vektoriell schreiben:</p>
+<div class="math notranslate nohighlight">
+\[\nabla f(\tilde{x},\tilde{y}) = \left( \frac{\partial f(\tilde{x}, \tilde{y})}{\partial x},\frac{\partial f(\tilde{x},\tilde{y})}{\partial y}\right) = (0,0).\]</div>
+<p>Der Gradient der Funktion muss der Nullvektor sein, so wie die 1. Ableitung Null sein muss.</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html">
+<iframe
+    width="560"
+    height="315"
+    src="https://www.youtube.com/embed/A_f5qpyl0bk"
+    frameborder="0"
+    allowfullscreen
+
+></iframe>
+</div></div>
+</div>
+<p>Hier ein Video, bei dem Beispiele vorgerechnet werden:</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html">
+<iframe
+    width="560"
+    height="315"
+    src="https://www.youtube.com/embed/AMYCKnbgU3s"
+    frameborder="0"
+    allowfullscreen
+
+></iframe>
+</div></div>
+</div>
+</div>
+<div class="section" id="hesse-matrix">
+<h2>Hesse-Matrix<a class="headerlink" href="#hesse-matrix" title="Permalink to this headline">¶</a></h2>
+<p>Wenn der Gradient das Analogon zur 1. Ableitung ist, gibt es dann etwas Ähnliches für die 2. Ableitung? Ja, allerdings wird es dann eine Matrix, die die 2. partiellen Ableitungen zusammenfasst, die sogenannte <strong>Hesse-Matrix</strong>.</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html">
+<iframe
+    width="560"
+    height="315"
+    src="https://www.youtube.com/embed/4Vy4HDLU7nU"
+    frameborder="0"
+    allowfullscreen
+
+></iframe>
+</div></div>
+</div>
+</div>
+<div class="section" id="extremwerte-bei-mehrdimensionalen-funktionen-hinreichende-bedingung">
+<h2>Extremwerte bei mehrdimensionalen Funktionen: hinreichende Bedingung<a class="headerlink" href="#extremwerte-bei-mehrdimensionalen-funktionen-hinreichende-bedingung" title="Permalink to this headline">¶</a></h2>
+<p>Wenn die notwendige Bedingung erfüllt ist, also die partiellen Ableitungen 1. Ordnung verschwinden in <span class="math notranslate nohighlight">\((x_0,y_0)\)</span>, dann reicht das noch nicht aus. Zusätzlich muss noch die folgende <strong>hinreichende Bedingung</strong> gelten:</p>
+<ul class="simple">
+<li><p>Die <strong>Determinante der Hesse-Matrix ist positiv</strong></p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\det(H_f\,(x_0,y_0)) = \frac{\partial^2 f(x_0,y_0)}{\partial x\partial x}\cdot \frac{\partial^2 f(x_0,y_0)}{\partial y \partial y} 
+- \left(\frac{\partial^2 f(x_0,y_0)}{\partial x \partial y}\right)^2 &gt; 0.\]</div>
+<ul class="simple">
+<li><p>Das Vorzeichen von <span class="math notranslate nohighlight">\(\frac{\partial^2 f(x_0,y_0)}{\partial x\partial x}\)</span> entscheidet dann über die Art des Extremwerts:</p></li>
+</ul>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+\frac{\partial^2 f(x_0,y_0)}{\partial x\partial x} \textbf{&lt; 0} &amp; \qquad \Rightarrow \text{Maximum} \\
+\frac{\partial^2 f(x_0,y_0)}{\partial x\partial x} \textbf{&gt; 0} &amp; \qquad \Rightarrow \text{Minimum} \\
+\end{align*}\]</div>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html">
+<iframe
+    width="560"
+    height="315"
+    src="https://www.youtube.com/embed/eT0nrz_Mujo"
+    frameborder="0"
+    allowfullscreen
+
+></iframe>
+</div></div>
+</div>
+</div>
+<div class="section" id="kochrezept-zur-bestimmung-der-extrema-mehrdimensionaler-funktionen">
+<h2>Kochrezept zur Bestimmung der Extrema mehrdimensionaler Funktionen<a class="headerlink" href="#kochrezept-zur-bestimmung-der-extrema-mehrdimensionaler-funktionen" title="Permalink to this headline">¶</a></h2>
+<ol>
+<li><p>Berechne die partiellen Ableitungen der Funktion.</p></li>
+<li><p>Setze aus den partiellen Ableitungen den Gradienten zusammen.</p></li>
+<li><p>Löse die Gleichung <span class="math notranslate nohighlight">\(\nabla f(x,y) = (0,0)\)</span>.</p></li>
+<li><p>Untersuche für <strong>jeden</strong> Punkt aus Schritt 3 die Hessematrix:</p>
+<ul class="simple">
+<li><p>Berechne die Hesse-Matrix für diesen Punkt.</p></li>
+<li><p>Berechne die Determinante der Hesse-Matrix für diesen Punkt und prüfe, ob sie positiv ist.</p></li>
+<li><p>Wenn die Determinante positiv ist, dann berechne das Vorzeichen von</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\frac{\partial^2 f(x_0,y_0)}{\partial x\partial x}.\]</div>
+<ul class="simple">
+<li><p>Entscheide anhand des Vorzeichens, ob ein Minimum oder ein Maximum vorliegt.</p></li>
+</ul>
+</li>
+</ol>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html">
+<iframe
+    width="560"
+    height="315"
+    src="https://www.youtube.com/embed/8IF5uLY7Gwk"
+    frameborder="0"
+    allowfullscreen
+
+></iframe>
+</div></div>
+</div>
+</div>
+<div class="section" id="ausfuhrliches-beispiel">
+<h2>Ausführliches Beispiel<a class="headerlink" href="#ausfuhrliches-beispiel" title="Permalink to this headline">¶</a></h2>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html">
+<iframe
+    width="560"
+    height="315"
+    src="https://www.youtube.com/embed/GwyPVdoQ37g"
+    frameborder="0"
+    allowfullscreen
+
+></iframe>
+</div></div>
 </div>
 </div>
 </div>
