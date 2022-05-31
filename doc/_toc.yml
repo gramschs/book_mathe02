@@ -22,5 +22,6 @@ parts:
     title: Gradient und Jacobi-Matrix
   - file: part08
     title: Linearisierung und Extremwerte
-
+  - file: part09
+    title: Doppelintegral
   
