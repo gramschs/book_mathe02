@@ -24,4 +24,6 @@ parts:
     title: Linearisierung und Extremwerte
   - file: part09
     title: Doppelintegral
+  - file: part10
+    title: Dreifachintegral
   
