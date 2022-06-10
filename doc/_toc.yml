@@ -26,4 +26,7 @@ parts:
     title: Doppelintegral
   - file: part10
     title: Dreifachintegral
-  
+- caption: Part 4. Differentialgleichungen
+  chapters:
+  - file: part11
+    title: Grundbegriffe und separable DGL
