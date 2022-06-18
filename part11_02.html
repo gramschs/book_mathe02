@@ -1,0 +1,647 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Lösungen von Differentialgleichungen &#8212; Mathematik 2 Maschinenbau</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/exercise.css" />
+    <link rel="stylesheet" type="text/css" href="_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="_static/myadmonitions.css" />
+    <link rel="stylesheet" type="text/css" href="_static/.ipynb_checkpoints/myadmonitions-checkpoint.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Grundlegende Begriffe von Differentialgleichungen" href="part11_01.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">Mathematik 2 Maschinenbau</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Willkommen zur Materialsammlung Mathematik 2
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Part 2. Funktionenreihen
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="part03.html">
+   Reihen
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="part04a.html">
+   Potenzreihen
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="part04b.html">
+   Taylorreihen
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="part05.html">
+   Fourier-Reihen
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Part 3. Mehrdimensionale Analysis
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="part06.html">
+   Partielle Ableitung
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="part07.html">
+   Gradient und Jacobi-Matrix
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="part08.html">
+   Linearisierung und Extremwerte
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="part09.html">
+   Doppelintegral
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="part10.html">
+   Dreifachintegral
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Part 4. Differentialgleichungen
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="part11.html">
+   Grundbegriffe und separable DGL
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="part11_01.html">
+     Grundlegende Begriffe von Differentialgleichungen
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Lösungen von Differentialgleichungen
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/gramschs/book_mathe02/master?urlpath=tree/docs/part11_02.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+<a href="https://github.com/gramschs/book_mathe02"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="bottom"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="_sources/part11_02.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#die-allgemeine-losung-sind-unendlich-viele-funktionen">
+   Die allgemeine Lösung sind unendlich viele Funktionen
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#mit-zusatzbedingungen-wird-die-losung-speziell">
+   Mit Zusatzbedingungen wird die Lösung speziell
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#anfangswerte-sind-die-haufigsten-zusatzbedingungen">
+   Anfangswerte sind die häufigsten Zusatzbedingungen
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#randwertprobleme-sind-seltener-und-schwierig">
+   Randwertprobleme sind seltener und schwierig
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Lösungen von Differentialgleichungen</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#die-allgemeine-losung-sind-unendlich-viele-funktionen">
+   Die allgemeine Lösung sind unendlich viele Funktionen
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#mit-zusatzbedingungen-wird-die-losung-speziell">
+   Mit Zusatzbedingungen wird die Lösung speziell
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#anfangswerte-sind-die-haufigsten-zusatzbedingungen">
+   Anfangswerte sind die häufigsten Zusatzbedingungen
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#randwertprobleme-sind-seltener-und-schwierig">
+   Randwertprobleme sind seltener und schwierig
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <div class="cell tag_remove-input docutils container">
+</div>
+<section class="tex2jax_ignore mathjax_ignore" id="losungen-von-differentialgleichungen">
+<h1>Lösungen von Differentialgleichungen<a class="headerlink" href="#losungen-von-differentialgleichungen" title="Permalink to this headline">#</a></h1>
+<p>In diesem Abschnitt werden wir uns mit der Lösung einer Differentialgleichung beschäftigen. Wir werden den Unterschied zwischen der allgemeinen Lösung und einer speziellen Lösung der DGL betrachten und uns mit Anfangs- und Randwertproblemen beschäftigen.</p>
+<div class="tip admonition">
+<p class="admonition-title">Lernziele</p>
+<ul class="simple">
+<li><p>Sie können den Unterschied zwischen der <strong>allgemeinen Lösung</strong> und einer <strong>speziellen Lösung</strong> einer Differentialgleichung erklären.</p></li>
+<li><p>Sie wissen, was ein <strong>Anfangswertproblem</strong> ist.</p></li>
+<li><p>Sie wissen, was ein <strong>Randwertproblem</strong> ist.</p></li>
+</ul>
+</div>
+<section id="die-allgemeine-losung-sind-unendlich-viele-funktionen">
+<h2>Die allgemeine Lösung sind unendlich viele Funktionen<a class="headerlink" href="#die-allgemeine-losung-sind-unendlich-viele-funktionen" title="Permalink to this headline">#</a></h2>
+<p>Das Lösen von Differentialgleichungen ist ein eigenes Forschungsgebiet der Mathematik. Wie Sie bereits im vorherigen Abschnitt gesehen haben, gehört dazu die Integration, was ja an sich schon ein schwieriges Thema ist. Und nicht immer existiert überhaupt eine Funktion, die die Differentialgleichung erfüllt. Daher halten wir zunächst einmal fest:</p>
+<p>Eine Funktion, die eingesetzt in die Differentialgleichung dazu führt, dass die linke Seite der Gleichung gleich der rechten Seite ist, heißt <strong>Lösung der Differentialgleichung</strong>.</p>
+<p>Im Abschnitt “<a class="reference internal" href="part11_01.html#sec-11-01-a"><span class="std std-ref">Die Ordnung entscheidet über die Anzahl der Integrationskonstanten</span></a>” haben wir bereits festgestellt, dass es auch unendlich viele Lösungen einer Differentialgleichung geben kann. Beispielsweise lösen alle Funktionen</p>
+<div class="math notranslate nohighlight">
+\[y(x)=\sin(x)+C_1 x + C_2\]</div>
+<p>die Differentialgleichung <span class="math notranslate nohighlight">\(y''(x) = -\sin(x).\)</span> Die beiden Integrationskonstanten <span class="math notranslate nohighlight">\(C_1\)</span> und <span class="math notranslate nohighlight">\(C_2\)</span> entstehen dadurch, dass die höchste auftretende Ableitung die zweite Ableitung ist. Die DGL hat Ordnung 2 und wir müssen zweimal ingtegrieren, um zu einer Lösung zu gelangen. Und obwohl wir von <em>der</em> Lösung der DGL sprechen, meinen wir damit eigentlich unendlich viele Funktionen.</p>
+<div class="admonition-was-ist-die-allgemeine-losung-einer-dgl admonition">
+<p class="admonition-title">Was ist … die allgemeine Lösung einer DGL?</p>
+<p>Enthält die Lösungsfunktion der Differentialgleichung noch Integrationskonstanten und ist damit eigentlich eine Schar von unendlich vielen Funktionen, so nennen wir diese Schar von Funktionen
+die <strong>allgemeine Lösung</strong> der Differentialgleichung.</p>
+</div>
+</section>
+<section id="mit-zusatzbedingungen-wird-die-losung-speziell">
+<h2>Mit Zusatzbedingungen wird die Lösung speziell<a class="headerlink" href="#mit-zusatzbedingungen-wird-die-losung-speziell" title="Permalink to this headline">#</a></h2>
+<p>Aus der allgemeinen Lösung wählen wir eine sogenannte <strong>spezielle Lösung</strong> aus, indem wir die Integrationskonstanten festlegen. In dem obigen Beispiel bekommen wir durch die Wahl von <span class="math notranslate nohighlight">\(C_1=2\)</span> und <span class="math notranslate nohighlight">\(C_2 = 3\)</span> die spezielle Lösung</p>
+<div class="math notranslate nohighlight">
+\[y(x)=\sin(x)+2x+3\]</div>
+<p>der DGL <span class="math notranslate nohighlight">\(y''(x)=-\sin(x)\)</span>.</p>
+<p>Normalerweise raten wir nicht einfach Integrationskonstanten, sondern legen diese durch zusätzliche Informationen, also weitere Zusatzbedingungen fest.</p>
+<p>Beispielsweise könnten wir fordern, dass unsere gewünschte spezielle Lösung durch die Punkte <span class="math notranslate nohighlight">\((0,0)\)</span> und <span class="math notranslate nohighlight">\((\pi,1)\)</span> gehen soll. Dann würde die spezielle Lösung mit <span class="math notranslate nohighlight">\(C_1=\frac{1}{\pi}\)</span> und <span class="math notranslate nohighlight">\(C_2=0\)</span> sowohl die DGL erfüllen als auch die Zusatzbedingungen, denn es gilt</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+y(0) &amp;= \sin(0) + \frac{1}{\pi}\cdot 0 + 0 = 0,\\
+y(\pi) &amp;= \sin(\pi) + \frac{1}{\pi} \cdot \pi + 0 = 1.
+\end{align*}\]</div>
+<p>Sicherheitshalber rechnen wir noch die 2. Ableitung der Funktion <span class="math notranslate nohighlight">\(y(x)=\sin(x)+\frac{1}{\pi}x\)</span> aus, aber das ist tatsächlich <span class="math notranslate nohighlight">\(y''(x)=-\sin(x)\)</span>, so dass die DGL auch erfüllt ist.</p>
+<div class="admonition-was-ist-eine-spezielle-losung-einer-dgl admonition">
+<p class="admonition-title">Was ist … eine spezielle Lösung einer DGL?</p>
+<p>Die <strong>spezielle Lösung</strong> einer DGL ist eine Funktion, die die Differentialgleichung erfüllt, aber keine Integrationskonstanten mehr enthält. Sie wird meist aus der allgemeinen Lösung berechnet, indem noch Zusatzbedingungen gestellt werden.</p>
+</div>
+</section>
+<section id="anfangswerte-sind-die-haufigsten-zusatzbedingungen">
+<h2>Anfangswerte sind die häufigsten Zusatzbedingungen<a class="headerlink" href="#anfangswerte-sind-die-haufigsten-zusatzbedingungen" title="Permalink to this headline">#</a></h2>
+<p>Die Zusatzbedingungen kommen normalerweise aus dem Anwendungskontext. Wir schauen uns ein Beispiel aus der Physik an. Lassen wir einen Körper in der Nähe der Erdoberfläche fallen, so wirkt die Schwerkraft auf ihn ein. Seine Beschleunigung <span class="math notranslate nohighlight">\(a\)</span> ist dann gleich der negativen Erdbeschleunigung, also <span class="math notranslate nohighlight">\(a = - g = - 9.81 \text{m}/\text{s}^2\)</span>.</p>
+<p>Wir wissen, dass die Beschleunigung <span class="math notranslate nohighlight">\(a(t)\)</span> die 1. Ableitung der Geschwindigkeit-Zeit-Funktion <span class="math notranslate nohighlight">\(v(t)\)</span> ist, die wiederum die 1. Ableitung der Weg-Zeit-Funktion <span class="math notranslate nohighlight">\(s(t)\)</span> ist. Damit ist die Beschleunigung die 2. Ableitung der Weg-Zeit-Funktion <span class="math notranslate nohighlight">\(s(t)\)</span>. Es gilt die Differentialgleichung</p>
+<div class="math notranslate nohighlight">
+\[\ddot{s}(t) = -g.\]</div>
+<p>Bemerkung: Da die Weg-Zeit-Funktion eine zeitliche Größe ist, benutzen wir hier die Schreibweise mit der unabhängigen Variable <span class="math notranslate nohighlight">\(t\)</span> und den zwei Punkten, um die 2. Anbleitung nach <span class="math notranslate nohighlight">\(t\)</span> zu formulieren. Mehr dazu finden Sie im Abschnitt <a class="reference internal" href="part11_01.html#sec-11-01-b"><span class="std std-ref">Es gibt viele Schreibweisen für DGL</span></a>.</p>
+<p>Wir integrieren die Differentialgleichung zunächst unbestimmt, um die Geschwindigkeit-Zeit-Funktion <span class="math notranslate nohighlight">\(v(t)=\dot{s}(t)\)</span> zu erhalten:</p>
+<div class="math notranslate nohighlight">
+\[
+\int \ddot{s}(t)\, dt = \int -g \, dt \quad  \Rightarrow \quad v(t)=\dot{s}(t) = -gt + C_1.\]</div>
+<p>Dann integrieren wir ein zweites Mal unbestimmt, um die Weg-Zeit-Funktion <span class="math notranslate nohighlight">\(s(t)\)</span> zu bekommen:</p>
+<div class="math notranslate nohighlight">
+\[\int \dot{s}(t) \, dt = \int -gt + C_1 \, dt \quad \Rightarrow \quad s(t) = -\frac{1}{2}gt^2 + C_1 t + C_2. \]</div>
+<p>Wie zu erwarten war, entstehen durch die zweimalige Integration zwei Integrationskonstanten. Wir brauchen Zusatzbedingungen, um aus der allgemeinen Lösung eine spezielle Lösung auszuwählen. Dazu betrachten wir den Anwendungskontext etwas näher.</p>
+<p>Die Zeitmessung beginnt, sobald der Körper anfängt zu fallen. Daher ist es besonders geschickt, die Zusatzinformationen zu Beginn des Prozesses <span class="math notranslate nohighlight">\(t=0\)</span> zu messen und daraus die beiden Integrationskonstanten zu bestimmen. Zu Beginn des freien Falls können wir die Höhe messen, aus der der Körper fällt. Wir bezeichnen die Anfangshöhe mit <span class="math notranslate nohighlight">\(s_0\)</span>. Es muss nicht sein, dass der Körper aus der Ruhe beginnt zu fallen. Die Anfangsgeschwindigkeit zum Zeitpunkt <span class="math notranslate nohighlight">\(t=0\)</span> bezeichnen wir mit <span class="math notranslate nohighlight">\(v_0\)</span>. Es gilt also</p>
+<div class="math notranslate nohighlight">
+\[s(0)=s_0 \quad \text{ und } \quad v(0)=v_0.\]</div>
+<p>Wenn wir nun die allgemeine Lösung <span class="math notranslate nohighlight">\(s(t) = -\frac{1}{2}gt^2 + C_1 t + C_2\)</span> zum Zeitpunkt <span class="math notranslate nohighlight">\(t=0\)</span> betrachten, so gilt</p>
+<div class="math notranslate nohighlight">
+\[s(0)=-\frac{1}{2}g\cdot0^2 + C_1\cdot 0 + C_2 = C_2.\]</div>
+<p>Daraus können wir sofort ablesen, dass die Integrationskonstante <span class="math notranslate nohighlight">\(C_2\)</span> der Anfangshöhe <span class="math notranslate nohighlight">\(s_0\)</span> entsprechen muss.</p>
+<p>Als nächstes betrachten wir die 1. Ableitung der allgemeinen Lösung zum Zeitpunkt <span class="math notranslate nohighlight">\(t=0\)</span>, also die Geschwindigkeit-Zeit-Funktion <span class="math notranslate nohighlight">\(v(t)\)</span></p>
+<div class="math notranslate nohighlight">
+\[\dot{s}(0)=-g\cdot 0 + C_1 = C_1.\]</div>
+<p>Damit erhalten wir die spezielle Lösung</p>
+<div class="math notranslate nohighlight">
+\[s(t)=\frac{1}{2}gt^2 + v_0 t + s_0\]</div>
+<p>passend zu den Anfangsbedingungen <span class="math notranslate nohighlight">\(s(0)=s_0\)</span> und <span class="math notranslate nohighlight">\(v(0)=v_0\)</span>.</p>
+<div class="admonition-was-ist-ein-anfangswertproblem admonition">
+<p class="admonition-title">Was ist … ein Anfangswertproblem?</p>
+<p>Sind zusätzlich zu einer Differentialgleichung noch weitere Bedingungen für die Funktion und ihre Ableitungen an einer <em>einzigen</em> Stelle gegeben, so nennen wir beides zusammen <strong>Anfangswertproblem</strong>.</p>
+<p>Hat die Differentialgleichung die Ordnung <span class="math notranslate nohighlight">\(n\)</span>, dann brauchen wir <span class="math notranslate nohighlight">\(n\)</span> Anfangsbedingungen, um aus der allgemeinen Lösung eine spezielle Lösung auszuwählen.</p>
+</div>
+</section>
+<section id="randwertprobleme-sind-seltener-und-schwierig">
+<h2>Randwertprobleme sind seltener und schwierig<a class="headerlink" href="#randwertprobleme-sind-seltener-und-schwierig" title="Permalink to this headline">#</a></h2>
+<p>Bei den Anfangswertproblemen werden alle Zusatzbedingungen an derselben Stelle gefordert. Sehr oft ist diese Stelle der Anfang eines zeitlichen Prozesses, aber das muss nicht sein. Wenn jedoch die Zusatzbedingungen an verschiedenen Stellen gestellt werden, dann sprechen wir von einem Randwertproblem.</p>
+<div class="admonition-was-ist-ein-randwertproblem admonition">
+<p class="admonition-title">Was ist … ein Randwertproblem?</p>
+<p>Sind zusätzlich zu einer Differentialgleichung noch weitere Bedingungen für die Funktion und ihre Ableitungen an <em>mehreren</em> Stellen gegeben, so nennen wir beides zusammen <strong>Randwertproblem</strong>.</p>
+<p>Für eine Differentialgleichung der Ordnung <span class="math notranslate nohighlight">\(n\)</span> brauchen wir <span class="math notranslate nohighlight">\(n\)</span> Randwerte, um aus der allgemeinen Lösung eine spezielle Lösung auszuwählen.</p>
+</div>
+<p>Wir betrachten als nächstes ein klassisches Beispiel eines Randwertproblems aus der Technischen Mechanik. Ein Balken wird auf zwei Stützen gelagert und gleichmäßig belastet. Für die Biegelinie <span class="math notranslate nohighlight">\(y(x)\)</span>, die die Auslenkung des Balkens an jeder Position <span class="math notranslate nohighlight">\(x\)</span> beschreibt, gilt die folgende Differentialgleichung:</p>
+<div class="math notranslate nohighlight">
+\[y'' = -\frac{M_b}{EI}.\]</div>
+<p>Die physikalischen Größen sind dabei das Biegemoment <span class="math notranslate nohighlight">\(M_b\)</span>, der Elastizitätsmodul <span class="math notranslate nohighlight">\(E\)</span> und das Flächenmoment <span class="math notranslate nohighlight">\(I\)</span> des Balkenquerschnitts. Wirkt eine konstante Streckenlast <span class="math notranslate nohighlight">\(q\)</span> auf den Balken, so ist das Biegemoment</p>
+<div class="math notranslate nohighlight">
+\[M_b(x) = \frac{1}{2}q(lx-x^2).\]</div>
+<p>abhängig von der Position <span class="math notranslate nohighlight">\(x\)</span> und die Differentialgleichung lautet</p>
+<div class="math notranslate nohighlight">
+\[y'' = - \frac{q}{2EI}(lx-x^2).\]</div>
+<p>Dabei sind wir davon ausgegangen, dass die linke Stütze die Position <span class="math notranslate nohighlight">\(x=0\)</span> und die rechte Stütze die Position <span class="math notranslate nohighlight">\(x=l\)</span> hat. An beiden Randpunkten ist die Auslenkung 0, also haben wir die zusätzlichen Randwerte</p>
+<div class="math notranslate nohighlight">
+\[y(0)=0 \quad \text{und} \quad y(l)=0\]</div>
+<p>als zusätzliche Bedingung. Als erstes bestimmen wir die allgemeine Lösung des Randwertproblems. Dazu integrieren wir zweimal unbestimmt und erhalten zwei Integrationskonstanten:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+\int y''(x)\, dx = -\frac{q}{2EI} \int lx - x^2 \, dx \quad &amp;\Rightarrow \quad
+y'(x) = - \frac{q}{2EI}\left(\frac{1}{2}lx^2 - \frac{1}{3}x^3 + C_1\right) \\ 
+\int y'(x) \, dx = - \frac{q}{2EI} \int \frac{1}{2}lx^2 - \frac{1}{3}x^3 + C_1 \, dx \quad &amp;\Rightarrow \quad y(x) = - \frac{q}{2EI} \left(\frac{1}{6}lx^3 -\frac{1}{12} x^4 + C_1x + C_2\right)  
+\end{align*}\]</div>
+<p>Um jetzt aus der allgemeinen Lösung mit den zwei Integrationskonstanten die spezielle Lösung zu berechnen, die das Randwertproblem löst, setzen wir die beiden Randwerte in die allgemeine Lösung ein:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+y(0) &amp;= -\frac{q}{2EI} C_2, \\
+y(l) &amp;= -\frac{q}{2EI} \left(\frac{1}{6}l^4  - \frac{1}{12} l^4 + C_1\cdot l + C_2\right). 
+\end{align*}\]</div>
+<p>Da die Durchbiegung an der linken und rechten Stütze jeweils 0 ist, setzen wir <span class="math notranslate nohighlight">\(y(0)=y(l)=0\)</span>. Wir können sofort auf beiden Seiten durch den Term <span class="math notranslate nohighlight">\(-\frac{q}{2EI}\)</span> teilen, da dieser aus physikalischen Gründen selbst ungleich 0 sein muss. Damit erhalten wir sofort <span class="math notranslate nohighlight">\(y(0)=C_2=0\)</span>. Das setzen wir in die zweite Gleichung ein und erhalten</p>
+<div class="math notranslate nohighlight">
+\[y(l)=\frac{1}{6}l^4  - \frac{1}{12} l^4 + C_1\cdot l=0.\]</div>
+<p>Durch <span class="math notranslate nohighlight">\(l\)</span> geteilt und nach <span class="math notranslate nohighlight">\(C_1\)</span> aufgelöst erhalten wir <span class="math notranslate nohighlight">\(C_1 = -\frac{1}{12}l^3\)</span>. Damit lautet die spezielle Lösung der Differentialgleichung für die Biegelinie</p>
+<div class="math notranslate nohighlight">
+\[y(x)=\frac{q}{24 EI}\left(x^4 -2lx^3 + l^3x)\right).\]</div>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html">
+<iframe
+    width="800"
+    height="600"
+    src="https://www.geogebra.org/calculator/xuzuerpf?embed"
+    frameborder="0"
+    allowfullscreen
+
+></iframe>
+</div></div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="part11_01.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Grundlegende Begriffe von Differentialgleichungen</p>
+        </div>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Simone Gramsch<br/>
+  
+      &copy; Copyright 2022.<br/>
+    <div class="extra_footer">
+      <div>
+<a href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img class="license" alt="Creative Commons License" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a> This book is licensed under a <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons BY-NC-SA 4.0 License</a>.
+</div>
+
+    </div>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>
