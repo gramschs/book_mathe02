@@ -30,6 +30,6 @@ parts:
   chapters:
   - file: part11
     title: Grundbegriffe und separable DGL
-    sections:
-    - file: part11_01
-    - file: part11_02
+    #sections:
+    #- file: part11_01
+    #- file: part11_02
