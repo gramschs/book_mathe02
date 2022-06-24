@@ -4,13 +4,11 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Linearisierung/Tangentialebene und Extremwerte &#8212; Mathematik 2 Maschinenbau</title>
     
-  <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -20,8 +18,12 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
+    
+      
+
+    
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
@@ -29,11 +31,10 @@
     <link rel="stylesheet" type="text/css" href="_static/exercise.css" />
     <link rel="stylesheet" type="text/css" href="_static/proof.css" />
     <link rel="stylesheet" type="text/css" href="_static/myadmonitions.css" />
-    <link rel="stylesheet" type="text/css" href="_static/.ipynb_checkpoints/myadmonitions-checkpoint.css" />
-    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
 
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
@@ -41,13 +42,12 @@
     <script src="_static/doctools.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
-    <script src="_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="_static/design-tabs.js"></script>
+    <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
@@ -67,21 +67,7 @@ const thebe_selector_output = ".output, .cell_output"
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
-<!-- Checkboxes to toggle the left sidebar -->
-<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
-<label class="overlay overlay-navbar" for="__navigation">
-    <div class="visually-hidden">Toggle navigation sidebar</div>
-</label>
-<!-- Checkboxes to toggle the in-page toc -->
-<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
-<label class="overlay overlay-pagetoc" for="__page-toc">
-    <div class="visually-hidden">Toggle in-page Table of Contents</div>
-</label>
-<!-- Headers at the top -->
-<div class="announcement header-item noprint"></div>
-<div class="header header-item noprint"></div>
-
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
     
     <div class="container-fluid" id="banner"></div>
 
@@ -90,10 +76,9 @@ const thebe_selector_output = ".output, .cell_output"
     <div class="container-xl">
       <div class="row">
           
-<!-- Sidebar -->
-<div class="bd-sidebar noprint" id="site-navigation">
-    <div class="bd-sidebar__content">
-        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="index.html">
       
       
@@ -106,15 +91,14 @@ const thebe_selector_output = ".output, .cell_output"
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
-        
-        <ul class="nav bd-sidenav bd-sidenav__home-link">
-            <li class="toctree-l1">
-                <a class="reference internal" href="intro.html">
-                    Willkommen zur Materialsammlung Mathematik 2
-                </a>
-            </li>
-        </ul>
-        <p aria-level="2" class="caption" role="heading">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Willkommen zur Materialsammlung Mathematik 2
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Part 2. Funktionenreihen
  </span>
@@ -204,17 +188,12 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 
     </div>
-</nav></div>
-        <div class="bd-sidebar__bottom">
-             <!-- To handle the deprecated key -->
-            
-            <div class="navbar_extra_footer">
-            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-            </div>
-            
-        </div>
-    </div>
-    <div id="rtd-footer-container"></div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
 </div>
 
 
@@ -222,159 +201,91 @@ const thebe_selector_output = ".output, .cell_output"
 
 
           
-<!-- A tiny helper pixel to detect if we've scrolled -->
-<div class="sbt-scroll-pixel-helper"></div>
-<!-- Main content -->
-<div class="col py-0 content-container">
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
     
-    <div class="header-article row sticky-top noprint">
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
         
-
-
-
-<div class="col py-1 d-flex header-article-main">
-    <div class="header-article__left">
-        
-        <label for="__navigation"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="right"
-title="Toggle navigation"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-bars"></i>
-  </span>
-
-</label>
-
-        
-    </div>
-    <div class="header-article__right">
-<div class="menu-dropdown menu-dropdown-launch-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Launch interactive content">
-      <i class="fas fa-rocket"></i>
-  </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="https://mybinder.org/v2/gh/gramschs/book_mathe02/master?urlpath=tree/docs/part08.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Launch on Binder"
->
-  
-
-<span class="headerbtn__icon-container">
-  
-    <img src="_static/images/logo_binder.svg">
-  </span>
-<span class="headerbtn__text-container">Binder</span>
-</a>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
-
-<button onclick="toggleFullScreen()"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="bottom"
-title="Fullscreen mode"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-expand"></i>
-  </span>
-
-</button>
-<a href="https://github.com/gramschs/book_mathe02"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="bottom"
-title="Source repository"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fab fa-github"></i>
-  </span>
-
-</a>
-
-<div class="menu-dropdown menu-dropdown-download-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Download this page">
-      <i class="fas fa-download"></i>
-  </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="_sources/part08.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Download source file"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file"></i>
-  </span>
-<span class="headerbtn__text-container">.ipynb</span>
-</a>
-
-      </li>
-      
-      <li>
-        
-<button onclick="printPdf(this)"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="left"
-title="Print to PDF"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file-pdf"></i>
-  </span>
-<span class="headerbtn__text-container">.pdf</span>
-</button>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
-<label for="__page-toc"
-  class="headerbtn headerbtn-page-toc"
-  
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-list"></i>
-  </span>
-
-</label>
-
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/part08.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
     </div>
 </div>
 
-<!-- Table of contents -->
-<div class="col-md-3 bd-toc show noprint">
-    <div class="tocsection onthispage pt-5 pb-3">
-        <i class="fas fa-list"></i> Contents
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/gramschs/book_mathe02"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        
+        
     </div>
-    <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/gramschs/book_mathe02/master?urlpath=tree/docs/part08.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#lernziele">
    Lernziele
@@ -417,11 +328,12 @@ title="Print to PDF"
  </li>
 </ul>
 
-    </nav>
-</div>
+            </nav>
+        </div>
     </div>
-    <div class="article row">
-        <div class="col pl-md-3 pl-lg-5 content-container">
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
                 <h1>Linearisierung/Tangentialebene und Extremwerte</h1>
@@ -480,21 +392,20 @@ title="Print to PDF"
                     </div>
                 </div>
             </div>
-            <main id="main-content" role="main">
-                
+            
               <div>
                 
   <div class="cell tag_remove-input docutils container">
 </div>
-<section class="tex2jax_ignore mathjax_ignore" id="linearisierung-tangentialebene-und-extremwerte">
-<h1>Linearisierung/Tangentialebene und Extremwerte<a class="headerlink" href="#linearisierung-tangentialebene-und-extremwerte" title="Permalink to this headline">#</a></h1>
+<div class="tex2jax_ignore mathjax_ignore section" id="linearisierung-tangentialebene-und-extremwerte">
+<h1>Linearisierung/Tangentialebene und Extremwerte<a class="headerlink" href="#linearisierung-tangentialebene-und-extremwerte" title="Permalink to this headline">¶</a></h1>
 <p>Für eindimensionale Funktionen haben wir die Linearisierung und die Annährung einer Funktion durch eine Tangente bereits kennengelernt. Am einfachsten lässt sich die Tangente einer eindimensionalen Funktion berechnen, indem wir das 1. Taylor-Polynom im Entwicklungspunkt <span class="math notranslate nohighlight">\(x_0\)</span> berechnen:</p>
 <div class="math notranslate nohighlight">
 \[f(x) \approx f(x_0) + f'(x_0)\cdot (x-x_0).\]</div>
 <p>Aus der Tangente wird für eine Funktion <span class="math notranslate nohighlight">\(f: \mathbb{R}^2 \rightarrow \mathbb{R}\)</span> eine Tangentialebene.</p>
 <p>Neben der Linearisierung einer mehrdimensionalen Funktion ist auch die Berechnung von Minima (Tiefpunkten) und Maxima (Hochpunkten) interessant für die Praxis. In diesem Kapitel lernen wir, was die 2. Ableitung einer mehrdimensionalen Funktion ist und wie sie genutzt werden kann, um Extremwerte zu berechnen.</p>
-<section id="lernziele">
-<h2>Lernziele<a class="headerlink" href="#lernziele" title="Permalink to this headline">#</a></h2>
+<div class="section" id="lernziele">
+<h2>Lernziele<a class="headerlink" href="#lernziele" title="Permalink to this headline">¶</a></h2>
 <div class="tip admonition">
 <p class="admonition-title">Lernziele</p>
 <ul class="simple">
@@ -532,9 +443,9 @@ title="Print to PDF"
 \frac{\partial^2 f(x_0,y_0)}{\partial x\partial x} &gt; 0 &amp; \qquad \Rightarrow \text{relatives Minimum} \\
 \end{align*}\]</div>
 </div>
-</section>
-<section id="linearisierung-tangentialebene">
-<h2>Linearisierung/Tangentialebene<a class="headerlink" href="#linearisierung-tangentialebene" title="Permalink to this headline">#</a></h2>
+</div>
+<div class="section" id="linearisierung-tangentialebene">
+<h2>Linearisierung/Tangentialebene<a class="headerlink" href="#linearisierung-tangentialebene" title="Permalink to this headline">¶</a></h2>
 <p>Ziel dieses Abschnitts ist es, eine skalarwertige Funktion <span class="math notranslate nohighlight">\(f(x,y)\)</span> in einem Arbeitspunkt <span class="math notranslate nohighlight">\((x_0,y_0)\)</span> zu <strong>linearisieren</strong> oder anders ausgedrückt, ihre <strong>Tangentialebene</strong></p>
 <div class="math notranslate nohighlight">
 \[T_{f,1}(x,y) = f(x_0,y_0) + \frac{\partial f(x_0,y_0)}{\partial x} (x-x_0) + \frac{\partial f(x_0,y_0)}{\partial y}(y-y_0)\]</div>
@@ -570,19 +481,17 @@ title="Print to PDF"
 ></iframe>
 </div></div>
 </div>
-</section>
-<section id="extremwerte-bei-1d-funktionen-notwendige-bedingung-und-hinreichende-bedingung">
-<h2>Extremwerte bei 1D-Funktionen: notwendige Bedingung und hinreichende Bedingung<a class="headerlink" href="#extremwerte-bei-1d-funktionen-notwendige-bedingung-und-hinreichende-bedingung" title="Permalink to this headline">#</a></h2>
+</div>
+<div class="section" id="extremwerte-bei-1d-funktionen-notwendige-bedingung-und-hinreichende-bedingung">
+<h2>Extremwerte bei 1D-Funktionen: notwendige Bedingung und hinreichende Bedingung<a class="headerlink" href="#extremwerte-bei-1d-funktionen-notwendige-bedingung-und-hinreichende-bedingung" title="Permalink to this headline">¶</a></h2>
 <p>Um herauszufinden, welche x-Werte als Extrema (Maximum/Hochpunkt oder Minimum/Tiefpunkt) möglich sind, wird die 1. Ableitung Null gesetzt:</p>
 <div class="math notranslate nohighlight">
 \[f'(x)=0.\]</div>
 <p>Diese Bedingung ist <em>notwendig</em>, damit überhaupt ein Maximum oder Minimum vorliegen kann. Leider reicht diese Bedingung noch nicht aus. Alle Nullstellen der 1. Ableitung sind <em>mögliche</em> Extrema, es könnten aber auch Sattelpunkte sein wie in der folgenden Abbildung der Funktion <span class="math notranslate nohighlight">\(f(x)=x^3\)</span>:</p>
-<figure class="align-default" id="fig-part06-sattelpunkt1d">
+<div class="figure align-default" id="fig-part06-sattelpunkt1d">
 <a class="reference internal image-reference" href="_images/part08_sattelpunkt1D.svg"><img alt="_images/part08_sattelpunkt1D.svg" src="_images/part08_sattelpunkt1D.svg" width="300px" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 3 </span><span class="caption-text">Sattelpunkt</span><a class="headerlink" href="#fig-part06-sattelpunkt1d" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
+<p class="caption"><span class="caption-number">Fig. 3 </span><span class="caption-text">Sattelpunkt</span><a class="headerlink" href="#fig-part06-sattelpunkt1d" title="Permalink to this image">¶</a></p>
+</div>
 <p>Daher müssen wir noch zusätzliche Bedingungen überprüfen, bevor wir entscheiden können, ob ein Minimum oder Maximum vorliegt. Die möglichen Extremwerte müssen noch zusätzlich mit der 2. Ableitung geprüft werden:</p>
 <ul class="simple">
 <li><p>Der Punkt <span class="math notranslate nohighlight">\(\tilde{x}\)</span> ist ein <strong>Maximum/Hochpunkt</strong>, wenn</p>
@@ -599,9 +508,9 @@ title="Print to PDF"
 </li>
 </ul>
 <p>Diese beiden Bedingungen nennt man dann <strong>hinreichende</strong> Bedingungen. Wenn allerdings die zweite Ableitung Null ist, also <span class="math notranslate nohighlight">\(f''(\tilde{x})=0\)</span>, kann man keine Entscheidung treffen und muss weitere Bedingungen überprüfen.</p>
-</section>
-<section id="extremwerte-bei-mehrdimensionalen-funktionen-notwendige-bedingung">
-<h2>Extremwerte bei mehrdimensionalen Funktionen: notwendige Bedingung<a class="headerlink" href="#extremwerte-bei-mehrdimensionalen-funktionen-notwendige-bedingung" title="Permalink to this headline">#</a></h2>
+</div>
+<div class="section" id="extremwerte-bei-mehrdimensionalen-funktionen-notwendige-bedingung">
+<h2>Extremwerte bei mehrdimensionalen Funktionen: notwendige Bedingung<a class="headerlink" href="#extremwerte-bei-mehrdimensionalen-funktionen-notwendige-bedingung" title="Permalink to this headline">¶</a></h2>
 <p>Die notwendige Bedingung für Extremwerte eindimensionaler Funktion lässt sich sofort auf mehrdimensionale Funktionen übertragen. Wir müssen uns nur in Erinnerung rufen, dass die 1. Ableitung eindimensionaler Funktionen dem Gradienten entspricht. Und da der Gradient der Zeilenvektor ist, der alle partielle Ableitungen zusammenfasst, lautet die <strong>notwendige Bedingung für einen Extremwert</strong> der skalarwertigen Funktion <span class="math notranslate nohighlight">\(f(x,y)\)</span></p>
 <div class="math notranslate nohighlight">
 \[\frac{\partial f(\tilde{x}, \tilde{y})}{\partial x} = 0 \quad \text{ und } \quad \frac{\partial f(\tilde{x},\tilde{y})}{\partial y} = 0.\]</div>
@@ -636,9 +545,9 @@ title="Print to PDF"
 ></iframe>
 </div></div>
 </div>
-</section>
-<section id="hesse-matrix">
-<h2>Hesse-Matrix<a class="headerlink" href="#hesse-matrix" title="Permalink to this headline">#</a></h2>
+</div>
+<div class="section" id="hesse-matrix">
+<h2>Hesse-Matrix<a class="headerlink" href="#hesse-matrix" title="Permalink to this headline">¶</a></h2>
 <p>Wenn der Gradient das Analogon zur 1. Ableitung ist, gibt es dann etwas Ähnliches für die 2. Ableitung? Ja, allerdings wird es dann eine Matrix, die die 2. partiellen Ableitungen zusammenfasst, die sogenannte <strong>Hesse-Matrix</strong>.</p>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
@@ -653,9 +562,9 @@ title="Print to PDF"
 ></iframe>
 </div></div>
 </div>
-</section>
-<section id="extremwerte-bei-mehrdimensionalen-funktionen-hinreichende-bedingung">
-<h2>Extremwerte bei mehrdimensionalen Funktionen: hinreichende Bedingung<a class="headerlink" href="#extremwerte-bei-mehrdimensionalen-funktionen-hinreichende-bedingung" title="Permalink to this headline">#</a></h2>
+</div>
+<div class="section" id="extremwerte-bei-mehrdimensionalen-funktionen-hinreichende-bedingung">
+<h2>Extremwerte bei mehrdimensionalen Funktionen: hinreichende Bedingung<a class="headerlink" href="#extremwerte-bei-mehrdimensionalen-funktionen-hinreichende-bedingung" title="Permalink to this headline">¶</a></h2>
 <p>Wenn die notwendige Bedingung erfüllt ist, also die partiellen Ableitungen 1. Ordnung verschwinden in <span class="math notranslate nohighlight">\((x_0,y_0)\)</span>, dann reicht das noch nicht aus. Zusätzlich muss noch die folgende <strong>hinreichende Bedingung</strong> gelten:</p>
 <ul class="simple">
 <li><p>Die <strong>Determinante der Hesse-Matrix ist positiv</strong></p></li>
@@ -684,9 +593,9 @@ title="Print to PDF"
 ></iframe>
 </div></div>
 </div>
-</section>
-<section id="kochrezept-zur-bestimmung-der-extrema-mehrdimensionaler-funktionen">
-<h2>Kochrezept zur Bestimmung der Extrema mehrdimensionaler Funktionen<a class="headerlink" href="#kochrezept-zur-bestimmung-der-extrema-mehrdimensionaler-funktionen" title="Permalink to this headline">#</a></h2>
+</div>
+<div class="section" id="kochrezept-zur-bestimmung-der-extrema-mehrdimensionaler-funktionen">
+<h2>Kochrezept zur Bestimmung der Extrema mehrdimensionaler Funktionen<a class="headerlink" href="#kochrezept-zur-bestimmung-der-extrema-mehrdimensionaler-funktionen" title="Permalink to this headline">¶</a></h2>
 <ol>
 <li><p>Berechne die partiellen Ableitungen der Funktion.</p></li>
 <li><p>Setze aus den partiellen Ableitungen den Gradienten zusammen.</p></li>
@@ -717,9 +626,9 @@ title="Print to PDF"
 ></iframe>
 </div></div>
 </div>
-</section>
-<section id="ausfuhrliches-beispiel">
-<h2>Ausführliches Beispiel<a class="headerlink" href="#ausfuhrliches-beispiel" title="Permalink to this headline">#</a></h2>
+</div>
+<div class="section" id="ausfuhrliches-beispiel">
+<h2>Ausführliches Beispiel<a class="headerlink" href="#ausfuhrliches-beispiel" title="Permalink to this headline">¶</a></h2>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <div class="output text_html">
@@ -733,8 +642,8 @@ title="Print to PDF"
 ></iframe>
 </div></div>
 </div>
-</section>
-</section>
+</div>
+</div>
 
     <script type="text/x-thebe-config">
     {
@@ -758,11 +667,9 @@ title="Print to PDF"
 
               </div>
               
-            </main>
-            <footer class="footer-article noprint">
-                
-    <!-- Previous / next buttons -->
-<div class='prev-next-area'>
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
     <a class='left-prev' id="prev-link" href="part07.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
@@ -778,34 +685,30 @@ title="Print to PDF"
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-            </footer>
+            
         </div>
     </div>
-    <div class="footer-content row">
-        <footer class="col footer"><p>
-  
-    By Simone Gramsch<br/>
-  
-      &copy; Copyright 2022.<br/>
-    <div class="extra_footer">
-      <div>
+    <footer class="footer">
+  <p>
+    
+      By Simone Gramsch<br/>
+    
+        &copy; Copyright 2022.<br/>
+      <div class="extra_footer">
+        <div>
 <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img class="license" alt="Creative Commons License" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a> This book is licensed under a <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons BY-NC-SA 4.0 License</a>.
 </div>
 
-    </div>
-</p>
-        </footer>
-    </div>
-    
-</div>
+      </div>
+  </p>
+</footer>
+</main>
 
 
       </div>
     </div>
   
-  <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
-
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
 
   </body>
 </html>

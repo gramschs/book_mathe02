@@ -4,13 +4,11 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Doppelintegral &#8212; Mathematik 2 Maschinenbau</title>
     
-  <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -20,8 +18,12 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
+    
+      
+
+    
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
@@ -29,11 +31,10 @@
     <link rel="stylesheet" type="text/css" href="_static/exercise.css" />
     <link rel="stylesheet" type="text/css" href="_static/proof.css" />
     <link rel="stylesheet" type="text/css" href="_static/myadmonitions.css" />
-    <link rel="stylesheet" type="text/css" href="_static/.ipynb_checkpoints/myadmonitions-checkpoint.css" />
-    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
 
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
@@ -41,13 +42,12 @@
     <script src="_static/doctools.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
-    <script src="_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="_static/design-tabs.js"></script>
+    <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
@@ -67,21 +67,7 @@ const thebe_selector_output = ".output, .cell_output"
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
-<!-- Checkboxes to toggle the left sidebar -->
-<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
-<label class="overlay overlay-navbar" for="__navigation">
-    <div class="visually-hidden">Toggle navigation sidebar</div>
-</label>
-<!-- Checkboxes to toggle the in-page toc -->
-<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
-<label class="overlay overlay-pagetoc" for="__page-toc">
-    <div class="visually-hidden">Toggle in-page Table of Contents</div>
-</label>
-<!-- Headers at the top -->
-<div class="announcement header-item noprint"></div>
-<div class="header header-item noprint"></div>
-
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
     
     <div class="container-fluid" id="banner"></div>
 
@@ -90,10 +76,9 @@ const thebe_selector_output = ".output, .cell_output"
     <div class="container-xl">
       <div class="row">
           
-<!-- Sidebar -->
-<div class="bd-sidebar noprint" id="site-navigation">
-    <div class="bd-sidebar__content">
-        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="index.html">
       
       
@@ -106,15 +91,14 @@ const thebe_selector_output = ".output, .cell_output"
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
-        
-        <ul class="nav bd-sidenav bd-sidenav__home-link">
-            <li class="toctree-l1">
-                <a class="reference internal" href="intro.html">
-                    Willkommen zur Materialsammlung Mathematik 2
-                </a>
-            </li>
-        </ul>
-        <p aria-level="2" class="caption" role="heading">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Willkommen zur Materialsammlung Mathematik 2
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Part 2. Funktionenreihen
  </span>
@@ -204,17 +188,12 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 
     </div>
-</nav></div>
-        <div class="bd-sidebar__bottom">
-             <!-- To handle the deprecated key -->
-            
-            <div class="navbar_extra_footer">
-            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-            </div>
-            
-        </div>
-    </div>
-    <div id="rtd-footer-container"></div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
 </div>
 
 
@@ -222,159 +201,91 @@ const thebe_selector_output = ".output, .cell_output"
 
 
           
-<!-- A tiny helper pixel to detect if we've scrolled -->
-<div class="sbt-scroll-pixel-helper"></div>
-<!-- Main content -->
-<div class="col py-0 content-container">
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
     
-    <div class="header-article row sticky-top noprint">
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
         
-
-
-
-<div class="col py-1 d-flex header-article-main">
-    <div class="header-article__left">
-        
-        <label for="__navigation"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="right"
-title="Toggle navigation"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-bars"></i>
-  </span>
-
-</label>
-
-        
-    </div>
-    <div class="header-article__right">
-<div class="menu-dropdown menu-dropdown-launch-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Launch interactive content">
-      <i class="fas fa-rocket"></i>
-  </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="https://mybinder.org/v2/gh/gramschs/book_mathe02/master?urlpath=tree/docs/part09.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Launch on Binder"
->
-  
-
-<span class="headerbtn__icon-container">
-  
-    <img src="_static/images/logo_binder.svg">
-  </span>
-<span class="headerbtn__text-container">Binder</span>
-</a>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
-
-<button onclick="toggleFullScreen()"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="bottom"
-title="Fullscreen mode"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-expand"></i>
-  </span>
-
-</button>
-<a href="https://github.com/gramschs/book_mathe02"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="bottom"
-title="Source repository"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fab fa-github"></i>
-  </span>
-
-</a>
-
-<div class="menu-dropdown menu-dropdown-download-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Download this page">
-      <i class="fas fa-download"></i>
-  </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="_sources/part09.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Download source file"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file"></i>
-  </span>
-<span class="headerbtn__text-container">.ipynb</span>
-</a>
-
-      </li>
-      
-      <li>
-        
-<button onclick="printPdf(this)"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="left"
-title="Print to PDF"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file-pdf"></i>
-  </span>
-<span class="headerbtn__text-container">.pdf</span>
-</button>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
-<label for="__page-toc"
-  class="headerbtn headerbtn-page-toc"
-  
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-list"></i>
-  </span>
-
-</label>
-
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/part09.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
     </div>
 </div>
 
-<!-- Table of contents -->
-<div class="col-md-3 bd-toc show noprint">
-    <div class="tocsection onthispage pt-5 pb-3">
-        <i class="fas fa-list"></i> Contents
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/gramschs/book_mathe02"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        
+        
     </div>
-    <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/gramschs/book_mathe02/master?urlpath=tree/docs/part09.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#lernziele">
    Lernziele
@@ -402,11 +313,12 @@ title="Print to PDF"
  </li>
 </ul>
 
-    </nav>
-</div>
+            </nav>
+        </div>
     </div>
-    <div class="article row">
-        <div class="col pl-md-3 pl-lg-5 content-container">
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
                 <h1>Doppelintegral</h1>
@@ -450,17 +362,16 @@ title="Print to PDF"
                     </div>
                 </div>
             </div>
-            <main id="main-content" role="main">
-                
+            
               <div>
                 
   <div class="cell tag_remove-input docutils container">
 </div>
-<section class="tex2jax_ignore mathjax_ignore" id="doppelintegral">
-<h1>Doppelintegral<a class="headerlink" href="#doppelintegral" title="Permalink to this headline">#</a></h1>
+<div class="tex2jax_ignore mathjax_ignore section" id="doppelintegral">
+<h1>Doppelintegral<a class="headerlink" href="#doppelintegral" title="Permalink to this headline">¶</a></h1>
 <p>Nachdem wir in den vorhergehenden Kapiteln Ableitungen von eindimensionalen Funktionen auf mehrdimensionale Funktionen verallgemeinert haben, werden wir in diesem Kapitel Integrale von Funktionen mit zwei Variablen betrachten.</p>
-<section id="lernziele">
-<h2>Lernziele<a class="headerlink" href="#lernziele" title="Permalink to this headline">#</a></h2>
+<div class="section" id="lernziele">
+<h2>Lernziele<a class="headerlink" href="#lernziele" title="Permalink to this headline">¶</a></h2>
 <div class="tip admonition">
 <p class="admonition-title">Lernziele</p>
 <ul class="simple">
@@ -473,45 +384,39 @@ title="Print to PDF"
 \[x_S = \frac{1}{A}\iint_{A} x \, dA \quad \text{ und } \quad y_S = \frac{1}{A} \iint_{A} y\, dA\]</div>
 <p>berechnen.</p>
 </div>
-</section>
-<section id="idee-der-doppelintegrale">
-<h2>Idee der Doppelintegrale<a class="headerlink" href="#idee-der-doppelintegrale" title="Permalink to this headline">#</a></h2>
+</div>
+<div class="section" id="idee-der-doppelintegrale">
+<h2>Idee der Doppelintegrale<a class="headerlink" href="#idee-der-doppelintegrale" title="Permalink to this headline">¶</a></h2>
 <p>Bei eindimensionalen Funktionen entspricht das Integral <span class="math notranslate nohighlight">\(\int_{x_{min}}^{x_{max}} f(x)\, dx\)</span> dem Flächeninhalt der Fläche <span class="math notranslate nohighlight">\(A\)</span> (siehe Abbildung).</p>
-<figure class="align-default" id="fig-part09-integral1d">
+<div class="figure align-default" id="fig-part09-integral1d">
 <a class="reference internal image-reference" href="_images/part09_integral1D.svg"><img alt="_images/part09_integral1D.svg" src="_images/part09_integral1D.svg" width="300px" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 4 </span><span class="caption-text">Integral entspricht dem Flächeninhalt</span><a class="headerlink" href="#fig-part09-integral1d" title="Permalink to this image">#</a></p>
+<p class="caption"><span class="caption-number">Fig. 4 </span><span class="caption-text">Integral entspricht dem Flächeninhalt</span><a class="headerlink" href="#fig-part09-integral1d" title="Permalink to this image">¶</a></p>
 <div class="legend">
 <p>(<a class="reference external" href="https://commons.wikimedia.org/w/index.php?curid=1039841">Quelle:</a> “Wikimedia”, Autor: 4C - Eigenes Werk, based on JPG version, Lizenz: <a class="reference external" href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>)</p>
 </div>
-</figcaption>
-</figure>
+</div>
 <p>Dementsprechend beschreibt das Doppelintegral einer Funktion von zwei Variablen das Volumen <span class="math notranslate nohighlight">\(V\)</span>, das zwischen der Fläche <span class="math notranslate nohighlight">\(B\)</span> (B wie Boden oder Bereich) und der Fläche <span class="math notranslate nohighlight">\(f(x,y)\)</span> entsteht, wobei die Punkte <span class="math notranslate nohighlight">\((x,y)\)</span> aus <span class="math notranslate nohighlight">\(B\)</span> stammen.</p>
-<figure class="align-default" id="fig-part09-sketch-doubleintegral">
+<div class="figure align-default" id="fig-part09-sketch-doubleintegral">
 <a class="reference internal image-reference" href="_images/part09_sketch_doubleintegral.svg"><img alt="_images/part09_sketch_doubleintegral.svg" src="_images/part09_sketch_doubleintegral.svg" width="600px" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 5 </span><span class="caption-text">Integral entspricht dem Volumen</span><a class="headerlink" href="#fig-part09-sketch-doubleintegral" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
+<p class="caption"><span class="caption-number">Fig. 5 </span><span class="caption-text">Integral entspricht dem Volumen</span><a class="headerlink" href="#fig-part09-sketch-doubleintegral" title="Permalink to this image">¶</a></p>
+</div>
 <p>Doppelintegrale haben vielfältige Anwendungen in den Ingenieurwissenschaften. Sie dienen u.a. zur Berechnung von</p>
 <ul class="simple">
 <li><p>Flächeninhalt,</p></li>
 <li><p>Schwerpunkt einer Fläche und</p></li>
 <li><p>Flächenmoment.</p></li>
 </ul>
-</section>
-<section id="definition-doppelintegral">
-<h2>Definition Doppelintegral<a class="headerlink" href="#definition-doppelintegral" title="Permalink to this headline">#</a></h2>
+</div>
+<div class="section" id="definition-doppelintegral">
+<h2>Definition Doppelintegral<a class="headerlink" href="#definition-doppelintegral" title="Permalink to this headline">¶</a></h2>
 <p>Für die Berechnung des Volumens der Funktion <span class="math notranslate nohighlight">\(f(x,y)\)</span> über einem Bereich <span class="math notranslate nohighlight">\(B\)</span> gehen wir so vor, wie im eindimensionalen Fall bei der Berechnung des Flächeninhaltes einer eindimensionalen Funktion. Wir zerlegen den Bereich <span class="math notranslate nohighlight">\(B\)</span> mit einem sogenannten <strong>Gitter</strong>, d.h. wir teilen den Bereich <span class="math notranslate nohighlight">\(B\)</span> in viele kleine Teilbereiche ein, die wir mit <span class="math notranslate nohighlight">\(B_i\)</span> durchnummerieren. Von jedem Teilbereich <span class="math notranslate nohighlight">\(B_i\)</span> können wir die x- und y-Koordinate des Mittelpunkts bestimmen. Diese Koordinaten nennen wir <span class="math notranslate nohighlight">\((x_i,y_i)\)</span>.</p>
 <p>Wenn die Teilbereiche rechteckig sind (das müssen sie nicht sein, wir könnten auch beispielsweise Kreise oder andere Muster nehmen), dann kann das Volumen der Säule <span class="math notranslate nohighlight">\(V_i\)</span> (siehe Abbildung rote Säule) berechnet werden als</p>
 <div class="math notranslate nohighlight">
 \[V_i = f(x_i,y_i) \cdot \Delta x \cdot \Delta y.\]</div>
-<figure class="align-default" id="fig-part09-sketch-volume">
+<div class="figure align-default" id="fig-part09-sketch-volume">
 <a class="reference internal image-reference" href="_images/part09_sketch_volume.svg"><img alt="_images/part09_sketch_volume.svg" src="_images/part09_sketch_volume.svg" width="600px" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 6 </span><span class="caption-text">Volumen als Summe einzelner Säulen, hier mit rechteckigem Gitter</span><a class="headerlink" href="#fig-part09-sketch-volume" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
+<p class="caption"><span class="caption-number">Fig. 6 </span><span class="caption-text">Volumen als Summe einzelner Säulen, hier mit rechteckigem Gitter</span><a class="headerlink" href="#fig-part09-sketch-volume" title="Permalink to this image">¶</a></p>
+</div>
 <p>Jetzt müssen wir noch alle Säulen aufaddieren, um eine Annäherung für das Volumen zwischen Boden und Deckel <span class="math notranslate nohighlight">\(f(x,y)\)</span> zu bekommen, also</p>
 <div class="math notranslate nohighlight">
 \[V\approx f(x_1,y_1) \cdot \Delta y \cdot \Delta x + f(x_2,y_2) \cdot \Delta y \cdot \Delta x + \ldots f(x_N,y_N) \cdot \Delta y \cdot \Delta x.\]</div>
@@ -550,9 +455,9 @@ title="Print to PDF"
 ></iframe>
 </div></div>
 </div>
-</section>
-<section id="doppelintegral-in-kartesischen-koordinaten-berechnen">
-<h2>Doppelintegral in kartesischen Koordinaten berechnen<a class="headerlink" href="#doppelintegral-in-kartesischen-koordinaten-berechnen" title="Permalink to this headline">#</a></h2>
+</div>
+<div class="section" id="doppelintegral-in-kartesischen-koordinaten-berechnen">
+<h2>Doppelintegral in kartesischen Koordinaten berechnen<a class="headerlink" href="#doppelintegral-in-kartesischen-koordinaten-berechnen" title="Permalink to this headline">¶</a></h2>
 <p>Wie wird nun ein Doppelintegral konkret ausgerechnet? Glücklicherweise können wir die Berechnung des Doppelintegrals durch zwei “normale” Integrationen ersetzen. Die Voraussetzung dafür ist, dass wir ein <a class="reference external" href="https://de.wikipedia.org/wiki/Kartesisches_Koordinatensystem">kartesisches Koordinatensystem</a> betrachten.</p>
 <p>Zuerst brauchen wir eine Beschreibung der Fläche <span class="math notranslate nohighlight">\(B\)</span>, also des Bodens. Wenn man das Koordinatensystem von oben betrachtet, kann der Rand von <span class="math notranslate nohighlight">\(B\)</span> durch zwei Funktionen beschrieben werden. Im einfachsten Fall besteht der obere und der untere Rand von <span class="math notranslate nohighlight">\(B\)</span> nur aus Linien. Dann lautet die obere Funktion einfach nur <span class="math notranslate nohighlight">\(y=y_{\max}\)</span> und die untere Funktion <span class="math notranslate nohighlight">\(y=y_{\min}\)</span>. Meist brauchen wir aber Funktionen zur Beschreibung des Randes.</p>
 <p><strong>Schritt 1: Funktionen für den Rand von <span class="math notranslate nohighlight">\(B\)</span> finden</strong></p>
@@ -608,9 +513,9 @@ title="Print to PDF"
 ></iframe>
 </div></div>
 </div>
-</section>
-<section id="anwendungen-von-doppelintegralen">
-<h2>Anwendungen von Doppelintegralen<a class="headerlink" href="#anwendungen-von-doppelintegralen" title="Permalink to this headline">#</a></h2>
+</div>
+<div class="section" id="anwendungen-von-doppelintegralen">
+<h2>Anwendungen von Doppelintegralen<a class="headerlink" href="#anwendungen-von-doppelintegralen" title="Permalink to this headline">¶</a></h2>
 <p>Der Flächeninhalt kann mit der Formel</p>
 <div class="math notranslate nohighlight">
 \[A = \iint_{B} 1 \, dB = \int_{x=a}^{x=b} \int_{y=f_u(x)}^{y=f_o(x)} 1 \, dy \, dx.\]</div>
@@ -621,8 +526,8 @@ title="Print to PDF"
 <p>und für die y-Koordinate des Schwerpunkts</p>
 <div class="math notranslate nohighlight">
 \[y_S = \frac{1}{A} \int_{x=a}^{x=b} \int_{y=f_u(x)}^{y=f_o(x)} y \, dy \, dx.\]</div>
-</section>
-</section>
+</div>
+</div>
 
     <script type="text/x-thebe-config">
     {
@@ -646,11 +551,9 @@ title="Print to PDF"
 
               </div>
               
-            </main>
-            <footer class="footer-article noprint">
-                
-    <!-- Previous / next buttons -->
-<div class='prev-next-area'>
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
     <a class='left-prev' id="prev-link" href="part08.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
@@ -666,34 +569,30 @@ title="Print to PDF"
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-            </footer>
+            
         </div>
     </div>
-    <div class="footer-content row">
-        <footer class="col footer"><p>
-  
-    By Simone Gramsch<br/>
-  
-      &copy; Copyright 2022.<br/>
-    <div class="extra_footer">
-      <div>
+    <footer class="footer">
+  <p>
+    
+      By Simone Gramsch<br/>
+    
+        &copy; Copyright 2022.<br/>
+      <div class="extra_footer">
+        <div>
 <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img class="license" alt="Creative Commons License" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a> This book is licensed under a <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons BY-NC-SA 4.0 License</a>.
 </div>
 
-    </div>
-</p>
-        </footer>
-    </div>
-    
-</div>
+      </div>
+  </p>
+</footer>
+</main>
 
 
       </div>
     </div>
   
-  <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
-
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
 
   </body>
 </html>
