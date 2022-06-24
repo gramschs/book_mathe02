@@ -33,3 +33,5 @@ parts:
     sections:
     - file: part11_01
     - file: part11_02
+  - file: part12
+    title: DGL (Teil 2)
