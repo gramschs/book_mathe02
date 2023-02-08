@@ -4,6 +4,12 @@
 format: jb-book
 root: intro
 parts:
+- caption: Part 1. Integrale
+  chapters:
+  - file: chapter02/chapter02_sec00.md
+    sections:
+    - file: chapter02/chapter02_sec01.md
+    - file: chapter02/chapter02_sec02.md
 - caption: Part 2. Funktionenreihen
   chapters:
   - file: part03

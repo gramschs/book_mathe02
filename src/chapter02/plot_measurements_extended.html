@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Mein 1. Versuch</title>
+    <script type="text/javascript" charset="UTF-8"
+ src="https://cdn.jsdelivr.net/npm/jsxgraph/distrib/jsxgraphcore.js">
+ </script>
+</head>
+<body>
+
+<div id="chap02_sec02_fig01" class="jxgbox" style="width:600px; height:300px;"></div>
+<script type="text/javascript">
+    board = JXG.JSXGraph.initBoard('chap02_sec02_fig01', 
+        {boundingbox:[-1, 53, 8, 32], axis:false, showCopyright: false});
+
+    let axis0 = board.create('axis', [[0.0, 35.0], [1.0, 35.0]], {name:'Zeit [s]', withLabel:true});
+    let axis1 = board.create('axis', [[0.0, 35.0], [0.0, 36.0]], {name:'Geschwindigkeit [km/h]', 
+                    withLabel:true, label: {position: 'rt', offset: [-20, -15]}});
+
+    let x_blue = [1.0,  2.0, 3.0,   4.0,  5.0,  6.0]; 
+    let y_blue = [50.0, 48.9, 45.7, 41.8, 40.0, 45.0];
+    let x_red  = [ 1.5, 2.5,  3.5, 4.5,  5.5]; 
+    let y_red  = [49.7, 47.5, 43.7,  40.4,  41.3];
+    
+    for (let i = 0; i < 6; i++) {
+        board.create('point', [x_blue[i], y_blue[i]],
+        {name:'', size:3, fillColor:'#005a94', strokeColor:'#005a94'});
+    }
+    for (let i = 0; i < 5; i++) {
+        board.create('point', [x_red[i], y_red[i]],
+        {name:'', size:3, fillColor:'#e60000', strokeColor:'#e60000'});
+    }
+    board.create('line', [[0,45.23],[8,45.23]], 
+        {straightFirst:false, straightLast:false, strokeWidth:2, strokeColor:'#000000'})
+</script>
+    
+
+</body>
+</html>
