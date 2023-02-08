@@ -1,0 +1,691 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Doppelintegral in Polarkoordinaten und Dreifachintegral &#8212; Mathematik 2 Maschinenbau</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/exercise.css" />
+    <link rel="stylesheet" type="text/css" href="_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="_static/myadmonitions.css" />
+    <link rel="stylesheet" type="text/css" href="_static/jsxgraph.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/jsxgraphcore.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Differentialgleichungen: grundlegende Begriffe und separable Differentialgleichungen" href="part11.html" />
+    <link rel="prev" title="Doppelintegral" href="part09.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">Mathematik 2 Maschinenbau</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Willkommen zur Materialsammlung Mathematik 2
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Part 1. Integrale
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="chapter02/chapter02_sec00.html">
+   Anwendungen Integral
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chapter02/chapter02_sec01.html">
+     Fläche zwischen zwei Graphen
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chapter02/chapter02_sec02.html">
+     Integrieren ist Mitteln
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Part 2. Funktionenreihen
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="part03.html">
+   Reihen
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="part04a.html">
+   Potenzreihen
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="part04b.html">
+   Taylorreihen
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="part05.html">
+   Fourier-Reihen
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Part 3. Mehrdimensionale Analysis
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="part06.html">
+   Partielle Ableitung
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="part07.html">
+   Gradient und Jacobi-Matrix
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="part08.html">
+   Linearisierung und Extremwerte
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="part09.html">
+   Doppelintegral
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Dreifachintegral
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Part 4. Differentialgleichungen
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="part11.html">
+   Grundbegriffe und separable DGL
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="part11_01.html">
+     Grundlegende Begriffe von Differentialgleichungen
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="part11_02.html">
+     Lösungen von Differentialgleichungen
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="part12.html">
+   DGL (Teil 2)
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/gramschs/book_mathe02/master?urlpath=tree/docs/part10.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+<a href="https://github.com/gramschs/book_mathe02"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="bottom"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="_sources/part10.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#lernziele">
+   Lernziele
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#polarkoordinaten">
+   Polarkoordinaten
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#doppelintegral-in-polarkoordinaten">
+   Doppelintegral in Polarkoordinaten
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#dreifachintegral">
+   Dreifachintegral
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Doppelintegral in Polarkoordinaten und Dreifachintegral</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#lernziele">
+   Lernziele
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#polarkoordinaten">
+   Polarkoordinaten
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#doppelintegral-in-polarkoordinaten">
+   Doppelintegral in Polarkoordinaten
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#dreifachintegral">
+   Dreifachintegral
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <div class="cell tag_remove-input docutils container">
+</div>
+<section class="tex2jax_ignore mathjax_ignore" id="doppelintegral-in-polarkoordinaten-und-dreifachintegral">
+<h1>Doppelintegral in Polarkoordinaten und Dreifachintegral<a class="headerlink" href="#doppelintegral-in-polarkoordinaten-und-dreifachintegral" title="Permalink to this headline">#</a></h1>
+<p>Im letzten Kapitel haben wir nicht thematisiert, dass das Doppelintegral in kartesischen Koordinaten berechnet wurde. In diesem Kapitel verwenden wir Polarkoordinaten und betrachten zusätzlich Dreifachintegrale.</p>
+<section id="lernziele">
+<h2>Lernziele<a class="headerlink" href="#lernziele" title="Permalink to this headline">#</a></h2>
+<div class="tip admonition">
+<p class="admonition-title">Lernziele</p>
+<ul class="simple">
+<li><p>Sie können <strong>Polarkoordinaten</strong> in <strong>kartesische Koordinaten</strong> umrechnen.</p></li>
+<li><p>Sie können ein Doppelintegral in kartesischen Koordinaten in ein Doppelintegral in Polarkoordinaten umrechnen, d.h.</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\iint_{A}f(x,y)\, dA = \int_{\varphi=\varphi_1}^{\varphi_2} \int_{r=r_i(\varphi)}^{r_a(\varphi)}f(r\cos(\varphi), r\sin(\varphi)) \cdot r\, dr\, d\varphi.\]</div>
+<p>Die Integration erfolgt dabei in zwei Schritten, zuerst kommt die innere Integration über <span class="math notranslate nohighlight">\(r\)</span>, danach die äußere Integration über <span class="math notranslate nohighlight">\(\varphi\)</span>.</p>
+<ul class="simple">
+<li><p>Sie können ein <strong>Dreifachintegral</strong> (in kartesischen Koordinaten) berechnen.</p></li>
+<li><p>Sie können mit einem Dreifachintegral das Volumen <span class="math notranslate nohighlight">\(V\)</span> eines Körpers berechnen</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[V=\iiint_{V}1\,dV.\]</div>
+<ul class="simple">
+<li><p>Sie können mit drei Dreifachintegralen den Schwerpunkt <span class="math notranslate nohighlight">\(S(x_S,y_S,z_S)\)</span> eines Körpers berechnen:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[x_S = \frac{1}{V}\iiint_{V}x\, dV, \qquad y_S = \frac{1}{V}\iiint_{V}y\, dV \qquad \text{und} \quad z_S = \frac{1}{V}\iiint_{V}z\, dV.\]</div>
+</div>
+</section>
+<section id="polarkoordinaten">
+<h2>Polarkoordinaten<a class="headerlink" href="#polarkoordinaten" title="Permalink to this headline">#</a></h2>
+<p>Die Umrechnung von Polarkoordinaten in kartesische Koordinaten erfolgt mit den Formeln:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+x &amp;= r\cdot \cos(\varphi) \\ 
+y &amp;= r\cdot \sin(\varphi)
+\end{align*}\]</div>
+<p>Zur Erinnerung folgt hier eine Einführung in Polarkoordinaten:</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html">
+<iframe
+    width="560"
+    height="315"
+    src="https://www.youtube.com/embed/l8ZF4m0fPxM"
+    frameborder="0"
+    allowfullscreen
+
+></iframe>
+</div></div>
+</div>
+<p>In dem folgenden Video wird gezeigt, wie eine Funktion mit Variablen in kartesischen Koordinaten in eine Funktion mit Variablen in Polarkoordinaten umgerechnet werden kann:</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html">
+<iframe
+    width="560"
+    height="315"
+    src="https://www.youtube.com/embed/MCRDcJKeR20"
+    frameborder="0"
+    allowfullscreen
+
+></iframe>
+</div></div>
+</div>
+<p>In dem folgenden</p>
+</section>
+<section id="doppelintegral-in-polarkoordinaten">
+<h2>Doppelintegral in Polarkoordinaten<a class="headerlink" href="#doppelintegral-in-polarkoordinaten" title="Permalink to this headline">#</a></h2>
+<p>Um ein Doppelintegral in Polarkoordinaten zu berechnen, muss das Flächenelement <span class="math notranslate nohighlight">\(dA\)</span> umgerechnet werden:</p>
+<div class="math notranslate nohighlight">
+\[dA = r \, dr \, d\varphi.\]</div>
+<p>In dem folgenden Video wird sehr ausführlich der Flächeninhalt eines Halbkreises sowohl mit einem Doppelintegral in kartesischen Koordinaten als auch einem Doppelintegral in Polarkoordinaten erklärt. Nicht verwirren lassen, in dem Video wird das Doppelintegral Bereichsintegral genannt.</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html">
+<iframe
+    width="560"
+    height="315"
+    src="https://www.youtube.com/embed/CghdXlwr5aY"
+    frameborder="0"
+    allowfullscreen
+
+></iframe>
+</div></div>
+</div>
+</section>
+<section id="dreifachintegral">
+<h2>Dreifachintegral<a class="headerlink" href="#dreifachintegral" title="Permalink to this headline">#</a></h2>
+<p>Ein Dreifachintegral wird durch drei Integrationen berechnet:</p>
+<div class="math notranslate nohighlight">
+\[\iiint_{V}f(x,y,z)\, dV = \int_{x=a}^{x=b} \int_{y=g_{u}(x)}^{y=g_{o}(x)} \int_{z = F_{u}(x,y)}^{z = F_{o}(x,y)} f(x,y,z)\, dz \, dy \, dx.\]</div>
+<p>Dabei bedeuten die Bezeichnungen:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(F_{o}(x,y)\)</span>: obere Fläche</p></li>
+<li><p><span class="math notranslate nohighlight">\(F_{u}(x,y)\)</span>: untere Fläche</p></li>
+<li><p><span class="math notranslate nohighlight">\(g_{o}(x)\)</span>: obere Grenzkurve</p></li>
+<li><p><span class="math notranslate nohighlight">\(g_{u}(x)\)</span>: untere Grenzkurve</p></li>
+</ul>
+<p>wie man auch der folgenden Abbildung entnehmen kann:</p>
+<figure class="align-default" id="part10-skizze-dreifachintegral">
+<a class="reference internal image-reference" href="_images/part10_skizze_dreifachintegral.svg"><img alt="_images/part10_skizze_dreifachintegral.svg" src="_images/part10_skizze_dreifachintegral.svg" width="600px" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 8 </span><span class="caption-text">Skizze Dreifachintegral</span><a class="headerlink" href="#part10-skizze-dreifachintegral" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>In dem folgenden Video wird der Unterschied Doppelintegral zu Dreifachintegral erklärt.</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html">
+<iframe
+    width="560"
+    height="315"
+    src="https://www.youtube.com/embed/Ec6xuobv8Mk"
+    frameborder="0"
+    allowfullscreen
+
+></iframe>
+</div></div>
+</div>
+<p>Hier wird ein Dreifachintegral ausgerechnet, indem die drei Integrationen nacheinander durchgeführt werden:</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html">
+<iframe
+    width="560"
+    height="315"
+    src="https://www.youtube.com/embed/HZRAUqbVKeQ"
+    frameborder="0"
+    allowfullscreen
+
+></iframe>
+</div></div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="part09.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Doppelintegral</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="part11.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Differentialgleichungen: grundlegende Begriffe und separable Differentialgleichungen</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Simone Gramsch<br/>
+  
+      &copy; Copyright 2022.<br/>
+    <div class="extra_footer">
+      <div>
+<a href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img class="license" alt="Creative Commons License" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a> This book is licensed under a <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons BY-NC-SA 4.0 License</a>.
+</div>
+
+    </div>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

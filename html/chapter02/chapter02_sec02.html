@@ -1,0 +1,731 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Integrieren ist Mitteln &#8212; Mathematik 2 Maschinenbau</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/exercise.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/myadmonitions.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/jsxgraph.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/jsxgraphcore.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Reihen" href="../part03.html" />
+    <link rel="prev" title="Fläche zwischen zwei Graphen" href="chapter02_sec01.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">Mathematik 2 Maschinenbau</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Willkommen zur Materialsammlung Mathematik 2
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Part 1. Integrale
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="chapter02_sec00.html">
+   Anwendungen Integral
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="chapter02_sec01.html">
+     Fläche zwischen zwei Graphen
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Integrieren ist Mitteln
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Part 2. Funktionenreihen
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../part03.html">
+   Reihen
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../part04a.html">
+   Potenzreihen
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../part04b.html">
+   Taylorreihen
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../part05.html">
+   Fourier-Reihen
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Part 3. Mehrdimensionale Analysis
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../part06.html">
+   Partielle Ableitung
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../part07.html">
+   Gradient und Jacobi-Matrix
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../part08.html">
+   Linearisierung und Extremwerte
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../part09.html">
+   Doppelintegral
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../part10.html">
+   Dreifachintegral
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Part 4. Differentialgleichungen
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../part11.html">
+   Grundbegriffe und separable DGL
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../part11_01.html">
+     Grundlegende Begriffe von Differentialgleichungen
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../part11_02.html">
+     Lösungen von Differentialgleichungen
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../part12.html">
+   DGL (Teil 2)
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+<a href="https://github.com/gramschs/book_mathe02"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="bottom"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/chapter02/chapter02_sec02.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#lernziele">
+   Lernziele
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#mittelwert-von-zahlen">
+   Mittelwert von Zahlen
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#mehr-ist-besser">
+   Mehr ist besser
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#mittelwert-einer-funktion">
+   Mittelwert einer Funktion
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Integrieren ist Mitteln</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#lernziele">
+   Lernziele
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#mittelwert-von-zahlen">
+   Mittelwert von Zahlen
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#mehr-ist-besser">
+   Mehr ist besser
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#mittelwert-einer-funktion">
+   Mittelwert einer Funktion
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="integrieren-ist-mitteln">
+<h1>Integrieren ist Mitteln<a class="headerlink" href="#integrieren-ist-mitteln" title="Permalink to this headline">#</a></h1>
+<section id="lernziele">
+<h2>Lernziele<a class="headerlink" href="#lernziele" title="Permalink to this headline">#</a></h2>
+<div class="hint admonition">
+<p class="admonition-title">Lernziele</p>
+<ul class="simple">
+<li><p>Sie können den Mittelwert einer Liste von Zahlen berechnen.</p></li>
+<li><p>Sie können den Mittelwert einer Funktion in einem Intervall berechnen.</p></li>
+</ul>
+</div>
+</section>
+<section id="mittelwert-von-zahlen">
+<h2>Mittelwert von Zahlen<a class="headerlink" href="#mittelwert-von-zahlen" title="Permalink to this headline">#</a></h2>
+<p>Ein Auto fährt in der Stadt mit 50 km/h und muss leicht abbremsen. Dabei werden
+folgende Geschwindigkeiten gemessen:</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p><span style="font-weight:normal">Zeit in s</span></p></th>
+<th class="text-align:center head"><p><span style="font-weight:normal">1</span></p></th>
+<th class="text-align:center head"><p><span style="font-weight:normal">2</span></p></th>
+<th class="text-align:center head"><p><span style="font-weight:normal">3</span></p></th>
+<th class="text-align:center head"><p><span style="font-weight:normal">4</span></p></th>
+<th class="text-align:center head"><p><span style="font-weight:normal">5</span></p></th>
+<th class="text-align:center head"><p><span style="font-weight:normal">6</span></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Geschwindigkeit in km/h</p></td>
+<td class="text-align:center"><p>50.0</p></td>
+<td class="text-align:center"><p>48.9</p></td>
+<td class="text-align:center"><p>45.7</p></td>
+<td class="text-align:center"><p>41.8</p></td>
+<td class="text-align:center"><p>40.0</p></td>
+<td class="text-align:center"><p>45.0</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td class="text-align:center"><p></p></td>
+<td class="text-align:center"><p></p></td>
+<td class="text-align:center"><p></p></td>
+<td class="text-align:center"><p></p></td>
+<td class="text-align:center"><p></p></td>
+<td class="text-align:center"><p></p></td>
+</tr>
+</tbody>
+</table>
+<p>Wenn jetzt danach gefragt wird, mit welcher Durchschnittsgeschwindigkeit das
+Auto in diesen sechs Sekunden unterwegs war, bilden wir den Mittelwert. Dazu
+addieren wir die sechs Geschwindigkeiten und teilen durch die Anzahl der
+Geschwindigkeitsmessungen.</p>
+<div class="math notranslate nohighlight">
+\[\frac{1}{6}\big(50.0 + 48.9 + 45.7 + 41.8 + 40.0 + 45.0 \big) \approx 45.23.\]</div>
+<p>Die Durchschnittgeschwindigkeit betrug also 45.23 km/h. Einen guten Eindruck der
+einzelnen Messwerte im Vergleich zu ihrem Mittelwert vermittelt das folgende
+Streudiagramm. Die blauen Kreise stehen für die gemessenen Werte aus der
+Tabelle. Auf der x-Achse sind die Zeitpunkte, auf der y-Achse die
+Geschwindigkeiten. Die schwarze Gerade repräsentiert den Mittelwert als
+konstante Funktion.</p>
+<div id="chap02_sec02_fig01" class="jxgbox" style="width:600px; height:300px;"></div>
+<script type="text/javascript">
+    board = JXG.JSXGraph.initBoard('chap02_sec02_fig01', 
+        {boundingbox:[-1, 53, 8, 32], axis:false, showCopyright: false});
+    let axis0 = board.create('axis', [[0.0, 35.0], [1.0, 35.0]], {name:'Zeit [s]', withLabel:true});
+    let axis1 = board.create('axis', [[0.0, 35.0], [0.0, 36.0]], {name:'Geschwindigkeit [km/h]', 
+                    withLabel:true, label: {position: 'rt', offset: [-20, -15]}});
+    let x_blue = [1.0,  2.0, 3.0,   4.0,  5.0,  6.0]; 
+    let y_blue = [50.0, 48.9, 45.7, 41.8, 40.0, 45.0];
+    for (let i = 0; i < 6; i++) {
+        board.create('point', [x_blue[i], y_blue[i]],
+        {name:'', size:3, fillColor:'#005a94', strokeColor:'#005a94', fixed:true});
+    }
+    board.create('line', [[-.5,45.23],[7.5,45.23]], 
+      {straightFirst:false, straightLast:false, strokeWidth:2, strokeColor:'#000000', fixed:true})
+</script><br>
+<p>Allgemein können wir den Mittelwert von Messwerten folgendermaßen berechnen. Wir
+bezeichnen die Anzahl der Messungen mit <span class="math notranslate nohighlight">\(N\)</span> und die einzelnen Messungen mit
+<span class="math notranslate nohighlight">\(y_1, y_2, \ldots, y_N\)</span>. Für den Mittelwert führen wir die Abkürzung <span class="math notranslate nohighlight">\(\bar{y}\)</span>
+ein. Dann wird der Mittelwert nach der Formel</p>
+<div class="math notranslate nohighlight">
+\[\bar{y} = \frac{1}{N}\big(y_1 + y_2 + \ldots + y_n \big)\]</div>
+<p>berechnet. Um die Pünktchen in der Formel zu sparen, verwenden wir das
+Summensymbol <span class="math notranslate nohighlight">\(\Sigma\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\bar{y} = \frac{1}{N} \sum_{i=1}^{N} y_i.\]</div>
+<p>Zusammenfassend halten wir folgende Definition eines Mittelwertes fest.</p>
+<div class="admonition-was-ist-der-mittelwert admonition">
+<p class="admonition-title">Was ist … der Mittelwert?</p>
+<p>Der Mittelwert einer Liste von Zahlen ist die Summe der Zahlen geteilt durch ihre Anzahl. Berechnet wird der Mittelwert mit der Formel</p>
+<div class="math notranslate nohighlight">
+\[\bar{y} = \frac{1}{N} \sum_{i=1}^{N} y_i.\]</div>
+<p>Dabei ist <span class="math notranslate nohighlight">\(\bar{y}\)</span> die Bezeichnung für den Mittelwert, <span class="math notranslate nohighlight">\(N\)</span> die Anzahl der Zahlen und <span class="math notranslate nohighlight">\(y_i\)</span> sind die einzelnen Zahlen.</p>
+</div>
+</section>
+<section id="mehr-ist-besser">
+<h2>Mehr ist besser<a class="headerlink" href="#mehr-ist-besser" title="Permalink to this headline">#</a></h2>
+<p>In einer Sekunde kann ganz schön viel passieren. Wir gehen jetzt davon aus, dass
+die Geschwindigkeit des Autos zweimal pro Sekunde gemessen wurde und nicht nur
+einmal pro Sekunde.</p>
+<p>Die Geschwindigkeit zu den Zeitpunkten 1.5 s, 2.5 s, 3.5 s, 4.5 s und 5.5 s
+ergänzen unsere bisherigen Messungen und können als rote Kreise in dem folgenden
+Diagramm abgelesen werden.</p>
+<div id="box2" class="jxgbox" style="width:600px; height:300px;"></div>
+<script type="text/javascript">
+var board = JXG.JSXGraph.initBoard('box2', { 
+  boundingbox: [-1, 53, 8, 32], axis:false,
+  showCopyright: false
+});
+var l1 = board.create('axis', [[0.0, 35.0], [1.0, 35.0]], {name:'Zeit [s]', withLabel:true});
+var l2 = board.create('axis', [[0.0, 35.0], [0.0, 36.0]], {name:'Geschwindigkeit [km/h]', withLabel:true, label: {position: 'rt', offset: [-20, -15]}});
+//board.create('functiongraph', [function(x){return 50.0;},0.0, 1.0], {dash:2, strokeWidth:2, strokeColor:'#005a94'});
+//board.create('functiongraph', [function(x){return 1/10520*(711*Math.pow(x,4)-4772*Math.pow(x,3)-189*Math.pow(x,2)+11850*x+518400);},1.0, 6.0], {strokeWidth:2,strokeColor:'#005a94'});
+//board.create('functiongraph', [function(x){return -5*x*x+70*x-195;},6.0, 7.0], {dash:2, strokeWidth:2,strokeColor:'#005a94'});
+var op1 = board.create('point',[1.0,50.0],{name:'', size:3, fillColor:'#005a94', strokeColor:'#005a94', fixed:true});
+var op2 = board.create('point',[2.0,48.9],{name:'', size:3, fillColor:'#005a94', strokeColor:'#005a94', fixed:true});
+var op3 = board.create('point',[3.0,45.7],{name:'', size:3, fillColor:'#005a94', strokeColor:'#005a94', fixed:true});
+var op4 = board.create('point',[4.0,41.8],{name:'', size:3, fillColor:'#005a94', strokeColor:'#005a94', fixed:true});
+var op5 = board.create('point',[5.0,40.0],{name:'', size:3, fillColor:'#005a94', strokeColor:'#005a94', fixed:true});
+var op6 = board.create('point',[6.0,45.0],{name:'', size:3, fillColor:'#005a94', strokeColor:'#005a94', fixed:true});
+var p1 = board.create('point',[1.5,49.7], {name:'49.7 km/h', size:3, fillColor:'#e60000', strokeColor:'#e60000', fixed:true});
+var p2 = board.create('point',[2.5,47.5], {name:'47.5 km/h', size:3, fillColor:'#e60000', strokeColor:'#e60000', fixed:true});
+var p3 = board.create('point',[3.5,43.7], {name:'43.7 km/h', size:3, fillColor:'#e60000', strokeColor:'#e60000', fixed:true});
+var p4 = board.create('point',[4.5,40.4], {name:'40.4 km/h', size:3, fillColor:'#e60000', strokeColor:'#e60000', fixed:true});
+var p5 = board.create('point',[5.5,41.3], {name:'41.3 km/h', size:3, fillColor:'#e60000', strokeColor:'#e60000', fixed:true});
+board.create('line', [[-.5,44.91],[7.5,44.91]], 
+        {straightFirst:false, straightLast:false, strokeWidth:2, strokeColor:'#000000', fixed:true})
+</script><br>
+<p>An der Berechnung des Mittelwertes ändert sich nicht, aber normalerweise ist er
+bei 11 Messungen genauer als bei sechs Messungen. Wir rechnen also</p>
+<div class="math notranslate nohighlight">
+\[\frac{1}{11}\big(50.0 + 49.7 + 48.9 + 47.5 + 45.7 + 43.7 + 41.8 + 40.4 + 40.0
++ 41.3 + 45 \big) \approx 44.91.\]</div>
+<p>Noch genauer würde es werden, wenn wir noch mehr Messwerte hinzunehmen. Der
+Mittelwert wäre dann perfekt, wenn wir unendliche viele Messungen hätten. Dann
+wäre der Mittelwert der Grenzwert</p>
+<div class="math notranslate nohighlight">
+\[\bar{y} = \lim_{N\to\infty} \frac{1}{N} \sum_{i=1}^{N} y_i.\]</div>
+<p>Das setzt aber voraus, dass wir kontinuerlich die Geschwindigkeit messen. Oder
+anders ausgedrückt, das setzt voraus, dass wir die Geschwindigkeit als eine
+Funktion darstellen können, als ein sogenanntes Zeit-Geschwindigkeitsdiagramm.
+Für den perfekten Mittelwert müssen wir also den Mittelwert der Funktion
+ausrechnen, aber was ist der Mittelwert einer Funktion?</p>
+</section>
+<section id="mittelwert-einer-funktion">
+<h2>Mittelwert einer Funktion<a class="headerlink" href="#mittelwert-einer-funktion" title="Permalink to this headline">#</a></h2>
+<p>Um einen Weg zu finden, den Mittelwert <span class="math notranslate nohighlight">\(m\)</span> einer Funktion <span class="math notranslate nohighlight">\(f\)</span> zu berechnen,
+starten wir erstmal mit einigen wenigen Messwerten. In unserem Beispiel können
+wir die Zeitpunkte, zu denen eine Messung durchgeführt wird, mit <span class="math notranslate nohighlight">\(x_1\)</span>, <span class="math notranslate nohighlight">\(x_2\)</span>,
+usw. bis <span class="math notranslate nohighlight">\(x_N\)</span> ausdrücken. Die dazugehörigen Geschwindigkeitenmessungen bzw.
+Funktionswerte bezeichnen wir dann mit <span class="math notranslate nohighlight">\(f(x_1)\)</span>, <span class="math notranslate nohighlight">\(f(x_2)\)</span> usw. bis <span class="math notranslate nohighlight">\(f(x_N)\)</span>.
+Dann gilt für die Berechnung des Mittelwertes</p>
+<div class="math notranslate nohighlight">
+\[m = \frac{1}{N} \sum_{i=1}^{N} f(x_i).\]</div>
+<p>Aber eigentlich wollen wir ja den Grenzwert</p>
+<div class="math notranslate nohighlight">
+\[m = \lim_{N\to\infty} \frac{1}{N} \sum_{i=1}^{N} f(x_i)\]</div>
+<p>ausrechnen. Um diesen Grenzwert auszurechnen, wenden wir jetzt zwei Tricks an.
+Wenn wir unendlich viele Messungen nehmen, um den Mittelwert auszurechnen,
+können wir eine Messung auch weglassen. Bei unendlich vielen Messungen fällt
+eine Messung nicht ins Gewicht. Wir lassen die letzte Messung weg. Dadurch
+müssen wir nur noch durch <span class="math notranslate nohighlight">\((N-1)\)</span> teilen und bis <span class="math notranslate nohighlight">\(N-1\)</span> summieren. Damit schreibt
+sich die Formel für den Mittelwert nun als</p>
+<div class="math notranslate nohighlight">
+\[m = \lim_{N\to\infty} \frac{1}{N-1} \sum_{i=1}^{N-1} f(x_i).\]</div>
+<p>Das war der erste Trick. Nun erweitern wir die Messungen der Geschwindigkeit mit
+dem Bruch <span class="math notranslate nohighlight">\((b-a)/(b-a)\)</span>. Dabei ist <span class="math notranslate nohighlight">\(a\)</span> der Startpunkt, zu dem die Messungen
+beginnen, und <span class="math notranslate nohighlight">\(b\)</span> der Endpunkt. Durch <span class="math notranslate nohighlight">\(b-a\)</span> wird also das Intervall auf der
+x-Achse beschreiben, in dem wir die Funktion <span class="math notranslate nohighlight">\(f\)</span> mitteln wollen. Am Wert der
+Summe ändert sich nichts, wenn wir jeden Messwert mit dem Bruch <span class="math notranslate nohighlight">\((b-a)/(b-a)\)</span>
+multiplizieren, da wir ja nur mit 1 multiplizieren. Wir können also mit beiden
+Tricks den Mittelwert schreiben als</p>
+<div class="math notranslate nohighlight">
+\[m = \lim_{N\to\infty} \frac{1}{N-1} \sum_{i=1}^{N-1} f(x_i)\cdot \frac{b-a}{b-a}.\]</div>
+<p>Wenn in einer Summe jeder Term mit einer konstanten Zahl multipliziert wird,
+dürfen wir diese konstante Zahl in die Summe reinmultiplizieren oder
+ausklammern. Wir klammern jetzt die Zahl <span class="math notranslate nohighlight">\(1/(b-a)\)</span> aus und multiplizieren
+stattdessen die Zahl <span class="math notranslate nohighlight">\(1/(N-1)\)</span> in die Summe.</p>
+<div class="math notranslate nohighlight">
+\[m = \frac{1}{b-a} \lim_{N\to\infty} \sum_{i=1}^{N-1} f(x_i)\cdot
+\frac{b-a}{N-1}.\]</div>
+<p>Das Intervall <span class="math notranslate nohighlight">\(b-a\)</span> wird also in <span class="math notranslate nohighlight">\((N-1)\)</span> kleine Stückchen unterteilt. Jedes
+Stückchen ist dabei gleich groß und könnte mit <span class="math notranslate nohighlight">\(\Delta x\)</span> bezeichnet werden. In
+der folgenden Grafik zeigen wir das anhand unserer 11 Messwerte. Wir lassen die
+letzte Messung weg und erhalten <span class="math notranslate nohighlight">\(\Delta x = 0.5 s\)</span>. Der Startzeitpunkt ist <span class="math notranslate nohighlight">\(a =
+1 s\)</span> und der Endzeitpunkt ist <span class="math notranslate nohighlight">\(b = 6 s\)</span>.</p>
+<figure class="align-default" id="chap02-sec02-fig03">
+<a class="reference internal image-reference" href="../_images/chap02_sec02_fig03.png"><img alt="../_images/chap02_sec02_fig03.png" src="../_images/chap02_sec02_fig03.png" style="width: 600px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 1 </span><span class="caption-text">Annäherung des Mittelwertes einer Funktion <span class="math notranslate nohighlight">\(f\)</span> über die Summe von Produkten <span class="math notranslate nohighlight">\(f(x_i)\cdot \Delta x\)</span> im Intervall <span class="math notranslate nohighlight">\([a,b]\)</span></span><a class="headerlink" href="#chap02-sec02-fig03" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Wir summieren also über die Flächeninhalte <span class="math notranslate nohighlight">\(f(x_i)\cdot \Delta x\)</span>. Wenn die
+Anzahl der Messungen zunimmt, werden die Stückchen <span class="math notranslate nohighlight">\(\Delta x\)</span> kleiner, dafür
+summieren wir über mehr Rechtecke. Diesen Grenzwert kennen wir schon, es ist der
+orientierte Flächeninhalt der Funktion <span class="math notranslate nohighlight">\(f\)</span> mit der x-Achse, also das Integral</p>
+<div class="math notranslate nohighlight">
+\[m = \frac{1}{b-a} \int_{a}^{b} f(x) \, dx.\]</div>
+<div class="admonition-was-ist-der-mittelwert-einer-funktion admonition">
+<p class="admonition-title">Was ist … der Mittelwert einer Funktion?</p>
+<p>Der Mittelwert einer Funktion in einem Intervall ist das bestimmte Integral auf diesem Intervall geteilt durch die Intervall-Länge.</p>
+<p>Etwas präziser formuliert berechnet sich der Mittelwert <span class="math notranslate nohighlight">\(m\)</span> einer stetigen Funktion <span class="math notranslate nohighlight">\(f\)</span> im Intervall <span class="math notranslate nohighlight">\([a,b]\)</span> über die Formel</p>
+<div class="math notranslate nohighlight">
+\[m = \frac{1}{b-a} \int_{a}^{b} f(x) \, dx.\]</div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./chapter02"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="chapter02_sec01.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Fläche zwischen zwei Graphen</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="../part03.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Reihen</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Simone Gramsch<br/>
+  
+      &copy; Copyright 2022.<br/>
+    <div class="extra_footer">
+      <div>
+<a href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img class="license" alt="Creative Commons License" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a> This book is licensed under a <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons BY-NC-SA 4.0 License</a>.
+</div>
+
+    </div>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>
