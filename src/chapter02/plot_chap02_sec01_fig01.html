@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Mathe02: chapter02, section 01, figure 01</title>
+    <script type="text/javascript" charset="UTF-8"
+ src="https://cdn.jsdelivr.net/npm/jsxgraph/distrib/jsxgraphcore.js">
+ </script>
+</head>
+<body>
+
+<div id="chap02_sec01_fig01" class="jxgbox" style="width:600px; height:300px;"></div>
+<script type="text/javascript">
+    board = JXG.JSXGraph.initBoard('chap02_sec01_fig01', 
+        {boundingbox:[-4, 20, 4, -2], axis:true, showCopyright: false, showNavigation: false});
+    let graph = board.create('functiongraph', [function(x) {return x**2+1;}, -4, 4], 
+        {strokeWidth:2, strokeColor:'#005a94'});
+    let area  = board.create('integral', [[-2.0, 3.0], graph],
+        {fillColor:'#ccdee9'});
+</script>
+    
+
+</body>
+</html>

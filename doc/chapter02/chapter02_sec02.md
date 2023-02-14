@@ -1,197 +1,167 @@
-# Integrieren ist Mitteln
+# Fläche zwischen zwei Graphen
+
+Bisher haben wir das Integral benutzt, um den orientierten Flächeninhalt
+zwischen einer Funktion und der x-Achse zu bestimmen. In diesem Abschnitt
+erweitern wir diese Idee, um den Flächeninhalt zwischen zwei Funktionen zu
+bestimmen, genauer gesagt zwischen den zwei Funktionsgraphen.
 
 ## Lernziele
 
 ```{admonition} Lernziele
 :class: hint
-* Sie können den Mittelwert einer Liste von Zahlen berechnen.
-* Sie können den Mittelwert einer Funktion in einem Intervall berechnen.
+* Sie wissen, wie man mit dem bestimmten Integral $\int_{a}^{b} f(x)\, dx$ den
+  Flächeninhalt zwischen der Kurve $f(x)$, der x-Achse und den parallelen
+  Geraden $x=a$ und $x=b$ berechnet, wenn 
+    * die Kurve oberhalb der x-Achse liegt,
+    * die Kurve unterhalb der x-Achse liegt oder
+    * die Kurve teils oberhalb und teils unterhalb der x-Achse liegt. 
+
+* Sie wissen, wie man den Flächeninhalt zwischen zwei Kurven $f(x)$ und $g(x)$
+  berechnet. 
 ```
 
-## Mittelwert von Zahlen
+## Flächeninhalt zwischen Kurve und x-Achse
 
-Ein Auto fährt in der Stadt mit 50 km/h und muss leicht abbremsen. Dabei werden
-folgende Geschwindigkeiten gemessen:
+Das Integral wurde in der Mathematik 1 als der orientierte Flächeninhalt
+zwischen Funktionsgraph $f(x)$ und x-Achse eingeführt. Liegen die Funktionswerte
+$f(x)$ alle oberhalb der x-Achse wie in dem nachfolgendem Beispiel, so ist der
+orientierte Flächeninhalt gleich dem Flächeninhalt. Damit ist die gesuchte Fläche 
+$A$ also
 
-<span style="font-weight:normal">Zeit in s</span> | <span style="font-weight:normal">1</span>   | <span style="font-weight:normal">2</span>    | <span style="font-weight:normal">3</span> | <span style="font-weight:normal">4</span> | <span style="font-weight:normal">5</span> | <span style="font-weight:normal">6</span> |
-| --- | :---: | :---: | :---: | :---: | :---: | :---: |
-Geschwindigkeit in km/h |  50.0    | 48.9  | 45.7 | 41.8 | 40.0 | 45.0 |
-|  |
+$$A = \int_{a}^{b} f(x) \, dx.$$
 
-Wenn jetzt danach gefragt wird, mit welcher Durchschnittsgeschwindigkeit das
-Auto in diesen sechs Sekunden unterwegs war, bilden wir den Mittelwert. Dazu
-addieren wir die sechs Geschwindigkeiten und teilen durch die Anzahl der
-Geschwindigkeitsmessungen.
+Das bestimmte Integral lässt sich am einfachsten über eine Stammfunktion $F$
+berechnen. Damit gilt für den Flächeninhalt $A$ einer Funktion $f$ im Ingervall
+$[a,b]$ die folgende Formel:
 
-$$\frac{1}{6}\big(50.0 + 48.9 + 45.7 + 41.8 + 40.0 + 45.0 \big) \approx 45.23.$$
+$$A = \int_{a}^{b} f(x) \, dx = F(b)- F(a).$$
 
-Die Durchschnittgeschwindigkeit betrug also 45.23 km/h. Einen guten Eindruck der
-einzelnen Messwerte im Vergleich zu ihrem Mittelwert vermittelt das folgende
-Streudiagramm. Die blauen Kreise stehen für die gemessenen Werte aus der
-Tabelle. Auf der x-Achse sind die Zeitpunkte, auf der y-Achse die
-Geschwindigkeiten. Die schwarze Gerade repräsentiert den Mittelwert als
-konstante Funktion.
+Beispiel: In der folgenden Abbildung ist der Funktionsgraph $f(x)$ der Funktion
+$f(x)=x^2+1$ zu sehen. Berechnet werden soll der rot gefärbte Flächeninhalt $A$
+zwischen $f(x)$ und der x-Achse mit den Grenzen $x = -2$ und $x = 3$.
 
-<div id="chap02_sec02_fig01" class="jxgbox" style="width:600px; height:300px;"></div>
+<div id="chap02_sec02_fig01" class="jxgbox" style="width:75%; aspect-ratio:16/9; margin: 0 auto;"></div>
 <script type="text/javascript">
     board = JXG.JSXGraph.initBoard('chap02_sec02_fig01', 
-        {boundingbox:[-1, 53, 8, 32], axis:false, showCopyright: false});
-    let axis0 = board.create('axis', [[0.0, 35.0], [1.0, 35.0]], {name:'Zeit [s]', withLabel:true});
-    let axis1 = board.create('axis', [[0.0, 35.0], [0.0, 36.0]], {name:'Geschwindigkeit [km/h]', 
-                    withLabel:true, label: {position: 'rt', offset: [-20, -15]}});
-    let x_blue = [1.0,  2.0, 3.0,   4.0,  5.0,  6.0]; 
-    let y_blue = [50.0, 48.9, 45.7, 41.8, 40.0, 45.0];
-    for (let i = 0; i < 6; i++) {
-        board.create('point', [x_blue[i], y_blue[i]],
-        {name:'', size:3, fillColor:'#005a94', strokeColor:'#005a94', fixed:true});
-    }
-    board.create('line', [[-.5,45.23],[7.5,45.23]], 
-      {straightFirst:false, straightLast:false, strokeWidth:2, strokeColor:'#000000', fixed:true})
+        {boundingbox:[-5, 20, 5, -2], axis:true, showCopyright: false, showNavigation: false});
+    let graph = board.create('functiongraph', [function(x) {return x**2+1;}, -5, 5], {strokeWidth:2, strokeColor:'#000000'});
+    let area  = board.create('integral', [[-2.0, 3.0], graph],
+        {fillColor:'#f06666'});
 </script><br>
 
-Allgemein können wir den Mittelwert von Messwerten folgendermaßen berechnen. Wir
-bezeichnen die Anzahl der Messungen mit $N$ und die einzelnen Messungen mit
-$y_1, y_2, \ldots, y_N$. Für den Mittelwert führen wir die Abkürzung $\bar{y}$
-ein. Dann wird der Mittelwert nach der Formel
+In dem Beispiel liegen alle Funktionswerte $f(x)$ komplett oberhalb der x-Achse,
+d.h. alle Funktionswerte $f(x)$ sind positiv. Um nun den Flächeninhalt zwischen
+$f(x)$ und der x-Achse mit den Grenzen $x=-2$ und $x=3$ zu berechnen, wird also
+folgendermaßen gerechnet: 
 
-$$\bar{y} = \frac{1}{N}\big(y_1 + y_2 + \ldots + y_n \big)$$
+$$A = \int_{-2}^{3} f(x)\, dx = \int_{-2}^{3} x^2 + 1 \, dx =
+\big[\frac{1}{3}x^3+x\big]_{-2}^{3}=\frac{50}{3}\approx 16.6667.$$
 
-berechnet. Um die Pünktchen in der Formel zu sparen, verwenden wir das
-Summensymbol $\Sigma$:
+Übrigens, wenn Sie in dem obigen Plot die beiden Grenzen $x=a$ und $x=b$
+symbolisiert durch die beiden roten Punkte verschieben, wird der aktuelle
+Flächeninhalt berechnet.
 
-$$\bar{y} = \frac{1}{N} \sum_{i=1}^{N} y_i.$$
+Als nächstes wird die Funktion $f$ an der x-Achse gespiegelt. Die gespiegelte
+Funktion nennen wir $g$, also
 
-Zusammenfassend halten wir folgende Definition eines Mittelwertes fest.
+$$g(x)= -f(x) = -x^2-1.$$ 
 
-```{admonition} Was ist ... der Mittelwert?
-Der Mittelwert einer Liste von Zahlen ist die Summe der Zahlen geteilt durch ihre Anzahl. Berechnet wird der Mittelwert mit der Formel
-
-$$\bar{y} = \frac{1}{N} \sum_{i=1}^{N} y_i.$$
-
-Dabei ist $\bar{y}$ die Bezeichnung für den Mittelwert, $N$ die Anzahl der Zahlen und $y_i$ sind die einzelnen Zahlen.
-```
-
-## Mehr ist besser  
-
-In einer Sekunde kann ganz schön viel passieren. Wir gehen jetzt davon aus, dass
-die Geschwindigkeit des Autos zweimal pro Sekunde gemessen wurde und nicht nur
-einmal pro Sekunde.
-
-Die Geschwindigkeit zu den Zeitpunkten 1.5 s, 2.5 s, 3.5 s, 4.5 s und 5.5 s
-ergänzen unsere bisherigen Messungen und können als rote Kreise in dem folgenden
-Diagramm abgelesen werden.
-
-<div id="box2" class="jxgbox" style="width:600px; height:300px;"></div>
+<div id="chap02_sec02_fig02" class="jxgbox" style="width:75%; aspect-ratio:16/9; margin: 0 auto;"></div>
 <script type="text/javascript">
-var board = JXG.JSXGraph.initBoard('box2', { 
-  boundingbox: [-1, 53, 8, 32], axis:false,
-  showCopyright: false
-});
-var l1 = board.create('axis', [[0.0, 35.0], [1.0, 35.0]], {name:'Zeit [s]', withLabel:true});
-var l2 = board.create('axis', [[0.0, 35.0], [0.0, 36.0]], {name:'Geschwindigkeit [km/h]', withLabel:true, label: {position: 'rt', offset: [-20, -15]}});
-//board.create('functiongraph', [function(x){return 50.0;},0.0, 1.0], {dash:2, strokeWidth:2, strokeColor:'#005a94'});
-//board.create('functiongraph', [function(x){return 1/10520*(711*Math.pow(x,4)-4772*Math.pow(x,3)-189*Math.pow(x,2)+11850*x+518400);},1.0, 6.0], {strokeWidth:2,strokeColor:'#005a94'});
-//board.create('functiongraph', [function(x){return -5*x*x+70*x-195;},6.0, 7.0], {dash:2, strokeWidth:2,strokeColor:'#005a94'});
-var op1 = board.create('point',[1.0,50.0],{name:'', size:3, fillColor:'#005a94', strokeColor:'#005a94', fixed:true});
-var op2 = board.create('point',[2.0,48.9],{name:'', size:3, fillColor:'#005a94', strokeColor:'#005a94', fixed:true});
-var op3 = board.create('point',[3.0,45.7],{name:'', size:3, fillColor:'#005a94', strokeColor:'#005a94', fixed:true});
-var op4 = board.create('point',[4.0,41.8],{name:'', size:3, fillColor:'#005a94', strokeColor:'#005a94', fixed:true});
-var op5 = board.create('point',[5.0,40.0],{name:'', size:3, fillColor:'#005a94', strokeColor:'#005a94', fixed:true});
-var op6 = board.create('point',[6.0,45.0],{name:'', size:3, fillColor:'#005a94', strokeColor:'#005a94', fixed:true});
-var p1 = board.create('point',[1.5,49.7], {name:'49.7 km/h', size:3, fillColor:'#e60000', strokeColor:'#e60000', fixed:true});
-var p2 = board.create('point',[2.5,47.5], {name:'47.5 km/h', size:3, fillColor:'#e60000', strokeColor:'#e60000', fixed:true});
-var p3 = board.create('point',[3.5,43.7], {name:'43.7 km/h', size:3, fillColor:'#e60000', strokeColor:'#e60000', fixed:true});
-var p4 = board.create('point',[4.5,40.4], {name:'40.4 km/h', size:3, fillColor:'#e60000', strokeColor:'#e60000', fixed:true});
-var p5 = board.create('point',[5.5,41.3], {name:'41.3 km/h', size:3, fillColor:'#e60000', strokeColor:'#e60000', fixed:true});
-board.create('line', [[-.5,44.91],[7.5,44.91]], 
-        {straightFirst:false, straightLast:false, strokeWidth:2, strokeColor:'#000000', fixed:true})
+    board2 = JXG.JSXGraph.initBoard('chap02_sec02_fig02', 
+        {boundingbox:[-5, 2, 5, -20], axis:true, showCopyright: false, showNavigation: false});
+    let graph2 = board2.create('functiongraph', [function(x) {return -x*x-1;}, -5, 5], {strokeWidth:2, strokeColor:'#000000'});
+    let area2  = board2.create('integral', [[-2.0, 3.0], graph2],
+        {fillColor:'#669cbe'});
 </script><br>
 
-An der Berechnung des Mittelwertes ändert sich nicht, aber normalerweise ist er
-bei 11 Messungen genauer als bei sechs Messungen. Wir rechnen also 
+Wenn wir jetzt naiv den Flächeninhalt wiederum als das bestimmte Integral
+berechnen, erhalten wir
 
-$$\frac{1}{11}\big(50.0 + 49.7 + 48.9 + 47.5 + 45.7 + 43.7 + 41.8 + 40.4 + 40.0
-+ 41.3 + 45 \big) \approx 44.91.$$
+$$\int_{-2}^{3} g(x)\, dx = \int_{-2}^{3} -x^2 - 1 \, dx =
+\big[-\frac{1}{3}x^3-x\big]_{-2}^{3}=-\frac{50}{3}\approx -16.6667.$$
 
-Noch genauer würde es werden, wenn wir noch mehr Messwerte hinzunehmen. Der
-Mittelwert wäre dann perfekt, wenn wir unendliche viele Messungen hätten. Dann
-wäre der Mittelwert der Grenzwert
+Negative Flächen gibt es nicht. Das Integral ist nicht der Flächeninhalt,
+sondern der *orientierte* Flächeninhalt des Funktionsgraphens $g(x)$ mit der
+x-Achse und daher negativ. Andererseits wissen wir ja, dass die gesuchte Fläche
+zwischen $g(x)$ und der x-Achse (hier blau gefärbt) genauso groß sein muss wie
+die der Flächeninhalt der Funktion $f(x)$ mit der x-Achse in der ersten
+Abbildung (rot gefärbt), da wir die Funktion $f(x)$ ja nur an der x-Achse
+gespiegelt haben. Also nehmen wir einfach den ursprünglichen Flächeninhalt. Oder
+anders ausgedrückt, wir spiegeln die Funktion $g$ wieder, so dass die
+Funktionswerte der gespiegelten Funktion komplett oberhalb der x-Achse liegen.
 
-$$\bar{y} = \lim_{N\to\infty} \frac{1}{N} \sum_{i=1}^{N} y_i.$$
+Die Formel zur Berechnung des Flächeninhaltes einer Funktion, die komplett
+unterhalb der x-Achse liegt, lautet:
 
-Das setzt aber voraus, dass wir kontinuerlich die Geschwindigkeit messen. Oder
-anders ausgedrückt, das setzt voraus, dass wir die Geschwindigkeit als eine
-Funktion darstellen können, als ein sogenanntes Zeit-Geschwindigkeitsdiagramm.
-Für den perfekten Mittelwert müssen wir also den Mittelwert der Funktion
-ausrechnen, aber was ist der Mittelwert einer Funktion?
+$$A = \textcolor{red}{-} \int_{a}^{b} f(x)\, dx = \textcolor{red}{-} \big(F(b)-F(a)\big).$$
 
-## Mittelwert einer Funktion
+Komplizierter wird es, wenn die Funktion oberhalb und unterhalb der x-Achse
+liegt wie beispielsweise bei der Funktion $f(x)=x^2-1$. 
 
-Um einen Weg zu finden, den Mittelwert $m$ einer Funktion $f$ zu berechnen,
-starten wir erstmal mit einigen wenigen Messwerten. In unserem Beispiel können
-wir die Zeitpunkte, zu denen eine Messung durchgeführt wird, mit $x_1$, $x_2$,
-usw. bis $x_N$ ausdrücken. Die dazugehörigen Geschwindigkeitenmessungen bzw.
-Funktionswerte bezeichnen wir dann mit $f(x_1)$, $f(x_2)$ usw. bis $f(x_N)$.
-Dann gilt für die Berechnung des Mittelwertes
+<div id="chap02_sec02_fig03" class="jxgbox" style="width:75%; aspect-ratio:16/9; margin: 0 auto;"></div>
+<script type="text/javascript">
+    board3 = JXG.JSXGraph.initBoard('chap02_sec02_fig03', 
+        {boundingbox:[-5, 20, 5, -2], axis:true, showCopyright: false, showNavigation: false});
+    let graph3 = board3.create('functiongraph', [function(x) {return x*x-1;}, -5, 5], {strokeWidth:2, strokeColor:'#000000'});
+    let area3a = board3.create('integral', [[-2.0, -1.0], graph3], {fillColor:'#f06666'});
+    let area3b = board3.create('integral', [[-1.0, 1.0],  graph3], {fillColor:'#669cbe'});
+    let area3c = board3.create('integral', [[1.0, 3.0],   graph3], {fillColor:'#f06666'});
+</script><br>
 
-$$m = \frac{1}{N} \sum_{i=1}^{N} f(x_i).$$
+Würden wir jetzt einfach das bestimmte Integral im Intervall $[-2,3]$ berechnen, so erhielten wir
 
-Aber eigentlich wollen wir ja den Grenzwert 
+$$\int_{-2}^{3} f(x)\, dx = \int_{-2}^{3} x^2-1\, dx = \frac{20}{3} \approx 6.6667.$$ 
 
-$$m = \lim_{N\to\infty} \frac{1}{N} \sum_{i=1}^{N} f(x_i)$$
+Das ist zuwenig! Bereits die Fläche zwischen $f(x)$ und der x-Achse im Intervall
+$[1,3]$ alleine hat schon den Flächeninhalt $\frac{20}{3}\approx 6.6667$. Wir
+gehen jetzt etwas sorgfältiger vor und untersuchen, wo die Funktion oberhalb und
+wo sie unterhalb der x-Achse liegt. Die obige Abbildung hilft schon für eine
+erste Einschätzung, wo $f(x)$ positiv ist und in welchem Intervall $f(x)$
+negativ ist. Der Vorzeichenwechsel erfolgt bei den Nullstellen.
 
-ausrechnen. Um diesen Grenzwert auszurechnen, wenden wir jetzt zwei Tricks an.
-Wenn wir unendlich viele Messungen nehmen, um den Mittelwert auszurechnen,
-können wir eine Messung auch weglassen. Bei unendlich vielen Messungen fällt
-eine Messung nicht ins Gewicht. Wir lassen die letzte Messung weg. Dadurch
-müssen wir nur noch durch $(N-1)$ teilen und bis $N-1$ summieren. Damit schreibt
-sich die Formel für den Mittelwert nun als
+$$x^2-1 = 0 \quad \Rightarrow \quad x_1 = -1 \text{ und } x_2 = +1.$$
 
-$$m = \lim_{N\to\infty} \frac{1}{N-1} \sum_{i=1}^{N-1} f(x_i).$$
+Daher wird jetzt das Intervall $[-2,3]$ in drei Teilintervalle unterteilt:
 
-Das war der erste Trick. Nun erweitern wir die Messungen der Geschwindigkeit mit
-dem Bruch $(b-a)/(b-a)$. Dabei ist $a$ der Startpunkt, zu dem die Messungen
-beginnen, und $b$ der Endpunkt. Durch $b-a$ wird also das Intervall auf der
-x-Achse beschreiben, in dem wir die Funktion $f$ mitteln wollen. Am Wert der
-Summe ändert sich nichts, wenn wir jeden Messwert mit dem Bruch $(b-a)/(b-a)$
-multiplizieren, da wir ja nur mit 1 multiplizieren. Wir können also mit beiden
-Tricks den Mittelwert schreiben als
+* $I_1 = [-2, -1]$ (also von $a=-2$ bis zur 1. Nullstelle)
+* $I_2 = [-1, +1]$ (also von der 1. Nullstelle bis zur 2. Nullstelle)
+* $I_3 = [+1, +3]$ (also von der 2. Nullstelle bis $b=3$) 
 
-$$m = \lim_{N\to\infty} \frac{1}{N-1} \sum_{i=1}^{N-1} f(x_i)\cdot \frac{b-a}{b-a}.$$
+Das bestimmte Integral im 1. Teilintervall ist positiv, im 2. Teilintervall ist
+es negativ und im 3. Teilintervall wieder positiv:
 
-Wenn in einer Summe jeder Term mit einer konstanten Zahl multipliziert wird,
-dürfen wir diese konstante Zahl in die Summe reinmultiplizieren oder
-ausklammern. Wir klammern jetzt die Zahl $1/(b-a)$ aus und multiplizieren
-stattdessen die Zahl $1/(N-1)$ in die Summe.
+* $\int_{-2}^{-1} f(x) \, dx = + \frac{4}{3} \approx 1.3333$,
+* $\int_{-1}^{1} f(x) \, dx = - \frac{4}{3} \approx - 1.3333$,
+* $\int_{1}^{3} f(x) \, dx = + \frac{20}{3} \approx 6.6667$.
 
-$$m = \frac{1}{b-a} \lim_{N\to\infty} \sum_{i=1}^{N-1} f(x_i)\cdot
-\frac{b-a}{N-1}.$$
+Da ein Integral über ein Intervall gleich der Summe der Integrale über die
+Teilintervalle ist, erhalten wir
 
-Das Intervall $b-a$ wird also in $(N-1)$ kleine Stückchen unterteilt. Jedes
-Stückchen ist dabei gleich groß und könnte mit $\Delta x$ bezeichnet werden. In
-der folgenden Grafik zeigen wir das anhand unserer 11 Messwerte. Wir lassen die
-letzte Messung weg und erhalten $\Delta x = 0.5 s$. Der Startzeitpunkt ist $a =
-1 s$ und der Endzeitpunkt ist $b = 6 s$.
+$$\int_{-2}^{3} f(x) \, dx = \frac{4}{3} - \frac{4}{3} + \frac{20}{3} = \frac{20}{3}.$$
 
-```{figure} pics/chap02_sec02_fig03.png
----
-width: 600px
-name: chap02_sec02_fig03
----
-Annäherung des Mittelwertes einer Funktion $f$ über die Summe von Produkten $f(x_i)\cdot \Delta x$ im Intervall $[a,b]$
+Die ersten beiden Integrale ergeben in Summe 0, da ist die Fläche verloren
+gegangen. Der mittlere Teil, wo das Integral einen negativ orientierten
+Flächeninhalt liefert, muss an der x-Achse gespiegelt werden bzw. der
+orientierte Flächeninhalt muss mit (-1) multipliziert werden. Der korrekte
+Flächeninhalt ist daher
+
+$$A = \frac{4}{3} \textcolor{red}{+} \frac{4}{3} + \frac{20}{3} = \frac{28}{3}.$$
+
+```{admonition} Kochrezept zur Berechnung des Flächeninhaltes zwischen einer Kurve und der x-Achse
+Ist der Flächeninhalt $A$ zwischen einer Kurve $f(x)$ und der x-Achse mit den Grenzen $x=a$ und $x=b$ gesucht, gehen Sie folgendermaßen vor:
+
+1. Fertigen Sie eine Skizze der Funktion an, um zu ermitteln, wo $f(x)$ oberhalb und wo unterhalb der x-Achse verläuft.
+2. Berechnen Sie die Nullstellen der Funktion $f$. Unterteilen Sie damit das Intervall $[a,b]$ in Teilintervalle $I_1, I_2, \ldots$, so dass die Funktion $f$ in einem solchen Teilintervall komplett oberhalb oder komplett unterhalb der x-Achse liegt.
+3. Berechnen Sie dann in jedem Teilintervall das Integral einzeln. Wenn die Funktion in dem Intervall negativ ist, multiplizieren Sie anschließend den orientierten Flächeninhalt mit (-1). Das Ergebnis sind die (positiven!) Teilfläche $A_1, A_2, \ldots$.
+4. Addieren Sie zuletzt alle Teilflächen $A = A_1 + A_2 + \dots$. Das Gesamtergebnis ist der gesuchte Flächeninhalt $A$. 
 ```
 
-Wir summieren also über die Flächeninhalte $f(x_i)\cdot \Delta x$. Wenn die
-Anzahl der Messungen zunimmt, werden die Stückchen $\Delta x$ kleiner, dafür
-summieren wir über mehr Rechtecke. Diesen Grenzwert kennen wir schon, es ist der
-orientierte Flächeninhalt der Funktion $f$ mit der x-Achse, also das Integral 
+## Beispiel für die Berechnung des Flächeninhaltes Kurve mit x-Achse
 
-$$m = \frac{1}{b-a} \int_{a}^{b} f(x) \, dx.$$
+Berechnen Sie den Flächeninhalt $A$ der Funktion $f(x)=x^3-3x^2+2x$ im Intervall
+$[0,2]$. Vergleichen Sie Ihr Ergebnis anschließend mit dem Lösungsweg in dem
+folgenden Video.
 
-```{admonition} Was ist ... der Mittelwert einer Funktion?
-Der Mittelwert einer Funktion in einem Intervall ist das bestimmte Integral auf diesem Intervall geteilt durch die Intervall-Länge.
+<iframe width="560" height="315" src="https://www.youtube.com/embed/BsI9LD3IQvo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-Etwas präziser formuliert berechnet sich der Mittelwert $m$ einer stetigen Funktion $f$ im Intervall $[a,b]$ über die Formel
-
-$$m = \frac{1}{b-a} \int_{a}^{b} f(x) \, dx.$$
-```
