@@ -30,13 +30,14 @@ brauchen wir ein anderes Hilfsmittel, um die Streckenlänge zu berechnen. Für
 Funktionen, die stetig differenzierbar sind, gibt es eine passende Formel.
 Stetig differenzierbare Funktion heißt, dass die Funktion eine 1. Ableitung
 haben muss und diese Ableitung soll wiederum stetig sein. Die üblichen
-Funktionen in den Ingenieurwissenschaften erfüllen diese Bedingung.
+Funktionen in den Ingenieurwissenschaften erfüllen diese Bedingung, so dass Sie
+sich im Normalfall keine Gedanken um diese Bedingung machen müssen.
 
 ```{admonition} Kochrezept zur Berechnung der Bogenlänge
 Wenn die Bogenlänge des Funktionsgraphens $f(x)$ vom Startpunkt $(a,f(a))$ bis zum Endpunkt $(b,f(b))$ berechnet werden soll und die Funktion $f$ stetig differenzierbar ist, gehen Sie folgenermaßen vor:
 
 1. Berechnen Sie die 1. Ableitung $f'$.
-2. Quadrieren Sie die 1. Ableitung und berechnen Sie $\left(f'(x)\right)^2$ vorab.
+2. Quadrieren Sie die 1. Ableitung und versuchen Sie, den Term $\sqrt{1+\left(f'(x)\right)^2}$ so weit wie möglich zu vereinfachen.
 3. Berechnen Sie dann das folgende Integral (oft müssen Sie dabei die Substitutionsregel benutzen):
 
 $$\text{Bogenlänge} = \int_{a}^{b} \sqrt{1+(f'(x))^2}\, dx.$$
@@ -50,7 +51,10 @@ reelle Zahlen $x\geq 0$. Wir wählen als
 * Start $a=1 \Rightarrow f(1)=1^{\frac{3}{2}}+1 =2$ und als
 * Ziel $b=4 \Rightarrow f(4)=4^{\frac{3}{2}}+1 = 8+1 = 9$,
 
-also die Punkte $(1,2)$ und $(4,9)$. Die Formel für die Bogenlänge beinhaltet den Term $(f'(x))^{2}$, also das Quadrat der 1. Ableitung. Diesen Term berechnen wir vorab in einer Nebenrechnung. Zuerst die 1. Ableitung:
+also den Start $(1,2)$ und das Ziel $(4,9)$. Die Formel für die Bogenlänge
+beinhaltet den Term $(f'(x))^{2}$, also das Quadrat der 1. Ableitung. Diesen
+Term berechnen wir vorab in einer Nebenrechnung. Zuerst wird die 1. Ableitung
+berechnet:
 
 $$f(x)=x^{\frac{3}{2}} \Rightarrow f'(x)= \frac{3}{2}x^{\frac{1}{2}} = \frac{3}{2}\sqrt{x}.$$
 
@@ -58,20 +62,22 @@ Damit erhalten wir
 
 $$(f'(x))^{2} = \big( \frac{3}{2}\sqrt{x} \big)^{2} = \frac{9}{4}x.$$
 
-Somit beträgt die Bogenlänge $L$ von $(1,2)$ bis $(4,9)$
+Der Term $\sqrt{1+\frac{9}{4}x}$ lässt sich leider nicht weiter vereinfachen, so dass für die Berechnung des Integrals
 
-$$L = \int_{1}^{4} \sqrt{1 + \frac{9}{4}x}\, dx.$$
+$$L = \int_{1}^{4} \sqrt{1 + \frac{9}{4}x}\, dx$$
 
-Leider müssen wir nun die Substitutionsregel benutzen, um dieses Integral zu berechnen. Wir setzen $z = 1 + \frac{9}{4}x$. Dann gilt
+die Substitutionsregel benutzt werden muss. Wir setzen $z = 1 + \frac{9}{4}x$. Dann gilt
 
 \begin{align*}
 L & = \int_{1}^{4} \sqrt{1 + \frac{9}{4}x}\, dx = \\
-  & = \int \sqrt{z} \cdot \frac{4}{9} \, dz = \\
-  & = \frac{4}{9}\cdot\frac{2}{3} \big[ z^{\frac{3}{2}}\big] = \\
-  & = \frac{8}{27} \big[(1+\frac{9}{4}x)^{\frac{3}{2}}]_{1}^{4} = \\
-  & = \frac{8}{27} \big( 10^{\frac{3}{2}} - (\frac{13}{4})^{\frac{3}{2}}\big) \\
+  & = \int \sqrt{z} \cdot \frac{4}{9} \, dz  = \frac{4}{9}\cdot\frac{2}{3} \left[ z^{\frac{3}{2}}\right] = \\
+  & = \frac{8}{27} \left[\left(1+\frac{9}{4}x\right)^{\frac{3}{2}}\right]_{1}^{4} = \\
   & \approx 7.6337.
 \end{align*}
+
+In dem folgenden Video wird ein zweites Beispiel vorgeführt.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/xYr6zDAgIo8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 ## Wie kommt man auf die Formel zur Berechnung der Bogenlänge?
 
