@@ -387,13 +387,23 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#flacheninhalt-zwischen-kurve-und-x-achse">
-   Flächeninhalt zwischen Kurve und x-Achse
+  <a class="reference internal nav-link" href="#flacheninhalt-graph-oberhalb-der-x-achse">
+   Flächeninhalt: Graph oberhalb der x-Achse
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#beispiel-fur-die-berechnung-des-flacheninhaltes-kurve-mit-x-achse">
-   Beispiel für die Berechnung des Flächeninhaltes Kurve mit x-Achse
+  <a class="reference internal nav-link" href="#flacheninhalt-graph-unterhalb-der-x-achse">
+   Flächeninhalt: Graph unterhalb der x-Achse
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#flacheninhalt-graph-oberhalb-und-unterhalb-der-x-achse">
+   Flächeninhalt: Graph oberhalb und unterhalb der x-Achse
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#flache-zwischen-zwei-funktionsgraphen">
+   Fläche zwischen zwei Funktionsgraphen
   </a>
  </li>
 </ul>
@@ -421,13 +431,23 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#flacheninhalt-zwischen-kurve-und-x-achse">
-   Flächeninhalt zwischen Kurve und x-Achse
+  <a class="reference internal nav-link" href="#flacheninhalt-graph-oberhalb-der-x-achse">
+   Flächeninhalt: Graph oberhalb der x-Achse
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#beispiel-fur-die-berechnung-des-flacheninhaltes-kurve-mit-x-achse">
-   Beispiel für die Berechnung des Flächeninhaltes Kurve mit x-Achse
+  <a class="reference internal nav-link" href="#flacheninhalt-graph-unterhalb-der-x-achse">
+   Flächeninhalt: Graph unterhalb der x-Achse
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#flacheninhalt-graph-oberhalb-und-unterhalb-der-x-achse">
+   Flächeninhalt: Graph oberhalb und unterhalb der x-Achse
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#flache-zwischen-zwei-funktionsgraphen">
+   Fläche zwischen zwei Funktionsgraphen
   </a>
  </li>
 </ul>
@@ -445,28 +465,30 @@ title="Print to PDF"
 <p>Bisher haben wir das Integral benutzt, um den orientierten Flächeninhalt
 zwischen einer Funktion und der x-Achse zu bestimmen. In diesem Abschnitt
 erweitern wir diese Idee, um den Flächeninhalt zwischen zwei Funktionen zu
-bestimmen, genauer gesagt zwischen den zwei Funktionsgraphen.</p>
+bestimmen, genauer gesagt zwischen zwei Funktionsgraphen. Dazu beginnen wir aber
+zunächst mit der Vorgehensweise, wie Flächeninhalte zwischen einem
+Funktionsgraphen und der x-Achse berechnet werden.</p>
 <section id="lernziele">
 <h2>Lernziele<a class="headerlink" href="#lernziele" title="Permalink to this headline">#</a></h2>
 <div class="hint admonition">
 <p class="admonition-title">Lernziele</p>
 <ul class="simple">
 <li><p>Sie wissen, wie man mit dem bestimmten Integral <span class="math notranslate nohighlight">\(\int_{a}^{b} f(x)\, dx\)</span> den
-Flächeninhalt zwischen der Kurve <span class="math notranslate nohighlight">\(f(x)\)</span>, der x-Achse und den parallelen
+Flächeninhalt zwischen dem Funktionsgraphen <span class="math notranslate nohighlight">\(f(x)\)</span>, der x-Achse und den parallelen
 Geraden <span class="math notranslate nohighlight">\(x=a\)</span> und <span class="math notranslate nohighlight">\(x=b\)</span> berechnet, wenn</p>
 <ul>
-<li><p>die Kurve oberhalb der x-Achse liegt,</p></li>
-<li><p>die Kurve unterhalb der x-Achse liegt oder</p></li>
-<li><p>die Kurve teils oberhalb und teils unterhalb der x-Achse liegt.</p></li>
+<li><p>der Graph oberhalb der x-Achse liegt,</p></li>
+<li><p>der Graph unterhalb der x-Achse liegt oder</p></li>
+<li><p>der Graph teils oberhalb und teils unterhalb der x-Achse liegt.</p></li>
 </ul>
 </li>
-<li><p>Sie wissen, wie man den Flächeninhalt zwischen zwei Kurven <span class="math notranslate nohighlight">\(f(x)\)</span> und <span class="math notranslate nohighlight">\(g(x)\)</span>
+<li><p>Sie wissen, wie man den Flächeninhalt zwischen den beiden Funktionsgraphen <span class="math notranslate nohighlight">\(f(x)\)</span> und <span class="math notranslate nohighlight">\(g(x)\)</span>
 berechnet.</p></li>
 </ul>
 </div>
 </section>
-<section id="flacheninhalt-zwischen-kurve-und-x-achse">
-<h2>Flächeninhalt zwischen Kurve und x-Achse<a class="headerlink" href="#flacheninhalt-zwischen-kurve-und-x-achse" title="Permalink to this headline">#</a></h2>
+<section id="flacheninhalt-graph-oberhalb-der-x-achse">
+<h2>Flächeninhalt: Graph oberhalb der x-Achse<a class="headerlink" href="#flacheninhalt-graph-oberhalb-der-x-achse" title="Permalink to this headline">#</a></h2>
 <p>Das Integral wurde in der Mathematik 1 als der orientierte Flächeninhalt
 zwischen Funktionsgraph <span class="math notranslate nohighlight">\(f(x)\)</span> und x-Achse eingeführt. Liegen die Funktionswerte
 <span class="math notranslate nohighlight">\(f(x)\)</span> alle oberhalb der x-Achse wie in dem nachfolgendem Beispiel, so ist der
@@ -475,8 +497,9 @@ orientierte Flächeninhalt gleich dem Flächeninhalt. Damit ist die gesuchte Fl�
 <div class="math notranslate nohighlight">
 \[A = \int_{a}^{b} f(x) \, dx.\]</div>
 <p>Das bestimmte Integral lässt sich am einfachsten über eine Stammfunktion <span class="math notranslate nohighlight">\(F\)</span>
-berechnen. Damit gilt für den Flächeninhalt <span class="math notranslate nohighlight">\(A\)</span> einer Funktion <span class="math notranslate nohighlight">\(f\)</span> im Ingervall
-<span class="math notranslate nohighlight">\([a,b]\)</span> die folgende Formel:</p>
+berechnen. Mit dem Hauptsatz der Differential- und Integralrechnung gilt dann
+für den Flächeninhalt <span class="math notranslate nohighlight">\(A\)</span> einer Funktion <span class="math notranslate nohighlight">\(f\)</span> im Intervall <span class="math notranslate nohighlight">\([a,b]\)</span> die folgende
+Formel:</p>
 <div class="math notranslate nohighlight">
 \[A = \int_{a}^{b} f(x) \, dx = F(b)- F(a).\]</div>
 <p>Beispiel: In der folgenden Abbildung ist der Funktionsgraph <span class="math notranslate nohighlight">\(f(x)\)</span> der Funktion
@@ -497,9 +520,12 @@ folgendermaßen gerechnet:</p>
 <div class="math notranslate nohighlight">
 \[A = \int_{-2}^{3} f(x)\, dx = \int_{-2}^{3} x^2 + 1 \, dx =
 \big[\frac{1}{3}x^3+x\big]_{-2}^{3}=\frac{50}{3}\approx 16.6667.\]</div>
-<p>Übrigens, wenn Sie in dem obigen Plot die beiden Grenzen <span class="math notranslate nohighlight">\(x=a\)</span> und <span class="math notranslate nohighlight">\(x=b\)</span>
-symbolisiert durch die beiden roten Punkte verschieben, wird der aktuelle
-Flächeninhalt berechnet.</p>
+<p>In dem folgenden Video wird die Vorgehensweise nochnmal ausführlich erklärt und
+ein weiteres Beispiel vorgerechnet.</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/L3m_jn9w1dU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</section>
+<section id="flacheninhalt-graph-unterhalb-der-x-achse">
+<h2>Flächeninhalt: Graph unterhalb der x-Achse<a class="headerlink" href="#flacheninhalt-graph-unterhalb-der-x-achse" title="Permalink to this headline">#</a></h2>
 <p>Als nächstes wird die Funktion <span class="math notranslate nohighlight">\(f\)</span> an der x-Achse gespiegelt. Die gespiegelte
 Funktion nennen wir <span class="math notranslate nohighlight">\(g\)</span>, also</p>
 <div class="math notranslate nohighlight">
@@ -530,6 +556,12 @@ Funktionswerte der gespiegelten Funktion komplett oberhalb der x-Achse liegen.</
 unterhalb der x-Achse liegt, lautet:</p>
 <div class="math notranslate nohighlight">
 \[A = \textcolor{red}{-} \int_{a}^{b} f(x)\, dx = \textcolor{red}{-} \big(F(b)-F(a)\big).\]</div>
+<p>Weitere Erklärungen sowie ein weiteres Beispiel werden ausführlich in dem
+folgenden Video präsentiert.</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/_SA6iZNAKzw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</section>
+<section id="flacheninhalt-graph-oberhalb-und-unterhalb-der-x-achse">
+<h2>Flächeninhalt: Graph oberhalb und unterhalb der x-Achse<a class="headerlink" href="#flacheninhalt-graph-oberhalb-und-unterhalb-der-x-achse" title="Permalink to this headline">#</a></h2>
 <p>Komplizierter wird es, wenn die Funktion oberhalb und unterhalb der x-Achse
 liegt wie beispielsweise bei der Funktion <span class="math notranslate nohighlight">\(f(x)=x^2-1\)</span>.</p>
 <div id="chap02_sec02_fig03" class="jxgbox" style="width:75%; aspect-ratio:16/9; margin: 0 auto;"></div>
@@ -576,23 +608,52 @@ orientierte Flächeninhalt muss mit (-1) multipliziert werden. Der korrekte
 Flächeninhalt ist daher</p>
 <div class="math notranslate nohighlight">
 \[A = \frac{4}{3} \textcolor{red}{+} \frac{4}{3} + \frac{20}{3} = \frac{28}{3}.\]</div>
-<div class="admonition-kochrezept-zur-berechnung-des-flacheninhaltes-zwischen-einer-kurve-und-der-x-achse admonition">
-<p class="admonition-title">Kochrezept zur Berechnung des Flächeninhaltes zwischen einer Kurve und der x-Achse</p>
-<p>Ist der Flächeninhalt <span class="math notranslate nohighlight">\(A\)</span> zwischen einer Kurve <span class="math notranslate nohighlight">\(f(x)\)</span> und der x-Achse mit den Grenzen <span class="math notranslate nohighlight">\(x=a\)</span> und <span class="math notranslate nohighlight">\(x=b\)</span> gesucht, gehen Sie folgendermaßen vor:</p>
+<div class="admonition-kochrezept-zur-berechnung-des-flacheninhaltes-zwischen-einem-funktionsgraphen-und-der-x-achse admonition">
+<p class="admonition-title">Kochrezept zur Berechnung des Flächeninhaltes zwischen einem Funktionsgraphen und der x-Achse</p>
+<p>Ist der Flächeninhalt <span class="math notranslate nohighlight">\(A\)</span> zwischen dem Funktionsgraphen <span class="math notranslate nohighlight">\(f(x)\)</span> und der x-Achse mit den Grenzen <span class="math notranslate nohighlight">\(x=a\)</span> und <span class="math notranslate nohighlight">\(x=b\)</span> gesucht, gehen Sie folgendermaßen vor:</p>
 <ol class="simple">
 <li><p>Fertigen Sie eine Skizze der Funktion an, um zu ermitteln, wo <span class="math notranslate nohighlight">\(f(x)\)</span> oberhalb und wo unterhalb der x-Achse verläuft.</p></li>
 <li><p>Berechnen Sie die Nullstellen der Funktion <span class="math notranslate nohighlight">\(f\)</span>. Unterteilen Sie damit das Intervall <span class="math notranslate nohighlight">\([a,b]\)</span> in Teilintervalle <span class="math notranslate nohighlight">\(I_1, I_2, \ldots\)</span>, so dass die Funktion <span class="math notranslate nohighlight">\(f\)</span> in einem solchen Teilintervall komplett oberhalb oder komplett unterhalb der x-Achse liegt.</p></li>
-<li><p>Berechnen Sie dann in jedem Teilintervall das Integral einzeln. Wenn die Funktion in dem Intervall negativ ist, multiplizieren Sie anschließend den orientierten Flächeninhalt mit (-1). Das Ergebnis sind die (positiven!) Teilfläche <span class="math notranslate nohighlight">\(A_1, A_2, \ldots\)</span>.</p></li>
+<li><p>Berechnen Sie dann in jedem Teilintervall das Integral einzeln. Wenn die Funktion in dem Intervall negativ ist, multiplizieren Sie anschließend den orientierten Flächeninhalt mit (-1). Das Ergebnis sind die (positiven!) Teilflächen <span class="math notranslate nohighlight">\(A_1, A_2, \ldots\)</span>.</p></li>
 <li><p>Addieren Sie zuletzt alle Teilflächen <span class="math notranslate nohighlight">\(A = A_1 + A_2 + \dots\)</span>. Das Gesamtergebnis ist der gesuchte Flächeninhalt <span class="math notranslate nohighlight">\(A\)</span>.</p></li>
 </ol>
 </div>
+<p>Das folgende Video fasst die Vorgehensweise zusammen.</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/vdSWk1bCnMA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </section>
-<section id="beispiel-fur-die-berechnung-des-flacheninhaltes-kurve-mit-x-achse">
-<h2>Beispiel für die Berechnung des Flächeninhaltes Kurve mit x-Achse<a class="headerlink" href="#beispiel-fur-die-berechnung-des-flacheninhaltes-kurve-mit-x-achse" title="Permalink to this headline">#</a></h2>
-<p>Berechnen Sie den Flächeninhalt <span class="math notranslate nohighlight">\(A\)</span> der Funktion <span class="math notranslate nohighlight">\(f(x)=x^3-3x^2+2x\)</span> im Intervall
-<span class="math notranslate nohighlight">\([0,2]\)</span>. Vergleichen Sie Ihr Ergebnis anschließend mit dem Lösungsweg in dem
-folgenden Video.</p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/BsI9LD3IQvo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<section id="flache-zwischen-zwei-funktionsgraphen">
+<h2>Fläche zwischen zwei Funktionsgraphen<a class="headerlink" href="#flache-zwischen-zwei-funktionsgraphen" title="Permalink to this headline">#</a></h2>
+<p>Möchte man den Flächeninhalt berechnen, den zwei Funktionen <span class="math notranslate nohighlight">\(f\)</span> und <span class="math notranslate nohighlight">\(g\)</span>
+begrenzen, so könnte man zuerst den Flächeninhalt der ersten Funktion <span class="math notranslate nohighlight">\(f\)</span> mit
+der x-Achse berechnen und dann davon den zweiten Flächeninhalt des
+Funktionsgraphens <span class="math notranslate nohighlight">\(g(x)\)</span> mit der x-Achse abziehen. Dazu müsste man aber wissen,
+welche Funktion oberhalb der anderen Funktion liegt. Einfacher wird es, wenn die
+Differenzfunktion der beiden Funktionen gebildet wird. Die Vorgehensweise ist
+dann wie folgt.</p>
+<div class="admonition-kochrezept-zur-berechnung-des-flacheninhaltes-zwischen-zwei-funktionsgraphen admonition">
+<p class="admonition-title">Kochrezept zur Berechnung des Flächeninhaltes zwischen zwei Funktionsgraphen</p>
+<p>Zur Berechnung des Flächeninhaltes zwischen zwei Funktionsgraphen, die wir
+<span class="math notranslate nohighlight">\(f(x)\)</span> und <span class="math notranslate nohighlight">\(g(x)\)</span> nennen, und den Grenzen <span class="math notranslate nohighlight">\(x=a\)</span> und <span class="math notranslate nohighlight">\(x=b\)</span> gehen wir
+folgendermaßen vor.</p>
+<ol class="simple">
+<li><p>Berechnen Sie die Schnittpunkte <span class="math notranslate nohighlight">\(f(x)=g(x)\)</span>.</p></li>
+<li><p>Bilden Sie die Differenzfunktion <span class="math notranslate nohighlight">\(d(x)=f(x)-g(x)\)</span>.</p></li>
+<li><p>Integrieren Sie die die Differenzfunktion <span class="math notranslate nohighlight">\(d\)</span> in den Teilintervallen, d.h.
+von a bis zum 1. Schnittpunkt, vom 1. Schnittpunkt bis zum 2. Schnittpunkt,
+usw…</p></li>
+<li><p>Wenn der orientierte Flächeninhalt einer Teilfläche negativ ist,
+multiplizieren Sie mit -1, um den Flächeninhalt zu erhalten.</p></li>
+<li><p>Addieren Sie alle Flächeninhalte, um die Gesamtfläche zu erhalten.</p></li>
+</ol>
+</div>
+<p>Das folgende Video erläutert die Vorgehensweise und erklärt auch, warum die
+Integration über die Differenzfunktion den gleichen Flächeninhalt ergibt wie die
+gesuchte Fläche zwischen den beiden Funktionsgraphen.</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/OXQvPFGb9uk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<p>Werden die Schnittpunkte nicht sorgfältig ermittelt und das Intervall, über das
+integriert wird, nicht sorgsam aufgeteilt, so passieren leicht Fehler, wie das
+folgende Video demonstriert.</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/nFG5_-kS7fI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </section>
 </section>
 
