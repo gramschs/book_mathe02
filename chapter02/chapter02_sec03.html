@@ -499,13 +499,14 @@ brauchen wir ein anderes Hilfsmittel, um die Streckenlänge zu berechnen. Für
 Funktionen, die stetig differenzierbar sind, gibt es eine passende Formel.
 Stetig differenzierbare Funktion heißt, dass die Funktion eine 1. Ableitung
 haben muss und diese Ableitung soll wiederum stetig sein. Die üblichen
-Funktionen in den Ingenieurwissenschaften erfüllen diese Bedingung.</p>
+Funktionen in den Ingenieurwissenschaften erfüllen diese Bedingung, so dass Sie
+sich im Normalfall keine Gedanken um diese Bedingung machen müssen.</p>
 <div class="admonition-kochrezept-zur-berechnung-der-bogenlange admonition">
 <p class="admonition-title">Kochrezept zur Berechnung der Bogenlänge</p>
 <p>Wenn die Bogenlänge des Funktionsgraphens <span class="math notranslate nohighlight">\(f(x)\)</span> vom Startpunkt <span class="math notranslate nohighlight">\((a,f(a))\)</span> bis zum Endpunkt <span class="math notranslate nohighlight">\((b,f(b))\)</span> berechnet werden soll und die Funktion <span class="math notranslate nohighlight">\(f\)</span> stetig differenzierbar ist, gehen Sie folgenermaßen vor:</p>
 <ol class="simple">
 <li><p>Berechnen Sie die 1. Ableitung <span class="math notranslate nohighlight">\(f'\)</span>.</p></li>
-<li><p>Quadrieren Sie die 1. Ableitung und berechnen Sie <span class="math notranslate nohighlight">\(\left(f'(x)\right)^2\)</span> vorab.</p></li>
+<li><p>Quadrieren Sie die 1. Ableitung und versuchen Sie, den Term <span class="math notranslate nohighlight">\(\sqrt{1+\left(f'(x)\right)^2}\)</span> so weit wie möglich zu vereinfachen.</p></li>
 <li><p>Berechnen Sie dann das folgende Integral (oft müssen Sie dabei die Substitutionsregel benutzen):</p></li>
 </ol>
 <div class="math notranslate nohighlight">
@@ -520,25 +521,28 @@ reelle Zahlen <span class="math notranslate nohighlight">\(x\geq 0\)</span>. Wir
 <li><p>Start <span class="math notranslate nohighlight">\(a=1 \Rightarrow f(1)=1^{\frac{3}{2}}+1 =2\)</span> und als</p></li>
 <li><p>Ziel <span class="math notranslate nohighlight">\(b=4 \Rightarrow f(4)=4^{\frac{3}{2}}+1 = 8+1 = 9\)</span>,</p></li>
 </ul>
-<p>also die Punkte <span class="math notranslate nohighlight">\((1,2)\)</span> und <span class="math notranslate nohighlight">\((4,9)\)</span>. Die Formel für die Bogenlänge beinhaltet den Term <span class="math notranslate nohighlight">\((f'(x))^{2}\)</span>, also das Quadrat der 1. Ableitung. Diesen Term berechnen wir vorab in einer Nebenrechnung. Zuerst die 1. Ableitung:</p>
+<p>also den Start <span class="math notranslate nohighlight">\((1,2)\)</span> und das Ziel <span class="math notranslate nohighlight">\((4,9)\)</span>. Die Formel für die Bogenlänge
+beinhaltet den Term <span class="math notranslate nohighlight">\((f'(x))^{2}\)</span>, also das Quadrat der 1. Ableitung. Diesen
+Term berechnen wir vorab in einer Nebenrechnung. Zuerst wird die 1. Ableitung
+berechnet:</p>
 <div class="math notranslate nohighlight">
 \[f(x)=x^{\frac{3}{2}} \Rightarrow f'(x)= \frac{3}{2}x^{\frac{1}{2}} = \frac{3}{2}\sqrt{x}.\]</div>
 <p>Damit erhalten wir</p>
 <div class="math notranslate nohighlight">
 \[(f'(x))^{2} = \big( \frac{3}{2}\sqrt{x} \big)^{2} = \frac{9}{4}x.\]</div>
-<p>Somit beträgt die Bogenlänge <span class="math notranslate nohighlight">\(L\)</span> von <span class="math notranslate nohighlight">\((1,2)\)</span> bis <span class="math notranslate nohighlight">\((4,9)\)</span></p>
+<p>Der Term <span class="math notranslate nohighlight">\(\sqrt{1+\frac{9}{4}x}\)</span> lässt sich leider nicht weiter vereinfachen, so dass für die Berechnung des Integrals</p>
 <div class="math notranslate nohighlight">
-\[L = \int_{1}^{4} \sqrt{1 + \frac{9}{4}x}\, dx.\]</div>
-<p>Leider müssen wir nun die Substitutionsregel benutzen, um dieses Integral zu berechnen. Wir setzen <span class="math notranslate nohighlight">\(z = 1 + \frac{9}{4}x\)</span>. Dann gilt</p>
+\[L = \int_{1}^{4} \sqrt{1 + \frac{9}{4}x}\, dx\]</div>
+<p>die Substitutionsregel benutzt werden muss. Wir setzen <span class="math notranslate nohighlight">\(z = 1 + \frac{9}{4}x\)</span>. Dann gilt</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
 L &amp; = \int_{1}^{4} \sqrt{1 + \frac{9}{4}x}\, dx = \\
-  &amp; = \int \sqrt{z} \cdot \frac{4}{9} \, dz = \\
-  &amp; = \frac{4}{9}\cdot\frac{2}{3} \big[ z^{\frac{3}{2}}\big] = \\
-  &amp; = \frac{8}{27} \big[(1+\frac{9}{4}x)^{\frac{3}{2}}]_{1}^{4} = \\
-  &amp; = \frac{8}{27} \big( 10^{\frac{3}{2}} - (\frac{13}{4})^{\frac{3}{2}}\big) \\
+  &amp; = \int \sqrt{z} \cdot \frac{4}{9} \, dz  = \frac{4}{9}\cdot\frac{2}{3} \left[ z^{\frac{3}{2}}\right] = \\
+  &amp; = \frac{8}{27} \left[\left(1+\frac{9}{4}x\right)^{\frac{3}{2}}\right]_{1}^{4} = \\
   &amp; \approx 7.6337.
 \end{align*}\]</div>
+<p>In dem folgenden Video wird ein zweites Beispiel vorgeführt.</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/xYr6zDAgIo8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </section>
 <section id="wie-kommt-man-auf-die-formel-zur-berechnung-der-bogenlange">
 <h2>Wie kommt man auf die Formel zur Berechnung der Bogenlänge?<a class="headerlink" href="#wie-kommt-man-auf-die-formel-zur-berechnung-der-bogenlange" title="Permalink to this headline">#</a></h2>
