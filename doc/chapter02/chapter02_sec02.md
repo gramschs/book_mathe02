@@ -3,24 +3,26 @@
 Bisher haben wir das Integral benutzt, um den orientierten Flächeninhalt
 zwischen einer Funktion und der x-Achse zu bestimmen. In diesem Abschnitt
 erweitern wir diese Idee, um den Flächeninhalt zwischen zwei Funktionen zu
-bestimmen, genauer gesagt zwischen den zwei Funktionsgraphen.
+bestimmen, genauer gesagt zwischen zwei Funktionsgraphen. Dazu beginnen wir aber
+zunächst mit der Vorgehensweise, wie Flächeninhalte zwischen einem
+Funktionsgraphen und der x-Achse berechnet werden.
 
 ## Lernziele
 
 ```{admonition} Lernziele
 :class: hint
 * Sie wissen, wie man mit dem bestimmten Integral $\int_{a}^{b} f(x)\, dx$ den
-  Flächeninhalt zwischen der Kurve $f(x)$, der x-Achse und den parallelen
+  Flächeninhalt zwischen dem Funktionsgraphen $f(x)$, der x-Achse und den parallelen
   Geraden $x=a$ und $x=b$ berechnet, wenn 
-    * die Kurve oberhalb der x-Achse liegt,
-    * die Kurve unterhalb der x-Achse liegt oder
-    * die Kurve teils oberhalb und teils unterhalb der x-Achse liegt. 
+    * der Graph oberhalb der x-Achse liegt,
+    * der Graph unterhalb der x-Achse liegt oder
+    * der Graph teils oberhalb und teils unterhalb der x-Achse liegt. 
 
-* Sie wissen, wie man den Flächeninhalt zwischen zwei Kurven $f(x)$ und $g(x)$
+* Sie wissen, wie man den Flächeninhalt zwischen den beiden Funktionsgraphen $f(x)$ und $g(x)$
   berechnet. 
 ```
 
-## Flächeninhalt zwischen Kurve und x-Achse
+## Flächeninhalt: Graph oberhalb der x-Achse
 
 Das Integral wurde in der Mathematik 1 als der orientierte Flächeninhalt
 zwischen Funktionsgraph $f(x)$ und x-Achse eingeführt. Liegen die Funktionswerte
@@ -31,8 +33,9 @@ $A$ also
 $$A = \int_{a}^{b} f(x) \, dx.$$
 
 Das bestimmte Integral lässt sich am einfachsten über eine Stammfunktion $F$
-berechnen. Damit gilt für den Flächeninhalt $A$ einer Funktion $f$ im Ingervall
-$[a,b]$ die folgende Formel:
+berechnen. Mit dem Hauptsatz der Differential- und Integralrechnung gilt dann
+für den Flächeninhalt $A$ einer Funktion $f$ im Intervall $[a,b]$ die folgende
+Formel:
 
 $$A = \int_{a}^{b} f(x) \, dx = F(b)- F(a).$$
 
@@ -57,9 +60,12 @@ folgendermaßen gerechnet:
 $$A = \int_{-2}^{3} f(x)\, dx = \int_{-2}^{3} x^2 + 1 \, dx =
 \big[\frac{1}{3}x^3+x\big]_{-2}^{3}=\frac{50}{3}\approx 16.6667.$$
 
-Übrigens, wenn Sie in dem obigen Plot die beiden Grenzen $x=a$ und $x=b$
-symbolisiert durch die beiden roten Punkte verschieben, wird der aktuelle
-Flächeninhalt berechnet.
+In dem folgenden Video wird die Vorgehensweise nochnmal ausführlich erklärt und
+ein weiteres Beispiel vorgerechnet.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/L3m_jn9w1dU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+## Flächeninhalt: Graph unterhalb der x-Achse
 
 Als nächstes wird die Funktion $f$ an der x-Achse gespiegelt. Die gespiegelte
 Funktion nennen wir $g$, also
@@ -95,6 +101,13 @@ Die Formel zur Berechnung des Flächeninhaltes einer Funktion, die komplett
 unterhalb der x-Achse liegt, lautet:
 
 $$A = \textcolor{red}{-} \int_{a}^{b} f(x)\, dx = \textcolor{red}{-} \big(F(b)-F(a)\big).$$
+
+Weitere Erklärungen sowie ein weiteres Beispiel werden ausführlich in dem
+folgenden Video präsentiert.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/_SA6iZNAKzw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+## Flächeninhalt: Graph oberhalb und unterhalb der x-Achse
 
 Komplizierter wird es, wenn die Funktion oberhalb und unterhalb der x-Achse
 liegt wie beispielsweise bei der Funktion $f(x)=x^2-1$. 
@@ -148,20 +161,53 @@ Flächeninhalt ist daher
 
 $$A = \frac{4}{3} \textcolor{red}{+} \frac{4}{3} + \frac{20}{3} = \frac{28}{3}.$$
 
-```{admonition} Kochrezept zur Berechnung des Flächeninhaltes zwischen einer Kurve und der x-Achse
-Ist der Flächeninhalt $A$ zwischen einer Kurve $f(x)$ und der x-Achse mit den Grenzen $x=a$ und $x=b$ gesucht, gehen Sie folgendermaßen vor:
+```{admonition} Kochrezept zur Berechnung des Flächeninhaltes zwischen einem Funktionsgraphen und der x-Achse
+Ist der Flächeninhalt $A$ zwischen dem Funktionsgraphen $f(x)$ und der x-Achse mit den Grenzen $x=a$ und $x=b$ gesucht, gehen Sie folgendermaßen vor:
 
 1. Fertigen Sie eine Skizze der Funktion an, um zu ermitteln, wo $f(x)$ oberhalb und wo unterhalb der x-Achse verläuft.
 2. Berechnen Sie die Nullstellen der Funktion $f$. Unterteilen Sie damit das Intervall $[a,b]$ in Teilintervalle $I_1, I_2, \ldots$, so dass die Funktion $f$ in einem solchen Teilintervall komplett oberhalb oder komplett unterhalb der x-Achse liegt.
-3. Berechnen Sie dann in jedem Teilintervall das Integral einzeln. Wenn die Funktion in dem Intervall negativ ist, multiplizieren Sie anschließend den orientierten Flächeninhalt mit (-1). Das Ergebnis sind die (positiven!) Teilfläche $A_1, A_2, \ldots$.
+3. Berechnen Sie dann in jedem Teilintervall das Integral einzeln. Wenn die Funktion in dem Intervall negativ ist, multiplizieren Sie anschließend den orientierten Flächeninhalt mit (-1). Das Ergebnis sind die (positiven!) Teilflächen $A_1, A_2, \ldots$.
 4. Addieren Sie zuletzt alle Teilflächen $A = A_1 + A_2 + \dots$. Das Gesamtergebnis ist der gesuchte Flächeninhalt $A$. 
 ```
 
-## Beispiel für die Berechnung des Flächeninhaltes Kurve mit x-Achse
+Das folgende Video fasst die Vorgehensweise zusammen.
 
-Berechnen Sie den Flächeninhalt $A$ der Funktion $f(x)=x^3-3x^2+2x$ im Intervall
-$[0,2]$. Vergleichen Sie Ihr Ergebnis anschließend mit dem Lösungsweg in dem
-folgenden Video.
+<iframe width="560" height="315" src="https://www.youtube.com/embed/vdSWk1bCnMA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/BsI9LD3IQvo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+## Fläche zwischen zwei Funktionsgraphen
+
+Möchte man den Flächeninhalt berechnen, den zwei Funktionen $f$ und $g$
+begrenzen, so könnte man zuerst den Flächeninhalt der ersten Funktion $f$ mit
+der x-Achse berechnen und dann davon den zweiten Flächeninhalt des
+Funktionsgraphens $g(x)$ mit der x-Achse abziehen. Dazu müsste man aber wissen,
+welche Funktion oberhalb der anderen Funktion liegt. Einfacher wird es, wenn die
+Differenzfunktion der beiden Funktionen gebildet wird. Die Vorgehensweise ist
+dann wie folgt.
+
+```{admonition} Kochrezept zur Berechnung des Flächeninhaltes zwischen zwei Funktionsgraphen
+Zur Berechnung des Flächeninhaltes zwischen zwei Funktionsgraphen, die wir
+$f(x)$ und $g(x)$ nennen, und den Grenzen $x=a$ und $x=b$ gehen wir
+folgendermaßen vor.
+
+1. Berechnen Sie die Schnittpunkte $f(x)=g(x)$.
+2. Bilden Sie die Differenzfunktion $d(x)=f(x)-g(x)$.
+3. Integrieren Sie die die Differenzfunktion $d$ in den Teilintervallen, d.h.
+   von a bis zum 1. Schnittpunkt, vom 1. Schnittpunkt bis zum 2. Schnittpunkt,
+   usw..
+4. Wenn der orientierte Flächeninhalt einer Teilfläche negativ ist,
+   multiplizieren Sie mit -1, um den Flächeninhalt zu erhalten.
+5. Addieren Sie alle Flächeninhalte, um die Gesamtfläche zu erhalten.
+```
+
+Das folgende Video erläutert die Vorgehensweise und erklärt auch, warum die
+Integration über die Differenzfunktion den gleichen Flächeninhalt ergibt wie die
+gesuchte Fläche zwischen den beiden Funktionsgraphen.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/OXQvPFGb9uk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+Werden die Schnittpunkte nicht sorgfältig ermittelt und das Intervall, über das
+integriert wird, nicht sorgsam aufgeteilt, so passieren leicht Fehler, wie das
+folgende Video demonstriert.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/nFG5_-kS7fI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
