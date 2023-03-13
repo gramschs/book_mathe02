@@ -6,6 +6,9 @@ root: intro
 parts:
 - caption: Part 1. Integrale
   chapters:
+  - file: chapter01/chapter01_sec00.md
+    sections:
+    - file: chapter01/chapter01_sec01.md
   - file: chapter02/chapter02_sec00.md
     sections:
     - file: chapter02/chapter02_sec01.md
