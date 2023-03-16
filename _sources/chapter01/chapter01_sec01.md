@@ -13,7 +13,8 @@ Integral ein, ohne die dazugehörigen Anwendungen und Herleitungen
   Stammfunktionen gibt, die sich durch eine **Integrationskonstante**
   unterscheiden.
 * Sie können mit Hilfe der Stammfunktionen ein **bestimmtes Integral** der
-  Funktion $f$ in einem Intervall $[a,b]$ berechnen.
+  Funktion $f$ in einem Intervall $[a,b]$ berechnen (Hauptsatz der Differential-
+  und Integralrechnung).
 * Sie wissen, wie das bestimmte Integral mathematisch abgekürzt wird, nämlich
   $\int_{a}^{b} f(x) \, dx$, und können die einzelnen Bestandteile dieser
   Notation bezeichnen:
@@ -22,7 +23,13 @@ Integral ein, ohne die dazugehörigen Anwendungen und Herleitungen
   * obere Integrationsgrenze $b$,
   * Integrand $f(x)$,
   * Integrationsvariable $dx$.
+* Sie können das bestimmte Integral über $f$ von  $a$ nach $b$ als den
+  Flächeninhalt zwischen Graph $f(x)$ und x-Achse interpretieren. Flächeninhalte
+  oberhalb der x-Achse sind positiv, Flächeninhalte unterhalb der x-Achse werden
+  negativ gezählt. Daher nennt man diese Flächeninhalte **orientierte
+  Flächeninhalte**. 
 ```
+
 
 ## Stammfunktion
 
@@ -156,3 +163,33 @@ $F(-1)=\frac{5}{3}$ subtrahiert.
 Im folgenden Video finden Sie weitere Beispiele.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/aEtIsjWr0dg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+## Integrale als Fläche interpretiert
+
+Bisher ist das bestimmte Integral über $f$ von $a$ bis $b$ einfach eine Zahl,
+die als Differenz von der Stammfunktion $F$ an den Stellen $a$ und $b$ bestimmt
+wird, also $F(b)-F(a)$. Je nach Anwendung wird dieser Zahl eine ganz bestimmte
+Bedeutung gegeben. Als ersten und wichtigsten Fall betrachten wir das Integral
+in der Geometrie. Hier entspricht das Integral von $a$ bis $b$ über $f$ dem
+**orientierten Flächeninhalt** zwischen dem Funktionsgraphen $f(x)$ und der
+x-Achse. Aber was ist eigentlich der orientierte Flächeninhalt?  
+
+Wenn alle Funktionswerte $f(x)$ oberhalb der x-Achse liegen, dann ist $f(x)\geq
+0$ für alle $x$ im Intervall $[a,b]$. Dann ist der Flächeninhalt zwischen
+$f(x)$, der x-Achse und den Geraden $x=a$ und $x=b$ gleich dem Integral über $f$ , d.h.
+
+$$A = \int_{a}^{b} f(x)\, dx.$$
+
+Liegen aber alle Funktionswerte $f(x)$ unterhalb der x-Achse, so ist das
+Integral negativ. Aber eigentlich entspricht es auch der Fläche, nur sind
+Flächen natürlich immer positiv. Deswegen sagen wir, der Flächeninhalt ist
+orientiert. Liegt die Fläche oberhalb der x-Achse, so wird diese positiv
+gewertet. Liegt sie unterhalb der x-Achse, wird der orientierte Flächeninhalt
+mit einem Minus versehen, um klar zu machen, dass diese Fläche unterhalb der
+x-Achse liegt.
+
+In dem folgenden Video wird die Flächeninterpretation des Integrals nochmal
+erläutert und auch gezeigt, wie diese Interpretation bei punktsymmetrischen
+Funktionen ausgenutzt werden kann, sich selbst das Rechnen etwas zu erleichtern.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/6rJOt8mWY_I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
