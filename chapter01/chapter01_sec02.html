@@ -55,8 +55,12 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Anwendungen Integral" href="../chapter02/chapter02_sec00.html" />
+    <link rel="prev" title="Stammfunktion und bestimmtes Integral" href="chapter01_sec01.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -116,20 +120,25 @@ const thebe_selector_output = ".output, .cell_output"
   Part 1. Integrale
  </span>
 </p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1 has-children">
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active has-children">
   <a class="reference internal" href="chapter01_sec00.html">
    Wiederholung Integral
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul>
+  <ul class="current">
    <li class="toctree-l2">
     <a class="reference internal" href="chapter01_sec01.html">
      Stammfunktion und bestimmtes Integral
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Eigenschaften von Integralen
     </a>
    </li>
   </ul>
@@ -382,12 +391,46 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#lernziele">
+   Lernziele
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#integrationsgrenzen">
+   Integrationsgrenzen
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#linearitat-des-integrals">
+   Linearität des Integrals
+  </a>
+ </li>
+</ul>
+
+    </nav>
 </div>
     </div>
     <div class="article row">
@@ -399,6 +442,29 @@ title="Print to PDF"
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#lernziele">
+   Lernziele
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#integrationsgrenzen">
+   Integrationsgrenzen
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#linearitat-des-integrals">
+   Linearität des Integrals
+  </a>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -411,6 +477,101 @@ title="Print to PDF"
 <p>Kennt man die Eigenschaften von Integralen, so kann das so manche Rechnung
 erheblich vereinfachen. Im Folgenden werden die wichtigsten Eigenschaften von
 Integralen präsentiert.</p>
+<section id="lernziele">
+<h2>Lernziele<a class="headerlink" href="#lernziele" title="Permalink to this headline">#</a></h2>
+<div class="hint admonition">
+<p class="admonition-title">Lernziele</p>
+<ul class="simple">
+<li><p>Sie wissen sich das Integral verändert, wenn die beiden Integrationsgrenzen
+miteinander vertauscht werden:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\int_{a}^{b} f(x)\,dx = - \int_{b}^{a} f(x)\, dx.\]</div>
+<ul class="simple">
+<li><p>Sie wissen, dass das Integral Null ist, wenn die untere Integrationsgrenze
+gleich der oberen Integrationsgrenze ist:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\int_{a}^{a} f(x)\, dx = 0.\Rule{0 px}{0 em}{1.5 em}\]</div>
+<ul class="simple">
+<li><p>Sie wissen, dass ein Integral mit dem Punkt <span class="math notranslate nohighlight">\(c\)</span> in zwei Integrale aufgespalten
+werden kann:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\int_{a}^{b} f(x) \,dx = \int_{a}^{c} f(x) \,dx + \int_{c}^{b} f(x) \,dx.
+\Rule{0 px}{0 em}{1.5 em}\]</div>
+<ul class="simple">
+<li><p>Sie kennen die <strong>Faktorregel</strong>:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\int_{a}^{b} c\cdot f(x)\, dx = c\cdot
+\int_{a}^{b} f(x)\, dx.\]</div>
+<ul class="simple">
+<li><p>Sie kennen die <strong>Summenregel</strong>:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\int_{a}^{b} f(x) \pm g(x) \, dx = \int_{a}^{b}f(x)\, dx \pm \int_{a}^{b}
+g(x)\, dx.\]</div>
+</div>
+</section>
+<section id="integrationsgrenzen">
+<h2>Integrationsgrenzen<a class="headerlink" href="#integrationsgrenzen" title="Permalink to this headline">#</a></h2>
+<p>Als erstes betrachten wir die Eigenschaften von Integralen, wenn der Integrand
+<span class="math notranslate nohighlight">\(f\)</span> gleich bleibt, aber die Integrationsgrenzen geändert werden.</p>
+<p>Werden die beiden Integrationsgrenzen vertauscht, so ändert sich das Vorzeichen
+des Integrals. Integrieren wir also die Funktion <span class="math notranslate nohighlight">\(f\)</span> von <span class="math notranslate nohighlight">\(b\)</span> nach <span class="math notranslate nohighlight">\(a\)</span> anstatt
+von <span class="math notranslate nohighlight">\(a\)</span> nach <span class="math notranslate nohighlight">\(b\)</span>, müssen wir dieses Integral nur mit <span class="math notranslate nohighlight">\(-1\)</span> multiplizieren, um das
+ursprüngliche Integral von <span class="math notranslate nohighlight">\(a\)</span> nach <span class="math notranslate nohighlight">\(b\)</span> zu erhalten. In Formeln sieht das so aus:</p>
+<div class="math notranslate nohighlight">
+\[\int_{a}^{b} f(x)\,dx = - \int_{\textcolor{red}{b}}^{\textcolor{red}{a}}
+f(x)\, dx.\]</div>
+<p>Gar nicht erst rechnen müssen wir, wenn das Integral über <span class="math notranslate nohighlight">\(f\)</span> von <span class="math notranslate nohighlight">\(a\)</span> bis <span class="math notranslate nohighlight">\(a\)</span>
+geht. In anderen Worten betrachten wir jetzt ein Integral, bei dem die untere
+Integrationsgrenze und die obere Integrationsgrenze zusammenfallen. Wenn wir das
+Integral als orientierte Fläche zwischen dem Funktionsgraphen <span class="math notranslate nohighlight">\(f(x)\)</span> und der
+x-Achse interpretieren, heißt das, dass gar kein Rechteck mehr existiert.
+Anstatt eines Rechtecke liegt sozusagen nur noch ein unendlich dünner Strich an
+der Stelle <span class="math notranslate nohighlight">\(x=a\)</span> vor, weil es ja von <span class="math notranslate nohighlight">\(a\)</span> nach <span class="math notranslate nohighlight">\(a\)</span> geht. Ein Strich hat keinen
+Flächeninhalt, das Integral ist also Null. Als mathematische Formel notiert
+heißt das:</p>
+<div class="math notranslate nohighlight">
+\[\int_{\textcolor{red}{a}}^{\textcolor{red}{a}} f(x)\, dx = 0.\Rule{0 px}{0
+em}{1.5 em}\]</div>
+<p>Weiter geht es… wiederum hilft die Flächeninterpretation weiter. Diesmal
+erfinden wir einen neuen Punkt <span class="math notranslate nohighlight">\(c\)</span>. Dann kann die Fläche zwischen
+Funktionsgraph, x-Achse und den Grenzen a und b in zwei Flächen aufgeteilt
+werden. Die erste Fläche ist die Fläche zwischen Funktionsgraph und x-Achse von
+<span class="math notranslate nohighlight">\(a\)</span> nach <span class="math notranslate nohighlight">\(c\)</span>. Die zweite Fläche ist die Fläche zwischen Funktionsgraph und
+x-Achse von <span class="math notranslate nohighlight">\(c\)</span> nach <span class="math notranslate nohighlight">\(b\)</span>. Und beide Flächen zusammen müssen wieder die
+ursprüngliche Fläche ergeben. Also:</p>
+<div class="math notranslate nohighlight">
+\[\int_{a}^{b} f(x) \,dx = \int_{a}^{\textcolor{red}{c}} f(x) \,dx +
+\int_{\textcolor{red}{c}}^{b} f(x) \,dx. \Rule{0 px}{0 em}{1.5 em}\]</div>
+<p>Alle drei Eigenschaften werden nochmal in dem folgenden Video erläutert.</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/BKgcS2wgwu0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</section>
+<section id="linearitat-des-integrals">
+<h2>Linearität des Integrals<a class="headerlink" href="#linearitat-des-integrals" title="Permalink to this headline">#</a></h2>
+<p>Linearität des Integrals klingt kompliziert, ist es aber nicht. Gemeint sind
+damit die folgenden zwei Eigenschaften.</p>
+<p>Faktorregel: Wenn die Funktion <span class="math notranslate nohighlight">\(f\)</span> mit einer konstanten Zahl <span class="math notranslate nohighlight">\(c\)</span> multipliziert
+wird und dann integriert werden soll, dann können wir auch zuerst das Integral
+von <span class="math notranslate nohighlight">\(f\)</span> berechnen und danach das Ergebnis <span class="math notranslate nohighlight">\(c\)</span> multiplizieren. Oder anders
+ausgedrückt: wenn im Integranden ein konstanter Faktor ist, dann darf man diesen
+konstanten Faktor auch vor das Integral ziehen.</p>
+<div class="math notranslate nohighlight">
+\[\int_{a}^{b} c\cdot f(x)\, dx = c\cdot
+\int_{a}^{b} f(x)\, dx.\]</div>
+<p>Summenregel: Soll die Summe oder die Differenz zweier Funktionen integriert
+werden, dürfen auch zuerst die beiden Einzelintegrale berechnet werden und
+danach Summe oder Differenz gebildet werden:</p>
+<div class="math notranslate nohighlight">
+\[\int_{a}^{b} f(x) \pm g(x) \, dx = \int_{a}^{b}f(x)\, dx \pm \int_{a}^{b}
+g(x)\, dx.\]</div>
+<p>In dem folgenden Video werden beide Eigenschaften erläutert und anhand eines
+Beispiels demonstriert.</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/eMGWYY96Hno" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -440,6 +601,20 @@ Integralen präsentiert.</p>
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="chapter01_sec01.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Stammfunktion und bestimmtes Integral</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="../chapter02/chapter02_sec00.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Anwendungen Integral</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
 </div>
             </footer>
         </div>
