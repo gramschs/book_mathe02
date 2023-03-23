@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>&lt;no title&gt; &#8212; Mathematik 2 Maschinenbau</title>
+    <title>Integration durch Substitution &#8212; Mathematik 2 Maschinenbau</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -55,8 +55,12 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Anwendungen Integral" href="../chapter02/chapter02_sec00.html" />
+    <link rel="prev" title="Partielle Integration" href="chapter01_sec03.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -116,17 +120,17 @@ const thebe_selector_output = ".output, .cell_output"
   Part 1. Integrale
  </span>
 </p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1 has-children">
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active has-children">
   <a class="reference internal" href="chapter01_sec00.html">
    Wiederholung Integral
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul>
+  <ul class="current">
    <li class="toctree-l2">
     <a class="reference internal" href="chapter01_sec01.html">
      Stammfunktion und bestimmtes Integral
@@ -140,6 +144,11 @@ const thebe_selector_output = ".output, .cell_output"
    <li class="toctree-l2">
     <a class="reference internal" href="chapter01_sec03.html">
      Partielle Integration
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Integration durch Substitution
     </a>
    </li>
   </ul>
@@ -413,7 +422,27 @@ title="Print to PDF"
         <i class="fas fa-list"></i> Contents
     </div>
     <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="simple visible nav section-nav flex-column">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#lernziele">
+   Lernziele
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#substitutionsregel">
+   Substitutionsregel
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#beispiel-fur-integration-durch-substitution">
+   Beispiel für Integration durch Substitution
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#weiteres-lernmaterial">
+   Weiteres Lernmaterial
+  </a>
+ </li>
 </ul>
 
     </nav>
@@ -423,7 +452,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1><no title></h1>
+                <h1>Integration durch Substitution</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -432,7 +461,27 @@ title="Print to PDF"
                             <h2> Contents </h2>
                         </div>
                         <nav aria-label="Page">
-                            <ul class="simple visible nav section-nav flex-column">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#lernziele">
+   Lernziele
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#substitutionsregel">
+   Substitutionsregel
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#beispiel-fur-integration-durch-substitution">
+   Beispiel für Integration durch Substitution
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#weiteres-lernmaterial">
+   Weiteres Lernmaterial
+  </a>
+ </li>
 </ul>
 
                         </nav>
@@ -443,7 +492,92 @@ title="Print to PDF"
                 
               <div>
                 
-  
+  <section class="tex2jax_ignore mathjax_ignore" id="integration-durch-substitution">
+<h1>Integration durch Substitution<a class="headerlink" href="#integration-durch-substitution" title="Permalink to this headline">#</a></h1>
+<p>Auch verkettete Funktionen lassen sich nicht so einfach integrieren. Wenn <span class="math notranslate nohighlight">\(F\)</span>
+eine Stammfunktion der Funktion <span class="math notranslate nohighlight">\(f\)</span> ist, dann gilt für die der verketten
+Funktion <span class="math notranslate nohighlight">\(F\circ g\)</span> die Kettenregel:</p>
+<div class="math notranslate nohighlight">
+\[\big(F(g(x))\big)^{\prime} = F'(g(x)) \cdot g'(x) = f(g(x))\cdot g'(x).\]</div>
+<p>Die Umkehrung davon ist die Integration durch Substitution.</p>
+<section id="lernziele">
+<h2>Lernziele<a class="headerlink" href="#lernziele" title="Permalink to this headline">#</a></h2>
+<div class="hint admonition">
+<p class="admonition-title">Lernziele</p>
+<p>Sie können die Substitutionsregel</p>
+<div class="math notranslate nohighlight">
+\[\int_{a}^{b} f(g(x))\cdot g^{\prime}(x) \, dx = \int_{g(a)}^{g(b)} f(z) \,
+dz\]</div>
+<p>anwenden.</p>
+</div>
+</section>
+<section id="substitutionsregel">
+<h2>Substitutionsregel<a class="headerlink" href="#substitutionsregel" title="Permalink to this headline">#</a></h2>
+<p>Die Idee der Substitutionsregel ist es, die Kettenregel sozusagen umzukehren.
+Wir gehen jetzt davon aus, dass die Funktion <span class="math notranslate nohighlight">\(f(g(x))\cdot g^{\prime}(x)\)</span> auf
+dem Intervall <span class="math notranslate nohighlight">\([a,b]\)</span> integriert werden soll, also die rechte Seite der obigen
+Kettenregel. Dann ist das Ergebnis</p>
+<div class="math notranslate nohighlight">
+\[\int_{a}^{b} f(g(x))\cdot g^{\prime}(x) \, dx = \int_{g(a)}^{g(b)} f(z) \,
+dz.\]</div>
+<p>Das klappt übrigens nur, wenn die Funktion <span class="math notranslate nohighlight">\(g\)</span> stetig differenzierbar ist. In
+den Ingenieurswissenschaften ist das aber meistens der Fall, so dass diese
+Einschränkung kein Problem darstellt. Problematisch ist dahingegen, dass
+meistens nur die verkette Funktion ohne den Term <span class="math notranslate nohighlight">\(g'(x)\)</span> im Integral steht.
+Daher muss sehr oft der Integrand passend erweitert werden, um ihn erstmal auf
+die Form</p>
+<div class="math notranslate nohighlight">
+\[f(g(x))\cdot g^{\prime}(x)\]</div>
+<p>zu bringen.</p>
+</section>
+<section id="beispiel-fur-integration-durch-substitution">
+<h2>Beispiel für Integration durch Substitution<a class="headerlink" href="#beispiel-fur-integration-durch-substitution" title="Permalink to this headline">#</a></h2>
+<p>Wir wollen die Funktion <span class="math notranslate nohighlight">\(\sqrt{1+3x^2}\cdot x\)</span> auf dem Intervall <span class="math notranslate nohighlight">\([0,1]\)</span>
+integrieren, also</p>
+<div class="math notranslate nohighlight">
+\[\int_{0}^{1} \sqrt{1+3x^2}\cdot x \, dx\]</div>
+<p>ausrechnen.</p>
+<p>Da die Funktion <span class="math notranslate nohighlight">\(g(x)=1+3x^2\)</span> in die Wurzelfunktion <span class="math notranslate nohighlight">\(f(x)=\sqrt{x}\)</span> eingesetzt
+wird, liegt eine verkettete Funktion vor: <span class="math notranslate nohighlight">\(f(g(x)) = \sqrt{1+3x^2}\)</span>. Wir müssen
+als erstes den Integranden so umformen, dass noch mit der Ableitung
+<span class="math notranslate nohighlight">\(g'(x)=\left(1+3x^2\right)=6x\)</span> multipliziert wird. Tatsächlich wird ja mit <span class="math notranslate nohighlight">\(x\)</span>
+multipliziert, aber dummerweise nicht mit <span class="math notranslate nohighlight">\(6x\)</span>. Also ergänzen wir noch die
+fehlende <span class="math notranslate nohighlight">\(6\)</span> im Integranden und teilen aber wieder durch <span class="math notranslate nohighlight">\(6\)</span>, da wir ja den
+Integranden nicht verändern wollen. Zusammengefasst also</p>
+<div class="math notranslate nohighlight">
+\[\int_{0}^{1} \sqrt{1+3x^2}\cdot x \, dx = 
+\textcolor{red}{\frac{1}{6}}\int_{0}^{1} \sqrt{1+3x^2}\cdot \textcolor{red}{6}x \, dx.\]</div>
+<p>Für das so umgeschriebene Integral dürfen wir die Substitutionsregel anwenden.
+Dazu müssen noch die untere und obere neuen Integrationsgrenzen ausgerechnet
+werden:</p>
+<ul class="simple">
+<li><p>untere Grenze: <span class="math notranslate nohighlight">\(x = 0 \Rightarrow g(0) = 1+3\cdot 0^2 = 1\)</span></p></li>
+<li><p>obere Grenze: <span class="math notranslate nohighlight">\(x = 1 \Rightarrow g(1) = 1 + 3\cdot 1^2 = 4\)</span></p></li>
+</ul>
+<p>Wir erhalten also:</p>
+<div class="math notranslate nohighlight">
+\[\frac{1}{6} \int_{0}^{1} \sqrt{1+3x^2}\cdot 6x \, dx =
+\frac{1}{6} \int_{\textcolor{red}{1}}^{\textcolor{red}{4}} \sqrt{z} \, dz. \]</div>
+<p>Die Wurzelfunktion zu integrieren ist aber nicht so schwer, also</p>
+<div class="math notranslate nohighlight">
+\[ \frac{1}{6} \int_{0}^{4} \sqrt{z} \, dz = \frac{1}{6} \big[
+\frac{2}{3}z^{\frac{3}{2}} \big] = \frac{1}{9} \big( 4^{\frac{3}{2}} -
+1^{\frac{3}{2}}\big) = \frac{7}{9}.\]</div>
+<p>Somit haben wir das Ergebnis</p>
+<div class="math notranslate nohighlight">
+\[\int_{0}^{1} \sqrt{1+3x^2}\cdot x \, dx = \frac{7}{9}.\]</div>
+</section>
+<section id="weiteres-lernmaterial">
+<h2>Weiteres Lernmaterial<a class="headerlink" href="#weiteres-lernmaterial" title="Permalink to this headline">#</a></h2>
+<p>Integration durch Substitution ist nicht einfach. Daher folgen hier einige
+Videos zur Vertiefung.</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Bd7rrWT3fRA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/EJH2_GfoguI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/FHgo5FEM2bs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/fffJ6Y5OYNA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/0j55gTZVwy0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></section>
+</section>
+
     <script type="text/x-thebe-config">
     {
         requestKernel: true,
@@ -471,6 +605,20 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="chapter01_sec03.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Partielle Integration</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="../chapter02/chapter02_sec00.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Anwendungen Integral</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
 </div>
             </footer>
         </div>
