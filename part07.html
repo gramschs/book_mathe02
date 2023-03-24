@@ -329,35 +329,6 @@ title="Toggle navigation"
         
     </div>
     <div class="header-article__right">
-<div class="menu-dropdown menu-dropdown-launch-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Launch interactive content">
-      <i class="fas fa-rocket"></i>
-  </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="https://mybinder.org/v2/gh/gramschs/book_mathe02/master?urlpath=tree/docs/part07.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Launch on Binder"
->
-  
-
-<span class="headerbtn__icon-container">
-  
-    <img src="_static/images/logo_binder.svg">
-  </span>
-<span class="headerbtn__text-container">Binder</span>
-</a>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
-
 <button onclick="toggleFullScreen()"
   class="headerbtn"
   data-toggle="tooltip"
@@ -393,7 +364,7 @@ title="Source repository"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="_sources/part07.ipynb"
+        <a href="_sources/part07.md"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -404,7 +375,7 @@ title="Download source file"
 <span class="headerbtn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="headerbtn__text-container">.ipynb</span>
+<span class="headerbtn__text-container">.md</span>
 </a>
 
       </li>
@@ -541,10 +512,12 @@ title="Print to PDF"
                 
               <div>
                 
-  <div class="cell tag_remove-input docutils container">
-</div>
-<section class="tex2jax_ignore mathjax_ignore" id="gradient-und-jacobi-matrix">
+  <section class="tex2jax_ignore mathjax_ignore" id="gradient-und-jacobi-matrix">
 <h1>Gradient und Jacobi-Matrix<a class="headerlink" href="#gradient-und-jacobi-matrix" title="Permalink to this headline">#</a></h1>
+<div class="warning admonition">
+<p class="admonition-title">Warnung</p>
+<p>Achtung, dieser Abschnitt des Vorlesungsskriptes wird gerade überarbeitet!!!</p>
+</div>
 <p>Mit den partiellen Ableitungen haben wir Ableitungen kennengelernt, die in Richtung des Achsen des Koordinatensystems gehen. In diesem Kapitel beschäftigen wir uns mit dem <strong>Gradienten</strong>, der die partiellen Ableitungen als Vektor zusammenfasst und sozusagen den Ersatz für die erste Ableitung bei Funktionen mit mehreren Variablen bildet.
 Als zweites Thema werden uns vektorwertige Funktionen beschäftigen. Das Analogon zur ersten Ableitung von vektorwertigen Funktionen ist die <strong>Jacobi-Matrix</strong>. Mit Hilfe von Jacobi-Matrizen kann die <strong>mehrdimensionale Kettenregel</strong> formuliert werden.</p>
 <section id="lernziele">
@@ -588,18 +561,9 @@ Als zweites Thema werden uns vektorwertige Funktionen beschäftigen. Das Analogo
 <div class="math notranslate nohighlight">
 \[\nabla f(x,y,z) = \left(\frac{\partial f(x,y,z)}{\partial x}, \frac{\partial f(x,y,z)}{\partial y}, \frac{\partial f(x,y,z)}{\partial z} \right).\]</div>
 <p>Manchmal wird auch die Schreibweise <span class="math notranslate nohighlight">\(\text{grad}f(x,y,z)\)</span> verwendet. Der Gradient ist sozusagen die 1. Ableitung einer <em>skalar</em>wertigen Funktion von mehreren Variablen.</p>
-<div class="cell tag_remove-input docutils container">
-<div class="cell_output docutils container">
-<div class="output text_html">
-<iframe
-    width="560"
-    height="315"
-    src="https://www.youtube.com/embed/627f_DgQJpY"
-    frameborder="0"
-    allowfullscreen
-
-></iframe>
-</div></div>
+<div class="seealso admonition">
+<p class="admonition-title">Video</p>
+<p><a class="reference external" href="https://www.youtube.com/embed/627f_DgQJpY">https://www.youtube.com/embed/627f_DgQJpY</a></p>
 </div>
 </section>
 <section id="jacobi-matrix-einer-vektorwertigen-funktion">
@@ -612,18 +576,9 @@ Als zweites Thema werden uns vektorwertige Funktionen beschäftigen. Das Analogo
 <li><p>Schreibe die Gradienten untereinander in eine Matrix.</p></li>
 </ul>
 <p>Die Jacobi-Matrix ist sozusagen die 1. Ableitung einer <em>vektor</em>wertigen Funktion von mehreren Variablen.</p>
-<div class="cell tag_remove-input docutils container">
-<div class="cell_output docutils container">
-<div class="output text_html">
-<iframe
-    width="560"
-    height="315"
-    src="https://www.youtube.com/embed/FqaCPP8OZWU"
-    frameborder="0"
-    allowfullscreen
-
-></iframe>
-</div></div>
+<div class="seealso admonition">
+<p class="admonition-title">Video</p>
+<p><a class="reference external" href="https://www.youtube.com/embed/FqaCPP8OZWU">https://www.youtube.com/embed/FqaCPP8OZWU</a></p>
 </div>
 </section>
 <section id="beispiel-einer-jacobi-matrix">
@@ -641,31 +596,13 @@ Als zweites Thema werden uns vektorwertige Funktionen beschäftigen. Das Analogo
 $<span class="math notranslate nohighlight">\(J(f)(x,y,z)=\begin{pmatrix} 2x &amp; 3x^2 &amp; \cos(z)\\ 0 &amp; 0 &amp; 2z \end{pmatrix}.\)</span>$</p></li>
 </ol>
 <p>Weitere Beispiele finden Sie in den folgenden Videos.</p>
-<div class="cell tag_remove-input docutils container">
-<div class="cell_output docutils container">
-<div class="output text_html">
-<iframe
-    width="560"
-    height="315"
-    src="https://www.youtube.com/embed/LiFyUo6snK8"
-    frameborder="0"
-    allowfullscreen
-
-></iframe>
-</div></div>
+<div class="seealso admonition">
+<p class="admonition-title">Video</p>
+<p><a class="reference external" href="https://www.youtube.com/embed/LiFyUo6snK8">https://www.youtube.com/embed/LiFyUo6snK8</a></p>
 </div>
-<div class="cell tag_remove-input docutils container">
-<div class="cell_output docutils container">
-<div class="output text_html">
-<iframe
-    width="560"
-    height="315"
-    src="https://www.youtube.com/embed/kMizXsfSK2o"
-    frameborder="0"
-    allowfullscreen
-
-></iframe>
-</div></div>
+<div class="seealso admonition">
+<p class="admonition-title">Video</p>
+<p><a class="reference external" href="https://www.youtube.com/embed/kMizXsfSK2o">https://www.youtube.com/embed/kMizXsfSK2o</a></p>
 </div>
 </section>
 <section id="mehrdimensionale-kettenregel">
@@ -678,18 +615,9 @@ Die Ableitung der verketten Funktion <span class="math notranslate nohighlight">
 <p>Die Jacobi-Matrix der verketten Funktionen <span class="math notranslate nohighlight">\(f(g(x,y,z))\)</span> ist Jacobi-Matrix der äußeren Funktion mal Jacobi-Matrix der inneren Funktion, d.h.</p>
 <div class="math notranslate nohighlight">
 \[J(f(g(x,y,z)) = J(f) \cdot J(g).\]</div>
-<div class="cell tag_remove-input docutils container">
-<div class="cell_output docutils container">
-<div class="output text_html">
-<iframe
-    width="560"
-    height="315"
-    src="https://www.youtube.com/embed/LkWAGcGGDD8"
-    frameborder="0"
-    allowfullscreen
-
-></iframe>
-</div></div>
+<div class="seealso admonition">
+<p class="admonition-title">Video</p>
+<p><a class="reference external" href="https://www.youtube.com/embed/LkWAGcGGDD8">https://www.youtube.com/embed/LkWAGcGGDD8</a></p>
 </div>
 </section>
 </section>

@@ -329,35 +329,6 @@ title="Toggle navigation"
         
     </div>
     <div class="header-article__right">
-<div class="menu-dropdown menu-dropdown-launch-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Launch interactive content">
-      <i class="fas fa-rocket"></i>
-  </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="https://mybinder.org/v2/gh/gramschs/book_mathe02/master?urlpath=tree/docs/part08.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Launch on Binder"
->
-  
-
-<span class="headerbtn__icon-container">
-  
-    <img src="_static/images/logo_binder.svg">
-  </span>
-<span class="headerbtn__text-container">Binder</span>
-</a>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
-
 <button onclick="toggleFullScreen()"
   class="headerbtn"
   data-toggle="tooltip"
@@ -393,7 +364,7 @@ title="Source repository"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="_sources/part08.ipynb"
+        <a href="_sources/part08.md"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -404,7 +375,7 @@ title="Download source file"
 <span class="headerbtn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="headerbtn__text-container">.ipynb</span>
+<span class="headerbtn__text-container">.md</span>
 </a>
 
       </li>
@@ -561,10 +532,12 @@ title="Print to PDF"
                 
               <div>
                 
-  <div class="cell tag_remove-input docutils container">
-</div>
-<section class="tex2jax_ignore mathjax_ignore" id="linearisierung-tangentialebene-und-extremwerte">
+  <section class="tex2jax_ignore mathjax_ignore" id="linearisierung-tangentialebene-und-extremwerte">
 <h1>Linearisierung/Tangentialebene und Extremwerte<a class="headerlink" href="#linearisierung-tangentialebene-und-extremwerte" title="Permalink to this headline">#</a></h1>
+<div class="warning admonition">
+<p class="admonition-title">Warnung</p>
+<p>Achtung, dieser Abschnitt des Vorlesungsskriptes wird gerade überarbeitet!!!</p>
+</div>
 <p>Für eindimensionale Funktionen haben wir die Linearisierung und die Annährung einer Funktion durch eine Tangente bereits kennengelernt. Am einfachsten lässt sich die Tangente einer eindimensionalen Funktion berechnen, indem wir das 1. Taylor-Polynom im Entwicklungspunkt <span class="math notranslate nohighlight">\(x_0\)</span> berechnen:</p>
 <div class="math notranslate nohighlight">
 \[f(x) \approx f(x_0) + f'(x_0)\cdot (x-x_0).\]</div>
@@ -609,6 +582,7 @@ title="Print to PDF"
 \frac{\partial^2 f(x_0,y_0)}{\partial x\partial x} &gt; 0 &amp; \qquad \Rightarrow \text{relatives Minimum} \\
 \end{align*}\]</div>
 </div>
+<!-- #region -->
 </section>
 <section id="linearisierung-tangentialebene">
 <h2>Linearisierung/Tangentialebene<a class="headerlink" href="#linearisierung-tangentialebene" title="Permalink to this headline">#</a></h2>
@@ -620,32 +594,15 @@ title="Print to PDF"
 <div class="math notranslate nohighlight">
 \[\begin{split}T_{f,1}(x,y) = f(x_0,y_0) + \nabla f(x,y)\cdot \begin{pmatrix}x-x_0\\y-y_0\end{pmatrix}.\end{split}\]</div>
 <p>In dem folgenden Video wird gezeigt, wie aus der Formel für das Taylor-Polynom Grad 1 für eindimensionale Funktionen die Formel für mehrdimensionale Funktionen entsteht.</p>
-<div class="cell tag_remove-input docutils container">
-<div class="cell_output docutils container">
-<div class="output text_html">
-<iframe
-    width="560"
-    height="315"
-    src="https://www.youtube.com/embed/RFbjuIDKHG0"
-    frameborder="0"
-    allowfullscreen
-
-></iframe>
-</div></div>
+<!-- #endregion -->
+<div class="seealso admonition">
+<p class="admonition-title">Video</p>
+<p><a class="reference external" href="https://www.youtube.com/embed/RFbjuIDKHG0">https://www.youtube.com/embed/RFbjuIDKHG0</a></p>
 </div>
 <p>In dem folgenden Video wird ein Beispiel zur Berechnung der Tangentialebene vorgeführt.</p>
-<div class="cell tag_remove-input docutils container">
-<div class="cell_output docutils container">
-<div class="output text_html">
-<iframe
-    width="560"
-    height="315"
-    src="https://www.youtube.com/embed/Cms3lsrG0cM"
-    frameborder="0"
-    allowfullscreen
-
-></iframe>
-</div></div>
+<div class="seealso admonition">
+<p class="admonition-title">Video</p>
+<p><a class="reference external" href="https://www.youtube.com/embed/Cms3lsrG0cM">https://www.youtube.com/embed/Cms3lsrG0cM</a></p>
 </div>
 </section>
 <section id="extremwerte-bei-1d-funktionen-notwendige-bedingung-und-hinreichende-bedingung">
@@ -686,49 +643,22 @@ title="Print to PDF"
 <div class="math notranslate nohighlight">
 \[\nabla f(\tilde{x},\tilde{y}) = \left( \frac{\partial f(\tilde{x}, \tilde{y})}{\partial x},\frac{\partial f(\tilde{x},\tilde{y})}{\partial y}\right) = (0,0).\]</div>
 <p>Der Gradient der Funktion muss der Nullvektor sein, so wie die 1. Ableitung Null sein muss.</p>
-<div class="cell tag_remove-input docutils container">
-<div class="cell_output docutils container">
-<div class="output text_html">
-<iframe
-    width="560"
-    height="315"
-    src="https://www.youtube.com/embed/A_f5qpyl0bk"
-    frameborder="0"
-    allowfullscreen
-
-></iframe>
-</div></div>
+<div class="seealso admonition">
+<p class="admonition-title">Video</p>
+<p><a class="reference external" href="https://www.youtube.com/embed/A_f5qpyl0bk">https://www.youtube.com/embed/A_f5qpyl0bk</a></p>
 </div>
 <p>Hier ein Video, bei dem Beispiele vorgerechnet werden:</p>
-<div class="cell tag_remove-input docutils container">
-<div class="cell_output docutils container">
-<div class="output text_html">
-<iframe
-    width="560"
-    height="315"
-    src="https://www.youtube.com/embed/AMYCKnbgU3s"
-    frameborder="0"
-    allowfullscreen
-
-></iframe>
-</div></div>
+<div class="seealso admonition">
+<p class="admonition-title">Video</p>
+<p><a class="reference external" href="https://www.youtube.com/embed/AMYCKnbgU3s">https://www.youtube.com/embed/AMYCKnbgU3s</a></p>
 </div>
 </section>
 <section id="hesse-matrix">
 <h2>Hesse-Matrix<a class="headerlink" href="#hesse-matrix" title="Permalink to this headline">#</a></h2>
 <p>Wenn der Gradient das Analogon zur 1. Ableitung ist, gibt es dann etwas Ähnliches für die 2. Ableitung? Ja, allerdings wird es dann eine Matrix, die die 2. partiellen Ableitungen zusammenfasst, die sogenannte <strong>Hesse-Matrix</strong>.</p>
-<div class="cell tag_remove-input docutils container">
-<div class="cell_output docutils container">
-<div class="output text_html">
-<iframe
-    width="560"
-    height="315"
-    src="https://www.youtube.com/embed/4Vy4HDLU7nU"
-    frameborder="0"
-    allowfullscreen
-
-></iframe>
-</div></div>
+<div class="seealso admonition">
+<p class="admonition-title">Video</p>
+<p><a class="reference external" href="https://www.youtube.com/embed/4Vy4HDLU7nU">https://www.youtube.com/embed/4Vy4HDLU7nU</a></p>
 </div>
 </section>
 <section id="extremwerte-bei-mehrdimensionalen-funktionen-hinreichende-bedingung">
@@ -748,18 +678,9 @@ title="Print to PDF"
 \frac{\partial^2 f(x_0,y_0)}{\partial x\partial x} \textbf{&lt; 0} &amp; \qquad \Rightarrow \text{Maximum} \\
 \frac{\partial^2 f(x_0,y_0)}{\partial x\partial x} \textbf{&gt; 0} &amp; \qquad \Rightarrow \text{Minimum} \\
 \end{align*}\]</div>
-<div class="cell tag_remove-input docutils container">
-<div class="cell_output docutils container">
-<div class="output text_html">
-<iframe
-    width="560"
-    height="315"
-    src="https://www.youtube.com/embed/eT0nrz_Mujo"
-    frameborder="0"
-    allowfullscreen
-
-></iframe>
-</div></div>
+<div class="seealso admonition">
+<p class="admonition-title">Video</p>
+<p><a class="reference external" href="https://www.youtube.com/embed/eT0nrz_Mujo">https://www.youtube.com/embed/eT0nrz_Mujo</a></p>
 </div>
 </section>
 <section id="kochrezept-zur-bestimmung-der-extrema-mehrdimensionaler-funktionen">
@@ -781,34 +702,16 @@ title="Print to PDF"
 </ul>
 </li>
 </ol>
-<div class="cell tag_remove-input docutils container">
-<div class="cell_output docutils container">
-<div class="output text_html">
-<iframe
-    width="560"
-    height="315"
-    src="https://www.youtube.com/embed/8IF5uLY7Gwk"
-    frameborder="0"
-    allowfullscreen
-
-></iframe>
-</div></div>
+<div class="seealso admonition">
+<p class="admonition-title">Video</p>
+<p><a class="reference external" href="https://www.youtube.com/embed/8IF5uLY7Gwk">https://www.youtube.com/embed/8IF5uLY7Gwk</a></p>
 </div>
 </section>
 <section id="ausfuhrliches-beispiel">
 <h2>Ausführliches Beispiel<a class="headerlink" href="#ausfuhrliches-beispiel" title="Permalink to this headline">#</a></h2>
-<div class="cell tag_remove-input docutils container">
-<div class="cell_output docutils container">
-<div class="output text_html">
-<iframe
-    width="560"
-    height="315"
-    src="https://www.youtube.com/embed/GwyPVdoQ37g"
-    frameborder="0"
-    allowfullscreen
-
-></iframe>
-</div></div>
+<div class="seealso admonition">
+<p class="admonition-title">Video</p>
+<p><a class="reference external" href="https://www.youtube.com/embed/GwyPVdoQ37g">https://www.youtube.com/embed/GwyPVdoQ37g</a></p>
 </div>
 </section>
 </section>
