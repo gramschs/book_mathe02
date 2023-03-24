@@ -1,9 +1,4 @@
-# Fläche zwischen zwei Graphen
-
-```{admonition} Warnung
-:class: warning
-Achtung, dieser Abschnitt des Vorlesungsskriptes wird gerade überarbeitet!!!
-```
+# 2.2 Fläche zwischen zwei Graphen
 
 Bisher haben wir das Integral benutzt, um den orientierten Flächeninhalt
 zwischen einer Funktion und der x-Achse zu bestimmen. In diesem Abschnitt

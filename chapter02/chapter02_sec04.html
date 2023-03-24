@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Volumen von Rotationskörpern &#8212; Mathematik 2 Maschinenbau</title>
+    <title>2.4 Volumen von Rotationskörpern &#8212; Mathematik 2 Maschinenbau</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -59,8 +59,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Reihen" href="../part03.html" />
-    <link rel="prev" title="Bogenlänge" href="chapter02_sec03.html" />
+    <link rel="next" title="Übungen" href="chapter02_sec05.html" />
+    <link rel="prev" title="2.3 Bogenlänge" href="chapter02_sec03.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -123,7 +123,7 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../chapter01/chapter01_sec00.html">
-   Wiederholung Integral
+   1. Wiederholung Integral
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
@@ -133,29 +133,34 @@ const thebe_selector_output = ".output, .cell_output"
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter01/chapter01_sec01.html">
-     Stammfunktion und bestimmtes Integral
+     1.1 Stammfunktion und bestimmtes Integral
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter01/chapter01_sec02.html">
-     Eigenschaften von Integralen
+     1.2 Eigenschaften von Integralen
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter01/chapter01_sec03.html">
-     Partielle Integration
+     1.3 Partielle Integration
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter01/chapter01_sec04.html">
-     Integration durch Substitution
+     1.4 Integration durch Substitution
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chapter01/chapter01_sec05.html">
+     Übungen
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 current active has-children">
   <a class="reference internal" href="chapter02_sec00.html">
-   Anwendungen Integral
+   2. Anwendungen Integral
   </a>
   <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
   <label for="toctree-checkbox-2">
@@ -165,22 +170,27 @@ const thebe_selector_output = ".output, .cell_output"
   <ul class="current">
    <li class="toctree-l2">
     <a class="reference internal" href="chapter02_sec01.html">
-     Integrieren ist Mitteln
+     2.1 Integrieren ist Mitteln
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="chapter02_sec02.html">
-     Fläche zwischen zwei Graphen
+     2.2 Fläche zwischen zwei Graphen
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="chapter02_sec03.html">
-     Bogenlänge
+     2.3 Bogenlänge
     </a>
    </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     Volumen von Rotationskörpern
+     2.4 Volumen von Rotationskörpern
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chapter02_sec05.html">
+     Übungen
     </a>
    </li>
   </ul>
@@ -194,22 +204,17 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../part03.html">
-   Reihen
+   Reihen und Potenzreihen
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../part04a.html">
-   Potenzreihen
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../part04b.html">
+  <a class="reference internal" href="../part04.html">
    Taylorreihen
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../part05.html">
-   Fourier-Reihen
+   Fourierreihen
   </a>
  </li>
 </ul>
@@ -447,7 +452,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Volumen von Rotationskörpern</h1>
+                <h1>2.4 Volumen von Rotationskörpern</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -483,11 +488,7 @@ title="Print to PDF"
               <div>
                 
   <section class="tex2jax_ignore mathjax_ignore" id="volumen-von-rotationskorpern">
-<h1>Volumen von Rotationskörpern<a class="headerlink" href="#volumen-von-rotationskorpern" title="Permalink to this headline">#</a></h1>
-<div class="warning admonition">
-<p class="admonition-title">Warnung</p>
-<p>Achtung, dieser Abschnitt des Vorlesungsskriptes wird gerade überarbeitet!!!</p>
-</div>
+<h1>2.4 Volumen von Rotationskörpern<a class="headerlink" href="#volumen-von-rotationskorpern" title="Permalink to this headline">#</a></h1>
 <p>In diesem Abschnitt beschäftigen wir uns mit Rotationskörpern. Rotationskörper
 werden manchmal auch Drehkörper genannt. Ein Rotationskörper ist ein
 dreidimensionales Objekt, das durch die Rotation einer Fläche um eine Achse
@@ -578,13 +579,13 @@ Umkehrfunktion von <span class="math notranslate nohighlight">\(f(x)\)</span> is
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Bogenlänge</p>
+            <p class="prev-next-title">2.3 Bogenlänge</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="../part03.html" title="next page">
+    <a class='right-next' id="next-link" href="chapter02_sec05.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Reihen</p>
+        <p class="prev-next-title">Übungen</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

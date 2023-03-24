@@ -1,4 +1,4 @@
-# Integration durch Substitution
+# 1.4 Integration durch Substitution
 
 Auch verkettete Funktionen lassen sich nicht so einfach integrieren. Wenn $F$
 eine Stammfunktion der Funktion $f$ ist, dann gilt für die der verketten

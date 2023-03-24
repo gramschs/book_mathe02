@@ -1,9 +1,4 @@
-# Integrieren ist Mitteln
-
-```{admonition} Warnung
-:class: warning
-Achtung, dieser Abschnitt des Vorlesungsskriptes wird gerade überarbeitet!!!
-```
+# 2.1 Integrieren ist Mitteln
 
 ## Lernziele
 

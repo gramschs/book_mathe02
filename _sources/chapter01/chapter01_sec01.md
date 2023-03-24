@@ -1,4 +1,4 @@
-# Stammfunktion und bestimmtes Integral
+# 1.1 Stammfunktion und bestimmtes Integral
 
 In diesem Abschnitt führen wir zunächst Stammfunktionen und das bestimmte
 Integral ein, ohne die dazugehörigen Anwendungen und Herleitungen

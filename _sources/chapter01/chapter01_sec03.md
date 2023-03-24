@@ -1,4 +1,4 @@
-# Partielle Integration
+# 1.3 Partielle Integration
 
 Wird ein Produkt abgeleitet, ist es etwas komplizierter. Es darf nicht einfach
 jeder Faktor für sich abgeleitet werden, sondern es gilt die Produktregel:
@@ -19,7 +19,7 @@ Integrationsregel im Intervall $[a,b]$ integrieren:
 
 $$\int_{a}^{b} u(x) \cdot
 v'(x) \, dx = \big[u(x)\cdot v(x)\big]_{a}^{b} 
-- \int_{a}^{b} v(x) \cdot u'(x) \, dx.$$
+- \int_{a}^{b} u'(x) \cdot v(x) \, dx.$$
 ```
 
 ## Integrieren von Produkten
@@ -27,7 +27,7 @@ v'(x) \, dx = \big[u(x)\cdot v(x)\big]_{a}^{b}
 Die partielle Integration kann durch folgende Formel ausgedrückt werden:
 
 $$\int_{a}^{b} u(x) \cdot v'(x) \, dx = \big[u(x)\cdot v(x)\big]_{a}^{b} 
-- \int_{a}^{b} v(x) \cdot u'(x) \, dx.$$
+- \int_{a}^{b} u'(x) \cdot v(x) \, dx.$$
 
 Hierbei sind $u(x)$ und $v(x)$ zwei Funktionen, deren Produkt integriert werden
 soll, und $u'(x)$ und $v'(x)$ sind die Ableitungen von $u(x)$ und $v(x)$.
