@@ -1,9 +1,4 @@
-# Volumen von Rotationskörpern
-
-```{admonition} Warnung
-:class: warning
-Achtung, dieser Abschnitt des Vorlesungsskriptes wird gerade überarbeitet!!!
-```
+# 2.4 Volumen von Rotationskörpern
 
 In diesem Abschnitt beschäftigen wir uns mit Rotationskörpern. Rotationskörper
 werden manchmal auch Drehkörper genannt. Ein Rotationskörper ist ein

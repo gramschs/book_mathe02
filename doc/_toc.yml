@@ -12,22 +12,21 @@ parts:
     - file: chapter01/chapter01_sec02.md
     - file: chapter01/chapter01_sec03.md
     - file: chapter01/chapter01_sec04.md
+    - file: chapter01/chapter01_sec05.md
   - file: chapter02/chapter02_sec00.md
     sections:
     - file: chapter02/chapter02_sec01.md
     - file: chapter02/chapter02_sec02.md
     - file: chapter02/chapter02_sec03.md
     - file: chapter02/chapter02_sec04.md
+    - file: chapter02/chapter02_sec05.md
 - caption: Part 2. Funktionenreihen
   chapters:
-  - file: part03
-    title: Reihen
-  - file: part04a
-    title: Potenzreihen
-  - file: part04b
+  - file: part03.md
+  - file: part04.md
     title: Taylorreihen
   - file: part05
-    title: Fourier-Reihen
+    title: Fourierreihen
 - caption: Part 3. Mehrdimensionale Analysis
   chapters:
   - file: part06
