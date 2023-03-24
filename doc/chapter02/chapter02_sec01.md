@@ -1,5 +1,10 @@
 # Integrieren ist Mitteln
 
+```{admonition} Warnung
+:class: warning
+Achtung, dieser Abschnitt des Vorlesungsskriptes wird gerade überarbeitet!!!
+```
+
 ## Lernziele
 
 ```{admonition} Lernziele

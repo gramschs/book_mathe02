@@ -1,5 +1,10 @@
 # Bogenlänge
 
+```{admonition} Warnung
+:class: warning
+Achtung, dieser Abschnitt des Vorlesungsskriptes wird gerade überarbeitet!!!
+```
+
 Nachdem wir bisher das Integral dazu genutzt haben, Flächen zu berechnen, wird
 das Integral in diesem Abschnitt dazu genutzt, Längen zu berechnen.
 
