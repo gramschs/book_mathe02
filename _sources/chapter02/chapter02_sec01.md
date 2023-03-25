@@ -15,7 +15,7 @@ folgende Geschwindigkeiten gemessen:
 
 <span style="font-weight:normal">Zeit in s</span> | <span style="font-weight:normal">1</span>   | <span style="font-weight:normal">2</span>    | <span style="font-weight:normal">3</span> | <span style="font-weight:normal">4</span> | <span style="font-weight:normal">5</span> | <span style="font-weight:normal">6</span> |
 | --- | :---: | :---: | :---: | :---: | :---: | :---: |
-Geschwindigkeit in km/h |  50.0    | 48.9  | 45.7 | 41.8 | 40.0 | 45.0 |
+|Geschwindigkeit in km/h |  50.0    | 48.9  | 45.7 | 41.8 | 40.0 | 45.0 |
 |  |
 
 Wenn jetzt danach gefragt wird, mit welcher Durchschnittsgeschwindigkeit das

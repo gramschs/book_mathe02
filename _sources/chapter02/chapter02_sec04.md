@@ -18,7 +18,7 @@ $$V = \pi \int_{a}^{b} f(x)^2 \, dx,$$
 
 *  um die y-Achse gedreht wird:
 
-$$V = \pi \left| \int_{f(a)}^{f(b)} \left(f^{-1}(y) \right)^2 \, dy \right|.$$
+$$V = \pi \int_{f(a)}^{f(b)} \left(f^{-1}(y) \right)^2 \, dy .$$
 ```
 
 
@@ -57,7 +57,7 @@ gleiche wie das Volumen des umgedrehten Körpers.
 Die Formel zur Berechnung des Volumens eines Rotationskörpers, der um die
 y-Achse gedreht wird, ist gegeben durch:
 
-$$V = \pi \left| \int_c^d  (f^{-1}(y))^2 \, dy \right|,$$
+$$V = \pi  \int_c^d  (f^{-1}(y))^2 \, dy ,$$
 
 wobei $c = f(a)$ und $d = f(b)$ die Grenzen der Integration sind und $f^{-1}(y)$ die
 Umkehrfunktion von $f(x)$ ist.
