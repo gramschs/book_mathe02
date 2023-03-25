@@ -1,10 +1,5 @@
 # Übungen
 
-```{admonition} Warnung
-:class: warning
-Achtung, dieser Abschnitt des Vorlesungsskriptes wird gerade überarbeitet!!!
-```
-
 ```{admonition} Übung 1.1
 :class: miniexercise
 Integrieren Sie 
@@ -129,6 +124,48 @@ $$\int_{1}^{e^2} x^2\cdot \ln(x) \, dx .$$
 $$\int_{1}^{e^2} x^2\cdot \ln(x) \, dx = \frac{5}{9}e^6 + \frac{1}{9} \approx 224.24.$$
 ```{dropdown} Lösungsweg
 ![solution01_06](solution01_06.png)
+```
+````
+
+```{admonition} Übung 1.7
+:class: miniexercise
+Berechnen Sie
+
+$$\int_{0}^{\frac{\pi}{2}} \cos(x)\cdot e^{\sin(x)}\, dx.\Rule{0 pt}{0 em}{1.5 em}$$
+```
+````{admonition} Lösung
+:class: minisolution, toggle
+$$\int_{0}^{\frac{\pi}{2}} \cos(x)\cdot e^{\sin(x)}\, dx = e - 1 \approx 1.7183\Rule{0 pt}{0 em}{1.5 em}$$
+```{dropdown} Lösungsweg
+![solution01_07](solution01_07.png)
+```
+````
+
+```{admonition} Übung 1.8
+:class: miniexercise
+Berechnen Sie 
+
+$$\int_{2}^{3}\frac{1}{(1-x)^3}\, dx.$$
+```
+````{admonition} Lösung
+:class: minisolution, toggle
+$$\int_{2}^{3}\frac{1}{(1-x)^3}\, dx = -\frac{3}{8} = - 0.375$$
+```{dropdown} Lösungsweg
+![solution01_08](solution01_08.png)
+```
+````
+
+```{admonition} Übung 1.9
+:class: miniexercise
+Berechnen Sie
+
+$$\int_{0}^{1} 2x^7 \cdot e^{x^2}\, dx.$$
+```
+````{admonition} Lösung
+:class: minisolution, toggle
+$$\int_{0}^{1} 2x^7 \cdot e^{x^2}\, dx = -2e + 6 \approx 0.5634$$
+```{dropdown} Lösungsweg
+![solution01_09](solution01_09.png)
 ```
 ````
 

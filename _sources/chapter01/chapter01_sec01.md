@@ -69,6 +69,7 @@ auch eine Stammfunktion sein, denn
 
 $$\tilde{F}'(x) = \left(F(x)+c\right)' = F'(x) + 0 = f(x).$$
 
+
 <iframe width="560" height="315" src="https://www.youtube.com/embed/m__ID4PHBIA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 ## Wichtige Stammfunktionen 
