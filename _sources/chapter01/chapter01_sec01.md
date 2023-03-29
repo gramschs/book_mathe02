@@ -69,8 +69,9 @@ auch eine Stammfunktion sein, denn
 
 $$\tilde{F}'(x) = \left(F(x)+c\right)' = F'(x) + 0 = f(x).$$
 
-
+```{dropdown} Video: Stammfunktion und unbestimmtes Integral
 <iframe width="560" height="315" src="https://www.youtube.com/embed/m__ID4PHBIA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+```
 
 ## Wichtige Stammfunktionen 
 
@@ -85,7 +86,9 @@ Stammfunktionen auswendig kennen.
 * $f(x) = \cos(x) \Rightarrow F(x)=\sin(x)+c$ 
 * $f(x)=\frac{1}{1+x^2} \Rightarrow F(x) = \arctan(x) + c$
 
+```{dropdown} Video: wichtige Stammfunktionen
 <iframe width="560" height="315" src="https://www.youtube.com/embed/hKiAG99XmTE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+```
 
 ## Bestimmtes Integral 
 
@@ -112,7 +115,9 @@ Mathematisch wird dazu folgende Schreibweise verwendet:
 $$\int_{a}^{b} f(x)\, dx = F(b) - F(a).$$
 ```
 
+```{dropdown} Video: bestimmtes Integral
 <iframe width="560" height="315" src="https://www.youtube.com/embed/XtWVTl4fMmY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+```
 
 ## Beispiel für bestimmtes Integral
 
@@ -163,7 +168,9 @@ $F(-1)=\frac{5}{3}$ subtrahiert.
 
 Im folgenden Video finden Sie weitere Beispiele.
 
+```{dropdown} Video: bestimmtes Interal - Beispiele
 <iframe width="560" height="315" src="https://www.youtube.com/embed/aEtIsjWr0dg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+```
 
 ## Integrale als Fläche interpretiert
 
@@ -193,4 +200,6 @@ In dem folgenden Video wird die Flächeninterpretation des Integrals nochmal
 erläutert und auch gezeigt, wie diese Interpretation bei punktsymmetrischen
 Funktionen ausgenutzt werden kann, sich selbst das Rechnen etwas zu erleichtern.
 
+```{dropdown} Video: bestimmtes Integral - Flächeninterpretation
 <iframe width="560" height="315" src="https://www.youtube.com/embed/6rJOt8mWY_I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+```

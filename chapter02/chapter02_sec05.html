@@ -55,6 +55,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Reihen und Potenzreihen" href="../part03.html" />
@@ -433,6 +435,151 @@ title="Print to PDF"
 <div class="warning admonition">
 <p class="admonition-title">Warnung</p>
 <p>Achtung, dieser Abschnitt des Vorlesungsskriptes wird gerade überarbeitet!!!</p>
+</div>
+<div class="miniexercise admonition">
+<p class="admonition-title">Übung 2.1</p>
+<p>Berechnen Sie den Mittelwert der Funktion <span class="math notranslate nohighlight">\(f(x)=\frac{1}{2}x^2 +1\)</span> im Intervall <span class="math notranslate nohighlight">\([0,2]\)</span>.</p>
+</div>
+<div class="minisolution toggle admonition">
+<p class="admonition-title">Lösung</p>
+<div class="math notranslate nohighlight">
+\[m = \frac{1}{2-0}\int_{0}^{2}\frac{1}{2}x^2 +1 \, dx = \frac{5}{3} \approx 1.6666\]</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Lösungsweg<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Y4cPEgR3LUg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+</details></div>
+<div class="miniexercise admonition">
+<p class="admonition-title">Übung 2.2</p>
+<p>Berechnen Sie den Mittelwert <span class="math notranslate nohighlight">\(\bar{f}\)</span> der Funktion <span class="math notranslate nohighlight">\(f(x)=mx+n\)</span> auf einem beliebigen Intervall <span class="math notranslate nohighlight">\([a,b]\)</span>. Interpretieren Sie das Ergebnis geometrisch.</p>
+</div>
+<div class="minisolution toggle admonition">
+<p class="admonition-title">Lösung</p>
+<div class="math notranslate nohighlight">
+\[\bar{f} = \frac{1}{2}\left(f(a)+f(b)\right) \]</div>
+<p>Der Mittelwert der der linearen Funktion <span class="math notranslate nohighlight">\(f(x)=mx+n\)</span> ist gerade das arithmetische Mittel der beiden Funktionswerte <span class="math notranslate nohighlight">\(f(a)\)</span> und <span class="math notranslate nohighlight">\(f(b)\)</span> an den Intervallgrenzen.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Lösungsweg<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><img alt="solution02_02" src="../_images/solution02_02.pdf" /></p>
+</div>
+</details></div>
+<div class="miniexercise admonition">
+<p class="admonition-title">Übung 2.3</p>
+<p>Berechnen Sie den Flächeninhalt, der zwischen dem Graphen der Funktion</p>
+<div class="math notranslate nohighlight">
+\[f(x)=x^2-x\]</div>
+<p>und der x-Achse eingeschlossen ist. Fertigen Sie zuerst eine Skizze an.</p>
+</div>
+<div class="minisolution toggle admonition">
+<p class="admonition-title">Lösung</p>
+<div class="math notranslate nohighlight">
+\[A = \frac{1}{6}\]</div>
+</div>
+<div class="miniexercise admonition">
+<p class="admonition-title">Übung 2.4</p>
+<p>Berechnen Sie den Flächeninhalt, der zwischen dem Graphen der Funktion</p>
+<div class="math notranslate nohighlight">
+\[f(x)=x(x-1)(x-3)\]</div>
+<p>und der x-Achse eingeschlossen ist. Fertigen Sie zuerst eine Skizze an.</p>
+</div>
+<div class="minisolution toggle admonition">
+<p class="admonition-title">Lösung</p>
+<div class="math notranslate nohighlight">
+\[A = \frac{37}{12}\]</div>
+</div>
+<div class="miniexercise admonition">
+<p class="admonition-title">Übung 2.5</p>
+<p>Berechnen Sie den Flächeninhalt, der zwischen den beiden Graphen der Funktionen</p>
+<div class="math notranslate nohighlight">
+\[f(x)=-\frac{1}{4}x^2+16 \quad \text{ und } \quad g(x)=-3x\]</div>
+<p>eingeschlossen ist. Fertigen Sie zuerst eine Skizze an.</p>
+</div>
+<div class="minisolution toggle admonition">
+<p class="admonition-title">Lösung</p>
+<div class="math notranslate nohighlight">
+\[A = \frac{343}{16}=21.4375\]</div>
+</div>
+<div class="miniexercise admonition">
+<p class="admonition-title">Übung 2.6</p>
+<p>Berechnen Sie den Flächeninhalt, der zwischen den beiden Graphen der Funktionen</p>
+<div class="math notranslate nohighlight">
+\[f(x)=-x^2+2x+\frac{1}{2} \quad \text{ und } \quad g(x)=x+2\]</div>
+<p>und den parallelen Geraden <span class="math notranslate nohighlight">\(x=-2\)</span> und <span class="math notranslate nohighlight">\(x=\frac{5}{2}\)</span> eingeschlossen ist. Fertigen Sie zuerst eine Skizze an.</p>
+</div>
+<div class="minisolution toggle admonition">
+<p class="admonition-title">Lösung</p>
+<div class="math notranslate nohighlight">
+\[A = \frac{27}{2}= 13.5\]</div>
+</div>
+<div class="miniexercise admonition">
+<p class="admonition-title">Übung 2.7</p>
+<p>Berechnen Sie den Flächeninhalt, der zwischen den beiden Graphen der Funktionen</p>
+<div class="math notranslate nohighlight">
+\[f(x)=-3x^2+x-1 \quad \text{ und } \quad g(x)=4\cdot (x-\frac{1}{4})^2=\frac{5}{4}\]</div>
+<p>eingeschlossen ist. Fertigen Sie zuerst eine Skizze an.</p>
+</div>
+<div class="minisolution toggle admonition">
+<p class="admonition-title">Lösung</p>
+<div class="math notranslate nohighlight">
+\[A = \frac{9}{98}\approx 0.091837\]</div>
+</div>
+<div class="miniexercise admonition">
+<p class="admonition-title">Übung 2.8</p>
+<p>Berechnen Sie den Flächeninhalt, der zwischen den beiden Graphen der Funktionen</p>
+<div class="math notranslate nohighlight">
+\[f(x)=2\sin(x) \quad \text{ und } \quad g(x)=-\frac{4\sqrt{2}}{3\pi}x + \frac{4\sqrt{2}}{3}\]</div>
+<p>eingeschlossen ist. Fertigen Sie zuerst eine Skizze an.</p>
+</div>
+<div class="minisolution toggle admonition">
+<p class="admonition-title">Lösung</p>
+<div class="math notranslate nohighlight">
+\[A = 2+\sqrt{2} - \frac{3\pi}{4\sqrt{2}}\approx 1.7481\]</div>
+</div>
+<div class="miniexercise admonition">
+<p class="admonition-title">Übung 2.9</p>
+<p>Berechnen Sie die Bogenlänge der Funktion <span class="math notranslate nohighlight">\(f(x)=x\)</span> im Intervall <span class="math notranslate nohighlight">\([0,1]\)</span>.</p>
+</div>
+<div class="minisolution toggle admonition">
+<p class="admonition-title">Lösung</p>
+<div class="math notranslate nohighlight">
+\[L = \sqrt{2} \approx 1.4142\]</div>
+</div>
+<div class="miniexercise admonition">
+<p class="admonition-title">Übung 2.10</p>
+<p>Berechnen Sie die Bogenlänge der Funktion <span class="math notranslate nohighlight">\(f(x)=x^{\frac{3}{2}}\)</span> im Intervall <span class="math notranslate nohighlight">\([0,1]\)</span>.</p>
+</div>
+<div class="minisolution toggle admonition">
+<p class="admonition-title">Lösung</p>
+<div class="math notranslate nohighlight">
+\[L = \approx 1.4397\]</div>
+</div>
+<div class="miniexercise admonition">
+<p class="admonition-title">Übung 2.11</p>
+<p>Berechnen Sie das Volumen des Rotationskörpers, das entsteht, wenn die Funktion <span class="math notranslate nohighlight">\(f(x)=-x^2+4\)</span> im Intervall <span class="math notranslate nohighlight">\([-2,2]\)</span> um die x-Achse gedreht wird.</p>
+</div>
+<div class="minisolution toggle admonition">
+<p class="admonition-title">Lösung</p>
+<div class="math notranslate nohighlight">
+\[V = 2\pi\cdot \frac{256}{15}\approx 107.23\]</div>
+</div>
+<div class="miniexercise admonition">
+<p class="admonition-title">Übung 2.12</p>
+<p>Berechnen Sie das Volumen des Rotationskörpers, das entsteht, wenn die Funktion <span class="math notranslate nohighlight">\(f(x)=\sin(x)+1\)</span> im Intervall <span class="math notranslate nohighlight">\([0,\frac{3\pi}{2}]\)</span> um die x-Achse gedreht wird.</p>
+</div>
+<div class="minisolution toggle admonition">
+<p class="admonition-title">Lösung</p>
+<div class="math notranslate nohighlight">
+\[V = \pi\left((\frac{3\pi}{2}-0+\frac{3\pi}{4})-(0-2+0)\right)\approx 28.4898\]</div>
 </div>
 </section>
 
