@@ -22,6 +22,13 @@ parts:
     - file: chapter02/chapter02_sec05.md
 - caption: Part 2. Funktionenreihen
   chapters:
+  - file: chapter03/chapter03_sec00.md
+    sections:
+    - file: chapter03/chapter03_sec01.md
+    - file: chapter03/chapter03_sec02.md
+    - file: chapter03/chapter03_sec03.md
+    - file: chapter03/chapter03_sec04.md
+    - file: chapter03/chapter03_sec05.md
   - file: part03.md
   - file: part04.md
     title: Taylorreihen
