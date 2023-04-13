@@ -55,6 +55,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="3.3 Potenzreihen" href="chapter03_sec03.html" />
@@ -468,6 +470,21 @@ title="Print to PDF"
    Lernziele
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#das-nullfolgen-kriterium">
+   Das Nullfolgen-Kriterium
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#das-quotienten-kriterium-und-das-wurzel-kriterium">
+   Das Quotienten-Kriterium und das Wurzel-Kriterium
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ausblick">
+   Ausblick
+  </a>
+ </li>
 </ul>
 
     </nav>
@@ -492,6 +509,21 @@ title="Print to PDF"
    Lernziele
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#das-nullfolgen-kriterium">
+   Das Nullfolgen-Kriterium
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#das-quotienten-kriterium-und-das-wurzel-kriterium">
+   Das Quotienten-Kriterium und das Wurzel-Kriterium
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ausblick">
+   Ausblick
+  </a>
+ </li>
 </ul>
 
                         </nav>
@@ -504,28 +536,18 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="konvergenzkriterien-fur-reihen">
 <h1>3.2 Konvergenzkriterien für Reihen<a class="headerlink" href="#konvergenzkriterien-fur-reihen" title="Permalink to this headline">#</a></h1>
-<div class="warning admonition">
-<p class="admonition-title">Warnung</p>
-<p>Achtung, dieser Abschnitt des Vorlesungsskriptes wird gerade überarbeitet!!!</p>
-</div>
+<p>In <a class="reference internal" href="chapter03_sec01.html#ref03-sec01"><span class="std std-ref">Kapitel 3.1</span></a> haben wir uns mit Reihen beschäftig und die
+Eigenschaften konvergent und divergent eingeführt. In diesem Kapitel geht es
+darum rechnerisch zu bestimmen, ob eine Reihe konvergent oder divergent ist.
+Dazu lernen wir verschiedene Kriterien kennen.</p>
 <section id="lernziele">
 <h2>Lernziele<a class="headerlink" href="#lernziele" title="Permalink to this headline">#</a></h2>
 <div class="tip admonition">
 <p class="admonition-title">Lernziele</p>
 <ul class="simple">
-<li><p>Sie können den Fachbegriff <strong>Reihe</strong> erklären.</p></li>
-<li><p>Sie können den Fachbegriff <strong>Partialsumme</strong> einer Reihe erklären.</p></li>
-<li><p>Sie kennen als Beispiel für Reihen die</p>
-<ul>
-<li><p><strong>geometrische Reihe</strong> und</p></li>
-<li><p><strong>harmonische Reihe</strong>.</p></li>
-</ul>
-</li>
-<li><p>Sie können den Fachbegriff <strong>alternierende Reihe</strong> erklären.</p></li>
-<li><p>Sie können den Fachbegriff <strong>Konvergenz</strong> einer Reihe erklären.</p></li>
+<li><p>Sie können das <strong>Nullfolgen-Kriterium</strong> anwenden, um zu überprüfen, ob es überhaupt möglich ist, dass die Reihe konvergiert.</p></li>
 <li><p>Sie können mit den <strong>Konvergenzkriterien</strong> überprüfen, ob eine Reihe konvergiert, indem Sie die folgenden Kriterien anwenden können:</p>
 <ul>
-<li><p><strong>Leibniz-Kriterium für alternierende Reihen</strong>,</p></li>
 <li><p><strong>Quotientenkriterium</strong> oder</p></li>
 <li><p><strong>Wurzelkriterium</strong>.</p></li>
 </ul>
@@ -533,6 +555,149 @@ title="Print to PDF"
 <li><p>Sie können den Fachbegriff <strong>absolut konvergente Reihe</strong> erklären.</p></li>
 </ul>
 </div>
+</section>
+<section id="das-nullfolgen-kriterium">
+<h2>Das Nullfolgen-Kriterium<a class="headerlink" href="#das-nullfolgen-kriterium" title="Permalink to this headline">#</a></h2>
+<p>Manchmal ist es einfacher zu beschreiben, was ein Gegenstand <em>nicht</em> ist. Eine
+notwendige (aber nicht hinreichende) Bedingung für die Konvergenz einer Reihe
+ist, dass die ursprüngliche Folge <span class="math notranslate nohighlight">\((a_k)\)</span> eine Nullfolge ist, d.h.
+<span class="math notranslate nohighlight">\(\lim_{k\to\infty} a_k = 0\)</span>. Wenn dieser Grenzwert nicht Null ist oder nicht
+existiert, divergiert die Reihe.</p>
+<p>Was heißt notwendig, aber nicht hinreichend??? Was ist das überhaupt für eine
+umständliche Formulierung?</p>
+<p>Die Formulierung, “etwas ist notwendig, aber nicht hinreichend” kommt in der
+Mathematik öfters vor. Damit ist gemeint, dass eine Bedingung erfüllt sein muss,
+damit etwas anderes passiert oder stimmt. Aber alleine reicht diese Bedingung
+nicht aus, um sicherzustellen, dass das andere tatsächlich passiert oder stimmt.</p>
+<p>Ein Beispiel aus dem Alltag: Angenommen, jemand möchte ein Auto fahren. Eine
+notwendige, aber nicht hinreichende Bedingung für das Fahren eines Autos ist,
+dass die Person einen gültigen Führerschein besitzt. Der Führerschein ist
+notwendig, weil er gesetzlich vorgeschrieben ist, um ein Auto fahren zu dürfen.
+Er ist jedoch nicht hinreichend, weil es noch weitere Faktoren gibt, die
+erforderlich sind, um tatsächlich Auto fahren zu können, wie zum Beispiel das
+Vorhandensein eines funktionierenden Autos oder für eine konkrete Autofahrt eine
+angemessene körperliche und geistige Verfassung.</p>
+<p>In diesem Beispiel ist der Führerschein eine notwendige Bedingung, weil man ohne
+ihn grundsätzlich nicht Auto fahren darf. Er ist jedoch nicht hinreichend, da
+das Vorliegen eines Führerscheins allein noch nicht garantiert, dass jemand
+tatsächlich ein Auto fahren kann oder darf.</p>
+<p>Zurück zum Nullfolgen-Kriterium. Die Bedingung, dass die Folge <span class="math notranslate nohighlight">\((a_k)\)</span> eine
+Nullfolge ist, ist notwendig, damit die dazugehörige Reihe konvergieren kann (=
+Besitz eines Führerscheins). Aber nur weil die Folge <span class="math notranslate nohighlight">\((a_k)\)</span> eine Nullfolge ist,
+heißt es noch lange nicht, dass die Reihe konvergiert, weil vielleicht andere
+Bedingungen nicht erfüllt sind (= Autofahrer hat Akohol getrunken). Es ist also
+nicht hinreichend.</p>
+<p>Zuerst wirkt diese Aussage nicht besonders bedeutend. Aber wir können trotzdem
+zwei bedeutsame Schlussfolgen daraus ziehen:</p>
+<div class="admonition-nullfolgen-kriterium admonition">
+<p class="admonition-title">Nullfolgen-Kriterium</p>
+<ol class="simple">
+<li><p>Wenn die Folge der Summanden <span class="math notranslate nohighlight">\((a_k)\)</span> <em>keine</em> Nullfolge ist, dann ist die
+dazugehörige Reihe auf jeden Fall divergent.</p></li>
+<li><p>Wenn eine Reihe konvergiert, dann muss die zugrundeliegende Folge <span class="math notranslate nohighlight">\((a_k)\)</span> der
+Summanden eine Nullfolge sein.</p></li>
+</ol>
+</div>
+<p>In dem folgenden Video wird die Konvergenz von Reihen nochmal erläutert und
+einige Beispiele für konvergente oder divergente Reihen gegeben.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Video zu Reihenkonvergenz von Prof. Hoever<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/aGnAseEnfG0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+</details></section>
+<section id="das-quotienten-kriterium-und-das-wurzel-kriterium">
+<h2>Das Quotienten-Kriterium und das Wurzel-Kriterium<a class="headerlink" href="#das-quotienten-kriterium-und-das-wurzel-kriterium" title="Permalink to this headline">#</a></h2>
+<p>Das Quotienten-Kriterium ist ein nützliches Konvergenzkriterium für Reihen, bei
+denen die Summanden einen Bruch oder eine Potenz enthalten. Es kann uns helfen,
+schnell herauszufinden, ob eine solche Reihe konvergiert oder divergiert, ohne
+zuerst komplexere Techniken oder Kriterien anzuwenden.</p>
+<div class="admonition-quotienten-kriterium admonition">
+<p class="admonition-title">Quotienten-Kriterium</p>
+<p>Das Quotienten-Kriterium besagt, dass eine Reihe <span class="math notranslate nohighlight">\(\sum_{k=1}^{\infty} a_k\)</span>
+konvergiert, wenn der Grenzwert</p>
+<div class="math notranslate nohighlight">
+\[r = \lim_{k\to\infty} \left| \frac{a_{k+1}}{a_k} \right|\]</div>
+<p>existiert und kleiner als 1 ist. Gilt <span class="math notranslate nohighlight">\(r &gt; 1\)</span>, so divergiert die Reihe. Gilt
+<span class="math notranslate nohighlight">\(r = 1\)</span>, so versagt das Kriterium und ein anderes Kriterium muss benutzt werden.</p>
+<p>Übrigens: Für <span class="math notranslate nohighlight">\(r &lt; 1\)</span> ist die Reihe sogar absolut konvergent.</p>
+</div>
+<p>Den Begriff <strong>absolute Konvergenz</strong> hatten wir bisher nicht. Absolute Konvergenz
+ist mehr als Konvergenz. Nicht nur die Reihe <span class="math notranslate nohighlight">\((s_n)\)</span> mit</p>
+<div class="math notranslate nohighlight">
+\[s_n = \sum_{k=1}^{n} a_k\]</div>
+<p>konvergiert, sogar die Reihe, bei der die Summanden stets positiv sind, weil der
+Betrag gebildet wird, also</p>
+<div class="math notranslate nohighlight">
+\[s_n = \sum_{k=1}^{n} \left| a_k \right|\]</div>
+<p>konvergiert. Das wird dann absolute Konvergenz genannt.</p>
+<p>Ein Beispiel für die Anwendung des Quotienten-Kriteriums ist die folgende Reihe:</p>
+<div class="math notranslate nohighlight">
+\[\sum_{k=1}^{n}\frac{2^k}{k!}.\]</div>
+<p>Um das Quotienten-Kriterium anzuwenden, betrachten wir den Bruch der
+aufeinanderfolgenden Glieder:</p>
+<div class="math notranslate nohighlight">
+\[\left|\frac{a_{k+1}}{a_k}\right| =
+\frac{\frac{2^{k+1}}{(k+1)!}}{\frac{2^k}{k!}} =
+\frac{2^{k+1}k!}{2^k(k+1)!} = \frac{2}{k+1}.\]</div>
+<p>Da <span class="math notranslate nohighlight">\(r = \lim_{k \to \infty} \frac{2}{k+1} = 0 &lt; 1\)</span>, konvergiert die Reihe
+<span class="math notranslate nohighlight">\(\sum_{k=1}^{\infty} \frac{2^k}{k!}\)</span> nach dem Quotienten-Kriterium.</p>
+<p>Das Wurzel-Kriterium ist ein weiteres Konvergenzkriterium für Reihen, das
+besonders hilfreich ist, wenn die Summanden Potenzen oder Exponentialfunktionen
+enthalten. Es ermöglicht uns, schnell festzustellen, ob eine solche Reihe
+konvergiert oder divergiert, ohne zunächst komplexere Techniken oder Kriterien
+anwenden zu müssen.</p>
+<div class="admonition-wurzel-kriterium admonition">
+<p class="admonition-title">Wurzel-Kriterium</p>
+<p>Das Wurzel-Kriterium besagt, dass eine Reihe <span class="math notranslate nohighlight">\(\sum_{k=1}^{\infty} a_k\)</span>
+konvergiert, wenn der Grenzwert</p>
+<div class="math notranslate nohighlight">
+\[r = \lim_{k\to\infty} \sqrt[k]{|a_k|}\]</div>
+<p>existiert und kleiner als 1 ist. Gilt <span class="math notranslate nohighlight">\(r &gt; 1\)</span>, so divergiert die Reihe. Gilt
+<span class="math notranslate nohighlight">\(r = 1\)</span>, so versagt das Kriterium und ein anderes Kriterium muss benutzt werden.</p>
+<p>Übrigens: Für <span class="math notranslate nohighlight">\(r &lt; 1\)</span> ist die Reihe sogar absolut konvergent, genau wie beim Quotienten-Kriterium.</p>
+</div>
+<p>Als Beispiel betrachten wir die Reihe <span class="math notranslate nohighlight">\((s_n)\)</span> mit</p>
+<div class="math notranslate nohighlight">
+\[s_n = \sum_{k=1}^{n} \left(-\frac{1}{4}\right) \cdot 4^{-k-2} \cdot 2^{k+4}.\]</div>
+<p>Wir wenden das Wurzel-Kriterium an:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*} 
+r &amp; = \lim_{k\rightarrow \infty}\sqrt[k]{\left|a_k\right|} = \\
+&amp;  = \lim_{k\rightarrow \infty}\left(\frac{1}{4} \cdot 4^{-k-2} 2^{k+4}\right)^{\left(\frac{1}{k} \right)} = \\ 
+&amp; = \lim_{k\rightarrow \infty} \left(4^{-k - 3} 2^{k + 4}\right)^{\left(\frac{1}{k}\right)} = \\
+&amp; = \frac{1}{2} . 
+ \end{align*}\]</div>
+<p>Wegen <span class="math notranslate nohighlight">\(r = \frac{1}{2} &lt;1\)</span> ist die Reihe (absolut) konvergent.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Video zu Wurzel- und Quotientenkriterium von Prof. Hoever<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/G1GSAFrd6mE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+</details></section>
+<section id="ausblick">
+<h2>Ausblick<a class="headerlink" href="#ausblick" title="Permalink to this headline">#</a></h2>
+<p>Tatsächlich gibt es noch einige Kriterien mehr, um die Konvergenz einer Reihe zu
+bestimmen. Die bekanntesten Konvergenzkriterien sind:</p>
+<ul class="simple">
+<li><p>Grenzwertkriterium</p></li>
+<li><p>Majorantenkriterium</p></li>
+<li><p>Minorantenkriterium</p></li>
+<li><p>Verdichtungskriterium</p></li>
+<li><p>Leibniz-Kriterium</p></li>
+</ul>
+<p>Einen detaillierten Überblick zu weiteren Konvergenzkriterien findet man auf der
+Internetseite <a class="reference external" href="https://de.wikibooks.org/wiki/Mathe_f%C3%BCr_Nicht-Freaks:_Konvergenz_und_Divergenz_einer_Reihe_beweisen:_Konvergenzkriterien">Serlo →
+Konvergenzkriterien</a>.</p>
+<p>​</p>
 </section>
 </section>
 
