@@ -1,7 +1,7 @@
 # 3.2 Konvergenzkriterien für Reihen
 
-In [Kapitel 3.1](ref03_sec01) haben wir uns mit Reihen beschäftig und die
-Eigenschaften konvergent und divergent eingeführt. In diesem Kapitel geht es
+In [Kapitel 3.1 Reihen](ref03_sec01) haben wir uns mit Reihen beschäftigt und
+die Eigenschaften konvergent und divergent eingeführt. In diesem Kapitel geht es
 darum rechnerisch zu bestimmen, ob eine Reihe konvergent oder divergent ist.
 Dazu lernen wir verschiedene Kriterien kennen.
 
