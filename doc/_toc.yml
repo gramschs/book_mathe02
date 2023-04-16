@@ -29,7 +29,6 @@ parts:
     - file: chapter03/chapter03_sec03.md
     - file: chapter03/chapter03_sec04.md
     - file: chapter03/chapter03_sec05.md
-  - file: part03.md
   - file: part04.md
     title: Taylorreihen
   - file: part05
