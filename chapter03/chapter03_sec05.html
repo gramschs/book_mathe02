@@ -55,6 +55,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Reihen und Potenzreihen" href="../part03.html" />
@@ -217,7 +219,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="chapter03_sec02.html">
-     3.2 Konvergenz von Reihen
+     3.2 Konvergenzkriterien für Reihen
     </a>
    </li>
    <li class="toctree-l2">
@@ -467,10 +469,159 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="ubungen">
 <h1>Übungen<a class="headerlink" href="#ubungen" title="Permalink to this headline">#</a></h1>
-<div class="warning admonition">
-<p class="admonition-title">Warnung</p>
-<p>Achtung, dieser Abschnitt des Vorlesungsskriptes wird gerade überarbeitet!!!</p>
+<div class="miniexercise admonition">
+<p class="admonition-title">Übung 3.1</p>
+<p>Untersuchen Sie die Reihe</p>
+<div class="math notranslate nohighlight">
+\[ \sum_{n=1}^\infty -\frac{4\cdot3^{n+3}}{5^n}\]</div>
+<p>auf sowohl mit dem Quotienten- als auch dem Wurzelkriterium auf Konvergenz.</p>
 </div>
+<div class="minisolution toggle admonition">
+<p class="admonition-title">Lösung</p>
+<p>Die Reihe ist (absolut) konvergent.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Lösungsweg<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Wir definieren <span class="math notranslate nohighlight">\(a_n := -\frac{4\cdot 3^{n+3}}{5^n}\)</span>.</p>
+<p class="sd-card-text">Wurzelkriterium:</p>
+<p class="sd-card-text">Zu bestimmen ist der Grenzwert (falls dieser existiert)</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*} 
+r &amp; = \lim_{n\rightarrow \infty}\sqrt[n]{\left|a_n\right|}
+    = \lim_{n\rightarrow \infty}{\left(\frac{4\cdot 3^{n+3}}{5^n}\right)}^{1/n}\\ 
+&amp; = \lim_{n\rightarrow \infty}\frac{3\cdot {108}^{1/n}}{5}
+    = \frac{3}{5}. 
+\end{align*}\]</div>
+<p class="sd-card-text">Wegen <span class="math notranslate nohighlight">\(r&lt;1\)</span> ist die Reihe (absolut) konvergent.</p>
+<p class="sd-card-text">Quotientenkriterium:</p>
+<p class="sd-card-text">Zu bestimmen ist der Grenzwert (falls dieser existiert)</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*} 
+r &amp; = \lim_{n\rightarrow \infty} \left|\frac{a_{n+1}}{a_n}\right|
+    =\lim_{n\rightarrow \infty}3^{n+4}\,\frac{1}{3^{n+3}}\,\frac{1}{5^{n+1}}\,5^n\\ 
+&amp; = \lim_{n\rightarrow \infty}\frac{3}{5}
+    =\frac{3}{5}. 
+\end{align*}\]</div>
+<p class="sd-card-text">Wegen <span class="math notranslate nohighlight">\(r&lt;1\)</span> ist die Reihe (absolut) konvergent.</p>
+</div>
+</details></div>
+<div class="miniexercise admonition">
+<p class="admonition-title">Übung 3.2</p>
+<p>Untersuchen Sie die Reihe</p>
+<div class="math notranslate nohighlight">
+\[\sum_{n=1}^\infty 4\frac{6^n}{{11}^{n+4}}\]</div>
+<p>sowohl mit dem Quotienten- als auch dem Wurzelkriterium auf Konvergenz.</p>
+</div>
+<div class="minisolution toggle admonition">
+<p class="admonition-title">Lösung</p>
+<p>Die Reihe ist (absolut) konvergent.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Lösungsweg<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Wir definieren <span class="math notranslate nohighlight">\(a_n := 4\frac{6^n}{{11}^{n+4}}\)</span>.</p>
+<p class="sd-card-text">Wurzelkriterium:
+Zu bestimmen ist der Grenzwert (falls dieser existiert)</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*} 
+r &amp; = \lim_{n\rightarrow \infty}\sqrt[n]{\left|a_n\right|}
+    = \lim_{n\rightarrow \infty}{\left(4\frac{6^n}{{11}^{n+4}}\right)}^{1/n}\\ 
+&amp; = \lim_{n\rightarrow \infty}\frac{6\,{\left(\frac{4}{14641}\right)}^{1/n}}{11}
+    = \frac{6}{11}. 
+\end{align*}\]</div>
+<p class="sd-card-text">Wegen <span class="math notranslate nohighlight">\(r&lt;1\)</span> ist die Reihe (absolut) konvergent.</p>
+<p class="sd-card-text">Quotientenkriterium:
+Zu bestimmen ist der Grenzwert (falls dieser existiert)</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*} 
+r &amp; = \lim_{n\rightarrow \infty} \left|\frac{a_{n+1}}{a_n}\right|
+    =\lim_{n\rightarrow \infty}\frac{6^{n+1}\,{11}^{n+4}\,\frac{1}{{11}^{n+5}}}{6^n}\\ 
+&amp; = \lim_{n\rightarrow \infty}\frac{6}{11}
+    =\frac{6}{11}. 
+\end{align*}\]</div>
+<p class="sd-card-text">Wegen <span class="math notranslate nohighlight">\(r&lt;1\)</span> ist die Reihe (absolut) konvergent.</p>
+</div>
+</details></div>
+<div class="miniexercise admonition">
+<p class="admonition-title">Übung 3.3</p>
+<p>Untersuchen Sie die Reihe</p>
+<div class="math notranslate nohighlight">
+\[\sum_{n=1}^\infty \frac{\frac{1}{{\left(-8\right)}^{n+2}}\,{10}^{n+4}}{4}\]</div>
+<p>sowohl mit dem Quotienten- als auch dem Wurzelkriterium auf Konvergenz.</p>
+</div>
+<div class="minisolution toggle admonition">
+<p class="admonition-title">Lösung</p>
+<p>Die Reihe ist divergent.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Lösungsweg<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Die Summanden bilden keine Nullfolge, denn</p>
+<div class="math notranslate nohighlight">
+\[\lim_{n\rightarrow \infty} \left| \frac{\frac{1}{{\left(-8\right)}^{n+2}}\,{10}^{n+4}}{4}\right| =\infty \,.\]</div>
+<p class="sd-card-text">Somit divergiert die Reihe. Die Anwendung des Wurzel- sowie des Quotientenkriteriums erübrigt sich.</p>
+</div>
+</details></div>
+<div class="miniexercise admonition">
+<p class="admonition-title">Übung 3.4</p>
+<p>Bestimmen Sie den Konvergenzradius <span class="math notranslate nohighlight">\(r\)</span> der Potenzreihe</p>
+<div class="math notranslate nohighlight">
+\[\sum_{n=1}^{\infty}\frac{8^n}{n}\cdot(x-2)^n.\]</div>
+<p>Untersuchen Sie gegebenenfalls die Konvergenz im Randbereich und geben Sie den Konvergenzbereich an.</p>
+</div>
+<div class="minisolution toggle admonition">
+<p class="admonition-title">Lösung</p>
+<p>Konvergenzradius <span class="math notranslate nohighlight">\(r=\frac{1}{8}\)</span> und Konvergenzbereich: <span class="math notranslate nohighlight">\([\frac{15}{8}; \frac{17}{8})\)</span>, d.h. <span class="math notranslate nohighlight">\(\frac{15}{8} \leq x &lt; \frac{17}{8}\)</span></p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Lösungsweg<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Tipp bzw. Quelle der Aufgabe:  <a class="reference external" href="https://www.youtube.com/watch?v=gn8jCoSJb24">YouTube MathemaTrick – Konvergenzradius bestimmen</a></p>
+<p class="sd-card-text">Wir definieren <span class="math notranslate nohighlight">\(a_n := \frac{8^n}{n}\)</span>. Nach der Formel von Cauchy-Hadamard (Wurzelkriterium) wird der Konvergenzradius <span class="math notranslate nohighlight">\(r\)</span> berechnet als</p>
+<div class="math notranslate nohighlight">
+\[r = \lim_{n\rightarrow \infty} \frac{1}{\sqrt[n]{\left|a_n\right|}}\]</div>
+<p class="sd-card-text">Wir rechnen zuerst in einer Nebenrechnung</p>
+<div class="math notranslate nohighlight">
+\[\sqrt[n]{|a_n|} = \sqrt[n]{\left|\frac{8^n}{n}\right|} = \sqrt[n]{\frac{8^n}{n}} = \frac{\sqrt[n]{8^n}}{\sqrt[n]{n}} = \frac{8}{\sqrt[n]{n}}. \]</div>
+<p class="sd-card-text">Eingesetzt in die Wurzel-Formel ist dies</p>
+<div class="math notranslate nohighlight">
+\[r = \lim_{n\rightarrow \infty} \frac{1}{\sqrt[n]{\left|a_n\right|}} = \lim_{n\to \infty} \frac{\sqrt[n]{n}}{8} = \lim_{n\to\infty}\frac{n^{\frac{1}{n}}}{8} = \frac{1}{8}.\]</div>
+<p class="sd-card-text">Die Potenzreihe konvergiert absolut im Intervall <span class="math notranslate nohighlight">\((\frac{15}{8}; \frac{17}{8})\)</span>. Das Konvergenzverhalten an den Randpunkten muss jedoch gesondert untersucht werden.</p>
+<p class="sd-card-text">Durch das Einsetzen einer der Randpunkte in die Potenzreihe reduziert sich diese auf eine Zahlenreihe. Die Konvergenzfrage lässt sich dann mit einem passenden Konvergenz- oder Divergenzkriterium für Reihen angehen.</p>
+<p class="sd-card-text">Setzt man den linken Randpunkt <span class="math notranslate nohighlight">\(x=\frac{15}{9}\)</span> ein, so erhält man:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+\sum_{n=1}^{\infty} \frac{8^n}{n}\cdot\left(\frac{15}{8}-2\right)^n 
+&amp;= \sum_{n=1}^{\infty} \frac{8^n}{n}\cdot\left(-\frac{1}{8}\right)^n \\
+&amp;= \sum_{n=1}^{\infty} \frac{8^n}{n}\cdot \frac{(-1)^n}{8^n} 
++ \sum_{n=1}^{\infty} \frac{(-1)^n}{n}. 
+\end{align*}\]</div>
+<p class="sd-card-text">Diese Reihe konvergiert (gegen <span class="math notranslate nohighlight">\(-\ln(2)\)</span>), der linke Randpunkt gehört zum Konvergenzbereich.</p>
+<p class="sd-card-text">Setzt man den rechten Randpunkt <span class="math notranslate nohighlight">\(x=\frac{17}{8}\)</span> ein, so erhält man:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+\sum_{n=1}^\infty \frac{8^n}{n}\cdot\left(\frac{17}{8}-2\right)^n 
+&amp;= \sum_{n=1}^{\infty} \frac{8^n}{n}\cdot\left(\frac{1}{8}\right)^n \\
+&amp;= \sum_{n=1}^{\infty} \frac{8^n}{n}\cdot\frac{1^n}{8^n} \\
+&amp; = \sum_{n=1}^{\infty} \frac{1}{n}.
+\end{align*}\]</div>
+<p class="sd-card-text">Diese Reihe divergiert, der rechte Randpunkt gehört <em>nicht</em> zum Konvergenzbereich.</p>
+<p class="sd-card-text">Antwort: Konvergenzradius <span class="math notranslate nohighlight">\(r=\frac{1}{8}\)</span> und Konvergenzbereich: <span class="math notranslate nohighlight">\([\frac{15}{8}; \frac{17}{8})\)</span>, d.h. <span class="math notranslate nohighlight">\(\frac{15}{8} \leq x &lt; \frac{17}{8}\)</span></p>
+</div>
+</details></div>
 </section>
 
     <script type="text/x-thebe-config">

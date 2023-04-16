@@ -55,10 +55,12 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="3.4 Konvergenz von Potenzreihen" href="chapter03_sec04.html" />
-    <link rel="prev" title="3.2 Konvergenz von Reihen" href="chapter03_sec02.html" />
+    <link rel="prev" title="3.2 Konvergenzkriterien für Reihen" href="chapter03_sec02.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -217,7 +219,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="chapter03_sec02.html">
-     3.2 Konvergenz von Reihen
+     3.2 Konvergenzkriterien für Reihen
     </a>
    </li>
    <li class="toctree-l2 current active">
@@ -468,6 +470,11 @@ title="Print to PDF"
    Lernziele
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#potenzreihen-sind-auch-nur-reihen-aber-reihen-von-potenzfunktionen">
+   Potenzreihen sind auch nur Reihen, aber Reihen von Potenzfunktionen
+  </a>
+ </li>
 </ul>
 
     </nav>
@@ -492,6 +499,11 @@ title="Print to PDF"
    Lernziele
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#potenzreihen-sind-auch-nur-reihen-aber-reihen-von-potenzfunktionen">
+   Potenzreihen sind auch nur Reihen, aber Reihen von Potenzfunktionen
+  </a>
+ </li>
 </ul>
 
                         </nav>
@@ -504,35 +516,78 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="potenzreihen">
 <h1>3.3 Potenzreihen<a class="headerlink" href="#potenzreihen" title="Permalink to this headline">#</a></h1>
-<div class="warning admonition">
-<p class="admonition-title">Warnung</p>
-<p>Achtung, dieser Abschnitt des Vorlesungsskriptes wird gerade überarbeitet!!!</p>
-</div>
+<p>Polynome haben schöne Eigenschaften, vor allem sind sie einfach abzuleiten oder
+zu integrieren. In der Praxis ist es daher oft sinnvoll, “schwierige” Funktionen
+durch Polynome zu ersetzen, auch wenn man dafür Fehler macht.</p>
+<p>Diese Vorgehensweise wird <strong>Approximation</strong> genannt, zu deutsch Annäherung. Für
+Zahlen haben Sie dies schon kennengelernt. Wenn Sie beispielsweise den
+Flächeninhalt <span class="math notranslate nohighlight">\(A\)</span> eines Kreises mit Radius <span class="math notranslate nohighlight">\(r = 3 \,\text{m}\)</span> berechnen wollen,
+so gilt <span class="math notranslate nohighlight">\(A = \pi \cdot r^2 = 9\pi\)</span>. Da aber <span class="math notranslate nohighlight">\(\pi\)</span> unendlich viele
+Nachkommastellen hat, legen Sie fest, wie genau die Annäherung an den wahren
+Flächeninhalt sein soll, indem Sie die Anzahl der Nachkommastellen festlegen.
+Reichen Ihnen beispielsweise zwei Nachkommastellen, also <span class="math notranslate nohighlight">\(\pi \approx 3.14\)</span>, so
+erhalten Sie <span class="math notranslate nohighlight">\(A = 28.27 \,\text{m}^2\)</span>.</p>
+<p>In diesem Kapitel geht es um Potenzreihen und die Approximation von Funktionen durch Potenzreihen.</p>
 <section id="lernziele">
 <h2>Lernziele<a class="headerlink" href="#lernziele" title="Permalink to this headline">#</a></h2>
 <div class="tip admonition">
 <p class="admonition-title">Lernziele</p>
 <ul class="simple">
-<li><p>Sie können den Fachbegriff <strong>Reihe</strong> erklären.</p></li>
-<li><p>Sie können den Fachbegriff <strong>Partialsumme</strong> einer Reihe erklären.</p></li>
-<li><p>Sie kennen als Beispiel für Reihen die</p>
-<ul>
-<li><p><strong>geometrische Reihe</strong> und</p></li>
-<li><p><strong>harmonische Reihe</strong>.</p></li>
+<li><p>Sie können erklären, was eine <strong>Potenzreihe</strong> (im Gegensatz zu einer Reihe) ist.</p></li>
+<li><p>Sie können die <strong>spezielle Darstellungsform einer Potenzreihe</strong> auswendig aufschreiben:</p></li>
 </ul>
-</li>
-<li><p>Sie können den Fachbegriff <strong>alternierende Reihe</strong> erklären.</p></li>
-<li><p>Sie können den Fachbegriff <strong>Konvergenz</strong> einer Reihe erklären.</p></li>
-<li><p>Sie können mit den <strong>Konvergenzkriterien</strong> überprüfen, ob eine Reihe konvergiert, indem Sie die folgenden Kriterien anwenden können:</p>
-<ul>
-<li><p><strong>Leibniz-Kriterium für alternierende Reihen</strong>,</p></li>
-<li><p><strong>Quotientenkriterium</strong> oder</p></li>
-<li><p><strong>Wurzelkriterium</strong>.</p></li>
+<div class="math notranslate nohighlight">
+\[p(x)=\sum_{k=0}^{\infty} a_k x^k\]</div>
+<ul class="simple">
+<li><p>Sie können die <strong>allgemeine Darstellungsform einer Potenzreihe</strong></p></li>
 </ul>
-</li>
-<li><p>Sie können den Fachbegriff <strong>absolut konvergente Reihe</strong> erklären.</p></li>
-</ul>
+<div class="math notranslate nohighlight">
+\[p(x)=\sum_{k=0}^{\infty} a_k (x-x_0)^k\]</div>
+<p>auswendig aufschreiben und erklären, was ein <strong>Entwicklungspunkt</strong> <span class="math notranslate nohighlight">\(x_0\)</span> ist.</p>
 </div>
+</section>
+<section id="potenzreihen-sind-auch-nur-reihen-aber-reihen-von-potenzfunktionen">
+<h2>Potenzreihen sind auch nur Reihen, aber Reihen von Potenzfunktionen<a class="headerlink" href="#potenzreihen-sind-auch-nur-reihen-aber-reihen-von-potenzfunktionen" title="Permalink to this headline">#</a></h2>
+<p>Bisher haben wir Zahlenfolgen aufsummiert und die Folge der Partialsummen als
+Reihe bezeichnet. Nun summieren wir Potenzfunktionen auf. Zur Erinnerung,
+Potenzfunktionen (manchmal auch kurz als Potenz bezeichnet) sind die Funktionen</p>
+<div class="math notranslate nohighlight">
+\[1, x^1, x^2, x^3, \ldots.\]</div>
+<p>Eine <strong>Potenzreihe</strong> ist eine Reihe vom Typ</p>
+<div class="math notranslate nohighlight">
+\[p(x)=a_0 + a_1x + a_2x^2 + a_3 x^3 + \ldots = \sum_{k=0}^{\infty}a_k x^k.\]</div>
+<p>Die reellen Zahlen <span class="math notranslate nohighlight">\(a_0, a_1, a_2, \ldots\)</span> nennt man <strong>Koeffizienten</strong> der Potenzreihe.</p>
+<p>Die Potenzfunktionen <span class="math notranslate nohighlight">\(x, x^2, x^3, \ldots\)</span> gehen alle durch den Punkt <span class="math notranslate nohighlight">\((0,0)\)</span>
+den Koordinatenursprung. Damit verbunden sind auch spezielle
+Symmetrieeigenschaften. Beispielsweise sind die Potenzfunktionen <span class="math notranslate nohighlight">\(x, x^3, x^5,
+x^7, \ldots\)</span> punktsymmetrisch zu <span class="math notranslate nohighlight">\((0,0)\)</span>. Und die Potenzfunktionen mit geraden
+Exponenten <span class="math notranslate nohighlight">\(x^2, x^4, x^6, \ldots\)</span> sind symmetrisch zur y-Achse. Wenn nicht den
+Koordinatenursprung so im Mittelpunkt stehen soll, sondern beispielsweise der
+Punkt <span class="math notranslate nohighlight">\((x_0,y_0)\)</span>, müssen wir die Potenzfunktionen leicht modifizieren. Durch
+Additionn von y_0 werden die Potenzfunktionen nach oben (wenn <span class="math notranslate nohighlight">\(y_0 &gt; 0\)</span>) oder
+unten (wenn <span class="math notranslate nohighlight">\(y_0 &lt; 0\)</span>) verschoben. In der Potenzreihe gibt es schon so einen
+Summanden, nämlich <span class="math notranslate nohighlight">\(a_0\)</span>. Also brauchen wir nur <span class="math notranslate nohighlight">\(a_0=y_0\)</span> setzen, damit nun die
+Symmetrie/Punktsymmetrie sich auf den Punkt <span class="math notranslate nohighlight">\((0, y_0)\)</span> bezieht.</p>
+<p>Als nächstes möchten wir aber die Potenzfunktionen noch so modifizieren, dass
+die Punktsymmetrie bzw. Symmetrie der Potenzfunktionen sich auf die x-Koordinate
+<span class="math notranslate nohighlight">\(x_0\)</span> bezieht. Dazu müssen wir von jedem <span class="math notranslate nohighlight">\(x\)</span> den Wert <span class="math notranslate nohighlight">\(x_0\)</span> abziehen und dann
+die Potenz bilden, also <span class="math notranslate nohighlight">\((x-x_0)^k\)</span> verwenden.</p>
+<div class="admonition-was-ist-eine-potenzreihe admonition">
+<p class="admonition-title">Was ist … eine Potenzreihe?</p>
+<p>Eine <strong>Potenzreihe</strong> ist eine Reihe vom Typ</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+p(x) &amp;= a_0 + a_1\cdot(x-x_0) + a_2\cdot(x-x_0)^2 + a_3\cdot(x-x_0)^3 + \ldots = \\
+     &amp;= \sum_{k=0}^{\infty} a_k \cdot (x-x_0)^k.
+\end{align*}\]</div>
+<p>Die reellen Zahlen <span class="math notranslate nohighlight">\(a_0, a_1, a_2, \ldots\)</span> nennt man <strong>Koeffizienten</strong> der Potenzreihe. Der Punkt <span class="math notranslate nohighlight">\(x_0\)</span> wird <strong>Entwicklungspunkt</strong> genannt.</p>
+</div>
+<p>Dabei wird der spezielle Punkt <span class="math notranslate nohighlight">\(x_0\)</span> in der Industrie <strong>Arbeitspunkt</strong> genannt,
+in der Mathematik sagen wir aber Entwicklungspunkt oder Entwicklungsstelle. Der
+Wert <span class="math notranslate nohighlight">\(y_0 =  a_0\)</span> hat keinen besonderen Namen.</p>
+<p>Übrigens: Nur weil die Potenzfunktionen symmetrisch oder punktsymmetrisch zum
+Entwicklungspunkt sind, heißt das nicht, dass die Summe der Potenzfunktionen
+irgendeine Symmetrieeigenschaft besitzt.</p>
 </section>
 </section>
 
@@ -567,7 +622,7 @@ title="Print to PDF"
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">3.2 Konvergenz von Reihen</p>
+            <p class="prev-next-title">3.2 Konvergenzkriterien für Reihen</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="chapter03_sec04.html" title="next page">

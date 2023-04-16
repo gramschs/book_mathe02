@@ -55,6 +55,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Übungen" href="chapter03_sec05.html" />
@@ -217,7 +219,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="chapter03_sec02.html">
-     3.2 Konvergenz von Reihen
+     3.2 Konvergenzkriterien für Reihen
     </a>
    </li>
    <li class="toctree-l2">
@@ -468,6 +470,21 @@ title="Print to PDF"
    Lernziele
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#manchmal-kann-man-eine-funktion-mit-einer-potenzreihe-approximieren-manchmal-nicht">
+   Manchmal kann man eine Funktion mit einer Potenzreihe approximieren, manchmal nicht
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#konvergenzradius">
+   Konvergenzradius
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#formeln-zur-berechnung-des-konvergenzradius">
+   Formeln zur Berechnung des Konvergenzradius
+  </a>
+ </li>
 </ul>
 
     </nav>
@@ -492,6 +509,21 @@ title="Print to PDF"
    Lernziele
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#manchmal-kann-man-eine-funktion-mit-einer-potenzreihe-approximieren-manchmal-nicht">
+   Manchmal kann man eine Funktion mit einer Potenzreihe approximieren, manchmal nicht
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#konvergenzradius">
+   Konvergenzradius
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#formeln-zur-berechnung-des-konvergenzradius">
+   Formeln zur Berechnung des Konvergenzradius
+  </a>
+ </li>
 </ul>
 
                         </nav>
@@ -504,36 +536,97 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="konvergenz-von-potenzreihen">
 <h1>3.4 Konvergenz von Potenzreihen<a class="headerlink" href="#konvergenz-von-potenzreihen" title="Permalink to this headline">#</a></h1>
-<div class="warning admonition">
-<p class="admonition-title">Warnung</p>
-<p>Achtung, dieser Abschnitt des Vorlesungsskriptes wird gerade überarbeitet!!!</p>
-</div>
 <section id="lernziele">
 <h2>Lernziele<a class="headerlink" href="#lernziele" title="Permalink to this headline">#</a></h2>
 <div class="tip admonition">
 <p class="admonition-title">Lernziele</p>
 <ul class="simple">
-<li><p>Sie können den Fachbegriff <strong>Reihe</strong> erklären.</p></li>
-<li><p>Sie können den Fachbegriff <strong>Partialsumme</strong> einer Reihe erklären.</p></li>
-<li><p>Sie kennen als Beispiel für Reihen die</p>
-<ul>
-<li><p><strong>geometrische Reihe</strong> und</p></li>
-<li><p><strong>harmonische Reihe</strong>.</p></li>
+<li><p>Sie können erklären, was der <strong>Konvergenzbereich</strong> einer Potenzreihe ist.</p></li>
+<li><p>Sie können den Konvergenzbereich einer Potenzreihe geometrisch interpretieren und anhand des <strong>Konvergenzradius</strong> entscheiden, ob eine Potenzreihe konvergiert oder divergiert oder berechnen, was in den <strong>Randpunkten</strong> passiert.</p></li>
+<li><p>Sie kennen zwei Formeln auswendig, um den Konvergenzradius <span class="math notranslate nohighlight">\(r\)</span> einer Potenzreihe zu berechnen, nämlich</p></li>
 </ul>
-</li>
-<li><p>Sie können den Fachbegriff <strong>alternierende Reihe</strong> erklären.</p></li>
-<li><p>Sie können den Fachbegriff <strong>Konvergenz</strong> einer Reihe erklären.</p></li>
-<li><p>Sie können mit den <strong>Konvergenzkriterien</strong> überprüfen, ob eine Reihe konvergiert, indem Sie die folgenden Kriterien anwenden können:</p>
-<ul>
-<li><p><strong>Leibniz-Kriterium für alternierende Reihen</strong>,</p></li>
-<li><p><strong>Quotientenkriterium</strong> oder</p></li>
-<li><p><strong>Wurzelkriterium</strong>.</p></li>
-</ul>
-</li>
-<li><p>Sie können den Fachbegriff <strong>absolut konvergente Reihe</strong> erklären.</p></li>
-</ul>
+<div class="math notranslate nohighlight">
+\[r = \lim_{k\to\infty}\left| \frac{a_k}{a_{k+1}}\right| \quad \text{ und } \quad r = \lim_{k\to\infty}\frac{1}{\sqrt[k]{|a_k|}},\]</div>
+<p>und können diese auch anwenden.</p>
 </div>
 </section>
+<section id="manchmal-kann-man-eine-funktion-mit-einer-potenzreihe-approximieren-manchmal-nicht">
+<h2>Manchmal kann man eine Funktion mit einer Potenzreihe approximieren, manchmal nicht<a class="headerlink" href="#manchmal-kann-man-eine-funktion-mit-einer-potenzreihe-approximieren-manchmal-nicht" title="Permalink to this headline">#</a></h2>
+<p>Experiment:</p>
+<ol class="simple">
+<li><p>Gehen Sie mit Ihrem Mauszeiger auf das GeoGebra-Applet <a class="reference external" href="https://www.geogebra.org/m/s9SkCsvC">Taylor polynomial
+graphs</a> und klicken Sie darauf (ggf. auf
+den Pfeil klicken), um es zu aktivieren.</p></li>
+<li><p>Schauen Sie sich zunächst die Approximation der Kosinusfunktion an. Schieben
+Sie den Slider für n von 1 bis 30 und beobachten Sie? Ab wann ist Ihrer
+Meinung nach die Potenzreihe eine gute Approximation der Kosinusfunktion?</p></li>
+<li><p>Ändern Sie jetzt die Funktion und geben Sie <code class="docutils literal notranslate"><span class="pre">f(x)</span> <span class="pre">=</span> <span class="pre">ln(x)</span></code> ein. Schieben Sie
+den Schieberegler wieder von 1 bis 30. Was beobachten Sie diesmal?</p></li>
+</ol>
+<p>Für jedes x wird die Summe <span class="math notranslate nohighlight">\(\sum_{k=0}^{\infty} a_k (x-x_0)^k\)</span> einen anderen
+Grenzwert annehmen, sofern der Grenzwert überhaupt existiert. Diejenigen x, für
+die die Folge der Partialsummen konvergiert, nennen wir Konvergenzbereich.</p>
+<div class="admonition-was-ist-der-konvergenzbereich-einer-potenzreihe admonition">
+<p class="admonition-title">Was ist … der Konvergenzbereich einer Potenzreihe?</p>
+<p>Die Menge aller Zahlen <span class="math notranslate nohighlight">\(x\)</span>, für die die spezielle Potenzreihe</p>
+<div class="math notranslate nohighlight">
+\[p(x) = \sum_{k=0}^{\infty} a_k x^k\]</div>
+<p>konvergiert, wird <strong>Konvergenzbereich</strong> genannt.</p>
+</div>
+</section>
+<section id="konvergenzradius">
+<h2>Konvergenzradius<a class="headerlink" href="#konvergenzradius" title="Permalink to this headline">#</a></h2>
+<p>Wenn man den Konvergenzbereich von Potenzfunktionen näher untersucht, stellt man
+fest, dass der Konvergenzbereich ein Intervall ist, in dessen Mitte die 0 liegt.
+Das Intervall ist symmetrisch zur Null, kann also als <span class="math notranslate nohighlight">\((-r, +r)\)</span> dargestellt
+werden. Die Zahl <span class="math notranslate nohighlight">\(r\)</span> wird als <strong>Konvergenzradius</strong> bezeichnet.</p>
+<p>Wenn <span class="math notranslate nohighlight">\(x &lt; -r\)</span> ist oder <span class="math notranslate nohighlight">\(r &lt; r\)</span> ist, dann divergiert die Potenzreihe. Was
+passiert, wenn <span class="math notranslate nohighlight">\(x = -r\)</span> ist oder <span class="math notranslate nohighlight">\(x = +r\)</span> gilt, ist nicht klar. Diese
+sogenannten Randpunkte des Konvergenzbereichs müssen gesondert untersucht
+werden.</p>
+<p>Betrachten wir nicht eine spezielle Potenzreihe sondern eine allgemeine
+Potenzreihe</p>
+<div class="math notranslate nohighlight">
+\[p(x) = \sum_{k=0}^{\infty} a_k (x - x_0)^k,\]</div>
+<p>dann ist nicht die 0 in der Mitte des Konvergenzbereichs, sondern <span class="math notranslate nohighlight">\(x_0\)</span>. Der
+Konvergenzbereich ist dann <span class="math notranslate nohighlight">\((-r + x_0, +r + x_0)\)</span>.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Video Konvergenzradius (von Prof. Hoever)<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/69PgueE9CI0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+</details></section>
+<section id="formeln-zur-berechnung-des-konvergenzradius">
+<h2>Formeln zur Berechnung des Konvergenzradius<a class="headerlink" href="#formeln-zur-berechnung-des-konvergenzradius" title="Permalink to this headline">#</a></h2>
+<p>Die beiden folgenden Videos zeigen, wie die beiden Formeln</p>
+<ul class="simple">
+<li><p>Wurzelkriterium</p></li>
+<li><p>Quotientenkriterium</p></li>
+</ul>
+<p>zur Berechnung des Konvergenzradius funktionieren.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Video Wurzel-Formel bei Konvergenzradius (von Prof. Hoever)<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/yO2mP5aToMU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Video Quotienten-Formel bei Konvergenzradius (von Prof. Hoever)<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ConZiKDKA9Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+</details></section>
 </section>
 
     <script type="text/x-thebe-config">
