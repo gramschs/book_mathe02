@@ -125,7 +125,7 @@ s_n &= a_1 + a_2 + \dots + a_n = a_1 + a_1 \cdot q + \ldots + a_1 \cdot q^{n-1}
 ```{admonition} Was ist ... die geometrische Reihe?
 Die geometrische Reihe ist die Folge $(s_n)$ der Partialsummen
 
-$$s_n = 1 + q + q^2 + q^3 + \ldots + q^{n-1} = \sum{k=0}^{n} q^{k}.$$
+$$s_n = 1 + q + q^2 + q^3 + \ldots + q^{n-1} = \sum_{k=0}^{n} q^{k}.$$
 ```
 
 Falls Sie sich wundern, dass wir diesmal mit $k=0$ als Index anfangen, das ist
