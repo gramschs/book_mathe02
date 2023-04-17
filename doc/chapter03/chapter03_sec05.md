@@ -149,4 +149,13 @@ Antwort: Konvergenzradius $r=\frac{1}{8}$ und Konvergenzbereich: $[\frac{15}{8};
 ```
 ````
 
+## Weitere Übungsaufgaben
+
+Für weitere Übungsaufgaben steht Ihnen der MATEX-Übungsaufgaben-Generator zur
+Verfügung. Wählen Sie bei der Konvergenz von Reihen die Stufe "geometrische
+Reihe". Bei der Konvergenz von Potenzreihen sollten Sie das Level "Mit der
+geometrischen Reihe verwandte Potenzreihen" wählen.
+
+* [Aufgaben Konvergenz von Reihen](https://lx4.mint-kolleg.kit.edu/MATeX/generatorview.php?data=NUxMamNmMHpNU2FrUnp5R2FkVkpTdz09)
+* [Aufgaben Konvergenz von Potenzreihen](https://lx4.mint-kolleg.kit.edu/MATeX/generatorview.php?data=aXYvV0xpZW0rSGJHUHgrQm1TZnlVdz09)
 
