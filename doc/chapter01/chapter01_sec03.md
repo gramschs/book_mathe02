@@ -50,14 +50,14 @@ $$u^{\prime}(x) = 2 \quad \text{ und } \quad v(x)=-\cos(x).$$
 
 Das wird alles in die obige Formel eingesetzt:
 
-$$\int_{0}^{\pi} \sin(x)\cdot 2x \, dx = \big[2x \cdot \cos(x)\big]_{0}^{\pi} -
+$$\int_{0}^{\pi} \sin(x)\cdot 2x \, dx = \big[2x \cdot \left(-\cos(x)\right)\big]_{0}^{\pi} -
 \int_{0}^{\pi} 2 \cdot (-\cos(x)) \, dx.$$
 
 Aber von der Funktion $v(x)=-\cos(x)$ kennen wir ebenfalls eine Stammfunktion,
 nämlich $V(x)=-\sin(x)$. Daher kann das bestimmte Integral $\int_{0}^{\pi} 2
 \cdot (-\cos(x)) \, dx$ noch weiter ausgerechnet werden und insgesamt gilt dann:
 
-$$\int_{0}^{\pi} \sin(x)\cdot 2x \, dx = \big[2x \cdot \cos(x)\big]_{0}^{\pi} -
+$$\int_{0}^{\pi} \sin(x)\cdot 2x \, dx = \big[2x \cdot \left(-\cos(x)\right)\big]_{0}^{\pi} -
 2 \big[-\sin(x)\big]_{0}^{\pi}.$$
 
 Jetzt werden obere und untere Grenze eingesetzt und die Differenz gebildet. Das
