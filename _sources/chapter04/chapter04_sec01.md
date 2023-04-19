@@ -36,8 +36,6 @@ T_n(x) &=f(x_0) + \frac{f'(x_0)}{1!}(x-x_0)^1 + \frac{f''(x_0)}{2!}(x-x_0)^2 + \
 Dabei steht $k!$ für die Fakultät der Zahl $k$.
 ```
 
-
-
 ## Kochrezept zur Berechnung von Taylorpolynomen
 
 1. Erst einmal folgende Frage beantworten: Bis zu welchem Polynomgrad $n$ soll die Funktion $f(x)$ approximiert werden? $\rightarrow n$ aufschreiben
@@ -52,32 +50,17 @@ Am besten das folgende Video gucken :-)
 <iframe width="560" height="315" src="https://www.youtube.com/embed/o95cOqnLekw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 ```
 
-## Taylor-Restglied 
-
-Wenn wir ein Taylorpolynom zu einer Funktion vorliegen haben, wäre es gut zu wissen, wie gut unsere Approximation ist. Die Formel mit dem sogenannten Taylor-Restglied 
-
-$$f(x) = T_n(x) + \frac{1}{(n+1)!}f^{(n+1)}(u)\cdot(x-x_0)^{n+1},$$
-
-hilft uns dabei, denn jetzt können wir den Fehler abschätzen als
-
-$$|f(x)-T_n(x)| = |\frac{1}{(n+1)!}f^{(n+1)}(u)\cdot(x-x_0)^{n+1}|.$$
-
-
-
-Leider ist die Formel nicht ganz so einfach anzuwenden, denn es steckt ein $u$ darin, das nicht genau spezifiziert ist. $u$ ist irgendeine Stelle zwischen dem Entwicklungspunkt $x_0$ und $x$, die man nicht genau kennt. Aber wir können in diesem Bereich einfach das Maximum $M$ von $f^{(n+1)}(u)$ für alle Punkte zwischen $x_0$ und $x$ bilden und dann als Abschätzung das Maximum verwenden:
-
-$$|f(x)-T_n(x)| \leq \frac{1}{(n+1)!}\cdot M \cdot |x-x_0|^{n+1}.$$
- 
-Eine Erklärung dazu finden Sie in dem folgenden Video.
-
-```{admonition} Video
-:class: seealso
-https://www.youtube.com/embed/oz1hejsyNlk
-```
-
 ## Taylorreihe
 
-Und was ist nun die Taylorreihe? Ganz einfach, ein Taylorpolynom, das bis Unendlich geht, sieht nur kompliziert aus, wenn man es formal aufschreibt:
+Und was ist nun die Taylorreihe? Ganz einfach, ein Taylorpolynom, das bis
+Unendlich geht, sieht nur kompliziert aus, wenn man es formal aufschreibt.
 
-$$T(x)=\sum_{i=0}^{\infty} \frac{f^{(n)}(x_0)}{n!} (x-x_0)^n.$$
+```{admonition} Was ist ... eine Taylorreihe?
+Zu einer Funktion $f$, die unendlich oft differenzierbar ist, kann die folgende Potenzreihe
+
+$$T(x)=\sum_{k=0}^{\infty} \frac{f^{(k)}(x_0)}{k!} (x-x_0)^k$$
+
+gebildet werden. Diese Potenzreihe wird Taylorreihe zu $f$ am Entwicklungspunkt $x_
+0$ genannt.
+```
 

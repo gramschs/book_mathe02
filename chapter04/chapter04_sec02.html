@@ -55,6 +55,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="4.3 Wichtige Potenzreihen" href="chapter04_sec03.html" />
@@ -468,12 +470,36 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#taylor-restglied">
+   Taylor-Restglied
+  </a>
+ </li>
+</ul>
+
+    </nav>
 </div>
     </div>
     <div class="article row">
@@ -485,6 +511,19 @@ title="Print to PDF"
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#taylor-restglied">
+   Taylor-Restglied
+  </a>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -499,6 +538,23 @@ title="Print to PDF"
 <p>Achtung, dieser Abschnitt des Vorlesungsskriptes wird gerade überarbeitet!!!</p>
 </div>
 <p>TODO</p>
+<section id="taylor-restglied">
+<h2>Taylor-Restglied<a class="headerlink" href="#taylor-restglied" title="Permalink to this headline">#</a></h2>
+<p>Wenn wir ein Taylorpolynom zu einer Funktion vorliegen haben, wäre es gut zu wissen, wie gut unsere Approximation ist. Die Formel mit dem sogenannten Taylor-Restglied</p>
+<div class="math notranslate nohighlight">
+\[f(x) = T_n(x) + \frac{1}{(n+1)!}f^{(n+1)}(u)\cdot(x-x_0)^{n+1},\]</div>
+<p>hilft uns dabei, denn jetzt können wir den Fehler abschätzen als</p>
+<div class="math notranslate nohighlight">
+\[|f(x)-T_n(x)| = |\frac{1}{(n+1)!}f^{(n+1)}(u)\cdot(x-x_0)^{n+1}|.\]</div>
+<p>Leider ist die Formel nicht ganz so einfach anzuwenden, denn es steckt ein <span class="math notranslate nohighlight">\(u\)</span> darin, das nicht genau spezifiziert ist. <span class="math notranslate nohighlight">\(u\)</span> ist irgendeine Stelle zwischen dem Entwicklungspunkt <span class="math notranslate nohighlight">\(x_0\)</span> und <span class="math notranslate nohighlight">\(x\)</span>, die man nicht genau kennt. Aber wir können in diesem Bereich einfach das Maximum <span class="math notranslate nohighlight">\(M\)</span> von <span class="math notranslate nohighlight">\(f^{(n+1)}(u)\)</span> für alle Punkte zwischen <span class="math notranslate nohighlight">\(x_0\)</span> und <span class="math notranslate nohighlight">\(x\)</span> bilden und dann als Abschätzung das Maximum verwenden:</p>
+<div class="math notranslate nohighlight">
+\[|f(x)-T_n(x)| \leq \frac{1}{(n+1)!}\cdot M \cdot |x-x_0|^{n+1}.\]</div>
+<p>Eine Erklärung dazu finden Sie in dem folgenden Video.</p>
+<div class="seealso admonition">
+<p class="admonition-title">Video</p>
+<p><a class="reference external" href="https://www.youtube.com/embed/oz1hejsyNlk">https://www.youtube.com/embed/oz1hejsyNlk</a></p>
+</div>
+</section>
 </section>
 
     <script type="text/x-thebe-config">

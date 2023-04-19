@@ -75,7 +75,7 @@ $$\frac{1}{6} \int_{0}^{1} \sqrt{1+3x^2}\cdot 6x \, dx =
 
 Die Wurzelfunktion zu integrieren ist aber nicht so schwer, also
 
-$$ \frac{1}{6} \int_{0}^{4} \sqrt{z} \, dz = \frac{1}{6} \big[
+$$ \frac{1}{6} \int_{1}^{4} \sqrt{z} \, dz = \frac{1}{6} \big[
 \frac{2}{3}z^{\frac{3}{2}} \big] = \frac{1}{9} \big( 4^{\frac{3}{2}} -
 1^{\frac{3}{2}}\big) = \frac{7}{9}.$$
 

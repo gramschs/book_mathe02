@@ -508,11 +508,6 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#taylor-restglied">
-   Taylor-Restglied
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#taylorreihe">
    Taylorreihe
   </a>
@@ -549,11 +544,6 @@ title="Print to PDF"
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#kochrezept-zur-berechnung-von-taylorpolynomen">
    Kochrezept zur Berechnung von Taylorpolynomen
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#taylor-restglied">
-   Taylor-Restglied
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -627,28 +617,18 @@ Video zu “Taylorpolynom berechnen” von Mathematrick<div class="sd-summary-do
 <iframe width="560" height="315" src="https://www.youtube.com/embed/o95cOqnLekw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </div>
 </details></section>
-<section id="taylor-restglied">
-<h2>Taylor-Restglied<a class="headerlink" href="#taylor-restglied" title="Permalink to this headline">#</a></h2>
-<p>Wenn wir ein Taylorpolynom zu einer Funktion vorliegen haben, wäre es gut zu wissen, wie gut unsere Approximation ist. Die Formel mit dem sogenannten Taylor-Restglied</p>
-<div class="math notranslate nohighlight">
-\[f(x) = T_n(x) + \frac{1}{(n+1)!}f^{(n+1)}(u)\cdot(x-x_0)^{n+1},\]</div>
-<p>hilft uns dabei, denn jetzt können wir den Fehler abschätzen als</p>
-<div class="math notranslate nohighlight">
-\[|f(x)-T_n(x)| = |\frac{1}{(n+1)!}f^{(n+1)}(u)\cdot(x-x_0)^{n+1}|.\]</div>
-<p>Leider ist die Formel nicht ganz so einfach anzuwenden, denn es steckt ein <span class="math notranslate nohighlight">\(u\)</span> darin, das nicht genau spezifiziert ist. <span class="math notranslate nohighlight">\(u\)</span> ist irgendeine Stelle zwischen dem Entwicklungspunkt <span class="math notranslate nohighlight">\(x_0\)</span> und <span class="math notranslate nohighlight">\(x\)</span>, die man nicht genau kennt. Aber wir können in diesem Bereich einfach das Maximum <span class="math notranslate nohighlight">\(M\)</span> von <span class="math notranslate nohighlight">\(f^{(n+1)}(u)\)</span> für alle Punkte zwischen <span class="math notranslate nohighlight">\(x_0\)</span> und <span class="math notranslate nohighlight">\(x\)</span> bilden und dann als Abschätzung das Maximum verwenden:</p>
-<div class="math notranslate nohighlight">
-\[|f(x)-T_n(x)| \leq \frac{1}{(n+1)!}\cdot M \cdot |x-x_0|^{n+1}.\]</div>
-<p>Eine Erklärung dazu finden Sie in dem folgenden Video.</p>
-<div class="seealso admonition">
-<p class="admonition-title">Video</p>
-<p><a class="reference external" href="https://www.youtube.com/embed/oz1hejsyNlk">https://www.youtube.com/embed/oz1hejsyNlk</a></p>
-</div>
-</section>
 <section id="taylorreihe">
 <h2>Taylorreihe<a class="headerlink" href="#taylorreihe" title="Permalink to this headline">#</a></h2>
-<p>Und was ist nun die Taylorreihe? Ganz einfach, ein Taylorpolynom, das bis Unendlich geht, sieht nur kompliziert aus, wenn man es formal aufschreibt:</p>
+<p>Und was ist nun die Taylorreihe? Ganz einfach, ein Taylorpolynom, das bis
+Unendlich geht, sieht nur kompliziert aus, wenn man es formal aufschreibt.</p>
+<div class="admonition-was-ist-eine-taylorreihe admonition">
+<p class="admonition-title">Was ist … eine Taylorreihe?</p>
+<p>Zu einer Funktion <span class="math notranslate nohighlight">\(f\)</span>, die unendlich oft differenzierbar ist, kann die folgende Potenzreihe</p>
 <div class="math notranslate nohighlight">
-\[T(x)=\sum_{i=0}^{\infty} \frac{f^{(n)}(x_0)}{n!} (x-x_0)^n.\]</div>
+\[T(x)=\sum_{k=0}^{\infty} \frac{f^{(k)}(x_0)}{k!} (x-x_0)^k\]</div>
+<p>gebildet werden. Diese Potenzreihe wird Taylorreihe zu <span class="math notranslate nohighlight">\(f\)</span> am Entwicklungspunkt <span class="math notranslate nohighlight">\(x_
+0\)</span> genannt.</p>
+</div>
 </section>
 </section>
 
