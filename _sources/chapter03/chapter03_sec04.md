@@ -45,7 +45,7 @@ fest, dass der Konvergenzbereich ein Intervall ist, in dessen Mitte die 0 liegt.
 Das Intervall ist symmetrisch zur Null, kann also als $(-r, +r)$ dargestellt
 werden. Die Zahl $r$ wird als **Konvergenzradius** bezeichnet. 
 
-Wenn $x < -r$ ist oder $r < r$ ist, dann divergiert die Potenzreihe. Was
+Wenn $x < -r$ ist oder $r < x$ ist, dann divergiert die Potenzreihe. Was
 passiert, wenn $x = -r$ ist oder $x = +r$ gilt, ist nicht klar. Diese
 sogenannten Randpunkte des Konvergenzbereichs müssen gesondert untersucht
 werden.
