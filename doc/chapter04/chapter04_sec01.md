@@ -37,7 +37,7 @@ Hier gibt es ein Video, das die Fakultät $k!$ erklärt.
 ```{dropdown} Video zu "Fakultät" von Mathematrick
 <iframe width="560" height="315" src="https://www.youtube.com/embed/nVdUcZmmU7w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 ```
-
+(ref04_sec01_kochrezept)=
 ## Kochrezept zur Berechnung von Taylorpolynomen
 
 1. Erst einmal folgende Frage beantworten: Bis zu welchem Polynomgrad $n$ soll
