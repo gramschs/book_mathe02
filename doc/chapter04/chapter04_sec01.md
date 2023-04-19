@@ -26,7 +26,7 @@ Ein **Taylorpolynom** zu einer Funktion $f$ kann nur gebildet werden, wenn die F
 
 \begin{align*}
 T_n(x) &=f(x_0) + \frac{f'(x_0)}{1!}(x-x_0)^1 + \frac{f''(x_0)}{2!}(x-x_0)^2 + \ldots \\
-       &=\sum_{k=0}^{n} \frac{f^{k}(x_0)}{k!} \cdot (x-x_0)^k.
+       &=\sum_{k=0}^{n} \frac{f^{(k)}(x_0)}{k!} \cdot (x-x_0)^k.
 \end{align*}
 
 Dabei steht $k!$ für die Fakultät der Zahl $k$.
