@@ -1,45 +1,40 @@
 # 4.1 Berechnung Taylorreihe
 
-TODO
+Im Kapitel über Potenzreihen haben wir uns bereits mit der Frage beschäftigt, in
+welchem Intervall eine Potenzreihe eine gegebene Funktion gut approximiert. Was
+uns aber noch fehlt ist die Frage, wie wir zu solchen Potenzreihen kommen. Daher
+gibt es in diesem Kapitel eine Anleitung dazu.
 
 ```{admonition} Warnung
 :class: warning
 Achtung, dieser Abschnitt des Vorlesungsskriptes wird gerade überarbeitet!!!
 ```
 
-Im Kapitel über Potenzreihen haben wir uns bereits mit der Frage beschäftigt, in welchem Intervall eine Potenzreihe eine gegebene Funktion gut approximiert. Was uns aber noch fehlt ist die Frage, wie wir zu solchen Potenzreihen kommen. Daher gibt es in diesem Kapitel eine Anleitung dazu.
-
-Um den Inhalt dieses Kapitels zu verstehen, werden Kentnisse über
-
-* Potenzreihen
-
-vorausgesetzt.
-
-
-## Lernziele Taylorreihen
+## Lernziele 
 
 ```{admonition} Lernziele
 :class: tip
 * Sie kennen die Formel für ein **Taylorpolynom der Ordnung n** auswendig.
-* Sie können mit der Formel für das **Taylor-Restglied** berechnen, wie groß der Fehler zwischen der Funktion $f$ und dem Taylorpolynom $T_n$ an einer bestimmten Stelle $x$ wird.
 * Sie kennen die Formel für die **Taylorreihe** auswendig.
 ```
 
 
 ## Taylorpolynom
 
-Taylorpolynome sind nichts anderes als eine Potenzreihe für eine Funktion $f(x)$, aber wir lernen hier ein Kochrezept kennen, um die Koeffizienten zu berechnen.
+Für Funktionen, die genügend oft differenzierbar sind, gibt es ein Kochrezept
+zur Berechnung der Koeffizienten dazugehörigen Potenzreihe. Um dieses Kochrezept
+anzuwenden, beschäftigen wir uns zunächst mit dem sogenannten Taylorpolynom.
 
-````{prf:definition}
-:label: def:04b:01
-Ein **Taylorpolynom** ist eine Potenzreihe für eine Funktion $f(x)$, bei der die Koeffizienten berechnet werden, indem die Entwicklungsstelle $x_0$ in die Ableitungen der Funktion eingesetzt werden, also
+```{admonition} Was ist ... ein Taylorpolynom?
+Ein **Taylorpolynom** zu einer Funktion $f$ kann nur gebildet werden, wenn die Funktion $f$ n-mal stetig differenzierbar ist. Wenn das aber der Fall ist, dann wird noch ein Entwicklungspunkt $x_0$ gewählt. Das Taylorpolynom $T_n$ zu $f$ vom Grad $n$ am Entwicklungspunkt $x_0$ ist dann:
 
-$$T(x)=f(x_0) + \frac{f'(x_0)}{1!}(x-x_0)^1 + \frac{f''(x_0)}{2!}(x-x_0)^2 + \ldots. $$
+\begin{align*}
+T_n(x) &=f(x_0) + \frac{f'(x_0)}{1!}(x-x_0)^1 + \frac{f''(x_0)}{2!}(x-x_0)^2 + \ldots \\
+       &=\sum_{k=0}^{n} \frac{f^{k}(x_0)}{k!} \cdot (x-x_0)^k.
+\end{align*}
 
-Dabei steht $n!$ für die Fakultät der Zahl $n$.
-````
-
-
+Dabei steht $k!$ für die Fakultät der Zahl $k$.
+```
 
 ## Kochrezept zur Berechnung von Taylorpolynomen
 
@@ -51,37 +46,21 @@ Dabei steht $n!$ für die Fakultät der Zahl $n$.
 
 Am besten das folgende Video gucken :-)
 
-```{admonition} Video
-:class: seealso
-https://www.youtube.com/embed/o95cOqnLekw
-```
-
-## Taylor-Restglied 
-
-Wenn wir ein Taylorpolynom zu einer Funktion vorliegen haben, wäre es gut zu wissen, wie gut unsere Approximation ist. Die Formel mit dem sogenannten Taylor-Restglied 
-
-$$f(x) = T_n(x) + \frac{1}{(n+1)!}f^{(n+1)}(u)\cdot(x-x_0)^{n+1},$$
-
-hilft uns dabei, denn jetzt können wir den Fehler abschätzen als
-
-$$|f(x)-T_n(x)| = |\frac{1}{(n+1)!}f^{(n+1)}(u)\cdot(x-x_0)^{n+1}|.$$
-
-
-
-Leider ist die Formel nicht ganz so einfach anzuwenden, denn es steckt ein $u$ darin, das nicht genau spezifiziert ist. $u$ ist irgendeine Stelle zwischen dem Entwicklungspunkt $x_0$ und $x$, die man nicht genau kennt. Aber wir können in diesem Bereich einfach das Maximum $M$ von $f^{(n+1)}(u)$ für alle Punkte zwischen $x_0$ und $x$ bilden und dann als Abschätzung das Maximum verwenden:
-
-$$|f(x)-T_n(x)| \leq \frac{1}{(n+1)!}\cdot M \cdot |x-x_0|^{n+1}.$$
- 
-Eine Erklärung dazu finden Sie in dem folgenden Video.
-
-```{admonition} Video
-:class: seealso
-https://www.youtube.com/embed/oz1hejsyNlk
+```{dropdown} Video zu "Taylorpolynom berechnen" von Mathematrick
+<iframe width="560" height="315" src="https://www.youtube.com/embed/o95cOqnLekw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 ```
 
 ## Taylorreihe
 
-Und was ist nun die Taylorreihe? Ganz einfach, ein Taylorpolynom, das bis Unendlich geht, sieht nur kompliziert aus, wenn man es formal aufschreibt:
+Und was ist nun die Taylorreihe? Ganz einfach, ein Taylorpolynom, das bis
+Unendlich geht, sieht nur kompliziert aus, wenn man es formal aufschreibt.
 
-$$T(x)=\sum_{i=0}^{\infty} \frac{f^{(n)}(x_0)}{n!} (x-x_0)^n.$$
+```{admonition} Was ist ... eine Taylorreihe?
+Zu einer Funktion $f$, die unendlich oft differenzierbar ist, kann die folgende Potenzreihe
+
+$$T(x)=\sum_{k=0}^{\infty} \frac{f^{(k)}(x_0)}{k!} (x-x_0)^k$$
+
+gebildet werden. Diese Potenzreihe wird Taylorreihe zu $f$ am Entwicklungspunkt $x_
+0$ genannt.
+```
 
