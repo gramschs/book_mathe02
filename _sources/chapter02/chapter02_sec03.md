@@ -45,7 +45,7 @@ $$\text{Bogenlänge} = \int_{a}^{b} \sqrt{1+(f'(x))^2}\, dx.$$
 
 ## Beispiel zur Berechnung der Bogenlänge
 
-Als nächstes betrachten wir die Funktion $f(x)=x^{\frac{3}{2}}$ für positive
+Als nächstes betrachten wir die Funktion $f(x)=x^{\frac{3}{2}}+1$ für positive
 reelle Zahlen $x\geq 0$. Wir wählen als
 
 * Start $a=1 \Rightarrow f(1)=1^{\frac{3}{2}}+1 =2$ und als
@@ -56,7 +56,7 @@ beinhaltet den Term $(f'(x))^{2}$, also das Quadrat der 1. Ableitung. Diesen
 Term berechnen wir vorab in einer Nebenrechnung. Zuerst wird die 1. Ableitung
 berechnet:
 
-$$f(x)=x^{\frac{3}{2}} \Rightarrow f'(x)= \frac{3}{2}x^{\frac{1}{2}} = \frac{3}{2}\sqrt{x}.$$
+$$f(x)=x^{\frac{3}{2}} + 1 \Rightarrow f'(x)= \frac{3}{2}x^{\frac{1}{2}} = \frac{3}{2}\sqrt{x}.$$
 
 Damit erhalten wir 
 
