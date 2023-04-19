@@ -567,10 +567,6 @@ title="Print to PDF"
 welchem Intervall eine Potenzreihe eine gegebene Funktion gut approximiert. Was
 uns aber noch fehlt ist die Frage, wie wir zu solchen Potenzreihen kommen. Daher
 gibt es in diesem Kapitel eine Anleitung dazu.</p>
-<div class="warning admonition">
-<p class="admonition-title">Warnung</p>
-<p>Achtung, dieser Abschnitt des Vorlesungsskriptes wird gerade überarbeitet!!!</p>
-</div>
 <section id="lernziele">
 <h2>Lernziele<a class="headerlink" href="#lernziele" title="Permalink to this headline">#</a></h2>
 <div class="tip admonition">
@@ -584,8 +580,9 @@ gibt es in diesem Kapitel eine Anleitung dazu.</p>
 <section id="taylorpolynom">
 <h2>Taylorpolynom<a class="headerlink" href="#taylorpolynom" title="Permalink to this headline">#</a></h2>
 <p>Für Funktionen, die genügend oft differenzierbar sind, gibt es ein Kochrezept
-zur Berechnung der Koeffizienten dazugehörigen Potenzreihe. Um dieses Kochrezept
-anzuwenden, beschäftigen wir uns zunächst mit dem sogenannten Taylorpolynom.</p>
+zur Berechnung der Koeffizienten der dazugehörigen Potenzreihe. Um dieses
+Kochrezept anzuwenden, beschäftigen wir uns zunächst mit dem sogenannten
+Taylorpolynom.</p>
 <div class="admonition-was-ist-ein-taylorpolynom admonition">
 <p class="admonition-title">Was ist … ein Taylorpolynom?</p>
 <p>Ein <strong>Taylorpolynom</strong> zu einer Funktion <span class="math notranslate nohighlight">\(f\)</span> kann nur gebildet werden, wenn die Funktion <span class="math notranslate nohighlight">\(f\)</span> n-mal stetig differenzierbar ist. Wenn das aber der Fall ist, dann wird noch ein Entwicklungspunkt <span class="math notranslate nohighlight">\(x_0\)</span> gewählt. Das Taylorpolynom <span class="math notranslate nohighlight">\(T_n\)</span> zu <span class="math notranslate nohighlight">\(f\)</span> vom Grad <span class="math notranslate nohighlight">\(n\)</span> am Entwicklungspunkt <span class="math notranslate nohighlight">\(x_0\)</span> ist dann:</p>
@@ -596,16 +593,57 @@ T_n(x) &amp;=f(x_0) + \frac{f'(x_0)}{1!}(x-x_0)^1 + \frac{f''(x_0)}{2!}(x-x_0)^2
 \end{align*}\]</div>
 <p>Dabei steht <span class="math notranslate nohighlight">\(k!\)</span> für die Fakultät der Zahl <span class="math notranslate nohighlight">\(k\)</span>.</p>
 </div>
-</section>
+<p>Hier gibt es ein Video, das die Fakultät <span class="math notranslate nohighlight">\(k!\)</span> erklärt.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Video zu “Fakultät” von Mathematrick<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/nVdUcZmmU7w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+</details></section>
 <section id="kochrezept-zur-berechnung-von-taylorpolynomen">
 <h2>Kochrezept zur Berechnung von Taylorpolynomen<a class="headerlink" href="#kochrezept-zur-berechnung-von-taylorpolynomen" title="Permalink to this headline">#</a></h2>
 <ol class="simple">
-<li><p>Erst einmal folgende Frage beantworten: Bis zu welchem Polynomgrad <span class="math notranslate nohighlight">\(n\)</span> soll die Funktion <span class="math notranslate nohighlight">\(f(x)\)</span> approximiert werden? <span class="math notranslate nohighlight">\(\rightarrow n\)</span> aufschreiben</p></li>
-<li><p>Die ersten <span class="math notranslate nohighlight">\(n\)</span> Ableitungen der Funktion <span class="math notranslate nohighlight">\(f\)</span> bestimmen, also <span class="math notranslate nohighlight">\(f'(x), f''(x), f'''(x), f^{(iv)}(x), \ldots\)</span>.</p></li>
-<li><p>Die Koeffizienten ausrechnen, indem nun der Entwicklungspunkt <span class="math notranslate nohighlight">\(x_0\)</span> in die Funktion <span class="math notranslate nohighlight">\(f\)</span> und in die Ableitungen eingesetzt wird.</p></li>
+<li><p>Erst einmal folgende Frage beantworten: Bis zu welchem Polynomgrad <span class="math notranslate nohighlight">\(n\)</span> soll
+die Funktion <span class="math notranslate nohighlight">\(f(x)\)</span> approximiert werden? <span class="math notranslate nohighlight">\(\rightarrow n\)</span> aufschreiben</p></li>
+<li><p>Die ersten <span class="math notranslate nohighlight">\(n\)</span> Ableitungen der Funktion <span class="math notranslate nohighlight">\(f\)</span> bestimmen, also <span class="math notranslate nohighlight">\(f'(x), f''(x),
+f'''(x), f^{(iv)}(x), \ldots\)</span>.</p></li>
+<li><p>Die Koeffizienten ausrechnen, indem nun der Entwicklungspunkt <span class="math notranslate nohighlight">\(x_0\)</span> in die
+Funktion <span class="math notranslate nohighlight">\(f\)</span> und in die Ableitungen eingesetzt wird.</p></li>
 <li><p>Die Fakultäten ausrechnen.</p></li>
 <li><p>Alles in die Formel für das Taylorpolynom einsetzen.</p></li>
 </ol>
+<p>Probieren wir das an einem Beispiel aus. Die Funktion <span class="math notranslate nohighlight">\(f(x)=\sin(x)\)</span> soll durch
+ein Taylorpolynom Grad 3 am Entwicklungspunkt <span class="math notranslate nohighlight">\(x_0=0\)</span> approximiert werden.</p>
+<p>Schritt 1: Wir halten fest, der Grad ist 3 (<span class="math notranslate nohighlight">\(n=3\)</span>), d.h. wir brauchen die
+ersten drei Ableitungen.</p>
+<p>Schritt 2: Wir bilden die ersten drei Ableitungen:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*} 
+f'(x)  &amp;= \cos(x) \\
+f''(x) &amp;= -\sin(x) \\
+f^{(3)}(x) &amp;= -\cos(x) \end{align*}\]</div>
+<p>Schritt 3: Wir rechnen die Koeffizienten des Taylorpolynoms aus, indem wir <span class="math notranslate nohighlight">\(x_0
+= 0\)</span> in die Funktion und die ersten drei Ableitungen einsetzen:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+f(0) &amp;= \sin(0) = 0 \\
+f'(0) &amp;= \cos(0) = 1 \\
+f''(0) &amp;= - \sin(0) = 0 \\
+f^{(3)}(0) &amp;= -\cos(0) = -1 \end{align*}\]</div>
+<p>Schritt 4: Die Fakultäten bis 3 werden ausgerechnet:</p>
+<div class="math notranslate nohighlight">
+\[0!=1, \quad 1!=1, \quad 2!=2, \quad 3!=6.\]</div>
+<p>Schritt 5: Wir setzen alles in die Formel für das Taylorpolynom ein:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*} T_3(x) &amp;= f(x_0) + f'(x_0)\cdot (x-x_0) + \frac{f''(x_0)}{2}\cdot
+(x-x_0)^2 + \frac{f^{(3)}(x_0)}{6} \cdot (x-x_0)^3 = \\
+    &amp;= \sin(0) + 1\cdot (x-0) + \frac{0}{2}\cdot (x-0)^2 + \frac{-1}{6}\cdot (x-0)^3 = \\
+    &amp;= x - \frac{1}{6}x^3.
+\end{align*}\]</div>
 <p>Am besten das folgende Video gucken :-)</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
