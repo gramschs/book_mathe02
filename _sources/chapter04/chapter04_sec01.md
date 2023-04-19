@@ -25,15 +25,16 @@ Für Funktionen, die genügend oft differenzierbar sind, gibt es ein Kochrezept
 zur Berechnung der Koeffizienten dazugehörigen Potenzreihe. Um dieses Kochrezept
 anzuwenden, beschäftigen wir uns zunächst mit dem sogenannten Taylorpolynom.
 
+```{admonition} Was ist ... ein Taylorpolynom?
+Ein **Taylorpolynom** zu einer Funktion $f$ kann nur gebildet werden, wenn die Funktion $f$ n-mal stetig differenzierbar ist. Wenn das aber der Fall ist, dann wird noch ein Entwicklungspunkt $x_0$ gewählt. Das Taylorpolynom $T_n$ zu $f$ vom Grad $n$ am Entwicklungspunkt $x_0$ ist dann:
 
-````{prf:definition}
-:label: def:04b:01
-Ein **Taylorpolynom** ist eine Potenzreihe für eine Funktion $f(x)$, bei der die Koeffizienten berechnet werden, indem die Entwicklungsstelle $x_0$ in die Ableitungen der Funktion eingesetzt werden, also
+\begin{align*}
+T_n(x) &=f(x_0) + \frac{f'(x_0)}{1!}(x-x_0)^1 + \frac{f''(x_0)}{2!}(x-x_0)^2 + \ldots \\
+       &=\sum_{k=0}^{n} \frac{f^{k}(x_0)}{k!} \cdot (x-x_0)^k.
+\end{align*}
 
-$$T(x)=f(x_0) + \frac{f'(x_0)}{1!}(x-x_0)^1 + \frac{f''(x_0)}{2!}(x-x_0)^2 + \ldots. $$
-
-Dabei steht $n!$ für die Fakultät der Zahl $n$.
-````
+Dabei steht $k!$ für die Fakultät der Zahl $k$.
+```
 
 
 
@@ -47,9 +48,8 @@ Dabei steht $n!$ für die Fakultät der Zahl $n$.
 
 Am besten das folgende Video gucken :-)
 
-```{admonition} Video
-:class: seealso
-https://www.youtube.com/embed/o95cOqnLekw
+```{dropdown} Video zu "Taylorpolynom berechnen" von Mathematrick
+<iframe width="560" height="315" src="https://www.youtube.com/embed/o95cOqnLekw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 ```
 
 ## Taylor-Restglied 

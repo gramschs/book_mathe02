@@ -130,18 +130,18 @@ $$F(x) = \frac{5}{3}x^3.$$
 Danach werden $a=-1$ und $b=3$ in die Stammfunktion eingesetzt und die Differenz
 berechnet:
 
-* $F(-1)=\frac{5}{3}(-1)^2 = \frac{5}{3}$
-* $F(3) = \frac{5}{3}(3)^2 = 15$
-* Differenz: $F(3) - F(-1) = 15 - \frac{5}{3} = \frac{40}{3}$.
+* $F(-1)=\frac{5}{3}(-1)^3 = -\frac{5}{3}$
+* $F(3) = \frac{5}{3}(3)^3 = 45$
+* Differenz: $F(3) - F(-1) = 45 - \left(-\frac{5}{3}\right) = \frac{140}{3}$.
 
 Damit ist das bestimmte Integral der Funktion $f(x) = 5x^2$ im Intervall
-$[-1,3]$ die Zahl $\frac{40}{3}$.
+$[-1,3]$ die Zahl $\frac{140}{3}$.
 
 Es ist etwas umständlich, so viel Text in eine Rechnung zu packen. Deshalb ist
 folgende Schreibweise üblich:
 
-$$\int_{-1}^{3} 5x^2 \, dx = \left[\frac{5}{3}x^3 \right]_{-1}^{3} = 15 -
-\frac{5}{3} = \frac{40}{3}.$$
+$$\int_{-1}^{3} 5x^2 \, dx = \left[\frac{5}{3}x^3 \right]_{-1}^{3} = 45 -
+\left(-\frac{5}{3}\right) = \frac{140}{3}.$$
 
 Zuerst kommt die mathematische Schreibweise für das bestimme Integral mit 
 
@@ -162,9 +162,9 @@ Klammern verwendet, hier also $\left[\frac{5}{3}x^3\right]$. Für die
 Integrationsvariable $c$ wählen wir Null. In der anschließenden Differenzbildung
 würde sie ohnehin wegfallen. Zuletzt folgt noch das Einsetzen der
 Integrationsgrenzen in die Stammfunktion. Zuerst wird die obere
-Integrationsgrenze $b=3$ eingesetzt, hier also $F(3)=15$, und dann die der Wert
+Integrationsgrenze $b=3$ eingesetzt, hier also $F(3)=45$, und dann der Wert
 der Stammfunktion an der unteren Integrationsgrenze, hier also
-$F(-1)=\frac{5}{3}$ subtrahiert.
+$F(-1)=-\frac{5}{3}$ subtrahiert.
 
 Im folgenden Video finden Sie weitere Beispiele.
 

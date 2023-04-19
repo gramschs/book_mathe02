@@ -53,12 +53,16 @@ Das wird alles in die obige Formel eingesetzt:
 $$\int_{0}^{\pi} \sin(x)\cdot 2x \, dx = \big[2x \cdot \left(-\cos(x)\right)\big]_{0}^{\pi} -
 \int_{0}^{\pi} 2 \cdot (-\cos(x)) \, dx.$$
 
-Aber von der Funktion $v(x)=-\cos(x)$ kennen wir ebenfalls eine Stammfunktion,
-nämlich $V(x)=-\sin(x)$. Daher kann das bestimmte Integral $\int_{0}^{\pi} 2
-\cdot (-\cos(x)) \, dx$ noch weiter ausgerechnet werden und insgesamt gilt dann:
+Das bestimmte Integral $\big[2x \cdot \left(-\cos(x)\right)\big]_{0}^{\pi}$
+können wir jetzt zwar direkt ausrechnen, aber übrig bleibt noch das Integral
+$\int_{0}^{\pi} 2 \cdot (-\cos(x)) \, dx$, das noch weiter ausgerechnet werden
+muss. 
 
-$$\int_{0}^{\pi} \sin(x)\cdot 2x \, dx = \big[2x \cdot \left(-\cos(x)\right)\big]_{0}^{\pi} -
-2 \big[-\sin(x)\big]_{0}^{\pi}.$$
+Aber das geht jetzt relativ leicht, denn von der Funktion $v(x)=-\cos(x)$ kennen wir ebenfalls eine Stammfunktion, nämlich $V(x)=-\sin(x)$. Daher ist $\int_{0}^{\pi} 2
+\cdot (-\cos(x)) \, dx = 2 \big[-\sin(x)\big]_{0}^{\pi}$ und insgesamt gilt dann:
+
+$$\int_{0}^{\pi} \sin(x)\cdot 2x \, dx = \big[2x \cdot
+\left(-\cos(x)\right)\big]_{0}^{\pi} - 2 \big[-\sin(x)\big]_{0}^{\pi}.$$
 
 Jetzt werden obere und untere Grenze eingesetzt und die Differenz gebildet. Das
 Ergebnis ist
