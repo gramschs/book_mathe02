@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>4.2 Konvergenz von Taylorreihen &#8212; Mathematik 2 Maschinenbau</title>
+    <title>4.2 Restglied von Taylorreihen &#8212; Mathematik 2 Maschinenbau</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -256,7 +256,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     4.2 Konvergenz von Taylorreihen
+     4.2 Restglied von Taylorreihen
     </a>
    </li>
    <li class="toctree-l2">
@@ -493,8 +493,18 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#taylor-restglied">
-   Taylor-Restglied
+  <a class="reference internal nav-link" href="#lernziele">
+   Lernziele
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#restglied-der-taylorreihe">
+   Restglied der Taylorreihe
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#beispiel">
+   Beispiel
   </a>
  </li>
 </ul>
@@ -506,7 +516,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>4.2 Konvergenz von Taylorreihen</h1>
+                <h1>4.2 Restglied von Taylorreihen</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -517,8 +527,18 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#taylor-restglied">
-   Taylor-Restglied
+  <a class="reference internal nav-link" href="#lernziele">
+   Lernziele
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#restglied-der-taylorreihe">
+   Restglied der Taylorreihe
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#beispiel">
+   Beispiel
   </a>
  </li>
 </ul>
@@ -531,30 +551,131 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="konvergenz-von-taylorreihen">
-<h1>4.2 Konvergenz von Taylorreihen<a class="headerlink" href="#konvergenz-von-taylorreihen" title="Permalink to this headline">#</a></h1>
-<div class="warning admonition">
-<p class="admonition-title">Warnung</p>
-<p>Achtung, dieser Abschnitt des Vorlesungsskriptes wird gerade überarbeitet!!!</p>
-</div>
-<p>TODO</p>
-<section id="taylor-restglied">
-<h2>Taylor-Restglied<a class="headerlink" href="#taylor-restglied" title="Permalink to this headline">#</a></h2>
-<p>Wenn wir ein Taylorpolynom zu einer Funktion vorliegen haben, wäre es gut zu wissen, wie gut unsere Approximation ist. Die Formel mit dem sogenannten Taylor-Restglied</p>
-<div class="math notranslate nohighlight">
-\[f(x) = T_n(x) + \frac{1}{(n+1)!}f^{(n+1)}(u)\cdot(x-x_0)^{n+1},\]</div>
-<p>hilft uns dabei, denn jetzt können wir den Fehler abschätzen als</p>
-<div class="math notranslate nohighlight">
-\[|f(x)-T_n(x)| = |\frac{1}{(n+1)!}f^{(n+1)}(u)\cdot(x-x_0)^{n+1}|.\]</div>
-<p>Leider ist die Formel nicht ganz so einfach anzuwenden, denn es steckt ein <span class="math notranslate nohighlight">\(u\)</span> darin, das nicht genau spezifiziert ist. <span class="math notranslate nohighlight">\(u\)</span> ist irgendeine Stelle zwischen dem Entwicklungspunkt <span class="math notranslate nohighlight">\(x_0\)</span> und <span class="math notranslate nohighlight">\(x\)</span>, die man nicht genau kennt. Aber wir können in diesem Bereich einfach das Maximum <span class="math notranslate nohighlight">\(M\)</span> von <span class="math notranslate nohighlight">\(f^{(n+1)}(u)\)</span> für alle Punkte zwischen <span class="math notranslate nohighlight">\(x_0\)</span> und <span class="math notranslate nohighlight">\(x\)</span> bilden und dann als Abschätzung das Maximum verwenden:</p>
-<div class="math notranslate nohighlight">
-\[|f(x)-T_n(x)| \leq \frac{1}{(n+1)!}\cdot M \cdot |x-x_0|^{n+1}.\]</div>
-<p>Eine Erklärung dazu finden Sie in dem folgenden Video.</p>
-<div class="seealso admonition">
-<p class="admonition-title">Video</p>
-<p><a class="reference external" href="https://www.youtube.com/embed/oz1hejsyNlk">https://www.youtube.com/embed/oz1hejsyNlk</a></p>
+  <section class="tex2jax_ignore mathjax_ignore" id="restglied-von-taylorreihen">
+<h1>4.2 Restglied von Taylorreihen<a class="headerlink" href="#restglied-von-taylorreihen" title="Permalink to this headline">#</a></h1>
+<p>Taylorreihen und ihre Konvergenzeigenschaften sind für Ingenieure von großer
+Bedeutung, da sie bei der Lösung von Differentialgleichungen, der Optimierung
+von Funktionen und der numerischen Berechnung von Integralen verwendet werden.
+Taylorreihen bieten eine Möglichkeit, Funktionen durch einfachere, polynomiale
+Funktionen zu approximieren, die leichter zu handhaben sind. Die Kenntnis des
+Restglieds ermöglicht es Ingenieuren, die Genauigkeit der Approximation
+abzuschätzen und zu entscheiden, wie viele Terme der Taylorreihe für eine
+ausreichend genaue Lösung erforderlich sind.</p>
+<section id="lernziele">
+<h2>Lernziele<a class="headerlink" href="#lernziele" title="Permalink to this headline">#</a></h2>
+<div class="tip admonition">
+<p class="admonition-title">Lernziele</p>
+<p>Sie können mit dem Restglied der Taylorreihe den Fehler abschätzen, der entsteht, wenn eine Funktion durch ein Taylorpolynom vom Grad n ersetzt wird.</p>
 </div>
 </section>
+<section id="restglied-der-taylorreihe">
+<h2>Restglied der Taylorreihe<a class="headerlink" href="#restglied-der-taylorreihe" title="Permalink to this headline">#</a></h2>
+<p>Die Idee der Taylorreihe ist ja, eine komplizierte Funktion <span class="math notranslate nohighlight">\(f\)</span> durch eine
+Potenzreihe zu darzustellen. Allerdings ist das Aufsummieren von unendlich
+vielen Summanden für die Taylorreihe auch nicht praktikabel. Stattdessen wird in
+der Praxis die Taylorreihe ab einem bestimmten Grad abgebrochen. Oder anders
+ausgedrückt, als Näherung für die Funktion <span class="math notranslate nohighlight">\(f\)</span> in der Umgebung eines
+Entwicklugnspunktes <span class="math notranslate nohighlight">\(x_0\)</span> wird ein Taylorpolynom vom Grad <span class="math notranslate nohighlight">\(n\)</span> genutzt. Aber wie
+groß ist eigentlich der Fehler, wenn statt der Funktion <span class="math notranslate nohighlight">\(f\)</span> das Taylorpolynom
+<span class="math notranslate nohighlight">\(T_n\)</span> genommen wird? Welcher Rest bleibt da? Eines ist schon einmal klar. Würden
+wir für das Taylorpolynom einen anderen Grad <span class="math notranslate nohighlight">\(m\)</span> nehmen, so würde sich auch ein
+anderer Fehler ergeben. Der Rest ist also auch vom Grad des Taylorpolynoms
+abhängig. Wir fassen zusammen:</p>
+<div class="admonition-was-ist-das-restglied-der-taylorreihe admonition">
+<p class="admonition-title">Was ist … das Restglied der Taylorreihe?</p>
+<p>Wir nennen die Differenz zwischen der Funktion <span class="math notranslate nohighlight">\(f\)</span> und dem dazugehörigen Taylorpolynom <span class="math notranslate nohighlight">\(T_n\)</span> vom Grad <span class="math notranslate nohighlight">\(n\)</span> das Restglied <span class="math notranslate nohighlight">\(R_n\)</span>. In Formel ausgedrückt ist das Restglied</p>
+<div class="math notranslate nohighlight">
+\[R_n(x) = f(x) - T_n(x).\]</div>
+</div>
+<p>Jetzt haben wir dem Fehler zwar einen neuen Namen gegeben, Restglied, aber das
+hilft uns erstmal noch nicht weiter. Allerdings hat ein Mathematiker namens
+<a class="reference external" href="https://de.wikipedia.org/wiki/Brook_Taylor">Brook Taylor</a> gezeigt, dass für das
+Restglied die folgende Formel gilt:</p>
+<div class="math notranslate nohighlight">
+\[R_n(x) = f(x) - T_n(x) =
+\frac{f^{(n+1)}(\textcolor{red}{z})}{(n+1)!}\cdot(x-x_0)^{n+1},\]</div>
+<p>wobei der Punkt <span class="math notranslate nohighlight">\(z\)</span> eine Zwischenstelle ist, die irgendwo zwischen <span class="math notranslate nohighlight">\(x\)</span> und <span class="math notranslate nohighlight">\(x_0\)</span>
+liegt.</p>
+<p>Leider ist die Formel nicht ganz so einfach anzuwenden, denn die Zwischenstelle <span class="math notranslate nohighlight">\(z\)</span> ist ja nicht bekannt. Wir wissen nur, dass <span class="math notranslate nohighlight">\(z\)</span> irgendwo zwischen dem Entwicklungspunkt <span class="math notranslate nohighlight">\(x_0\)</span> und <span class="math notranslate nohighlight">\(x\)</span> liegt. Aber egal wo <span class="math notranslate nohighlight">\(z\)</span> jetzt wirklich liegt, wir können einfach für alle Werte <span class="math notranslate nohighlight">\(z\)</span> die <span class="math notranslate nohighlight">\((n+1)\)</span>-te Ableitung</p>
+<div class="math notranslate nohighlight">
+\[f^{(n+1)}(z)\]</div>
+<p>zeichnen. Aus der Zeichnung können wir dann das Maximum <span class="math notranslate nohighlight">\(M\)</span> von <span class="math notranslate nohighlight">\(f^{(n+1)}(z)\)</span> für alle Punkte zwischen <span class="math notranslate nohighlight">\(x_0\)</span> und <span class="math notranslate nohighlight">\(x\)</span> ablesen oder anderweitig berechnen. Es gilt also</p>
+<div class="math notranslate nohighlight">
+\[f^{(n+1)}(z) \leq M.\]</div>
+<p>Und mit dieser Abschätzung kann jetzt endlich auch der Fehler abgeschätzt
+werden, wenn <span class="math notranslate nohighlight">\(T_n\)</span> anstatt der Funktion <span class="math notranslate nohighlight">\(f\)</span> verwendet werden soll. Da wir nicht
+wissen, ob <span class="math notranslate nohighlight">\(T_n\)</span> die Funktion <span class="math notranslate nohighlight">\(f\)</span> über- oder unterschätzt, wissen wir auch
+nicht, ob <span class="math notranslate nohighlight">\(R_n(x)\)</span> negativ oder positiv ist. Daher nehmen wir einfach mal den
+Betrag von <span class="math notranslate nohighlight">\(R_n(x)\)</span>, da es ja auch nur um eine grobe Abschätzung des Fehlers
+geht.</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+\left|R_n(x) \right| &amp;= \left| f(x) - T_n(x) \right| = \\
+    &amp;= \left| \frac{f^{(n+1)}(z)}{(n+1)!}\cdot(x-x_0)^{n+1} \right| \leq\\
+    &amp;\leq \frac{M}{(n+1)!} \cdot |x-x_0|^{n+1}.
+\end{align*}\]</div>
+<p>Fast fertig, jetzt muss noch ein Maximum von <span class="math notranslate nohighlight">\(|x - x_0|\)</span> bestimmt werden. Wir
+nennen diese Zahl mal <span class="math notranslate nohighlight">\(d\)</span> (wie Distanz). Dann kann der Fehler, der Betrag des
+Restglieds des Taylorpolynoms, abgeschätzt werden als</p>
+<div class="math notranslate nohighlight">
+\[\left|R_n(x) \right| \leq  \frac{M}{(n+1)!}\cdot d^{n+1}.\]</div>
+<p>Das folgende Video fasst die obigen Erklärungen zusammen.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Video zu “Taylor Restglied” von Prof. Hoever<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/oz1hejsyNlk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+</details></section>
+<section id="beispiel">
+<h2>Beispiel<a class="headerlink" href="#beispiel" title="Permalink to this headline">#</a></h2>
+<p>Probieren wir das an einem Beispiel aus. Die Funktion <span class="math notranslate nohighlight">\(f(x)=\sin(x)\)</span> soll durch
+ein Taylorpolynom Grad 3 am Entwicklungspunkt <span class="math notranslate nohighlight">\(x_0=0\)</span> approximiert werden. Im
+Abschnitt <a class="reference internal" href="chapter04_sec01.html#ref04-sec01-kochrezept"><span class="std std-ref">Kochrezept Taylorpolynome</span></a> haben wir ja schon
+das Taylorpolynom <span class="math notranslate nohighlight">\(T_{3}\)</span> berechnet als</p>
+<div class="math notranslate nohighlight">
+\[T_3(x) = x - \frac{1}{6}x^3.\]</div>
+<p>Die vierte Ableitung der Sinusfunktion ist wieder die Sinusfunktion selbst, also  <span class="math notranslate nohighlight">\(f^{(4)}(x) = \sin(x)\)</span>.</p>
+<p>Das Restglied ist also</p>
+<div class="math notranslate nohighlight">
+\[R_3(x) = \frac{\sin(z)}{(3+1)!}\cdot x^{3+1} = \frac{\sin(z)}{24}\cdot x^4.\]</div>
+<p>für eine Zwischenstelle <span class="math notranslate nohighlight">\(z\)</span> zwischen <span class="math notranslate nohighlight">\(0\)</span> und <span class="math notranslate nohighlight">\(x\)</span>. Wir wählen einen Winkel von
+<span class="math notranslate nohighlight">\(\alpha = 5^{\circ}\)</span>, was im Bogenmaß <span class="math notranslate nohighlight">\(\frac{\pi}{36}\approx 0.0873\)</span> rad
+entspricht und untersuchen daher die Approximation an der Stelle <span class="math notranslate nohighlight">\(x = 0.0873\)</span>.
+Wenn wir die Sinusfunktion im Intervall <span class="math notranslate nohighlight">\([0, 0.0873]\)</span> zeichnen, so können wir
+ablesen, dass das Maximum gerade bei <span class="math notranslate nohighlight">\(x = 0.0873\)</span> erreicht wird, also ist</p>
+<div class="math notranslate nohighlight">
+\[M = \sin(0.0873) \approx 0.0872.\]</div>
+<p>Der Term <span class="math notranslate nohighlight">\(x - 0\)</span> kann durch <span class="math notranslate nohighlight">\(m = 0.0873\)</span> abgeschätzt werden, durch den Punkt am
+rechten Intervallende, der am weitesten vom Entwicklungspunkt <span class="math notranslate nohighlight">\(x_0=0\)</span> entfernt
+ist. Also gilt</p>
+<div class="math notranslate nohighlight">
+\[R_3(0.0873) \leq \frac{0.0872}{24}\cdot 0.0873^4 = 2.11 \cdot 10^{-7}.\]</div>
+<p>Dieser maximale Fehler ist in den meisten Fällen so klein, dass im Intervall
+<span class="math notranslate nohighlight">\([-5^{\circ}, + 5^{\circ}]\)</span> die Sinusfunktion auch durch</p>
+<div class="math notranslate nohighlight">
+\[sin(x) \approx T_3(x) = x - \frac{1}{6}x^3.\]</div>
+<p>In vielen Fällen ist es sogar legitim, die Sinusfunktion nur durch das Taylorpolynom ersten Grades zu approximieren, also</p>
+<div class="math notranslate nohighlight">
+\[\sin(x) \approx T_1(x) = x.\]</div>
+<p>Diese Approximation nennt sich
+<a class="reference external" href="https://de.wikipedia.org/wiki/Kleinwinkeln%C3%A4herung">Kleinwinkelnäherung</a> und
+wird beispielsweise bei der Berechnung der Bewegungsgleichung des Fadenpendels
+benötigt.</p>
+<p>Ein weiteres Beispiel können Sie sich in dem folgenden Video ansehen.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Video zu “Taylorpolynom, Restglied” von Daniel Jung<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Rc_diK5l7iY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+</details></section>
 </section>
 
     <script type="text/x-thebe-config">

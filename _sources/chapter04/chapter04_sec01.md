@@ -26,7 +26,7 @@ Ein **Taylorpolynom** zu einer Funktion $f$ kann nur gebildet werden, wenn die F
 
 \begin{align*}
 T_n(x) &=f(x_0) + \frac{f'(x_0)}{1!}(x-x_0)^1 + \frac{f''(x_0)}{2!}(x-x_0)^2 + \ldots \\
-       &=\sum_{k=0}^{n} \frac{f^{k}(x_0)}{k!} \cdot (x-x_0)^k.
+       &=\sum_{k=0}^{n} \frac{f^{(k)}(x_0)}{k!} \cdot (x-x_0)^k.
 \end{align*}
 
 Dabei steht $k!$ für die Fakultät der Zahl $k$.
@@ -37,7 +37,7 @@ Hier gibt es ein Video, das die Fakultät $k!$ erklärt.
 ```{dropdown} Video zu "Fakultät" von Mathematrick
 <iframe width="560" height="315" src="https://www.youtube.com/embed/nVdUcZmmU7w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 ```
-
+(ref04_sec01_kochrezept)=
 ## Kochrezept zur Berechnung von Taylorpolynomen
 
 1. Erst einmal folgende Frage beantworten: Bis zu welchem Polynomgrad $n$ soll
