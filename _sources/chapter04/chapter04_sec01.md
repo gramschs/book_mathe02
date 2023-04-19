@@ -1,32 +1,30 @@
-# Taylorreihen
+# 4.1 Berechnung Taylorreihe
+
+Im Kapitel über Potenzreihen haben wir uns bereits mit der Frage beschäftigt, in
+welchem Intervall eine Potenzreihe eine gegebene Funktion gut approximiert. Was
+uns aber noch fehlt ist die Frage, wie wir zu solchen Potenzreihen kommen. Daher
+gibt es in diesem Kapitel eine Anleitung dazu.
 
 ```{admonition} Warnung
 :class: warning
 Achtung, dieser Abschnitt des Vorlesungsskriptes wird gerade überarbeitet!!!
 ```
 
-Im Kapitel über Potenzreihen haben wir uns bereits mit der Frage beschäftigt, in welchem Intervall eine Potenzreihe eine gegebene Funktion gut approximiert. Was uns aber noch fehlt ist die Frage, wie wir zu solchen Potenzreihen kommen. Daher gibt es in diesem Kapitel eine Anleitung dazu.
-
-Um den Inhalt dieses Kapitels zu verstehen, werden Kentnisse über
-
-* Potenzreihen
-
-vorausgesetzt.
-
-
-## Lernziele Taylorreihen
+## Lernziele 
 
 ```{admonition} Lernziele
 :class: tip
 * Sie kennen die Formel für ein **Taylorpolynom der Ordnung n** auswendig.
-* Sie können mit der Formel für das **Taylor-Restglied** berechnen, wie groß der Fehler zwischen der Funktion $f$ und dem Taylorpolynom $T_n$ an einer bestimmten Stelle $x$ wird.
 * Sie kennen die Formel für die **Taylorreihe** auswendig.
 ```
 
 
 ## Taylorpolynom
 
-Taylorpolynome sind nichts anderes als eine Potenzreihe für eine Funktion $f(x)$, aber wir lernen hier ein Kochrezept kennen, um die Koeffizienten zu berechnen.
+Für Funktionen, die genügend oft differenzierbar sind, gibt es ein Kochrezept
+zur Berechnung der Koeffizienten dazugehörigen Potenzreihe. Um dieses Kochrezept
+anzuwenden, beschäftigen wir uns zunächst mit dem sogenannten Taylorpolynom.
+
 
 ````{prf:definition}
 :label: def:04b:01

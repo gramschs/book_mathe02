@@ -6,61 +6,61 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Taylorreihen &#8212; Mathematik 2 Maschinenbau</title>
+    <title>4.1 Berechnung Taylorreihe &#8212; Mathematik 2 Maschinenbau</title>
     
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
-    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
   <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
   <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
-    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="_static/exercise.css" />
-    <link rel="stylesheet" type="text/css" href="_static/proof.css" />
-    <link rel="stylesheet" type="text/css" href="_static/myadmonitions.css" />
-    <link rel="stylesheet" type="text/css" href="_static/jsxgraph.css" />
-    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/exercise.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/myadmonitions.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/jsxgraph.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
-    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
-    <script src="_static/doctools.js"></script>
-    <script src="_static/clipboard.min.js"></script>
-    <script src="_static/copybutton.js"></script>
-    <script src="_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="_static/togglebutton.js"></script>
-    <script src="_static/jsxgraphcore.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/jsxgraphcore.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="_static/design-tabs.js"></script>
+    <script src="../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
-    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Fourier-Reihen" href="part05.html" />
-    <link rel="prev" title="Übungen" href="chapter03/chapter03_sec05.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="4.2 Konvergenz von Taylorreihen" href="chapter04_sec02.html" />
+    <link rel="prev" title="4. Taylorreihen" href="chapter04_sec00.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -95,14 +95,14 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="bd-sidebar noprint" id="site-navigation">
     <div class="bd-sidebar__content">
         <div class="bd-sidebar__top"><div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="index.html">
+    <a class="navbar-brand text-wrap" href="../index.html">
       
       
       
       <h1 class="site-logo" id="site-title">Mathematik 2 Maschinenbau</h1>
       
     </a>
-</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
@@ -110,7 +110,7 @@ const thebe_selector_output = ".output, .cell_output"
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
-                <a class="reference internal" href="intro.html">
+                <a class="reference internal" href="../intro.html">
                     Willkommen zur Materialsammlung Mathematik 2
                 </a>
             </li>
@@ -122,7 +122,7 @@ const thebe_selector_output = ".output, .cell_output"
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="chapter01/chapter01_sec00.html">
+  <a class="reference internal" href="../chapter01/chapter01_sec00.html">
    1. Wiederholung Integral
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
@@ -132,34 +132,34 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="chapter01/chapter01_sec01.html">
+    <a class="reference internal" href="../chapter01/chapter01_sec01.html">
      1.1 Stammfunktion und bestimmtes Integral
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="chapter01/chapter01_sec02.html">
+    <a class="reference internal" href="../chapter01/chapter01_sec02.html">
      1.2 Eigenschaften von Integralen
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="chapter01/chapter01_sec03.html">
+    <a class="reference internal" href="../chapter01/chapter01_sec03.html">
      1.3 Partielle Integration
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="chapter01/chapter01_sec04.html">
+    <a class="reference internal" href="../chapter01/chapter01_sec04.html">
      1.4 Integration durch Substitution
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="chapter01/chapter01_sec05.html">
+    <a class="reference internal" href="../chapter01/chapter01_sec05.html">
      Übungen
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="chapter02/chapter02_sec00.html">
+  <a class="reference internal" href="../chapter02/chapter02_sec00.html">
    2. Anwendungen Integral
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
@@ -169,27 +169,27 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="chapter02/chapter02_sec01.html">
+    <a class="reference internal" href="../chapter02/chapter02_sec01.html">
      2.1 Integrieren ist Mitteln
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="chapter02/chapter02_sec02.html">
+    <a class="reference internal" href="../chapter02/chapter02_sec02.html">
      2.2 Fläche zwischen zwei Graphen
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="chapter02/chapter02_sec03.html">
+    <a class="reference internal" href="../chapter02/chapter02_sec03.html">
      2.3 Bogenlänge
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="chapter02/chapter02_sec04.html">
+    <a class="reference internal" href="../chapter02/chapter02_sec04.html">
      2.4 Volumen von Rotationskörpern
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="chapter02/chapter02_sec05.html">
+    <a class="reference internal" href="../chapter02/chapter02_sec05.html">
      Übungen
     </a>
    </li>
@@ -203,7 +203,7 @@ const thebe_selector_output = ".output, .cell_output"
 </p>
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="chapter03/chapter03_sec00.html">
+  <a class="reference internal" href="../chapter03/chapter03_sec00.html">
    3. Reihen und Potenzreihen
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
@@ -213,39 +213,71 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="chapter03/chapter03_sec01.html">
+    <a class="reference internal" href="../chapter03/chapter03_sec01.html">
      3.1 Reihen
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="chapter03/chapter03_sec02.html">
+    <a class="reference internal" href="../chapter03/chapter03_sec02.html">
      3.2 Konvergenzkriterien für Reihen
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="chapter03/chapter03_sec03.html">
+    <a class="reference internal" href="../chapter03/chapter03_sec03.html">
      3.3 Potenzreihen
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="chapter03/chapter03_sec04.html">
+    <a class="reference internal" href="../chapter03/chapter03_sec04.html">
      3.4 Konvergenz von Potenzreihen
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="chapter03/chapter03_sec05.html">
+    <a class="reference internal" href="../chapter03/chapter03_sec05.html">
      Übungen
     </a>
    </li>
   </ul>
  </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   Taylorreihen
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="chapter04_sec00.html">
+   4. Taylorreihen
   </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     4.1 Berechnung Taylorreihe
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chapter04_sec02.html">
+     4.2 Konvergenz von Taylorreihen
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chapter04_sec03.html">
+     4.3 Wichtige Potenzreihen
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chapter04_sec04.html">
+     4.4 Rechnen mit Potenzreihen
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chapter04_sec05.html">
+     Übungen
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="part05.html">
+  <a class="reference internal" href="../part05.html">
    Fourierreihen
   </a>
  </li>
@@ -257,27 +289,27 @@ const thebe_selector_output = ".output, .cell_output"
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="part06.html">
+  <a class="reference internal" href="../part06.html">
    Partielle Ableitung
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="part07.html">
+  <a class="reference internal" href="../part07.html">
    Gradient und Jacobi-Matrix
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="part08.html">
+  <a class="reference internal" href="../part08.html">
    Linearisierung und Extremwerte
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="part09.html">
+  <a class="reference internal" href="../part09.html">
    Doppelintegral
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="part10.html">
+  <a class="reference internal" href="../part10.html">
    Dreifachintegral
   </a>
  </li>
@@ -289,29 +321,29 @@ const thebe_selector_output = ".output, .cell_output"
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="part11.html">
+  <a class="reference internal" href="../part11.html">
    Grundbegriffe und separable DGL
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
    <i class="fas fa-chevron-down">
    </i>
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="part11_01.html">
+    <a class="reference internal" href="../part11_01.html">
      Grundlegende Begriffe von Differentialgleichungen
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="part11_02.html">
+    <a class="reference internal" href="../part11_02.html">
      Lösungen von Differentialgleichungen
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="part12.html">
+  <a class="reference internal" href="../part12.html">
    DGL (Teil 2)
   </a>
  </li>
@@ -401,7 +433,7 @@ title="Source repository"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="_sources/part04.md"
+        <a href="../_sources/chapter04/chapter04_sec01.md"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -461,8 +493,8 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#lernziele-taylorreihen">
-   Lernziele Taylorreihen
+  <a class="reference internal nav-link" href="#lernziele">
+   Lernziele
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -494,7 +526,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Taylorreihen</h1>
+                <h1>4.1 Berechnung Taylorreihe</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -505,8 +537,8 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#lernziele-taylorreihen">
-   Lernziele Taylorreihen
+  <a class="reference internal nav-link" href="#lernziele">
+   Lernziele
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -539,32 +571,31 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="taylorreihen">
-<h1>Taylorreihen<a class="headerlink" href="#taylorreihen" title="Permalink to this headline">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="berechnung-taylorreihe">
+<h1>4.1 Berechnung Taylorreihe<a class="headerlink" href="#berechnung-taylorreihe" title="Permalink to this headline">#</a></h1>
+<p>Im Kapitel über Potenzreihen haben wir uns bereits mit der Frage beschäftigt, in
+welchem Intervall eine Potenzreihe eine gegebene Funktion gut approximiert. Was
+uns aber noch fehlt ist die Frage, wie wir zu solchen Potenzreihen kommen. Daher
+gibt es in diesem Kapitel eine Anleitung dazu.</p>
 <div class="warning admonition">
 <p class="admonition-title">Warnung</p>
 <p>Achtung, dieser Abschnitt des Vorlesungsskriptes wird gerade überarbeitet!!!</p>
 </div>
-<p>Im Kapitel über Potenzreihen haben wir uns bereits mit der Frage beschäftigt, in welchem Intervall eine Potenzreihe eine gegebene Funktion gut approximiert. Was uns aber noch fehlt ist die Frage, wie wir zu solchen Potenzreihen kommen. Daher gibt es in diesem Kapitel eine Anleitung dazu.</p>
-<p>Um den Inhalt dieses Kapitels zu verstehen, werden Kentnisse über</p>
-<ul class="simple">
-<li><p>Potenzreihen</p></li>
-</ul>
-<p>vorausgesetzt.</p>
-<section id="lernziele-taylorreihen">
-<h2>Lernziele Taylorreihen<a class="headerlink" href="#lernziele-taylorreihen" title="Permalink to this headline">#</a></h2>
+<section id="lernziele">
+<h2>Lernziele<a class="headerlink" href="#lernziele" title="Permalink to this headline">#</a></h2>
 <div class="tip admonition">
 <p class="admonition-title">Lernziele</p>
 <ul class="simple">
 <li><p>Sie kennen die Formel für ein <strong>Taylorpolynom der Ordnung n</strong> auswendig.</p></li>
-<li><p>Sie können mit der Formel für das <strong>Taylor-Restglied</strong> berechnen, wie groß der Fehler zwischen der Funktion <span class="math notranslate nohighlight">\(f\)</span> und dem Taylorpolynom <span class="math notranslate nohighlight">\(T_n\)</span> an einer bestimmten Stelle <span class="math notranslate nohighlight">\(x\)</span> wird.</p></li>
 <li><p>Sie kennen die Formel für die <strong>Taylorreihe</strong> auswendig.</p></li>
 </ul>
 </div>
 </section>
 <section id="taylorpolynom">
 <h2>Taylorpolynom<a class="headerlink" href="#taylorpolynom" title="Permalink to this headline">#</a></h2>
-<p>Taylorpolynome sind nichts anderes als eine Potenzreihe für eine Funktion <span class="math notranslate nohighlight">\(f(x)\)</span>, aber wir lernen hier ein Kochrezept kennen, um die Koeffizienten zu berechnen.</p>
+<p>Für Funktionen, die genügend oft differenzierbar sind, gibt es ein Kochrezept
+zur Berechnung der Koeffizienten dazugehörigen Potenzreihe. Um dieses Kochrezept
+anzuwenden, beschäftigen wir uns zunächst mit dem sogenannten Taylorpolynom.</p>
 <div class="proof definition admonition" id="def:04b:01">
 <p class="admonition-title"><span class="caption-number">Definition 1 </span></p>
 <section class="definition-content" id="proof-content">
@@ -627,7 +658,7 @@ title="Print to PDF"
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./."
+            path: "./chapter04"
         },
         predefinedOutput: true
     }
@@ -641,17 +672,17 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="chapter03/chapter03_sec05.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="chapter04_sec00.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Übungen</p>
+            <p class="prev-next-title">4. Taylorreihen</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="part05.html" title="next page">
+    <a class='right-next' id="next-link" href="chapter04_sec02.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Fourier-Reihen</p>
+        <p class="prev-next-title">4.2 Konvergenz von Taylorreihen</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
@@ -682,7 +713,7 @@ title="Print to PDF"
     </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
 
 
   </body>
