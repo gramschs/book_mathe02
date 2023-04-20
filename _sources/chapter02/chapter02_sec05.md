@@ -55,7 +55,21 @@ und der x-Achse eingeschlossen ist. Fertigen Sie zuerst eine Skizze an.
 :class: minisolution, toggle
 $$A = \frac{37}{12}$$
 ```{dropdown} Lösungsweg
-![solution02_04](pics/solution02_04.png)
+Skizze des Funktionsgraphens:
+
+![solution02_04_plot](pics/plot_exercise_02_04.pdf)
+
+* Nullstellen berechnen: $f(x) = x(x-1)(x-3) = 0$ lösen
+* Nullstellen: $x_1 = 0$, $x_2 = 1$ und $x_3 = 3$
+* Erster Flächeninhalt:
+
+$$A_1 = \int_{0}^{1} x^3 - 4x^2 + 3x \, dx = \frac{5}{12}$$
+
+* Zweiter Flächeninhalt (negativ orientiert):
+
+$$A_2 = \int_{1}^{3} x^3 - 4x^2 + 3x \, dx = -\frac{8}{3}$$
+
+* Gesamtflächeninhalt: $A = A_1 + (-1)\cdot A_2 = \frac{37}{12}$
 ```
 ````
 
@@ -72,7 +86,15 @@ eingeschlossen ist. Fertigen Sie zuerst eine Skizze an.
 :class: minisolution, toggle
 $$A = \frac{1000}{3}=333.33$$
 ```{dropdown} Lösungsweg
-![solution02_05](pics/solution02_05.png)
+Skizze der beiden Funktionsgraphen:
+
+![solution02_05_plot](pics/plot_exercise_02_05.pdf)
+
+* Schnittpunkte berechnen: $f(x) = g(x)$ lösen
+* Schnittpunkte: $x_1 = -4$ und $x_2 = 16$
+* Flächeninhalt:
+
+$$A = \int_{-4}^{16} \left(\frac{1}{4}x^2 + 16\right) - \left(-3x \right)  \, dx = \frac{1000}{3}$$
 ```
 ````
 
@@ -89,7 +111,15 @@ und den parallelen Geraden $x=-2$ und $x=\frac{5}{2}$ eingeschlossen ist. Fertig
 :class: minisolution, toggle
 $$A = \frac{27}{2}= 13.5$$
 ```{dropdown} Lösungsweg
-![solution02_06](pics/solution02_06.png)
+Skizze der beiden Funktionsgraphen:
+
+![solution02_06_plot](pics/plot_exercise_02_06.pdf)
+
+* $g$ ist oberhalb von $f$
+* Flächeninhalt:
+
+$$A = \int_{-2}^{5/2} \left( x+2 \right) - \left(-x^2+2x+\frac{1}{2} \right)  \, dx = \frac{27}{2}$$
+
 ```
 ````
 
@@ -106,7 +136,16 @@ eingeschlossen ist. Fertigen Sie zuerst eine Skizze an.
 :class: minisolution, toggle
 $$A = \frac{9}{98}\approx 0.091837$$
 ```{dropdown} Lösungsweg
-![solution02_07](pics/solution02_07.png)
+Skizze der beiden Funktionsgraphen:
+
+![solution02_07_plot](pics/plot_exercise_02_07.pdf)
+
+* Schnittpunkte berechnen: $f(x) = g(x)$ lösen
+* Schnittpunkte: $x_1 = 0$ und $x_2 = \frac{3}{7}$
+* Flächeninhalt:
+
+$$A = \int_{0}^{3/7} \left(-3x^2+x-1\right) - \left(4\cdot (x-\frac{1}{4})^2-\frac{5}{4} \right)  \, dx = \frac{9}{98}$$
+
 ```
 ````
 
@@ -116,14 +155,32 @@ Berechnen Sie den Flächeninhalt $A$, der zwischen den beiden Graphen der Funkti
 
 $$f(x)=2\sin(x) \quad \text{ und } \quad g(x)=-\frac{4\sqrt{2}}{3\pi}x + \frac{4\sqrt{2}}{3}$$
 
-eingeschlossen ist. Fertigen Sie zuerst eine Skizze an.
+eingeschlossen ist. Fertigen Sie zuerst eine Skizze an. Benutzen Sie einen Taschenrechner.
 ```
 
 ````{admonition} Lösung
 :class: minisolution, toggle
 $$A = 4+2\sqrt{2} - \frac{3\pi}{2\sqrt{2}}\approx 3.49626$$
 ```{dropdown} Lösungsweg
-![solution02_08](pics/solution02_08.png)
+Skizze der beiden Funktionsgraphen:
+
+![solution02_08_plot](pics/plot_exercise_02_08.pdf)
+
+* Schnittpunkte berechnen: $f(x) = g(x)$ lösen
+* Schnittpunkte: $x_1 = \frac{\pi}{4}$,  $x_2 = \pi$ und $x_3 = \frac{7\pi}{4}$
+* Erster Flächeninhalt:
+
+$$A_1 = \int_{\pi/4}^{\pi} \left( 2\sin(x)\right) - \left(-\frac{4\sqrt{2}}{3\pi}x + \frac{4\sqrt{2}}{3} \right)  \, dx = -\frac{3}{4\sqrt{2}}\pi + 2 + \sqrt{2}$$
+
+* Zweiter Flächeninhalt:
+
+$$A_2 = \int_{\pi}^{\frac{7\pi}{4}} \left(-\frac{4\sqrt{2}}{3\pi}x + \frac{4\sqrt{2}}{3} \right) -
+\left(2\sin(x) \right) \, dx = -\frac{3}{4\sqrt{2}}\pi + 2 + \sqrt{2}$$
+
+* Gesamter Flächeninhalt:
+
+$$A = A_1 + A_2 = \frac{1}{4}\left(-3\sqrt{2}\pi + 16 + 8\sqrt{2} \right) \approx 3.49626$$
+
 ```
 ````
 
@@ -136,7 +193,11 @@ Berechnen Sie die Bogenlänge $L$ der Funktion $f(x)=x$ im Intervall $[0,1]$.
 :class: minisolution, toggle
 $$L = \sqrt{2} \approx 1.4142$$
 ```{dropdown} Lösungsweg
-![solution02_09](pics/solution02_09.png)
+* Ableitung: $f'(x)=1$
+* Bogenlänge: 
+
+$$L = \int_{0}^{1} \sqrt{1+(1)^2}\, dx = \int_{0}^{1} \sqrt{2}\, dx = \sqrt{2}$$
+
 ```
 ````
 
@@ -149,7 +210,18 @@ Berechnen Sie die Bogenlänge $L$ der Funktion $f(x)=x^{\frac{3}{2}}$ im Interva
 :class: minisolution, toggle
 $$L \approx 1.4397$$
 ```{dropdown} Lösungsweg
-![solution02_10](pics/solution02_10.png)
+* Ableitung: $f'(x) = \frac{3}{2} x^{\frac{1}{2}}$
+* Bogenlänge:
+
+$$L = \int_{0}^{1} \sqrt{1+(\frac{3}{2} x^{\frac{1}{2}})^2}\, dx = 
+\int_{0}^{1} \sqrt{1+\frac{9}{4} x}\, dx  $$
+
+* Substitution: $z = 1 + \frac{9}{4} x$, d.h. $dx = \frac{4}{9} dz$
+* Daraus folgt:
+
+$$L = \int_{0}^{1} \sqrt{1+\frac{9}{4} x}\, dx = \left[\frac{8}{27}\left(\frac{9x}{4}+1\right)^{3/2} \right]_{0}^{1} = \frac{1}{27}(13\sqrt{13}-8) \approx 1.4397.
+$$
+
 ```
 ````
 
