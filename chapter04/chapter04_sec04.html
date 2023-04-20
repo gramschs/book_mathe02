@@ -55,6 +55,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Übungen" href="chapter04_sec05.html" />
@@ -254,7 +256,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="chapter04_sec02.html">
-     4.2 Konvergenz von Taylorreihen
+     4.2 Restglied von Taylorreihen
     </a>
    </li>
    <li class="toctree-l2">
@@ -468,12 +470,56 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#lernziele">
+   Lernziele
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#addition-und-subtraktion">
+   Addition und Subtraktion
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ableiten-und-integrieren">
+   Ableiten und Integrieren
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#multiplikation-und-division">
+   Multiplikation und Division
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bestimmung-von-grenzwerten-mit-potenzreihen">
+   Bestimmung von Grenzwerten mit Potenzreihen
+  </a>
+ </li>
+</ul>
+
+    </nav>
 </div>
     </div>
     <div class="article row">
@@ -485,6 +531,39 @@ title="Print to PDF"
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#lernziele">
+   Lernziele
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#addition-und-subtraktion">
+   Addition und Subtraktion
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ableiten-und-integrieren">
+   Ableiten und Integrieren
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#multiplikation-und-division">
+   Multiplikation und Division
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bestimmung-von-grenzwerten-mit-potenzreihen">
+   Bestimmung von Grenzwerten mit Potenzreihen
+  </a>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -494,11 +573,113 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="rechnen-mit-potenzreihen">
 <h1>4.4 Rechnen mit Potenzreihen<a class="headerlink" href="#rechnen-mit-potenzreihen" title="Permalink to this headline">#</a></h1>
-<div class="warning admonition">
-<p class="admonition-title">Warnung</p>
-<p>Achtung, dieser Abschnitt des Vorlesungsskriptes wird gerade überarbeitet!!!</p>
+<p>In diesem Abschnitt befassen wir uns mit den Rechenregeln für Potenzreihen.</p>
+<section id="lernziele">
+<h2>Lernziele<a class="headerlink" href="#lernziele" title="Permalink to this headline">#</a></h2>
+<div class="hint admonition">
+<p class="admonition-title">Lernziele</p>
+<ul class="simple">
+<li><p>Sie können Potenzreihen mit demselben Entwicklungspunkt</p>
+<ul>
+<li><p>addieren,</p></li>
+<li><p>subtrahieren,</p></li>
+<li><p>multiplizieren und</p></li>
+<li><p>dividieren.</p></li>
+</ul>
+</li>
+<li><p>Sie können Potenzreihen ableiten und integrieren.</p></li>
+<li><p>Sie können mit Potenzreihen den Grenzwert einer Funktion bestimmen.</p></li>
+</ul>
 </div>
-<p>TODO</p>
+</section>
+<section id="addition-und-subtraktion">
+<h2>Addition und Subtraktion<a class="headerlink" href="#addition-und-subtraktion" title="Permalink to this headline">#</a></h2>
+<p>Zwei Potenzreihen können addiert oder subtrahiert werden, wenn sie denselben
+Entwicklungspunkt <span class="math notranslate nohighlight">\(x_0\)</span> haben. Um sie zu addieren oder zu subtrahieren, müssen
+lediglich die Koeffizienten addiert bzw. subtrahiert werden.</p>
+<p>Lauten die beiden Potenzreihen</p>
+<div class="math notranslate nohighlight">
+\[\sum_{k=0}^{\infty}a_k (x-x_0)^k \text{ und } \sum_{k=0}^{\infty} b_k
+(x-x_0)^k,\]</div>
+<p>dann ist die Summe</p>
+<div class="math notranslate nohighlight">
+\[\sum_{k=0}^{\infty} (a_k + b_k)\cdot (x-x_0)^k\]</div>
+<p>und die Differenz</p>
+<div class="math notranslate nohighlight">
+\[\sum_{k=0}^{\infty} (a_k - b_k)\cdot (x-x_0)^k.\]</div>
+<p>Allerdings muss der Konvergenzradius neu überprüft werden. Wenn eine der
+Potenzreihen einen kleineren Konvergenzradius als die andere hat, dann hat die
+Summe/Differenz mindestens denselben kleineren Konvergenzradius. Möglicherweise
+ist der Konvergenzradius jedoch größer.</p>
+</section>
+<section id="ableiten-und-integrieren">
+<h2>Ableiten und Integrieren<a class="headerlink" href="#ableiten-und-integrieren" title="Permalink to this headline">#</a></h2>
+<p>Potenzreihen lassen sich sehr einfach ableiten oder integrieren. Dazu wird jeder
+einzelne Term der Reihe abgeleitet oder integriert. Der Konvergenzradius bleibt
+dabei erhalten.</p>
+</section>
+<section id="multiplikation-und-division">
+<h2>Multiplikation und Division<a class="headerlink" href="#multiplikation-und-division" title="Permalink to this headline">#</a></h2>
+<p>Die Multiplikation und Division zweier Potenzreihen ist leider etwas komplizierter.</p>
+<p>Um zwei Potenzreihen zu multiplizieren, verwenden wir die Cauchy-Produkt-Formel. Damit die Formel nicht zu unübersichtlich wird, nehmen wir den Entwicklungspunkt <span class="math notranslate nohighlight">\(x_0=0\)</span>, aber natürlich gilt die Formel auch für andere Entwicklungspunkte.</p>
+<div class="math notranslate nohighlight">
+\[\left(\sum_{k=0}^{\infty} a_k x^k \right) \cdot \left(\sum_{k=0}^{\infty} b_k x^k \right) = \left(\sum_{k=0}^{\infty} c_k x^k \right) \]</div>
+<p>mit</p>
+<div class="math notranslate nohighlight">
+\[c_k = \sum_{l=0}^{k} a_l b_{k-l} 
+= a_0 b_k + a_1 b_{k_1} + a_2 b_{k_2} + \ldots a_k b_0.\]</div>
+<p>Der Konvergenzradius muss neu überprüft werden.</p>
+<p>Wenn die Potenzreihe <span class="math notranslate nohighlight">\(A(x)\)</span> durch die Potenzreihe <span class="math notranslate nohighlight">\(B(x)\)</span> geteilt werden soll,
+dann muss eine neue Potenzreihe <span class="math notranslate nohighlight">\(C(x)\)</span> gefunden werden, so dass</p>
+<div class="math notranslate nohighlight">
+\[A(x) = B(x) \cdot C(x)\]</div>
+<p>gilt. Für die Multiplikation <span class="math notranslate nohighlight">\(B(x) \cdot C(x)\)</span> gilt jedoch</p>
+<div class="math notranslate nohighlight">
+\[\left(\sum_{k=0}^{\infty} b_k x^k \right) \cdot \left(\sum_{k=0}^{\infty} c_k
+x^k \right) = \left(\sum_{k=0}^{\infty} d_k x^k \right) \]</div>
+<p>mit den Koeffizienten</p>
+<div class="math notranslate nohighlight">
+\[d_k = \sum_{l=0}^{k} b_l c_{k-l} = b_0 c_k + b_1 c_{k_1} + b_2 c_{k_2} +
+\ldots b_k c_0.\]</div>
+<p>Damit das Produkt <span class="math notranslate nohighlight">\(B(x) \cdot C(x)\)</span> gleich der Potenzreihe <span class="math notranslate nohighlight">\(A(x)\)</span> ist, muss
+jeder Koeffizient <span class="math notranslate nohighlight">\(d_k\)</span> mit <span class="math notranslate nohighlight">\(a_k\)</span> übereinstimmen. Wir vergleichen also die
+Koeffizienten</p>
+<p><span class="math notranslate nohighlight">\(a_k = d_k\)</span></p>
+<p>und berechnen daraus die gesuchten <span class="math notranslate nohighlight">\(c_k\)</span>. Das funktioniert allerdings nur, wenn
+wir nicht ins Unendliche gehen, sondern die Potenzreihe abbrechen. Der
+Konvergenzradius muss ebenfalls neu bestimmt werden.</p>
+</section>
+<section id="bestimmung-von-grenzwerten-mit-potenzreihen">
+<h2>Bestimmung von Grenzwerten mit Potenzreihen<a class="headerlink" href="#bestimmung-von-grenzwerten-mit-potenzreihen" title="Permalink to this headline">#</a></h2>
+<p>Potenzreihen bieten eine alternative Methode zur Berechnung von
+Funktionsgrenzwerten im Vergleich zum Verfahren von Bernoulli-de l’Hospital.
+Beim Verfahren von Bernoulli-de l’Hospital werden Zähler und Nennen getrennt
+voneinander abgeleitet, bis der Funktionsgrenzwert bestimmt werden kann.
+Gegebenfalls ist es jedoch möglich, eine Funktion als Potenzreihe darzustellen,
+dann die Division durchzuführen und daraus den Grenzwert direkt zu bilden. Am
+einfachsten ist es, ein Beispiel zu betrachten.</p>
+<p>Berechnen Sie den Grenzwert der Funktion <span class="math notranslate nohighlight">\(f(x) = \sin(x)/x\)</span>, wenn <span class="math notranslate nohighlight">\(x\)</span> gegen 0
+strebt, also</p>
+<div class="math notranslate nohighlight">
+\[\lim_{x \to 0}\frac{\sin(x)}{x}.\]</div>
+<p><span class="math notranslate nohighlight">\(x=0\)</span> darf in die Funktion nicht eingesetzt werden, da ansonsten durch 0 geteilt werden würde. Die Potenzreihe der Sinusfunktion lautet:</p>
+<div class="math notranslate nohighlight">
+\[\sin(x) = x - \frac{x^3}{3!} + \frac{x^5}{5!} - \frac{x^7}{7!} + \ldots\]</div>
+<p>und damit ist</p>
+<div class="math notranslate nohighlight">
+\[\frac{\sin(x)}{x} = 1 - \frac{x^2}{3!} + \frac{x^4}{5!} - \frac{x^6}{7!} + \ldots .\]</div>
+<p>Für jeden einzelnen Term können wir jetzt aber den Grenzwert berechnen, also</p>
+<div class="math notranslate nohighlight">
+\[
+\lim_{x\to 0} \left(1 \right) = 1, \;
+\lim_{x\to 0} \left(\frac{x^2}{3!} \right) = 0, \;
+\lim_{x\to 0} \left(\frac{x^4}{5!} \right) = 0, \ldots \]</div>
+<p>Nur der erste Term hat den Grenzwert 1, alle nachfolgenden Grenzwerte sind 0. Da
+alle Grenzwerte endlich sind, dürfen wir die Grenzwerte addieren bzw. subtrahieren
+und erhalten so den gesuchten Grenzwert</p>
+<div class="math notranslate nohighlight">
+\[\lim_{x \to 0}\frac{\sin(x)}{x} = 1.\]</div>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
