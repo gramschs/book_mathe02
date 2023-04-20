@@ -38,8 +38,8 @@ $$R_n(x) = f(x) - T_n(x).$$
 
 Jetzt haben wir dem Fehler zwar einen neuen Namen gegeben, Restglied, aber das
 hilft uns erstmal noch nicht weiter. Allerdings hat ein Mathematiker namens
-[Brook Taylor](https://de.wikipedia.org/wiki/Brook_Taylor) gezeigt, dass für das
-Restglied die folgende Formel gilt:
+[Joseph-Louis Lagrange](https://de.wikipedia.org/wiki/Joseph-Louis_Lagrange)
+gezeigt, dass für das Restglied die folgende Formel gilt:
 
 $$R_n(x) = f(x) - T_n(x) =
 \frac{f^{(n+1)}(\textcolor{red}{z})}{(n+1)!}\cdot(x-x_0)^{n+1},$$
