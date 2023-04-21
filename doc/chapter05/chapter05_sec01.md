@@ -1,4 +1,4 @@
-# Fourier-Reihen
+# 5.1 Periodische Funktionen
 
 ```{admonition} Warnung
 :class: warning

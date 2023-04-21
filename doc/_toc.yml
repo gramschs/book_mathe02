@@ -36,8 +36,13 @@ parts:
     - file: chapter04/chapter04_sec03.md
     - file: chapter04/chapter04_sec04.md
     - file: chapter04/chapter04_sec05.md
-  - file: part05
-    title: Fourierreihen
+  - file: chapter05/chapter05_sec00.md
+    sections: 
+    - file: chapter05/chapter05_sec01.md
+    - file: chapter05/chapter05_sec02.md
+    - file: chapter05/chapter05_sec03.md    
+    - file: chapter05/chapter05_sec04.md
+    - file: chapter05/chapter05_sec05.md
 - caption: Part 3. Mehrdimensionale Analysis
   chapters:
   - file: part06
