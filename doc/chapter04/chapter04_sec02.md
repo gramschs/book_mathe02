@@ -23,7 +23,7 @@ Potenzreihe zu darzustellen. Allerdings ist das Aufsummieren von unendlich
 vielen Summanden für die Taylorreihe auch nicht praktikabel. Stattdessen wird in
 der Praxis die Taylorreihe ab einem bestimmten Grad abgebrochen. Oder anders
 ausgedrückt, als Näherung für die Funktion $f$ in der Umgebung eines
-Entwicklugnspunktes $x_0$ wird ein Taylorpolynom vom Grad $n$ genutzt. Aber wie
+Entwicklungspunktes $x_0$ wird ein Taylorpolynom vom Grad $n$ genutzt. Aber wie
 groß ist eigentlich der Fehler, wenn statt der Funktion $f$ das Taylorpolynom
 $T_n$ genommen wird? Welcher Rest bleibt da? Eines ist schon einmal klar. Würden
 wir für das Taylorpolynom einen anderen Grad $m$ nehmen, so würde sich auch ein
@@ -112,7 +112,7 @@ $$R_3(0.0873) \leq \frac{0.0872}{24}\cdot 0.0873^4 = 2.11 \cdot 10^{-7}.$$
 Dieser maximale Fehler ist in den meisten Fällen so klein, dass im Intervall
 $[-5^{\circ}, + 5^{\circ}]$ die Sinusfunktion auch durch 
 
-$$sin(x) \approx T_3(x) = x - \frac{1}{6}x^3.$$
+$$\sin(x) \approx T_3(x) = x - \frac{1}{6}x^3.$$
 
 In vielen Fällen ist es sogar legitim, die Sinusfunktion nur durch das Taylorpolynom ersten Grades zu approximieren, also
 

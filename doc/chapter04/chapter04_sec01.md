@@ -9,8 +9,14 @@ gibt es in diesem Kapitel eine Anleitung dazu.
 
 ```{admonition} Lernziele
 :class: tip
-* Sie kennen die Formel für ein **Taylorpolynom der Ordnung n** auswendig.
-* Sie kennen die Formel für die **Taylorreihe** auswendig.
+* Sie kennen die Formel für ein **Taylorpolynom der Ordnung n** auswendig:
+
+$$T_n(x) =\sum_{k=0}^{n} \frac{f^{(k)}(x_0)}{k!} \cdot (x-x_0)^k.$$
+
+* Sie kennen die Formel für die **Taylorreihe** auswendig:
+
+$$T(x)=\sum_{k=0}^{\infty} \frac{f^{(k)}(x_0)}{k!} (x-x_0)^k.$$
+
 ```
 
 
