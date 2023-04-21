@@ -8,7 +8,7 @@ werden wir uns mit einigen dieser Taylorreihen beschäftigen.
 
 ```{admonition} Lernziele
 :class: hint
-Sie kennen die wichtigsten Taylorreihen.
+Sie kennen die wichtigsten Potenz- bzw. Taylorreihen.
 ```
 
 ## Die Exponential- und Logarithmusfunktion
