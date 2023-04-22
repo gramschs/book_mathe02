@@ -1,4 +1,4 @@
-# 5.4 Fourierreihen Anwendungen
+# 5.4 Rechenregeln Fourierreihen
 
 ```{admonition} Warnung
 :class: warning

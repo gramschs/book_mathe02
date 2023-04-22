@@ -1,4 +1,4 @@
-# 5.3 Fourierreihen (Periode T)
+# 5.3 Konvergenz von Fourierreihen
 
 ```{admonition} Warnung
 :class: warning
