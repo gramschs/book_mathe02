@@ -1,12 +1,11 @@
-# Fourier-Reihen
+# 5.2 Fourierreihen 
 
 ```{admonition} Warnung
 :class: warning
 Achtung, dieser Abschnitt des Vorlesungsskriptes wird gerade überarbeitet!!!
 ```
 
-Periodische Vorgänge gibt es sowohl in der Natur als auch in der Technik. In der Technik gehören insbesondere Drehbewegungen dazu. Es ist nicht sinnvoll, periodische Funktionen durch Potenzreihen bzw. Taylorpolynome zu approximieren. Stattdessen werden wir periodische Funktionen als Überlagerung von Sinus- und Kosinus-Funktionen approximieren, also sogenannte **Fourier-Reihen**.
-
+Periodische Vorgänge gibt es sowohl in der Natur als auch in der Technik. In der Technik gehören insbesondere Drehbewegungen dazu. Es ist nicht sinnvoll, periodische Funktionen durch Potenzreihen bzw. Taylorreihen zu approximieren. Stattdessen werden wir periodische Funktionen als Überlagerung von Sinus- und Kosinus-Funktionen approximieren, also sogenannte **Fourier-Reihen**. 
 
 ## Lernziele Fourier-Reihen
 
@@ -17,15 +16,6 @@ Periodische Vorgänge gibt es sowohl in der Natur als auch in der Technik. In de
 * Sie kennen die Kriterien, wann eine Funktion in eine **Fourier-Reihe** entwickelt werden darf.
 * Sie können eine periodische Funktion in eine Fourier-Reihe umschreiben.
 * Sie können die **Fourier-Koeffizienten** berechnen. 
-```
-
-## Periodische Funktionen - was ist das?
-
-Bei einer periodischen Funktion wiederholen sich in regelmäßigen Abständen die Funktionswerte wieder. Der Abstand, nachdem sich die Funktionswerte beginnen zu wiederholen, heißt **Periodendauer**.
-
-```{admonition} Video
-:class: seealso
-https://www.youtube.com/embed/e3lpwsKp75Y
 ```
 
 ## Wie findet man zu einer periodischen Funktion die passende Überlagerung von Sinus- und Kosinus-Funktionen?

@@ -21,7 +21,7 @@ Berechnen Sie den Mittelwert $\bar{f}$ der Funktion $f(x)=mx+n$ auf einem belieb
 $$\bar{f} = \frac{1}{2}\left(f(a)+f(b)\right) $$ 
 Der Mittelwert der der linearen Funktion $f(x)=mx+n$ ist gerade das arithmetische Mittel der beiden Funktionswerte $f(a)$ und $f(b)$ an den Intervallgrenzen.
 ```{dropdown} Lösungsweg
-![solution02_02](pics/solution02_02.pdf)
+![solution02_02](pics/solution02_02.png)
 ```
 ````
 
@@ -38,7 +38,7 @@ und der x-Achse eingeschlossen ist. Fertigen Sie zuerst eine Skizze an.
 :class: minisolution, toggle
 $$A = \frac{1}{6}$$
 ```{dropdown} Lösungsweg
-![solution02_03](pics/solution02_03.pdf)
+![solution02_03](pics/solution02_03.png)
 ```
 ````
 
@@ -57,7 +57,7 @@ $$A = \frac{37}{12}$$
 ```{dropdown} Lösungsweg
 Skizze des Funktionsgraphens:
 
-![solution02_04_plot](pics/plot_exercise_02_04.pdf)
+![solution02_04_plot](pics/plot_exercise_02_04.png)
 
 * Nullstellen berechnen: $f(x) = x(x-1)(x-3) = 0$ lösen
 * Nullstellen: $x_1 = 0$, $x_2 = 1$ und $x_3 = 3$
@@ -88,7 +88,7 @@ $$A = \frac{1000}{3}=333.33$$
 ```{dropdown} Lösungsweg
 Skizze der beiden Funktionsgraphen:
 
-![solution02_05_plot](pics/plot_exercise_02_05.pdf)
+![solution02_05_plot](pics/plot_exercise_02_05.png)
 
 * Schnittpunkte berechnen: $f(x) = g(x)$ lösen
 * Schnittpunkte: $x_1 = -4$ und $x_2 = 16$
@@ -113,7 +113,7 @@ $$A = \frac{27}{2}= 13.5$$
 ```{dropdown} Lösungsweg
 Skizze der beiden Funktionsgraphen:
 
-![solution02_06_plot](pics/plot_exercise_02_06.pdf)
+![solution02_06_plot](pics/plot_exercise_02_06.png)
 
 * $g$ ist oberhalb von $f$
 * Flächeninhalt:
@@ -138,7 +138,7 @@ $$A = \frac{9}{98}\approx 0.091837$$
 ```{dropdown} Lösungsweg
 Skizze der beiden Funktionsgraphen:
 
-![solution02_07_plot](pics/plot_exercise_02_07.pdf)
+![solution02_07_plot](pics/plot_exercise_02_07.png)
 
 * Schnittpunkte berechnen: $f(x) = g(x)$ lösen
 * Schnittpunkte: $x_1 = 0$ und $x_2 = \frac{3}{7}$
@@ -164,7 +164,7 @@ $$A = 4+2\sqrt{2} - \frac{3\pi}{2\sqrt{2}}\approx 3.49626$$
 ```{dropdown} Lösungsweg
 Skizze der beiden Funktionsgraphen:
 
-![solution02_08_plot](pics/plot_exercise_02_08.pdf)
+![solution02_08_plot](pics/plot_exercise_02_08.png)
 
 * Schnittpunkte berechnen: $f(x) = g(x)$ lösen
 * Schnittpunkte: $x_1 = \frac{\pi}{4}$,  $x_2 = \pi$ und $x_3 = \frac{7\pi}{4}$
