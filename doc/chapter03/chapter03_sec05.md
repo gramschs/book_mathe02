@@ -127,12 +127,12 @@ Die Potenzreihe konvergiert absolut im Intervall $(\frac{15}{8}; \frac{17}{8})$.
 
 Durch das Einsetzen einer der Randpunkte in die Potenzreihe reduziert sich diese auf eine Zahlenreihe. Die Konvergenzfrage lässt sich dann mit einem passenden Konvergenz- oder Divergenzkriterium für Reihen angehen. 
 
-Setzt man den linken Randpunkt $x=\frac{15}{9}$ ein, so erhält man: 
+Setzt man den linken Randpunkt $x=\frac{15}{8}$ ein, so erhält man: 
 \begin{align*}
 \sum_{n=1}^{\infty} \frac{8^n}{n}\cdot\left(\frac{15}{8}-2\right)^n 
 &= \sum_{n=1}^{\infty} \frac{8^n}{n}\cdot\left(-\frac{1}{8}\right)^n \\
-&= \sum_{n=1}^{\infty} \frac{8^n}{n}\cdot \frac{(-1)^n}{8^n} 
-+ \sum_{n=1}^{\infty} \frac{(-1)^n}{n}. 
+&= \sum_{n=1}^{\infty} \frac{8^n}{n}\cdot \frac{(-1)^n}{8^n} \\
+&= \sum_{n=1}^{\infty} \frac{(-1)^n}{n}. 
 \end{align*}
 Diese Reihe konvergiert (gegen $-\ln(2)$), der linke Randpunkt gehört zum Konvergenzbereich.
 
