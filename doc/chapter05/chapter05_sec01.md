@@ -43,7 +43,7 @@ $$f(x+p) = f(x).$$
 
 Sinus und Kosinus sind die beiden wichtigsten periodischen Funktionen. Sie werden auch dazu genutzt, um andere periodische Funktionen zu approximieren (Stichwort: Fourierreihe). Beide haben eine Periode von $2\pi$.
 
-```{figure} pics/plot_sinus.pdf
+```{figure} pics/plot_sinus.png
 ---
 width: 600px
 name: chap05_plot_sinus
@@ -53,67 +53,85 @@ Sinusfunktion mit einer Periode $p = 2\pi$
 
 ### Rechteckfunktion
 
-Die Rechteckfunktion ist eine periodische Funktion, die häufig in der
-Signalverarbeitung verwendet wird. Beispielsweise dient sie als Taktsignal für
-digitale Prozessoren und Controller. Sie hat eine Periode $p = 1$, bei der die
-Funktion zwischen den Werten $1$ und $0$ oszilliert. Die Rechteckfunktion ist
-definiert als:
+Die Rechteckfunktion ist zunächst einmal keine periodische Funktion. Als erstes
+werden eine Periode $T$ und eine Konstante $c$ festgelegt. Dann wird die
+Rechteckfunktion definiert als die Funktion, deren Funktionswerte im Intervall
+$[-\frac{T}{2}, \frac{T}{2}]$ gleich der Konstante $c$ sind. Und außerhalb
+dieses Intervalls sollen die Funktionswerte 0 sein (übrigens, manchmal wird auch
+ein anderer Wert als 0 genommen). Mathematisch wird das folgendermaßen
+ausgedrückt:
 
 \begin{equation*} 
-f(x) = 
+f(t) = 
 \begin{cases} 
-1 & \text{ für } 0 \leq x \leq 0.5\\
-0 & \text{ für } 0.5 < x < 1 
+c & \text{ für } -\frac{T}{2} \leq x \leq \frac{T}{2},\\
+0 & \text{ sonst.} 
 \end{cases} 
 \end{equation*}
 
-```{figure} pics/plot_rechteck.pdf
+Der Funktionsgraph der Rechteckfunktion sieht folgendermaßen aus:
+
+```{figure} pics/plot_rechteck.png
 ---
 width: 600px
 name: chap05_plot_rechteck
 ---
-Rechteckfunktion mit einer Periode $p = 1$
+Beispiel einer Rechteckfunktion: Periode $T = 1$ und $c = 1$
 ```
 
+Jetzt wird die Periode von $0$ bis $T$ gelb markiert.
 
-```{admonition} Warnung
-:class: warning
-Achtung, dieser Abschnitt des Vorlesungsskriptes wird gerade überarbeitet!!!
+```{figure} pics/plot_rechteck_period.png
+---
+width: 600px
+name: chap05_plot_rechteck_period
+---
+Beispiel einer Rechteckfunktion: das Periodenintervall $[0,T]$ ist gelb markiert
 ```
 
-### Dreieckfunktion 
+Als letztes wird der Funktionsgraph periodisch wiederholt. Damit ist gemeint,
+dass das gelb markierte Gebiet links und rechts immer wieder drangehängt wird.
+Dadruch entsteht eine neue Funktion, deren Funktionsgraph in der nächsten
+Abbildung zu sehen ist.
 
-Die Dreieckfunktion ist eine periodische Funktion, die ebenfalls in der
+```{figure} pics/plot_rechteck_periodisch.png
+---
+width: 600px
+name: chap05_plot_rechteck_periodisch
+---
+Beispiel einer Rechteckfunktion, die periodisch fortgesetzt wurde
+```
+
+Diese neue Funktion ist nun eine periodische Funktion. Sie wird häufig in der
+Signalverarbeitung verwendet. Beispielsweise dient sie als Taktsignal für
+digitale Prozessoren und Controller. 
+
+### Dreiecksfunktion 
+
+Die Dreiecksfunktion ist eine periodische Funktion, die ebenfalls in der
 Signalverarbeitung häufig vorkommt. Sie hat eine Periode $T$ und oszilliert
-zwischen $-1$ und $1$, wobei der Anstieg von $-1$ auf $1$ linear ist und der
-Abfall von $1$ auf $-1$ ebenfalls linear ist. Die Dreieckfunktion ist definiert
-als:
+zwischen zwei Werten $c_1$ und $c_2$, wobei der Anstieg von $c_1$ auf $c_2$
+linear ist und der Abfall von $c_2$ auf $c_1$ ebenfalls linear ist. 
 
-\begin{equation*} 
-f(x) = 
-\begin{cases} 
-\frac{4x}{T} - 1 & \text{ für } 0 \leq x < \frac{T}{2} \\ 
--\frac{4x}{T} + 3 & \text{ für } \frac{T}{2} \leq x < T 
-\end{cases}
-\end{equation*}
-
-Die Dreieckfunktion hat auch interessante Eigenschaften in Bezug auf ihre
-Fourierreihe und wird oft als Testsignal verwendet, um die Leistung von Filtern
-und anderen Signalverarbeitungsalgorithmen zu evaluieren.
+```{figure} pics/plot_dreieck.png
+---
+width: 600px
+name: chap05_plot_dreieck
+---
+Beispiel einer Dreiecksfunktion, die zwischen $0$ und $1$ oszilliert und die Periode $T = 2$ hat
+```
 
 ### Sägezahnfunktion
 
 Die Sägezahnfunktion ist eine weitere periodische Funktion, die in der
 Signalverarbeitung häufig verwendet wird. Sie hat eine Periode $T$ und
 oszilliert zwischen $-1$ und $1$, wobei der Anstieg von $-1$ auf $1$ linear ist
-und der Abfall von $1$ auf $-1$ plötzlich stattfindet. Die Sägezahnfunktion ist
-definiert als:
+und der Abfall von $1$ auf $-1$ plötzlich stattfindet. 
 
-\begin{equation*} 
-f(x) = \frac{2}{T} \cdot \left(x -
-\left\lfloor\frac{x}{T}\right\rfloor\cdot T\right) - 1 
-\end{equation*}
-
-Die Sägezahnfunktion hat auch interessante Eigenschaften in Bezug auf ihre
-Fourierreihe und wird oft als Testsignal verwendet, um die Leistung von Filtern
-und anderen Signalverarbeitungsalgorithmen zu evaluieren.
+```{figure} pics/plot_saegezahn.png
+---
+width: 600px
+name: chap05_plot_saegezahn
+---
+Beispiel einer Sägezahnfunktion, die zwischen $-1$ und $1$ oszilliert und die Periode $T = 2$ hat
+```
