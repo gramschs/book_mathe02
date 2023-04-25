@@ -51,6 +51,15 @@ name: chap05_plot_sinus
 Sinusfunktion mit einer Periode $p = 2\pi$
 ```
 
+Wir werden in den nächsten Kapiteln die Sinus- und Kosinusfunktionen
+modifizieren. Im folgenden Video werden die verschiedenen Möglichkeiten, die
+Sinusfunktion zu transformieren wiederholt. Für die Kosinusfunktion gelten die
+gleichen Transformationen analog.
+
+```{dropdown} Video "Sinusfunktion Transformation" von Daniel Jung
+<iframe width="560" height="315" src="https://www.youtube.com/embed/d_u7yYf30yA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+```
+
 ### Rechteckfunktion
 
 Die Rechteckfunktion ist zunächst einmal keine periodische Funktion. Als erstes

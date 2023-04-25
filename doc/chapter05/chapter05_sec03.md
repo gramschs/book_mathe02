@@ -1,6 +1,15 @@
-# 5.3 Konvergenz von Fourierreihen
+# 5.3 Beispiele für Fourierreihen
 
-```{admonition} Warnung
-:class: warning
-Achtung, dieser Abschnitt des Vorlesungsskriptes wird gerade überarbeitet!!!
-```
+In diesem Kapitel werden drei bekannte Beispiele für Fourierreihen vorgerechnet.
+
+## Die Rechteckfunktion
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/dzkCRqKXZCs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+## Die Sägezahnfunktion
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/wGL_Cxorbac" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+## Die Dreiecksfunktion
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/-I0YqzFRldA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
