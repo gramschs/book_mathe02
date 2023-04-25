@@ -55,6 +55,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Funktionen von mehreren Variablen und partielle Ableitungen" href="../part06.html" />
@@ -296,7 +298,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="chapter05_sec03.html">
-     5.3 Konvergenz von Fourierreihen
+     5.3 Beispiele für Fourierreihen
     </a>
    </li>
    <li class="toctree-l2">
@@ -526,10 +528,185 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="ubungen">
 <h1>Übungen<a class="headerlink" href="#ubungen" title="Permalink to this headline">#</a></h1>
-<div class="warning admonition">
-<p class="admonition-title">Warnung</p>
-<p>Achtung, dieser Abschnitt des Vorlesungsskriptes wird gerade überarbeitet!!!</p>
+<div class="miniexercise admonition">
+<p class="admonition-title">Übung 5.1</p>
+<p>Welche Periode haben die folgenden Funktionen:</p>
+<ol class="simple">
+<li><p>Sinus-Funktion <span class="math notranslate nohighlight">\(f(x) = \sin(x)\)</span>?</p></li>
+<li><p>Kosinus-Funktion <span class="math notranslate nohighlight">\(f(x) = \cos(x)\)</span>?</p></li>
+<li><p>Quadratische Funktion <span class="math notranslate nohighlight">\(f(x)=x^2\)</span>?</p></li>
+<li><p>Tangens-Funktion <span class="math notranslate nohighlight">\(f(x)=\tan(x)\)</span>?</p></li>
+</ol>
 </div>
+<div class="minisolution toggle admonition">
+<p class="admonition-title">Lösung</p>
+<ol class="simple">
+<li><p>Sinus-Funktion <span class="math notranslate nohighlight">\(f(x) = \sin(x)\)</span> Periode <span class="math notranslate nohighlight">\(2\pi\)</span></p></li>
+<li><p>Kosinus-Funktion <span class="math notranslate nohighlight">\(f(x) = \cos(x)\)</span> Periode <span class="math notranslate nohighlight">\(2\pi\)</span></p></li>
+<li><p>Quadratische Funktion <span class="math notranslate nohighlight">\(f(x)=x^2\)</span> nicht periodisch</p></li>
+<li><p>Tangens-Funktion <span class="math notranslate nohighlight">\(f(x)=\tan(x)\)</span> Periode <span class="math notranslate nohighlight">\(\pi\)</span></p></li>
+</ol>
+</div>
+<div class="miniexercise admonition">
+<p class="admonition-title">Übung 5.2</p>
+<p>Zeichnen Sie die Funktionen <span class="math notranslate nohighlight">\(f(x) = \sin(kx)\)</span> und <span class="math notranslate nohighlight">\(g(x) = \cos(kx)\)</span> für <span class="math notranslate nohighlight">\(k = 2\)</span> und <span class="math notranslate nohighlight">\(k = 5\)</span>. Welche Perioden haben die vier Funktionen?</p>
+</div>
+<div class="minisolution toggle admonition">
+<p class="admonition-title">Lösung</p>
+<p>Die Periode von <span class="math notranslate nohighlight">\(\sin(2x)\)</span> und <span class="math notranslate nohighlight">\(\cos(2x)\)</span> ist <span class="math notranslate nohighlight">\(\pi\)</span> und die Periode von <span class="math notranslate nohighlight">\(\sin(5x)\)</span> und <span class="math notranslate nohighlight">\(\cos(5x)\)</span> ist <span class="math notranslate nohighlight">\(\frac{2\pi}{5}\)</span>.</p>
+<figure class="align-default" id="plot-solution05-02a">
+<a class="reference internal image-reference" href="../_images/plot_solution05_02a.svg"><img alt="../_images/plot_solution05_02a.svg" src="../_images/plot_solution05_02a.svg" width="50%" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 8 </span><span class="caption-text">Sinusfunktion <span class="math notranslate nohighlight">\(\sin(2x)\)</span> mit einer Periode <span class="math notranslate nohighlight">\(T = \pi\)</span></span><a class="headerlink" href="#plot-solution05-02a" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="plot-solution05-02b">
+<a class="reference internal image-reference" href="../_images/plot_solution05_02b.svg"><img alt="../_images/plot_solution05_02b.svg" src="../_images/plot_solution05_02b.svg" width="50%" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 9 </span><span class="caption-text">Sinusfunktion <span class="math notranslate nohighlight">\(\sin(5x)\)</span> mit einer Periode <span class="math notranslate nohighlight">\(T = \frac{2\pi}{5}\)</span></span><a class="headerlink" href="#plot-solution05-02b" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="plot-solution05-02c">
+<a class="reference internal image-reference" href="../_images/plot_solution05_02c.svg"><img alt="../_images/plot_solution05_02c.svg" src="../_images/plot_solution05_02c.svg" width="50%" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 10 </span><span class="caption-text">Kosinusfunktion <span class="math notranslate nohighlight">\(\cos(2x)\)</span> mit einer Periode <span class="math notranslate nohighlight">\(T = \pi\)</span></span><a class="headerlink" href="#plot-solution05-02c" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="plot-solution05-02d">
+<a class="reference internal image-reference" href="../_images/plot_solution05_02d.svg"><img alt="../_images/plot_solution05_02d.svg" src="../_images/plot_solution05_02d.svg" width="50%" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 11 </span><span class="caption-text">Kosinusfunktion <span class="math notranslate nohighlight">\(\cos(5x)\)</span> mit einer Periode <span class="math notranslate nohighlight">\(T = \frac{2\pi}{5}\)</span></span><a class="headerlink" href="#plot-solution05-02d" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+<div class="miniexercise admonition">
+<p class="admonition-title">Übung 5.3</p>
+<p>Berechnen Sie die folgenden Integrale.</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(a_0 = \frac{1}{\pi} \int_{-\pi}^{\pi} x^2\; dx\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(a_1 = \frac{1}{\pi} \int_{-\pi}^{\pi} x^2 \cos(x)\; dx\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(a_2 = \frac{1}{\pi} \int_{-\pi}^{\pi} x^2 \cos(2x)\; dx\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(b_1 = \frac{1}{\pi} \int_{-\pi}^{\pi} x^2 \sin(x)\; dx\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(b_2 = \frac{1}{\pi} \int_{-\pi}^{\pi} x^2 \sin(2x)\; dx\)</span></p></li>
+</ul>
+<p>Tipp: meist muss zuerst partielle Integration und später Substitution angewandt
+werden.</p>
+</div>
+<div class="minisolution toggle admonition">
+<p class="admonition-title">Lösung</p>
+<div class="math notranslate nohighlight">
+\[a_0=\frac{2\pi^2}{3}, a_1 = -4, a_2 = 1, b_1 = 0, b_2 = 0\]</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Lösungsweg<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Fourierkoeffizient <span class="math notranslate nohighlight">\(a_0\)</span>:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+a_0 = \frac{1}{\pi}\int_{-\pi}^{\pi} x^2\, dx = \frac{1}{\pi}\left[\frac{1}{3}x^3\right]_{-\pi}^{\pi} = \frac{1}{3\pi}\cdot\left(\pi^3 + \pi^3\right) = \frac{2}{3}\pi^2.
+\end{equation*}\]</div>
+<p class="sd-card-text">Fourierkoeffizient <span class="math notranslate nohighlight">\(a_1\)</span>:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+a_1 &amp;= \frac{1}{\pi}\int_{-\pi}^{\pi}x^2\cos(x)\, dx = \\
+&amp;= \frac{1}{\pi}\left[x^2\cdot \sin(x)\right]_{-\pi}^{\pi} - \frac{2}{\pi}\int_{-\pi}^{\pi}x\, \sin(x)\, dx = \\
+&amp;= \frac{1}{\pi}\left[x^2\cdot\sin(x)\right]_{-\pi}^{\pi} - \frac{2}{\pi}\left([-x\cdot\cos(x)]_{-\pi}^{\pi}-\int_{-\pi}^{\pi}-\cos(x)\, dx \right) = \\
+&amp;= \frac{1}{\pi}\left[x^2\cdot\sin(x)\right]_{-\pi}^{\pi} + \frac{2}{\pi}\left[x\cdot\cos(x)\right]_{-\pi}^{\pi}-\frac{2}{\pi}\left[\sin(x)\right]_{-\pi}^{\pi} = \\
+&amp;= \left[\frac{1}{\pi}(x^2-2)\cdot\sin(x) + \frac{1}{\pi}\cdot 2x\cos(x)\right]_{-\pi}^{\pi} = \\
+&amp;= \left(\frac{1}{\pi}(\pi^2-2)\cdot\sin(\pi) + \frac{1}{\pi}\cdot 2\pi\cos(\pi)\right) - \left(\frac{1}{\pi}(\pi^2-2)\cdot\sin(-\pi)-\frac{1}{\pi}\cdot 2\pi\cos(-\pi)\right) = \\
+&amp;= -2-2 = -4
+\end{align*}\]</div>
+<p class="sd-card-text">Fourierkoeffizient <span class="math notranslate nohighlight">\(a_2\)</span>:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+a_2 = \frac{1}{\pi} \int_{-\pi}^{\pi} x^2\cdot \cos(2x)\, dx = \frac{1}{\pi}\left[x^2\cdot \frac{1}{2}\sin(2x)\right]_{-\pi}^{\pi} - \int_{-\pi}^{\pi}2x\cdot \frac{1}{2}\sin(2x)\, dx 
+\end{equation*}\]</div>
+<p class="sd-card-text">Wir rechnen zuerst die Stammfunktion des letzten Integrals aus:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+\int 2x\cdot \frac{1}{2}\sin(2x)\, dx &amp;=  \int x\cdot\sin(2x)\, dx = \\
+&amp;= \left[x\cdot\frac{1}{2}(-\cos(2x))\right] - \int \frac{1}{2}(-\cos(2x))\, dx = \\
+&amp;= -\frac{1}{2}x\cdot\cos(2x) + \frac{1}{2}\int \cos(2x)\, dx = \\
+&amp;= -\frac{1}{2}x\cdot\cos(2x) + \frac{1}{4}\sin(2x) + C 
+\end{align*}\]</div>
+<p class="sd-card-text">Eingesetzt in das ursprüngliche Integral erhalten wir</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+a_2 &amp;= \frac{1}{\pi}\left[x^2\cdot \frac{1}{2}\sin(2x)\right]_{-\pi}^{\pi} + \frac{1}{2}\left[x\cdot\cos(2x)\right]_{-\pi}^{\pi} - \left[ \frac{1}{4}\sin(2x)\right]_{-\pi}^{\pi} = \\
+&amp;= \frac{1}{4\pi}\left[(2x^2-1)\sin(2x)+2x\cos(2x)\right]_{-\pi}^{\pi} = \\
+&amp;= 1.
+\end{align*}\]</div>
+<p class="sd-card-text">Fourierkoeffizient <span class="math notranslate nohighlight">\(b_1\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[b_1 = \frac{1}{\pi}\int_{-\pi}^{\pi}x^2\cdot\sin(x)\, dx = \frac{1}{\pi}\left[ 2x\sin(x)-(x^2-2)\cos(x)\right]_{-\pi}^{\pi} = 0\]</div>
+<p class="sd-card-text">Zwischenrechnung:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+\int x^2\cdot \sin(x)\, dx &amp;= \left[x^2\cdot(-\cos(x))\right] - \int 2x\cdot (-\cos(x))\, dx = \\
+&amp;= -x^2\cos(x) + 2x\cdot\sin(x) - 2\int 1\cdot\sin(x)\, dx =\\
+&amp;= -x^2\cos(x) + 2x\sin(x) + 2\cos(x) + C = \\
+&amp;= 2x\sin(x) + (2-x^2)\cos(x) + C
+\end{align*}\]</div>
+<p class="sd-card-text">Fourierkoeffizient <span class="math notranslate nohighlight">\(b_2\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[b_2 = \frac{1}{\pi}\int_{-\pi}^{\pi}x^2\cdot\sin(2x)\, dx = \frac{1}{\pi}\left[\frac{1}{2}x\sin(2x)-\frac{1}{4}(2x^2-1)\cos(2x)\right]_{-\pi}^{\pi} = 0\]</div>
+<p class="sd-card-text">Zwischenrechnung:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+\int x^2\cdot \sin(2x)\, dx &amp;= -\frac{1}{2}\left[x^2\cdot\cos(x)\right]+\int x\cdot\cos(2x)\, dx = \\
+&amp;= -\frac{1}{2}x^2\cos(2x) + \frac{1}{2}\left[x\cdot\sin(2x)\right] - \frac{1}{2}\int\sin(2x)\, dx = \\
+&amp;= -\frac{1}{2}x^2\cos(2x) + \frac{1}{2}x\sin(2x) + \frac{1}{4}\cos(2x) + C
+\end{align*}\]</div>
+</div>
+</details></div>
+<div class="miniexercise admonition">
+<p class="admonition-title">Übung 5.4</p>
+<p>Gegeben sei die Funktion <span class="math notranslate nohighlight">\(f:[-\pi, \pi) \mapsto \mathbb{R}\)</span> mit</p>
+<div class="math notranslate nohighlight">
+\[ f(t)= -5\,t \ \text{ auf } \  [-\pi,\pi) \]</div>
+<p>die periodisch fortgesetzt wird. Zeichnen Sie das Schaubild der Funktion.
+Bestimmen Sie zuerst die Fourierkoeffizienten von <span class="math notranslate nohighlight">\(f\)</span> und dann die Fourierreihe.</p>
+</div>
+<div class="minisolution toggle admonition">
+<p class="admonition-title">Lösung</p>
+<ul class="simple">
+<li><p>Fourierkoeffizienten: <span class="math notranslate nohighlight">\(a_0=0\)</span>; <span class="math notranslate nohighlight">\(a_k=0\)</span>;  <span class="math notranslate nohighlight">\(b_k=\frac{10\,{\left(-1\right)}^k}{k}\)</span></p></li>
+<li><p>Fourierreihe:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[f(t)=\frac{0}{2}+\sum_{k=1}^{\infty} \left(0\cdot \cos(k\omega t) + b_k\sin(k\omega t)\right) = \sum_{k=1}^{\infty} \frac{10\,{\left(-1\right)}^k}{k}\sin(k\,t).\]</div>
+<figure class="align-default" id="plot-solution05-04">
+<a class="reference internal image-reference" href="../_images/plot_solution05_04.svg"><img alt="../_images/plot_solution05_04.svg" src="../_images/plot_solution05_04.svg" width="50%" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 12 </span><span class="caption-text">Schaubild der Funktion <span class="math notranslate nohighlight">\(f(t)= -5\,t\)</span> mit einer Periode <span class="math notranslate nohighlight">\(T = 2\pi\)</span> periodisch fortgesetzt</span><a class="headerlink" href="#plot-solution05-04" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Lösungsweg<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Es gilt für die Kreisfrequenz: <span class="math notranslate nohighlight">\(\omega=\frac{2\pi}{T}=\frac{2\pi}{2\pi}=1\)</span>. Damit können nun die Fourierkoeffizienten berechnet werden.</p>
+<p class="sd-card-text">Der Koeffizient <span class="math notranslate nohighlight">\(a_0\)</span> wird folgendermaßen berechnet:</p>
+<div class="math notranslate nohighlight">
+\[a_0\ =\ \frac{1}{\pi}\int_{-\pi}^{\pi} f(t)\,dt = \frac{1}{\pi}\int_{-\pi }^{\pi }-5\,t\, dt =0.\]</div>
+<p class="sd-card-text">Da auf dem Intervall <span class="math notranslate nohighlight">\([-\pi,\pi)\)</span> für die Funktion <span class="math notranslate nohighlight">\(f(t) = -f(-t)\)</span> gilt, ist die Funktion <span class="math notranslate nohighlight">\(f\)</span> ungerade. Damit sind Fourierkoeffizienten <span class="math notranslate nohighlight">\(a_k=0\)</span>.</p>
+<p class="sd-card-text">Die Fourierkoeffizienten <span class="math notranslate nohighlight">\(b_k\)</span> sind schwieriger zu berechnen, da wir dafür eine allgemeine Formel abhängig von <span class="math notranslate nohighlight">\(k\)</span> brauchen. Außerdem müssen wir partielle Integration anwenden.</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}  
+ b_k &amp; = \frac{1}{\pi}\left(  \int_{t=-\pi }^{t=\pi }\underbrace{\left( -5\,t\right)}_{f}\underbrace{\sin\left(k\,t\right)}_{g'}\, dt  \right) \\ 
+     &amp;=  \frac{1}{\pi}\left( \left[\left( -5\,t\right)\left( -\frac{\cos\left(k\,t\right)}{k}\right)\right]_{-\pi }^{\pi }-\int_{-\pi }^{\pi }\left( -5\right)\left( -\frac{\cos\left(k\,t\right)}{k}\right) \, dt \right) \\ 
+     &amp;=  \frac{1}{\pi}\left( \frac{10\,\pi \,{\left(-1\right)}^k}{k}-\left( \left[\left( -5\right)\left( -\frac{\sin\left(k\,t\right)}{k^2}\right)\right]_{-\pi }^{\pi } \right) \right) \\ 
+     &amp;=  \frac{1}{\pi}\left( \frac{10\,\pi \,{\left(-1\right)}^k}{k}-\left( 0 \right) \right) \\ 
+     &amp;= \frac{10\,{\left(-1\right)}^k}{k}. 
+\end{align*}\]</div>
+</div>
+</details></div>
 </section>
 
     <script type="text/x-thebe-config">

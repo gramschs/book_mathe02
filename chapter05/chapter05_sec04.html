@@ -55,10 +55,12 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Übungen" href="chapter05_sec05.html" />
-    <link rel="prev" title="5.3 Konvergenz von Fourierreihen" href="chapter05_sec03.html" />
+    <link rel="prev" title="5.3 Beispiele für Fourierreihen" href="chapter05_sec03.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -296,7 +298,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="chapter05_sec03.html">
-     5.3 Konvergenz von Fourierreihen
+     5.3 Beispiele für Fourierreihen
     </a>
    </li>
    <li class="toctree-l2 current active">
@@ -500,12 +502,51 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#lernziele">
+   Lernziele
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#gerade-und-ungerade-funktionen">
+   Gerade und ungerade Funktionen
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#addition">
+   Addition
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ableitung">
+   Ableitung
+  </a>
+ </li>
+</ul>
+
+    </nav>
 </div>
     </div>
     <div class="article row">
@@ -517,6 +558,34 @@ title="Print to PDF"
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#lernziele">
+   Lernziele
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#gerade-und-ungerade-funktionen">
+   Gerade und ungerade Funktionen
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#addition">
+   Addition
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ableitung">
+   Ableitung
+  </a>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -526,10 +595,80 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="rechenregeln-fourierreihen">
 <h1>5.4 Rechenregeln Fourierreihen<a class="headerlink" href="#rechenregeln-fourierreihen" title="Permalink to this headline">#</a></h1>
-<div class="warning admonition">
-<p class="admonition-title">Warnung</p>
-<p>Achtung, dieser Abschnitt des Vorlesungsskriptes wird gerade überarbeitet!!!</p>
+<p>Zuletzt betrachten wir noch einige Eigenschaften von Fourierreihen.</p>
+<section id="lernziele">
+<h2>Lernziele<a class="headerlink" href="#lernziele" title="Permalink to this headline">#</a></h2>
+<div class="hint admonition">
+<p class="admonition-title">Lernziele</p>
+<ul class="simple">
+<li><p>Sie wissen, dass sich bei geraden oder ungeraden Funktionen die Berechnung der
+Fourierkoeffizienten vereinfacht.</p></li>
+<li><p>Sie können die Summe zweier Fourierreihen bilden.</p></li>
+<li><p>Sie können die Ableitung einer Fourierreihe berechnen.</p></li>
+</ul>
 </div>
+</section>
+<section id="gerade-und-ungerade-funktionen">
+<h2>Gerade und ungerade Funktionen<a class="headerlink" href="#gerade-und-ungerade-funktionen" title="Permalink to this headline">#</a></h2>
+<p>Wenn die Funktion <span class="math notranslate nohighlight">\(f\)</span>, zu der eine Fourierreihe gesucht ist, bestimmte
+Symmetrieeigenschaften hat, kann sich dadurch die Berechnung der
+Fourierkoeffizienten vereinfachen.</p>
+<p>Ist die Funktion <span class="math notranslate nohighlight">\(f\)</span> gerade, gilt also <span class="math notranslate nohighlight">\(f(t) = f(-t)\)</span>, dann fallen alle Terme
+mit der Sinusfunktion weg (die ja ungerade ist). Also gilt automatisch <span class="math notranslate nohighlight">\(b_k =
+0\)</span>. Außerdem ist dann auch das Produkt <span class="math notranslate nohighlight">\(f(t)\cdot \cos(k \omega t)\)</span> eine gerade
+Funktion, da die Kosinusfunktion ebenfalls gerade ist. Wir brauchen nicht von
+<span class="math notranslate nohighlight">\(-T/2\)</span> bis <span class="math notranslate nohighlight">\(T/2\)</span> integrieren, sondern können auch nur von <span class="math notranslate nohighlight">\(0\)</span> bis <span class="math notranslate nohighlight">\(T/2\)</span>
+integrieren und das Ergebnis verdoppeln. Damit erhalten wir für <strong>gerade
+Funktionen</strong> <span class="math notranslate nohighlight">\(f\)</span> die folgende Fourierreihe:</p>
+<div class="math notranslate nohighlight">
+\[f(t) = \frac{a_0}{2} + \sum_{k=1}^{\infty} a_k \cos(k \omega t)\]</div>
+<p>mit den Fourierkoeffizienten</p>
+<div class="math notranslate nohighlight">
+\[a_k = \frac{4}{T}\int_{0}^{T/2} f(t) \cos(k \omega t) \, dt.\]</div>
+<p>Für <strong>ungerade Funktionen</strong> <span class="math notranslate nohighlight">\(f\)</span>, also solche für die <span class="math notranslate nohighlight">\(f(t) = -f(-t)\)</span> gilt,
+fallen die <span class="math notranslate nohighlight">\(a_k\)</span> weg. Es bleibt eine reine Sinusreihe übrig.</p>
+<div class="math notranslate nohighlight">
+\[f(t) = \sum_{k=1}^{\infty} b_k \sin(k \omega t)\]</div>
+<p>mit</p>
+<div class="math notranslate nohighlight">
+\[b_k = \frac{4}{T} \int_{0}^{T/2} f(t) \sin(k \omega t) \, dt.\]</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Vide “Fourierreihe: gerade/ungerade” von Daniel Jung<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/7Uig_X9Lg3s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+</details></section>
+<section id="addition">
+<h2>Addition<a class="headerlink" href="#addition" title="Permalink to this headline">#</a></h2>
+<p>Wenn zwei Funktionen <span class="math notranslate nohighlight">\(f\)</span> und <span class="math notranslate nohighlight">\(g\)</span> die gleiche Periode <span class="math notranslate nohighlight">\(T\)</span> haben, so hat die Summe
+der beiden Funktionen ebenfalls wieder die Periode <span class="math notranslate nohighlight">\(T\)</span>. Liegen nun für beide
+Funktionen Fourierreihen vor, so dürfen wir auch einfach die
+Fourierkoeffizienten addieren, um eine Approximation der Funktion <span class="math notranslate nohighlight">\(f+g\)</span> zu
+erhalten.</p>
+</section>
+<section id="ableitung">
+<h2>Ableitung<a class="headerlink" href="#ableitung" title="Permalink to this headline">#</a></h2>
+<p>Wenn eine Funktion <span class="math notranslate nohighlight">\(f\)</span> durch eine Fourierreihe dargestellt wird, also</p>
+<div class="math notranslate nohighlight">
+\[f(t) = \frac{a_0}{2} + \sum_{k=1}^{\infty} \left(a_k \cos(k \omega t) + b_k
+\sin(k \omega t) \right)\]</div>
+<p>gilt, dann ist ihre Ableitung wieder eine Fourierreihe.</p>
+<div class="math notranslate nohighlight">
+\[f'(t) = \sum_{k=1}^{\infty} \left(\alpha_k \cos(k \omega t) + \beta_k
+\sin(k \omega t) \right).\]</div>
+<p>Allerdings fällt der erste Term <span class="math notranslate nohighlight">\(a_0/2\)</span> weg und die neuen Fourierkoeffizienten
+<span class="math notranslate nohighlight">\(\alpha_k\)</span> und <span class="math notranslate nohighlight">\(\beta_k\)</span> können mit den Formeln</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+\alpha_k &amp;= b_k \cdot k \cdot \omega \\
+\beta_k  &amp;= -a_k \cdot k \cdot \omega
+\end{align*}\]</div>
+<p>berechnet werden.</p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -563,7 +702,7 @@ title="Print to PDF"
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">5.3 Konvergenz von Fourierreihen</p>
+            <p class="prev-next-title">5.3 Beispiele für Fourierreihen</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="chapter05_sec05.html" title="next page">
