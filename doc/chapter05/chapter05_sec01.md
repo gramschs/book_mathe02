@@ -18,7 +18,7 @@ oder hydraulische Systeme zu steuern.
 * Sie können Beispiele von periodischen Funktionen nennen wie
     * Sinus- und Kosinusfunktion,
     * Rechteckfunktion,
-    * Dreieckfunktion und
+    * Dreiecksfunktion und
     * Sägezahnfunktion.
 ```
 
