@@ -189,11 +189,13 @@ Variablen ist so wichtig, dass der Vektor einen eigenen Namen hat: **Gradient**.
 Wir betrachten eine Funktion $f$ von mehreren Variablen $x_1, x_2, \ldots, x_n$.
 Der Zeilenvektor mit allen 1. partiellen Ableitungen wird Gradient genannt. Es
 gibt sogar ein eigenes Formelzeichen für den Gradienten, das
-"Nabla"ausgesproichen wird und so aussieht: $\nabla$. Es gilt also
+"Nabla"ausgesproichen wird und so aussieht: $\nabla$. 
+
+Es gilt also
 
 $$\nabla f(x_1, x_2, \ldots, x_n) = \left(\frac{\partial f(x_1,
-\ldots,x_n)}{\partial x_1}, \frac{\partial f(x_2, \ldots,x_n)}{\partial x_1},
-\ldots, \frac{\partial f(x_n, \ldots,x_n)}{\partial x_1},\right).$$
+\ldots,x_n)}{\partial x_1}, \frac{\partial f(x_1, \ldots,x_n)}{\partial x_2},
+\ldots, \frac{\partial f(x_1, \ldots,x_n)}{\partial x_n},\right).$$
 ```
 
 Für die Funktion $f(x,y) = x^3 + y^3 - x^2 + 2y^2 - 5x + y + 3$ haben wir die 1.
