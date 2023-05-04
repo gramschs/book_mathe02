@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>6.3 Partielle Ableitungen &#8212; Mathematik 2 Maschinenbau</title>
+    <title>6.3 Partielle Ableitungen und Gradient &#8212; Mathematik 2 Maschinenbau</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -60,7 +60,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="6.4 Höhere partielle Ableitungen" href="chapter06_sec04.html" />
+    <link rel="next" title="6.4 Höhere partielle Ableitungen und die Hesse-Matrix" href="chapter06_sec04.html" />
     <link rel="prev" title="6.2 Stetigkeit" href="chapter06_sec02.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -343,12 +343,12 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     6.3 Partielle Ableitungen
+     6.3 Partielle Ableitungen und Gradient
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="chapter06_sec04.html">
-     6.4 Höhere partielle Ableitungen
+     6.4 Höhere partielle Ableitungen und die Hesse-Matrix
     </a>
    </li>
    <li class="toctree-l2">
@@ -558,13 +558,23 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id1">
+  <a class="reference internal nav-link" href="#lernziele">
+   Lernziele
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#partielle-ableitungen">
    Partielle Ableitungen
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#beispiele-fur-das-partielle-ableiten">
-   Beispiele für das partielle Ableiten
+  <a class="reference internal nav-link" href="#beispiel-fur-das-partielle-ableiten">
+   Beispiel für das partielle Ableiten
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#gradient">
+   Gradient
   </a>
  </li>
 </ul>
@@ -576,7 +586,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>6.3 Partielle Ableitungen</h1>
+                <h1>6.3 Partielle Ableitungen und Gradient</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -587,13 +597,23 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id1">
+  <a class="reference internal nav-link" href="#lernziele">
+   Lernziele
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#partielle-ableitungen">
    Partielle Ableitungen
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#beispiele-fur-das-partielle-ableiten">
-   Beispiele für das partielle Ableiten
+  <a class="reference internal nav-link" href="#beispiel-fur-das-partielle-ableiten">
+   Beispiel für das partielle Ableiten
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#gradient">
+   Gradient
   </a>
  </li>
 </ul>
@@ -606,52 +626,220 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="partielle-ableitungen">
-<h1>6.3 Partielle Ableitungen<a class="headerlink" href="#partielle-ableitungen" title="Permalink to this headline">#</a></h1>
-<div class="warning admonition">
-<p class="admonition-title">Warnung</p>
-<p>Achtung, dieser Abschnitt des Vorlesungsskriptes wird gerade überarbeitet!!!</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="partielle-ableitungen-und-gradient">
+<h1>6.3 Partielle Ableitungen und Gradient<a class="headerlink" href="#partielle-ableitungen-und-gradient" title="Permalink to this headline">#</a></h1>
+<p>Ableitungen kennen Sie schon, was genau meint jetzt wiederum der Fachbegriff
+partiell? Partiell heißt ja auf deutsch teilweise, vielleicht ist Ihnen der
+Begriff von einer partiellen Sonnenfinsternis geläufig. Bei Funktionen von
+mehreren unabhängigen Variablen ist der Ableitungsbegriff komplizierter als bei
+Funktionen von nur einer Variable. Auf die Ableitung einer Funktion von mehreren
+Variablen werden wir in einem späteren Kapitel zurückkommen. Zuerst beschäftigen
+wir uns mit partiellen Ableitungen 1. Ordnung.</p>
+<section id="lernziele">
+<h2>Lernziele<a class="headerlink" href="#lernziele" title="Permalink to this headline">#</a></h2>
+<div class="hint admonition">
+<p class="admonition-title">Lernziele</p>
+<ul class="simple">
+<li><p>Sie wissen, was eine <strong>partielle Ableitung</strong> einer Funktion von mehreren
+Variablen ist und können sie auch berechnen.</p></li>
+<li><p>Sie wissen, wie der <strong>Gradient</strong> einer Funktion von mehreren Variablen
+berechnet wird.</p></li>
+</ul>
 </div>
-<section id="id1">
-<h2>Partielle Ableitungen<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h2>
-<p>Was genau meint jetzt wiederum der Fachbegriff partiell? Partiell heißt ja auf deutsch teilweise, vielleicht ist Ihnen der Begriff von einer partiellen Sonnenfinsternis geläufig. Bei Funktionen von mehreren Variablen ist der Ableitungsbegriff komplizierter als bei Funktionen von einer Variable, wie in dem folgenden Video erklärt wird.</p>
-<div class="seealso admonition">
-<p class="admonition-title">Video</p>
-<p><a class="reference external" href="https://www.youtube.com/embed/4ppZE30P2Yw">https://www.youtube.com/embed/4ppZE30P2Yw</a></p>
-</div>
-<p>Die partielle Ableitung wird also gebildet, indem nur eine der mehreren Variablen als echte Variable angesehen wird und die übrigen Variablen als Konstanten aufgefasst werden.</p>
-<div class="proof definition admonition" id="def:06:01">
-<p class="admonition-title"><span class="caption-number">Definition 1 </span></p>
-<section class="definition-content" id="proof-content">
-<p>Die partielle Ableitung der Funktion <span class="math notranslate nohighlight">\(f(x,y)\)</span> nach <span class="math notranslate nohighlight">\(x\)</span> an der Stelle <span class="math notranslate nohighlight">\((x_0,y_0)\)</span> ist definiert als</p>
+</section>
+<section id="partielle-ableitungen">
+<h2>Partielle Ableitungen<a class="headerlink" href="#partielle-ableitungen" title="Permalink to this headline">#</a></h2>
+<p>Um den Begriff der partiellen Ableitung einzuführen, betrachten wir erstmal nur
+“2:1”-Funktionen, also Funktionen <span class="math notranslate nohighlight">\(f:\mathbb{R}^2 \rightarrow \mathbb{R}\)</span>.
+Stellen Sie sich vor, wir betrachten eine hügelige Landschaft, die durch eine
+Funktion <span class="math notranslate nohighlight">\(f(x, y)\)</span> repräsentiert wird, wobei <span class="math notranslate nohighlight">\(x\)</span> und <span class="math notranslate nohighlight">\(y\)</span> die Koordinaten auf der
+horizontalen Ebene sind und <span class="math notranslate nohighlight">\(f(x,y)\)</span> die Höhe an der Position <span class="math notranslate nohighlight">\((x,y)\)</span> angibt.
+Nun möchten wir wissen, wie sich die Höhe ändert, wenn wir uns in Richtung der
+x-Achse bewegen, während wir die y-Koordinate konstant halten.</p>
+<p>Die partielle Ableitung von <span class="math notranslate nohighlight">\(f\)</span> nach <span class="math notranslate nohighlight">\(x\)</span> gibt uns genau diese Information. Sie
+zeigt uns die Steigung der Funktion in x-Richtung an jedem Punkt <span class="math notranslate nohighlight">\((x,y)\)</span> auf der
+Landschaft. Wenn die partielle Ableitung positiv ist, bedeutet dies, dass die
+Höhe zunimmt, wenn wir uns in positiver x-Richtung bewegen. Die Höhe nimmt ab,
+wenn die partielle Ableitung negativ ist. Und wir bleiben uns auf konstanter
+Höhe entlang der x-Achse, wenn die partielle Ableitung Null ist.</p>
+<p>Analog dazu gibt uns die partielle Ableitung von <span class="math notranslate nohighlight">\(f\)</span> nach <span class="math notranslate nohighlight">\(y\)</span>, die Steigung der
+Funktion in y-Richtung an jedem Punkt <span class="math notranslate nohighlight">\((x, y)\)</span> auf der Landschaft. Partielle
+Ableitungen helfen aber nicht die Steigung des Geländes zu verstehen, wenn wir
+querfeldein gehen, d.h. nicht entlang der x- oder y-Achse.</p>
+<p>Insgesamt helfen uns partielle Ableitungen, die Steigungen einer Funktion mit
+mehreren Variablen zu verstehen, indem sie uns zeigen, wie sich die Funktion in
+Bezug auf jede ihrer Variablen ändert, während die anderen konstant gehalten
+werden.</p>
+<p>Um die 1. partielle Ableitung einer Funktion mathematisch zu notieren, können
+wir aber nicht mehr einfach nur einen Strich nehmen <span class="math notranslate nohighlight">\(f'(x,y)\)</span>, da ja dann die
+Information fehlen würde, entlang welcher Koordinatenachse wir uns bewegen.
+Daher wird die Notation des sogenannten Differentialquotienten <span class="math notranslate nohighlight">\(df/dx\)</span>
+modifiziert. Aus dem <span class="math notranslate nohighlight">\(d\)</span> wird ein <span class="math notranslate nohighlight">\(\partial\)</span>.</p>
+<p>Die 1. partielle Ableitung der Funktion <span class="math notranslate nohighlight">\(f\)</span> nach <span class="math notranslate nohighlight">\(x\)</span> wird als</p>
 <div class="math notranslate nohighlight">
-\[\frac{\partial f}{\partial x}(x_0,y_0) = \lim_{\Delta x\rightarrow 0}\frac{f(x_0+\Delta x, y_0) - f(x_0, y_0)}{\Delta x}.\]</div>
-<p>Die partielle Ableitung der Funktion <span class="math notranslate nohighlight">\(f(x,y)\)</span> nach <span class="math notranslate nohighlight">\(y\)</span> an der Stelle <span class="math notranslate nohighlight">\((x_0,y_0)\)</span> ist definiert als</p>
+\[\frac{\partial f}{\partial x}\]</div>
+<p>notiert und die 1. partielle Ableitung der Funktion <span class="math notranslate nohighlight">\(f\)</span> nach <span class="math notranslate nohighlight">\(y\)</span> als</p>
 <div class="math notranslate nohighlight">
-\[\frac{\partial f}{\partial y}(x_0,y_0) = \lim_{\Delta y \rightarrow 0}\frac{f(x_0, y_0 +\Delta y) - f(x_0, y_0)}{\Delta y}.\]</div>
-<p>Falls die Funktion von mehr als zwei Variablen abhängt, wird dieses Schema fortgeführt.</p>
-</section>
-</div><div class="seealso admonition">
-<p class="admonition-title">Video</p>
-<p><a class="reference external" href="https://www.youtube.com/embed/KqpLPQvboPY">https://www.youtube.com/embed/KqpLPQvboPY</a></p>
+\[\frac{\partial f}{\partial y}.\]</div>
+<p>Partielle Ableitungen können nicht nur für Funktionen von zwei unabhängigen
+Variablen gebildet werden. Ist die Funktion <span class="math notranslate nohighlight">\(f\)</span> beispielsweise von den drei
+unabhängigen Variablen <span class="math notranslate nohighlight">\(x_1, x_2\)</span> und <span class="math notranslate nohighlight">\(x_3\)</span> abhängig, so würden die 1.
+partiellen Ableitungen als</p>
+<div class="math notranslate nohighlight">
+\[\frac{\partial f}{\partial x_1}, \frac{\partial f}{\partial x_2},
+\frac{\partial f}{\partial x_3}\]</div>
+<p>notiert werden.</p>
+<div class="admonition-was-ist-die-partielle-ableitung admonition">
+<p class="admonition-title">Was ist … die partielle Ableitung?</p>
+<p>Gegeben ist eine Funktion <span class="math notranslate nohighlight">\(f\)</span> von mehreren unabhängigen Variablen <span class="math notranslate nohighlight">\(x_1, x_2,
+\ldots, x_n\)</span>. Die partielle Ableitung von <span class="math notranslate nohighlight">\(f\)</span> nach der Variablen <span class="math notranslate nohighlight">\(x_i\)</span> ist die
+“normale” Ableitung der Funktion <span class="math notranslate nohighlight">\(f\)</span> nach <span class="math notranslate nohighlight">\(x_i\)</span>, wobei aber alle anderen
+Variablen konstant gehalten werden.</p>
 </div>
-</section>
-<section id="beispiele-fur-das-partielle-ableiten">
-<h2>Beispiele für das partielle Ableiten<a class="headerlink" href="#beispiele-fur-das-partielle-ableiten" title="Permalink to this headline">#</a></h2>
-<p>Die folgenden Videos zeigen Beispiele für das Berechnen der partiellen Ableitungen.</p>
-<div class="seealso admonition">
-<p class="admonition-title">Video</p>
-<p><a class="reference external" href="https://www.youtube.com/embed/9R8xrRuWyTw">https://www.youtube.com/embed/9R8xrRuWyTw</a></p>
+<p>Die partielle Ableitung wird also gebildet, indem nur eine der mehreren
+Variablen als echte Variable angesehen wird und die übrigen Variablen als
+Konstanten aufgefasst werden. Formal ergibt sich die partielle Ableitung wie
+auch schon die “normale” Ableitung als Grenzwert des Differentialquotienten in
+Richtung der Koordinatenachsen.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Video “Motivation partielle Ableitung” von Mathematische Methoden<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/4ppZE30P2Yw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </div>
-<div class="seealso admonition">
-<p class="admonition-title">Video</p>
-<p><a class="reference external" href="https://www.youtube.com/embed/i59FBLtGpng">https://www.youtube.com/embed/i59FBLtGpng</a></p>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Video “Partielle Ableitung Definition” von Mathematische Methoden<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/KqpLPQvboPY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </div>
-<div class="seealso admonition">
-<p class="admonition-title">Video</p>
-<p><a class="reference external" href="https://www.youtube.com/embed/N0Y9E0wdLKk">https://www.youtube.com/embed/N0Y9E0wdLKk</a></p>
+</details></section>
+<section id="beispiel-fur-das-partielle-ableiten">
+<h2>Beispiel für das partielle Ableiten<a class="headerlink" href="#beispiel-fur-das-partielle-ableiten" title="Permalink to this headline">#</a></h2>
+<p>Im Folgenden wird ein Beispiel für das partielle Ableiten gezeigt, das ich von
+Mathematrick übernommen habe (siehe nachfolgend verlinktes Video). Wir
+betrachten eine Funktion, die von zwei unabhängigen Variablen abhängt, nämlich</p>
+<div class="math notranslate nohighlight">
+\[f(x,y) = x^3 + y^3 - x^2 + 2y^2 - 5x + y + 3.\]</div>
+<div id="chap06_sec03_fig01" style="width:100%; aspect-ratio:4/3; margin: 0 auto;""></div>
+<script type="text/javascript">
+// Generate grid
+// Set the range of x and y values
+const range = 2;
+const step = 0.25;
+// Generate the x and y values
+const xValues = Array.from({ length: range * 2 / step }, (_, i) => -range + i * step);
+const yValues = Array.from({ length: range * 2 / step }, (_, i) => -range + i * step);
+// Evaluate function
+// Calculate the z values using the function f(x, y) = x^3 + y^3 - x^2 + 2y^2 - 5x + y + 3
+const zValues = xValues.map(x => yValues.map(y => x ** 3 + y ** 3 - x ** 2 + 2 * y ** 2 - 5 * x + y + 3));
+// Plot
+const data = [{
+  x: xValues,
+  y: yValues,
+  z: zValues,
+  type: 'surface',
+  colorscale: 'Viridis'
+}];
+//
+const layout = {
+  scene: {
+    xaxis: { title: 'x' },
+    yaxis: { title: 'y' }
+  },
+  margin: {
+    t: 0,
+    l: 10,
+    r: 10
+  }
+};
+//
+const config = {responsive: true}
+//
+Plotly.newPlot('chap06_sec03_fig01', data, layout, config);
+</script>
+<p>Als erstes bilden wir die 1. partielle Ableitung nach <span class="math notranslate nohighlight">\(x\)</span>. Wir bewegen uns also
+entlang der x-Achse und betrachten <span class="math notranslate nohighlight">\(y\)</span> nicht als eine Variable, sondern als eine
+Konstante. Diese Konstante nennen wir <span class="math notranslate nohighlight">\(c\)</span>. Um das Ableiten übersichtlicher zu
+gestalten, setzen wir jetzt tatsächlich die Konstante <span class="math notranslate nohighlight">\(c\)</span> für die Variable <span class="math notranslate nohighlight">\(y\)</span>
+ein. Was übrig bleibt, ist eine Funktion, die nur noch der Variablen <span class="math notranslate nohighlight">\(x\)</span>
+abhängt. Diese Funktion nennen wir <span class="math notranslate nohighlight">\(g\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[g(x) = x^3 + c - x^2 + 2c^2 - 5x + c + 3.\]</div>
+<p>Diese Funktion wird nun nach <span class="math notranslate nohighlight">\(x\)</span> abgeleitet:</p>
+<div class="math notranslate nohighlight">
+\[g'(x) = 3x^2 + 0 - 2x + 0 - 5 + 0 + 0.\]</div>
+<p>Also ist die 1. partielle Ableitung von <span class="math notranslate nohighlight">\(f\)</span> nach <span class="math notranslate nohighlight">\(x\)</span></p>
+<div class="math notranslate nohighlight">
+\[\frac{\partial f(x,y)}{\partial x} = 3x^2 - 2x - 5.\]</div>
+<p>Jetzt betrachten wir die partielle Ableitung nach <span class="math notranslate nohighlight">\(y\)</span> und setzen dafür anstatt
+der Variablen <span class="math notranslate nohighlight">\(x\)</span> die Konstante <span class="math notranslate nohighlight">\(c\)</span> ein. Diese Funktion nennen wir <span class="math notranslate nohighlight">\(h\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[h(x) = c^3 + y^3 - c^2 + 2y^2 - 5c + y + 3.\]</div>
+<p>Diese Funktion nach <span class="math notranslate nohighlight">\(y\)</span> abgeleitet ergibt</p>
+<div class="math notranslate nohighlight">
+\[h'(x) = 0 + 3y^2 - 0 + 4y - 0 + 1 + 0.\]</div>
+<p>Somit ist die 1. partielle Ableitung der Funktion <span class="math notranslate nohighlight">\(f\)</span> nach <span class="math notranslate nohighlight">\(y\)</span></p>
+<div class="math notranslate nohighlight">
+\[\frac{\partial f(x,y)}{\partial y} = 3y^2 + 4y + 1.\]</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Video zu “Partielle Ableitung einfach erklärt” von Mathematrick<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/N0Y9E0wdLKk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </div>
-</section>
+</details></section>
+<section id="gradient">
+<h2>Gradient<a class="headerlink" href="#gradient" title="Permalink to this headline">#</a></h2>
+<p>Die partiellen Ableitungen sind unabhängig voneinander. Kehren wir zu dem
+Beispiel mit der Hügellandschaft zurück. Mit Hilfe der partiellen Ableitung nach
+<span class="math notranslate nohighlight">\(x\)</span> kann die Steigung in x-Richtung bestimmt werden, mit der partiellen
+Ableitung nach <span class="math notranslate nohighlight">\(y\)</span> die Steigung in die <span class="math notranslate nohighlight">\(y\)</span>-Richtung. Fassen wir beide Steigungen
+in einem Vektor zusammen, zeigt der Vektor in die Richtung des steilsten
+Anstiegs und seine Länge entspricht der Steigung in diese Richtung.</p>
+<p>Bei Funktionen von mehreren unabhängigen Variablen <span class="math notranslate nohighlight">\(x_1\)</span>, <span class="math notranslate nohighlight">\(x_2\)</span> bis <span class="math notranslate nohighlight">\(x_n\)</span> gilt
+diese Erkenntnis ebenfalls. Der Vektor, der aus den partiellen Ableitungen nach
+allen <span class="math notranslate nohighlight">\(x_i\)</span>, also allen Koordinatenachsen, gebildet wird, zeigt in die Richtung
+des steilsten Anstiegs. Diese Information über eine Funktion von mehreren
+Variablen ist so wichtig, dass der Vektor einen eigenen Namen hat: <strong>Gradient</strong>.</p>
+<div class="admonition-was-ist-der-gradient admonition">
+<p class="admonition-title">Was ist … der Gradient? </p>
+<p>Wir betrachten eine Funktion <span class="math notranslate nohighlight">\(f\)</span> von mehreren Variablen <span class="math notranslate nohighlight">\(x_1, x_2, \ldots, x_n\)</span>.
+Der Zeilenvektor mit allen 1. partiellen Ableitungen wird Gradient genannt. Es
+gibt sogar ein eigenes Formelzeichen für den Gradienten, das
+“Nabla”ausgesproichen wird und so aussieht: <span class="math notranslate nohighlight">\(\nabla\)</span>. Es gilt also</p>
+<div class="math notranslate nohighlight">
+\[\nabla f(x_1, x_2, \ldots, x_n) = \left(\frac{\partial f(x_1,
+\ldots,x_n)}{\partial x_1}, \frac{\partial f(x_2, \ldots,x_n)}{\partial x_1},
+\ldots, \frac{\partial f(x_n, \ldots,x_n)}{\partial x_1},\right).\]</div>
+</div>
+<p>Für die Funktion <span class="math notranslate nohighlight">\(f(x,y) = x^3 + y^3 - x^2 + 2y^2 - 5x + y + 3\)</span> haben wir die 1.
+partiellen Ableitungen ja bereits bestimmt. Wir müssen die partiellen
+Ableitungen nur noch als Zeilenvektor aufschreiben, um den Gradienten der
+Funktion zu bestimmen:</p>
+<div class="math notranslate nohighlight">
+\[\nabla f(x,y) = \left(3x^2 - 2x - 5, 3y^2 + 4y + 1\right).\]</div>
+<p>Der Gradient sowie ein weiteres Beispiel werden in dem folgendem Video
+präsentiert.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Video zu “Gradient” von Mathematische Methoden<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/627f_DgQJpY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+</details></section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -691,7 +879,7 @@ title="Print to PDF"
     <a class='right-next' id="next-link" href="chapter06_sec04.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">6.4 Höhere partielle Ableitungen</p>
+        <p class="prev-next-title">6.4 Höhere partielle Ableitungen und die Hesse-Matrix</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

@@ -343,12 +343,12 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="chapter06_sec03.html">
-     6.3 Partielle Ableitungen
+     6.3 Partielle Ableitungen und Gradient
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="chapter06_sec04.html">
-     6.4 Höhere partielle Ableitungen
+     6.4 Höhere partielle Ableitungen und die Hesse-Matrix
     </a>
    </li>
    <li class="toctree-l2">
@@ -736,14 +736,43 @@ der Wertemenge) zuordnet.</p>
 <p>Um das obige Beispiel Funktion zu visualisieren, werden jetzt alle mögliche
 Kombinationen aus <span class="math notranslate nohighlight">\(x\)</span> und <span class="math notranslate nohighlight">\(y\)</span> gebildet, d.h. die unabhängigen Variablen kommen
 aus der xy-Ebene. Zur Darstellung der abhängigen Variable brauchen wir also noch
-eine dritte Dimension, die Höhe. Die Funktion <span class="math notranslate nohighlight">\(f(x,y) = x^2 + y^2\)</span>, ein
-sogenannter Paraboloid, sieht dann folgendermaßen aus:</p>
-<figure class="align-default" id="chapter06-plot-paraboloid">
-<a class="reference internal image-reference" href="../_images/chapter06_plot_paraboloid.png"><img alt="../_images/chapter06_plot_paraboloid.png" src="../_images/chapter06_plot_paraboloid.png" style="width: 75%;" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 15 </span><span class="caption-text">Grafische Darstellung der Funktion <span class="math notranslate nohighlight">\(f(x,y)=x^2+y^2\)</span></span><a class="headerlink" href="#chapter06-plot-paraboloid" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
+eine dritte Dimension, die Höhe. Die Funktion <span class="math notranslate nohighlight">\(f(x,y) =  x^2 + y^2\)</span>, ein
+sogenannter Paraboloid, sieht dann folgendermaßen aus (Hinweis: die Grafik ist interaktiv!):</p>
+<div id="chap06_sec01_fig01" style="width:100%; aspect-ratio:4/3; margin: 0 auto;""></div>
+<script type="text/javascript">
+// Generate grid
+const rValues = Array.from({ length: 101 }, (_, i) => 5 * i / 100);
+const phiValues = Array.from({ length: 101 }, (_, i) => 2 * Math.PI * i / 100);
+//
+const xValues = rValues.map(r => phiValues.map(phi => r * Math.cos(phi)));
+const yValues = rValues.map(r => phiValues.map(phi => r * Math.sin(phi)));
+// Evaluate function
+const zValues = xValues.map((xRow, i) => xRow.map((x, j) => (x ** 2 + yValues[i][j] ** 2)));
+// Plot
+const data = [{
+  x: xValues,
+  y: yValues,
+  z: zValues,
+  type: 'surface',
+  colorscale: 'Viridis'
+}];
+//
+const layout = {
+  title: 'Paraboloid f(x, y) = x^2 + y^2',
+  scene: {
+    xaxis: { title: 'x' },
+    yaxis: { title: 'y' }
+  },
+  margin: {
+    l: 10,
+    r: 10
+  }
+};
+//
+const config = {responsive: true}
+//
+Plotly.newPlot('chap06_sec01_fig01', data, layout, config);
+</script>
 <p>Zusätzlich zur Höhe wurde die Paraboloid-Fläche noch gemäß der Funktionswerte
 <span class="math notranslate nohighlight">\(f(x,y)\)</span> eingefärbt. Leider ist es gar nicht so einfach, Funktionen von mehreren
 Variablen zu zeichnen. Eine Funktion von zwei Variablen kann man noch ganz gut

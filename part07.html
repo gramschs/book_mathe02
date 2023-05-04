@@ -343,12 +343,12 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="chapter06/chapter06_sec03.html">
-     6.3 Partielle Ableitungen
+     6.3 Partielle Ableitungen und Gradient
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="chapter06/chapter06_sec04.html">
-     6.4 Höhere partielle Ableitungen
+     6.4 Höhere partielle Ableitungen und die Hesse-Matrix
     </a>
    </li>
    <li class="toctree-l2">
@@ -672,18 +672,18 @@ Als zweites Thema werden uns vektorwertige Funktionen beschäftigen. Das Analogo
 <figure class="align-default" id="fig-part07-vektorfeld">
 <a class="reference internal image-reference" href="_images/part07_vektorfeld.svg"><img alt="_images/part07_vektorfeld.svg" src="_images/part07_vektorfeld.svg" width="300px" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 16 </span><span class="caption-text">Visualisierung eines Vektorfeldes (<a class="reference external" href="https://commons.wikimedia.org/wiki/File:VectorField.svg">Quelle:</a> “A portion of the vector field (sin y, sin x)” von Jim.belk. Lizenz: gemeinfrei)</span><a class="headerlink" href="#fig-part07-vektorfeld" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 15 </span><span class="caption-text">Visualisierung eines Vektorfeldes (<a class="reference external" href="https://commons.wikimedia.org/wiki/File:VectorField.svg">Quelle:</a> “A portion of the vector field (sin y, sin x)” von Jim.belk. Lizenz: gemeinfrei)</span><a class="headerlink" href="#fig-part07-vektorfeld" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>Wir unterscheiden Funktionen also nicht nur nach der Anzahl ihrer Variablen, sondern auch danach, ob die Funktionswerte ein- oder mehrdimensional sind. Wir verwenden zur Unterschiedung der beiden Kategorien die folgenden Fachbegriffe.</p>
 <div class="proof definition admonition" id="def:07:01">
-<p class="admonition-title"><span class="caption-number">Definition 2 </span> (Was ist … eine skalarwertige Funktion?)</p>
+<p class="admonition-title"><span class="caption-number">Definition 1 </span> (Was ist … eine skalarwertige Funktion?)</p>
 <section class="definition-content" id="proof-content">
 <p>Eine skalarwertige Funktion ist eine Funktion, deren Funktionswerte reelle Zahlen sind.</p>
 <p>Die mathematische Notation dafür ist <span class="math notranslate nohighlight">\(f:\mathbb{R}^m \rightarrow \mathbb{R}\)</span>, wobei <span class="math notranslate nohighlight">\(m\)</span> sowohl 1 (eindimensional) als auch <span class="math notranslate nohighlight">\(\geq 2\)</span> (mehrdimensional) sein kann.</p>
 </section>
 </div><div class="proof definition admonition" id="def:07:02">
-<p class="admonition-title"><span class="caption-number">Definition 3 </span> (Was ist … eine vektorwertige Funktion?)</p>
+<p class="admonition-title"><span class="caption-number">Definition 2 </span> (Was ist … eine vektorwertige Funktion?)</p>
 <section class="definition-content" id="proof-content">
 <p>Eine vektorwertige Funktion ist eine Funktion, deren Funktionswerte Vektoren sind.</p>
 <p>Die mathematische Notation dafür ist <span class="math notranslate nohighlight">\(f:\mathbb{R}^m \rightarrow \mathbb{R}^n\)</span>, wobei <span class="math notranslate nohighlight">\(m\)</span> sowohl 1 (eindimensional) als auch <span class="math notranslate nohighlight">\(\geq 2\)</span> (mehrdimensional) sein kann. Aber <span class="math notranslate nohighlight">\(n\)</span> muss mindestens 2 sein, sonst wäre es ja eine skalarwertige Funktion.</p>

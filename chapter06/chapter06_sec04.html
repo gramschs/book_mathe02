@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>6.4 Höhere partielle Ableitungen &#8212; Mathematik 2 Maschinenbau</title>
+    <title>6.4 Höhere partielle Ableitungen und die Hesse-Matrix &#8212; Mathematik 2 Maschinenbau</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -61,7 +61,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Übungen" href="chapter06_sec05.html" />
-    <link rel="prev" title="6.3 Partielle Ableitungen" href="chapter06_sec03.html" />
+    <link rel="prev" title="6.3 Partielle Ableitungen und Gradient" href="chapter06_sec03.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -343,12 +343,12 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="chapter06_sec03.html">
-     6.3 Partielle Ableitungen
+     6.3 Partielle Ableitungen und Gradient
     </a>
    </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     6.4 Höhere partielle Ableitungen
+     6.4 Höhere partielle Ableitungen und die Hesse-Matrix
     </a>
    </li>
    <li class="toctree-l2">
@@ -558,8 +558,18 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#lernziele">
+   Lernziele
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#was-sind-hohere-partielle-ableitungen">
    Was sind höhere partielle Ableitungen?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#hesse-matrix-und-der-satz-von-schwarz">
+   Hesse-Matrix und der Satz von Schwarz
   </a>
  </li>
 </ul>
@@ -571,7 +581,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>6.4 Höhere partielle Ableitungen</h1>
+                <h1>6.4 Höhere partielle Ableitungen und die Hesse-Matrix</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -582,8 +592,18 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#lernziele">
+   Lernziele
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#was-sind-hohere-partielle-ableitungen">
    Was sind höhere partielle Ableitungen?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#hesse-matrix-und-der-satz-von-schwarz">
+   Hesse-Matrix und der Satz von Schwarz
   </a>
  </li>
 </ul>
@@ -596,37 +616,183 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="hohere-partielle-ableitungen">
-<h1>6.4 Höhere partielle Ableitungen<a class="headerlink" href="#hohere-partielle-ableitungen" title="Permalink to this headline">#</a></h1>
-<div class="warning admonition">
-<p class="admonition-title">Warnung</p>
-<p>Achtung, dieser Abschnitt des Vorlesungsskriptes wird gerade überarbeitet!!!</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="hohere-partielle-ableitungen-und-die-hesse-matrix">
+<h1>6.4 Höhere partielle Ableitungen und die Hesse-Matrix<a class="headerlink" href="#hohere-partielle-ableitungen-und-die-hesse-matrix" title="Permalink to this headline">#</a></h1>
+<p>Eine eindimensionale Funktion kann man oft nicht nur einmal, sondern zweimal,
+dreimal, manchmal sogar unendlichmal oft ableiten. Das geht natürlich nur, wenn
+nach dem Ableiten eine Funktion herauskommt, die wieder ableitbar ist, sonst
+muss man aufhören. Das lässt sich analog auf Funktionen von mehreren Variablen
+übertragen.</p>
+<section id="lernziele">
+<h2>Lernziele<a class="headerlink" href="#lernziele" title="Permalink to this headline">#</a></h2>
+<div class="hint admonition">
+<p class="admonition-title">Lernziele</p>
+<ul class="simple">
+<li><p>Sie können <strong>höhere partielle Ableitungen</strong> berechenen.</p></li>
+<li><p>Sie wissen, was mit <strong>gemischten partielle Ableitungen</strong> gemeint ist.</p></li>
+<li><p>Sie können die <strong>Hesse-Matrix</strong> berechnen.</p></li>
+<li><p>Sie wissen, wann sie bei der Berechnung von höheren partiellen Ableitungen
+sich einige Berechnungen einsparen dürfen, indem Sie den Trick <strong>Satz von
+Schwarz</strong> anwenden können.</p></li>
+</ul>
 </div>
+</section>
 <section id="was-sind-hohere-partielle-ableitungen">
 <h2>Was sind höhere partielle Ableitungen?<a class="headerlink" href="#was-sind-hohere-partielle-ableitungen" title="Permalink to this headline">#</a></h2>
-<p>Eine eindimensionale Funktion kann man oft nicht nur einmal, sondern zweimal, dreimal, manchmal sogar unendlichmal oft ableiten. Das geht natürlich nur, wenn nach dem Ableiten eine Funktion herauskommt, die wieder ableitbar ist, sonst muss man aufhören.</p>
-<p>Bei Funktionen, die von mehreren Variablen abhängen, kann man die partiellen Ableitungen mischen. Beispielsweise leiten wir eine Funktion partiell nach x ab und die Funktion, die dadurch entstanden ist leiten wir nun partiell nach y ab.</p>
-<p>Bei zwei Variablen und partiellen Ableitungen der Ordnung 2 hätten wir dann folgende Kombinationsmöglichkeiten:</p>
+<p>Im letzten Kapitel haben wir die Funktion</p>
+<div class="math notranslate nohighlight">
+\[f(x,y) = x^3 + y^3 - x^2 + 2y^2 - 5x + y + 3\]</div>
+<p>partiell zuerst nach <span class="math notranslate nohighlight">\(x\)</span> und dann nach <span class="math notranslate nohighlight">\(y\)</span> abgeleitet. Das Ergebnis waren die
+partiellen Ableitungen:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+\frac{\partial f(x,y)}{\partial x} &amp;= 3x^2 - 2x - 5, \\
+\frac{\partial f(x,y)}{\partial y} &amp;= 3y^2 + 4y + 1.
+\end{align*}\]</div>
+<p>Beides sind aber wieder Funktionen von zwei Variablen. Es hindert uns keiner
+daran, diese Funktionen erneut abzuleiten. Beispielsweise können wir die 1.
+partielle Ableitung von <span class="math notranslate nohighlight">\(f\)</span> nach <span class="math notranslate nohighlight">\(x\)</span> erneut nach <span class="math notranslate nohighlight">\(x\)</span> ableiten. Das Ergebnis ist</p>
+<div class="math notranslate nohighlight">
+\[\frac{\partial^2 f(x,y)}{\partial x^2} = 6x - 2.\]</div>
+<p>Wir könnten die Funktion <span class="math notranslate nohighlight">\(3x^2 - 2x - 5\)</span> aber auch nach <span class="math notranslate nohighlight">\(y\)</span> ableiten und haben
+dann</p>
+<div class="math notranslate nohighlight">
+\[\frac{\partial^2 f(x,y)}{\partial y \, \partial x} = 0.\]</div>
+<p>Beachten Sie die Schreibweise, die kennzeichnet, nach welcher Variable in
+welcher Reihenfolge abgeleitet wird. Die Richtung, nach der zuerst abgeleitet
+wird, steht weiter rechts!</p>
+<p>Ebensogut hätten wir auch die 1. partielle Ableitung der Funktion <span class="math notranslate nohighlight">\(f\)</span> nach <span class="math notranslate nohighlight">\(y\)</span>
+erneut nach <span class="math notranslate nohighlight">\(x\)</span> oder <span class="math notranslate nohighlight">\(y\)</span> ableiten können. Bei Funktionen von zwei Variablen gibt
+es für die sogenannten 2. partiellen Ableitungen die folgenden
+Kombinationsmöglichkeiten:</p>
 <ul class="simple">
 <li><p>Ableitung nach x und dann Ableitung nach x</p></li>
 <li><p>Ableitung nach x und dann Ableitung nach y</p></li>
 <li><p>Ableitung nach y und dann Ableitung nach x</p></li>
 <li><p>Ableitung nach y und dann Ableitung nach y</p></li>
 </ul>
-<p>Bei höheren partiellen Ableitungen können wir nicht einfach zwei Striche an die Funktion schreiben, sondern müssen genau angeben, in welcher Reihenfolge nach welcher Variable abgeleitet werden soll. Deshalb schreiben wir</p>
-<ul class="simple">
-<li><p>Ableitung nach x und dann Ableitung nach x: <span class="math notranslate nohighlight">\(\frac{\partial^2}{\partial x \partial x}f(x,y)\)</span></p></li>
-<li><p>Ableitung nach x und dann Ableitung nach y: <span class="math notranslate nohighlight">\(\frac{\partial^2}{\partial y \partial x}f(x,y)\)</span></p></li>
-<li><p>Ableitung nach y und dann Ableitung nach x: <span class="math notranslate nohighlight">\(\frac{\partial^2}{\partial x \partial y}f(x,y)\)</span></p></li>
-<li><p>Ableitung nach y und dann Ableitung nach y: <span class="math notranslate nohighlight">\(\frac{\partial^2}{\partial y \partial y}f(x,y)\)</span></p></li>
-</ul>
-<p>Die Richtung, nach der zuerst abgeleitet wird, steht weiter rechts.</p>
-<p>Wenn wir nun uns die Kombinationsmöglichkeiten für partielle Ableitungen 3. Ordnung ansehen, stellen wir fest, dass da einige Kombinationen möglich sind, genaugenommen 27. Glücklicherweise gibt es einen Trick, einige der Kombinationen kann man sich sparen. Dieser Trick wird in der Mathematik der <strong>Satz von Schwarz</strong> genannt. Im nächsten Video sehen Sie dazu eine Erläuterung.</p>
-<div class="seealso admonition">
-<p class="admonition-title">Video</p>
-<p><a class="reference external" href="https://www.youtube.com/embed/XgkmktejS_Y">https://www.youtube.com/embed/XgkmktejS_Y</a></p>
+<p>Die zweite und dritte Kombination, bei denen erst nach einer und dann nach der
+anderen Variable abgeleitet wird, nennen wir <strong>gemischte partielle
+Ableitungen</strong>.</p>
+<p>Bei unseren bisherigen Überlegungen sind die partiellen Ableitungen für eine
+Funktion von zwei unabhängigen Variablen gebildet worden. Bei drei unabhängigen
+Variablen werden die Variablen oft mit <span class="math notranslate nohighlight">\(x\)</span>, <span class="math notranslate nohighlight">\(y\)</span> und <span class="math notranslate nohighlight">\(z\)</span> bezeichnet. Bei vier
+oder mehr unabhängigen Variablen wird oft die Vektorschreibweise verwendet, also
+bei <span class="math notranslate nohighlight">\(n\)</span> Variablen</p>
+<div class="math notranslate nohighlight">
+\[f(x_1, x_2, \ldots, x_n) = \ldots .\]</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Video zu “Höhere partielle Ableitungen” von Mathematische Methoden<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/2FDtjWmMjc8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </div>
-</section>
+</details></section>
+<section id="hesse-matrix-und-der-satz-von-schwarz">
+<h2>Hesse-Matrix und der Satz von Schwarz<a class="headerlink" href="#hesse-matrix-und-der-satz-von-schwarz" title="Permalink to this headline">#</a></h2>
+<p>Höhere partielle Ableitungen können schnell sehr unübersichtlich werden. Für die
+2. partiellen Ableitungen ist es üblich, diese sortiert in einer Tabelle zu
+notieren. Diese Tabelle in Matrixform wird <strong>Hesse-Matrix</strong> genannt.</p>
+<p>In der ersten Spalte stehen alle partiellen Ableitungen, bei denen zuerst nach
+<span class="math notranslate nohighlight">\(x_1\)</span> abgeleitet wurde. Diese partielle Ableitung kürzen wir mit <span class="math notranslate nohighlight">\(f_{x_1}\)</span> ab.
+Um die zweiten partiellen Ableitungen von <span class="math notranslate nohighlight">\(f_{x_1}\)</span> zu bilden, leiten wir
+partiell nach <span class="math notranslate nohighlight">\(x_1\)</span> ab und schreiben das in die erste Zeile. Dann wird
+<span class="math notranslate nohighlight">\(f_{x_1}\)</span> nach <span class="math notranslate nohighlight">\(x_2\)</span> abgeleitet und in die 2. Zeile der 1. Spalte geschrieben.
+Dann wird <span class="math notranslate nohighlight">\(f_{x_1}\)</span> nach <span class="math notranslate nohighlight">\(x_3\)</span> abgeleitet und in die 3. Zeile der 1. Spalte
+geschrieben. Nachdem alle 2. partiellen Ableitungen gebildet sind, wird <span class="math notranslate nohighlight">\(f\)</span> nach
+<span class="math notranslate nohighlight">\(x_2\)</span> abgeleitet und mit den jeweiligen zweiten partiellen Ableitungen in die
+zweite Spalte geschreiben. Dieses Schema wird fortgesetzt.</p>
+<p>Für eine Funktion von zwei Variablen <span class="math notranslate nohighlight">\(x\)</span> und <span class="math notranslate nohighlight">\(y\)</span> erhalten wir:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}H_{f}(x,y) = 
+\begin{pmatrix} 
+\frac{\partial^2f(x,y)}{\partial x \partial x} 
+  &amp; \frac{\partial^2f(x,y)}{\partial x \partial y} \\
+\frac{\partial^2f(x,y)}{\partial y \partial x} 
+  &amp; \frac{\partial^2f(x,y)}{\partial y \partial y} \\
+\end{pmatrix}\end{split}\]</div>
+<p>Für eine Funktion von drei Variablen <span class="math notranslate nohighlight">\(x_1\)</span>, <span class="math notranslate nohighlight">\(x_2\)</span> und <span class="math notranslate nohighlight">\(x_3\)</span> erhalten wir</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}H_{f}(x_1,x_2,x_3) = 
+\begin{pmatrix} 
+\frac{\partial^2f(x_1,x_2,x_3)}{\partial x_1 \partial x_1} 
+  &amp; \frac{\partial^2f(x_1,x_2,x_3)}{\partial x_1 \partial x_2}
+  &amp; \frac{\partial^2f(x_1,x_2,x_3)}{\partial x_1 \partial x_3} \\
+\frac{\partial^2f(x_1,x_2,x_3)}{\partial x_2 \partial x_1} 
+  &amp; \frac{\partial^2f(x_1,x_2,x_3)}{\partial x_2 \partial x_2}
+  &amp; \frac{\partial^2f(x_1,x_2,x_3)}{\partial x_2 \partial x_3} \\
+\frac{\partial^2f(x_1,x_2,x_3)}{\partial x_3 \partial x_1} 
+  &amp; \frac{\partial^2f(x_1,x_2,x_3)}{\partial x_3 \partial x_2}
+  &amp; \frac{\partial^2f(x_1,x_2,x_3)}{\partial x_3 \partial x_3} \\
+\end{pmatrix}\end{split}\]</div>
+<div class="admonition-was-ist-die-hesse-matrix admonition">
+<p class="admonition-title">Was ist … die Hesse-Matrix?</p>
+<p>Die Hesse-Matrix gibt es nur für Funktionen <span class="math notranslate nohighlight">\(f\)</span> von mehreren Variablen <span class="math notranslate nohighlight">\(x_1,
+x_2, \ldots, x_n\)</span>, die mindestens zweimal partiell differenzierbar sind. Die
+Hesse-Matrix besteht aus den 2. partiellen Ableitungen der Funktion <span class="math notranslate nohighlight">\(f\)</span>, wobei
+die 2. partiellen Ableitungen in der folgenden Reihenfolge in der Matrix
+angeordnet sind:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}H_{f}(x_1,x_2,\ldots, x_n) = 
+\begin{pmatrix} 
+\frac{\partial^2f(x_1,x_2,\ldots, x_n)}{\partial x_1 \partial x_1} 
+  &amp; \frac{\partial^2f(x_1,x_2, \ldots, x_n)}{\partial x_1 \partial x_2}
+  &amp; \ldots 
+  &amp; \frac{\partial^2f(x_1,x_2,\ldots,x_n)}{\partial x_1 \partial x_n} \\
+\frac{\partial^2f(x_1,x_2,\ldots,x_n)}{\partial x_2 \partial x_1} 
+  &amp; \frac{\partial^2f(x_1,x_2,\ldots,x_n)}{\partial x_2 \partial x_2}
+  &amp; \ldots
+  &amp; \frac{\partial^2f(x_1,x_2,\ldots,x_n)}{\partial x_2 \partial x_n} \\
+  \vdots &amp; \vdots &amp; &amp; \vdots \\
+\frac{\partial^2f(x_1,x_2,\ldots,x_n)}{\partial x_n \partial x_1} 
+  &amp; \frac{\partial^2f(x_1,x_2,\ldots,x_n)}{\partial x_n \partial x_2}
+  &amp; \ldots
+  &amp; \frac{\partial^2f(x_1,x_2,\ldots,x_n)}{\partial x_n \partial x_n} \\
+\end{pmatrix}\end{split}\]</div>
+</div>
+<p>Die Größe der Hesse-Matrix wird durch die Anzahl der unabhängigen Variablen
+bestimmt, von denen die Funktion abhängt. Bei zwei Variablen, ist die
+Hesse-Matrix eine 2x2-Matrix, bei drei Variablen eine 3x3-Matrix usw. Auch wenn
+die Hesse-Matrix etwas Ordnung und Übersicht in die zweiten partiellen
+Ableitungen bringt, ist es doch langwierig, die vielen Kombinationen an
+partiellen Ableitungen zu bilden. Noch komplizierter wird es für partielle
+Ableitungen der Ordnung 3 oder noch höher.  Glücklicherweise gibt es einen
+Trick, einige der Kombinationen kann man sich sparen. Dieser Trick wird in der
+Mathematik der <strong>Satz von Schwarz</strong> genannt.</p>
+<p><a class="reference external" href="https://de.wikipedia.org/wiki/Hermann_Amandus_Schwarz">Hermann Amandus Schwarz</a>
+hat herausgefunden, dass bei Funktionen, die mehrfach stetig differenzierbar
+sind, es beim partiellen Ableiten nicht darauf ankommt, in welcher Reihenfolge
+nach den einzelnen Variablen abgeleitet wird.</p>
+<p>Wir bleiben bei dem Beispiel <span class="math notranslate nohighlight">\(f(x,y) = = x^3 + y^3 - x^2 + 2y^2 - 5x + y + 3\)</span> zu
+bleiben, das eine beliebig oft stetig differenzierbare Funktion darstellt. Ob
+zuerst nach <span class="math notranslate nohighlight">\(x\)</span> und dann nach <span class="math notranslate nohighlight">\(y\)</span> abgeleitet wird oder zuerst nach <span class="math notranslate nohighlight">\(y\)</span> und dann
+nach <span class="math notranslate nohighlight">\(x\)</span> macht keinen Unterschied. Die erste Variante hatten wir ja bereits
+ausgerechnet:</p>
+<div class="math notranslate nohighlight">
+\[\frac{\partial^2 f(x,y)}{\partial y \, \partial x} = 0.\]</div>
+<p>Leiten wir die Funktion <span class="math notranslate nohighlight">\(f\)</span> zuerst nach <span class="math notranslate nohighlight">\(y\)</span> und dann nach <span class="math notranslate nohighlight">\(x\)</span> ab, so erhalten
+wir ebenfalls</p>
+<div class="math notranslate nohighlight">
+\[\frac{\partial^2 f(x,y)}{\partial x \, \partial y} = 0.\]</div>
+<p>Wir hätten uns diese Berechnung sparen können, da nach dem Satz von Schwarz die
+Reihenfolge unwichtig ist und</p>
+<div class="math notranslate nohighlight">
+\[\frac{\partial^2 f(x,y)}{\partial y \, \partial x} = \frac{\partial^2
+f(x,y)}{\partial x \, \partial y}\]</div>
+<p>gilt.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Video zu “Hesse-Matrix” von Mathematische Methoden<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/4Vy4HDLU7nU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+</details></section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -660,7 +826,7 @@ title="Print to PDF"
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">6.3 Partielle Ableitungen</p>
+            <p class="prev-next-title">6.3 Partielle Ableitungen und Gradient</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="chapter06_sec05.html" title="next page">

@@ -56,10 +56,12 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Gradient und Jacobi-Matrix" href="../part07.html" />
-    <link rel="prev" title="6.4 Höhere partielle Ableitungen" href="chapter06_sec04.html" />
+    <link rel="prev" title="6.4 Höhere partielle Ableitungen und die Hesse-Matrix" href="chapter06_sec04.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -341,12 +343,12 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="chapter06_sec03.html">
-     6.3 Partielle Ableitungen
+     6.3 Partielle Ableitungen und Gradient
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="chapter06_sec04.html">
-     6.4 Höhere partielle Ableitungen
+     6.4 Höhere partielle Ableitungen und die Hesse-Matrix
     </a>
    </li>
    <li class="toctree-l2 current active">
@@ -559,9 +561,124 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="ubungen">
 <h1>Übungen<a class="headerlink" href="#ubungen" title="Permalink to this headline">#</a></h1>
-<div class="warning admonition">
-<p class="admonition-title">Warnung</p>
-<p>Achtung, dieser Abschnitt des Vorlesungsskriptes wird gerade überarbeitet!!!</p>
+<div class="miniexercise admonition">
+<p class="admonition-title">Übung 6.1</p>
+<p>Berechnen Sie die ersten partiellen Ableitungen nach den Variablen.
+a) <span class="math notranslate nohighlight">\(f(x,y)=e^{x}\cdot e^{y}\)</span> <br>
+b) <span class="math notranslate nohighlight">\(f(x,y)=e^{xy}\)</span> <br>
+c) <span class="math notranslate nohighlight">\(f(x,y)=\sin(x)\cos(y)\)</span> <br>
+d) <span class="math notranslate nohighlight">\(f(x_1,x_2,x_3) = \frac{1}{2x_1^2+\sqrt{x_2^2+x_3^2}}\)</span> <br></p>
+</div>
+<div class="minisolution toggle admonition">
+<p class="admonition-title">Lösung</p>
+<p>a) <span class="math notranslate nohighlight">\(f(x,y)=e^{x}\cdot e^{y}\)</span></p>
+<div class="math notranslate nohighlight">
+\[\frac{\partial f}{\partial x}=e^x\cdot e^y \quad \text{ und } \quad \frac{\partial f}{\partial y}=e^x\cdot e^y\]</div>
+<p>b) <span class="math notranslate nohighlight">\(f(x,y)=e^{xy}\)</span></p>
+<div class="math notranslate nohighlight">
+\[\frac{\partial f}{\partial x}=ye^{xy} \quad \text{ und } \quad \frac{\partial f}{\partial y}=xe^{xy}\]</div>
+<p>c) <span class="math notranslate nohighlight">\(f(x,y)=\sin(x)\cos(y)\)</span></p>
+<div class="math notranslate nohighlight">
+\[\frac{\partial f}{\partial x}=\cos(x)\cos(y) \quad \text{ und } \quad \frac{\partial f}{\partial y}=\sin(x)\left(-\sin(y)\right)\]</div>
+<p>d) <span class="math notranslate nohighlight">\(f(x_1,x_2,x_3) = \frac{1}{2x_1^2+\sqrt{x_2^2+x_3^2}}\)</span></p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+\frac{\partial f}{\partial x_1}&amp;=-\frac{1}{(2x_1^2+\sqrt{x_2^2+x_3^2})^2}\cdot 4x_1 \\
+\frac{\partial f}{\partial x_2}&amp;=-\frac{1}{(2x_1^2+\sqrt{x_2^2+x_3^2})^2}\cdot \frac{x_2}{\sqrt{x_2^2+x_3^2}}\\
+\frac{\partial f}{\partial x_3}&amp;=-\frac{1}{(2x_1^2+\sqrt{x_2^2+x_3^2})^2}\cdot \frac{x_3}{\sqrt{x_2^2+x_3^2}}
+\end{align*}\]</div>
+</div>
+<div class="miniexercise admonition">
+<p class="admonition-title">Übung 6.2</p>
+<p>Berechnen Sie die zweiten partiellen Ableitungen nach den Variablen. Verifizieren Sie, dass das Ergebnis unabhängig von der Reihenfolge der Differentiationsschritte ist.</p>
+<p>a) <span class="math notranslate nohighlight">\(f(x,y)=x^3+y^3 + x^2y^2+xy+1\)</span> <br>
+b) <span class="math notranslate nohighlight">\(f(x,y,z)=\frac{1}{\sqrt{x^2+y^2+z^2}}\)</span></p>
+</div>
+<div class="minisolution toggle admonition">
+<p class="admonition-title">Lösung</p>
+<p>a) <span class="math notranslate nohighlight">\(f(x,y)=x^3+y^3 + x^2y^2+xy+1\)</span></p>
+<p>1. partielle Ableitungen:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+\frac{\partial f}{\partial x} &amp;= 3x^2+2xy^2+y \\
+\frac{\partial f}{\partial y} &amp;= 3y^2+2x^2y+x 
+\end{align*}\]</div>
+<p>2. partielle Ableitungen:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+\frac{\partial^2 f}{\partial x \partial x} &amp;= 6x + 2y^2 \\
+\frac{\partial^2 f}{\partial x \partial y} &amp;= \frac{\partial^2 f}{\partial y \partial x} = 4xy + 1 \\
+\frac{\partial^2 f}{\partial y \partial y} &amp;= 6y + 2x^2 
+\end{align*}\]</div>
+<p>b) <span class="math notranslate nohighlight">\(f(x,y,z)=\frac{1}{\sqrt{x^2+y^2+z^2}}\)</span></p>
+<p>1. partielle Ableitungen:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+\frac{\partial f}{\partial x} &amp;= -\frac{x}{\left(\sqrt{x^2+y^2+z^2}\right)^3} \\
+\frac{\partial f}{\partial y} &amp;= -\frac{y}{\left(\sqrt{x^2+y^2+z^2}\right)^3} \\
+\frac{\partial f}{\partial z} &amp;= -\frac{z}{\left(\sqrt{x^2+y^2+z^2}\right)^3} \\
+\end{align*}\]</div>
+<p>2. partielle Ableitungen:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+\frac{\partial^2 f}{\partial x \partial x} &amp;= -\frac{1}{\left(\sqrt{x^2+y^2+z^2}\right)^3}+3\frac{x^2}{\left(\sqrt{x^2+y^2+z^2}\right)^5}\\ 
+\frac{\partial^2 f}{\partial y \partial y} &amp;= -\frac{1}{\left(\sqrt{x^2+y^2+z^2}\right)^3}+3\frac{y^2}{\left(\sqrt{x^2+y^2+z^2}\right)^5}\\ 
+\frac{\partial^2 f}{\partial z \partial z} &amp;= -\frac{1}{\left(\sqrt{x^2+y^2+z^2}\right)^3}+3\frac{z^2}{\left(\sqrt{x^2+y^2+z^2}\right)^5}
+\end{align*}\]</div>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+\frac{\partial^2 f}{\partial y \partial x} &amp;= \frac{\partial^2 f}{\partial x \partial y} = \frac{3xy}{\left(\sqrt{x^2+y^2+z^2}\right)^5}\\ 
+\frac{\partial^2 f}{\partial z \partial x} &amp;= \frac{\partial^2 f}{\partial x \partial z} = \frac{3xz}{\left(\sqrt{x^2+y^2+z^2}\right)^5}\\ 
+\frac{\partial^2 f}{\partial z \partial y} &amp;= \frac{\partial^2 f}{\partial y \partial z} = \frac{3yz}{\left(\sqrt{x^2+y^2+z^2}\right)^5}
+\end{align*}\]</div>
+</div>
+<div class="miniexercise admonition">
+<p class="admonition-title">Übung 6.3</p>
+<p>Berechnen Sie die dritten partiellen Ableitungen. Nutzen Sie aus, dass das Ergebnis unabhängig von der Reihenfolge der Differentiationsschritte ist:</p>
+<div class="math notranslate nohighlight">
+\[f(x,y,z)=x^2y^2z^2+x^3+y^3+z^3.\]</div>
+<p>Hinweis: wie viele partielle Ableitungen 3. Ordnung gibt es bei drei Variablen? Wie viele muss man explizit ausrechnen?</p>
+</div>
+<div class="minisolution toggle admonition">
+<p class="admonition-title">Lösung</p>
+<p>Es gibt insgesamt 27 Ableitungen 3. Ordnung, aber es genügen 10 explizite Ableitungen: xxx, yxx, zxx, yyy, xyy, zyy, zzz, xzz, yzz, xyz.</p>
+<p>1. partielle Ableitungen:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+\frac{\partial f}{\partial x} &amp;= 2xy^2z^2 + 3x^2 \\
+\frac{\partial f}{\partial y} &amp;= 2x^2yz^2 + 3y^2 \\
+\frac{\partial f}{\partial z} &amp;= 2x^2y^2z + 3z^2 \\
+\end{align*}\]</div>
+<p>Zwischenrechnung 2. partielle Ableitungen:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+\frac{\partial^2 f}{\partial x \partial x} &amp;= 2y^2z^2 + 6x \\ 
+\frac{\partial^2 f}{\partial y \partial y} &amp;= 2x^2z^2 + 6y \\ 
+\frac{\partial^2 f}{\partial z \partial z} &amp;= 2x^2y^2 + 6z \\ 
+\end{align*}\]</div>
+<p>3. partielle Ableitungen:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+\frac{\partial^3f}{\partial x \partial x \partial x} &amp;= 6 \\ 
+\frac{\partial^3f}{\partial y \partial x \partial x} &amp;= 4yz^2 \\
+\frac{\partial^3f}{\partial z \partial x \partial x} &amp;= 4y^2z 
+\end{align*}\]</div>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+\frac{\partial^3f}{\partial y \partial y \partial y} &amp;= 6 \\  
+\frac{\partial^3f}{\partial x \partial y \partial y} &amp;= 4xz^2 \\
+\frac{\partial^3f}{\partial z \partial y \partial y} &amp;= 4x^2z 
+\end{align*}\]</div>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}  
+\frac{\partial^3f}{\partial z \partial z \partial z} &amp;= 6 \\  
+\frac{\partial^3f}{\partial x \partial z \partial z} &amp;= 4xy^2 \\   
+\frac{\partial^3f}{\partial y \partial z \partial z} &amp;= 4x^2y 
+\end{align*}\]</div>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+\frac{\partial^3f}{\partial x \partial y \partial x} = 8xyz             
+\end{equation*}\]</div>
 </div>
 </section>
 
@@ -596,7 +713,7 @@ title="Print to PDF"
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">6.4 Höhere partielle Ableitungen</p>
+            <p class="prev-next-title">6.4 Höhere partielle Ableitungen und die Hesse-Matrix</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="../part07.html" title="next page">

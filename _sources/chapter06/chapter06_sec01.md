@@ -105,16 +105,44 @@ der Wertemenge) zuordnet.
 Um das obige Beispiel Funktion zu visualisieren, werden jetzt alle mögliche
 Kombinationen aus $x$ und $y$ gebildet, d.h. die unabhängigen Variablen kommen
 aus der xy-Ebene. Zur Darstellung der abhängigen Variable brauchen wir also noch
-eine dritte Dimension, die Höhe. Die Funktion $f(x,y) = x^2 + y^2$, ein
-sogenannter Paraboloid, sieht dann folgendermaßen aus: 
+eine dritte Dimension, die Höhe. Die Funktion $f(x,y) =  x^2 + y^2$, ein
+sogenannter Paraboloid, sieht dann folgendermaßen aus (Hinweis: die Grafik ist interaktiv!): 
 
-```{figure} pics/chapter06_plot_paraboloid.png
----
-width: 75%
-name: chapter06_plot_paraboloid
----
-Grafische Darstellung der Funktion $f(x,y)=x^2+y^2$
-```
+<div id="chap06_sec01_fig01" style="width:100%; aspect-ratio:4/3; margin: 0 auto;""></div>
+<script type="text/javascript">
+// Generate grid
+const rValues = Array.from({ length: 101 }, (_, i) => 5 * i / 100);
+const phiValues = Array.from({ length: 101 }, (_, i) => 2 * Math.PI * i / 100);
+//
+const xValues = rValues.map(r => phiValues.map(phi => r * Math.cos(phi)));
+const yValues = rValues.map(r => phiValues.map(phi => r * Math.sin(phi)));
+// Evaluate function
+const zValues = xValues.map((xRow, i) => xRow.map((x, j) => (x ** 2 + yValues[i][j] ** 2)));
+// Plot
+const data = [{
+  x: xValues,
+  y: yValues,
+  z: zValues,
+  type: 'surface',
+  colorscale: 'Viridis'
+}];
+//
+const layout = {
+  title: 'Paraboloid f(x, y) = x^2 + y^2',
+  scene: {
+    xaxis: { title: 'x' },
+    yaxis: { title: 'y' }
+  },
+  margin: {
+    l: 10,
+    r: 10
+  }
+};
+//
+const config = {responsive: true}
+//
+Plotly.newPlot('chap06_sec01_fig01', data, layout, config);
+</script>
 
 Zusätzlich zur Höhe wurde die Paraboloid-Fläche noch gemäß der Funktionswerte
 $f(x,y)$ eingefärbt. Leider ist es gar nicht so einfach, Funktionen von mehreren
