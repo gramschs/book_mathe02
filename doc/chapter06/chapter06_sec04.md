@@ -154,11 +154,10 @@ hat herausgefunden, dass bei Funktionen, die mehrfach stetig differenzierbar
 sind, es beim partiellen Ableiten nicht darauf ankommt, in welcher Reihenfolge
 nach den einzelnen Variablen abgeleitet wird.
 
-Wir bleiben bei dem Beispiel $f(x,y) = = x^3 + y^3 - x^2 + 2y^2 - 5x + y + 3$ zu
-bleiben, das eine beliebig oft stetig differenzierbare Funktion darstellt. Ob
-zuerst nach $x$ und dann nach $y$ abgeleitet wird oder zuerst nach $y$ und dann
-nach $x$ macht keinen Unterschied. Die erste Variante hatten wir ja bereits
-ausgerechnet:
+Wir bleiben bei dem Beispiel $f(x,y) = x^3 + y^3 - x^2 + 2y^2 - 5x + y + 3$ ,
+das eine beliebig oft stetig differenzierbare Funktion darstellt. Ob zuerst nach
+$x$ und dann nach $y$ abgeleitet wird oder zuerst nach $y$ und dann nach $x$
+macht keinen Unterschied. Die erste Variante hatten wir ja bereits ausgerechnet:
 
 $$\frac{\partial^2 f(x,y)}{\partial y \, \partial x} = 0.$$
 
