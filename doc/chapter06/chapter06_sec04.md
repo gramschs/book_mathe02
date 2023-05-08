@@ -1,4 +1,4 @@
-# 6.4 Höhere partielle Ableitungen und die Hesse-Matrix
+# 6.4 Höhere partielle Ableitungen und Hesse-Matrix
 
 Eine eindimensionale Funktion kann man oft nicht nur einmal, sondern zweimal,
 dreimal, manchmal sogar unendlichmal oft ableiten. Das geht natürlich nur, wenn
@@ -11,7 +11,7 @@ muss man aufhören. Das lässt sich analog auf Funktionen von mehreren Variablen
 ```{admonition} Lernziele
 :class: hint
 * Sie können **höhere partielle Ableitungen** berechenen.
-* Sie wissen, was mit **gemischten partielle Ableitungen** gemeint ist.
+* Sie wissen, was mit **gemischten partiellen Ableitungen** gemeint ist.
 * Sie können die **Hesse-Matrix** berechnen.
 * Sie wissen, wann sie bei der Berechnung von höheren partiellen Ableitungen
   sich einige Berechnungen einsparen dürfen, indem Sie den Trick **Satz von
