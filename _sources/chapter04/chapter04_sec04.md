@@ -5,7 +5,7 @@ In diesem Abschnitt befassen wir uns mit den Rechenregeln für Potenzreihen.
 ## Lernziele
 
 ```{admonition} Lernziele
-:class: hint
+:class: important
 * Sie können Potenzreihen mit demselben Entwicklungspunkt
   * addieren,
   * subtrahieren, 

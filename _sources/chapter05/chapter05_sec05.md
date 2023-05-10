@@ -1,7 +1,7 @@
 # Übungen
 
 ```{admonition} Übung 5.1
-:class: miniexercise
+:class: tip
 Welche Periode haben die folgenden Funktionen:
 
 1. Sinus-Funktion $f(x) = \sin(x)$?
@@ -10,7 +10,7 @@ Welche Periode haben die folgenden Funktionen:
 4. Tangens-Funktion $f(x)=\tan(x)$? 
 ```
 ````{admonition} Lösung
-:class: minisolution, toggle
+:class: tip, toggle
 1. Sinus-Funktion $f(x) = \sin(x)$ Periode $2\pi$ 
 2. Kosinus-Funktion $f(x) = \cos(x)$ Periode $2\pi$
 3. Quadratische Funktion $f(x)=x^2$ nicht periodisch
@@ -18,11 +18,11 @@ Welche Periode haben die folgenden Funktionen:
 ````
 
 ```{admonition} Übung 5.2
-:class: miniexercise
+:class: tip
 Zeichnen Sie die Funktionen $f(x) = \sin(kx)$ und $g(x) = \cos(kx)$ für $k = 2$ und $k = 5$. Welche Perioden haben die vier Funktionen?
 ```
 ````{admonition} Lösung
-:class: minisolution, toggle
+:class: tip, toggle
 Die Periode von $\sin(2x)$ und $\cos(2x)$ ist $\pi$ und die Periode von $\sin(5x)$ und $\cos(5x)$ ist $\frac{2\pi}{5}$.
 ```{figure} pics/plot_solution05_02a.svg
 ---
@@ -58,7 +58,7 @@ Kosinusfunktion $\cos(5x)$ mit einer Periode $T = \frac{2\pi}{5}$
 ````
 
 ```{admonition} Übung 5.3
-:class: miniexercise
+:class: tip
 Berechnen Sie die folgenden Integrale. 
 
 * $a_0 = \frac{1}{\pi} \int_{-\pi}^{\pi} x^2\; dx$
@@ -71,7 +71,7 @@ Tipp: meist muss zuerst partielle Integration und später Substitution angewandt
 werden.
 ```
 ````{admonition} Lösung
-:class: minisolution, toggle
+:class: tip, toggle
 $$a_0=\frac{2\pi^2}{3}, a_1 = -4, a_2 = 1, b_1 = 0, b_2 = 0$$
 ```{dropdown} Lösungsweg
 Fourierkoeffizient $a_0$:
@@ -134,7 +134,7 @@ Zwischenrechnung:
 ````
 
 ```{admonition} Übung 5.4
-:class: miniexercise
+:class: tip
 Gegeben sei die Funktion $f:[-\pi, \pi) \mapsto \mathbb{R}$ mit 
 
   $$ f(t)= -5\,t \ \text{ auf } \  [-\pi,\pi) $$
@@ -143,7 +143,7 @@ die periodisch fortgesetzt wird. Zeichnen Sie das Schaubild der Funktion.
 Bestimmen Sie zuerst die Fourierkoeffizienten von $f$ und dann die Fourierreihe. 
 ```
 ````{admonition} Lösung
-:class: minisolution, toggle
+:class: tip, toggle
 * Fourierkoeffizienten: $a_0=0$; $a_k=0$;  $b_k=\frac{10\,{\left(-1\right)}^k}{k}$ 
 * Fourierreihe:
 

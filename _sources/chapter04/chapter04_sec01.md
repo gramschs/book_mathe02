@@ -8,7 +8,7 @@ gibt es in diesem Kapitel eine Anleitung dazu.
 ## Lernziele 
 
 ```{admonition} Lernziele
-:class: tip
+:class: important
 * Sie kennen die Formel für ein **Taylorpolynom der Ordnung n** auswendig:
 
 $$T_n(x) =\sum_{k=0}^{n} \frac{f^{(k)}(x_0)}{k!} \cdot (x-x_0)^k.$$
@@ -28,6 +28,7 @@ Kochrezept anzuwenden, beschäftigen wir uns zunächst mit dem sogenannten
 Taylorpolynom.
 
 ```{admonition} Was ist ... ein Taylorpolynom?
+:class: note
 Ein **Taylorpolynom** zu einer Funktion $f$ kann nur gebildet werden, wenn die Funktion $f$ n-mal stetig differenzierbar ist. Wenn das aber der Fall ist, dann wird noch ein Entwicklungspunkt $x_0$ gewählt. Das Taylorpolynom $T_n$ zu $f$ vom Grad $n$ am Entwicklungspunkt $x_0$ ist dann:
 
 \begin{align*}
@@ -100,6 +101,7 @@ Und was ist nun die Taylorreihe? Ganz einfach, ein Taylorpolynom, das bis
 Unendlich geht, sieht nur kompliziert aus, wenn man es formal aufschreibt.
 
 ```{admonition} Was ist ... eine Taylorreihe?
+:class: note
 Zu einer Funktion $f$, die unendlich oft differenzierbar ist, kann die folgende Potenzreihe
 
 $$T(x)=\sum_{k=0}^{\infty} \frac{f^{(k)}(x_0)}{k!} (x-x_0)^k$$

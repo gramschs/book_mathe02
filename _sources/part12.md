@@ -8,7 +8,7 @@ Achtung, dieser Abschnitt des Vorlesungsskriptes wird gerade überarbeitet!!!
 
 ## Lernziele
 ```{admonition} Lernziele
-:class: tip
+:class: important
 * Sie können bei einer gegebenen Differentialgleichung entscheiden, ob diese eine **lineare Differentialgleichung** ist oder nicht.
 * Sie können eine **homogene lineare Differentialgleichung 1. Ordnung** lösen.
 * Sie können eine **inhomogene lineare Differentialgleichung 1. Ordnung** lösen.

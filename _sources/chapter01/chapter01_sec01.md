@@ -7,7 +7,7 @@ Integral ein, ohne die dazugehörigen Anwendungen und Herleitungen
 ## Lernziele
 
 ```{admonition} Lernziele
-:class: hint
+:class: important
 * Sie wissen, was eine **Stammfunktion** ist.
 * Sie wissen, dass wenn es eine Stammfunktion gibt, es gleich unendlich viele
   Stammfunktionen gibt, die sich durch eine **Integrationskonstante**
@@ -34,6 +34,7 @@ Integral ein, ohne die dazugehörigen Anwendungen und Herleitungen
 ## Stammfunktion
 
 ```{admonition} Was ist ... eine Stammfunktion?
+:class: note
 Angenommen, die Funktion $f$ ist stetig. Dann wird die Funktion $F$
 Stammfunktion von $f$ genannt, wenn ihre Ableitungsfunktion gleich $f$ ist, also
 wenn gilt $F'(x) =  f(x)$.
@@ -56,6 +57,7 @@ muss nur eine reelle Zahl hinzuaddiert werden und schon hat man eine neue
 Stammfunktion.
 
 ```{admonition} Wie viele Stammfunktionen gibt es?
+:class: note
 Wenn eine Funktion $f$ eine Stammfunktion hat, hat sie gleich unendlich viele
 Stammfunktionen. Die Stammfunktionen unterscheiden sich nur dadurch, dass eine
 reelle Zahl am Ende dazuaddiert wird. Diese Zahl wird **Integrationskonstante**
@@ -104,6 +106,7 @@ dass das bestimmte Integral mit Hilfe von Stammfunktionen folgendermaßen
 berechnet wird.
 
 ```{admonition} Wie wird das bestimmte Integral berechnet?
+:class: note
 Das bestimmte Integral eine Funktion $f$ in einem Intervall $[a,b]$ wird
 berechnet, indem zuerst eine Stammfunktion $F$ gebildet wird. Dann wird in die
 Stammfunktion $F$ zuerst $b$ eingesetzt und dann $a$. Aus beiden Werten wird

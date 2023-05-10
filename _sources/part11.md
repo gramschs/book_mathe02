@@ -7,7 +7,7 @@ Achtung, dieser Abschnitt des Vorlesungsskriptes wird gerade überarbeitet!!!
 
 ## Lernziele
 ```{admonition} Lernziele
-:class: tip
+:class: important
 * Sie können erklären, was eine **gewöhnliche Differentialgleichung** und was eine **partielle Differentialgleichung** ist.
 * Sie können die **Ordnung einer Differentialgleichung** ablesen.
 * Sie können den Unterschied zwischen den Fachbegriffen **allgemeine Lösung einer Differentialgleichung** und **spezielle Lösung einer Differentialgleichung** erklären.

@@ -12,7 +12,7 @@ ausreichend genaue Lösung erforderlich sind.
 ## Lernziele
 
 ```{admonition} Lernziele
-:class: tip
+:class: important
 Sie können mit dem Restglied der Taylorreihe den Fehler abschätzen, der entsteht, wenn eine Funktion durch ein Taylorpolynom vom Grad n ersetzt wird.
 ```
 
@@ -31,6 +31,7 @@ anderer Fehler ergeben. Der Rest ist also auch vom Grad des Taylorpolynoms
 abhängig. Wir fassen zusammen:
 
 ```{admonition} Was ist ... das Restglied der Taylorreihe?
+:class: note
 Wir nennen die Differenz zwischen der Funktion $f$ und dem dazugehörigen Taylorpolynom $T_n$ vom Grad $n$ das Restglied $R_n$. In Formel ausgedrückt ist das Restglied
 
 $$R_n(x) = f(x) - T_n(x).$$

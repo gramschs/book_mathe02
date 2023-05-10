@@ -6,7 +6,7 @@ das Integral in diesem Abschnitt dazu genutzt, Längen zu berechnen.
 ## Lernziele
 
 ```{admonition} Lernziele
-:class: hint
+:class: important
 * Sie wissen, was die **Bogenlänge** eines Funktionsgraphens ist.
 * Sie können die Bogenlänge eines Funktionsgraphens $f(x)$ einer stetig
   differenzierbaren Funktion $f$ zwischen dem Startpunkt $(a,f(a))$ und dem
@@ -18,6 +18,7 @@ $$\text{Bogenlänge} = \int_{a}^{b} \sqrt{1+(f'(x))^2}\, dx.$$
 ## Länge eines Funktionsgraphens
 
 ```{admonition} Was ist ... die Bogenlänge?
+:class: note
 Die Bogenlänge eines Funktionsgraphens ist die Strecke, die man zwischen Start
 und Ziel zurücklegt. Start und Ziel sind dabei zwei Punkte, die beide auf dem
 Funktionsgraphen liegen.
@@ -34,6 +35,7 @@ Funktionen in den Ingenieurwissenschaften erfüllen diese Bedingung, so dass Sie
 sich im Normalfall keine Gedanken um diese Bedingung machen müssen.
 
 ```{admonition} Kochrezept zur Berechnung der Bogenlänge
+:class: note
 Wenn die Bogenlänge des Funktionsgraphens $f(x)$ vom Startpunkt $(a,f(a))$ bis zum Endpunkt $(b,f(b))$ berechnet werden soll und die Funktion $f$ stetig differenzierbar ist, gehen Sie folgenermaßen vor:
 
 1. Berechnen Sie die 1. Ableitung $f'$.

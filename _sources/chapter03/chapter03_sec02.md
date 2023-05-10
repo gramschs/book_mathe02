@@ -8,7 +8,7 @@ Dazu lernen wir verschiedene Kriterien kennen.
 ## Lernziele
 
 ```{admonition} Lernziele
-:class: tip
+:class: important
 * Sie können das **Nullfolgen-Kriterium** anwenden, um zu überprüfen, ob es überhaupt möglich ist, dass die Reihe konvergiert.
 * Sie können mit den **Konvergenzkriterien** überprüfen, ob eine Reihe konvergiert, indem Sie die folgenden Kriterien anwenden können:
     * **Quotientenkriterium** oder
@@ -57,6 +57,7 @@ Zuerst wirkt diese Aussage nicht besonders bedeutend. Aber wir können trotzdem
 zwei bedeutsame Schlussfolgen daraus ziehen:
 
 ```{admonition} Nullfolgen-Kriterium
+:class: note
 1. Wenn die Folge der Summanden $(a_k)$ *keine* Nullfolge ist, dann ist die
 dazugehörige Reihe auf jeden Fall divergent.
 2. Wenn eine Reihe konvergiert, dann muss die zugrundeliegende Folge $(a_k)$ der
@@ -79,6 +80,7 @@ schnell herauszufinden, ob eine solche Reihe konvergiert oder divergiert, ohne
 zuerst komplexere Techniken oder Kriterien anzuwenden.
 
 ```{admonition} Quotienten-Kriterium
+:class: note
 Das Quotienten-Kriterium besagt, dass eine Reihe $\sum_{k=1}^{\infty} a_k$
 konvergiert, wenn der Grenzwert
 
@@ -123,6 +125,7 @@ konvergiert oder divergiert, ohne zunächst komplexere Techniken oder Kriterien
 anwenden zu müssen.
 
 ```{admonition} Wurzel-Kriterium
+:class: note
 Das Wurzel-Kriterium besagt, dass eine Reihe $\sum_{k=1}^{\infty} a_k$
 konvergiert, wenn der Grenzwert
 

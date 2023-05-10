@@ -3,7 +3,7 @@
 ## Lernziele
 
 ```{admonition} Lernziele
-:class: hint
+:class: important
 * Sie können den Mittelwert einer Liste von Zahlen berechnen.
 * Sie können den Mittelwert einer Funktion in einem Intervall berechnen.
 ```
@@ -64,6 +64,7 @@ $$\bar{y} = \frac{1}{N} \sum_{i=1}^{N} y_i.$$
 Zusammenfassend halten wir folgende Definition eines Mittelwertes fest.
 
 ```{admonition} Was ist ... der Mittelwert?
+:class: note
 Der Mittelwert einer Liste von Zahlen ist die Summe der Zahlen geteilt durch ihre Anzahl. Berechnet wird der Mittelwert mit der Formel
 
 $$\bar{y} = \frac{1}{N} \sum_{i=1}^{N} y_i.$$
@@ -189,6 +190,7 @@ orientierte Flächeninhalt der Funktion $f$ mit der x-Achse, also das Integral
 $$m = \frac{1}{b-a} \int_{a}^{b} f(x) \, dx.$$
 
 ```{admonition} Was ist ... der Mittelwert einer Funktion?
+:class: note
 Der Mittelwert einer Funktion in einem Intervall ist das bestimmte Integral auf diesem Intervall geteilt durch die Intervall-Länge.
 
 Etwas präziser formuliert berechnet sich der Mittelwert $m$ einer stetigen Funktion $f$ im Intervall $[a,b]$ über die Formel

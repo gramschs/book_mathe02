@@ -13,7 +13,7 @@ oder hydraulische Systeme zu steuern.
 ## Lernziele 
 
 ```{admonition} Lernziele
-:class: tip
+:class: important
 * Sie können erklären, was eine **periodische Funktion** ist.
 * Sie können Beispiele von periodischen Funktionen nennen wie
     * Sinus- und Kosinusfunktion,
@@ -27,6 +27,7 @@ oder hydraulische Systeme zu steuern.
 Bei einer periodischen Funktion wiederholen sich in regelmäßigen Abständen die Funktionswerte wieder. Der Abstand, nachdem sich die Funktionswerte beginnen zu wiederholen, heißt **Periodendauer**.
 
 ```{admonition} Was ist ... eine periodische Funktion?
+:class: note
 Eine Funktion heißt periodisch, wenn sich die Funktionswerte regelmäßig wiederholen. Als mathematische Formel ausgedrückt ist eine Funktion $f$ periodisch mit der Periode $p$, wenn gilt:
 
 $$f(x+p) = f(x).$$

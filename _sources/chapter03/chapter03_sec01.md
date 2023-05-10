@@ -9,7 +9,7 @@ aus der Mathematik 1 Vorlesung als Startpunkt nehmen.
 ## Lernziele
 
 ```{admonition} Lernziele
-:class: tip
+:class: important
 * Sie können den Fachbegriff **Partialsumme** einer Reihe erklären.
 * Sie können den Fachbegriff **Reihe** erklären.
 * Sie wissen, was eine **konvergente** Reihe ist und wie der Grenzwert bezeichnet wird.
@@ -60,6 +60,7 @@ gebildet werden. Das hilft später, Kriterien für die Konvergenz und Divergenz
 von Reihen zu finden, die diese Systematik ausnutzen.
 
 ```{admonition} Was ist ... eine konvergente Reihe?
+:class: note
 Eine Reihe wird konvergent genannt, wenn die Folge der Partialsummen gegen einen Grenzwert konvergiert. Dieser Grenzwert wird dann mit dem mathematischen Symbol
 
 $$\sum_{k=1}^{\infty} a_k$$
@@ -80,6 +81,7 @@ wirklich konvergiert. Oft wird diese Bezeichnung aber auch für Reihen im
 Allgemeinen verwendet.
 
 ```{admonition} Was ist ... eine divergente Reihe?
+:class: note
 Eine Reihe wird divergent genannt, wenn die Folge der Partialsummen divergiert, also *nicht* gegen einen Grenzwert konvergiert. 
 ```
 
@@ -123,6 +125,7 @@ s_n &= a_1 + a_2 + \dots + a_n = a_1 + a_1 \cdot q + \ldots + a_1 \cdot q^{n-1}
 \end{align*}
 
 ```{admonition} Was ist ... die geometrische Reihe?
+:class: note
 Die geometrische Reihe ist die Folge $(s_n)$ der Partialsummen
 
 $$s_n = 1 + q + q^2 + q^3 + \ldots + q^{n-1} = \sum_{k=0}^{n} q^{k}.$$
@@ -136,6 +139,7 @@ Was die Konvergenz bzw. Divergenz anbelangt, es kommt auf die Zahl $q$ an, ob
 die geometrische Reihe konvergiert oder divergiert.
 
 ```{admonition} Wann konvergiert die geometrische Reihe?
+:class: note
 Wenn der Betrag der Zahl $q$ kleiner als Eins ist, also $|q|<1$ gilt, dann konvergiert die geometrische Reihe und ihr Grenzwert ist
 
 $$\sum_{k=0}^{\infty} q^k = \frac{1}{1-q}.$$
@@ -158,6 +162,7 @@ Jetzt haben wir uns das Beispiel einer konvergenten Reihe angesehen
 harmonische Reihe.
 
 ```{admonition} Was ist ... die hamonische Reihe?
+:class: note
 Die harmonische Reihe wird aus der Summe der harmonischen Folge $a_k = \frac{1}{k}$ gebildet:
 
 $$s_n = \frac{1}{1} + \frac{1}{2} + \frac{1}{3} + \ldots + \frac{1}{n} = \sum_{k=1}^{n} \frac{1}{k}.$$

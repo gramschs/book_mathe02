@@ -18,7 +18,7 @@ In diesem Kapitel geht es um Potenzreihen und die Approximation von Funktionen d
 ## Lernziele
 
 ```{admonition} Lernziele
-:class: tip
+:class: important
 * Sie können erklären, was eine **Potenzreihe** (im Gegensatz zu einer Reihe) ist.
 * Sie können die **spezielle Darstellungsform einer Potenzreihe** auswendig aufschreiben:
 
@@ -63,6 +63,7 @@ $x_0$ bezieht. Dazu müssen wir von jedem $x$ den Wert $x_0$ abziehen und dann
 die Potenz bilden, also $(x-x_0)^k$ verwenden.
 
 ```{admonition} Was ist ... eine Potenzreihe?
+:class: note
 Eine **Potenzreihe** ist eine Reihe vom Typ
 
 \begin{align*}
