@@ -19,7 +19,7 @@ Neben der Linearisierung einer mehrdimensionalen Funktion ist auch die Berechnun
 ## Lernziele
 
 ```{admonition} Lernziele
-:class: tip
+:class: important
 * Sie können eine skalarwertige Funktion $f(x,y)$ in einem Arbeitspunkt $(x_0,y_0)$ **linearisieren** oder anders ausgedrückt, ihre **Tangentialebene**
 
 $$T_1(x,y) = f(x_0,y_0) + \frac{\partial f(x_0,y_0)}{\partial x} (x-x_0) + \frac{\partial f(x_0,y_0)}{\partial y}(y-y_0)$$

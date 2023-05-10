@@ -26,7 +26,7 @@ werden können.
 ## Lernziele
 
 ```{admonition} Lernziele
-:class: tip
+:class: important
 * Sie können erklären, was eine **Funktion von mehreren unabhängigen Variablen** ist. 
 * Sie können eine Funktion von zwei unabhängigen Variablen als Fläche im Raum zeichnen.
 * Sie können die **Höhenlinien** einer Funktion von zwei unabhängigen Variablen interpretieren und zeichnen.
@@ -95,6 +95,7 @@ Wenn die Funktion mehrere unabhängige Variablen hat, nennt man die Funktion auc
 Fassen wir zusammen.
 
 ```{admonition} Was ist ... eine Funktion mit mehreren unabhängigen Variablen?
+:class: note
 Eine Funktion ist eine eindeutige Regel, die jedem Vektor aus mehreren
 unabhängigen Variablen (aus der Definitionsmenge) genau eine reelle Zahl (aus
 der Wertemenge) zuordnet.
@@ -162,6 +163,7 @@ sind auch aus dem Erdkundeunterricht bekannt, wo sie normalerweise
 **Höhenlinien** genannt werden.
 
 ```{admonition} Was sind ... Höhenlinien?
+:class: note
 Höhenlinien sind Linien in einer zweidimensionalen Ebene, die diejenigen Punkte $(x,y)$
 verbinden, die den gleichen Funktionswert $f(x,y)=c$ haben.  
 ```

@@ -8,7 +8,7 @@ nachgeholt.
 ## Lernziele
 
 ```{admonition} Lernziele
-:class: hint
+:class: important
 * Sie wissen, was die **Richtungsableitung** einer Funktion von mehreren
   Variablen ist.
 * Sie wissen, wann sie die Richtungsableitung auch mit Hilfe des Gradienten
@@ -50,6 +50,7 @@ Richtung $v$. Wir verwenden für die Richtungsableitung das Symbol $D_{v}f$.
 
 
 ```{admonition} Was ist ... die Richtungsableitung?
+:class: note
 Die Richtungsableitung der Funktion $f$, die von mehreren Variablen abhängt, in
 die Richtung $v$ ist der Grenzwert
 
@@ -72,6 +73,7 @@ partiellen Ableitungen alle stetig sind, zu den total differenzierbaren
 Funktionen. Daher beschränken wir uns auf diese Funktionen und halten fest:
 
 ```{admonition} Wie wird die Richtungsableitung berechnet? 
+:class: note
 Wenn alle partiellen Ableitung der Funktion $f$ stetig sind, kann die
 Richtungsableitung in  Richtung $v$ auch mit dem Gradienten $\nabla f$ berechnet
 werden. Dann gilt:

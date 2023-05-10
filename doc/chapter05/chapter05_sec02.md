@@ -15,7 +15,7 @@ Die Idee der Fourierreihe wird in dem folgenden Video erklärt.
 ## Lernziele Fourierreihen
 
 ```{admonition} Lernziele
-:class: tip
+:class: important
 * Sie können eine periodische Funktion in eine **Fourierreihe** umschreiben.
 * Sie können dazu die **Fourierkoeffizienten** berechnen. 
 * Sie kennen die Kriterien, wann eine Funktion in eine Fourierreihe entwickelt werden darf.
@@ -46,6 +46,7 @@ Die Funktion $f$ hat die Periode $T = 2\pi$ und wird trigonometrisches Polynom
 genannt.
 
 ```{admonition} Was ist ... ein trigonometrisches Polynom?
+:class: note
 Ein trigonometrisches Polynom ist eine Funktion, die als Linearkombination von Sinus- und Kosinusfunktionen geschrieben werden kann:
 
 $$f(x) = \frac{a_0}{2} + a_1 \cos(\omega t) + b_1 \sin(\omega t) + a_2\cos(2\omega t) + b_2\sin(2\omega t) + \ldots + a_n\cos(n\omega t) + b_n\sin(n\omega t).$$
@@ -73,6 +74,7 @@ durch das trigonometrische Polynom angenähert werden soll, dann müssen wir die
 Fourierkoeffizienten nach der folgenden Formel berechnen.
 
 ```{admonition} Wie werden die Fourierkoeffizienten berechnet?
+:class: note
 Wir starten mit einer gegebenen Funktion $f$, die die Periode $T$ und die
 Frequenz $\omega = \frac{2\pi}{T}$ hat. Die Fourierkoeffizienten werden dann
 berechnet als
@@ -101,6 +103,7 @@ Bei allen praktisch vorkommenen Beispielen im Maschinenbau ist dies aber der
 Fall. Wenn der Grad $n$ gegen unendlich geht, nennen wir die Reihe Fourierreihe.
 
 ```{admonition} Was ist ... die Fourierreihe?
+:class: note
 Die meisten Funktionen $f$ mit der Periode $T$ und der Kreisfrequenz $\omega$
 können als eine unendliche Summe von Sinus- und Kosinusfunktionen approximiert
 mit den Fourierkoeffizienten $a_k$ und $b_k$ werden:

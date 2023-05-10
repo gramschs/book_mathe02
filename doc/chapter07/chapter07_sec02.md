@@ -3,7 +3,7 @@
 ## Lernziele
 
 ```{admonition} Lernziel
-:class: hint
+:class: important
 Sie wissen, was eine **vektorwertige** Funktion bzw. ein **Vektorfeld** ist.
 ```
 
@@ -19,6 +19,7 @@ auch machen. Sind die Funktionswerte einer Funktion Vektoren, so nennen wir die
 Funktion **vektorwertig**.
 
 ```{admonition} Was ist ... eine vektorwertige Funktion?
+:class: note
 Eine vektorwertige Funktion ist eine Funktion, die Vektoren als Wertemenge bzw.
 Funktionswerte hat.
 ```

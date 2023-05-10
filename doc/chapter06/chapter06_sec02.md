@@ -6,7 +6,7 @@ definiert werden.
 ## Lernziele
 
 ```{admonition} Lernziele
-:class: hint
+:class: important
 Sie wissen, wann eine Funktion von mehreren unabhängigen Variablen **stetig** genannt wird.
 ```
 

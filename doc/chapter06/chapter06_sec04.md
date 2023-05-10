@@ -9,7 +9,7 @@ muss man aufhören. Das lässt sich analog auf Funktionen von mehreren Variablen
 ## Lernziele 
 
 ```{admonition} Lernziele
-:class: hint
+:class: important
 * Sie können **höhere partielle Ableitungen** berechenen.
 * Sie wissen, was mit **gemischten partiellen Ableitungen** gemeint ist.
 * Sie können die **Hesse-Matrix** berechnen.
@@ -115,6 +115,7 @@ $$H_{f}(x_1,x_2,x_3) =
 \end{pmatrix}$$
 
 ```{admonition} Was ist ... die Hesse-Matrix?
+:class: note
 Die Hesse-Matrix gibt es nur für Funktionen $f$ von mehreren Variablen $x_1,
 x_2, \ldots, x_n$, die mindestens zweimal partiell differenzierbar sind. Die
 Hesse-Matrix besteht aus den 2. partiellen Ableitungen der Funktion $f$, wobei

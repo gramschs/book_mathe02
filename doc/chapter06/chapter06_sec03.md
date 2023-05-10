@@ -11,7 +11,7 @@ wir uns mit partiellen Ableitungen 1. Ordnung.
 ## Lernziele
 
 ```{admonition} Lernziele
-:class: hint
+:class: important
 * Sie wissen, was eine **partielle Ableitung** einer Funktion von mehreren
 Variablen ist und können sie auch berechnen.
 * Sie wissen, wie der **Gradient** einer Funktion von mehreren Variablen
@@ -70,6 +70,7 @@ $$\frac{\partial f}{\partial x_1}, \frac{\partial f}{\partial x_2},
 notiert werden.
 
 ```{admonition} Was ist ... die partielle Ableitung?
+:class: note
 Gegeben ist eine Funktion $f$ von mehreren unabhängigen Variablen $x_1, x_2,
 \ldots, x_n$. Die partielle Ableitung von $f$ nach der Variablen $x_i$ ist die
 "normale" Ableitung der Funktion $f$ nach $x_i$, wobei aber alle anderen
@@ -186,6 +187,7 @@ des steilsten Anstiegs. Diese Information über eine Funktion von mehreren
 Variablen ist so wichtig, dass der Vektor einen eigenen Namen hat: **Gradient**.
 
 ```{admonition} Was ist ... der Gradient? 
+:class: note
 Wir betrachten eine Funktion $f$ von mehreren Variablen $x_1, x_2, \ldots, x_n$.
 Der Zeilenvektor mit allen 1. partiellen Ableitungen wird Gradient genannt. Es
 gibt sogar ein eigenes Formelzeichen für den Gradienten, das

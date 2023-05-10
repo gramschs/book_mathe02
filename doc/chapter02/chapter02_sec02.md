@@ -10,7 +10,7 @@ Funktionsgraphen und der x-Achse berechnet werden.
 ## Lernziele
 
 ```{admonition} Lernziele
-:class: hint
+:class: important
 * Sie wissen, wie man mit dem bestimmten Integral $\int_{a}^{b} f(x)\, dx$ den
   Flächeninhalt zwischen dem Funktionsgraphen $f(x)$, der x-Achse und den parallelen
   Geraden $x=a$ und $x=b$ berechnet, wenn 
@@ -162,6 +162,7 @@ Flächeninhalt ist daher
 $$A = \frac{4}{3} \textcolor{red}{+} \frac{4}{3} + \frac{20}{3} = \frac{28}{3}.$$
 
 ```{admonition} Kochrezept zur Berechnung des Flächeninhaltes zwischen einem Funktionsgraphen und der x-Achse
+:class: note
 Ist der Flächeninhalt $A$ zwischen dem Funktionsgraphen $f(x)$ und der x-Achse mit den Grenzen $x=a$ und $x=b$ gesucht, gehen Sie folgendermaßen vor:
 
 1. Fertigen Sie eine Skizze der Funktion an, um zu ermitteln, wo $f(x)$ oberhalb und wo unterhalb der x-Achse verläuft.
@@ -185,6 +186,7 @@ Differenzfunktion der beiden Funktionen gebildet wird. Die Vorgehensweise ist
 dann wie folgt.
 
 ```{admonition} Kochrezept zur Berechnung des Flächeninhaltes zwischen zwei Funktionsgraphen
+:class: note
 Zur Berechnung des Flächeninhaltes zwischen zwei Funktionsgraphen, die wir
 $f(x)$ und $g(x)$ nennen, und den Grenzen $x=a$ und $x=b$ gehen wir
 folgendermaßen vor.

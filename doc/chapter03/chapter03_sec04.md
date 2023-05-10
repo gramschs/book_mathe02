@@ -3,7 +3,7 @@
 ## Lernziele
 
 ```{admonition} Lernziele
-:class: tip
+:class: important
 * Sie können erklären, was der **Konvergenzbereich** einer Potenzreihe ist.
 * Sie können den Konvergenzbereich einer Potenzreihe geometrisch interpretieren und anhand des **Konvergenzradius** entscheiden, ob eine Potenzreihe konvergiert oder divergiert oder berechnen, was in den **Randpunkten** passiert.
 * Sie kennen zwei Formeln auswendig, um den Konvergenzradius $r$ einer Potenzreihe zu berechnen, nämlich
@@ -31,6 +31,7 @@ Grenzwert annehmen, sofern der Grenzwert überhaupt existiert. Diejenigen x, fü
 die die Folge der Partialsummen konvergiert, nennen wir Konvergenzbereich.
 
 ```{admonition} Was ist ... der Konvergenzbereich einer Potenzreihe?
+:class: note
 Die Menge aller Zahlen $x$, für die die spezielle Potenzreihe
 
 $$p(x) = \sum_{k=0}^{\infty} a_k x^k$$

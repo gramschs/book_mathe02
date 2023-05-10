@@ -11,7 +11,7 @@ Nachdem wir in den vorhergehenden Kapiteln Ableitungen von eindimensionalen Funk
 ## Lernziele
 
 ```{admonition} Lernziele
-:class: tip
+:class: important
 * Sie können erklären, was ein **Doppelintegral** $\iint_{A} f(x,y)\, dA$ ist.
 * Sie können ein **Doppelintegral in kartesischen Koordinaten** berechnen, indem Sie zuerst die **innere Integration** und dann die **äußere Integration** durchführen.
 * Sie können mit einem Doppelintegral den Flächeninhalt berechnen.

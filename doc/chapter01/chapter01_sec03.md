@@ -13,7 +13,7 @@ offiziell **partielle Integration** heißt.
 ## Lernziele
 
 ```{admonition} Lernziele
-:class: hint
+:class: important
 Sie können ein Produkt von zwei Funktionen $u\cdot v$ mit der partiellen
 Integrationsregel im Intervall $[a,b]$ integrieren: 
 

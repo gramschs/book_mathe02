@@ -9,7 +9,7 @@ die Achse, um die sie gedreht wird, bestimmt.
 ## Lernziele 
 
 ```{admonition} Lernziele
-:class: hint
+:class: important
 Sie können das **Volumen eines Rotationskörpers** berechnen, der dadurch
 entsteht, dass eine Kurve
 *  um die x-Achse gedreht wird:
