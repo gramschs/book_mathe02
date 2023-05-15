@@ -57,7 +57,7 @@ müssen, um die Funktion f(x) vollständig zu beschreiben.
 
 Und warum nehmen wir $\frac{a_0}{2}$ und nicht einfach $a_0$? Das hat etwas mit
 komplexen trigonometrischen Polynomen zu tun, die wir in dieser Vorlesung aber
-nicht mehr behandeln. Dennoch laten wir uns an dieser Stelle an die übliche
+nicht mehr behandeln. Dennoch halten wir uns an dieser Stelle an die übliche
 Schreibweise.
 
 ```{dropdown} Video "Vorbereitung Fourierreihe Sinus/Kosinus" von Daniel Jung
