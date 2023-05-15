@@ -1,9 +1,11 @@
-# Linearisierung/Tangentialebene und Extremwerte
+# 8.1 Tangentialebene
 
 ```{admonition} Warnung
 :class: warning
 Achtung, dieser Abschnitt des Vorlesungsskriptes wird gerade überarbeitet!!!
 ```
+
+TODO
 
 Für eindimensionale Funktionen haben wir die Linearisierung und die Annährung einer Funktion durch eine Tangente bereits kennengelernt. Am einfachsten lässt sich die Tangente einer eindimensionalen Funktion berechnen, indem wir das 1. Taylor-Polynom im Entwicklungspunkt $x_0$ berechnen:
 
@@ -85,7 +87,7 @@ $$f'(x)=0.$$
 Diese Bedingung ist *notwendig*, damit überhaupt ein Maximum oder Minimum vorliegen kann. Leider reicht diese Bedingung noch nicht aus. Alle Nullstellen der 1. Ableitung sind *mögliche* Extrema, es könnten aber auch Sattelpunkte sein wie in der folgenden Abbildung der Funktion $f(x)=x^3$:
 
 
-```{figure} pics/part08_sattelpunkt1D.svg
+```{figure} pics/fig08_sattelpunkt1D.svg
 ---
 width: 300px
 name: fig_part06_sattelpunkt1D
