@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>7 Richtungsableitungen und vektorwertige Funktionen &#8212; Mathematik 2 Maschinenbau</title>
+    <title>8.2 Totales Differential &#8212; Mathematik 2 Maschinenbau</title>
   
   
   
@@ -66,11 +66,13 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'chapter07/chapter07_sec00';</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'chapter08/chapter08_sec02';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="7.1 Gradient und Richtungsableitung" href="chapter07_sec01.html" />
-    <link rel="prev" title="Übungen" href="../chapter06/chapter06_sec05.html" />
+    <link rel="next" title="8.3 Extremwerte" href="chapter08_sec03.html" />
+    <link rel="prev" title="8.1 Tangentenfunktionen" href="chapter08_sec01.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="None"/>
   </head>
@@ -211,20 +213,20 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../chapter06/chapter06_sec05.html">Übungen</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">7 Richtungsableitungen und vektorwertige Funktionen</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="chapter07_sec01.html">7.1 Gradient und Richtungsableitung</a></li>
-<li class="toctree-l2"><a class="reference internal" href="chapter07_sec02.html">7.2 Vektorwertige Funktionen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="chapter07_sec03.html">7.3 Jacobi-Matrix</a></li>
-<li class="toctree-l2"><a class="reference internal" href="chapter07_sec04.html">7.4 Mehrdimensionale Kettenregel</a></li>
-<li class="toctree-l2"><a class="reference internal" href="chapter07_sec05.html">Übungen</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter07/chapter07_sec00.html">7 Richtungsableitungen und vektorwertige Funktionen</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter07/chapter07_sec01.html">7.1 Gradient und Richtungsableitung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter07/chapter07_sec02.html">7.2 Vektorwertige Funktionen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter07/chapter07_sec03.html">7.3 Jacobi-Matrix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter07/chapter07_sec04.html">7.4 Mehrdimensionale Kettenregel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter07/chapter07_sec05.html">Übungen</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter08/chapter08_sec00.html">8. Linearisierung und Extremwerte</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter08/chapter08_sec01.html">8.1 Tangentenfunktionen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter08/chapter08_sec02.html">8.2 Totales Differential</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter08/chapter08_sec03.html">8.3 Extremwerte</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter08/chapter08_sec04.html">8.4 Extremwertprobleme mit Nebenbedingung</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter08/chapter08_sec05.html">Übungen</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="chapter08_sec00.html">8. Linearisierung und Extremwerte</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="chapter08_sec01.html">8.1 Tangentenfunktionen</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">8.2 Totales Differential</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter08_sec03.html">8.3 Extremwerte</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter08_sec04.html">8.4 Extremwertprobleme mit Nebenbedingung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter08_sec05.html">Übungen</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../part09.html">Doppelintegral</a></li>
@@ -307,7 +309,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../_sources/chapter07/chapter07_sec00.md" target="_blank"
+      <li><a href="../_sources/chapter08/chapter08_sec02.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -376,7 +378,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -387,11 +391,21 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>7 Richtungsableitungen und vektorwertige Funktionen</h1>
+    <h1>8.2 Totales Differential</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lernziel">Lernziel</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#was-ist-das-differential">Was ist das Differential?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#was-ist-das-totale-differential">Was ist das totale Differential?</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -401,18 +415,66 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="richtungsableitungen-und-vektorwertige-funktionen">
-<h1>7 Richtungsableitungen und vektorwertige Funktionen<a class="headerlink" href="#richtungsableitungen-und-vektorwertige-funktionen" title="Permalink to this headline">#</a></h1>
-<p>Themen:</p>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="chapter07_sec01.html">7.1 Gradient und Richtungsableitung</a></li>
-<li class="toctree-l1"><a class="reference internal" href="chapter07_sec02.html">7.2 Vektorwertige Funktionen</a></li>
-<li class="toctree-l1"><a class="reference internal" href="chapter07_sec03.html">7.3 Jacobi-Matrix</a></li>
-<li class="toctree-l1"><a class="reference internal" href="chapter07_sec04.html">7.4 Mehrdimensionale Kettenregel</a></li>
-<li class="toctree-l1"><a class="reference internal" href="chapter07_sec05.html">Übungen</a></li>
-</ul>
+  <section class="tex2jax_ignore mathjax_ignore" id="totales-differential">
+<h1>8.2 Totales Differential<a class="headerlink" href="#totales-differential" title="Permalink to this headline">#</a></h1>
+<section id="lernziel">
+<h2>Lernziel<a class="headerlink" href="#lernziel" title="Permalink to this headline">#</a></h2>
+<div class="important admonition">
+<p class="admonition-title">Lernziel</p>
+<p>Sie können das <strong>totale Differential</strong> einer Funktion von mehreren Variablen
+berechnen.</p>
 </div>
+</section>
+<section id="was-ist-das-differential">
+<h2>Was ist das Differential?<a class="headerlink" href="#was-ist-das-differential" title="Permalink to this headline">#</a></h2>
+<p>Bei eindimensionalen Funktionen gilt näherungsweise das 1.
+Taylorpolynom im Entwicklungspunkt <span class="math notranslate nohighlight">\(x_0\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[f(x) \approx f(x_0) + f'(x_0)\cdot (x-x_0).\]</div>
+<p>Wenn wir jetzt wissen wollen, um wieviel sich der Funktionswert <span class="math notranslate nohighlight">\(f(x_0)\)</span> ändert,
+wenn wir <span class="math notranslate nohighlight">\(x_0\)</span> um <span class="math notranslate nohighlight">\(\Delta x\)</span> auf <span class="math notranslate nohighlight">\(x_0 + \Delta x\)</span> erhöhen, können wir diese Approximation nutzen.</p>
+<div class="math notranslate nohighlight">
+\[f(x_0 +\Delta x) \approx f(x_0) + f'(x_0) \cdot \left( (x_0+\Delta x) - x_0\right).\]</div>
+<p>Die Änderung von <span class="math notranslate nohighlight">\(f(x_0)\)</span> auf <span class="math notranslate nohighlight">\(f(x_0 + \Delta x)\)</span> ist die Differenz, also</p>
+<div class="math notranslate nohighlight">
+\[f(x_0 +\Delta x) - f(x_0) = f(x_0) + f'(x_0) \cdot \left( (x_0+\Delta x) - x_0\right) - f(x_0).\]</div>
+<p>Damit bleibt nur noch übrig:</p>
+<div class="math notranslate nohighlight">
+\[f(x_0 +\Delta x) - f(x_0) = f'(x_0) \cdot  \Delta x.\]</div>
+<p>Dieser Ausdruck wird Differential genannt.</p>
+<div class="note admonition">
+<p class="admonition-title">Was ist … das Differential?</p>
+<p>Ist eine Funktion <span class="math notranslate nohighlight">\(f\)</span> differenzierbar, so wird der Term</p>
+<div class="math notranslate nohighlight">
+\[f'(x)\cdot \Delta x\]</div>
+<p>Differential genannt. Das Differential beschreibt den linearen Anteil der
+Änderung der Funktion <span class="math notranslate nohighlight">\(f\)</span>.</p>
+</div>
+</section>
+<section id="was-ist-das-totale-differential">
+<h2>Was ist das totale Differential?<a class="headerlink" href="#was-ist-das-totale-differential" title="Permalink to this headline">#</a></h2>
+<p>Da sich die Tangentenfunktion von eindimensionalen Funktionen aud mehrdimensionale Funktionen übertragen lässt, kann auch das Differential auf mehrdimensionale Funktionen übertragen werden. Es wird dann totales Differential genannt.</p>
+<div class="note admonition">
+<p class="admonition-title">Was ist … das totale Differential?</p>
+<p>Existiert zu einer Funktion <span class="math notranslate nohighlight">\(f:\mathbb{R}^n\to\mathbb{R}\)</span> die Tangentenfunktion,
+so wird</p>
+<div class="math notranslate nohighlight">
+\[\sum_{i=1}^n \frac{\partial f(\vec{x})}{x_i} \cdot \Delta x_i\]</div>
+<p>totales Differential genannt. Es beschreibt den linearen Anteil wie sich die
+Funktionswerte <span class="math notranslate nohighlight">\(f(\vec{x}\)</span> ändern, wenn sich die Variablen <span class="math notranslate nohighlight">\(x_1, x_2, \ldots,
+x_n\)</span> entlang der Koordinatenachsen sum <span class="math notranslate nohighlight">\(\Delta x_1, \Delta x_2, \ldots, \Delta
+x_n\)</span> ändern.</p>
+</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Video zu “Totales Differential” von Mathematische Methoden<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/qDgsHyg928Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+</details></section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -428,7 +490,7 @@ document.write(`
         },
         kernelOptions: {
             name: "python3",
-            path: "./chapter07"
+            path: "./chapter08"
         },
         predefinedOutput: true
     }
@@ -447,20 +509,20 @@ document.write(`
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="../chapter06/chapter06_sec05.html"
+       href="chapter08_sec01.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Übungen</p>
+        <p class="prev-next-title">8.1 Tangentenfunktionen</p>
       </div>
     </a>
     <a class="right-next"
-       href="chapter07_sec01.html"
+       href="chapter08_sec03.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">7.1 Gradient und Richtungsableitung</p>
+        <p class="prev-next-title">8.3 Extremwerte</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -473,6 +535,22 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lernziel">Lernziel</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#was-ist-das-differential">Was ist das Differential?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#was-ist-das-totale-differential">Was ist das totale Differential?</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
