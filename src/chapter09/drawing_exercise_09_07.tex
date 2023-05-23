@@ -1,0 +1,53 @@
+\documentclass[11pt]{standalone}
+\usepackage[usenames]{color} %used for font color
+\usepackage{amssymb} %maths
+\usepackage{amsmath} %maths
+
+\usepackage[no-math]{fontspec}
+\usepackage{unicode-math}
+\setmainfont{Lato}
+\setmathfont{Stix Two Math}
+
+\usepackage{pgf,xcolor}
+\definecolor{itwm_blue_04}{HTML}{005A94}
+\definecolor{itwm_red}{HTML}{C00000}
+\definecolor{itwm_yellow}{HTML}{FFEC7F}
+
+\usepackage{tikz}
+\usetikzlibrary{shapes.misc, shadows, decorations, arrows}
+\usetikzlibrary{backgrounds}
+\usetikzlibrary{calc}
+\usepackage{pgfplots}
+\pgfplotsset{compat=newest}
+\usepgfplotslibrary{fillbetween}
+\usepackage{tikzpagenodes}
+\usetikzlibrary{patterns}
+
+
+\begin{document}
+\begin{tikzpicture}
+\begin{axis}[
+    domain=-1:6,
+    axis lines = center,
+    xlabel = {$x$},
+    ylabel = {$y$},
+    height=8cm, width=12cm, 
+    xmin=-1, xmax=6, ymin=-8, ymax=10,
+    ytick={-5,-3,...,9},
+    xtick={-1,0,...,6},
+    grid = both
+]
+\addplot[draw=itwm_blue_04, domain=-1:6, smooth, thick, name path=g]{2*x-6} node [above, left, pos=0.7] {$f_o(x)=2x-6$};
+\addplot[draw=itwm_blue_04, domain=-1:6, smooth, thick, name path=f]{x^2-4*x-1} node [below, right, pos=0.4] {$f_u(x)=x^2-4x-1$};
+\addplot[pattern=north east lines, pattern color=gray] fill between [of=f and g, soft clip={domain=1:5}];
+
+\node[fill, itwm_red, circle,inner sep=-2] at (3,-8/5) {};
+%\draw [->, thick] (-1, -1) -- (-0.2,0) {};
+%\node [below] at (-1, -1) {$f_u(x)=0$};
+%\draw [->, thick] (1.5, 1.2) -- (0.5,0.5) {};
+%\node [above] at (1.5, 1.2) {$f_o(x)=-x+1$};
+
+\end{axis}
+\end{tikzpicture}
+\end{document}
+
