@@ -1,0 +1,793 @@
+
+
+<!DOCTYPE html>
+
+
+<html >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Übungen &#8212; Mathematik 2 Maschinenbau</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/exercise.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/myadmonitions.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/jsxgraph.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/plotly-2.20.0.min.js"></script>
+    <script src="../_static/jsxgraphcore.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'chapter09/chapter09_sec05';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Doppelintegral in Polarkoordinaten und Dreifachintegral" href="../part10.html" />
+    <link rel="prev" title="9.4 Anwendung: Schwerpunktberechnung" href="chapter09_sec04.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="None"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    <p class="title logo__title">Mathematik 2 Maschinenbau</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Willkommen zur Materialsammlung Mathematik 2
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Part 1. Integrale</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter01/chapter01_sec00.html">1. Wiederholung Integral</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter01/chapter01_sec01.html">1.1 Stammfunktion und bestimmtes Integral</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter01/chapter01_sec02.html">1.2 Eigenschaften von Integralen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter01/chapter01_sec03.html">1.3 Partielle Integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter01/chapter01_sec04.html">1.4 Integration durch Substitution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter01/chapter01_sec05.html">Übungen</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter02/chapter02_sec00.html">2. Anwendungen Integral</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter02/chapter02_sec01.html">2.1 Integrieren ist Mitteln</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter02/chapter02_sec02.html">2.2 Fläche zwischen zwei Graphen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter02/chapter02_sec03.html">2.3 Bogenlänge</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter02/chapter02_sec04.html">2.4 Volumen von Rotationskörpern</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter02/chapter02_sec05.html">Übungen</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Part 2. Funktionenreihen</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter03/chapter03_sec00.html">3. Reihen und Potenzreihen</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec01.html">3.1 Reihen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec02.html">3.2 Konvergenzkriterien für Reihen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec03.html">3.3 Potenzreihen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec04.html">3.4 Konvergenz von Potenzreihen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec05.html">Übungen</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter04/chapter04_sec00.html">4. Taylorreihen</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter04/chapter04_sec01.html">4.1 Berechnung Taylorreihe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter04/chapter04_sec02.html">4.2 Restglied von Taylorreihen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter04/chapter04_sec03.html">4.3 Wichtige Potenzreihen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter04/chapter04_sec04.html">4.4 Rechnen mit Potenzreihen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter04/chapter04_sec05.html">Übungen</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter05/chapter05_sec00.html">5. Fourierreihen</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter05/chapter05_sec01.html">5.1 Periodische Funktionen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter05/chapter05_sec02.html">5.2 Fourierreihen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter05/chapter05_sec03.html">5.3 Beispiele für Fourierreihen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter05/chapter05_sec04.html">5.4 Rechenregeln Fourierreihen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter05/chapter05_sec05.html">Übungen</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Part 3. Mehrdimensionale Analysis</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter06/chapter06_sec00.html">6. Funktionen von mehreren Variablen und partielle Ableitungen</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter06/chapter06_sec01.html">6.1 Definition und Visualisierung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter06/chapter06_sec02.html">6.2 Stetigkeit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter06/chapter06_sec03.html">6.3 Partielle Ableitungen und Gradient</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter06/chapter06_sec04.html">6.4 Höhere partielle Ableitungen und Hesse-Matrix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter06/chapter06_sec05.html">Übungen</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter07/chapter07_sec00.html">7 Richtungsableitungen und vektorwertige Funktionen</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter07/chapter07_sec01.html">7.1 Gradient und Richtungsableitung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter07/chapter07_sec02.html">7.2 Vektorwertige Funktionen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter07/chapter07_sec03.html">7.3 Jacobi-Matrix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter07/chapter07_sec04.html">7.4 Mehrdimensionale Kettenregel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter07/chapter07_sec05.html">Übungen</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter08/chapter08_sec00.html">8. Linearisierung und Extremwerte</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter08/chapter08_sec01.html">8.1 Tangentenfunktionen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter08/chapter08_sec02.html">8.2 Totales Differential</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter08/chapter08_sec03.html">8.3 Extremwerte</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter08/chapter08_sec04.html">8.4 Extremwertprobleme mit Nebenbedingung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter08/chapter08_sec05.html">Übungen</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="chapter09_sec00.html">9. Doppelintegral</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="chapter09_sec01.html">9.1 Idee von Doppelintegralen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter09_sec02.html">9.2 Berechnung von Doppelintegralen in kartesischen Koordinaten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter09_sec03.html">9.3 Anwendung: Flächenberechnung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter09_sec04.html">9.4 Anwendung: Schwerpunktberechnung</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Übungen</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../part10.html">Dreifachintegral</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Part 4. Differentialgleichungen</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../part11.html">Grundbegriffe und separable DGL</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../part11_01.html">Grundlegende Begriffe von Differentialgleichungen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../part11_02.html">Lösungen von Differentialgleichungen</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../part12.html">DGL (Teil 2)</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+<a href="https://github.com/gramschs/book_mathe02" target="_blank"
+   class="btn btn-sm btn-source-repository-button"
+   title="Source repository"
+   data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/chapter09/chapter09_sec05.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Übungen</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="ubungen">
+<h1>Übungen<a class="headerlink" href="#ubungen" title="Permalink to this headline">#</a></h1>
+<div class="miniexercise admonition">
+<p class="admonition-title">Übung 9.1</p>
+<p>Berechnen Sie das Doppelintegral</p>
+<div class="math notranslate nohighlight">
+\[\int_{x=0}^{x=1}\left(\int_{y=-x}^{y=x} xy+1 \, dy\right) \, dx.\]</div>
+</div>
+<div class="minisolution toggle admonition">
+<p class="admonition-title">Lösung</p>
+<div class="math notranslate nohighlight">
+\[\int_{x=0}^{x=1}\left(\int_{y=-x}^{y=x} xy+1 \, dy\right) \, dx = 1\]</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Lösungsweg<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+\int_{x=0}^{x=1}\left(\int_{y=-x}^{y=x} xy+1 \, dy \right)\, dx 
+&amp;= \int_{x=0}^{x=1} \left[\frac{1}{2}xy^2+y \right]_{y=-x}^{y=x} \, dx = \\
+&amp;= \int_{x=0}^{x=1} \left(\frac{1}{2}xx^2+x\right)-\left(\frac{1}{2}x(-x)^2+(-x)\right)\, dx = \\
+&amp;= \int_{x=0}^{x=1} 2x\, dx = \\
+&amp;= \big[ x^2\big]_{x=0}^{x=1} = 1-0 = 1.
+\end{align*}\]</div>
+</div>
+</details></div>
+<div class="miniexercise admonition">
+<p class="admonition-title">Übung 9.2</p>
+<p>Berechnen Sie das Doppelintegral</p>
+<div class="math notranslate nohighlight">
+\[\int_{x=0}^{x=2\pi}\left(\int_{y=-\sin(x)-1}^{y=\sin(x)+1} xy+1 \, dy\right) \, dx.\]</div>
+</div>
+<div class="minisolution toggle admonition">
+<p class="admonition-title">Lösung</p>
+<div class="math notranslate nohighlight">
+\[\int_{x=0}^{x=2\pi}\left(\int_{y=-\sin(x)-1}^{y=\sin(x)+1} xy+1 \, dy\right) \, dx = 4\pi\]</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Lösungsweg<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+\int_{x=0}^{x=2\pi}\left(\int_{y=-\sin(x)-1}^{y=\sin(x)+1} xy+1 \, dy\right) \, dx
+&amp;= \int_{x=0}^{x=2\pi} \left[ \frac{1}{2}xy^2+y\right]_{y=-\sin(x)-1}^{y=\sin(x)+1} \, dx = \\
+&amp;= \int_{x=0}^{x=2\pi} \left(\frac{1}{2}x (\sin(x)+1)^2 + (\sin(x)+1) \right) 
+    - \left(\frac{1}{2}x (-\sin(x)-1)^2 - \sin(x) -1 \right) \, dx = \\
+&amp;= \int_{x=0}^{x=2\pi} 2\sin(x)+2 \, dx = \\
+&amp;= 2 \big[-\cos(x)+x \big]_{x=0}^{x=2\pi} = \\
+&amp;= 2\left(-\cos(2\pi) + 2\pi \right)-2 \left(-\cos(0)+0 \right) = \\
+&amp;= -2 + 4\pi + 2 = 4\pi.    
+\end{align*}\]</div>
+</div>
+</details></div>
+<div class="miniexercise admonition">
+<p class="admonition-title">Übung 9.3</p>
+<p>Berechnen Sie das Doppelintegral</p>
+<div class="math notranslate nohighlight">
+\[\int_{x=0}^{x=2\pi}\left(\int_{y=-\sin(x)-1}^{y=\sin(x)+1} x \, dy\right) \, dx.\]</div>
+</div>
+<div class="minisolution toggle admonition">
+<p class="admonition-title">Lösung</p>
+<div class="math notranslate nohighlight">
+\[\int_{x=0}^{x=2\pi}\left(\int_{y=-\sin(x)-1}^{y=\sin(x)+1} x \, dy \right)\, dx = 4(\pi^2-\pi)\]</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Lösungsweg<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+\int_{x=0}^{x=2\pi}\left(\int_{y=-\sin(x)-1}^{y=\sin(x)+1} x \, dy\right) \, dx
+&amp;= \int_{x=0}^{x=2\pi} \big[xy \big]_{y=-\sin(x)-1}^{y=\sin(x)+1} \, dx = \\
+&amp;= \int_{x=0}^{x=2\pi} \left(x(\sin(x)+1) \right) - \left(x (-\sin(x)-1) \right) \, dx = \\
+&amp;= 2 \int_{x=0}^{x=2\pi} x\cdot (\sin(x)+1) \, dx = \\
+&amp;= 2 \big[x \cdot(-\cos(x)+x) \big]_{x=0}^{x=2\pi} - 2\int_{x=0}^{x=2\pi} -\cos(x)+x \, dx = \\
+&amp;= 2\cdot 2\pi ((-1)+2\pi) + 2\big[\sin(x)\big]_{x=0}^{x=2\pi} - 2 \left[\frac{1}{2}x^2 \right]_{x=0}^{x=2\pi} = \\
+&amp;= -4\pi + 8\pi^2 + (0-0) - 4\pi^2 = \\
+&amp;= 4\pi^2-4\pi.
+\end{align*}\]</div>
+</div>
+</details></div>
+<div class="miniexercise admonition">
+<p class="admonition-title">Übung 9.4</p>
+<p>Berechnen Sie das Doppelintegral</p>
+<div class="math notranslate nohighlight">
+\[\int_{x=0}^{x=1}\left(\int_{y=0}^{y=x} \sqrt{xy} \, dy\right) \, dx.\]</div>
+</div>
+<div class="minisolution toggle admonition">
+<p class="admonition-title">Lösung</p>
+<div class="math notranslate nohighlight">
+\[\int_{x=0}^{x=1}\left(\int_{y=0}^{y=x} \sqrt{xy} \, dy \right) \, dx = \frac{2}{9}\]</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Lösungsweg<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+\int_{x=0}^{x=1}\left(\int_{y=0}^{y=x} \sqrt{xy} \, dy \right) \, dx 
+&amp;= \int_{x=0}^{x=1} \left[ \sqrt{x}\frac{2}{3}y^{\frac{3}{2}}\right]_{y=0}^{y=x} \, dx = \\
+&amp;= \int_{x=0}^{x=1} \frac{2}{3}x^2 \, dx = \\
+&amp;= \left[\frac{2}{9}x^3 \right]_{x=0}^{x=1} = \\
+&amp;= \frac{2}{9}.
+\end{align*}\]</div>
+</div>
+</details></div>
+<div class="miniexercise admonition">
+<p class="admonition-title">Übung 9.5</p>
+<p>Berechnen Sie das Doppelintegral</p>
+<div class="math notranslate nohighlight">
+\[\int_{x=0}^{x=2\pi}\left(\int_{y=x(x-\pi)^2(x-2\pi)}^{y=\sin(x)^2} 1 \, dy \right)\, dx.\]</div>
+</div>
+<div class="minisolution toggle admonition">
+<p class="admonition-title">Lösung</p>
+<div class="math notranslate nohighlight">
+\[\int_{x=0}^{x=2\pi}\left(\int_{y=x(x-\pi)^2(x-2\pi)}^{y=\sin(x)^2} 1 \, dy \right)\, dx = \pi + \frac{4}{15}\pi^5\]</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Lösungsweg<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+\int_{x=0}^{x=2\pi}\left(\int_{y=x(x-\pi)^2(x-2\pi)}^{y=\sin(x)^2} 1 \, dy \right)\, dx
+&amp;= \int_{x=0}^{x=2\pi} \big[ y \big]_{y=x(x-\pi)^2(x-2\pi)}^{y=\sin^2(x)} \, dx = \\
+&amp;= \int_{x=0}^{x=2\pi} \sin^2(x) - x (x-\pi)^2 (x-2\pi) \, dx
+\end{align*}\]</div>
+<p class="sd-card-text">Nebenrechnung für den zweiten Integranden:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+x (x-\pi)^2 (x-2\pi) 
+&amp;= (x^2-2\pi x + \pi^2)\cdot (x^2-2\pi x) = \\
+&amp;= x^4 -2\pi x^3 + \pi^2 x^2 - 2\pi x^3 + 4\pi^2x^2 - 2\pi^3x = \\
+&amp;= x^4 - 4\pi x^3 + 5\pi^2 x^2 - 2\pi^3 x 
+\end{align*}\]</div>
+<p class="sd-card-text">Eingesetzt in das obige Integral gilt dann zusammen mit dem Trick <span class="math notranslate nohighlight">\(\sin^2(x) =\frac{1}{2}-\frac{1}{2}\cos(2x)\)</span> (Additionstheorem bzw. Doppelwinkelfunktion)</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+\int_{x=0}^{x=2\pi}\left(\int_{y=x(x-\pi)^2(x-2\pi)}^{y=\sin(x)^2} 1 \, dy \right)\, dx
+&amp;= \int_{x=0}^{x=2\pi} \sin^2(x) \, dx + \int_{x=0}^{x=2\pi} x^4 - 4\pi x^3 + 5\pi^2 x^2 - 2\pi^3x \, dx = \\
+&amp;= \frac{1}{2} \left[x-\sin(x)\cos(x) \right]_{x=0}^{x=2\pi} + \left[\frac{1}{5}x^5 - \pi x^4 + \frac{5}{3}\pi^2x^3 - \pi^3 x^2 \right]_{x=0}^{x=2\pi} = \\
+&amp;= \frac{1}{2}2\pi + \left(\frac{1}{5}(2\pi)^3 - \pi(2\pi)^2 + \frac{5}{3}\pi^2(2\pi) - \pi^3 \right)\cdot 4\pi^2 = \\
+&amp;= \pi + \frac{4}{15}\pi^5. 
+\end{align*}\]</div>
+</div>
+</details></div>
+<div class="miniexercise admonition">
+<p class="admonition-title">Übung 9.6</p>
+<p>Berechnen Sie den Schwerpunkt der Fläche eines Dreiecks mit den Koordinaten <span class="math notranslate nohighlight">\((1,0)\)</span>, <span class="math notranslate nohighlight">\((0,1)\)</span> und <span class="math notranslate nohighlight">\((-1,0)\)</span>. Machen Sie sich dazu eine Skizze des Integrationsgebietes.</p>
+</div>
+<div class="minisolution toggle admonition">
+<p class="admonition-title">Lösung</p>
+<p>Schwerpunkt <span class="math notranslate nohighlight">\(S(0, \frac{1}{3})\)</span></p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Lösungsweg<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Zuerst fertigen wir eine Zeichnung an.</p>
+<p class="sd-card-text"><img alt="Zeichnung 9.6" src="../_images/drawing_exercise_09_06.svg" /></p>
+<p class="sd-card-text">Die x-Koordinate des Schwerpunkts ist Null, weil das Dreieck symmetrisch zur
+y-Achse ist. Diese Symmetrie nutzen wir auch aus, um die y-Koordinate des
+Schwerpunkts zu berechnen. Anstatt das Integral von <span class="math notranslate nohighlight">\(x=-1\)</span> bis <span class="math notranslate nohighlight">\(x=1\)</span> zu
+berechnen und dabei zwei verschiedene Randfunktionen betrachten zu müssen,
+betrachten wir nur die rechte Hälfte des Dreiecks. Der Schwerpunkt der rechten
+Hälfte in y-Richtung muss gleich dem Schwerpunkt des gesamten Dreiecks in
+y-Richtung sein.</p>
+<p class="sd-card-text">Die Formel zur Berechnung der y-Koordinate des Schwerpunkts lautet also</p>
+<div class="math notranslate nohighlight">
+\[y_S = \frac{1}{A} \int_{x=0}^{x=1} \left( \int_{y=0}^{y=-x+1} y \, dy \right) \, dx.\]</div>
+<p class="sd-card-text">Zuerst berechnen wir <span class="math notranslate nohighlight">\(A\)</span> mit der Formel <span class="math notranslate nohighlight">\(A = \frac{1}{2} g h\)</span> mit der Grundseite <span class="math notranslate nohighlight">\(g\)</span> und der Höhe <span class="math notranslate nohighlight">\(h\)</span>. Aus der Zeichnung lesen wir ab: <span class="math notranslate nohighlight">\(g = 1\)</span> und <span class="math notranslate nohighlight">\(h=1\)</span>. Also ist der Flächeninhalt des rechten Dreiecks</p>
+<div class="math notranslate nohighlight">
+\[A=\frac{1}{2}.\]</div>
+<p class="sd-card-text">Alternativ hätten wir auch den Flächeninhalt mit einem Doppelintegral berechnen können. Das innere Integral <span class="math notranslate nohighlight">\(I(x)\)</span> ist</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+I(x) 
+&amp;= \int_{y=0}^{y=-x+1} y \, dy = \\
+&amp;= \left[ \frac{1}{2}y^2 \right]_{y=0}^{y=-x+1} = \\
+&amp;= \frac{1}{2} (-x+1)^2 = \\
+&amp;= \frac{1}{2}x^2 - x + \frac{1}{2}. 
+\end{align*}\]</div>
+<p class="sd-card-text">Eingesetzt in das äußere Integral erhalten wir</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+\int_{x=0}^{x=1} \left( \int_{y=0}^{y=-x+1} y \, dy \right) \, dx
+&amp;= \int_{x=0}^{x=1} \frac{1}{2}x^2 - x + \frac{1}{2} \, dx = \\
+&amp;= \left[\frac{1}{6} x^3 - \frac{1}{2}x^2 + \frac{1}{2} x \right]_{x=0}^{x=1} = \\
+&amp;= \frac{1}{6} - \frac{1}{2} + \frac{1}{2} = \frac{1}{6}.
+\end{align*}\]</div>
+<p class="sd-card-text">Alles zusammengesetzt ist also die y-Koordinate des Schwerpunkts</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+y_S 
+&amp;= \frac{1}{A}\int_{x=0}^{x=1} \left( \int_{y=0}^{y=-x+1} y \, dy \right) \, dx = \\
+&amp;= \frac{1}{\frac{1}{2}} \cdot \frac{1}{6} = \frac{1}{3}.
+\end{align*}\]</div>
+<p class="sd-card-text">Damit ist der Schwerpunkt des Dreiecks <span class="math notranslate nohighlight">\(S(0, \frac{1}{3})\)</span>.</p>
+</div>
+</details></div>
+<div class="miniexercise admonition">
+<p class="admonition-title">Übung 9.7</p>
+<p>Berechnen Sie den Schwerpunkt der Fläche, die durch die beiden Kurven <span class="math notranslate nohighlight">\(f(x)=x^2-4x-1\)</span> und <span class="math notranslate nohighlight">\(g(x)=2x-6\)</span> eingeschlossen wird. Machen Sie sich dazu eine Skizze des Integrationsgebietes.</p>
+</div>
+<div class="minisolution toggle admonition">
+<p class="admonition-title">Lösung</p>
+<p>Schwerpunkt <span class="math notranslate nohighlight">\(S(3, -\frac{8}{5})\)</span></p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Lösungsweg<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Zuerst fertigen wir eine Zeichnung an:</p>
+<p class="sd-card-text"><img alt="Zeichnung 9.6" src="../_images/drawing_exercise_09_07.svg" /></p>
+<p class="sd-card-text">Als erstes werden die Schnittstellen berechnet:</p>
+<div class="math notranslate nohighlight">
+\[f_o(x) = f_u(x) \quad \Rightarrow \mathbb{L} = \{1,5\}.\]</div>
+<p class="sd-card-text">Danach wird der Flächeninhalt <span class="math notranslate nohighlight">\(A\)</span> berechnet:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+A 
+&amp;= \int_{x=1}^{x=5} \left( \int_{y=x^2-4x-1}^{y=2x-6} 1 \, dy\right) \, dx = \\
+&amp;= \int_{x=1}^{x=5} \big[ y \big]_{y=x^2-4x-1}^{y=2x-6} \, dx = \\
+&amp;= \int_{x=1}^{x=5} -x^2+6x-5 \, dx = \\
+&amp;= \left[-\frac{1}{3}x^3 + 3x^2 - 5x \right]_{x=1}^{x=5} = \\
+&amp; = \frac{32}{3} \\
+\end{align*}\]</div>
+<p class="sd-card-text">Als nächstes wird die x-Koordinate des Schwerpunkts berechnet:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+x_S 
+&amp;= \frac{1}{A} \int_{x=1}^{x=5} \left(\int_{y=x^2-4x-1}^{y=2x-6} x \, dy \right) \, dx = \\
+&amp;= \frac{3}{32} \int_{x=1}^{x=5} \left[ xy \right]_{y=x^2-4x-1}^{y=2x-6} \, dx = \\
+&amp;= \frac{3}{32} \int_{x=1}^{x=5} -x^3+6x^2-5x \, dx = \\
+&amp;= \frac{3}{32} \left[-\frac{1}{4}x^4+2x^3-\frac{5}{2}x^2\right]_{x=1}^{x=5} = \\
+&amp;= \frac{3}{32} \cdot 32 = 3.
+\end{align*}\]</div>
+<p class="sd-card-text">Und nun noch die y-Koordinate des Schwerpunktes:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+y_S 
+&amp;= \frac{1}{A} \int_{x=1}^{x=5} \left( \int_{y=x^2-4x-1}^{y=2x-6} y \, dy \right) \, dx = \\
+&amp;= \frac{3}{32} \int_{x=1}^{x=5} \left[ \frac{1}{2}y^2 \right]_{y=x^2-4x-1}^{y=2x-6} \, dx = \\
+&amp;= \frac{3}{32} \int_{x=1}^{x=5} -\frac{1}{2} x^4 + 4x^3 - 5x^2 - 16x + \frac{35}{2} \, dx = \\
+&amp;= \frac{3}{32} \left[-\frac{1}{10}x^5 + x^4 - \frac{5}{3}x^3-8x^2+\frac{35}{2}x \right]_{x=1}^{x=5} = \\
+&amp;= \frac{3}{32} \cdot \left( -\frac{256}{15}\right) = -\frac{8}{5} = -1.6.
+\end{align*}\]</div>
+</div>
+</details></div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./chapter09"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="chapter09_sec04.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">9.4 Anwendung: Schwerpunktberechnung</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../part10.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Doppelintegral in Polarkoordinaten und Dreifachintegral</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Simone Gramsch
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+<div class="extra_footer">
+  <div>
+<a href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img class="license" alt="Creative Commons License" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a> This book is licensed under a <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons BY-NC-SA 4.0 License</a>.
+</div>
+
+</div>
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

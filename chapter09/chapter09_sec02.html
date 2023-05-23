@@ -1,0 +1,739 @@
+
+
+<!DOCTYPE html>
+
+
+<html >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>9.2 Berechnung von Doppelintegralen in kartesischen Koordinaten &#8212; Mathematik 2 Maschinenbau</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/exercise.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/myadmonitions.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/jsxgraph.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/plotly-2.20.0.min.js"></script>
+    <script src="../_static/jsxgraphcore.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'chapter09/chapter09_sec02';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="9.3 Anwendung: Flächenberechnung" href="chapter09_sec03.html" />
+    <link rel="prev" title="9.1 Idee von Doppelintegralen" href="chapter09_sec01.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="None"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    <p class="title logo__title">Mathematik 2 Maschinenbau</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Willkommen zur Materialsammlung Mathematik 2
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Part 1. Integrale</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter01/chapter01_sec00.html">1. Wiederholung Integral</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter01/chapter01_sec01.html">1.1 Stammfunktion und bestimmtes Integral</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter01/chapter01_sec02.html">1.2 Eigenschaften von Integralen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter01/chapter01_sec03.html">1.3 Partielle Integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter01/chapter01_sec04.html">1.4 Integration durch Substitution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter01/chapter01_sec05.html">Übungen</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter02/chapter02_sec00.html">2. Anwendungen Integral</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter02/chapter02_sec01.html">2.1 Integrieren ist Mitteln</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter02/chapter02_sec02.html">2.2 Fläche zwischen zwei Graphen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter02/chapter02_sec03.html">2.3 Bogenlänge</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter02/chapter02_sec04.html">2.4 Volumen von Rotationskörpern</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter02/chapter02_sec05.html">Übungen</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Part 2. Funktionenreihen</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter03/chapter03_sec00.html">3. Reihen und Potenzreihen</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec01.html">3.1 Reihen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec02.html">3.2 Konvergenzkriterien für Reihen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec03.html">3.3 Potenzreihen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec04.html">3.4 Konvergenz von Potenzreihen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec05.html">Übungen</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter04/chapter04_sec00.html">4. Taylorreihen</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter04/chapter04_sec01.html">4.1 Berechnung Taylorreihe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter04/chapter04_sec02.html">4.2 Restglied von Taylorreihen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter04/chapter04_sec03.html">4.3 Wichtige Potenzreihen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter04/chapter04_sec04.html">4.4 Rechnen mit Potenzreihen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter04/chapter04_sec05.html">Übungen</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter05/chapter05_sec00.html">5. Fourierreihen</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter05/chapter05_sec01.html">5.1 Periodische Funktionen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter05/chapter05_sec02.html">5.2 Fourierreihen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter05/chapter05_sec03.html">5.3 Beispiele für Fourierreihen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter05/chapter05_sec04.html">5.4 Rechenregeln Fourierreihen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter05/chapter05_sec05.html">Übungen</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Part 3. Mehrdimensionale Analysis</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter06/chapter06_sec00.html">6. Funktionen von mehreren Variablen und partielle Ableitungen</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter06/chapter06_sec01.html">6.1 Definition und Visualisierung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter06/chapter06_sec02.html">6.2 Stetigkeit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter06/chapter06_sec03.html">6.3 Partielle Ableitungen und Gradient</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter06/chapter06_sec04.html">6.4 Höhere partielle Ableitungen und Hesse-Matrix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter06/chapter06_sec05.html">Übungen</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter07/chapter07_sec00.html">7 Richtungsableitungen und vektorwertige Funktionen</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter07/chapter07_sec01.html">7.1 Gradient und Richtungsableitung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter07/chapter07_sec02.html">7.2 Vektorwertige Funktionen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter07/chapter07_sec03.html">7.3 Jacobi-Matrix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter07/chapter07_sec04.html">7.4 Mehrdimensionale Kettenregel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter07/chapter07_sec05.html">Übungen</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter08/chapter08_sec00.html">8. Linearisierung und Extremwerte</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter08/chapter08_sec01.html">8.1 Tangentenfunktionen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter08/chapter08_sec02.html">8.2 Totales Differential</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter08/chapter08_sec03.html">8.3 Extremwerte</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter08/chapter08_sec04.html">8.4 Extremwertprobleme mit Nebenbedingung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter08/chapter08_sec05.html">Übungen</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="chapter09_sec00.html">9. Doppelintegral</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="chapter09_sec01.html">9.1 Idee von Doppelintegralen</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">9.2 Berechnung von Doppelintegralen in kartesischen Koordinaten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter09_sec03.html">9.3 Anwendung: Flächenberechnung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter09_sec04.html">9.4 Anwendung: Schwerpunktberechnung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter09_sec05.html">Übungen</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../part10.html">Dreifachintegral</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Part 4. Differentialgleichungen</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../part11.html">Grundbegriffe und separable DGL</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../part11_01.html">Grundlegende Begriffe von Differentialgleichungen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../part11_02.html">Lösungen von Differentialgleichungen</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../part12.html">DGL (Teil 2)</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+<a href="https://github.com/gramschs/book_mathe02" target="_blank"
+   class="btn btn-sm btn-source-repository-button"
+   title="Source repository"
+   data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/chapter09/chapter09_sec02.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>9.2 Berechnung von Doppelintegralen in kartesischen Koordinaten</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lernziele">Lernziele</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#doppelintegral-in-kartesischen-koordinaten-berechnen">Doppelintegral in kartesischen Koordinaten berechnen</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#beispiel-a-ist-ein-rechteck">Beispiel: A ist ein Rechteck</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#beispiel-a-ist-kein-rechteck">Beispiel: A ist kein Rechteck</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="berechnung-von-doppelintegralen-in-kartesischen-koordinaten">
+<h1>9.2 Berechnung von Doppelintegralen in kartesischen Koordinaten<a class="headerlink" href="#berechnung-von-doppelintegralen-in-kartesischen-koordinaten" title="Permalink to this headline">#</a></h1>
+<p>Die Grenzwertbildung zur Berechnung eines Integrals ist mühsam. In vielen Fällen
+kann die Berechnung des Doppelintegrals durch eine Berechnung von zwei einzelnen
+Integralen ersetzt werden. Dabei kommt es darauf an, welches Koordinatensystem
+verwendet wird. In diesem Kapitel geht es um die Berechnung des Doppelintegrals
+in kartesischen Koordinaten.</p>
+<section id="lernziele">
+<h2>Lernziele<a class="headerlink" href="#lernziele" title="Permalink to this headline">#</a></h2>
+<div class="important admonition">
+<p class="admonition-title">Lernziele</p>
+<p>Sie können ein <strong>Doppelintegral in kartesischen Koordinaten</strong> berechnen, indem Sie zuerst die <strong>innere Integration</strong> und dann die <strong>äußere Integration</strong> durchführen:</p>
+<div class="math notranslate nohighlight">
+\[\iint_{A}f(x,y)\, dA = \int_{x=a}^{x=b} \left( \int_{y=f_u(x)}^{y=f_o(x)} f(x,y)\, dy\right)dx.\]</div>
+</div>
+</section>
+<section id="doppelintegral-in-kartesischen-koordinaten-berechnen">
+<h2>Doppelintegral in kartesischen Koordinaten berechnen<a class="headerlink" href="#doppelintegral-in-kartesischen-koordinaten-berechnen" title="Permalink to this headline">#</a></h2>
+<p>Wie wird nun ein Doppelintegral konkret ausgerechnet? Glücklicherweise können
+wir die Berechnung des Doppelintegrals durch zwei “normale” Integrationen
+ersetzen. Die Voraussetzung dafür ist, dass wir ein <a class="reference external" href="https://de.wikipedia.org/wiki/Kartesisches_Koordinatensystem">kartesisches
+Koordinatensystem</a>
+betrachten.</p>
+<p>Zuerst brauchen wir eine Beschreibung der Fläche <span class="math notranslate nohighlight">\(A\)</span>, also des Bodens. Wenn man
+das Koordinatensystem von oben betrachtet, kann der Rand von <span class="math notranslate nohighlight">\(A\)</span> durch zwei
+Funktionen beschrieben werden. Im einfachsten Fall besteht der obere und der
+untere Rand von <span class="math notranslate nohighlight">\(A\)</span> nur aus Linien. Dann lautet die obere Funktion einfach nur
+<span class="math notranslate nohighlight">\(y=y_{\max}\)</span> und die untere Funktion <span class="math notranslate nohighlight">\(y=y_{\min}\)</span>. Meist brauchen wir aber
+Funktionen zur Beschreibung des Randes.</p>
+<p><strong>Schritt 1: Funktionen für den Rand von <span class="math notranslate nohighlight">\(A\)</span> finden</strong></p>
+<p>Wir nennen die obere Funktion <span class="math notranslate nohighlight">\(f_o(x)\)</span> und die untere Funktion <span class="math notranslate nohighlight">\(f_u(x)\)</span>. Nun
+können wir das Doppelintegral <span class="math notranslate nohighlight">\(\iint_{A}f(x,y)\, dA\)</span> durch zwei Integrale
+ersetzen:</p>
+<div class="math notranslate nohighlight">
+\[\iint_{A}f(x,y)\, dA = \int_{x=a}^{x=b} \int_{y=f_u(x)}^{y=f_o(x)} f(x,y)\, dy
+\, dx.\]</div>
+<p><strong>Schritt 2: innere Integration (nach y)</strong></p>
+<p>Zuerst behandeln wir die Variable <span class="math notranslate nohighlight">\(x\)</span> als eine Konstante. Dann wird die Funktion
+<span class="math notranslate nohighlight">\(f(x,y)\)</span> nach <span class="math notranslate nohighlight">\(y\)</span> integriert. In die Stammfunktion setzt man dann als obere
+Grenze die obere Funktion <span class="math notranslate nohighlight">\(f_o(x)\)</span> ein und als untere Grenze die untere Funktion
+<span class="math notranslate nohighlight">\(f_u(x)\)</span>. Dadurch ist das Ergebnis der Integration wieder eine Funktion.</p>
+<p><strong>Schritt 3: äußere Integration (nach x)</strong></p>
+<p>Die in Schritt 2 entstandene Funktion wird wieder integriert, aber diesmal nach
+<span class="math notranslate nohighlight">\(x\)</span>. Diesmal setzen wir in die Stammfunktion die obere Grenze <span class="math notranslate nohighlight">\(b\)</span> und die untere
+Grenze <span class="math notranslate nohighlight">\(a\)</span> ein, so dass diesmal wirklich eine Zahl herauskommt.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Video zu “Doppenintegral, kein Rechteck” von Mathematische Methoden<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ZesBkRCLLPY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+</details></section>
+<section id="beispiel-a-ist-ein-rechteck">
+<h2>Beispiel: A ist ein Rechteck<a class="headerlink" href="#beispiel-a-ist-ein-rechteck" title="Permalink to this headline">#</a></h2>
+<p>Als erstes Beispiel berechnen wir das Doppelintegral der Funktion <span class="math notranslate nohighlight">\(f(x,y) = xy\)</span>
+über dem Rechteck <span class="math notranslate nohighlight">\(A = [0, 1] \times [1, 2]\)</span>. Die Grenzen der Integration für <span class="math notranslate nohighlight">\(x\)</span>
+sind <span class="math notranslate nohighlight">\(0\)</span> und <span class="math notranslate nohighlight">\(1\)</span>.</p>
+<p><strong>Schritt 1: obere und untere Funktion finden</strong></p>
+<p>Das Rechteck wird oben durch die Konstante 2 berandet und unten durch die
+Konstante 1. Also sind die obere und die untere Funktion</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+f_o(x) &amp;= 2 \\
+f_u(x) &amp;= 1 \\
+\end{align*}\]</div>
+<figure class="align-default" id="part09-plot-example01">
+<a class="reference internal image-reference" href="../_images/part09_plot_example01.svg"><img alt="../_images/part09_plot_example01.svg" src="../_images/part09_plot_example01.svg" width="75%" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 20 </span><span class="caption-text">Draufsicht auf das Integrationsgebiet <span class="math notranslate nohighlight">\(A =  [0, 1] \times [1, 2]\)</span></span><a class="headerlink" href="#part09-plot-example01" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Das Doppelintegral lautet also:</p>
+<div class="math notranslate nohighlight">
+\[\iint_{A}f(x,y)\, dA = \int_{x=0}^{x=1} \left( \int_{y=1}^{y=2} xy \, dy
+\right) \, dx.\]</div>
+<p><strong>Schritt 2: innere Integration (nach y)</strong></p>
+<p>Das innere Integral <span class="math notranslate nohighlight">\(I(x)\)</span> wird berechnet, indem nach <span class="math notranslate nohighlight">\(y\)</span> integriert wird:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+I(x) &amp;= \int_{y=1}^{y=2} xy \, dy = \\
+     &amp;= \left[ x \cdot \frac{1}{2}y^2 \right]_{y=1}^{y=2} = \\
+     &amp;= x\cdot \frac{1}{2}2^2 - x\cdot \frac{1}{2}1^2 = \\
+     &amp;= \frac{3}{2}x.\\
+\end{align*}\]</div>
+<p><strong>Schritt 3: äußere Integration (nach x)</strong></p>
+<p>Das innere Integral <span class="math notranslate nohighlight">\(I(x) = \frac{3}{2}x\)</span> wird nun in das äußere Integral
+eingesetzt und nach <span class="math notranslate nohighlight">\(x\)</span> integriert:</p>
+<div class="math notranslate nohighlight">
+\[\int_{x=0}^{x=1} \frac{3}{2}x \, dx = \left[ \frac{3}{4}x^2\right] =
+\frac{3}{4}.\]</div>
+<p>Damit lautet das Doppelintegral von <span class="math notranslate nohighlight">\(f\)</span> über <span class="math notranslate nohighlight">\(A\)</span> mit <span class="math notranslate nohighlight">\(f(x,y)=xy\)</span> und <span class="math notranslate nohighlight">\(A= [0, 1]
+\times [1, 2]\)</span></p>
+<div class="math notranslate nohighlight">
+\[\iint_{A}f(x,y) \, dA = \frac{3}{4}.\]</div>
+<p>In den folgenden beiden Videos finden Sie zwei weitere Beispiele für
+Doppelintegrale auf einem Rechteckgebiet.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Video zu “Beispiel Doppelintegral” von Mathematische Methoden<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/l_Fg_tDqx2E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Video zu “Beispiel Doppelintegral” von Mathematische Methoden<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/7HRXCYZSYnI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+</details></section>
+<section id="beispiel-a-ist-kein-rechteck">
+<h2>Beispiel: A ist kein Rechteck<a class="headerlink" href="#beispiel-a-ist-kein-rechteck" title="Permalink to this headline">#</a></h2>
+<p>Als nächstes betrachten wir ein Beispiel, bei dem das Integrationsgebiet kein
+Rechteck ist. Die Funktion <span class="math notranslate nohighlight">\(f(x,y) = x^2\cdot(y+1)\)</span> soll auf dem
+Definitionsgebiet <span class="math notranslate nohighlight">\(A\)</span> integriert werden, dass durch die Gerade <span class="math notranslate nohighlight">\(y=-x+1\)</span> und die
+Parabel <span class="math notranslate nohighlight">\(y=x^2-5\)</span> begrenzt wird.</p>
+<p><strong>Schritt 1: obere und untere Funktion finden</strong></p>
+<p>Als erstes wird eine Skizze der beiden Funktionen <span class="math notranslate nohighlight">\(y=-x+1\)</span> und <span class="math notranslate nohighlight">\(y=x^2-5\)</span>
+angefertigt. Die Skizze zeigt, dass die obere Funktion</p>
+<div class="math notranslate nohighlight">
+\[f_o(x) = -x + 1\]</div>
+<p>ist und die untere Funktion</p>
+<div class="math notranslate nohighlight">
+\[f_u(x) = x^2 - 5\]</div>
+<p>ist. Allerdings muss noch das Intervall auf der x-Achse gefunden werden. Dazu
+wird der Lösungsansatz</p>
+<div class="math notranslate nohighlight">
+\[f_o(x) = f_u(x)\]</div>
+<p>angesetzt und die entstehende Gleichung <span class="math notranslate nohighlight">\(-x + 1 = x^2 -5\)</span> gelöst. Das Ergebnis
+sind die beiden Stellen <span class="math notranslate nohighlight">\(x_1 = -3\)</span> und <span class="math notranslate nohighlight">\(x_2 = 2\)</span>.</p>
+<figure class="align-default" id="part09-plot-example02">
+<a class="reference internal image-reference" href="../_images/part09_plot_example02.svg"><img alt="../_images/part09_plot_example02.svg" src="../_images/part09_plot_example02.svg" width="75%" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 21 </span><span class="caption-text">Draufsicht auf das Integrationsgebiet <span class="math notranslate nohighlight">\(A\)</span>, das durch die Gerade <span class="math notranslate nohighlight">\(f_o(x)=-x+1\)</span> und die Parabel <span class="math notranslate nohighlight">\(f_u(x)=x^2-5\)</span> umrandet wird.</span><a class="headerlink" href="#part09-plot-example02" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Damit kann das Doppelintegral in zwei Integrale umgeschrieben werden:</p>
+<div class="math notranslate nohighlight">
+\[\iint_{A}f(x,y)\, dA = \int_{x=-3}^{x=2} \left(\int_{y=x^2-5}^{y=-x+1}
+x^2\cdot(y+1) \; dy\right)dx.\]</div>
+<p><strong>Schritt 2: innere Integration (nach y)</strong></p>
+<p>Das innere Integral <span class="math notranslate nohighlight">\(I(x)\)</span> wird berechnet, indem nach <span class="math notranslate nohighlight">\(y\)</span> integriert wird:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+I(x) &amp;= \int_{y=x^2-5}^{y=-x+1} x^2\cdot(y+1) \, dy = \\
+     &amp;= \left[ x^2 \cdot \left(\frac{1}{2}y^2 +1\right)\right]_{y=x^2-5}^{y=-x+1} = \\
+     &amp;= x^2 \left(\frac{1}{2}(-x+1)^2+(-x+1) - \frac{1}{2}(x^2-5)^2-(x^2-5) \right) = \\
+     &amp;= -\frac{1}{2}x^6 + \frac{9}{2}x^4-2x^3-6x^2.
+\end{align*}\]</div>
+<p><strong>Schritt 3: äußere Integration (nach x)</strong></p>
+<p>Das innere Integral <span class="math notranslate nohighlight">\(I(x) = -\frac{1}{2}x^6 + \frac{9}{2}x^4-2x^3-6x^2\)</span> wird nun
+in das äußere Integral eingesetzt und nach <span class="math notranslate nohighlight">\(x\)</span> integriert:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+\int_{x=-3}^{x=2} I(x)\, dx &amp;= \int_{x=-3}^{x=2} -\frac{1}{2}x^6 + \frac{9}{2}x^4-2x^3-6x^2 =\\
+&amp;= \left[-\frac{1}{14}x^7 + \frac{9}{10}x^5 - \frac{1}{2}x^4 - 2x^3\right]_{x=-3}^{x=2} = \\
+&amp;= \frac{625}{14} \approx 44.643
+\end{align*}\]</div>
+<p>Damit gilt insgesamt</p>
+<div class="math notranslate nohighlight">
+\[\iint_{A}f(x,y)\, dA = \int_{x=-3}^{x=2} \left(\int_{y=x^2-5}^{y=-x+1}
+x^2\cdot(y+1) \; dy\right)dx = \frac{625}{14} \approx 44.643.\]</div>
+<p>Das folgende Video zeigt ein weiteres Beispiel.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Video zu “Beispiel Doppelintegral, kein Rechteck” von Mathematische Methoden<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/7HRXCYZSYnI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+</details></section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./chapter09"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="chapter09_sec01.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">9.1 Idee von Doppelintegralen</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="chapter09_sec03.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">9.3 Anwendung: Flächenberechnung</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lernziele">Lernziele</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#doppelintegral-in-kartesischen-koordinaten-berechnen">Doppelintegral in kartesischen Koordinaten berechnen</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#beispiel-a-ist-ein-rechteck">Beispiel: A ist ein Rechteck</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#beispiel-a-ist-kein-rechteck">Beispiel: A ist kein Rechteck</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Simone Gramsch
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+<div class="extra_footer">
+  <div>
+<a href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img class="license" alt="Creative Commons License" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a> This book is licensed under a <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons BY-NC-SA 4.0 License</a>.
+</div>
+
+</div>
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
