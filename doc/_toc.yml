@@ -73,8 +73,13 @@ parts:
     - file: chapter09/chapter09_sec03.md    
     - file: chapter09/chapter09_sec04.md
     - file: chapter09/chapter09_sec05.md  
-  - file: part10
-    title: Dreifachintegral
+  - file: chapter10/chapter10_sec00.md
+    sections: 
+    - file: chapter10/chapter10_sec01.md
+    - file: chapter10/chapter10_sec02.md
+    - file: chapter10/chapter10_sec03.md    
+    - file: chapter10/chapter10_sec04.md
+    - file: chapter10/chapter10_sec05.md  
 - caption: Part 4. Differentialgleichungen
   chapters:
   - file: part11

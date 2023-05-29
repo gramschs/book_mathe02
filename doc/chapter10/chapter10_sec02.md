@@ -1,9 +1,10 @@
-# Doppelintegral in Polarkoordinaten und Dreifachintegral
+# 7.2 Doppelintegral in Polarkoordinaten
 
 ```{admonition} Warnung
 :class: warning
 Achtung, dieser Abschnitt des Vorlesungsskriptes wird gerade überarbeitet!!!
 ```
+
 
 Im letzten Kapitel haben wir nicht thematisiert, dass das Doppelintegral in kartesischen Koordinaten berechnet wurde. In diesem Kapitel verwenden wir Polarkoordinaten und betrachten zusätzlich Dreifachintegrale.
 
@@ -30,27 +31,7 @@ $$x_S = \frac{1}{V}\iiint_{V}x\, dV, \qquad y_S = \frac{1}{V}\iiint_{V}y\, dV \q
 ```
 
 
-## Polarkoordinaten
 
-Die Umrechnung von Polarkoordinaten in kartesische Koordinaten erfolgt mit den Formeln:
-\begin{align*}
-x &= r\cdot \cos(\varphi) \\ 
-y &= r\cdot \sin(\varphi)
-\end{align*}
-
-Zur Erinnerung folgt hier eine Einführung in Polarkoordinaten:
-
-```{admonition} Video
-:class: seealso
-https://www.youtube.com/embed/l8ZF4m0fPxM
-```
-
-In dem folgenden Video wird gezeigt, wie eine Funktion mit Variablen in kartesischen Koordinaten in eine Funktion mit Variablen in Polarkoordinaten umgerechnet werden kann:
-
-```{admonition} Video
-:class: seealso
-https://www.youtube.com/embed/MCRDcJKeR20
-```
 
 ## Doppelintegral in Polarkoordinaten
 
