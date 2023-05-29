@@ -1,4 +1,4 @@
-# 7 Richtungsableitungen und vektorwertige Funktionen
+# 7. Richtungsableitungen und vektorwertige Funktionen
 
 Themen:
 
