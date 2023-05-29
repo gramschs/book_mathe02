@@ -417,7 +417,6 @@ document.write(`
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lernziele">Lernziele</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Doppelintegral in Polarkoordinaten</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dreifachintegral">Dreifachintegral</a></li>
 </ul>
             </nav>
         </div>
@@ -435,72 +434,58 @@ document.write(`
 <p class="admonition-title">Warnung</p>
 <p>Achtung, dieser Abschnitt des Vorlesungsskriptes wird gerade überarbeitet!!!</p>
 </div>
-<p>Im letzten Kapitel haben wir nicht thematisiert, dass das Doppelintegral in kartesischen Koordinaten berechnet wurde. In diesem Kapitel verwenden wir Polarkoordinaten und betrachten zusätzlich Dreifachintegrale.</p>
+<p>Im letzten Kapitel haben wir Punkte durch kartesische Koordinaten und durch
+Polarkoordinaten beschrieben. In diesem Kapitel wird das Flächenintegral in zwei
+Integrale mit Polarkoordinaten umgeschrieben und dadurch berechnet.</p>
 <section id="lernziele">
 <h2>Lernziele<a class="headerlink" href="#lernziele" title="Permalink to this headline">#</a></h2>
-<div class="tip admonition">
+<div class="important admonition">
 <p class="admonition-title">Lernziele</p>
-<ul class="simple">
-<li><p>Sie können <strong>Polarkoordinaten</strong> in <strong>kartesische Koordinaten</strong> umrechnen.</p></li>
-<li><p>Sie können ein Doppelintegral in kartesischen Koordinaten in ein Doppelintegral in Polarkoordinaten umrechnen, d.h.</p></li>
-</ul>
+<p>Sie können ein Doppelintegral in kartesischen Koordinaten in ein Doppelintegral in Polarkoordinaten umrechnen, d.h.</p>
 <div class="math notranslate nohighlight">
-\[\iint_{A}f(x,y)\, dA = \int_{\varphi=\varphi_1}^{\varphi_2} \int_{r=r_i(\varphi)}^{r_a(\varphi)}f(r\cos(\varphi), r\sin(\varphi)) \cdot r\, dr\, d\varphi.\]</div>
+\[\iint_{A}f(x,y)\, dA = \int_{\varphi=\alpha}^{\varphi=\beta}
+\left( \int_{r=r_\text{innen}(\varphi)}^{r=r_\text{außen}(\varphi)}f(r, \varphi) \cdot r\, dr \right) \, d\varphi.\]</div>
 <p>Die Integration erfolgt dabei in zwei Schritten, zuerst kommt die innere Integration über <span class="math notranslate nohighlight">\(r\)</span>, danach die äußere Integration über <span class="math notranslate nohighlight">\(\varphi\)</span>.</p>
-<ul class="simple">
-<li><p>Sie können ein <strong>Dreifachintegral</strong> (in kartesischen Koordinaten) berechnen.</p></li>
-<li><p>Sie können mit einem Dreifachintegral das Volumen <span class="math notranslate nohighlight">\(V\)</span> eines Körpers berechnen</p></li>
-</ul>
-<div class="math notranslate nohighlight">
-\[V=\iiint_{V}1\,dV.\]</div>
-<ul class="simple">
-<li><p>Sie können mit drei Dreifachintegralen den Schwerpunkt <span class="math notranslate nohighlight">\(S(x_S,y_S,z_S)\)</span> eines Körpers berechnen:</p></li>
-</ul>
-<div class="math notranslate nohighlight">
-\[x_S = \frac{1}{V}\iiint_{V}x\, dV, \qquad y_S = \frac{1}{V}\iiint_{V}y\, dV \qquad \text{und} \quad z_S = \frac{1}{V}\iiint_{V}z\, dV.\]</div>
 </div>
 </section>
 <section id="id1">
 <h2>Doppelintegral in Polarkoordinaten<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h2>
-<p>Um ein Doppelintegral in Polarkoordinaten zu berechnen, muss das Flächenelement <span class="math notranslate nohighlight">\(dA\)</span> umgerechnet werden:</p>
+<p>Um ein Doppelintegral in kartesischen Koordinaten zu berechnen, werden als
+versucht, die Ränder des Integrationsgebietes mit dem folgenden Schema zu
+beschreiben. Für x wird ein Intervall <span class="math notranslate nohighlight">\([a,b]\)</span> genommen und für y wird der obere
+Rand des Integrationsgebietes durch eine obere Funktion <span class="math notranslate nohighlight">\(f_{\text{oben}}(x)\)</span> und
+der untere Rand durch eine untere Funktion <span class="math notranslate nohighlight">\(f_{\text{unten}}(x)\)</span> beschrieben.
+Soll das Doppelintegral in Polarkoordinaten ausgedrückt werden, wird für den
+Winkel <span class="math notranslate nohighlight">\(\varphi\)</span> ein Intervall von Winkeln <span class="math notranslate nohighlight">\([\alpha, \beta]\)</span> genommen und für
+<span class="math notranslate nohighlight">\(r\)</span> wird der äußere Rand des Integrationsgebietes durch die äußere Funktion
+<span class="math notranslate nohighlight">\(f_{\text{außen}}(\varphi)\)</span> und der innere Rand durch eine innere Funktion
+<span class="math notranslate nohighlight">\(f_{\text{innen}}(\varphi)\)</span> beschrieben. Es gibt nur einen Unterschied. Bei
+kartesischen Koordinaten wird dann das Flächenelement <span class="math notranslate nohighlight">\(dA\)</span> zum Produkt aus den
+Linienelementen <span class="math notranslate nohighlight">\(dy\)</span> und <span class="math notranslate nohighlight">\(dx\)</span>, also</p>
+<div class="math notranslate nohighlight">
+\[dA = dy \; dx.\]</div>
+<p>Bei Polarkoordinaten jedoch muss das Flächenelement <span class="math notranslate nohighlight">\(dA\)</span> noch mit <span class="math notranslate nohighlight">\(r\)</span>
+multipliziert werden, also</p>
 <div class="math notranslate nohighlight">
 \[dA = r \, dr \, d\varphi.\]</div>
-<p>In dem folgenden Video wird sehr ausführlich der Flächeninhalt eines Halbkreises sowohl mit einem Doppelintegral in kartesischen Koordinaten als auch einem Doppelintegral in Polarkoordinaten erklärt. Nicht verwirren lassen, in dem Video wird das Doppelintegral Bereichsintegral genannt.</p>
-<div class="seealso admonition">
-<p class="admonition-title">Video</p>
-<p><a class="reference external" href="https://www.youtube.com/embed/CghdXlwr5aY">https://www.youtube.com/embed/CghdXlwr5aY</a></p>
-</div>
-</section>
-<section id="dreifachintegral">
-<h2>Dreifachintegral<a class="headerlink" href="#dreifachintegral" title="Permalink to this headline">#</a></h2>
-<p>Ein Dreifachintegral wird durch drei Integrationen berechnet:</p>
+<p>Damit erhalten wir das Doppelintegral in Polarkoordinaten als</p>
 <div class="math notranslate nohighlight">
-\[\iiint_{V}f(x,y,z)\, dV = \int_{x=a}^{x=b} \int_{y=g_{u}(x)}^{y=g_{o}(x)} \int_{z = F_{u}(x,y)}^{z = F_{o}(x,y)} f(x,y,z)\, dz \, dy \, dx.\]</div>
-<p>Dabei bedeuten die Bezeichnungen:</p>
-<ul class="simple">
-<li><p><span class="math notranslate nohighlight">\(F_{o}(x,y)\)</span>: obere Fläche</p></li>
-<li><p><span class="math notranslate nohighlight">\(F_{u}(x,y)\)</span>: untere Fläche</p></li>
-<li><p><span class="math notranslate nohighlight">\(g_{o}(x)\)</span>: obere Grenzkurve</p></li>
-<li><p><span class="math notranslate nohighlight">\(g_{u}(x)\)</span>: untere Grenzkurve</p></li>
-</ul>
-<p>wie man auch der folgenden Abbildung entnehmen kann:</p>
-<figure class="align-default" id="part10-skizze-dreifachintegral">
-<a class="reference internal image-reference" href="../_images/part10_skizze_dreifachintegral.svg"><img alt="../_images/part10_skizze_dreifachintegral.svg" src="../_images/part10_skizze_dreifachintegral.svg" width="600px" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 28 </span><span class="caption-text">Skizze Dreifachintegral</span><a class="headerlink" href="#part10-skizze-dreifachintegral" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
-<p>In dem folgenden Video wird der Unterschied Doppelintegral zu Dreifachintegral erklärt.</p>
-<div class="seealso admonition">
-<p class="admonition-title">Video</p>
-<p><a class="reference external" href="https://www.youtube.com/embed/Ec6xuobv8Mk">https://www.youtube.com/embed/Ec6xuobv8Mk</a></p>
+\[\iint_{A}f(x,y)\, dA = \int_{\varphi=\alpha}^{\varphi=\beta}
+\left( \int_{r=r_\text{innen}(\varphi)}^{r=r_\text{außen}(\varphi)}f(r, \varphi) \cdot r\, dr \right) \, d\varphi.\]</div>
+<p>In dem folgenden Video wird sehr ausführlich der Flächeninhalt eines Halbkreises
+sowohl mit einem Doppelintegral in kartesischen Koordinaten als auch einem
+Doppelintegral in Polarkoordinaten erklärt. Nicht verwirren lassen, in dem Video
+wird das Doppelintegral Bereichsintegral genannt.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Video zu “Bereichsintegrale / Doppelintegrale | Polarkoordinaten” von LernKompass - Mathe einfach erklärt<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/CghdXlwr5aY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </div>
-<p>Hier wird ein Dreifachintegral ausgerechnet, indem die drei Integrationen nacheinander durchgeführt werden:</p>
-<div class="seealso admonition">
-<p class="admonition-title">Video</p>
-<p><a class="reference external" href="https://www.youtube.com/embed/HZRAUqbVKeQ">https://www.youtube.com/embed/HZRAUqbVKeQ</a></p>
-</div>
-</section>
+</details></section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -572,7 +557,6 @@ document.write(`
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lernziele">Lernziele</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Doppelintegral in Polarkoordinaten</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dreifachintegral">Dreifachintegral</a></li>
 </ul>
   </nav></div>
 
