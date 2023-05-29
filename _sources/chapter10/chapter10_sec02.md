@@ -1,10 +1,5 @@
 # 7.2 Doppelintegral in Polarkoordinaten
 
-```{admonition} Warnung
-:class: warning
-Achtung, dieser Abschnitt des Vorlesungsskriptes wird gerade überarbeitet!!!
-```
-
 Im letzten Kapitel haben wir Punkte durch kartesische Koordinaten und durch
 Polarkoordinaten beschrieben. In diesem Kapitel wird das Flächenintegral in zwei
 Integrale mit Polarkoordinaten umgeschrieben und dadurch berechnet.
