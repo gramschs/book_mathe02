@@ -66,6 +66,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'chapter10/chapter10_sec05';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -417,10 +419,63 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="ubungen">
 <h1>Übungen<a class="headerlink" href="#ubungen" title="Permalink to this headline">#</a></h1>
-<div class="warning admonition">
-<p class="admonition-title">Warnung</p>
-<p>Achtung, dieser Abschnitt des Vorlesungsskriptes wird gerade überarbeitet!!!</p>
+<div class="miniexercise admonition">
+<p class="admonition-title">Übung 10.1</p>
+<p>Berechnen Sie den Schwerpunkt des Dreiecks mit den Ecken <span class="math notranslate nohighlight">\(P_1(2,5), \, P_2(6,2)\)</span>
+und <span class="math notranslate nohighlight">\(P_3(5,7)\)</span>. Machen Sie sich dazu eine Skizze des Integrationsgebietes.</p>
 </div>
+<div class="minisolution toggle admonition">
+<p class="admonition-title">Lösung</p>
+<p>Fläche: <span class="math notranslate nohighlight">\(A=\frac{17}{2}\)</span>, Schwerpunkt: <span class="math notranslate nohighlight">\(S(\frac{13}{3}, \frac{14}{3})\)</span></p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Lösungsweg<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><img alt="solution10_01a" src="../_images/solution10_01a.png" />
+<img alt="solution10_01b" src="../_images/solution10_01b.png" />
+<img alt="solution10_01c" src="../_images/solution10_01c.png" /></p>
+</div>
+</details></div>
+<div class="miniexercise admonition">
+<p class="admonition-title">Übung 10.2</p>
+<p>Berechnen Sie den Schwerpunkt eines Halbkreises mit Radius <span class="math notranslate nohighlight">\(R=5\)</span>. Machen Sie
+sich dazu eine Skizze des Integrationsgebietes. Verwenden Sie Polarkoordinaten.</p>
+</div>
+<div class="minisolution toggle admonition">
+<p class="admonition-title">Lösung</p>
+<p>Schwerpunkt: <span class="math notranslate nohighlight">\(S(0, \frac{20}{3\pi})\)</span></p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Lösungsweg<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><img alt="solution10_02a" src="../_images/solution10_02a.png" /></p>
+</div>
+</details></div>
+<div class="miniexercise admonition">
+<p class="admonition-title">Übung 10.3</p>
+<p>Gegeben ist ein Prisma mit einer Länge von 2 cm (z-Richtung). Die
+dreieckige Querschnittsfläche sei gegeben durch die Punkte <span class="math notranslate nohighlight">\((0,0), (1,0)\)</span> und
+<span class="math notranslate nohighlight">\((0,1)\)</span> mit Einheiten in cm. Berechnen Sie den Schwerpunkt des Prismas.</p>
+</div>
+<div class="minisolution toggle admonition">
+<p class="admonition-title">Lösung</p>
+<p>Volumen: <span class="math notranslate nohighlight">\(V= 1 \text{cm}^3\)</span>, Schwerpunkt: <span class="math notranslate nohighlight">\(S(\frac{1}{3}, \frac{1}{3}, 1)\)</span> (in cm)</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Lösungsweg<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><img alt="solution10_03a" src="../_images/solution10_03a.png" /></p>
+</div>
+</details></div>
 </section>
 
     <script type="text/x-thebe-config">

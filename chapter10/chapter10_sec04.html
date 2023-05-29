@@ -416,6 +416,9 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lernziele">Lernziele</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#volumen-berechnen">Volumen berechnen</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#berechnung-von-masse">Berechnung von Masse</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#berechnung-des-schwerpunktes">Berechnung des Schwerpunktes</a></li>
 </ul>
             </nav>
         </div>
@@ -429,16 +432,12 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="anwendungen-dreifachintegral">
 <h1>10.4 Anwendungen Dreifachintegral<a class="headerlink" href="#anwendungen-dreifachintegral" title="Permalink to this headline">#</a></h1>
-<div class="warning admonition">
-<p class="admonition-title">Warnung</p>
-<p>Achtung, dieser Abschnitt des Vorlesungsskriptes wird gerade überarbeitet!!!</p>
-</div>
+<p>Nun kommen Anwendungen des Dreifachintegrals.</p>
 <section id="lernziele">
 <h2>Lernziele<a class="headerlink" href="#lernziele" title="Permalink to this headline">#</a></h2>
-<div class="tip admonition">
+<div class="important admonition">
 <p class="admonition-title">Lernziele</p>
 <ul class="simple">
-<li><p>Sie können ein <strong>Dreifachintegral</strong> (in kartesischen Koordinaten) berechnen.</p></li>
 <li><p>Sie können mit einem Dreifachintegral das Volumen <span class="math notranslate nohighlight">\(V\)</span> eines Körpers berechnen</p></li>
 </ul>
 <div class="math notranslate nohighlight">
@@ -450,6 +449,45 @@ document.write(`
 \[x_S = \frac{1}{V}\iiint_{V}x\, dV, \qquad y_S = \frac{1}{V}\iiint_{V}y\, dV \qquad \text{und} \quad z_S = \frac{1}{V}\iiint_{V}z\, dV.\]</div>
 </div>
 </section>
+<section id="volumen-berechnen">
+<h2>Volumen berechnen<a class="headerlink" href="#volumen-berechnen" title="Permalink to this headline">#</a></h2>
+<p>Die Berechnung des Volumens eines dreidimensionalen Körpers ist eine der direktesten Anwendungen des Volumenintegrals. Hierbei ist die Funktion, die integriert wird, einfach die Konstante 1. Das Volumen <span class="math notranslate nohighlight">\(V\)</span> eines Körpers ist dann das Integral über den gesamten Körper, d.h.,</p>
+<div class="math notranslate nohighlight">
+\[V = \iiint_{V} 1 \, dV.\]</div>
+</section>
+<section id="berechnung-von-masse">
+<h2>Berechnung von Masse<a class="headerlink" href="#berechnung-von-masse" title="Permalink to this headline">#</a></h2>
+<p>Die Berechnung der Masse eines Körpers mit bekannter Dichte ist eine weitere
+wichtige Anwendung von Volumenintegralen. Wenn wir die Dichte <span class="math notranslate nohighlight">\(\rho(x, y, z)\)</span>
+des Körpers an jedem Punkt kennen, können wir die Masse <span class="math notranslate nohighlight">\(M\)</span> des Körpers
+berechnen, indem wir die Dichte über das gesamte Volumen des Körpers
+integrieren:</p>
+<div class="math notranslate nohighlight">
+\[M = \iiint_{V} \rho(x, y, z) \, dV.\]</div>
+</section>
+<section id="berechnung-des-schwerpunktes">
+<h2>Berechnung des Schwerpunktes<a class="headerlink" href="#berechnung-des-schwerpunktes" title="Permalink to this headline">#</a></h2>
+<p>Die Berechnung des Schwerpunktes <span class="math notranslate nohighlight">\(S(x_S, y_S, z_S)\)</span> eines dreidimensionalen
+Körpers erfolgt analog zur Berechnung des Schwerpunktes von Flächen, indem das
+Volumenintegral jeweils über die Funktionen <span class="math notranslate nohighlight">\(x\)</span>, <span class="math notranslate nohighlight">\(y\)</span> und <span class="math notranslate nohighlight">\(z\)</span> berechnet wird. Dabei wird vorausgesetzt, dass wir einen homogenen Körper betrachten, dessen Dichte konstant ist.</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+x_s &amp;= \frac{1}{V} \iiint_{V} x \, dV, \\
+y_s &amp;= \frac{1}{V} \iiint_{V} y \, dV, \\
+z_s &amp;= \frac{1}{V} \iiint_{V} z \, dV. \\
+\end{align*}\]</div>
+<p>Das folgende Video geht auf die Bedeutung und Anwendung der Doppel- und
+Dreifachintegrale ein.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Video zu “Mehrdimensionale Integration | Bedeutung und Anwendung” von MathePeter<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/H1Pj4SMVZ8s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+</details></section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -520,6 +558,9 @@ document.write(`
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lernziele">Lernziele</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#volumen-berechnen">Volumen berechnen</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#berechnung-von-masse">Berechnung von Masse</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#berechnung-des-schwerpunktes">Berechnung des Schwerpunktes</a></li>
 </ul>
   </nav></div>
 
