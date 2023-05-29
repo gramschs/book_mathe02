@@ -1,4 +1,4 @@
-# 7.1 Polarkoordinaten
+# 10.1 Polarkoordinaten
 
 Polarkoordinaten bieten eine alternative Möglichkeit, die Position von Punkten
 in der Ebene zu beschreiben. Die häufigste Beschreibung der Position von Punkten
@@ -117,7 +117,7 @@ so hat diese Gleichung innerhalb des Intervalls $[0, 360^{\circ}]$ zwei
 Lösungen, nämlich $30^{\circ}$ und $150^{\circ}$. Aber welcher Winkel ist der
 richtige Winkel? Da die x-Koordinate positiv ist und der Punkt $P(2\sqrt{2},2)$
 im 1. Quadranten liegt, ist der richtige Winkel $\varphi = 30^{\circ}$.
-Überprüfen Sie daher immer durch eine Zeichnung, welches der richtige Winkel
+Überprüfen Sie daher immer durch eine Zeichnung, welches der richtige Winkel ist.
 
 In dem folgenden Video wird gezeigt, wie eine Funktion mit Variablen in
 kartesischen Koordinaten in eine Funktion mit Variablen in Polarkoordinaten
