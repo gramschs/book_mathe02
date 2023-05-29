@@ -101,3 +101,9 @@ nacheinander durchgeführt werden:
 ```{dropdown} Video zu "Mehrdimensionale Integrale: Dreifachintegrale in kartesischen Koordinaten" von Holger Schmidt
 <iframe width="560" height="315" src="https://www.youtube.com/embed/HZRAUqbVKeQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 ```
+
+Ein weiteres Beispiel finden Sie hier.
+
+```{dropdown} Video zu "Übungsblatt 9, Aufgabe A1" von Dr.-Ing. Denis Busch
+<iframe width="560" height="315" src="https://www.youtube.com/embed/mY6Z8TQe2iQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+```
