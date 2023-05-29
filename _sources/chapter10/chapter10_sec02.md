@@ -1,4 +1,4 @@
-# 7.2 Doppelintegral in Polarkoordinaten
+# 10.2 Doppelintegral in Polarkoordinaten
 
 Im letzten Kapitel haben wir Punkte durch kartesische Koordinaten und durch
 Polarkoordinaten beschrieben. In diesem Kapitel wird das Flächenintegral in zwei
