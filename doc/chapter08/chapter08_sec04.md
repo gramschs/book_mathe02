@@ -74,39 +74,39 @@ lösen wollen.
 Schritt 1 und 2 haben wir für das Beispiel mit dem Draht schon durchgeführt.
 Also lösen wir jetzt die Gleichung $2\cdot x + 2 \cdot y = 1$ nach $y$ auf:
 
-$$y = 1 - 2\cdot x$$
+$$y = \frac{1}{2} \left(1 - 2\cdot x\right) = -x + \frac{1}{2}$$
 
 und setzen die nach $y$ aufgelöste Gleichung in die Zielfunktion ein:
 
-$$\tilde{A}(x) = x \cdot (1 - 2\cdot x).$$
+$$\tilde{A}(x) = x \cdot (-x+\frac{1}{2}).$$
 
 Um deutlich zu machen, dass diese neue Funktion nur noch von $x$ abhängt, haben
 wir ihr einen neuen Namen gegeben, nämlich $\tilde{A}$. Jetzt vereinfachen wir
 die Funktion noch, indem wir ausmultiplizieren:
 
-$$\tilde{A}(x) = x \cdot (1 - 2\cdot x) = -2x^2 + x.$$
+$$\tilde{A}(x) = x \cdot (-x+\frac{1}{2}) = -x^2 + \frac{1}{2}x.$$
 
 Als letztes folgt Schritt 6, die Bestimmung der Extremwerte. Dazu bilden wir die
 erste Ableitung
 
-$$\tilde{A}'(x) = -4 x + 1.$$
+$$\tilde{A}'(x) = -2 x + \frac{1}{2}.$$
 
-Für die Suche nach Kandidaten für Extremstellen setzen wir $A'(x) = 0$ und
+Für die Suche nach Kandidaten für Extremstellen setzen wir $\tilde{A}'(x) = 0$ und
 bestimmen die Nullstellen:
 
 \begin{align*}
--4x + 1 &= 0 \\
+-2x + \frac{1}{2} &= 0 \\
 \Rightarrow x &= \frac{1}{4}.\\
 \end{align*}
 
 Als nächstes überprüfen wir, ob $x = \frac{1}{4}$ wirklich ein Extremum ist,
 indem wir die 2. Ableitung bilden
 
-$$\tilde{A}''(x) = -4$$
+$$\tilde{A}''(x) = -2$$
 
 und dann den Punkt $x = \frac{1}{4}$ einsetzen:
 
-$$\tilde{A}''(\frac{1}{4}) = -4.$$
+$$\tilde{A}''(\frac{1}{4}) = -2.$$
 
 Da die 2. Ableitung an der Stelle $x = \frac{1}{4}$ negativ ist, können wir
 schlussfolgern, dass $x = \frac{1}{4}$ eine Extremstelle ist und dass es sich
