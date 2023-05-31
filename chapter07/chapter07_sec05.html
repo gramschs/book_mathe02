@@ -438,10 +438,9 @@ f(x,y) &amp;= e^{-(x^2+y^2)} \\
 <p>b)</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
-f(x,y,z) &amp;= \frac{1+x+y+z}{1+x^2+y^2+z^2} \\
-\Rightarrow \quad \nabla f(x,y,z) &amp;= \Big( \frac{-x^2-2x(y+z+1)+y^2+z^2+1}{(x^2+y^2+z^2+1)^2}, \\
-&amp; \quad \quad \frac{x^2-2y(x+y+z+1)+y^2+z^2+1}{(x^2+y^2+z^2+1)^2}, \\
-&amp; \quad \quad \frac{x^2-2z(x+y+z+1)+y^2+z^2+1}{(x^2+y^2+z^2+1)^2}\Big) 
+f(x,y,z) &amp;= \frac{1+x+y+z}{1+x^2+y^2+z^2}  \\
+\nabla f(x,y,z) &amp;= \Big( \frac{-x^2-2x(y+z+1)+y^2+z^2+1}{(x^2+y^2+z^2+1)^2}, ...\\
+&amp;\frac{1+x^2-y^2+z^2 - 2y(1+x+z)}{(1 + x^2+y^2+z^2)^2},  \frac{1+x^2+y^2-z^2 - 2z(1+x+y)}{(1 + x^2+y^2+z^2)^2}\Big)
 \end{align*}\]</div>
 <p>c)</p>
 <div class="amsmath math notranslate nohighlight">
@@ -477,13 +476,13 @@ Wir berechnen zunächst die partiellen Ableitungen:</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
 \frac{\partial f}{\partial x} &amp;=  \frac{-x^2-2x(y+z+1)+y^2+z^2+1}{(x^2+y^2+z^2+1)^2}\\
-\frac{\partial f}{\partial y} &amp;=  \frac{x^2-2y(x+y+z+1)+y^2+z^2+1}{(x^2+y^2+z^2+1)^2} \\  
-\frac{\partial f}{\partial z} &amp;=  \frac{x^2-2z(x+y+z+1)+y^2+z^2+1}{(x^2+y^2+z^2+1)^2}\\  
+\frac{\partial f}{\partial y} &amp;=  \frac{1+x^2-y^2+z^2 - 2y(1+x+z)}{(1 + x^2+y^2+z^2)^2} \\  
+\frac{\partial f}{\partial z} &amp;=  \frac{1+x^2+y^2-z^2 - 2z(1+x+y)}{(1 + x^2+y^2+z^2)^2}\\  
 \end{align*}\]</div>
 <p class="sd-card-text">Damit ist der Gradient von f:</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{multline*}\nabla f(x,y,z) = \Big( \frac{-x^2-2x(y+z+1)+y^2+z^2+1}{(x^2+y^2+z^2+1)^2}, ...\\
-\frac{x^2-2y(x+y+z+1)+y^2+z^2+1}{(x^2+y^2+z^2+1)^2},  \frac{x^2-2z(x+y+z+1)+y^2+z^2+1}{(x^2+y^2+z^2+1)^2}\Big)
+\frac{1+x^2-y^2+z^2 - 2y(1+x+z)}{(1 + x^2+y^2+z^2)^2},  \frac{1+x^2+y^2-z^2 - 2z(1+x+y)}{(1 + x^2+y^2+z^2)^2}\Big)
 \end{multline*}\]</div>
 <p class="sd-card-text">c) <span class="math notranslate nohighlight">\(f(x_1,x_2) = x_1^4 -5x_2^2 - 10x_1x_2\)</span> <br>
 Wir berechnen zunächst die partiellen Ableitungen:</p>

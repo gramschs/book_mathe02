@@ -21,12 +21,12 @@ f(x,y) &= e^{-(x^2+y^2)} \\
 \end{align*}
 
 b)
+
 \begin{align*}
-f(x,y,z) &= \frac{1+x+y+z}{1+x^2+y^2+z^2} \\
-\Rightarrow \quad \nabla f(x,y,z) &= \Big( \frac{-x^2-2x(y+z+1)+y^2+z^2+1}{(x^2+y^2+z^2+1)^2}, \\
-& \quad \quad \frac{x^2-2y(x+y+z+1)+y^2+z^2+1}{(x^2+y^2+z^2+1)^2}, \\
-& \quad \quad \frac{x^2-2z(x+y+z+1)+y^2+z^2+1}{(x^2+y^2+z^2+1)^2}\Big) 
-\end{align*} 
+f(x,y,z) &= \frac{1+x+y+z}{1+x^2+y^2+z^2}  \\
+\nabla f(x,y,z) &= \Big( \frac{-x^2-2x(y+z+1)+y^2+z^2+1}{(x^2+y^2+z^2+1)^2}, ...\\
+&\frac{1+x^2-y^2+z^2 - 2y(1+x+z)}{(1 + x^2+y^2+z^2)^2},  \frac{1+x^2+y^2-z^2 - 2z(1+x+y)}{(1 + x^2+y^2+z^2)^2}\Big)
+\end{align*}
 
 c)
 \begin{align*}
@@ -54,12 +54,12 @@ b) $f(x,y,z) = \frac{1+x+y+z}{1+x^2+y^2+z^2}$ <br>
 Wir berechnen zunächst die partiellen Ableitungen: 
 \begin{align*}
 \frac{\partial f}{\partial x} &=  \frac{-x^2-2x(y+z+1)+y^2+z^2+1}{(x^2+y^2+z^2+1)^2}\\
-\frac{\partial f}{\partial y} &=  \frac{x^2-2y(x+y+z+1)+y^2+z^2+1}{(x^2+y^2+z^2+1)^2} \\  
-\frac{\partial f}{\partial z} &=  \frac{x^2-2z(x+y+z+1)+y^2+z^2+1}{(x^2+y^2+z^2+1)^2}\\  
+\frac{\partial f}{\partial y} &=  \frac{1+x^2-y^2+z^2 - 2y(1+x+z)}{(1 + x^2+y^2+z^2)^2} \\  
+\frac{\partial f}{\partial z} &=  \frac{1+x^2+y^2-z^2 - 2z(1+x+y)}{(1 + x^2+y^2+z^2)^2}\\  
 \end{align*}
 Damit ist der Gradient von f:
 \begin{multline*}\nabla f(x,y,z) = \Big( \frac{-x^2-2x(y+z+1)+y^2+z^2+1}{(x^2+y^2+z^2+1)^2}, ...\\
-\frac{x^2-2y(x+y+z+1)+y^2+z^2+1}{(x^2+y^2+z^2+1)^2},  \frac{x^2-2z(x+y+z+1)+y^2+z^2+1}{(x^2+y^2+z^2+1)^2}\Big)
+\frac{1+x^2-y^2+z^2 - 2y(1+x+z)}{(1 + x^2+y^2+z^2)^2},  \frac{1+x^2+y^2-z^2 - 2z(1+x+y)}{(1 + x^2+y^2+z^2)^2}\Big)
 \end{multline*}
 c) $f(x_1,x_2) = x_1^4 -5x_2^2 - 10x_1x_2$ <br>
 Wir berechnen zunächst die partiellen Ableitungen:
