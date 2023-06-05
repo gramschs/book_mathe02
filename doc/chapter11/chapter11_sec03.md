@@ -13,7 +13,7 @@ Differentialgleichungen und zeigt, wie man sie löst.
   separable Differentialgleichung zu lösen.
 ```
 
-## Was sind separable Diffenrentialgleichungen?
+## Was sind separable Differentialgleichungen?
 
 Damit eine Differentialgleichung **separabel** ist, müssen zwei Bedigungen erfüllt sein.
 
