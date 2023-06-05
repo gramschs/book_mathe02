@@ -106,12 +106,12 @@ Eingesetzt in das äußere Integral erhalten wir
 \begin{align*}
 \int_{x=-3}^{x=2} -\frac{1}{2}x^4+\frac{11}{2}x^2-x-12 \, dx 
 &= \left[-\frac{1}{10}x^5+\frac{11}{6}x^3-\frac{1}{2}x^2-12x \right]_{x=-3}^{x=2} = \\
-&= -\frac{125}{5} \approx -20.8333.
+&= -\frac{125}{6} \approx -20.8333.
 \end{align*}
 
 Nun noch alles in die ursprüngliche Formel einsetzen und wir erhalten für den Schwerpunkt $y_S$ in y-Richtung:
 
-$$y_S = \frac{1}{\frac{125}{6}} \cdot \left( -\frac{125}{5} \right) = -\frac{6}{5} = -1.2.$$
+$$y_S = \frac{1}{\frac{125}{6}} \cdot \left( -\frac{125}{6} \right) = -1.$$
 
 Damit ist der Schwerpunkt der Fläche $(-0.5, -1)$.
 

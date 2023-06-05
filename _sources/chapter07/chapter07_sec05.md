@@ -172,13 +172,13 @@ g:\mathbb{R}^2\mapsto\mathbb{R}^3, \quad & g(x_1,x_2) = \begin{pmatrix} x_1 \\ x
 \end{align*}
 Wir berechnen zuerst die Jacobi-Matrix von $f$ und $g$:
 
-$$J(f) = \left(2x_1 x_2^2 x_3^2,\; 2x_1^2 x_2 x_3^2,\; 2x_1 x_2^2 x_3\right) 
+$$J(f) = \left(2x_1 x_2^2 x_3^2,\; 2x_1^2 x_2 x_3^2,\; 2x_1^2 x_2^2 x_3\right) 
 \quad \text{ und } \quad
 J(g) = \begin{pmatrix} 1 & 0 \\ 0 & 1 \\ x_2 & x_1\end{pmatrix}$$
 
 Mit der mehrdimensionalen Kettenregel erhalten wir
 \begin{multline*}
-J(h) = J(f) \cdot J(g) = \left(2x_1 x_2^2 x_3^2, \; 2x_1^2 x_2 x_3^2,\; 2x_1 x_2^2 x_3\right) \cdot 
+J(h) = J(f) \cdot J(g) = \left(2x_1 x_2^2 x_3^2, \; 2x_1^2 x_2 x_3^2,\; 2x_1^2 x_2^2 x_3\right) \cdot 
 \begin{pmatrix} 1 & 0 \\ 0 & 1 \\ x_2 & x_1\end{pmatrix} = \\
 \left(2x_1 x_2^2 x_3^2 + 2x_1^2 x_2^3 x_3, \; 2x_1^2 x_2 x_3^2 + 2x_1^3 x_2^2 x_3 \right) 
 \end{multline*} 
