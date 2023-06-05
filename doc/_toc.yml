@@ -82,10 +82,12 @@ parts:
     - file: chapter10/chapter10_sec05.md  
 - caption: Part 4. Differentialgleichungen
   chapters:
-  - file: part11
-    title: Grundbegriffe und separable DGL
-    sections:
-    - file: part11_01
-    - file: part11_02
+  - file: chapter11/chapter11_sec00.md
+    sections: 
+    - file: chapter11/chapter11_sec01.md
+    - file: chapter11/chapter11_sec02.md
+    - file: chapter11/chapter11_sec03.md    
+    - file: chapter11/chapter11_sec04.md
+    - file: chapter11/chapter11_sec05.md  
   - file: part12
     title: DGL (Teil 2)
