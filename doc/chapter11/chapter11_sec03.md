@@ -58,55 +58,71 @@ lässt sich schrittweise wie folgt lösen:
 
 Wir betrachten erneut die separable Differentialgleichung
 
-$$y' = 5x \cdot y \quad \text{für} y>0.$$
+$$y' = 5x \cdot y.$$
 
-Schritt 1: Zuerst ersetzen wir die 1. Ableitung durch den Differentialoperator
+**Schritt 1:** Zuerst ersetzen wir die 1. Ableitung durch den Differentialoperator
 
 $$\frac{dy}{dx} = 5x \cdot y.$$
 
-Schritt 2: Als nächstes trennen wir die Variablen:
+**Schritt 2:** Als nächstes trennen wir die Variablen:
 
 $$\frac{1}{y} \, dy = 5x \, dx.$$
 
-Schritt 3: Als nächstes integrieren wir die linke Seite nach $dy$ und die rechte Seite nach $dx$:
+**Schritt 3:** Dann integrieren wir die linke Seite nach $dy$ und die rechte Seite nach $dx$:
 
 $$
 \int \frac{1}{y} \, dy = \int 5x \, dx \quad 
 \Rightarrow  \ln |y| + C_1 = \frac{5}{2} x^2 + C_2
 $$
 
-Schritt 4: Zuerst sortieren wir die Integrationskonstante $C_1$ nach rechts und nennen die dadurch entstandene Differen $C_2 - C_1$ einfach nur $\tilde{C}$
+**Schritt 4:** Wir lösen nach $y$ auf. Zuerst sortieren wir die
+Integrationskonstante $C_1$ nach rechts und nennen die dadurch entstandene
+Differen $C_2 - C_1$ einfach nur $\tilde{C}$
 
 $$\Rightarrow  \ln |y| = \frac{5}{2} x^2 + \tilde{C}.$$
 
-Da wir ohnehin Lösungen $y$ suchen, die positiv sind, können wir die Betragsstriche weglassen:
-
-$$\Rightarrow  \ln(y) = \frac{5}{2} x^2 + \tilde{C}.$$
-
 Nun verwenden wir den Trick, die linke und rechte Seite als Exponenten für die
-Exponentailfunktion zu nutzen:
+Exponentialfunktion zu nutzen:
 
-$$\Rightarrow e^{\ln(y)} = e^{\frac{5}{2} x^2 + \tilde{C}}.$$
+$$\Rightarrow e^{\ln(|y|)} = e^{\frac{5}{2} x^2 + \tilde{C}}.$$
 
 Da die Exponentialfunktion die Umkehrfunktion der Logarithmusfunktion ist, gilt
-$e^{\ln(y)} =y$. Damit ist die allgemeine Lösung der Differentialgleichung
+nämlich $e^{\ln(|y|)} = y$ und wir sind durch diesen Trick den Logarithmus
+losgeworden:
 
-$$y(x) = e^{\frac{5}{2} x^2 + \tilde{C}}.$$
+$$\Rightarrow |y(x)| = e^{\frac{5}{2} x^2 + \tilde{C}}.$$
 
 Um eine spezielle Lösung zu erhalten, muss aufgrund von Zusatzinformationen die
 Integrationskonstante $\tilde{C}$ bestimmt werden. Etwas leichter kann die
-Konstante bestimmt werden, wenn sie nicht im Exponenten ist. Wir schreiben daher
+Konstante bestimmt werden, wenn sie nicht im Exponent steht. Wir schreiben daher
 die allgemeine Lösung noch etwas um:
 
-$$y(x) = e^{\frac{5}{2} x^2 + \tilde{C}} = e^{\frac{5}{2} x^2} \cdot
+$$|y(x)| = e^{\frac{5}{2} x^2 + \tilde{C}} = e^{\frac{5}{2} x^2} \cdot
 e^{\tilde{C}}.$$
 
-Die Konstante $e^{\tilde{C}}$ wird nun als Konstante $C$ bezeichnet, so dass wir
-die übliche Notation erhalten:
+Die rechte Seite ist positiv. Wenn wir die Betragsstriche weglassen, erhalten
+wir die beiden Lösungen
 
-$$y(x) = C e^{\frac{5}{2}x^2}.$$
+\begin{align*} 
+y_1(x) &= +e^{\tilde{C}} \cdot e^{\frac{5}{2} x^2}, \\
+y_2(x) &= -e^{\tilde{C}} \cdot e^{\frac{5}{2} x^2}. 
+\end{align*}
+
+Gleichzeitig ist auch $y_3(x)=0$ eine Lösung der Differentialgleichung. Daher
+müssten wir eigentlich drei Lösungen der Differentialgleichung notieren. Wenn
+wir aber eine neue Konstante $C \in \mathbb{R}$ einführen, die sozusagen
+$+e^{\tilde{C}}$ und $-e^{\tilde{C}}$ sowie die Null ersetzt, dann können wir
+auch vereinfacht als allgemeine Lösung der Differentialgleichung $y' = 5x \cdot
+y$ die Lösung
+
+$$y(x) = C e^{\frac{5}{2}x^2} \quad \text{ mit } C\in\mathbb{R}$$
+
+notieren.
 
 ```{dropdown} Video zu "Lösung separable Differentialgleichung"
 <iframe src="https://frankfurt-university.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=bc52e263-cf13-4313-8f1f-ad53009d2b3c&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=false&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
 ```
 
+```{dropdown} Video zu "Differentialgleichung lösen" von Mathematrick
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Sm0Go9IioJ4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+```
