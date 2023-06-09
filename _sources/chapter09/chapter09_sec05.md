@@ -112,7 +112,7 @@ Eingesetzt in das obige Integral gilt dann zusammen mit dem Trick $\sin^2(x) =\f
 \begin{align*}
 \int_{x=0}^{x=2\pi}\left(\int_{y=x(x-\pi)^2(x-2\pi)}^{y=\sin(x)^2} 1 \, dy \right)\, dx
 &= \int_{x=0}^{x=2\pi} \sin^2(x) \, dx - \int_{x=0}^{x=2\pi} x^4 - 4\pi x^3 + 5\pi^2 x^2 - 2\pi^3x \, dx = \\
-&= \frac{1}{2} \left[x-\sin(x)\cos(x) \right]_{x=0}^{x=2\pi} - \left[\frac{1}{5}x^5 - \pi x^4 + \frac{5}{3}\pi^2x^3 - \pi^3 x^2 \right]_{x=0}^{x=2\pi} = \\
+&= \frac{1}{2} \left[x-\frac{1}{2}\sin(2x)) \right]_{x=0}^{x=2\pi} - \left[\frac{1}{5}x^5 - \pi x^4 + \frac{5}{3}\pi^2x^3 - \pi^3 x^2 \right]_{x=0}^{x=2\pi} = \\
 &= \frac{1}{2}2\pi - \left(\frac{1}{5}(2\pi)^5 - \pi(2\pi)^4 + \frac{5}{3}\pi^2(2\pi)^3 - \pi^3 (2\pi)^2 \right) = \\
 &= \pi - \frac{4}{15}\pi^5. 
 \end{align*}

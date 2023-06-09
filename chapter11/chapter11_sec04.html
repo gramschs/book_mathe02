@@ -66,6 +66,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'chapter11/chapter11_sec04';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -393,7 +395,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -409,6 +413,18 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lernziele">Lernziele</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#was-ist-eine-exakte-differentialgleichung">Was ist eine exakte Differentialgleichung?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#beispiel-einer-exakten-differentialgleichung">Beispiel einer exakten Differentialgleichung</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wie-werden-exakte-differentialgleichugnen-gelost">Wie werden exakte Differentialgleichugnen gelöst?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#beispiel-zur-losung-einer-exakten-differentialgleichung">Beispiel zur Lösung einer exakten Differentialgleichung</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -420,10 +436,144 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="exakte-differentialgleichungen">
 <h1>11.4 Exakte Differentialgleichungen<a class="headerlink" href="#exakte-differentialgleichungen" title="Permalink to this headline">#</a></h1>
-<div class="warning admonition">
-<p class="admonition-title">Warnung</p>
-<p>Achtung, dieser Abschnitt des Vorlesungsskriptes wird gerade überarbeitet!!!</p>
+<p>In diesem Kapitel werden wir uns mit exakten Differentialgleichungen
+beschäftigen.</p>
+<section id="lernziele">
+<h2>Lernziele<a class="headerlink" href="#lernziele" title="Permalink to this headline">#</a></h2>
+<div class="important admonition">
+<p class="admonition-title">Lernziele</p>
+<ul>
+<li><p>Sie können anhand des Exaktheitskriterium überprüfen, ob eine
+Differentialgleichung 1. Ordnung der Form</p>
+<div class="math notranslate nohighlight">
+\[p(x, y) + q(x, y) \cdot y' = 0\]</div>
+<p>exakt ist.</p>
+</li>
+<li><p>Sie können eine exakte Differentialgleichung lösen.</p></li>
+</ul>
 </div>
+</section>
+<section id="was-ist-eine-exakte-differentialgleichung">
+<h2>Was ist eine exakte Differentialgleichung?<a class="headerlink" href="#was-ist-eine-exakte-differentialgleichung" title="Permalink to this headline">#</a></h2>
+<p>Bei den exakten Differentialgleichungen handelt es sich um
+Differentialgleichungen 1. Ordnung. Wenn die Differentialgleichung in die Form</p>
+<div class="math notranslate nohighlight">
+\[p(x, y) + q(x, y) \cdot y' = 0\]</div>
+<p>gebracht werden kann und wenn zusätzlich die sogenannte <strong>Exaktheitsbedingung</strong></p>
+<div class="math notranslate nohighlight">
+\[\frac{\partial p(x, y)}{\partial
+y} = \frac{\partial q(x, y)}{\partial x}\]</div>
+<p>erfüllt ist, dann wird die Differentialgleichung <strong>exakt</strong> genannt.</p>
+</section>
+<section id="beispiel-einer-exakten-differentialgleichung">
+<h2>Beispiel einer exakten Differentialgleichung<a class="headerlink" href="#beispiel-einer-exakten-differentialgleichung" title="Permalink to this headline">#</a></h2>
+<p>Die Differentialgleichung</p>
+<div class="math notranslate nohighlight">
+\[(y - x) + (y+x)\cdot y' = 0\]</div>
+<p>ist von 1. Ordnung und lässt sich mit</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+p(x, y) &amp;= y - x\\
+q(x, y) &amp;= y + x
+\end{align*}\]</div>
+<p>in der oben beschriebenen Form schreiben. Als nächstes wird überprüft, ob die
+Exaktheitsbedingung erfüllt ist.</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+\frac{\partial p(x, y)}{\partial y} &amp;= \frac{\partial}{\partial y}(y - x) = 1, \\
+\frac{\partial q(x, y)}{\partial x} &amp;= \frac{\partial}{\partial x}(y + x) = 1. 
+\end{align*}\]</div>
+<p>Beide partielle Ableitungen sind gleich und daher ist die Differentialgleichung
+exakt.</p>
+</section>
+<section id="wie-werden-exakte-differentialgleichugnen-gelost">
+<h2>Wie werden exakte Differentialgleichugnen gelöst?<a class="headerlink" href="#wie-werden-exakte-differentialgleichugnen-gelost" title="Permalink to this headline">#</a></h2>
+<p>Liegt eine exakte Differentialgleichung vor, so wird die Differentialgleichung
+oft etwas informell mit dem Differentialquotienten <span class="math notranslate nohighlight">\(y'=\frac{dy}{dx}\)</span>
+folgendermaßen notiert:</p>
+<div class="math notranslate nohighlight">
+\[p(x, y) + q(x, y) \frac{dy}{dx} = 0 \quad 
+\Rightarrow \quad p(x,y) \, dx + q(t, x) \, dy = 0. \]</div>
+<p>Das erinnert an das totale Differential. Für die Lösungsidee starten wir mit
+einer Funktion <span class="math notranslate nohighlight">\(F\)</span>, die von zwei Variablen abhängt, nämlich <span class="math notranslate nohighlight">\(x_1\)</span> und <span class="math notranslate nohighlight">\(x_2\)</span>, und
+für die gilt:</p>
+<div class="math notranslate nohighlight">
+\[F(x_1, x_2) = c.\]</div>
+<p>Dabei ist <span class="math notranslate nohighlight">\(c\in\mathbb{R}\)</span> eine reelle Konstante.</p>
+<p>Nun soll die erste Variable <span class="math notranslate nohighlight">\(x_1\)</span> gleich <span class="math notranslate nohighlight">\(x\)</span> sein, also <span class="math notranslate nohighlight">\(x_1 = x\)</span>. Die zweite
+Variable soll der Funktionswert <span class="math notranslate nohighlight">\(y(x)\)</span> sein, also <span class="math notranslate nohighlight">\(x_2=y(x)\)</span>. Damit ist <span class="math notranslate nohighlight">\(F\)</span> eine
+Funktion, die eigentlich nur von <span class="math notranslate nohighlight">\(x\)</span> abhängt. Einmal direkt und einmal indirekt
+als verkettete Funktion. Die erste Ableitung nach <span class="math notranslate nohighlight">\(x\)</span> muss mit der
+mehrdimensionalen Kettenregel berechnet werden:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}F'(x, y(x)) = \left(\frac{\partial F}{\partial x}, \, \frac{\partial F}{\partial y}\right) \cdot 
+\begin{pmatrix} 1 \\ y' \end{pmatrix} 
+= \frac{\partial F}{\partial x} + \frac{\partial F}{\partial y} y'.\end{split}\]</div>
+<p>Wird die rechte Seite der Gleichung <span class="math notranslate nohighlight">\(F(x_1, x_2) = c\)</span> abgeleitet, ist dies Null.
+Damit gilt für die erste Ableitung der Funktion <span class="math notranslate nohighlight">\(F(x,y)\)</span></p>
+<div class="math notranslate nohighlight">
+\[\frac{\partial F}{\partial x} + \frac{\partial F}{\partial y} y' = 0.\]</div>
+<p>Das ist genau die Form der exakten Differentialgleichung mit</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+p(x,y) &amp;= \frac{\partial F(x,y)}{\partial x} \\
+q(x,y) &amp;= \frac{\partial F(x,y)}{\partial y}
+\end{align*}\]</div>
+<p>Aber wir kommen wir nun auf <span class="math notranslate nohighlight">\(F(x,y)\)</span>?</p>
+<p>Wir integrieren die erste Funktion <span class="math notranslate nohighlight">\(p(x,y)\)</span> nach <span class="math notranslate nohighlight">\(dx\)</span>. Die dabei entstehende
+Integrationskonstante kann noch von <span class="math notranslate nohighlight">\(y\)</span> abhängen. Wird nämlich partiell nach <span class="math notranslate nohighlight">\(x\)</span>
+abgeleitet, so werden Terme mit <span class="math notranslate nohighlight">\(y\)</span> nämlich Null. Deshalb schreiben wir dafür
+<span class="math notranslate nohighlight">\(C(y)\)</span> und erhalten</p>
+<div class="math notranslate nohighlight">
+\[F(x,y) = \int p(x,t) \, dx + C(y).\]</div>
+<p>Jetzt leiten wir diese Funktion partiell nach <span class="math notranslate nohighlight">\(y\)</span> ab. Dabei erhalten wir zum
+einen die partielle Ableitung des Integrals <span class="math notranslate nohighlight">\(\int p(x,t) \, dx\)</span>, zum anderen die
+Ableitung <span class="math notranslate nohighlight">\(C'(y)\)</span>. Das Ergebnis muss <span class="math notranslate nohighlight">\(q(x,y)\)</span> sein. Aus dieser Gleichung wird
+dann <span class="math notranslate nohighlight">\(C(y)\)</span> durch Integration nach <span class="math notranslate nohighlight">\(y\)</span> bestimmt. Sobald <span class="math notranslate nohighlight">\(F(x,y)\)</span> eindeutig
+bestimmt ist, wird dann</p>
+<div class="math notranslate nohighlight">
+\[F(x,y) = c\]</div>
+<p>gesetzt und nach <span class="math notranslate nohighlight">\(y\)</span> aufgelöst.</p>
+</section>
+<section id="beispiel-zur-losung-einer-exakten-differentialgleichung">
+<h2>Beispiel zur Lösung einer exakten Differentialgleichung<a class="headerlink" href="#beispiel-zur-losung-einer-exakten-differentialgleichung" title="Permalink to this headline">#</a></h2>
+<p>Wir betrachten erneut die exakte Differentialgleichung</p>
+<div class="math notranslate nohighlight">
+\[(y - x) + (y+x)\cdot y' = 0.\]</div>
+<p>Wir haben oben die Exaktheitsbedingung schon nachgerechnet und können daher
+direkt den Ansatz</p>
+<div class="math notranslate nohighlight">
+\[F(x,y) = c\]</div>
+<p>mit</p>
+<div class="math notranslate nohighlight">
+\[\frac{\partial F(x,y)}{\partial x} = y - x\]</div>
+<p>verwenden. Durch Integration nach <span class="math notranslate nohighlight">\(x\)</span> erhalten wir</p>
+<div class="math notranslate nohighlight">
+\[F(x,y) = \int p(x,y) \, dx + C(y) = \int (y-x)\, dx + C(y) 
+= yx -\frac{1}{2}x^2 + C(y).\]</div>
+<p>Partiell ableiten nach <span class="math notranslate nohighlight">\(y\)</span> und gleichsetzen mit <span class="math notranslate nohighlight">\(q(x,y)=y+x\)</span> liefert</p>
+<div class="math notranslate nohighlight">
+\[x+C'(y) = y+x.\]</div>
+<p>Damit erhalten wir</p>
+<div class="math notranslate nohighlight">
+\[C'(y)=y \quad \Rightarrow C(y) = \int y\, dy = \frac{1}{2}y^2.\]</div>
+<p>Damit ist</p>
+<div class="math notranslate nohighlight">
+\[F(x,y) = yx -\frac{1}{2}x^2 + \frac{1}{2}y^2  = c.\]</div>
+<p>Jetzt wird noch nach <span class="math notranslate nohighlight">\(y\)</span> aufgelöst:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+yx -\frac{1}{2}x^2 + \frac{1}{2}y^2  = c \qquad &amp;| \cdot 2 \\
+2yx - x^2 + y^2 = 2c \qquad &amp;| +2x^2 \\
+y^2 + 2xy + x^2 = 2c + 2x^2 \qquad &amp; \\
+(y+x)^2 = 2c + 2x^2 \qquad &amp; | \sqrt{} \\
+y + x = \pm \sqrt{2c + 2x^2} \qquad &amp; | -x \\
+y(x) = \pm \sqrt{2c + 2x^2} - x \\
+\end{align*}\]</div>
+<p>Die allgemeine Lösung der Differentialgleichung <span class="math notranslate nohighlight">\((y - x) + (y+x)\cdot y' = 0\)</span>
+ist</p>
+<div class="math notranslate nohighlight">
+\[y(x) = \pm \sqrt{2c + 2x^2} - x.\]</div>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Video zu “Exakte Differentialgleichung” von Lernkompass<div class="sd-summary-down docutils">
@@ -434,6 +584,7 @@ Video zu “Exakte Differentialgleichung” von Lernkompass<div class="sd-summar
 <iframe width="560" height="315" src="https://www.youtube.com/embed/PGiwJ57E1nc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </div>
 </details></section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -493,6 +644,24 @@ Video zu “Exakte Differentialgleichung” von Lernkompass<div class="sd-summar
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lernziele">Lernziele</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#was-ist-eine-exakte-differentialgleichung">Was ist eine exakte Differentialgleichung?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#beispiel-einer-exakten-differentialgleichung">Beispiel einer exakten Differentialgleichung</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wie-werden-exakte-differentialgleichugnen-gelost">Wie werden exakte Differentialgleichugnen gelöst?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#beispiel-zur-losung-einer-exakten-differentialgleichung">Beispiel zur Lösung einer exakten Differentialgleichung</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
