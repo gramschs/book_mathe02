@@ -66,6 +66,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'chapter11/chapter11_sec05';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -424,6 +426,121 @@ document.write(`
 <p class="admonition-title">Warnung</p>
 <p>Achtung, dieser Abschnitt des Vorlesungsskriptes wird gerade überarbeitet!!!</p>
 </div>
+<div class="miniexercise admonition">
+<p class="admonition-title">Übung 11.1</p>
+<p>Bestimmen Sie die Lösung des Anfangwertproblems</p>
+<div class="math notranslate nohighlight">
+\[y \, y'- e^{5x} = 0, \qquad \text{für} \quad y(0)=1.\]</div>
+</div>
+<div class="minisolution toggle admonition">
+<p class="admonition-title">Lösung</p>
+<p>Allgemeine Lösung:</p>
+<div class="math notranslate nohighlight">
+\[y(x) = \pm \sqrt{\frac{2}{5}e^{5x}+c}\]</div>
+<p>Spezielle Lösung des Anfangwertproblems:</p>
+<div class="math notranslate nohighlight">
+\[y(x) = \sqrt{\frac{2}{5}e^{5x}+\frac{3}{5}}\]</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Lösungsweg<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Trennung nach beiden Seiten:</p>
+<div class="math notranslate nohighlight">
+\[y\frac{dy}{dx} = e^{5x}\]</div>
+<p class="sd-card-text">Unbestimmte Integration:</p>
+<div class="math notranslate nohighlight">
+\[\int y \, dy = \int e^{5x} \, dx \quad \Rightarrow \frac{1}{2}y^2 + c_1 = \frac{1}{5}e^{5x} + c_2\]</div>
+<p class="sd-card-text">Setze <span class="math notranslate nohighlight">\(c=c_2-c_1\)</span> und löse nach <span class="math notranslate nohighlight">\(y\)</span> auf:</p>
+<div class="math notranslate nohighlight">
+\[y(x) = \pm \sqrt{\frac{2}{5}e^{5x}+2c}.\]</div>
+<p class="sd-card-text">Für den Anfangswert <span class="math notranslate nohighlight">\(y(0)=1\)</span> lösen wir die Gleichung</p>
+<div class="math notranslate nohighlight">
+\[1 = \pm \sqrt{\frac{2}{5}e^{0}+2c}\]</div>
+<p class="sd-card-text">nach <span class="math notranslate nohighlight">\(c\)</span> auf und erhalten <span class="math notranslate nohighlight">\(c=3/10\)</span>. Damit ist die spezielle Lösung</p>
+<div class="math notranslate nohighlight">
+\[y(x) = \sqrt{\frac{2}{5}e^{5x}+\frac{3}{10}}.\]</div>
+</div>
+</details></div>
+<div class="miniexercise admonition">
+<p class="admonition-title">Übung 11.2</p>
+<p>Bestimmen Sie die Lösung des Anfangwertproblems</p>
+<div class="math notranslate nohighlight">
+\[y'- 6yx^2 = 0, \qquad \text{für} \quad y(0)=5.\]</div>
+</div>
+<div class="minisolution toggle admonition">
+<p class="admonition-title">Lösung</p>
+<p>Allgemeine Lösung:</p>
+<div class="math notranslate nohighlight">
+\[y(x) = c e^{2x^3}\]</div>
+<p>Spezielle Lösung für <span class="math notranslate nohighlight">\(y(0)=5\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[y(x) = 5 e^{2x^3}.\]</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Lösungsweg<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Trennung nach beiden Seiten:</p>
+<div class="math notranslate nohighlight">
+\[\frac{1}{y}\frac{dy}{dx} = 6 x^2\]</div>
+<p class="sd-card-text">Unbestimmte Integration:</p>
+<div class="math notranslate nohighlight">
+\[\int \frac{1}{y} \, dy = \int 6x^2 \, dx \quad \Rightarrow 
+\ln |y| + c_1 = 2x^3 + c_2\]</div>
+<p class="sd-card-text">Setze <span class="math notranslate nohighlight">\(\tilde{C}=c_2-c_1\)</span> und löse nach <span class="math notranslate nohighlight">\(y\)</span> auf:</p>
+<div class="math notranslate nohighlight">
+\[|y| = e^{2x^3 + \tilde{c}} \quad \Rightarrow y(x) = C \cdot e^{2x^3}\]</div>
+<p class="sd-card-text">Für den Anfangswert <span class="math notranslate nohighlight">\(y(0)=5\)</span> lösen wir die Gleichung</p>
+<div class="math notranslate nohighlight">
+\[ y(0) = C \cdot e^{0} = 5\]</div>
+<p class="sd-card-text">nach <span class="math notranslate nohighlight">\(C\)</span> auf und erhalten <span class="math notranslate nohighlight">\(C = 5\)</span>. Damit ist die spezielle Lösung</p>
+<div class="math notranslate nohighlight">
+\[y(x) = 5 \cdot e^{2x^3}.\]</div>
+</div>
+</details></div>
+<div class="miniexercise admonition">
+<p class="admonition-title">Übung 11.3</p>
+<p>Bestimmen Sie die Lösung des Anfangwertproblemes</p>
+<div class="math notranslate nohighlight">
+\[\dot{x} = e^{t-x} \quad \text{ für } x(1)=1.\]</div>
+</div>
+<div class="minisolution toggle admonition">
+<p class="admonition-title">Lösung</p>
+<p>Allgemeine Lösung:</p>
+<div class="math notranslate nohighlight">
+\[x(t) = \ln(e^t + C)\]</div>
+<p>Spezielle Lösung für <span class="math notranslate nohighlight">\(x(1)=1\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[x(t) = \ln(e^t)\]</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Lösungsweg<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Trennung nach beiden Seiten:</p>
+<div class="math notranslate nohighlight">
+\[\frac{dx}{dt} e^x = e^t\]</div>
+<p class="sd-card-text">Unbestimmte Integration:</p>
+<div class="math notranslate nohighlight">
+\[\int e^x \, dx = \int e^t \, dt \quad \Rightarrow e^x + c_1 = e^t + c_2\]</div>
+<p class="sd-card-text">Setze <span class="math notranslate nohighlight">\(C=c_2-c_1\)</span> und löse nach <span class="math notranslate nohighlight">\(x\)</span> auf:</p>
+<div class="math notranslate nohighlight">
+\[x(t) = \ln(e^t + C)\]</div>
+<p class="sd-card-text">Für den Anfangswert <span class="math notranslate nohighlight">\(x(1)=1\)</span> lösen wir die Gleichung</p>
+<div class="math notranslate nohighlight">
+\[x(1) = \ln(e^1 + C) = 1\]</div>
+<p class="sd-card-text">nach <span class="math notranslate nohighlight">\(C\)</span> auf und erhalten <span class="math notranslate nohighlight">\(C = 0\)</span>. Damit ist die spezielle Lösung</p>
+<div class="math notranslate nohighlight">
+\[x(t) = \ln(e^t).\]</div>
+</div>
+</details></div>
 </section>
 
     <script type="text/x-thebe-config">
