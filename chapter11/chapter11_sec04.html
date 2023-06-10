@@ -498,8 +498,8 @@ folgendermaßen notiert:</p>
 einer Funktion <span class="math notranslate nohighlight">\(F\)</span>, die von zwei Variablen abhängt, nämlich <span class="math notranslate nohighlight">\(x_1\)</span> und <span class="math notranslate nohighlight">\(x_2\)</span>, und
 für die gilt:</p>
 <div class="math notranslate nohighlight">
-\[F(x_1, x_2) = c.\]</div>
-<p>Dabei ist <span class="math notranslate nohighlight">\(c\in\mathbb{R}\)</span> eine reelle Konstante.</p>
+\[F(x_1, x_2) = \tilde{c}.\]</div>
+<p>Dabei ist <span class="math notranslate nohighlight">\(\tilde{c}\in\mathbb{R}\)</span> eine reelle Konstante.</p>
 <p>Nun soll die erste Variable <span class="math notranslate nohighlight">\(x_1\)</span> gleich <span class="math notranslate nohighlight">\(x\)</span> sein, also <span class="math notranslate nohighlight">\(x_1 = x\)</span>. Die zweite
 Variable soll der Funktionswert <span class="math notranslate nohighlight">\(y(x)\)</span> sein, also <span class="math notranslate nohighlight">\(x_2=y(x)\)</span>. Damit ist <span class="math notranslate nohighlight">\(F\)</span> eine
 Funktion, die eigentlich nur von <span class="math notranslate nohighlight">\(x\)</span> abhängt. Einmal direkt und einmal indirekt
@@ -509,7 +509,7 @@ mehrdimensionalen Kettenregel berechnet werden:</p>
 \[\begin{split}F'(x, y(x)) = \left(\frac{\partial F}{\partial x}, \, \frac{\partial F}{\partial y}\right) \cdot 
 \begin{pmatrix} 1 \\ y' \end{pmatrix} 
 = \frac{\partial F}{\partial x} + \frac{\partial F}{\partial y} y'.\end{split}\]</div>
-<p>Wird die rechte Seite der Gleichung <span class="math notranslate nohighlight">\(F(x_1, x_2) = c\)</span> abgeleitet, ist dies Null.
+<p>Wird die rechte Seite der Gleichung <span class="math notranslate nohighlight">\(F(x_1, x_2) = \tilde{c}\)</span> abgeleitet, ist dies Null.
 Damit gilt für die erste Ableitung der Funktion <span class="math notranslate nohighlight">\(F(x,y)\)</span></p>
 <div class="math notranslate nohighlight">
 \[\frac{\partial F}{\partial x} + \frac{\partial F}{\partial y} y' = 0.\]</div>
@@ -532,7 +532,7 @@ Ableitung <span class="math notranslate nohighlight">\(C'(y)\)</span>. Das Ergeb
 dann <span class="math notranslate nohighlight">\(C(y)\)</span> durch Integration nach <span class="math notranslate nohighlight">\(y\)</span> bestimmt. Sobald <span class="math notranslate nohighlight">\(F(x,y)\)</span> eindeutig
 bestimmt ist, wird dann</p>
 <div class="math notranslate nohighlight">
-\[F(x,y) = c\]</div>
+\[F(x,y) = \tilde{c}\]</div>
 <p>gesetzt und nach <span class="math notranslate nohighlight">\(y\)</span> aufgelöst.</p>
 </section>
 <section id="beispiel-zur-losung-einer-exakten-differentialgleichung">
@@ -543,7 +543,7 @@ bestimmt ist, wird dann</p>
 <p>Wir haben oben die Exaktheitsbedingung schon nachgerechnet und können daher
 direkt den Ansatz</p>
 <div class="math notranslate nohighlight">
-\[F(x,y) = c\]</div>
+\[F(x,y) = \tilde{c}\]</div>
 <p>mit</p>
 <div class="math notranslate nohighlight">
 \[\frac{\partial F(x,y)}{\partial x} = y - x\]</div>
@@ -556,11 +556,11 @@ direkt den Ansatz</p>
 \[x+C'(y) = y+x.\]</div>
 <p>Damit erhalten wir</p>
 <div class="math notranslate nohighlight">
-\[C'(y)=y \quad \Rightarrow C(y) = \int y\, dy = \frac{1}{2}y^2.\]</div>
+\[C'(y)=y \quad \Rightarrow C(y) = \int y\, dy = \frac{1}{2}y^2 + c_1.\]</div>
 <p>Damit ist</p>
 <div class="math notranslate nohighlight">
-\[F(x,y) = yx -\frac{1}{2}x^2 + \frac{1}{2}y^2  = c.\]</div>
-<p>Jetzt wird noch nach <span class="math notranslate nohighlight">\(y\)</span> aufgelöst:</p>
+\[F(x,y) = yx -\frac{1}{2}x^2 + \frac{1}{2}y^2  + c_1 = \tilde{c}.\]</div>
+<p>Wir setzen <span class="math notranslate nohighlight">\(C= \tilde{c} - c_1\)</span> und lösen nach <span class="math notranslate nohighlight">\(y\)</span> auf:</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
 yx -\frac{1}{2}x^2 + \frac{1}{2}y^2  = c \qquad &amp;| \cdot 2 \\

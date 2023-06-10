@@ -67,9 +67,9 @@ Das erinnert an das totale Differential. Für die Lösungsidee starten wir mit
 einer Funktion $F$, die von zwei Variablen abhängt, nämlich $x_1$ und $x_2$, und
 für die gilt:
 
-$$F(x_1, x_2) = c.$$
+$$F(x_1, x_2) = \tilde{c}.$$
 
-Dabei ist $c\in\mathbb{R}$ eine reelle Konstante. 
+Dabei ist $\tilde{c}\in\mathbb{R}$ eine reelle Konstante. 
 
 Nun soll die erste Variable $x_1$ gleich $x$ sein, also $x_1 = x$. Die zweite
 Variable soll der Funktionswert $y(x)$ sein, also $x_2=y(x)$. Damit ist $F$ eine
@@ -81,7 +81,7 @@ $$F'(x, y(x)) = \left(\frac{\partial F}{\partial x}, \, \frac{\partial F}{\parti
 \begin{pmatrix} 1 \\ y' \end{pmatrix} 
 = \frac{\partial F}{\partial x} + \frac{\partial F}{\partial y} y'.$$
 
-Wird die rechte Seite der Gleichung $F(x_1, x_2) = c$ abgeleitet, ist dies Null.
+Wird die rechte Seite der Gleichung $F(x_1, x_2) = \tilde{c}$ abgeleitet, ist dies Null.
 Damit gilt für die erste Ableitung der Funktion $F(x,y)$
 
 $$\frac{\partial F}{\partial x} + \frac{\partial F}{\partial y} y' = 0.$$
@@ -108,7 +108,7 @@ Ableitung $C'(y)$. Das Ergebnis muss $q(x,y)$ sein. Aus dieser Gleichung wird
 dann $C(y)$ durch Integration nach $y$ bestimmt. Sobald $F(x,y)$ eindeutig
 bestimmt ist, wird dann 
 
-$$F(x,y) = c$$
+$$F(x,y) = \tilde{c}$$
 
 gesetzt und nach $y$ aufgelöst.
 
@@ -121,7 +121,7 @@ $$(y - x) + (y+x)\cdot y' = 0.$$
 Wir haben oben die Exaktheitsbedingung schon nachgerechnet und können daher
 direkt den Ansatz
 
-$$F(x,y) = c$$
+$$F(x,y) = \tilde{c}$$
 
 mit 
 
@@ -138,13 +138,13 @@ $$x+C'(y) = y+x.$$
 
 Damit erhalten wir 
 
-$$C'(y)=y \quad \Rightarrow C(y) = \int y\, dy = \frac{1}{2}y^2.$$
+$$C'(y)=y \quad \Rightarrow C(y) = \int y\, dy = \frac{1}{2}y^2 + c_1.$$
 
 Damit ist
 
-$$F(x,y) = yx -\frac{1}{2}x^2 + \frac{1}{2}y^2  = c.$$
+$$F(x,y) = yx -\frac{1}{2}x^2 + \frac{1}{2}y^2  + c_1 = \tilde{c}.$$
 
-Jetzt wird noch nach $y$ aufgelöst:
+Wir setzen $C= \tilde{c} - c_1$ und lösen nach $y$ auf:
 
 \begin{align*}
 yx -\frac{1}{2}x^2 + \frac{1}{2}y^2  = c \qquad &| \cdot 2 \\
