@@ -89,5 +89,10 @@ parts:
     - file: chapter11/chapter11_sec03.md    
     - file: chapter11/chapter11_sec04.md
     - file: chapter11/chapter11_sec05.md  
-  - file: part12
-    title: DGL (Teil 2)
+  - file: chapter12/chapter12_sec00.md
+    sections: 
+    - file: chapter12/chapter12_sec01.md
+    - file: chapter12/chapter12_sec02.md
+    - file: chapter12/chapter12_sec03.md    
+    - file: chapter12/chapter12_sec04.md
+    - file: chapter12/chapter12_sec05.md  

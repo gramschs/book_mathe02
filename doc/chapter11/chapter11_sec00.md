@@ -1,4 +1,4 @@
-# 11. Differentialgleichungen (Teil 1)
+# 11. Einführung Differentialgleichungen 
 
 Themen:
 
