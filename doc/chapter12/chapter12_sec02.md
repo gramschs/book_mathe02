@@ -5,6 +5,11 @@
 Achtung, dieser Abschnitt des Vorlesungsskriptes wird gerade überarbeitet!!!
 ```
 
+## Lernziele
+```{admonition} Lernziele
+:class: important
+* Sie können eine **homogene lineare Differentialgleichung 1. Ordnung** lösen.
+```
 
 
 ## Wie wird eine homogene lineare DGL 1. Ordnung gelöst?

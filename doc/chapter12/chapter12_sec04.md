@@ -6,6 +6,15 @@ Achtung, dieser Abschnitt des Vorlesungsskriptes wird gerade überarbeitet!!!
 ```
 
 
+## Lernziele
+```{admonition} Lernziele
+:class: important
+* Sie können erklären, was ein **System von Differentialgleichungen** ist.
+* Sie können ein **System von Differentialgleichungen 2. Ordnung** lösen.
+```
+
+
+
 ## Was ist ein System von Differentialgleichungen?
 
 Wir betrachten in dieser Vorlesung nur Systeme von 2 DGL, die homogen, lineaer und von 1. Ordnung sind.

@@ -6,6 +6,14 @@ Achtung, dieser Abschnitt des Vorlesungsskriptes wird gerade überarbeitet!!!
 ```
 
 
+## Lernziele
+```{admonition} Lernziele
+:class: important
+* Sie können eine **inhomogene lineare Differentialgleichung 1. Ordnung** lösen.
+* Sie können das Lösungsverfahren **Variation der Konstante** anwenden, um die Lösung einer linearen Differentialgleichung zu bestimmen.
+```
+
+
 ## Wie wird eine inhomogene lineare DGL 1. Ordnung gelöst?
 
 Nun betrachten wir eine inhomogene lineare DGL 1. Ordnung, also
