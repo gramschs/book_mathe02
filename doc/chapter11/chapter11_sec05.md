@@ -10,7 +10,7 @@ $$y \, y'- e^{5x} = 0, \qquad \text{für} \quad y(0)=1.$$
 :class: minisolution, toggle
 Allgemeine Lösung:
 
-$$y(x) = \pm \sqrt{\frac{2}{5}e^{5x}+c}$$
+$$y(x) = \pm \sqrt{\frac{2}{5}e^{5x}+2c}$$
 
 
 Spezielle Lösung des Anfangwertproblems:
