@@ -15,7 +15,7 @@ $$y(x) = \pm \sqrt{\frac{2}{5}e^{5x}+2c}$$
 
 Spezielle Lösung des Anfangwertproblems:
 
-$$y(x) = \sqrt{\frac{2}{5}e^{5x}+\frac{3}{5}}$$
+$$y(x) = \sqrt{\frac{2}{5}e^{5x}+\frac{3}{10}}$$
 
 ```{dropdown} Lösungsweg
 Trennung der Variablen:
@@ -96,7 +96,7 @@ $$x(t) = \ln(e^t + C)$$
 
 Spezielle Lösung für $x(1)=1$:
 
-$$x(t) = \ln(e^t)$$
+$$x(t) = t$$
 ```{dropdown} Lösungsweg
 Trennung der Variablen:
 
@@ -116,7 +116,7 @@ $$x(1) = \ln(e^1 + C) \overset{!}{=} 1$$
 
 nach $C$ auf und erhalten $C = 0$. Damit ist die spezielle Lösung für $x(1)=1$
 
-$$x(t) = \ln(e^t).$$
+$$x(t) = \ln(e^t) = t.$$
 ```
 ````
 
