@@ -426,7 +426,8 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lernziele">Lernziele</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wie-wird-eine-inhomogene-lineare-dgl-1-ordnung-gelost">Wie wird eine inhomogene lineare DGL 1. Ordnung gelöst?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wie-wird-eine-inhomogene-lineare-differentialgleichung-1-ordnung-gelost">Wie wird eine inhomogene lineare Differentialgleichung 1. Ordnung gelöst?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#beispiel-zur-losung-einer-inhomogenen-linearen-dgl-1-ordnung">Beispiel zur Lösung einer inhomogenen linearen DGL 1. Ordnung</a></li>
 </ul>
             </nav>
         </div>
@@ -440,60 +441,98 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="losung-inhomogene-lineare-dgl-1-ordnung">
 <h1>12.3 Lösung inhomogene lineare DGL 1. Ordnung<a class="headerlink" href="#losung-inhomogene-lineare-dgl-1-ordnung" title="Permalink to this headline">#</a></h1>
-<div class="warning admonition">
-<p class="admonition-title">Warnung</p>
-<p>Achtung, dieser Abschnitt des Vorlesungsskriptes wird gerade überarbeitet!!!</p>
-</div>
+<p>Nachdem im letzten Kapitel die Lösung einer homogenen linearen
+Differentialgleichung 1. Ordnung behandelt wurde, geht es nun um die Lösung
+inhomogenr linearer Differentialgleichungen 1. Ordnung.</p>
 <section id="lernziele">
 <h2>Lernziele<a class="headerlink" href="#lernziele" title="Permalink to this headline">#</a></h2>
 <div class="important admonition">
 <p class="admonition-title">Lernziele</p>
 <ul class="simple">
 <li><p>Sie können eine <strong>inhomogene lineare Differentialgleichung 1. Ordnung</strong> lösen.</p></li>
-<li><p>Sie können das Lösungsverfahren <strong>Variation der Konstante</strong> anwenden, um die Lösung einer linearen Differentialgleichung zu bestimmen.</p></li>
+<li><p>Sie können das Lösungsverfahren <strong>Variation der Konstante</strong> anwenden, um die
+Lösung einer linearen Differentialgleichung zu bestimmen.</p></li>
 </ul>
 </div>
 </section>
-<section id="wie-wird-eine-inhomogene-lineare-dgl-1-ordnung-gelost">
-<h2>Wie wird eine inhomogene lineare DGL 1. Ordnung gelöst?<a class="headerlink" href="#wie-wird-eine-inhomogene-lineare-dgl-1-ordnung-gelost" title="Permalink to this headline">#</a></h2>
-<p>Nun betrachten wir eine inhomogene lineare DGL 1. Ordnung, also</p>
+<section id="wie-wird-eine-inhomogene-lineare-differentialgleichung-1-ordnung-gelost">
+<h2>Wie wird eine inhomogene lineare Differentialgleichung 1. Ordnung gelöst?<a class="headerlink" href="#wie-wird-eine-inhomogene-lineare-differentialgleichung-1-ordnung-gelost" title="Permalink to this headline">#</a></h2>
+<p>Nun betrachten wir eine inhomogene lineare Differentialgleichung 1. Ordnung,
+also</p>
 <div class="math notranslate nohighlight">
 \[a_1(x)y' + a_0(x) y = r(x).\]</div>
-<p>Als erstes lassen wir die Störfunktion weg und berechnen die homogene Lösung</p>
+<p>Obwohl unser Ziel ist, die inhomogene Differentialgleichung zu lösen, lassen wir
+zunächst einmal die Störfunktion weg und berechnen die homogene Lösung</p>
 <div class="math notranslate nohighlight">
 \[y_h(x)=C \cdot e^{-\int \frac{a_0(x)}{a_1(x)}\, dx}.\]</div>
-<p>Dann ersetzen wir die Konstante <span class="math notranslate nohighlight">\(C\)</span> durch eine Funktion <span class="math notranslate nohighlight">\(C(x)\)</span> – das nennt man <strong>Variation der Konstanten</strong> – und setzen diese Lösung in die inhomogene DGL ein. Dadurch entsteht eine DGL für die unbekannte Funktion <span class="math notranslate nohighlight">\(C(x)\)</span>, die wir dann lösen.</p>
-<p>Beispiel:</p>
-<p>Gegeben ist die inhomogene lineare DGL 1. Ordnung</p>
+<p>Um auch kenntlich zu machen, dass diese die Lösung der homogenen
+Differentialgleichung ist, wird diese Lösung mit einem kleinen “h” markiert. Wie
+üblich enthält die homogene Lösung eine Integrationskonstante <span class="math notranslate nohighlight">\(C\in\mathbb{R}\)</span>.
+Der Trick, um die inhomogene Differentialgleichung zu lösen, beruht darauf, nun
+diese Integrationskonstante zu variieren. Wir ersetzen die Konstante <span class="math notranslate nohighlight">\(C\)</span> durch
+eine Funktion <span class="math notranslate nohighlight">\(C(x)\)</span> – das nennt man <strong>Variation der Konstanten</strong>. Der
+Lösungsansatz für die inhomogene lineare Differentialgleichung1. Ordnung lautet
+also</p>
+<div class="math notranslate nohighlight">
+\[y(x)=C(x) \cdot e^{-\int \frac{a_0(x)}{a_1(x)}\, dx}.\]</div>
+<p>Um die noch fehlende Funktion <span class="math notranslate nohighlight">\(C(x)\)</span> zu bestimmen, leiten wir den Lösungsansatz
+einmal ab und setzen das Ergebnis in die Differentialgleichung ein. Dadurch
+entsteht eine neue Differentialgleichung für die unbekannte Funktion <span class="math notranslate nohighlight">\(C(x)\)</span>, die
+wir dann lösen.</p>
+</section>
+<section id="beispiel-zur-losung-einer-inhomogenen-linearen-dgl-1-ordnung">
+<h2>Beispiel zur Lösung einer inhomogenen linearen DGL 1. Ordnung<a class="headerlink" href="#beispiel-zur-losung-einer-inhomogenen-linearen-dgl-1-ordnung" title="Permalink to this headline">#</a></h2>
+<p>Gegeben ist die inhomogene lineare Differentialgleichung 1. Ordnung</p>
 <div class="math notranslate nohighlight">
 \[y'+3y=x^2.\]</div>
-<p>Die homogene Lösung ist <span class="math notranslate nohighlight">\(y_h(x)=C\cdot e^{-3x}\)</span>. Wir variieren die Konstante</p>
+<p>Die homogene Lösung ist <span class="math notranslate nohighlight">\(y_h(x)=C\cdot e^{-3x}\)</span>. Wir variieren die Konstante und
+erhalten den Lösungsansatz</p>
 <div class="math notranslate nohighlight">
-\[y(x)=C(x)\cdot e^{-3x} \quad \Rightarrow \quad y'(x)=C'(x)e^{-3x} -3 C(x) e^{-3x}\]</div>
-<p>und setzen in die DGL ein:</p>
+\[y(x)=C(x)\cdot e^{-3x}.\]</div>
+<p>Als nächstes wird dieser Lösungsansatz abgeleitet</p>
 <div class="math notranslate nohighlight">
-\[C'(x)e^{-3x} -3 C(x) e^{-3x} + 3C(x)\cdot e^{-3x} = x^2.\]</div>
-<p>Wir vereinfachen</p>
+\[\Rightarrow \quad y'(x)=C'(x)e^{-3x} + C(x)\cdot (-3) e^{-3x}\]</div>
+<p>und in die ursprüngliche Differentialgleichung eingesetzt:</p>
 <div class="math notranslate nohighlight">
-\[C'(x)e^{-3x} -3 C(x) e^{-3x} + 3C(x)\cdot e^{-3x} = x^2\]</div>
+\[C'(x) \, e^{-3x} -3 C(x) \, e^{-3x} + 3C(x)\cdot e^{-3x} = x^2.\]</div>
+<p>Wir vereinfachen zuerst die Gleichung</p>
+<div class="math notranslate nohighlight">
+\[C'(x)\, e^{-3x} - 3 C(x) \, e^{-3x} + 3C(x)\cdot e^{-3x} = x^2\]</div>
 <p>zu</p>
 <div class="math notranslate nohighlight">
-\[ C'(x)e^{-3x} = x^2 \quad \Rightarrow \quad C'(x)=x^2\cdot e^{3x}.\]</div>
-<p>Integration auf beiden Seiten:</p>
+\[ C'(x)\, e^{-3x} = x^2 \quad \Rightarrow \quad C'(x)=x^2\cdot e^{3x}.\]</div>
+<p>Danach integrieren wir auf beiden Seiten unbestimmt nach <span class="math notranslate nohighlight">\(x\)</span>, indem wir zweimal
+die partielle Integrationsregel anwenden:</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{multline*}
 C(x)= \left[x^2\cdot\frac{1}{3}e^{3x}\right] -\int 2x \frac{1}{3}e^{3x}\, dx = \\
 = \left[x^2\cdot\frac{1}{3}e^{3x}\right] - \left[2x\cdot\frac{1}{9}e^{3x}\right] + \int 2\cdot  \frac{1}{3}e^{3x} \, dx = \\
 = \frac{1}{27}e^{3x}(9x^2 - 6x + 2) + C_1
 \end{multline*}\]</div>
-<p>Allgemeine Lösung der inhomogenen DGL</p>
+<p>Nachdem wir nun die Funktion <span class="math notranslate nohighlight">\(C(x)\)</span> bestimmt haben, setzen wir diese Funktion in
+den Lösungsansatz ein und haben damit die allgemeine Lösung der inhomogenen
+Differentialgleichung bestimmt:</p>
 <div class="math notranslate nohighlight">
 \[y(x)= C_1e^{-3x} + \frac{1}{3}x^2 - \frac{1}{9}x + \frac{2}{27}.\]</div>
-<div class="seealso admonition">
-<p class="admonition-title">Video</p>
-<p><a class="reference external" href="https://www.youtube.com/embed/AWdLkNZJZ70">https://www.youtube.com/embed/AWdLkNZJZ70</a></p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Video zu “Differentialgleichung inhomogen lösen” von Mathematrick<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/AWdLkNZJZ70" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </div>
-</section>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Video zu “Inhomogene lineare DGL 1. Ordnung – Variation der Konstanten” von Sciencebarbie<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/DD8blQLaHDM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+</details></section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -564,7 +603,8 @@ C(x)= \left[x^2\cdot\frac{1}{3}e^{3x}\right] -\int 2x \frac{1}{3}e^{3x}\, dx = \
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lernziele">Lernziele</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wie-wird-eine-inhomogene-lineare-dgl-1-ordnung-gelost">Wie wird eine inhomogene lineare DGL 1. Ordnung gelöst?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wie-wird-eine-inhomogene-lineare-differentialgleichung-1-ordnung-gelost">Wie wird eine inhomogene lineare Differentialgleichung 1. Ordnung gelöst?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#beispiel-zur-losung-einer-inhomogenen-linearen-dgl-1-ordnung">Beispiel zur Lösung einer inhomogenen linearen DGL 1. Ordnung</a></li>
 </ul>
   </nav></div>
 
