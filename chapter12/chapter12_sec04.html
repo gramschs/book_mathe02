@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>12.4 Homogene Systeme linearer DGL 1. Ordnung &#8212; Mathematik 2 Maschinenbau</title>
+    <title>12.4 Homogene Systeme aus zwei linearen DGL 1. Ordnung &#8212; Mathematik 2 Maschinenbau</title>
   
   
   
@@ -260,7 +260,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="chapter12_sec01.html">12.1 Lineare DGL 1. Ordnung</a></li>
 <li class="toctree-l2"><a class="reference internal" href="chapter12_sec02.html">12.2 Lösung homogene lineare DGL 1. Ordnung</a></li>
 <li class="toctree-l2"><a class="reference internal" href="chapter12_sec03.html">12.3 Lösung inhomogene lineare DGL 1. Ordnung</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">12.4 Homogene Systeme linearer DGL 1. Ordnung</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">12.4 Homogene Systeme aus zwei linearen DGL 1. Ordnung</a></li>
 <li class="toctree-l2"><a class="reference internal" href="chapter12_sec05.html">Übungen</a></li>
 </ul>
 </li>
@@ -415,7 +415,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>12.4 Homogene Systeme linearer DGL 1. Ordnung</h1>
+    <h1>12.4 Homogene Systeme aus zwei linearen DGL 1. Ordnung</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -427,12 +427,8 @@ document.write(`
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lernziele">Lernziele</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#was-ist-ein-system-von-differentialgleichungen">Was ist ein System von Differentialgleichungen?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wie-wird-ein-system-2-ordnung-gelost">Wie wird ein System 2. Ordnung gelöst?</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nullstellen">2 Nullstellen</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nullstelle">1 Nullstelle</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">0 Nullstellen</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wie-wird-ein-system-2-ordnung-gelost">Wie wird ein System 2. Ordnung gelöst?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#beispiel-zur-losung-eines-systems-2-ordnung">Beispiel zur Lösung eines Systems 2. Ordnung</a></li>
 </ul>
             </nav>
         </div>
@@ -444,83 +440,176 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="homogene-systeme-linearer-dgl-1-ordnung">
-<h1>12.4 Homogene Systeme linearer DGL 1. Ordnung<a class="headerlink" href="#homogene-systeme-linearer-dgl-1-ordnung" title="Permalink to this headline">#</a></h1>
-<div class="warning admonition">
-<p class="admonition-title">Warnung</p>
-<p>Achtung, dieser Abschnitt des Vorlesungsskriptes wird gerade überarbeitet!!!</p>
-</div>
+  <section class="tex2jax_ignore mathjax_ignore" id="homogene-systeme-aus-zwei-linearen-dgl-1-ordnung">
+<h1>12.4 Homogene Systeme aus zwei linearen DGL 1. Ordnung<a class="headerlink" href="#homogene-systeme-aus-zwei-linearen-dgl-1-ordnung" title="Permalink to this headline">#</a></h1>
+<p>In Natur und Technik wird häufig nicht nur eine Differentialgleichung benötigt,
+um einen Prozess zu beschreiben, sondern viele Differentialgleichungen. Dabei
+kann es sein, dass die gesuchten Funktionen in mehreren Differentialgleichungen
+vorkommen. Es entsteht ein System von Differentialgleichungen. Wir beschränken
+uns in diesem Kapitel auf den einfachsten Fall, der auftreten kann.</p>
 <section id="lernziele">
 <h2>Lernziele<a class="headerlink" href="#lernziele" title="Permalink to this headline">#</a></h2>
 <div class="important admonition">
 <p class="admonition-title">Lernziele</p>
 <ul class="simple">
 <li><p>Sie können erklären, was ein <strong>System von Differentialgleichungen</strong> ist.</p></li>
-<li><p>Sie können ein <strong>System von Differentialgleichungen 2. Ordnung</strong> lösen.</p></li>
+<li><p>Sie können ein <strong>System von linearen Differentialgleichungen 2. Ordnung</strong> lösen.</p></li>
 </ul>
 </div>
 </section>
 <section id="was-ist-ein-system-von-differentialgleichungen">
 <h2>Was ist ein System von Differentialgleichungen?<a class="headerlink" href="#was-ist-ein-system-von-differentialgleichungen" title="Permalink to this headline">#</a></h2>
-<p>Wir betrachten in dieser Vorlesung nur Systeme von 2 DGL, die homogen, lineaer und von 1. Ordnung sind.</p>
+<p>Sind mehrere Differentialgleichungen nicht unabhängig voneinander, sondern
+treten die gesuchten Funktionen oder die Störfunktionen in mehreren
+Differentialgleichungen gleichzeitig auf, so sprechen wir von einem <strong>System von
+Differentialgleichungen</strong>. Wir betrachten in dieser Vorlesung nur Systeme von
+zwei Differentialgleichungen, bei denen beide Differentialgleichungen homogen,
+linear und von 1. Ordnung sind. Zusätzlich fordern wir, dass die Koeffizienten
+konstant sind.</p>
 <p>Ein System von Differentialgleichungen</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
 y_1' &amp;= a_{11}y_1 + a_{12}y_2 \\ 
 y_2' &amp;= a_{21}y_1 + a_{22}y_2
 \end{align*}\]</div>
-<p>heißt homogenes System von Differentialgleichungen 1. Ordnung mit konstanten Koeffizienten.</p>
-<p>Es werden also zwei Funktionen <span class="math notranslate nohighlight">\(y_1\)</span> und <span class="math notranslate nohighlight">\(y_2\)</span> gesucht. Beide gesuchten Funktionen kommen mit der 1. Ableitung vor, in Summe hat das System damit die 2. Ordnung.</p>
-<!-- #region -->
+<p>heißt homogenes System von Differentialgleichungen 1. Ordnung mit konstanten
+Koeffizienten.</p>
+<p>Es werden also zwei Funktionen <span class="math notranslate nohighlight">\(y_1\)</span> und <span class="math notranslate nohighlight">\(y_2\)</span> gesucht, die jeweils in der
+anderen Differentialgleichung ebenfalls auftauchen. Um dem System jetzt auch
+eine Ordnung zuzuweisen, summieren wir über die Ordnungen der einzelnen
+Differentialgleichungen. Daher hat das System aus den beiden
+Differentialgleichungen 1. Ordnung insgesamt die Ordnung 2.</p>
 </section>
 <section id="wie-wird-ein-system-2-ordnung-gelost">
 <h2>Wie wird ein System 2. Ordnung gelöst?<a class="headerlink" href="#wie-wird-ein-system-2-ordnung-gelost" title="Permalink to this headline">#</a></h2>
-<p>Bilde die <strong>charakteristische Gleichung</strong></p>
+<p>Zur Lösung von Systemen von linearen Differentialgleichungen kombinieren wir die
+Lösung einzelner Differentialgleichungen mit der Lösung von linearen
+Gleichungssystemen. Da wir uns auf konstante Koeffizienten beschränken, können
+wir die Koeffizienten in eine Matrix schreiben.</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}\det(A-\lambda E) = \begin{vmatrix} a_{11}-\lambda &amp; a_{12} \\ a_{21} &amp; a_{22}-\lambda \end{vmatrix}\end{split}\]</div>
-<p>und berechne die Nullstellen <span class="math notranslate nohighlight">\(\lambda_1\)</span> und <span class="math notranslate nohighlight">\(\lambda_2\)</span> (=Eigenwerte).</p>
-<p>Es gibt drei mögliche Lösungen:</p>
+\[\begin{split}A = 
+\begin{pmatrix} 
+a_{11} &amp; a_{12} \\ 
+a_{21} &amp; a_{22} 
+\end{pmatrix}.\end{split}\]</div>
+<p>Dadurch können wir das System von Differentialgleichungen als
+Matrix-Vektor-Multiplikation darstellen:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{pmatrix} 
+a_{11} &amp; a_{12} \\ 
+a_{21} &amp; a_{22} \end{pmatrix} \cdot
+\begin{pmatrix} y_1 \\ y_2 \end{pmatrix} = 
+\begin{pmatrix} y_{1}'\\ y_{2}' \end{pmatrix}.\end{split}\]</div>
+<p>Bei den homogenen lineare Differentialgleichungen zeigte sich, dass diese durch
+eine Exponentialfunktion gelöst werden können. Als Lösungsansatz wählen wir
+daher</p>
+<div class="math notranslate nohighlight">
+\[y_1 = C_1 \, e^{\lambda x} \quad \text{ und } 
+\quad y_2 = C_2 \, e^{\lambda x}.\]</div>
+<p>Dabei haben wir drei unbekannte Konstanten, nämlich <span class="math notranslate nohighlight">\(C_1\)</span>, <span class="math notranslate nohighlight">\(C_2\)</span> und <span class="math notranslate nohighlight">\(\lambda\)</span>.
+Die beiden Konstanten <span class="math notranslate nohighlight">\(C_1\)</span> und <span class="math notranslate nohighlight">\(C_2\)</span> werden unsere Integrationskonstanten
+werden. Da wir ein System 2. Ordnung haben, brauchen wir zwei
+Integrationskonstanten. Aber <span class="math notranslate nohighlight">\(\lambda\)</span> muss noch bestimmt werden. Wir machen
+weiter und bilden die erste Ableitung der beiden Ansatzfunktionen</p>
+<div class="math notranslate nohighlight">
+\[y_1'= C_1 \, \lambda e^{\lambda x} \quad \text{ und } 
+\quad y_2' = C_2 \, \lambda e^{\lambda x}.\]</div>
+<p>Setzen wir nun beide Ansatzfunktionen in das System von Differentialgleichungen
+ein, so erhalten wir</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+C_1 \, \lambda e^{\lambda x} &amp;= a_{11} C_1 \, e^{\lambda x} + a_{12} C_2 \, e^{\lambda x} \\ 
+C_2 \, \lambda e^{\lambda x} &amp;= a_{21} C_1 \, e^{\lambda x} + a_{22} C_2 \, e^{\lambda x}
+\end{align*}\]</div>
+<p>Wir teilen durch <span class="math notranslate nohighlight">\(e^{\lambda x}\)</span> und erhalten</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+C_1 \, \lambda  &amp;= a_{11} C_1 + a_{12} C_2 \\ 
+C_2 \, \lambda  &amp;= a_{21} C_1 + a_{22} C_2 
+\end{align*}\]</div>
+<p>Bringen wir die Terme <span class="math notranslate nohighlight">\(C_1 \, \lambda\)</span> und <span class="math notranslate nohighlight">\(C_2 \, \lambda\)</span> jeweils aud die rechte Seite und schreiben das Gleichungssystem in Matrixform, so erhalten wir</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{pmatrix} 
+a_{11} - \lambda &amp; a_{21} \\
+a_{21} &amp; a_{22} - \lambda 
+\end{pmatrix} \cdot 
+\begin{pmatrix} C_1 \\ C_2 \end{pmatrix} =
+\begin{pmatrix} 0 \\ 0 \end{pmatrix}. \end{split}\]</div>
+<p>Wenn die Determinante dieses linearen Gleichungssystems ungleich Null ist, dann
+kommen nur <span class="math notranslate nohighlight">\(C_1 = C_2 = 0\)</span> als Lösung infrage. Damit wären aber auch <span class="math notranslate nohighlight">\(y_1\)</span> und
+<span class="math notranslate nohighlight">\(y_2\)</span> die Nullfunktionen. Das System von Differentialgleichungen hat nur
+Funktionen als Lösung, die nicht die Nullfunktion sind, wenn die Determinante
+dieses Gleichungssystems Null ist.</p>
+<p>Wir setzen also</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\det \begin{pmatrix} 
+a_{11} - \lambda &amp; a_{12} \\
+a_{21} &amp; a_{22} - \lambda 
+\end{pmatrix} \overset{!}{=} 0\end{split}\]</div>
+<p>an und bestimmen <span class="math notranslate nohighlight">\(\lambda\)</span> so, dass die Determinante Null ist. Diese Gleichung
+wird übrigens <strong>charakteristische Gleichung</strong> genannt und wird folgendermaßen notiert:</p>
+<div class="math notranslate nohighlight">
+\[(a_{11}-\lambda) \cdot (a_{22}-\lambda) - a_{21} \, a_{12} = 0.\]</div>
+<p>Es gibt drei mögliche Lösungen, die sogenannten Eigenwerte der
+charakteristischen Gleichung:</p>
 <ul class="simple">
 <li><p>2 Nullstellen, d.h. <span class="math notranslate nohighlight">\(\lambda_1 \neq \lambda_2\)</span> reell</p></li>
 <li><p>1 Nullstelle, d.h. <span class="math notranslate nohighlight">\(\lambda_1 = \lambda_2\)</span> reell</p></li>
 <li><p>0 Nullstellen, d.h. <span class="math notranslate nohighlight">\(\lambda_1 \neq \lambda_2\)</span> komplex, weil für die komplexen Zahlen eine quadratische Gleichung immer zwei Lösungen hat</p></li>
 </ul>
 <p>Je nachdem, welcher dieser dieser Fälle eintritt, lauten die Lösungen wie folgt.</p>
-<section id="nullstellen">
-<h3>2 Nullstellen<a class="headerlink" href="#nullstellen" title="Permalink to this headline">#</a></h3>
+<p><strong>1. Fall: 2 Nullstellen</strong></p>
 <p>Es gilt also <span class="math notranslate nohighlight">\(\lambda_1 \neq \lambda_2\)</span> reell.</p>
 <ol class="arabic simple">
 <li><p>Lösungsfunktion: <span class="math notranslate nohighlight">\(y_1(x)=C_1\cdot e^{\lambda_1 x} + C_2\cdot e^{\lambda_2 x}\)</span></p></li>
-<li><p>Lösungsfunktion erhalten wir, indem wir die <span class="math notranslate nohighlight">\(y_1\)</span> in die 1. DGL einsetzen und dann nach <span class="math notranslate nohighlight">\(y_2\)</span> auflösen:</p></li>
+<li><p>Lösungsfunktion: erhalten wir, indem wir die <span class="math notranslate nohighlight">\(y_1\)</span> in die 1. DGL einsetzen und dann nach <span class="math notranslate nohighlight">\(y_2\)</span> auflösen:</p></li>
 </ol>
 <div class="math notranslate nohighlight">
 \[y_2(x)=\frac{1}{a_{12}}(y_1' - a_{11} y_1) \]</div>
-</section>
-<section id="nullstelle">
-<h3>1 Nullstelle<a class="headerlink" href="#nullstelle" title="Permalink to this headline">#</a></h3>
+<p><strong>2. Fall: 1 Nullstelle</strong></p>
 <p>Es gilt also <span class="math notranslate nohighlight">\(\lambda_1 = \lambda_2 = \alpha\)</span> reell.</p>
 <ol class="arabic simple">
 <li><p>Lösungsfunktion: <span class="math notranslate nohighlight">\(y_1(x)=(C_1+C_2 x) \cdot e^{\alpha x} \)</span></p></li>
-<li><p>Lösungsfunktion erhalten wir wiederum als</p></li>
+<li><p>Lösungsfunktion:</p></li>
 </ol>
 <div class="math notranslate nohighlight">
 \[y_2(x)=\frac{1}{a_{12}}(y_1' - a_{11} y_1) \]</div>
-</section>
-<section id="id1">
-<h3>0 Nullstellen<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h3>
+<p><strong>3. Fall: 0 Nullstellen</strong></p>
 <p>Es gilt also <span class="math notranslate nohighlight">\(\lambda_1 \neq \lambda_2\)</span> komplex, die komplexen Nullstellen können geschrieben werden als <span class="math notranslate nohighlight">\(\lambda_{1/2}=\alpha \pm \omega i\)</span>.</p>
 <ol class="arabic simple">
 <li><p>Lösungsfunktion: <span class="math notranslate nohighlight">\(y_1(x)=e^{\alpha x}\left(C_1\sin(\omega x) + C_2 \cos(\omega x)\right) \)</span></p></li>
-<li><p>Lösungsfunktion erhalten wir wiederum als</p></li>
+<li><p>Lösungsfunktion:</p></li>
 </ol>
 <div class="math notranslate nohighlight">
 \[y_2(x)=\frac{1}{a_{12}}(y_1' - a_{11} y_1) \]</div>
-<!-- #endregion -->
-<div class="seealso admonition">
-<p class="admonition-title">Video</p>
-<p><a class="reference external" href="https://www.youtube.com/embed/u1Jm4YXF11c">https://www.youtube.com/embed/u1Jm4YXF11c</a></p>
-</div>
 </section>
+<section id="beispiel-zur-losung-eines-systems-2-ordnung">
+<h2>Beispiel zur Lösung eines Systems 2. Ordnung<a class="headerlink" href="#beispiel-zur-losung-eines-systems-2-ordnung" title="Permalink to this headline">#</a></h2>
+<p>Wir betrachten das homogene System 2. Ordnung</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+y_1' &amp;= -8y_1 - 2y_2 \\
+y_2' &amp;= 15y_1 + 5y_2 
+\end{align*}\]</div>
+<p>mit der Koeffizientenmatrix</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}A = \begin{pmatrix} -8 &amp; -2 \\ 15 &amp; 5 \end{pmatrix}.\end{split}\]</div>
+<p>Die Nullstellen der charakteristischen Gleichung</p>
+<div class="math notranslate nohighlight">
+\[\det (A-\lambda I) = 0\]</div>
+<p>sind <span class="math notranslate nohighlight">\(\lambda_1 = -5\)</span> und <span class="math notranslate nohighlight">\(\lambda_2 = 2\)</span>.</p>
+<p>Damit ist die erste Lösungsfunktion</p>
+<div class="math notranslate nohighlight">
+\[y_1(x) = C_1 \, e^{-5x} + C_2 \, e^{2x}.\]</div>
+<p>Wir berechnen schon einmal die erste Ableitung davon, da wir <span class="math notranslate nohighlight">\(y_1'\)</span> für die
+Berechnung von <span class="math notranslate nohighlight">\(y_2\)</span> brauchen:</p>
+<div class="math notranslate nohighlight">
+\[y_1'(x) = -5 C_1 e^{-5x} + 2 C_2 e^{2x}.\]</div>
+<p>Die zweite Lösungsfunktion ist damit</p>
+<div class="math notranslate nohighlight">
+\[y_2(x) = \frac{1}{-2} (y_1' - (-8)\cdot y_1) = (\frac{5}{2}C_1+8) e^{-5x} +
+(8-C_2) e^{2x}.\]</div>
 </section>
 </section>
 
@@ -593,12 +682,8 @@ y_2' &amp;= a_{21}y_1 + a_{22}y_2
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lernziele">Lernziele</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#was-ist-ein-system-von-differentialgleichungen">Was ist ein System von Differentialgleichungen?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wie-wird-ein-system-2-ordnung-gelost">Wie wird ein System 2. Ordnung gelöst?</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nullstellen">2 Nullstellen</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nullstelle">1 Nullstelle</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">0 Nullstellen</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wie-wird-ein-system-2-ordnung-gelost">Wie wird ein System 2. Ordnung gelöst?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#beispiel-zur-losung-eines-systems-2-ordnung">Beispiel zur Lösung eines Systems 2. Ordnung</a></li>
 </ul>
   </nav></div>
 
