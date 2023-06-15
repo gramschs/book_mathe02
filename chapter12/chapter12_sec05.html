@@ -66,10 +66,12 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'chapter12/chapter12_sec05';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="prev" title="12.4 Homogene Systeme linearer DGL 1. Ordnung" href="chapter12_sec04.html" />
+    <link rel="prev" title="12.4 Homogene Systeme aus zwei linearen DGL 1. Ordnung" href="chapter12_sec04.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="None"/>
   </head>
@@ -257,7 +259,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="chapter12_sec01.html">12.1 Lineare DGL 1. Ordnung</a></li>
 <li class="toctree-l2"><a class="reference internal" href="chapter12_sec02.html">12.2 Lösung homogene lineare DGL 1. Ordnung</a></li>
 <li class="toctree-l2"><a class="reference internal" href="chapter12_sec03.html">12.3 Lösung inhomogene lineare DGL 1. Ordnung</a></li>
-<li class="toctree-l2"><a class="reference internal" href="chapter12_sec04.html">12.4 Homogene Systeme linearer DGL 1. Ordnung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter12_sec04.html">12.4 Homogene Systeme aus zwei linearen DGL 1. Ordnung</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Übungen</a></li>
 </ul>
 </li>
@@ -430,6 +432,203 @@ document.write(`
 <p class="admonition-title">Warnung</p>
 <p>Achtung, dieser Abschnitt des Vorlesungsskriptes wird gerade überarbeitet!!!</p>
 </div>
+<div class="miniexercise admonition">
+<p class="admonition-title">Übung 12.1</p>
+<p>Lösen Sie das Anfangswertproblem</p>
+<div class="math notranslate nohighlight">
+\[y'= -5y\]</div>
+<p>für <span class="math notranslate nohighlight">\(y(0)=5\)</span>.</p>
+</div>
+<div class="minisolution toggle admonition">
+<p class="admonition-title">Lösung</p>
+<p>Allgemeine Lösung:</p>
+<div class="math notranslate nohighlight">
+\[y(x)=C\, e^{-5x}, \quad C\in\mathbb{R}\]</div>
+<p>Spezielle Lösung für <span class="math notranslate nohighlight">\(y(0)=5\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[y(x) = 5 \, e^{-5x}.\]</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Lösungsweg<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Die DGL ist eine lineare DGL mit <span class="math notranslate nohighlight">\(a_1(x)=1\)</span> und <span class="math notranslate nohighlight">\(a_0(x)=5\)</span>. Daher lautet die allgemeine Lösung</p>
+<div class="math notranslate nohighlight">
+\[y(x)=C \, e^{-\int \frac{a_0(x)}{a_1(x)}\, dx} 
+= C \, e^{-\int 5 \, dx} = C \, e^{-5x}. \]</div>
+<p class="sd-card-text">Für die spezielle Lösung soll</p>
+<div class="math notranslate nohighlight">
+\[y(0)= C \, e^{-5x} \overset{!}{=} 5\]</div>
+<p class="sd-card-text">gelten. Die Gleichung wird nach <span class="math notranslate nohighlight">\(C\)</span> aufgelöst und wir erhalten <span class="math notranslate nohighlight">\(C=5\)</span>. Also lautet die spezielle Lösung des Anfangwertproblems</p>
+<div class="math notranslate nohighlight">
+\[y(x) = 5 \, e^{-5x}.\]</div>
+<p class="sd-card-text">Hinweis: Direkt integrieren hätte auch funktioniert.</p>
+</div>
+</details></div>
+<div class="miniexercise admonition">
+<p class="admonition-title">Übung 12.2</p>
+<p>Lösen Sie das Anfangswertproblem</p>
+<div class="math notranslate nohighlight">
+\[\dot{x} + 5x = -5t\]</div>
+<p>für <span class="math notranslate nohighlight">\(x(0)=5\)</span>.</p>
+</div>
+<div class="minisolution toggle admonition">
+<p class="admonition-title">Lösung</p>
+<p>Allgemeine Lösung:</p>
+<div class="math notranslate nohighlight">
+\[x(t) = -t + \frac{1}{5} + C\cdot e^{-5t}, \quad C\in\mathbb{R}\]</div>
+<p>Spezielle Lösung für <span class="math notranslate nohighlight">\(x(0)=5\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[x(t) = -t + \frac{1}{5} + \frac{24}{5} e^{-5t}\]</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Lösungsweg<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Die DGL ist eine lineare inhomogene DGL mit <span class="math notranslate nohighlight">\(a_1(t)=1\)</span> und <span class="math notranslate nohighlight">\(a_0(t)=5\)</span>. Daher bestimmen wir zuerst die allgemeine Lösung der homogenen DGL</p>
+<div class="math notranslate nohighlight">
+\[\dot{x} + 5x = 0.\]</div>
+<p class="sd-card-text">Das ist die Differentialgleichung aus Aufgabe 12.1 und die allgemeine homogene Lösung lautet</p>
+<div class="math notranslate nohighlight">
+\[x_h(t) = C \cdot e^{-5t}.\]</div>
+<p class="sd-card-text">Wir variieren die Konstante und nehmen den Lösungsansatz</p>
+<div class="math notranslate nohighlight">
+\[x(t) = C(t) \cdot e^{-5t}.\]</div>
+<p class="sd-card-text">Die erste Ableitung ist</p>
+<div class="math notranslate nohighlight">
+\[\dot{x}(t) = \dot{C}(t) e^{-5t} - 5 C(t) \cdot e^{-5t}.\]</div>
+<p class="sd-card-text">Jetzt werden die Lösungsansatzfunktion <span class="math notranslate nohighlight">\(x\)</span> und deren Ableitung <span class="math notranslate nohighlight">\(\dot{x}\)</span> in die inhomogene DGL eingesetzt:</p>
+<div class="math notranslate nohighlight">
+\[\dot{C}(t) e^{-5t} - 5C(t) e^{-5t} + 5 C(t) e^{-5t} = -5t.\]</div>
+<p class="sd-card-text">Werden die Terme vereinfacht, so wird diese Gleichung zu</p>
+<div class="math notranslate nohighlight">
+\[\dot{C}(t) = -5t e^{5t}.\]</div>
+<p class="sd-card-text">Wir integrieren partiell nach <span class="math notranslate nohighlight">\(t\)</span> und erhalten</p>
+<div class="math notranslate nohighlight">
+\[C(t) = -t e^{5t} + \frac{1}{5} e^{5t} + C.\]</div>
+<p class="sd-card-text">Somit lautet die allgemeine Lösung der inhomogenen DGL</p>
+<div class="math notranslate nohighlight">
+\[x(t) = -t + \frac{1}{5} + C\cdot e^{-5t}, \quad C\in\mathbb{R}\]</div>
+<p class="sd-card-text">Für die spezielle Lösung soll</p>
+<div class="math notranslate nohighlight">
+\[x(0)= -0 + \frac{1}{5} + C \cdot e^{-5\cdot 0} \overset{!}{=} 5\]</div>
+<p class="sd-card-text">gelten. Die Gleichung wird nach <span class="math notranslate nohighlight">\(C\)</span> aufgelöst und wir erhalten <span class="math notranslate nohighlight">\(C=\frac{24}{5}\)</span>. Also lautet die spezielle Lösung des Anfangwertproblems</p>
+<div class="math notranslate nohighlight">
+\[x(t) = -t + \frac{1}{5} + \frac{24}{5} e^{-5t}\]</div>
+</div>
+</details></div>
+<div class="miniexercise admonition">
+<p class="admonition-title">Übung 12.3</p>
+<p>Lösen Sie das Anfangswertproblem</p>
+<div class="math notranslate nohighlight">
+\[y'-5y = \sin(-5x)\]</div>
+<p>für <span class="math notranslate nohighlight">\(y(0)=-1\)</span>.</p>
+</div>
+<div class="minisolution toggle admonition">
+<p class="admonition-title">Lösung</p>
+<p>Allgemeine Lösung:</p>
+<div class="math notranslate nohighlight">
+\[y(x) = \frac{1}{10} \left(\sin(5x) + \cos(x)\right) + C\cdot e^{5x}\]</div>
+<p>Spezielle Lösung zum Anfangswert <span class="math notranslate nohighlight">\(y(0)=-1\)</span></p>
+<div class="math notranslate nohighlight">
+\[y(x) = \frac{1}{10} \cdot \left( \sin(5x) + \cos(5x)\right) - \frac{11}{10}\cdot e^{5x}.\]</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Lösungsweg<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Die DGL ist eine lineare inhomogene DGL mit <span class="math notranslate nohighlight">\(a_1(x)=1\)</span> und <span class="math notranslate nohighlight">\(a_0(x)=-5\)</span>. Daher bestimmen wir zuerst die allgemeine Lösung der homogenen DGL</p>
+<div class="math notranslate nohighlight">
+\[y' - 5y = 0.\]</div>
+<p class="sd-card-text">Die allgemeine Lösung der homogenen DGL lautet</p>
+<div class="math notranslate nohighlight">
+\[y_h(x) = C \cdot e^{5x}.\]</div>
+<p class="sd-card-text">Wir variieren die Konstante und nehmen den Lösungsansatz</p>
+<div class="math notranslate nohighlight">
+\[y(x) = C(x) \cdot e^{5x}.\]</div>
+<p class="sd-card-text">Die erste Ableitung ist</p>
+<div class="math notranslate nohighlight">
+\[y'(x) = C'(x) \cdot e^{5x} + C(x) \cdot 5e^{5x}.\]</div>
+<p class="sd-card-text">Jetzt werden die Lösungsansatzfunktion <span class="math notranslate nohighlight">\(y\)</span> und deren Ableitung <span class="math notranslate nohighlight">\(y'\)</span> in die inhomogene DGL eingesetzt:</p>
+<div class="math notranslate nohighlight">
+\[C'(x) \cdot e^{5x} + C(x) \cdot 5e^{5x} - 5 \cdot C(x) \cdot e^{5x} = \sin(-5x).\]</div>
+<p class="sd-card-text">Werden die Terme vereinfacht, so wird diese Gleichung zu</p>
+<div class="math notranslate nohighlight">
+\[C'(x) = \sin(-5x) \cdot e^{-5x}.\]</div>
+<p class="sd-card-text">Wir integrieren partiell nach <span class="math notranslate nohighlight">\(x\)</span> und erhalten</p>
+<div class="math notranslate nohighlight">
+\[C(x) = \frac{1}{10} e^{-5x}\cdot \left( \sin(5x) + \cos(5x)\right) + C.\]</div>
+<p class="sd-card-text">Somit lautet die allgemeine Lösung der inhomogenen DGL</p>
+<div class="math notranslate nohighlight">
+\[y(x) = \frac{1}{10} \cdot \left( \sin(5x) + \cos(5x)\right) + C\cdot e^{5x}.\]</div>
+<p class="sd-card-text">Für die spezielle Lösung soll</p>
+<div class="math notranslate nohighlight">
+\[y(0) = \frac{1}{10} \cdot \left( \sin(0) + \cos(0)\right) + C\cdot e^{0} \overset{!}{=} -1\]</div>
+<p class="sd-card-text">gelten.  Die Gleichung wird nach <span class="math notranslate nohighlight">\(C\)</span> aufgelöst und wir erhalten <span class="math notranslate nohighlight">\(C=-\frac{11}{10}\)</span>. Also lautet die spezielle Lösung des Anfangwertproblems</p>
+<div class="math notranslate nohighlight">
+\[y(x) = \frac{1}{10} \cdot \left( \sin(5x) + \cos(5x)\right) - \frac{11}{10}\cdot e^{5x}.\]</div>
+</div>
+</details></div>
+<div class="miniexercise admonition">
+<p class="admonition-title">Übung 12.4</p>
+<p>Lösen Sie das Anfangswertproblem</p>
+<div class="math notranslate nohighlight">
+\[2\dot{x} - 4x =e^{-t}\]</div>
+<p>für <span class="math notranslate nohighlight">\(x(0)=0\)</span>.</p>
+</div>
+<div class="minisolution toggle admonition">
+<p class="admonition-title">Lösung</p>
+<p>Allgemeine Lösung</p>
+<div class="math notranslate nohighlight">
+\[x(t) = -\frac{1}{6} e^{-t} + C\cdot e^{2t}.\]</div>
+<p>Spezielle Lösung für <span class="math notranslate nohighlight">\(x(0)=0\)</span></p>
+<div class="math notranslate nohighlight">
+\[x(t) = -\frac{1}{6} e^{-t} + \frac{1}{6}\cdot e^{2t}.\]</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Lösungsweg<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Die DGL ist eine lineare inhomogene DGL mit <span class="math notranslate nohighlight">\(a_1(t)=2\)</span> und <span class="math notranslate nohighlight">\(a_0(t)=-4\)</span>. Daher bestimmen wir zuerst die allgemeine Lösung der homogenen DGL</p>
+<div class="math notranslate nohighlight">
+\[2\dot{x} - 4x = 0.\]</div>
+<p class="sd-card-text">Die allgemeine Lösung der homogenen DGL lautet</p>
+<div class="math notranslate nohighlight">
+\[x_h(t) = C\cdot e^{2t}.\]</div>
+<p class="sd-card-text">Wir variieren die Konstante und nehmen den Lösungsansatz</p>
+<div class="math notranslate nohighlight">
+\[x(t) = C(t)\cdot e^{2t}.\]</div>
+<p class="sd-card-text">Die erste Ableitung ist</p>
+<div class="math notranslate nohighlight">
+\[\dot(x)(t) = \dot{C}(t) e^{2t} + 3 C(t) e^{2t}.\]</div>
+<p class="sd-card-text">Jetzt werden die Lösungsansatzfunktion <span class="math notranslate nohighlight">\(x\)</span> und deren Ableitung <span class="math notranslate nohighlight">\(\dot{x}\)</span> in die inhomogene DGL eingesetzt:</p>
+<div class="math notranslate nohighlight">
+\[2\cdot\dot{C}(t) e^{2t} + 4 C(t) e^{2t} - 4 C(t) e^{2t} = e^{-t}.\]</div>
+<p class="sd-card-text">Werden die Terme vereinfacht, so wird diese Gleichung zu</p>
+<div class="math notranslate nohighlight">
+\[\dot{C}(t) = \frac{1}{2} e^{-3t}.\]</div>
+<p class="sd-card-text">Wir integrieren partiell nach <span class="math notranslate nohighlight">\(t\)</span> und erhalten</p>
+<div class="math notranslate nohighlight">
+\[C(t) = -\frac{1}{6} e^{-3t} + C.\]</div>
+<p class="sd-card-text">Somit lautet die allgemeine Lösung der inhomogenen DGL</p>
+<div class="math notranslate nohighlight">
+\[x(t) = \left(-\frac{1}{6}e^{-3t} + C \right) \cdot e^{2t} = -\frac{1}{6} e^{-t} + C\cdot e^{2t}.\]</div>
+<p class="sd-card-text">Für die spezielle Lösung soll</p>
+<div class="math notranslate nohighlight">
+\[x(0) = -\frac{1}{6} e^{0} + C\cdot e^{0} \overset{!}{=} 0\]</div>
+<p class="sd-card-text">gelten.  Die Gleichung wird nach <span class="math notranslate nohighlight">\(C\)</span> aufgelöst und wir erhalten <span class="math notranslate nohighlight">\(C=\frac{1}{6}\)</span>. Also lautet die spezielle Lösung des Anfangwertproblems</p>
+<div class="math notranslate nohighlight">
+\[x(t) = -\frac{1}{6} e^{-t} + \frac{1}{6}\cdot e^{2t}.\]</div>
+</div>
+</details></div>
 </section>
 
     <script type="text/x-thebe-config">
@@ -469,7 +668,7 @@ document.write(`
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">12.4 Homogene Systeme linearer DGL 1. Ordnung</p>
+        <p class="prev-next-title">12.4 Homogene Systeme aus zwei linearen DGL 1. Ordnung</p>
       </div>
     </a>
 </div></div>
