@@ -1,0 +1,674 @@
+
+
+<!DOCTYPE html>
+
+
+<html >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>1.1 Stammfunktion und bestimmtes Integral &#8212; Mathematik 2 Maschinenbau</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/exercise.css" />
+    <link rel="stylesheet" type="text/css" href="_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'chapter01_sec01';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="None"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="#">
+  
+  
+  
+  
+  
+    <p class="title logo__title">Mathematik 2 Maschinenbau</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1 current active">
+                <a class="reference internal" href="#">
+                    1.1 Stammfunktion und bestimmtes Integral
+                </a>
+            </li>
+        </ul>
+        
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+<a href="https://github.com/gramschs/book_mathe02" target="_blank"
+   class="btn btn-sm btn-source-repository-button"
+   title="Source repository"
+   data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/chapter01_sec01.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>1.1 Stammfunktion und bestimmtes Integral</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lernziele">Lernziele</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#stammfunktion">Stammfunktion</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wichtige-stammfunktionen">Wichtige Stammfunktionen</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bestimmtes-integral">Bestimmtes Integral</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#beispiel-fur-bestimmtes-integral">Beispiel für bestimmtes Integral</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#integrale-als-flache-interpretiert">Integrale als Fläche interpretiert</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="stammfunktion-und-bestimmtes-integral">
+<h1>1.1 Stammfunktion und bestimmtes Integral<a class="headerlink" href="#stammfunktion-und-bestimmtes-integral" title="Permalink to this headline">#</a></h1>
+<p>In diesem Abschnitt führen wir zunächst Stammfunktionen und das bestimmte
+Integral ein, ohne die dazugehörigen Anwendungen und Herleitungen
+(Riemann-Integral oder Lesbegue-Integral) zu erläutern.</p>
+<section id="lernziele">
+<h2>Lernziele<a class="headerlink" href="#lernziele" title="Permalink to this headline">#</a></h2>
+<div class="important admonition">
+<p class="admonition-title">Lernziele</p>
+<ul class="simple">
+<li><p>Sie wissen, was eine <strong>Stammfunktion</strong> ist.</p></li>
+<li><p>Sie wissen, dass wenn es eine Stammfunktion gibt, es gleich unendlich viele
+Stammfunktionen gibt, die sich durch eine <strong>Integrationskonstante</strong>
+unterscheiden.</p></li>
+<li><p>Sie können mit Hilfe der Stammfunktionen ein <strong>bestimmtes Integral</strong> der
+Funktion <span class="math notranslate nohighlight">\(f\)</span> in einem Intervall <span class="math notranslate nohighlight">\([a,b]\)</span> berechnen (Hauptsatz der Differential-
+und Integralrechnung).</p></li>
+<li><p>Sie wissen, wie das bestimmte Integral mathematisch abgekürzt wird, nämlich
+<span class="math notranslate nohighlight">\(\int_{a}^{b} f(x) \, dx\)</span>, und können die einzelnen Bestandteile dieser
+Notation bezeichnen:</p>
+<ul>
+<li><p>Integralsymbol <span class="math notranslate nohighlight">\(\int\)</span>,</p></li>
+<li><p>untere Integrationsgrenze <span class="math notranslate nohighlight">\(a\)</span>,</p></li>
+<li><p>obere Integrationsgrenze <span class="math notranslate nohighlight">\(b\)</span>,</p></li>
+<li><p>Integrand <span class="math notranslate nohighlight">\(f(x)\)</span>,</p></li>
+<li><p>Integrationsvariable <span class="math notranslate nohighlight">\(dx\)</span>.</p></li>
+</ul>
+</li>
+<li><p>Sie können das bestimmte Integral über <span class="math notranslate nohighlight">\(f\)</span> von  <span class="math notranslate nohighlight">\(a\)</span> nach <span class="math notranslate nohighlight">\(b\)</span> als den
+Flächeninhalt zwischen Graph <span class="math notranslate nohighlight">\(f(x)\)</span> und x-Achse interpretieren. Flächeninhalte
+oberhalb der x-Achse sind positiv, Flächeninhalte unterhalb der x-Achse werden
+negativ gezählt. Daher nennt man diese Flächeninhalte <strong>orientierte
+Flächeninhalte</strong>.</p></li>
+</ul>
+</div>
+</section>
+<section id="stammfunktion">
+<h2>Stammfunktion<a class="headerlink" href="#stammfunktion" title="Permalink to this headline">#</a></h2>
+<div class="note admonition">
+<p class="admonition-title">Was ist … eine Stammfunktion?</p>
+<p>Angenommen, die Funktion <span class="math notranslate nohighlight">\(f\)</span> ist stetig. Dann wird die Funktion <span class="math notranslate nohighlight">\(F\)</span>
+Stammfunktion von <span class="math notranslate nohighlight">\(f\)</span> genannt, wenn ihre Ableitungsfunktion gleich <span class="math notranslate nohighlight">\(f\)</span> ist, also
+wenn gilt <span class="math notranslate nohighlight">\(F'(x) =  f(x)\)</span>.</p>
+</div>
+<p>Beispiel: Wir betrachten die Funktion <span class="math notranslate nohighlight">\(f(x)=x\)</span>. Mit ein bisschen Probieren fällt
+auf, dass die Funktion <span class="math notranslate nohighlight">\(F(x)=\frac{1}{2}x^2\)</span> abgeleitet genau <span class="math notranslate nohighlight">\(x\)</span> ergibt. Also
+ist die Funktion <span class="math notranslate nohighlight">\(F\)</span> eine Stammfunktion von <span class="math notranslate nohighlight">\(f\)</span>. Jetzt probieren wir die
+Funktion <span class="math notranslate nohighlight">\(\tilde{F}(x)=\frac{1}{2}x^2+1\)</span> aus. Wenn wir diese Funktion ableiten,
+kommt</p>
+<div class="math notranslate nohighlight">
+\[\tilde{F}'(x) = \left( \frac{1}{2}x^2 + 1 \right)'= x + 0 = x\]</div>
+<p>heraus. Das ist aber auch gleich der Funktion <span class="math notranslate nohighlight">\(f\)</span>. Welches ist denn nun die
+richtige Stammfunktion?</p>
+<p>Beide Funktionen sind eine Stammfunktion. Wenn eine Funktion <span class="math notranslate nohighlight">\(f\)</span> eine
+Stammfunktion hat, dann hat sie gleich unendlich viele Stammfunktionen, denn es
+muss nur eine reelle Zahl hinzuaddiert werden und schon hat man eine neue
+Stammfunktion.</p>
+<div class="note admonition">
+<p class="admonition-title">Wie viele Stammfunktionen gibt es?</p>
+<p>Wenn eine Funktion <span class="math notranslate nohighlight">\(f\)</span> eine Stammfunktion hat, hat sie gleich unendlich viele
+Stammfunktionen. Die Stammfunktionen unterscheiden sich nur dadurch, dass eine
+reelle Zahl am Ende dazuaddiert wird. Diese Zahl wird <strong>Integrationskonstante</strong>
+genannt.</p>
+</div>
+<p>Begründung: Wenn <span class="math notranslate nohighlight">\(F\)</span> die erste gefundene Stammfunktion ist, dann muss ihre 1.
+Ableitung gleich <span class="math notranslate nohighlight">\(f\)</span> sein, also <span class="math notranslate nohighlight">\(F'(x) = f(x)\)</span> gelten. Dann basteln wir eine
+neue Funktion <span class="math notranslate nohighlight">\(\tilde{F}(x) = F(x) + c\)</span> mit <span class="math notranslate nohighlight">\(c\in\mathbb{R}\)</span>. Das muss dann aber
+auch eine Stammfunktion sein, denn</p>
+<div class="math notranslate nohighlight">
+\[\tilde{F}'(x) = \left(F(x)+c\right)' = F'(x) + 0 = f(x).\]</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Video: Stammfunktion und unbestimmtes Integral<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/m__ID4PHBIA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+</details></section>
+<section id="wichtige-stammfunktionen">
+<h2>Wichtige Stammfunktionen<a class="headerlink" href="#wichtige-stammfunktionen" title="Permalink to this headline">#</a></h2>
+<p>Zu Funktionen, die häufig im Maschinenbau vorkommen, sollten Sie die
+Stammfunktionen auswendig kennen.</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(f(x) = a \Rightarrow F(x) = ax + c\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(f(x) = x^{n} \Rightarrow F(x) = \frac{1}{n+1} x^{n+1} + c\)</span> (<span class="math notranslate nohighlight">\(n\)</span> muss ungleich -1 sein)</p></li>
+<li><p><span class="math notranslate nohighlight">\(f(x) = x^{-1}=\frac{1}{x} \Rightarrow F(x) = |\ln(x)| + c\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(f(x) = e^{x} \Rightarrow F(x)=e^{x}+c\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(f(x) = \sin(x) \Rightarrow F(x)=-\cos(x)+c\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(f(x) = \cos(x) \Rightarrow F(x)=\sin(x)+c\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(f(x)=\frac{1}{1+x^2} \Rightarrow F(x) = \arctan(x) + c\)</span></p></li>
+</ul>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Video: wichtige Stammfunktionen<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/hKiAG99XmTE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+</details></section>
+<section id="bestimmtes-integral">
+<h2>Bestimmtes Integral<a class="headerlink" href="#bestimmtes-integral" title="Permalink to this headline">#</a></h2>
+<p>Stammfunktionen sind für viele technische Anwendungen nützlich, weil sie
+sozusagen die Umkehrung der Ableitung sind. Das Suchen einer Stammfunktion wird
+<strong>Integration</strong> genannt. Eine Anwendung der Stammfunktion ist die Berechnung des
+sogenannten bestimmten Integrals. Das <strong>bestimmte Integral</strong> ist wichtig für die
+Berechnung von Flächeninhalten, Längen von Kurven und Volumen von
+Rotationskörpern.</p>
+<p>Der sogenannte <strong>Hauptsatz der Differential- und Integralrechnung</strong> sagt aus,
+dass das bestimmte Integral mit Hilfe von Stammfunktionen folgendermaßen
+berechnet wird.</p>
+<div class="note admonition">
+<p class="admonition-title">Wie wird das bestimmte Integral berechnet?</p>
+<p>Das bestimmte Integral eine Funktion <span class="math notranslate nohighlight">\(f\)</span> in einem Intervall <span class="math notranslate nohighlight">\([a,b]\)</span> wird
+berechnet, indem zuerst eine Stammfunktion <span class="math notranslate nohighlight">\(F\)</span> gebildet wird. Dann wird in die
+Stammfunktion <span class="math notranslate nohighlight">\(F\)</span> zuerst <span class="math notranslate nohighlight">\(b\)</span> eingesetzt und dann <span class="math notranslate nohighlight">\(a\)</span>. Aus beiden Werten wird
+dann die Differenz gebildet. Diese Zahl heißt bestimmtes Integral von <span class="math notranslate nohighlight">\(f\)</span> im
+Intervall <span class="math notranslate nohighlight">\([a,b]\)</span>.</p>
+<p>Mathematisch wird dazu folgende Schreibweise verwendet:</p>
+<div class="math notranslate nohighlight">
+\[\int_{a}^{b} f(x)\, dx = F(b) - F(a).\]</div>
+</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Video: bestimmtes Integral<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/XtWVTl4fMmY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+</details></section>
+<section id="beispiel-fur-bestimmtes-integral">
+<h2>Beispiel für bestimmtes Integral<a class="headerlink" href="#beispiel-fur-bestimmtes-integral" title="Permalink to this headline">#</a></h2>
+<p>Als nächstes soll das bestimmte Integral der Funktion <span class="math notranslate nohighlight">\(f(x)= 5x^2\)</span> im Intervall
+<span class="math notranslate nohighlight">\([-1,3]\)</span> ausgerechnet werden. Als erstes wird eine Stammfunktion berechnet
+(geraten):</p>
+<div class="math notranslate nohighlight">
+\[F(x) = \frac{5}{3}x^3.\]</div>
+<p>Danach werden <span class="math notranslate nohighlight">\(a=-1\)</span> und <span class="math notranslate nohighlight">\(b=3\)</span> in die Stammfunktion eingesetzt und die Differenz
+berechnet:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(F(-1)=\frac{5}{3}(-1)^3 = -\frac{5}{3}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(F(3) = \frac{5}{3}(3)^3 = 45\)</span></p></li>
+<li><p>Differenz: <span class="math notranslate nohighlight">\(F(3) - F(-1) = 45 - \left(-\frac{5}{3}\right) = \frac{140}{3}\)</span>.</p></li>
+</ul>
+<p>Damit ist das bestimmte Integral der Funktion <span class="math notranslate nohighlight">\(f(x) = 5x^2\)</span> im Intervall
+<span class="math notranslate nohighlight">\([-1,3]\)</span> die Zahl <span class="math notranslate nohighlight">\(\frac{140}{3}\)</span>.</p>
+<p>Es ist etwas umständlich, so viel Text in eine Rechnung zu packen. Deshalb ist
+folgende Schreibweise üblich:</p>
+<div class="math notranslate nohighlight">
+\[\int_{-1}^{3} 5x^2 \, dx = \left[\frac{5}{3}x^3 \right]_{-1}^{3} = 45 -
+\left(-\frac{5}{3}\right) = \frac{140}{3}.\]</div>
+<p>Zuerst kommt die mathematische Schreibweise für das bestimme Integral mit</p>
+<div class="math notranslate nohighlight">
+\[\int_{-1}^{3}  5x^2 \, dx.\]</div>
+<p>Das geschwungene <span class="math notranslate nohighlight">\(\int\)</span> wird <strong>Integralsymbol</strong> genannt. Der Anfang des
+Intervalls, hier also -1, wird <strong>untere Integrationsgrenze</strong> genannt. Das Ende
+des Intervalls, hier also 3, wird <strong>obere Integrationsgrenze</strong> genannt. Die
+Funktion, von der die Stammfunktion gesucht wird, hier also <span class="math notranslate nohighlight">\(f(x)=5x^2\, dx\)</span>,
+wird <strong>Integrand</strong> genannt. Da manchmal Funktionen auch Parameter enthalten,
+muss eindeutig geklärt werden, welches die Variable der Funktion ist. Das wird
+durch die <strong>Integrationsvariable</strong> spezifiziert, hier <span class="math notranslate nohighlight">\(dx\)</span>. Warum da ein “d”
+dabei steht, kommt in einem späteren Kapitel.</p>
+<p>In der Rechnung muss als erstes die Stammfunktion <span class="math notranslate nohighlight">\(F\)</span> berechnet werden. Um klar
+zu machen, dass das jetzt die Stammfunktion ist, werden sehr große eckige
+Klammern verwendet, hier also <span class="math notranslate nohighlight">\(\left[\frac{5}{3}x^3\right]\)</span>. Für die
+Integrationsvariable <span class="math notranslate nohighlight">\(c\)</span> wählen wir Null. In der anschließenden Differenzbildung
+würde sie ohnehin wegfallen. Zuletzt folgt noch das Einsetzen der
+Integrationsgrenzen in die Stammfunktion. Zuerst wird die obere
+Integrationsgrenze <span class="math notranslate nohighlight">\(b=3\)</span> eingesetzt, hier also <span class="math notranslate nohighlight">\(F(3)=45\)</span>, und dann der Wert
+der Stammfunktion an der unteren Integrationsgrenze, hier also
+<span class="math notranslate nohighlight">\(F(-1)=-\frac{5}{3}\)</span> subtrahiert.</p>
+<p>Im folgenden Video finden Sie weitere Beispiele.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Video: bestimmtes Interal - Beispiele<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/aEtIsjWr0dg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+</details></section>
+<section id="integrale-als-flache-interpretiert">
+<h2>Integrale als Fläche interpretiert<a class="headerlink" href="#integrale-als-flache-interpretiert" title="Permalink to this headline">#</a></h2>
+<p>Bisher ist das bestimmte Integral über <span class="math notranslate nohighlight">\(f\)</span> von <span class="math notranslate nohighlight">\(a\)</span> bis <span class="math notranslate nohighlight">\(b\)</span> einfach eine Zahl,
+die als Differenz von der Stammfunktion <span class="math notranslate nohighlight">\(F\)</span> an den Stellen <span class="math notranslate nohighlight">\(a\)</span> und <span class="math notranslate nohighlight">\(b\)</span> bestimmt
+wird, also <span class="math notranslate nohighlight">\(F(b)-F(a)\)</span>. Je nach Anwendung wird dieser Zahl eine ganz bestimmte
+Bedeutung gegeben. Als ersten und wichtigsten Fall betrachten wir das Integral
+in der Geometrie. Hier entspricht das Integral von <span class="math notranslate nohighlight">\(a\)</span> bis <span class="math notranslate nohighlight">\(b\)</span> über <span class="math notranslate nohighlight">\(f\)</span> dem
+<strong>orientierten Flächeninhalt</strong> zwischen dem Funktionsgraphen <span class="math notranslate nohighlight">\(f(x)\)</span> und der
+x-Achse. Aber was ist eigentlich der orientierte Flächeninhalt?</p>
+<p>Wenn alle Funktionswerte <span class="math notranslate nohighlight">\(f(x)\)</span> oberhalb der x-Achse liegen, dann ist <span class="math notranslate nohighlight">\(f(x)\geq
+0\)</span> für alle <span class="math notranslate nohighlight">\(x\)</span> im Intervall <span class="math notranslate nohighlight">\([a,b]\)</span>. Dann ist der Flächeninhalt zwischen
+<span class="math notranslate nohighlight">\(f(x)\)</span>, der x-Achse und den Geraden <span class="math notranslate nohighlight">\(x=a\)</span> und <span class="math notranslate nohighlight">\(x=b\)</span> gleich dem Integral über <span class="math notranslate nohighlight">\(f\)</span> , d.h.</p>
+<div class="math notranslate nohighlight">
+\[A = \int_{a}^{b} f(x)\, dx.\]</div>
+<p>Liegen aber alle Funktionswerte <span class="math notranslate nohighlight">\(f(x)\)</span> unterhalb der x-Achse, so ist das
+Integral negativ. Aber eigentlich entspricht es auch der Fläche, nur sind
+Flächen natürlich immer positiv. Deswegen sagen wir, der Flächeninhalt ist
+orientiert. Liegt die Fläche oberhalb der x-Achse, so wird diese positiv
+gewertet. Liegt sie unterhalb der x-Achse, wird der orientierte Flächeninhalt
+mit einem Minus versehen, um klar zu machen, dass diese Fläche unterhalb der
+x-Achse liegt.</p>
+<p>In dem folgenden Video wird die Flächeninterpretation des Integrals nochmal
+erläutert und auch gezeigt, wie diese Interpretation bei punktsymmetrischen
+Funktionen ausgenutzt werden kann, sich selbst das Rechnen etwas zu erleichtern.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Video: bestimmtes Integral - Flächeninterpretation<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/6rJOt8mWY_I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+</details></section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lernziele">Lernziele</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#stammfunktion">Stammfunktion</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wichtige-stammfunktionen">Wichtige Stammfunktionen</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bestimmtes-integral">Bestimmtes Integral</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#beispiel-fur-bestimmtes-integral">Beispiel für bestimmtes Integral</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#integrale-als-flache-interpretiert">Integrale als Fläche interpretiert</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Simone Gramsch
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+<div class="extra_footer">
+  <div>
+<a href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img class="license" alt="Creative Commons License" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a> This book is licensed under a <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons BY-NC-SA 4.0 License</a>.
+</div>
+
+</div>
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
