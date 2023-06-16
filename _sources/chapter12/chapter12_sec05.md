@@ -156,7 +156,7 @@ Für die spezielle Lösung soll
 
 $$y(0) = \frac{1}{10} \cdot \left( \sin(0) + \cos(0)\right) + C\cdot e^{0} \overset{!}{=} -1$$
 
-gelten.  Die Gleichung wird nach $C$ aufgelöst und wir erhalten $C=-\frac{11}{10}$. Also lautet die spezielle Lösung des Anfangwertproblems
+gelten. Die Gleichung wird nach $C$ aufgelöst und wir erhalten $C=-\frac{11}{10}$. Also lautet die spezielle Lösung des Anfangwertproblems
 
 $$y(x) = \frac{1}{10} \cdot \left( \sin(5x) + \cos(5x)\right) - \frac{11}{10}\cdot e^{5x}.$$
 ```
@@ -216,7 +216,7 @@ Für die spezielle Lösung soll
 
 $$x(0) = -\frac{1}{6} e^{0} + C\cdot e^{0} \overset{!}{=} 0$$
 
-gelten.  Die Gleichung wird nach $C$ aufgelöst und wir erhalten $C=\frac{1}{6}$. Also lautet die spezielle Lösung des Anfangwertproblems
+gelten. Die Gleichung wird nach $C$ aufgelöst und wir erhalten $C=\frac{1}{6}$. Also lautet die spezielle Lösung des Anfangwertproblems
 
 $$x(t) = -\frac{1}{6} e^{-t} + \frac{1}{6}\cdot e^{2t}.$$
 ```
@@ -294,11 +294,52 @@ für $x(0)=-1$.
 :class: minisolution, toggle
 Allgemeine Lösung:
 
-$$x(t) = C\, e^{-4t}+\frac{1}{10}\cos(-2t) + \frac{1}{5}\sin(-2t), \quad C\in\mathbb{R}$$
+$$x(t) = \frac{1}{10} \left(\cos(2t) - 2\sin(2t)\right) + C\cdot e^{-4t}, \quad C\in\mathbb{R}$$
 
 Spezielle Lösung für $x(0)=-1$
 
-$$x(t) = -\frac{11}{10} e^{-4t}+\frac{1}{10}\cos(-2t) + \frac{1}{5}\sin(-2t)$$
+$$x(t) = \frac{1}{10} \left(\cos(2t) - 2\sin(2t)\right) - \frac{11}{10}\cdot e^{-4t}$$
+```{dropdown} Lösungsweg
+Die DGL ist eine lineare inhomogene DGL mit $a_1(t)=1$ und $a_0(t)=4$. Daher bestimmen wir zuerst die allgemeine Lösung der homogenen DGL
+
+$$\dot{x} + 4x = 0.$$
+
+Die allgemeine Lösung der homogenen DGL lautet
+
+$$x_h(t) = C\cdot e^{-4t}.$$
+
+Wir variieren die Konstante und nehmen den Lösungsansatz
+
+$$x(t) = C(t)\cdot e^{-4t}.$$
+
+Die erste Ableitung ist
+
+$$\dot{x}(t) = \dot{C}(t) e^{-4t} - 4 C(t) e^{-4t}.$$
+
+Jetzt werden die Lösungsansatzfunktion $x$ und deren Ableitung $\dot{x}$ in die inhomogene DGL eingesetzt:
+
+$$\dot{C}(t) e^{-4t} - 4 C(t) e^{-4t} + 4 C(t) e^{-4t} = \sin(-2t).$$
+
+Werden die Terme vereinfacht, so wird diese Gleichung zu
+
+$$\dot{C}(t) = \sin(-2t)\cdot e^{4t}.$$
+
+Wir integrieren partiell nach $t$ und erhalten
+
+$$C(t) = \frac{1}{10}e^{4t}\left(\cos(2t) - 2\sin(2t)\right) + C.$$
+
+Somit lautet die allgemeine Lösung der inhomogenen DGL
+
+$$x(t) = \frac{1}{10} \left(\cos(2t) - 2\sin(2t)\right) + C\cdot e^{-4t}.$$
+
+Für die spezielle Lösung soll
+
+$$x(0) = \frac{1}{10} \left(\cos(0) - 2\sin(0)\right) + C\cdot e^{0} \overset{!}{=} -1$$
+
+gelten. Die Gleichung wird nach $C$ aufgelöst und wir erhalten $C=-\frac{11}{10}$. Also lautet die spezielle Lösung des Anfangwertproblems
+
+$$x(t) = \frac{1}{10} \left(\cos(2t) - 2\sin(2t)\right) - \frac{11}{10}\cdot e^{-4t}.$$
+```
 ````
 
 ```{admonition} Übung 12.7
@@ -318,6 +359,47 @@ $$y(x)= C\, e^{3x} + e^{2x}, \quad C\in\mathbb{R}$$
 Spezielle Lösung für $y(0)=1$:
 
 $$y(x)= e^{2x}$$
+```{dropdown} Lösungsweg
+Die DGL ist eine lineare inhomogene DGL mit $a_1(x)=1$ und $a_0(x)=-3$. Daher bestimmen wir zuerst die allgemeine Lösung der homogenen DGL
+
+$$y' - 3y = 0.$$
+
+Die allgemeine Lösung der homogenen DGL lautet
+
+$$y_h(x) = C \cdot e^{3x}.$$
+
+Wir variieren die Konstante und nehmen den Lösungsansatz
+
+$$y(x) = C(x) \cdot e^{3x}.$$
+
+Die erste Ableitung ist
+
+$$y'(x) = C'(x) \cdot e^{3x} + C(x) \cdot 3e^{3x}.$$
+
+Jetzt werden die Lösungsansatzfunktion $y$ und deren Ableitung $y'$ in die inhomogene DGL eingesetzt:
+
+$$C'(x) \cdot e^{3x} + C(x) \cdot 3e^{3x} - 3 \cdot C(x) \cdot e^{3x} = -e^{2x}.$$
+
+Werden die Terme vereinfacht, so wird diese Gleichung zu
+
+$$C'(x) = -e^{2x} \cdot e^{-3x} = -e^{-x}.$$
+
+Wir integrieren nach $x$ und erhalten
+
+$$C(x) = e^{-x} + C.$$
+
+Somit lautet die allgemeine Lösung der inhomogenen DGL
+
+$$y(x) = e^{2x} + C\cdot e^{3x}.$$
+
+Für die spezielle Lösung soll
+
+$$y(0) = e^{0} + C\cdot e^{0} \overset{!}{=} 1$$
+
+gelten. Die Gleichung wird nach $C$ aufgelöst und wir erhalten $C=0$. Also lautet die spezielle Lösung des Anfangwertproblems
+
+$$y(x) = e^{2x}.$$
+```
 ````
 
 ```{admonition} Übung 12.8
@@ -332,11 +414,52 @@ für $x(0)=-5$.
 :class: minisolution, toggle
 Allgemeine Lösung:
 
-$$x(t) = C\, e^{2t} - \frac{1}{25}(15t+8) e^{-3t}, \quad C\in\mathbb{R}$$
+$$x(t) = -e^{t}\cdot (3t+4) + C\, e^{2t}, \quad C\in\mathbb{R}$$
 
 Spezielle Lösung für $x(0)=-5$:
 
-$$x(t) =-\frac{117}{25} e^{2t} - \frac{1}{25}(15t+8) e^{-3t}$$
+$$x(t) = -e^{t}\cdot (3t+4) - e^{2t}$$
+```{dropdown} Lösungsweg
+Die DGL ist eine lineare inhomogene DGL mit $a_1(t)=1$ und $a_0(t)=-2$. Daher bestimmen wir zuerst die allgemeine Lösung der homogenen DGL
+
+$$\dot{x} - 2x = 0.$$
+
+Die allgemeine Lösung der homogenen DGL lautet
+
+$$x_h(t) = C\cdot e^{2t}.$$
+
+Wir variieren die Konstante und nehmen den Lösungsansatz
+
+$$x(t) = C(t)\cdot e^{2t}.$$
+
+Die erste Ableitung ist
+
+$$\dot{x}(t) = \dot{C}(t) e^{2t} + 2 C(t) e^{2t}.$$
+
+Jetzt werden die Lösungsansatzfunktion $x$ und deren Ableitung $\dot{x}$ in die inhomogene DGL eingesetzt:
+
+$$\dot{C}(t) e^{2t} + 2 C(t) e^{2t} - 2 C(t) e^{2t} = (3t+1)\cdot e^{-3t}.$$
+
+Werden die Terme vereinfacht, so wird diese Gleichung zu
+
+$$\dot{C}(t) = (3t+1) e^{-t}.$$
+
+Wir integrieren nach $t$ und erhalten
+
+$$C(t) = -e^{-t}\cdot (3t+4) + C.$$
+
+Somit lautet die allgemeine Lösung der inhomogenen DGL
+
+$$x(t) = -e^{t}\cdot (3t+4) + C\, e^{2t}.$$
+
+Für die spezielle Lösung soll
+
+$$x(0) =   -e^{0}\cdot (3\cdot 0+4) + C\, e^{0}\overset{!}{=} -5$$
+
+gelten. Die Gleichung wird nach $C$ aufgelöst und wir erhalten $C=-1$. Also lautet die spezielle Lösung des Anfangwertproblems
+
+$$x(t) = -e^{t}\cdot (3t+4) - e^{2t}.$$
+```
 ````
 
 ```{admonition} Übung 12.9
