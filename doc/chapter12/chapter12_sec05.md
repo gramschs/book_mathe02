@@ -414,11 +414,11 @@ für $x(0)=-5$.
 :class: minisolution, toggle
 Allgemeine Lösung:
 
-$$x(t) = -e^{t}\cdot (3t+4) + C\, e^{2t}, \quad C\in\mathbb{R}$$
+$$x(t) = -\frac{1}{25}e^{-3t}\cdot (15t+8) + C\cdot e^{2t}, \quad C\in\mathbb{R}$$
 
 Spezielle Lösung für $x(0)=-5$:
 
-$$x(t) = -e^{t}\cdot (3t+4) - e^{2t}$$
+$$x(t) = -\frac{1}{25}e^{-3t}\cdot (15t+8) + \frac{17}{25}\cdot e^{2t}$$
 ```{dropdown} Lösungsweg
 Die DGL ist eine lineare inhomogene DGL mit $a_1(t)=1$ und $a_0(t)=-2$. Daher bestimmen wir zuerst die allgemeine Lösung der homogenen DGL
 
@@ -442,23 +442,23 @@ $$\dot{C}(t) e^{2t} + 2 C(t) e^{2t} - 2 C(t) e^{2t} = (3t+1)\cdot e^{-3t}.$$
 
 Werden die Terme vereinfacht, so wird diese Gleichung zu
 
-$$\dot{C}(t) = (3t+1) e^{-t}.$$
+$$\dot{C}(t) = (3t+1) e^{-5t}.$$
 
 Wir integrieren nach $t$ und erhalten
 
-$$C(t) = -e^{-t}\cdot (3t+4) + C.$$
+$$C(t) = -\frac{1}{25}e^{-5t}\cdot (15t+8) + C.$$
 
 Somit lautet die allgemeine Lösung der inhomogenen DGL
 
-$$x(t) = -e^{t}\cdot (3t+4) + C\, e^{2t}.$$
+$$x(t) = -\frac{1}{25}e^{-3t}\cdot (15t+8) + C\cdot e^{2t}.$$
 
 Für die spezielle Lösung soll
 
-$$x(0) =   -e^{0}\cdot (3\cdot 0+4) + C\, e^{0}\overset{!}{=} -5$$
+$$x(0) = -\frac{1}{25}e^{0}\cdot (15\cdot 0+8) + C\cdot e^{0} \overset{!}{=} -5$$
 
-gelten. Die Gleichung wird nach $C$ aufgelöst und wir erhalten $C=-1$. Also lautet die spezielle Lösung des Anfangwertproblems
+gelten. Die Gleichung wird nach $C$ aufgelöst und wir erhalten $C=\frac{17}{25}$. Also lautet die spezielle Lösung des Anfangwertproblems
 
-$$x(t) = -e^{t}\cdot (3t+4) - e^{2t}.$$
+$$x(t) = -\frac{1}{25}e^{-3t}\cdot (15t+8) + \frac{17}{25}\cdot e^{2t}.$$
 ```
 ````
 
