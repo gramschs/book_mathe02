@@ -803,10 +803,10 @@ Lösungsweg<div class="sd-summary-down docutils">
 <p class="admonition-title">Lösung</p>
 <p>Allgemeine Lösung:</p>
 <div class="math notranslate nohighlight">
-\[x(t) = -e^{t}\cdot (3t+4) + C\, e^{2t}, \quad C\in\mathbb{R}\]</div>
+\[x(t) = -\frac{1}{25}e^{-3t}\cdot (15t+8) + C\cdot e^{2t}, \quad C\in\mathbb{R}\]</div>
 <p>Spezielle Lösung für <span class="math notranslate nohighlight">\(x(0)=-5\)</span>:</p>
 <div class="math notranslate nohighlight">
-\[x(t) = -e^{t}\cdot (3t+4) - e^{2t}\]</div>
+\[x(t) = -\frac{1}{25}e^{-3t}\cdot (15t+8) + \frac{17}{25}\cdot e^{2t}\]</div>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Lösungsweg<div class="sd-summary-down docutils">
@@ -831,19 +831,19 @@ Lösungsweg<div class="sd-summary-down docutils">
 \[\dot{C}(t) e^{2t} + 2 C(t) e^{2t} - 2 C(t) e^{2t} = (3t+1)\cdot e^{-3t}.\]</div>
 <p class="sd-card-text">Werden die Terme vereinfacht, so wird diese Gleichung zu</p>
 <div class="math notranslate nohighlight">
-\[\dot{C}(t) = (3t+1) e^{-t}.\]</div>
+\[\dot{C}(t) = (3t+1) e^{-5t}.\]</div>
 <p class="sd-card-text">Wir integrieren nach <span class="math notranslate nohighlight">\(t\)</span> und erhalten</p>
 <div class="math notranslate nohighlight">
-\[C(t) = -e^{-t}\cdot (3t+4) + C.\]</div>
+\[C(t) = -\frac{1}{25}e^{-5t}\cdot (15t+8) + C.\]</div>
 <p class="sd-card-text">Somit lautet die allgemeine Lösung der inhomogenen DGL</p>
 <div class="math notranslate nohighlight">
-\[x(t) = -e^{t}\cdot (3t+4) + C\, e^{2t}.\]</div>
+\[x(t) = -\frac{1}{25}e^{-3t}\cdot (15t+8) + C\cdot e^{2t}.\]</div>
 <p class="sd-card-text">Für die spezielle Lösung soll</p>
 <div class="math notranslate nohighlight">
-\[x(0) =   -e^{0}\cdot (3\cdot 0+4) + C\, e^{0}\overset{!}{=} -5\]</div>
-<p class="sd-card-text">gelten. Die Gleichung wird nach <span class="math notranslate nohighlight">\(C\)</span> aufgelöst und wir erhalten <span class="math notranslate nohighlight">\(C=-1\)</span>. Also lautet die spezielle Lösung des Anfangwertproblems</p>
+\[x(0) = -\frac{1}{25}e^{0}\cdot (15\cdot 0+8) + C\cdot e^{0} \overset{!}{=} -5\]</div>
+<p class="sd-card-text">gelten. Die Gleichung wird nach <span class="math notranslate nohighlight">\(C\)</span> aufgelöst und wir erhalten <span class="math notranslate nohighlight">\(C=\frac{17}{25}\)</span>. Also lautet die spezielle Lösung des Anfangwertproblems</p>
 <div class="math notranslate nohighlight">
-\[x(t) = -e^{t}\cdot (3t+4) - e^{2t}.\]</div>
+\[x(t) = -\frac{1}{25}e^{-3t}\cdot (15t+8) + \frac{17}{25}\cdot e^{2t}.\]</div>
 </div>
 </details></div>
 <div class="miniexercise admonition">
