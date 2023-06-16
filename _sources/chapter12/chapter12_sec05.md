@@ -234,11 +234,52 @@ für $y(0)=3$.
 :class: minisolution, toggle
 Allgemeine Lösung:
 
-$$y(x) = -\frac{1}{3}x^2 + C\, e^{3x} - \frac{8}{9}x - \frac{17}{27}, \quad C\in\mathbb{R}$$
+$$y(x) = -\frac{1}{3}x^2 - \frac{8}{9}x - \frac{17}{27} + C\cdot e^{3x} , \quad C\in\mathbb{R}$$
 
 Spezielle Lösung für $y(0)=3$:
 
-$$y(x) = -\frac{1}{3}x^2 - \frac{8}{9}x + \frac{98}{27} e^{3x} - \frac{17}{27}$$
+$$y(x) = -\frac{1}{3}x^2 - \frac{8}{9}x - \frac{17}{27} + \frac{98}{27} e^{3x}$$
+```{dropdown} Lösungsweg
+Die DGL ist eine lineare inhomogene DGL mit $a_1(x)=1$ und $a_0(x)=-3$. Daher bestimmen wir zuerst die allgemeine Lösung der homogenen DGL
+
+$$y' - 3y = 0.$$
+
+Die allgemeine Lösung der homogenen DGL lautet
+
+$$y_h(x) = C \cdot e^{3x}.$$
+
+Wir variieren die Konstante und nehmen den Lösungsansatz
+
+$$y(x) = C(x) \cdot e^{3x}.$$
+
+Die erste Ableitung ist
+
+$$y'(x) = C'(x) \cdot e^{3x} + C(x) \cdot 3 e^{3x}.$$
+
+Jetzt werden die Lösungsansatzfunktion $y$ und deren Ableitung $y'$ in die inhomogene DGL eingesetzt:
+
+$$C'(x) \cdot e^{3x} + C(x) \cdot 3e^{3x} - 3 \cdot C(x) \cdot e^{3x} = x^2 + 2x + 1.$$
+
+Werden die Terme vereinfacht, so wird diese Gleichung zu
+
+$$C'(x) = \left(x^2 + 2x +1\right) \cdot e^{-3x}.$$
+
+Wir integrieren partiell nach $x$ und erhalten
+
+$$C(x) = (-\frac{1}{3}x^2-\frac{8}{9}x - \frac{17}{27}) \cdot e^{-3x} + C.$$
+
+Somit lautet die allgemeine Lösung der inhomogenen DGL
+
+$$y(x) = \left(-\frac{1}{3}x^2 - \frac{8}{9}x - \frac{17}{27} \right) + C\cdot e^{3x}.$$
+
+Für die spezielle Lösung soll
+
+$$y(0) = \left(-\frac{1}{3}\cdot 0^2 - \frac{8}{9}\cdot 0 - \frac{17}{27} \right) + C\cdot e^{0} \overset{!}{=} -1$$
+
+gelten. Die Gleichung wird nach $C$ aufgelöst und wir erhalten $C=\frac{98}{27}$. Also lautet die spezielle Lösung des Anfangwertproblems
+
+$$y(x) = \left(-\frac{1}{3}x^2 - \frac{8}{9}x - \frac{17}{27} \right) + \frac{98}{27}\cdot e^{3x}$$
+```
 ````
 
 ```{admonition} Übung 12.6
