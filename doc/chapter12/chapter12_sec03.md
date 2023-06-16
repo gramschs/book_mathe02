@@ -9,7 +9,7 @@ inhomogenr linearer Differentialgleichungen 1. Ordnung.
 ```{admonition} Lernziele
 :class: important
 * Sie können eine **inhomogene lineare Differentialgleichung 1. Ordnung** lösen.
-* Sie können das Lösungsverfahren **Variation der Konstante** anwenden, um die
+* Sie können das Lösungsverfahren **Variation der Konstanten** anwenden, um die
   Lösung einer linearen Differentialgleichung zu bestimmen.
 ```
 
