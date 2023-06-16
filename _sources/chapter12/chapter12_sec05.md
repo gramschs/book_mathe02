@@ -1,9 +1,10 @@
 # Übungen
 
-```{admonition} Warnung
-:class: warning
-Achtung, dieser Abschnitt des Vorlesungsskriptes wird gerade überarbeitet!!!
-```
+Die folgenden Übungsaufgaben wurden teilweise mit dem Aufgabengenerator MATEX
+[Generator 07 DGL "Lineare nichthomogene DGL mit konstanten
+Koeffizienten](https://lx4.mint-kolleg.kit.edu/MATeX/generatorview.php?data=eXZyZm14SldjcWRFc092RVZ5dkF6Zz09)
+erzeugt. Dort können Sie sich auch selbst weitere Aufgaben mit Lösung erzeugen.
+Wählen Sie dazu Stufe 1b.
 
 ```{admonition} Übung 12.1
 :class: miniexercise
@@ -219,4 +220,114 @@ gelten.  Die Gleichung wird nach $C$ aufgelöst und wir erhalten $C=\frac{1}{6}$
 
 $$x(t) = -\frac{1}{6} e^{-t} + \frac{1}{6}\cdot e^{2t}.$$
 ```
+````
+
+```{admonition} Übung 12.5
+:class: miniexercise
+Lösen Sie das Anfangswertproblem
+
+$$y'-3y = x^2+2x+1$$
+
+für $y(0)=3$.
+```
+````{admonition} Lösung 
+:class: minisolution, toggle
+Allgemeine Lösung:
+
+$$y(x) = -\frac{1}{3}x^2 + C\, e^{3x} - \frac{8}{9}x - \frac{17}{27}, \quad C\in\mathbb{R}$$
+
+Spezielle Lösung für $y(0)=3$:
+
+$$y(x) = -\frac{1}{3}x^2 - \frac{8}{9}x + \frac{98}{27} e^{3x} - \frac{17}{27}$$
+````
+
+```{admonition} Übung 12.6
+:class: miniexercise
+Lösen Sie das Anfangswertproblem
+
+$$\dot{x} + 4x = \sin(-2t)$$
+
+für $x(0)=-1$.
+```
+````{admonition} Lösung 
+:class: minisolution, toggle
+Allgemeine Lösung:
+
+$$x(t) = C\, e^{-4t}+\frac{1}{10}\cos(-2t) + \frac{1}{5}\sin(-2t), \quad C\in\mathbb{R}$$
+
+Spezielle Lösung für $x(0)=-1$
+
+$$x(t) = -\frac{11}{10} e^{-4t}+\frac{1}{10}\cos(-2t) + \frac{1}{5}\sin(-2t)$$
+````
+
+```{admonition} Übung 12.7
+:class: miniexercise
+Lösen Sie das Anfangswertproblem
+
+$$y'-3y = -e^{2x}$$
+
+für $y(0)=1$.
+```
+````{admonition} Lösung 
+:class: minisolution, toggle
+Allgemeine Lösung:
+
+$$y(x)= C\, e^{3x} + e^{2x}, \quad C\in\mathbb{R}$$
+
+Spezielle Lösung für $y(0)=1$:
+
+$$y(x)= e^{2x}$$
+````
+
+```{admonition} Übung 12.8
+:class: miniexercise
+Lösen Sie das Anfangswertproblem
+
+$$\dot{x} - 2x = (3t+1) \, e^{-3t}$$
+
+für $x(0)=-5$.
+```
+````{admonition} Lösung 
+:class: minisolution, toggle
+Allgemeine Lösung:
+
+$$x(t) = C\, e^{2t} - \frac{1}{25}(15t+8) e^{-3t}, \quad C\in\mathbb{R}$$
+
+Spezielle Lösung für $x(0)=-5$:
+
+$$x(t) =-\frac{117}{25} e^{2t} - \frac{1}{25}(15t+8) e^{-3t}$$
+````
+
+```{admonition} Übung 12.9
+:class: miniexercise
+Berechnen Sie die Lösungen des folgenden homogenen Systems von linearen Differentialgleichungen 1. Ordnung:
+
+\begin{align*}
+y_1' &= y_1 + y_2 &\\
+y_2' &= 4 y_1 - 2y_2 & 
+\end{align*} 
+```
+````{admonition} Lösung
+:class: minisolution, toggle
+\begin{align*}
+y_1(x) &= Ae^{2x} + Be^{-3x} \\
+y_2(x) &= Ae^{2x}-4Be^{-3x}
+\end{align*}
+````
+
+```{admonition} Übung 12.10
+:class: miniexercise
+Berechnen Sie die Lösungen des folgenden homogenen Systems von linearen Differentialgleichungen 1. Ordnung:
+
+\begin{align*}
+y_1' &= y_1  +y_2&\\
+y_2' &= 4y_1 +y_2 &
+\end{align*} 
+```
+````{admonition} Lösung
+:class: minisolution, toggle
+\begin{align*}
+y_1(x) &= Ae^{-x} + Be^{3x} \\
+y_2(x) &= -2Ae^{-x}+2Be^{3x}
+\end{align*}
 ````

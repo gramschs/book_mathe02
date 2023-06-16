@@ -428,10 +428,11 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="ubungen">
 <h1>Übungen<a class="headerlink" href="#ubungen" title="Permalink to this headline">#</a></h1>
-<div class="warning admonition">
-<p class="admonition-title">Warnung</p>
-<p>Achtung, dieser Abschnitt des Vorlesungsskriptes wird gerade überarbeitet!!!</p>
-</div>
+<p>Die folgenden Übungsaufgaben wurden teilweise mit dem Aufgabengenerator MATEX
+<a class="reference external" href="https://lx4.mint-kolleg.kit.edu/MATeX/generatorview.php?data=eXZyZm14SldjcWRFc092RVZ5dkF6Zz09">Generator 07 DGL “Lineare nichthomogene DGL mit konstanten
+Koeffizienten</a>
+erzeugt. Dort können Sie sich auch selbst weitere Aufgaben mit Lösung erzeugen.
+Wählen Sie dazu Stufe 1b.</p>
 <div class="miniexercise admonition">
 <p class="admonition-title">Übung 12.1</p>
 <p>Lösen Sie das Anfangswertproblem</p>
@@ -629,6 +630,104 @@ Lösungsweg<div class="sd-summary-down docutils">
 \[x(t) = -\frac{1}{6} e^{-t} + \frac{1}{6}\cdot e^{2t}.\]</div>
 </div>
 </details></div>
+<div class="miniexercise admonition">
+<p class="admonition-title">Übung 12.5</p>
+<p>Lösen Sie das Anfangswertproblem</p>
+<div class="math notranslate nohighlight">
+\[y'-3y = x^2+2x+1\]</div>
+<p>für <span class="math notranslate nohighlight">\(y(0)=3\)</span>.</p>
+</div>
+<div class="minisolution toggle admonition">
+<p class="admonition-title">Lösung</p>
+<p>Allgemeine Lösung:</p>
+<div class="math notranslate nohighlight">
+\[y(x) = -\frac{1}{3}x^2 + C\, e^{3x} - \frac{8}{9}x - \frac{17}{27}, \quad C\in\mathbb{R}\]</div>
+<p>Spezielle Lösung für <span class="math notranslate nohighlight">\(y(0)=3\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[y(x) = -\frac{1}{3}x^2 - \frac{8}{9}x + \frac{98}{27} e^{3x} - \frac{17}{27}\]</div>
+</div>
+<div class="miniexercise admonition">
+<p class="admonition-title">Übung 12.6</p>
+<p>Lösen Sie das Anfangswertproblem</p>
+<div class="math notranslate nohighlight">
+\[\dot{x} + 4x = \sin(-2t)\]</div>
+<p>für <span class="math notranslate nohighlight">\(x(0)=-1\)</span>.</p>
+</div>
+<div class="minisolution toggle admonition">
+<p class="admonition-title">Lösung</p>
+<p>Allgemeine Lösung:</p>
+<div class="math notranslate nohighlight">
+\[x(t) = C\, e^{-4t}+\frac{1}{10}\cos(-2t) + \frac{1}{5}\sin(-2t), \quad C\in\mathbb{R}\]</div>
+<p>Spezielle Lösung für <span class="math notranslate nohighlight">\(x(0)=-1\)</span></p>
+<div class="math notranslate nohighlight">
+\[x(t) = -\frac{11}{10} e^{-4t}+\frac{1}{10}\cos(-2t) + \frac{1}{5}\sin(-2t)\]</div>
+</div>
+<div class="miniexercise admonition">
+<p class="admonition-title">Übung 12.7</p>
+<p>Lösen Sie das Anfangswertproblem</p>
+<div class="math notranslate nohighlight">
+\[y'-3y = -e^{2x}\]</div>
+<p>für <span class="math notranslate nohighlight">\(y(0)=1\)</span>.</p>
+</div>
+<div class="minisolution toggle admonition">
+<p class="admonition-title">Lösung</p>
+<p>Allgemeine Lösung:</p>
+<div class="math notranslate nohighlight">
+\[y(x)= C\, e^{3x} + e^{2x}, \quad C\in\mathbb{R}\]</div>
+<p>Spezielle Lösung für <span class="math notranslate nohighlight">\(y(0)=1\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[y(x)= e^{2x}\]</div>
+</div>
+<div class="miniexercise admonition">
+<p class="admonition-title">Übung 12.8</p>
+<p>Lösen Sie das Anfangswertproblem</p>
+<div class="math notranslate nohighlight">
+\[\dot{x} - 2x = (3t+1) \, e^{-3t}\]</div>
+<p>für <span class="math notranslate nohighlight">\(x(0)=-5\)</span>.</p>
+</div>
+<div class="minisolution toggle admonition">
+<p class="admonition-title">Lösung</p>
+<p>Allgemeine Lösung:</p>
+<div class="math notranslate nohighlight">
+\[x(t) = C\, e^{2t} - \frac{1}{25}(15t+8) e^{-3t}, \quad C\in\mathbb{R}\]</div>
+<p>Spezielle Lösung für <span class="math notranslate nohighlight">\(x(0)=-5\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[x(t) =-\frac{117}{25} e^{2t} - \frac{1}{25}(15t+8) e^{-3t}\]</div>
+</div>
+<div class="miniexercise admonition">
+<p class="admonition-title">Übung 12.9</p>
+<p>Berechnen Sie die Lösungen des folgenden homogenen Systems von linearen Differentialgleichungen 1. Ordnung:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+y_1' &amp;= y_1 + y_2 &amp;\\
+y_2' &amp;= 4 y_1 - 2y_2 &amp; 
+\end{align*}\]</div>
+</div>
+<div class="minisolution toggle admonition">
+<p class="admonition-title">Lösung</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+y_1(x) &amp;= Ae^{2x} + Be^{-3x} \\
+y_2(x) &amp;= Ae^{2x}-4Be^{-3x}
+\end{align*}\]</div>
+</div>
+<div class="miniexercise admonition">
+<p class="admonition-title">Übung 12.10</p>
+<p>Berechnen Sie die Lösungen des folgenden homogenen Systems von linearen Differentialgleichungen 1. Ordnung:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+y_1' &amp;= y_1  +y_2&amp;\\
+y_2' &amp;= 4y_1 +y_2 &amp;
+\end{align*}\]</div>
+</div>
+<div class="minisolution toggle admonition">
+<p class="admonition-title">Lösung</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+y_1(x) &amp;= Ae^{-x} + Be^{3x} \\
+y_2(x) &amp;= -2Ae^{-x}+2Be^{3x}
+\end{align*}\]</div>
+</div>
 </section>
 
     <script type="text/x-thebe-config">
