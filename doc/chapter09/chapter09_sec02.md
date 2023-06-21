@@ -169,7 +169,7 @@ Das innere Integral $I(x)$ wird berechnet, indem nach $y$ integriert wird:
 
 \begin{align*}
 I(x) &= \int_{y=x^2-5}^{y=-x+1} x^2\cdot(y+1) \, dy = \\
-     &= \left[ x^2 \cdot \left(\frac{1}{2}y^2 +1\right)\right]_{y=x^2-5}^{y=-x+1} = \\
+     &= \left[ x^2 \cdot \left(\frac{1}{2}y^2 +y\right)\right]_{y=x^2-5}^{y=-x+1} = \\
      &= x^2 \left(\frac{1}{2}(-x+1)^2+(-x+1) - \frac{1}{2}(x^2-5)^2-(x^2-5) \right) = \\
      &= -\frac{1}{2}x^6 + \frac{9}{2}x^4-2x^3-6x^2.
 \end{align*} 
