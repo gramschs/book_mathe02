@@ -474,9 +474,41 @@ y_2' &= 4 y_1 - 2y_2 &
 ````{admonition} Lösung
 :class: minisolution, toggle
 \begin{align*}
-y_1(x) &= Ae^{2x} + Be^{-3x} \\
-y_2(x) &= Ae^{2x}-4Be^{-3x}
+y_1(x) &= C_1 e^{-3x} + C_2 e^{2x} \\
+y_2(x) &= -4 C_1 e^{-3x}  + C_2 e^{2x}
 \end{align*}
+```{dropdown} Lösungsweg
+Das System von Differentialgleichungen lautet in Matrix-Vektor-Schreibweise
+
+$$\begin{pmatrix} y_1'\\ y_2'\end{pmatrix} = 
+\begin{pmatrix} 1 & 1 \\ 4 & -2 \end{pmatrix} \cdot 
+\begin{pmatrix} y_1 \\ y_2 \end{pmatrix}.$$
+
+Das charakteristische Polynom ist
+
+\begin{align*}
+\det (A-\lambda E) &= \det \begin{pmatrix} 1 - \lambda & 1 \\ 4 & -2-\lambda \end{pmatrix} = \\
+&= (1-\lambda)(-2-\lambda)-4 = \\
+&= \lambda^2 + \lambda - 6 =\\
+&= (\lambda+3)(\lambda-2)
+\end{align*}
+
+Aus der charakteristischen Gleichung 
+
+$$\det (A-\lambda E) \overset{!}{=} 0 \Rightarrow (\lambda+3)(\lambda-2) = 0$$
+
+folgen die Eigenwerte $\lambda_1 = -3$ und $\lambda_2 = 2$. Beide Eigenwerte sind reell und verschieden. Also ist die erste Lösungsfunktion
+
+$$y_1(x) = C_1 e^{-3x} + C_2 e^{2x}.$$
+
+Deren erste Ableitung ist
+
+$$y_1'(x)= -3C_1 e^{-3x} + 2 C_2 e^{2x}.$$
+
+Beides wird in die erste Differentialgleichung $y_1' = y_1 + y_2$ eingesetzt und durch Umformen erhalten wir
+
+$$y_2(x) = -4C_1 e^{-3x} + C_2 e^{2x}.$$
+```
 ````
 
 ```{admonition} Übung 12.10
@@ -491,7 +523,39 @@ y_2' &= 4y_1 +y_2 &
 ````{admonition} Lösung
 :class: minisolution, toggle
 \begin{align*}
-y_1(x) &= Ae^{-x} + Be^{3x} \\
-y_2(x) &= -2Ae^{-x}+2Be^{3x}
+y_1(x) &= C_1 e^{-x} + C_2 e^{3x} \\
+y_2(x) &= -2C_1 e^{-x} + 2 C_2 e^{3x}
 \end{align*}
+```{dropdown} Lösungsweg
+Das System von Differentialgleichungen lautet in Matrix-Vektor-Schreibweise
+
+$$\begin{pmatrix} y_1'\\ y_2'\end{pmatrix} = 
+\begin{pmatrix} 1 & 1 \\ 4 & 1 \end{pmatrix} \cdot 
+\begin{pmatrix} y_1 \\ y_2 \end{pmatrix}.$$
+
+Das charakteristische Polynom ist
+
+\begin{align*}
+\det (A-\lambda E) &= \det \begin{pmatrix} 1 - \lambda & 1 \\ 4 & 1-\lambda \end{pmatrix} = \\
+&= (1-\lambda)^2 -4 = \\
+&= \lambda^2 -2\lambda - 3 =\\
+&= (\lambda-3)(\lambda+1)
+\end{align*}
+
+Aus der charakteristischen Gleichung 
+
+$$\det (A-\lambda E) \overset{!}{=} 0 \Rightarrow (\lambda-3)(\lambda+1) = 0$$
+
+folgen die Eigenwerte $\lambda_1 = -1$ und $\lambda_2 = 3$. Beide Eigenwerte sind reell und verschieden. Also ist die erste Lösungsfunktion
+
+$$y_1(x) = C_1 e^{-x} + C_2 e^{3x}.$$
+
+Deren erste Ableitung ist
+
+$$y_1'(x)= -C_1 e^{-x} + 3 C_2 e^{3x}.$$
+
+Beides wird in die erste Differentialgleichung $y_1(x) = y_1  +y_2$ eingesetzt und durch Umformen erhalten wir
+
+$$y_2(x) = -2C_1 e^{-x} + 2C_2 e^{3x}.$$
+```
 ````
