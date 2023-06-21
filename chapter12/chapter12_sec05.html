@@ -859,10 +859,43 @@ y_2' &amp;= 4 y_1 - 2y_2 &amp;
 <p class="admonition-title">Lösung</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
-y_1(x) &amp;= Ae^{2x} + Be^{-3x} \\
-y_2(x) &amp;= Ae^{2x}-4Be^{-3x}
+y_1(x) &amp;= C_1 e^{-3x} + C_2 e^{2x} \\
+y_2(x) &amp;= -4 C_1 e^{-3x}  + C_2 e^{2x}
 \end{align*}\]</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Lösungsweg<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Das System von Differentialgleichungen lautet in Matrix-Vektor-Schreibweise</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{pmatrix} y_1'\\ y_2'\end{pmatrix} = 
+\begin{pmatrix} 1 &amp; 1 \\ 4 &amp; -2 \end{pmatrix} \cdot 
+\begin{pmatrix} y_1 \\ y_2 \end{pmatrix}.\end{split}\]</div>
+<p class="sd-card-text">Das charakteristische Polynom ist</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+\det (A-\lambda E) &amp;= \det \begin{pmatrix} 1 - \lambda &amp; 1 \\ 4 &amp; -2-\lambda \end{pmatrix} = \\
+&amp;= (1-\lambda)(-2-\lambda)-4 = \\
+&amp;= \lambda^2 + \lambda - 6 =\\
+&amp;= (\lambda+3)(\lambda-2)
+\end{align*}\]</div>
+<p class="sd-card-text">Aus der charakteristischen Gleichung</p>
+<div class="math notranslate nohighlight">
+\[\det (A-\lambda E) \overset{!}{=} 0 \Rightarrow (\lambda+3)(\lambda-2) = 0\]</div>
+<p class="sd-card-text">folgen die Eigenwerte <span class="math notranslate nohighlight">\(\lambda_1 = -3\)</span> und <span class="math notranslate nohighlight">\(\lambda_2 = 2\)</span>. Beide Eigenwerte sind reell und verschieden. Also ist die erste Lösungsfunktion</p>
+<div class="math notranslate nohighlight">
+\[y_1(x) = C_1 e^{-3x} + C_2 e^{2x}.\]</div>
+<p class="sd-card-text">Deren erste Ableitung ist</p>
+<div class="math notranslate nohighlight">
+\[y_1'(x)= -3C_1 e^{-3x} + 2 C_2 e^{2x}.\]</div>
+<p class="sd-card-text">Beides wird in die erste Differentialgleichung <span class="math notranslate nohighlight">\(y_1' = y_1 + y_2\)</span> eingesetzt und durch Umformen erhalten wir</p>
+<div class="math notranslate nohighlight">
+\[y_2(x) = -4C_1 e^{-3x} + C_2 e^{2x}.\]</div>
 </div>
+</details></div>
 <div class="miniexercise admonition">
 <p class="admonition-title">Übung 12.10</p>
 <p>Berechnen Sie die Lösungen des folgenden homogenen Systems von linearen Differentialgleichungen 1. Ordnung:</p>
@@ -876,10 +909,43 @@ y_2' &amp;= 4y_1 +y_2 &amp;
 <p class="admonition-title">Lösung</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
-y_1(x) &amp;= Ae^{-x} + Be^{3x} \\
-y_2(x) &amp;= -2Ae^{-x}+2Be^{3x}
+y_1(x) &amp;= C_1 e^{-x} + C_2 e^{3x} \\
+y_2(x) &amp;= -2C_1 e^{-x} + 2 C_2 e^{3x}
 \end{align*}\]</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Lösungsweg<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Das System von Differentialgleichungen lautet in Matrix-Vektor-Schreibweise</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{pmatrix} y_1'\\ y_2'\end{pmatrix} = 
+\begin{pmatrix} 1 &amp; 1 \\ 4 &amp; 1 \end{pmatrix} \cdot 
+\begin{pmatrix} y_1 \\ y_2 \end{pmatrix}.\end{split}\]</div>
+<p class="sd-card-text">Das charakteristische Polynom ist</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+\det (A-\lambda E) &amp;= \det \begin{pmatrix} 1 - \lambda &amp; 1 \\ 4 &amp; 1-\lambda \end{pmatrix} = \\
+&amp;= (1-\lambda)^2 -4 = \\
+&amp;= \lambda^2 -2\lambda - 3 =\\
+&amp;= (\lambda-3)(\lambda+1)
+\end{align*}\]</div>
+<p class="sd-card-text">Aus der charakteristischen Gleichung</p>
+<div class="math notranslate nohighlight">
+\[\det (A-\lambda E) \overset{!}{=} 0 \Rightarrow (\lambda-3)(\lambda+1) = 0\]</div>
+<p class="sd-card-text">folgen die Eigenwerte <span class="math notranslate nohighlight">\(\lambda_1 = -1\)</span> und <span class="math notranslate nohighlight">\(\lambda_2 = 3\)</span>. Beide Eigenwerte sind reell und verschieden. Also ist die erste Lösungsfunktion</p>
+<div class="math notranslate nohighlight">
+\[y_1(x) = C_1 e^{-x} + C_2 e^{3x}.\]</div>
+<p class="sd-card-text">Deren erste Ableitung ist</p>
+<div class="math notranslate nohighlight">
+\[y_1'(x)= -C_1 e^{-x} + 3 C_2 e^{3x}.\]</div>
+<p class="sd-card-text">Beides wird in die erste Differentialgleichung <span class="math notranslate nohighlight">\(y_1(x) = y_1  +y_2\)</span> eingesetzt und durch Umformen erhalten wir</p>
+<div class="math notranslate nohighlight">
+\[y_2(x) = -2C_1 e^{-x} + 2C_2 e^{3x}.\]</div>
 </div>
+</details></div>
 </section>
 
     <script type="text/x-thebe-config">
