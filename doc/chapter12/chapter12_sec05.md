@@ -194,7 +194,7 @@ $$x(t) = C(t)\cdot e^{2t}.$$
 
 Die erste Ableitung ist
 
-$$\dot(x)(t) = \dot{C}(t) e^{2t} + 3 C(t) e^{2t}.$$
+$$\dot(x)(t) = \dot{C}(t) e^{2t} + 2 C(t) e^{2t}.$$
 
 Jetzt werden die Lösungsansatzfunktion $x$ und deren Ableitung $\dot{x}$ in die inhomogene DGL eingesetzt:
 
