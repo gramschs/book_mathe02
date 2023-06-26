@@ -15,7 +15,7 @@ $$y(x) = \pm \sqrt{\frac{2}{5}e^{5x}+2c}$$
 
 Spezielle Lösung des Anfangwertproblems:
 
-$$y(x) = \sqrt{\frac{2}{5}e^{5x}+\frac{3}{10}}$$
+$$y(x) = \sqrt{\frac{2}{5}e^{5x}+\frac{3}{5}}$$
 
 ```{dropdown} Lösungsweg
 Trennung der Variablen:
@@ -36,7 +36,7 @@ $$1 = \pm \sqrt{\frac{2}{5}e^{0}+2c}$$
 
 nach $c$ auf und erhalten $c=3/10$. Damit ist die spezielle Lösung für $y(0)=1$
 
-$$y(x) = \sqrt{\frac{2}{5}e^{5x}+\frac{3}{10}}.$$
+$$y(x) = \sqrt{\frac{2}{5}e^{5x}+\frac{3}{5}}.$$
 
 ```
 ````
