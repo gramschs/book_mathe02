@@ -3,7 +3,7 @@
 
 title: Mathematik 2 Maschinenbau
 author: Simone Gramsch
-copyright: "2022"  # Copyright year to be placed in the footer
+#copyright: "2022"  # Copyright year to be placed in the footer
 #logo: pics/book_matlab_logo.png
 
 # Force re-execution of notebooks on each build.
@@ -26,7 +26,7 @@ bibtex_bibfiles:
 repository:
   url: https://github.com/gramschs/book_mathe02  # Online location of your book
   path_to_book: docs  # Optional path to your book, relative to the repository root
-  branch: master  # Which branch of the repository should be used when creating links (optional)
+  branch: main  # Which branch of the repository should be used when creating links (optional)
 
 # Add GitHub buttons to your book
 # See https://jupyterbook.org/customize/config.html#add-a-link-to-your-repository
@@ -44,6 +44,7 @@ sphinx:
   config:
     html_extra_path: ['assets']
     mathjax_path: https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+    html_show_copyright: false
   html_context:
     default_mode: light
   extra_extensions:
