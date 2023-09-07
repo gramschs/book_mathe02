@@ -430,6 +430,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#es-gibt-viele-schreibweisen-fur-dgl">Es gibt viele Schreibweisen für DGL</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#die-ordnung-entscheidet-uber-die-anzahl-der-integrationskonstanten">Die Ordnung entscheidet über die Anzahl der Integrationskonstanten</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gewohnlich-betrachten-wir-gewohnliche-dgl">Gewöhnlich betrachten wir gewöhnliche DGL</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zusammenfassung-und-ausblick">Zusammenfassung und Ausblick</a></li>
 </ul>
             </nav>
         </div>
@@ -450,6 +451,7 @@ Thema Differentialgleichungen anhand eines einfachen Beispieles ein.</p>
 <div class="important admonition">
 <p class="admonition-title">Lernziele</p>
 <ul class="simple">
+<li><p>Sie wissen, was eine <strong>Differentialgleichung</strong> ist.</p></li>
 <li><p>Sie kennen verschiedene Schreibweisen zur Formulierung von Differentialgleichungen.</p></li>
 <li><p>Sie können die <strong>Ordnung einer Differentialgleichung</strong> ablesen.</p></li>
 <li><p>Sie können erklären, was eine <strong>gewöhnliche Differentialgleichung</strong> und was eine <strong>partielle Differentialgleichung</strong> ist.</p></li>
@@ -482,7 +484,7 @@ Ableitung ist die folgende Gleichung:</p>
 \[f''(x) = -f(x).\]</div>
 <p>Gesucht wird also eine Funktion, die zweimal abgeleitet die Funktion selbst
 wieder ergibt, nur mit umgekehrten Vorzeichen. Eine Funktion, die diese
-Gleichung löst, ist die Sinus-Funktion. Probieren wir es aus und bilden west
+Gleichung löst, ist die Sinus-Funktion. Probieren wir es aus und bilden erst
 einmal die Ableitungen:</p>
 <div class="math notranslate nohighlight">
 \[f(x) = \sin(x) \quad \Rightarrow f'(x) = \cos(x) \quad \Rightarrow f''(x) =
@@ -505,8 +507,12 @@ eingesetzt: <span class="math notranslate nohighlight">\(-\cos(x) = -\cos(x)\)</
 <p>b) ableiten: <span class="math notranslate nohighlight">\(f(x)=e^x \quad \Rightarrow f'(x)=e^x \quad \Rightarrow f''(x)=e^x\)</span> <br>
 eingesetzt: <span class="math notranslate nohighlight">\(e^x \neq -e^x\)</span> erfüllt die Gleichung nicht</p>
 <p>c) ableiten:</p>
-<div class="math notranslate nohighlight">
-\[f(x)=\sin(x)+3\cos(x)\quad \Rightarrow f''(x)=\cos(x)-3\sin(x) \quad \Rightarrow f''(x)=-\sin(x)-3\cos(x)\]</div>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+f(x) &amp;=\sin(x)+3\cos(x) \\
+\Rightarrow \quad f''(x)&amp;=\cos(x)-3\sin(x) \\
+\Rightarrow \quad f''(x)&amp;=-\sin(x)-3\cos(x)
+\end{align*}\]</div>
 <p>eingesetzt: <span class="math notranslate nohighlight">\(-\sin(x)-3\cos(x) = -\left(\sin(x)+3\cos(x)\right)\)</span> erfüllt die Gleichung</p>
 </div>
 <p>Wir übernehmen die Begriffe für Gleichungen reeller Zahlen nun für diese neue
@@ -529,15 +535,16 @@ Video zu “Gewöhnliche Differentialgleichung”<div class="sd-summary-down doc
 <span id="sec-11-01-b"></span><h2>Es gibt viele Schreibweisen für DGL<a class="headerlink" href="#es-gibt-viele-schreibweisen-fur-dgl" title="Permalink to this headline">#</a></h2>
 <p>So wie Gleichungen für Zahlen mit unterschiedlichen Variablen formuliert werden,
 werden auch bei Differentialgleichungen unterschiedliche Schreibweisen benutzt.
-Meistens werden nämlich die Bezeichnungen aus dem Anwendungskontext übernommen.</p>
-<p>Zunächst einmal können die Bezeichnungen für Variablen der gesuchten Funktion
-variieren. Die obige DGL kann beispielsweise als</p>
+Meistens werden die Bezeichnungen aus dem Anwendungskontext übernommen.</p>
+<p>Zunächst einmal können die Bezeichnungen für die Variablen der gesuchten
+Funktion variieren. In dem obigen Beispiel</p>
 <div class="math notranslate nohighlight">
 \[f''(x)=-f(x)\]</div>
-<p>geschrieben werden, wobei <span class="math notranslate nohighlight">\(x\)</span> die sogenannte <strong>unabhängige Variable</strong> ist. Die
-gesuchte Funktion wird auch als <strong>abhängige Variable</strong> bezeichnet, obwohl es
-sich um eine Funktion handelt. Sollte es sich jedoch um eine Funktion in
-Abhängigkeit einer zeitlichen Größe handeln, würde die DGL wohl eher als</p>
+<p>wurde als Variablenname <span class="math notranslate nohighlight">\(x\)</span> benutzt. Die Variablen der gesuchten Funktion werden
+als <strong>unabhängige Variablen</strong> bezeichnet. Die gesuchte Funktion wird auch als
+<strong>abhängige Variable</strong> bezeichnet, obwohl es sich um eine Funktion handelt.
+Sollte es sich jedoch um eine Funktion in Abhängigkeit einer zeitlichen Größe
+handeln, würde die DGL wohl eher als</p>
 <div class="math notranslate nohighlight">
 \[f''(t)=-f(t)\]</div>
 <p>formuliert werden. Bei zeitlichen Ableitungen wird in den
@@ -559,7 +566,7 @@ weggelassen, also</p>
 \[y''=-y.\]</div>
 <p>Alle Schreibweisen – so unterschiedlich sie auch wirken mögen – drücken dieselbe
 Frage aus: welche Funktion muss zweimal abgeleitet werden, damit sie das
-Negative von sich selbst ist.</p>
+Negative von sich selbst ist?</p>
 </section>
 <section id="die-ordnung-entscheidet-uber-die-anzahl-der-integrationskonstanten">
 <span id="sec-11-01-a"></span><h2>Die Ordnung entscheidet über die Anzahl der Integrationskonstanten<a class="headerlink" href="#die-ordnung-entscheidet-uber-die-anzahl-der-integrationskonstanten" title="Permalink to this headline">#</a></h2>
@@ -572,7 +579,7 @@ die passen. Wir schauen uns nun ein etwas einfacheres Beispiel an:</p>
 <div class="math notranslate nohighlight">
 \[y''(x) = -\sin(x).\]</div>
 <p>Auf der rechten Seite kommt die gesuchte Funktion <span class="math notranslate nohighlight">\(y(x)\)</span> nicht mehr vor, sondern
-sie ist nur noch als 2. Ableitung auf der linken Seite der Gleichung. Ein
+sie steht nur noch als 2. Ableitung auf der linken Seite der Gleichung. Ein
 einfacher Ansatz, um die DGL zu lösen ist, auf beiden Seiten unbestimmt zu
 integrieren. Wir erhalten</p>
 <div class="math notranslate nohighlight">
@@ -587,8 +594,9 @@ einmal unbestimmt auf beiden Seiten und bekommen</p>
 \sin(x) + C_1 x + C_2.\]</div>
 <p>Die gefundene Funktion <span class="math notranslate nohighlight">\(y(x)=\sin(x)+C_1 x + C_2\)</span> ist nicht nur <em>eine</em> Funktion,
 sondern eine ganze Schar von Funktionen. Es können zwei verschiedene Parameter
-<span class="math notranslate nohighlight">\(C_1\)</span> und <span class="math notranslate nohighlight">\(C_2\)</span> gewählt werden und für jeden der beiden Parameter gibt es
-unendlich viele Möglichkeiten.</p>
+<span class="math notranslate nohighlight">\(C_1\)</span> und <span class="math notranslate nohighlight">\(C_2\)</span> gewählt werden. Mathematisch gesehen gibt es bei der Wahl der
+Parameter keine Einschränkungen; wir könnten jede reelle Zahl wählen. Daher gibt
+es unendlich viele Lösungen der Differentialgleichung.</p>
 <div class="tip admonition">
 <p class="admonition-title">Mini-Übung</p>
 <p>Überprüfen Sie, ob die folgenden drei Variationen von <span class="math notranslate nohighlight">\(C_1\)</span> und <span class="math notranslate nohighlight">\(C_2\)</span> tatsächlich die DGL</p>
@@ -598,6 +606,35 @@ unendlich viele Möglichkeiten.</p>
 <p>a) <span class="math notranslate nohighlight">\(C_1 = 1\)</span> und <span class="math notranslate nohighlight">\(C_2 = 0\)</span>, also <span class="math notranslate nohighlight">\(y_1(x) = \sin(x) + x\)</span> <br>
 b) <span class="math notranslate nohighlight">\(C_1 = 0\)</span> und <span class="math notranslate nohighlight">\(C_2 = 1\)</span>, also <span class="math notranslate nohighlight">\(y_2(x) = \sin(x) + 1\)</span> <br>
 c) <span class="math notranslate nohighlight">\(C_1 = -2\)</span> und <span class="math notranslate nohighlight">\(C_2 = 3\)</span>, also <span class="math notranslate nohighlight">\(y_3(x) = \sin(x) -2x + 3\)</span><br></p>
+</div>
+<div class="tip toggle admonition">
+<p class="admonition-title">Lösung</p>
+<p>Um zu überprüfen, ob die gegebenen Variationen die DGL <span class="math notranslate nohighlight">\(y''(x) = -\sin(x)\)</span>
+erfüllen, müssen wir die zweite Ableitung jeder Funktion berechnen und
+überprüfen, ob sie gleich <span class="math notranslate nohighlight">\(-\sin(x)\)</span> ist.</p>
+<p>a) <span class="math notranslate nohighlight">\(y_1(x) = \sin(x) + x\)</span></p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+\Rightarrow \quad y_1'(x)  &amp;= \cos(x) + 1 \\
+\Rightarrow \quad y_1''(x) &amp;= -\sin(x) 
+\end{align*}\]</div>
+<p>Da <span class="math notranslate nohighlight">\(y_1''(x) = -\sin(x)\)</span> gilt, erfüllt <span class="math notranslate nohighlight">\(y_1\)</span> die DGL.</p>
+<p>b) <span class="math notranslate nohighlight">\(y_2(x) = \sin(x) + 1\)</span></p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+\Rightarrow \quad y_2'(x) &amp;= \cos(x) \\
+\Rightarrow \quad y_2''(x) &amp;= -\sin(x) 
+\end{align*}\]</div>
+<p>Da <span class="math notranslate nohighlight">\(y_2''(x) = -\sin(x)\)</span> gilt, erfüllt <span class="math notranslate nohighlight">\(y_2\)</span> ebenfalls die DGL.</p>
+<p>c) <span class="math notranslate nohighlight">\(y_3(x) = \sin(x) - 2x + 3\)</span></p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+\Rightarrow \quad y_3'(x)  &amp;= \cos(x) - 2 \\
+\Rightarrow \quad y_3''(x) &amp;= -\sin(x) 
+\end{align*}\]</div>
+<p>Da <span class="math notranslate nohighlight">\(y_3''(x) = -\sin(x)\)</span> gilt, erfüllt auch <span class="math notranslate nohighlight">\(y_3\)</span> die DGL.</p>
+<p>Alle drei Funktionen erfüllen die Differentialgleichung <span class="math notranslate nohighlight">\(y''(x) = -\sin(x)\)</span> und
+sind daher Lösungen der Differentialgleichung.</p>
 </div>
 <p>Durch dieses Beispiel haben wir zwei Sachen kennengelernt, die typisch für
 Differentialgleichungen sind:</p>
@@ -611,8 +648,8 @@ Integrationskonstanten entstehen.</p></li>
 <p>Der Grad der höchsten Ableitung der gesuchten Funktion ist so wichtig, dass
 Differentialgleichungen danach eingeteilt werden. Wir halten daher folgende
 Definition fest.</p>
-<div class="admonition-was-ist-die-ordnung-einer-dgl admonition">
-<p class="admonition-title">Was ist … die Ordnung einer DGL?</p>
+<div class="admonition-was-ist-die-ordnung-einer-differentialgleichung admonition">
+<p class="admonition-title">Was ist … die Ordnung einer Differentialgleichung?</p>
 <p>Die höchste vorkommene Ableitung der gesuchten Funktion nennen wir <strong>Ordnung</strong> der Differentialgleichung.</p>
 </div>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
@@ -632,7 +669,7 @@ gewöhnlich und partiell verwendet. Eines vorneweg, in diesem und in den nächst
 Kapiteln werden wir nur gewöhnliche Differentialgleichungen betrachten.</p>
 <p>Die gesuchte Funktion der Differentialgleichung kann von einer unabhängigen
 Variable abhängen, also eindimensional sein, aber auch von mehreren unabhängigen
-Variablen abhängen, also mehrdimensional sein. Demtentsprechend können normale
+Variablen abhängen, also mehrdimensional sein. Dementsprechend können normale
 Ableitungen in der Differentialgleichung auftreten, wie wir es in den oben
 stehenden Beispielen gesehen haben, oder partielle Ableitungen.</p>
 <p>Eine Differentialgleichung, bei der nur Ableitungen nach einer Variable
@@ -644,20 +681,29 @@ Zeit <span class="math notranslate nohighlight">\(t\)</span> vorkommen:</p>
 <div class="math notranslate nohighlight">
 \[\frac{\partial u(x,t)}{\partial t} - a^2 \frac{\partial^2 u(x,t)}{\partial
 x^2} = 0.\]</div>
+<div class="admonition-was-ist-eine-gewohnliche-differentialgleichung admonition">
+<p class="admonition-title">Was ist … eine gewöhnliche Differentialgleichung?</p>
+<p>Eine Differentialgleichung, bei der die gesuchte Funktion nur von einer
+unabhängigen Variable abhängt, wird als <strong>gewöhnliche Differentialgleichung</strong>
+bezeichnet. Kommen in der Differentialgleichungen Ableitungen nach mehreren
+unabhängigen Variablen vor, so nennen wir diese Gleichung <strong>partielle
+Differentialgleichung</strong>.</p>
+</div>
 <p>Die Beispiele, die wir bisher betrachtet haben, waren so formuliert, dass die
 höchste Ableitung auf der linken Seite stand und alle anderen Terme auf der
 rechten Seite der Gleichung. Das muss aber nicht so sein. Eine
 Differentialgleichung, die nach der höchsten Ableitung aufgelöst ist, nennen wir
 <strong>explizite Differentialgleichung</strong>. Ein Beispiel für eine explizite DGL ist</p>
 <div class="math notranslate nohighlight">
-\[y'' + 3y' -  2y = 0.\]</div>
+\[y'' = -3y' + 2y.\]</div>
 <p>Ist hingegen die DGL <em>nicht</em> nach der höchsten Ableitung aufgelöst, so
 bezeichnen wir diese als <strong>implizite Differentialgleichung</strong>. Wir können das
 Beispiel umformen zu</p>
 <div class="math notranslate nohighlight">
-\[y'' = -3y' + 2y.\]</div>
-<p>Leider lässt sich nicht jede implizite Differentialgleichung in eine explizite
-DGL umformen.</p>
+\[y'' + 3y' -  2y = 0.\]</div>
+<p>Es war einfach, die explizite Differentialgleichung in eine implizite
+Differentialgleichung umzuformen. Leider lässt sich nicht jede implizite
+Differentialgleichung in eine explizite DGL umformen.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Video zu “Explizite und implizite Differentialgleichungen”<div class="sd-summary-down docutils">
@@ -668,6 +714,20 @@ Video zu “Explizite und implizite Differentialgleichungen”<div class="sd-sum
 <iframe src="https://frankfurt-university.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=f685aee3-bac5-4459-839e-b01800ec5f8a&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=false&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
 </div>
 </details></section>
+<section id="zusammenfassung-und-ausblick">
+<h2>Zusammenfassung und Ausblick<a class="headerlink" href="#zusammenfassung-und-ausblick" title="Permalink to this headline">#</a></h2>
+<p>In diesem Kapitel haben wir die grundlegenden Konzepte von
+Differentialgleichungen behandelt. Da es sich um eine Einführung zum Thema
+handelt, haben wir uns zunächst damit beschäftigt, was eine
+Differentialgleichung ist und welche Schreibweisen es für
+Differentialgleichungen gibt. Obwohl in dieser Vorlesung nur gewöhnliche
+Differentialgleichungen thematisiert werden, sind wir auf den Unterschied
+zwischen gewöhnlichen und partiellen Differentialgleichungen eingegangen.
+Zusätzlich haben wir uns mit der Ordnung einer Differentialgleichung beschäftigt
+und wie sie die Anzahl der Integrationskonstanten beeinflusst. Im nächsten
+Kapitel wird es darum gehen, wie aus unendlich vielen Lösungen einer
+Differentialgleichung eine spezielle Lösung herausgesucht wird.</p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -742,6 +802,7 @@ Video zu “Explizite und implizite Differentialgleichungen”<div class="sd-sum
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#es-gibt-viele-schreibweisen-fur-dgl">Es gibt viele Schreibweisen für DGL</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#die-ordnung-entscheidet-uber-die-anzahl-der-integrationskonstanten">Die Ordnung entscheidet über die Anzahl der Integrationskonstanten</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gewohnlich-betrachten-wir-gewohnliche-dgl">Gewöhnlich betrachten wir gewöhnliche DGL</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zusammenfassung-und-ausblick">Zusammenfassung und Ausblick</a></li>
 </ul>
   </nav></div>
 
