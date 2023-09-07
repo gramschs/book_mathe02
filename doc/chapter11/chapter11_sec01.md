@@ -8,6 +8,7 @@ Thema Differentialgleichungen anhand eines einfachen Beispieles ein.
 
 ```{admonition} Lernziele
 :class: important
+* Sie wissen, was eine **Differentialgleichung** ist.
 * Sie kennen verschiedene Schreibweisen zur Formulierung von Differentialgleichungen.
 * Sie können die **Ordnung einer Differentialgleichung** ablesen.
 * Sie können erklären, was eine **gewöhnliche Differentialgleichung** und was eine **partielle Differentialgleichung** ist.
@@ -44,7 +45,7 @@ $$f''(x) = -f(x).$$
 
 Gesucht wird also eine Funktion, die zweimal abgeleitet die Funktion selbst
 wieder ergibt, nur mit umgekehrten Vorzeichen. Eine Funktion, die diese
-Gleichung löst, ist die Sinus-Funktion. Probieren wir es aus und bilden west
+Gleichung löst, ist die Sinus-Funktion. Probieren wir es aus und bilden erst
 einmal die Ableitungen:
 
 $$f(x) = \sin(x) \quad \Rightarrow f'(x) = \cos(x) \quad \Rightarrow f''(x) =
@@ -52,7 +53,6 @@ $$f(x) = \sin(x) \quad \Rightarrow f'(x) = \cos(x) \quad \Rightarrow f''(x) =
 
 Eingesetzt in die Gleichung erhalten wir also $-\sin(x) = -\sin(x)$. Damit
 erfüllt die Sinus-Funktion die Gleichung $f''(x) = -f(x).$ 
-
 
 
 ```{admonition} Mini-Übung
@@ -76,8 +76,11 @@ b) ableiten: $f(x)=e^x \quad \Rightarrow f'(x)=e^x \quad \Rightarrow f''(x)=e^x$
 eingesetzt: $e^x \neq -e^x$ erfüllt die Gleichung nicht
 
 c) ableiten: 
-
-$$f(x)=\sin(x)+3\cos(x)\quad \Rightarrow f''(x)=\cos(x)-3\sin(x) \quad \Rightarrow f''(x)=-\sin(x)-3\cos(x)$$
+\begin{align*}
+f(x) &=\sin(x)+3\cos(x) \\
+\Rightarrow \quad f''(x)&=\cos(x)-3\sin(x) \\
+\Rightarrow \quad f''(x)&=-\sin(x)-3\cos(x)
+\end{align*} 
 
 eingesetzt: $-\sin(x)-3\cos(x) = -\left(\sin(x)+3\cos(x)\right)$ erfüllt die Gleichung
 ```
@@ -100,17 +103,18 @@ Eine Gleichung, bei der eine Funktion gesucht wird und ihre Ableitungen in der G
 
 So wie Gleichungen für Zahlen mit unterschiedlichen Variablen formuliert werden,
 werden auch bei Differentialgleichungen unterschiedliche Schreibweisen benutzt.
-Meistens werden nämlich die Bezeichnungen aus dem Anwendungskontext übernommen.
+Meistens werden die Bezeichnungen aus dem Anwendungskontext übernommen.
 
-Zunächst einmal können die Bezeichnungen für Variablen der gesuchten Funktion
-variieren. Die obige DGL kann beispielsweise als
+Zunächst einmal können die Bezeichnungen für die Variablen der gesuchten
+Funktion variieren. In dem obigen Beispiel 
 
 $$f''(x)=-f(x)$$
 
-geschrieben werden, wobei $x$ die sogenannte **unabhängige Variable** ist. Die
-gesuchte Funktion wird auch als **abhängige Variable** bezeichnet, obwohl es
-sich um eine Funktion handelt. Sollte es sich jedoch um eine Funktion in
-Abhängigkeit einer zeitlichen Größe handeln, würde die DGL wohl eher als
+wurde als Variablenname $x$ benutzt. Die Variablen der gesuchten Funktion werden
+als **unabhängige Variablen** bezeichnet. Die gesuchte Funktion wird auch als
+**abhängige Variable** bezeichnet, obwohl es sich um eine Funktion handelt.
+Sollte es sich jedoch um eine Funktion in Abhängigkeit einer zeitlichen Größe
+handeln, würde die DGL wohl eher als
 
 $$f''(t)=-f(t)$$
 
@@ -137,7 +141,7 @@ $$y''=-y.$$
 
 Alle Schreibweisen – so unterschiedlich sie auch wirken mögen – drücken dieselbe
 Frage aus: welche Funktion muss zweimal abgeleitet werden, damit sie das
-Negative von sich selbst ist.
+Negative von sich selbst ist?
 
 
 
@@ -155,7 +159,7 @@ die passen. Wir schauen uns nun ein etwas einfacheres Beispiel an:
 $$y''(x) = -\sin(x).$$
 
 Auf der rechten Seite kommt die gesuchte Funktion $y(x)$ nicht mehr vor, sondern
-sie ist nur noch als 2. Ableitung auf der linken Seite der Gleichung. Ein
+sie steht nur noch als 2. Ableitung auf der linken Seite der Gleichung. Ein
 einfacher Ansatz, um die DGL zu lösen ist, auf beiden Seiten unbestimmt zu
 integrieren. Wir erhalten
 
@@ -172,9 +176,9 @@ $$\int y'(x)\, dx = \int \cos(x) + C_1 \, dx \quad \Rightarrow \quad y(x) =
 
 Die gefundene Funktion $y(x)=\sin(x)+C_1 x + C_2$ ist nicht nur *eine* Funktion,
 sondern eine ganze Schar von Funktionen. Es können zwei verschiedene Parameter
-$C_1$ und $C_2$ gewählt werden und für jeden der beiden Parameter gibt es
-unendlich viele Möglichkeiten.
-
+$C_1$ und $C_2$ gewählt werden. Mathematisch gesehen gibt es bei der Wahl der
+Parameter keine Einschränkungen; wir könnten jede reelle Zahl wählen. Daher gibt
+es unendlich viele Lösungen der Differentialgleichung.
 
 
 ```{admonition} Mini-Übung
@@ -190,6 +194,39 @@ b) $C_1 = 0$ und $C_2 = 1$, also $y_2(x) = \sin(x) + 1$ <br>
 c) $C_1 = -2$ und $C_2 = 3$, also $y_3(x) = \sin(x) -2x + 3$<br>
 ```
 
+````{admonition} Lösung
+:class: tip, toggle
+Um zu überprüfen, ob die gegebenen Variationen die DGL $y''(x) = -\sin(x)$
+erfüllen, müssen wir die zweite Ableitung jeder Funktion berechnen und
+überprüfen, ob sie gleich $-\sin(x)$ ist.
+
+a) $y_1(x) = \sin(x) + x$
+\begin{align*}
+\Rightarrow \quad y_1'(x)  &= \cos(x) + 1 \\
+\Rightarrow \quad y_1''(x) &= -\sin(x) 
+\end{align*}
+
+Da $y_1''(x) = -\sin(x)$ gilt, erfüllt $y_1$ die DGL.
+
+b) $y_2(x) = \sin(x) + 1$
+\begin{align*}
+\Rightarrow \quad y_2'(x) &= \cos(x) \\
+\Rightarrow \quad y_2''(x) &= -\sin(x) 
+\end{align*}
+
+Da $y_2''(x) = -\sin(x)$ gilt, erfüllt $y_2$ ebenfalls die DGL.
+
+c) $y_3(x) = \sin(x) - 2x + 3$
+\begin{align*}
+\Rightarrow \quad y_3'(x)  &= \cos(x) - 2 \\
+\Rightarrow \quad y_3''(x) &= -\sin(x) 
+\end{align*}
+
+Da $y_3''(x) = -\sin(x)$ gilt, erfüllt auch $y_3$ die DGL.
+
+Alle drei Funktionen erfüllen die Differentialgleichung $y''(x) = -\sin(x)$ und
+sind daher Lösungen der Differentialgleichung.
+````
 
 Durch dieses Beispiel haben wir zwei Sachen kennengelernt, die typisch für
 Differentialgleichungen sind:
@@ -205,7 +242,7 @@ Differentialgleichungen danach eingeteilt werden. Wir halten daher folgende
 Definition fest. 
 
 
-```{admonition} Was ist ... die Ordnung einer DGL?
+```{admonition} Was ist ... die Ordnung einer Differentialgleichung?
 Die höchste vorkommene Ableitung der gesuchten Funktion nennen wir **Ordnung** der Differentialgleichung.
 ```
 
@@ -221,7 +258,7 @@ Kapiteln werden wir nur gewöhnliche Differentialgleichungen betrachten.
 
 Die gesuchte Funktion der Differentialgleichung kann von einer unabhängigen
 Variable abhängen, also eindimensional sein, aber auch von mehreren unabhängigen
-Variablen abhängen, also mehrdimensional sein. Demtentsprechend können normale
+Variablen abhängen, also mehrdimensional sein. Dementsprechend können normale
 Ableitungen in der Differentialgleichung auftreten, wie wir es in den oben
 stehenden Beispielen gesehen haben, oder partielle Ableitungen. 
 
@@ -235,6 +272,13 @@ Zeit $t$ vorkommen:
 $$\frac{\partial u(x,t)}{\partial t} - a^2 \frac{\partial^2 u(x,t)}{\partial
 x^2} = 0.$$
 
+```{admonition} Was ist ... eine gewöhnliche Differentialgleichung?
+Eine Differentialgleichung, bei der die gesuchte Funktion nur von einer
+unabhängigen Variable abhängt, wird als **gewöhnliche Differentialgleichung**
+bezeichnet. Kommen in der Differentialgleichungen Ableitungen nach mehreren
+unabhängigen Variablen vor, so nennen wir diese Gleichung **partielle
+Differentialgleichung**. 
+```
 
 Die Beispiele, die wir bisher betrachtet haben, waren so formuliert, dass die
 höchste Ableitung auf der linken Seite stand und alle anderen Terme auf der
@@ -242,17 +286,32 @@ rechten Seite der Gleichung. Das muss aber nicht so sein. Eine
 Differentialgleichung, die nach der höchsten Ableitung aufgelöst ist, nennen wir
 **explizite Differentialgleichung**. Ein Beispiel für eine explizite DGL ist
 
-$$y'' + 3y' -  2y = 0.$$
+$$y'' = -3y' + 2y.$$
 
 Ist hingegen die DGL *nicht* nach der höchsten Ableitung aufgelöst, so
 bezeichnen wir diese als **implizite Differentialgleichung**. Wir können das
 Beispiel umformen zu
 
-$$y'' = -3y' + 2y.$$
+$$y'' + 3y' -  2y = 0.$$
 
-Leider lässt sich nicht jede implizite Differentialgleichung in eine explizite
-DGL umformen.
+Es war einfach, die explizite Differentialgleichung in eine implizite
+Differentialgleichung umzuformen. Leider lässt sich nicht jede implizite
+Differentialgleichung in eine explizite DGL umformen.
 
 ```{dropdown} Video zu "Explizite und implizite Differentialgleichungen"
 <iframe src="https://frankfurt-university.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=f685aee3-bac5-4459-839e-b01800ec5f8a&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=false&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
 ```
+
+## Zusammenfassung und Ausblick
+
+In diesem Kapitel haben wir die grundlegenden Konzepte von
+Differentialgleichungen behandelt. Da es sich um eine Einführung zum Thema
+handelt, haben wir uns zunächst damit beschäftigt, was eine
+Differentialgleichung ist und welche Schreibweisen es für
+Differentialgleichungen gibt. Obwohl in dieser Vorlesung nur gewöhnliche
+Differentialgleichungen thematisiert werden, sind wir auf den Unterschied
+zwischen gewöhnlichen und partiellen Differentialgleichungen eingegangen.
+Zusätzlich haben wir uns mit der Ordnung einer Differentialgleichung beschäftigt
+und wie sie die Anzahl der Integrationskonstanten beeinflusst. Im nächsten
+Kapitel wird es darum gehen, wie aus unendlich vielen Lösungen einer
+Differentialgleichung eine spezielle Lösung herausgesucht wird.
