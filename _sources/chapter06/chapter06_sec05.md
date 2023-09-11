@@ -1,123 +1,180 @@
 # Übungen
 
-```{admonition} Übung 6.1
+```{admonition} Übung 5.1
 :class: tip
-Berechnen Sie die ersten partiellen Ableitungen nach den Variablen.
-a) $f(x,y)=e^{x}\cdot e^{y}$ <br>
-b) $f(x,y)=e^{xy}$ <br>
-c) $f(x,y)=\sin(x)\cos(y)$ <br>
-d) $f(x_1,x_2,x_3) = \frac{1}{2x_1^2+\sqrt{x_2^2+x_3^2}}$ <br>
+Welche Periode haben die folgenden Funktionen:
+
+1. Sinus-Funktion $f(x) = \sin(x)$?
+2. Kosinus-Funktion $f(x) = \cos(x)$? 
+3. Quadratische Funktion $f(x)=x^2$? 
+4. Tangens-Funktion $f(x)=\tan(x)$? 
 ```
 ````{admonition} Lösung
 :class: tip, toggle
-a) $f(x,y)=e^{x}\cdot e^{y}$
-
-$$\frac{\partial f}{\partial x}=e^x\cdot e^y \quad \text{ und } \quad \frac{\partial f}{\partial y}=e^x\cdot e^y$$
-
-b) $f(x,y)=e^{xy}$
-
-$$\frac{\partial f}{\partial x}=ye^{xy} \quad \text{ und } \quad \frac{\partial f}{\partial y}=xe^{xy}$$
-
-c) $f(x,y)=\sin(x)\cos(y)$
-
-$$\frac{\partial f}{\partial x}=\cos(x)\cos(y) \quad \text{ und } \quad \frac{\partial f}{\partial y}=\sin(x)\left(-\sin(y)\right)$$
-
-d) $f(x_1,x_2,x_3) = \frac{1}{2x_1^2+\sqrt{x_2^2+x_3^2}}$
-\begin{align*}
-\frac{\partial f}{\partial x_1}&=-\frac{1}{(2x_1^2+\sqrt{x_2^2+x_3^2})^2}\cdot 4x_1 \\
-\frac{\partial f}{\partial x_2}&=-\frac{1}{(2x_1^2+\sqrt{x_2^2+x_3^2})^2}\cdot \frac{x_2}{\sqrt{x_2^2+x_3^2}}\\
-\frac{\partial f}{\partial x_3}&=-\frac{1}{(2x_1^2+\sqrt{x_2^2+x_3^2})^2}\cdot \frac{x_3}{\sqrt{x_2^2+x_3^2}}
-\end{align*}
+1. Sinus-Funktion $f(x) = \sin(x)$ Periode $2\pi$ 
+2. Kosinus-Funktion $f(x) = \cos(x)$ Periode $2\pi$
+3. Quadratische Funktion $f(x)=x^2$ nicht periodisch
+4. Tangens-Funktion $f(x)=\tan(x)$ Periode $\pi$
 ````
 
-```{admonition} Übung 6.2
+```{admonition} Übung 5.2
 :class: tip
-Berechnen Sie die zweiten partiellen Ableitungen nach den Variablen. Verifizieren Sie, dass das Ergebnis unabhängig von der Reihenfolge der Differentiationsschritte ist.
-
-a) $f(x,y)=x^3+y^3 + x^2y^2+xy+1$ <br>
-b) $f(x,y,z)=\frac{1}{\sqrt{x^2+y^2+z^2}}$ 
+Zeichnen Sie die Funktionen $f(x) = \sin(kx)$ und $g(x) = \cos(kx)$ für $k = 2$ und $k = 5$. Welche Perioden haben die vier Funktionen?
 ```
 ````{admonition} Lösung
 :class: tip, toggle
-a) $f(x,y)=x^3+y^3 + x^2y^2+xy+1$ 
+Die Periode von $\sin(2x)$ und $\cos(2x)$ ist $\pi$ und die Periode von $\sin(5x)$ und $\cos(5x)$ ist $\frac{2\pi}{5}$.
+```{figure} pics/plot_solution05_02a.svg
+---
+width: 50%
+name: plot_solution05_02a
+---
+Sinusfunktion $\sin(2x)$ mit einer Periode $T = \pi$
+```
 
-1\. partielle Ableitungen:
-\begin{align*}
-\frac{\partial f}{\partial x} &= 3x^2+2xy^2+y \\
-\frac{\partial f}{\partial y} &= 3y^2+2x^2y+x 
-\end{align*}
-2\. partielle Ableitungen:
-\begin{align*}
-\frac{\partial^2 f}{\partial x \partial x} &= 6x + 2y^2 \\
-\frac{\partial^2 f}{\partial x \partial y} &= \frac{\partial^2 f}{\partial y \partial x} = 4xy + 1 \\
-\frac{\partial^2 f}{\partial y \partial y} &= 6y + 2x^2 
-\end{align*}
+```{figure} pics/plot_solution05_02b.svg
+---
+width: 50%
+name: plot_solution05_02b
+---
+Sinusfunktion $\sin(5x)$ mit einer Periode $T = \frac{2\pi}{5}$
+```
 
-b) $f(x,y,z)=\frac{1}{\sqrt{x^2+y^2+z^2}}$ 
+```{figure} pics/plot_solution05_02c.svg
+---
+width: 50%
+name: plot_solution05_02c
+---
+Kosinusfunktion $\cos(2x)$ mit einer Periode $T = \pi$
+```
 
-1\. partielle Ableitungen:
-\begin{align*}
-\frac{\partial f}{\partial x} &= -\frac{x}{\left(\sqrt{x^2+y^2+z^2}\right)^3} \\
-\frac{\partial f}{\partial y} &= -\frac{y}{\left(\sqrt{x^2+y^2+z^2}\right)^3} \\
-\frac{\partial f}{\partial z} &= -\frac{z}{\left(\sqrt{x^2+y^2+z^2}\right)^3} \\
-\end{align*}
-
-2\. partielle Ableitungen:
-\begin{align*}
-\frac{\partial^2 f}{\partial x \partial x} &= -\frac{1}{\left(\sqrt{x^2+y^2+z^2}\right)^3}+3\frac{x^2}{\left(\sqrt{x^2+y^2+z^2}\right)^5}\\ 
-\frac{\partial^2 f}{\partial y \partial y} &= -\frac{1}{\left(\sqrt{x^2+y^2+z^2}\right)^3}+3\frac{y^2}{\left(\sqrt{x^2+y^2+z^2}\right)^5}\\ 
-\frac{\partial^2 f}{\partial z \partial z} &= -\frac{1}{\left(\sqrt{x^2+y^2+z^2}\right)^3}+3\frac{z^2}{\left(\sqrt{x^2+y^2+z^2}\right)^5}
-\end{align*}
-\begin{align*}
-\frac{\partial^2 f}{\partial y \partial x} &= \frac{\partial^2 f}{\partial x \partial y} = \frac{3xy}{\left(\sqrt{x^2+y^2+z^2}\right)^5}\\ 
-\frac{\partial^2 f}{\partial z \partial x} &= \frac{\partial^2 f}{\partial x \partial z} = \frac{3xz}{\left(\sqrt{x^2+y^2+z^2}\right)^5}\\ 
-\frac{\partial^2 f}{\partial z \partial y} &= \frac{\partial^2 f}{\partial y \partial z} = \frac{3yz}{\left(\sqrt{x^2+y^2+z^2}\right)^5}
-\end{align*}
+```{figure} pics/plot_solution05_02d.svg
+---
+width: 50%
+name: plot_solution05_02d
+---
+Kosinusfunktion $\cos(5x)$ mit einer Periode $T = \frac{2\pi}{5}$
+```
 ````
 
-```{admonition} Übung 6.3
+```{admonition} Übung 5.3
 :class: tip
-Berechnen Sie die dritten partiellen Ableitungen. Nutzen Sie aus, dass das Ergebnis unabhängig von der Reihenfolge der Differentiationsschritte ist:
+Berechnen Sie die folgenden Integrale. 
 
-$$f(x,y,z)=x^2y^2z^2+x^3+y^3+z^3.$$
+* $a_0 = \frac{1}{\pi} \int_{-\pi}^{\pi} x^2\; dx$
+* $a_1 = \frac{1}{\pi} \int_{-\pi}^{\pi} x^2 \cos(x)\; dx$
+* $a_2 = \frac{1}{\pi} \int_{-\pi}^{\pi} x^2 \cos(2x)\; dx$
+* $b_1 = \frac{1}{\pi} \int_{-\pi}^{\pi} x^2 \sin(x)\; dx$
+* $b_2 = \frac{1}{\pi} \int_{-\pi}^{\pi} x^2 \sin(2x)\; dx$
 
-Hinweis: wie viele partielle Ableitungen 3. Ordnung gibt es bei drei Variablen? Wie viele muss man explizit ausrechnen?
+Tipp: meist muss zuerst partielle Integration und später Substitution angewandt
+werden.
 ```
 ````{admonition} Lösung
 :class: tip, toggle
-Es gibt insgesamt 27 Ableitungen 3. Ordnung, aber es genügen 10 explizite Ableitungen: xxx, yxx, zxx, yyy, xyy, zyy, zzz, xzz, yzz, xyz.
-
-1\. partielle Ableitungen:
-\begin{align*}
-\frac{\partial f}{\partial x} &= 2xy^2z^2 + 3x^2 \\
-\frac{\partial f}{\partial y} &= 2x^2yz^2 + 3y^2 \\
-\frac{\partial f}{\partial z} &= 2x^2y^2z + 3z^2 \\
-\end{align*}
-
-Zwischenrechnung 2. partielle Ableitungen:
-\begin{align*}
-\frac{\partial^2 f}{\partial x \partial x} &= 2y^2z^2 + 6x \\ 
-\frac{\partial^2 f}{\partial y \partial y} &= 2x^2z^2 + 6y \\ 
-\frac{\partial^2 f}{\partial z \partial z} &= 2x^2y^2 + 6z \\ 
-\end{align*}
-
-3\. partielle Ableitungen:
-\begin{align*}
-\frac{\partial^3f}{\partial x \partial x \partial x} &= 6 \\ 
-\frac{\partial^3f}{\partial y \partial x \partial x} &= 4yz^2 \\
-\frac{\partial^3f}{\partial z \partial x \partial x} &= 4y^2z 
-\end{align*}
-\begin{align*}
-\frac{\partial^3f}{\partial y \partial y \partial y} &= 6 \\  
-\frac{\partial^3f}{\partial x \partial y \partial y} &= 4xz^2 \\
-\frac{\partial^3f}{\partial z \partial y \partial y} &= 4x^2z 
-\end{align*}
-\begin{align*}  
-\frac{\partial^3f}{\partial z \partial z \partial z} &= 6 \\  
-\frac{\partial^3f}{\partial x \partial z \partial z} &= 4xy^2 \\   
-\frac{\partial^3f}{\partial y \partial z \partial z} &= 4x^2y 
-\end{align*}
+$$a_0=\frac{2\pi^2}{3}, a_1 = -4, a_2 = 1, b_1 = 0, b_2 = 0$$
+```{dropdown} Lösungsweg
+Fourierkoeffizient $a_0$:
 \begin{equation*}
-\frac{\partial^3f}{\partial x \partial y \partial x} = 8xyz             
+a_0 = \frac{1}{\pi}\int_{-\pi}^{\pi} x^2\, dx = \frac{1}{\pi}\left[\frac{1}{3}x^3\right]_{-\pi}^{\pi} = \frac{1}{3\pi}\cdot\left(\pi^3 + \pi^3\right) = \frac{2}{3}\pi^2.
 \end{equation*}
+
+Fourierkoeffizient $a_1$:
+\begin{align*}
+a_1 &= \frac{1}{\pi}\int_{-\pi}^{\pi}x^2\cos(x)\, dx = \\
+&= \frac{1}{\pi}\left[x^2\cdot \sin(x)\right]_{-\pi}^{\pi} - \frac{2}{\pi}\int_{-\pi}^{\pi}x\, \sin(x)\, dx = \\
+&= \frac{1}{\pi}\left[x^2\cdot\sin(x)\right]_{-\pi}^{\pi} - \frac{2}{\pi}\left([-x\cdot\cos(x)]_{-\pi}^{\pi}-\int_{-\pi}^{\pi}-\cos(x)\, dx \right) = \\
+&= \frac{1}{\pi}\left[x^2\cdot\sin(x)\right]_{-\pi}^{\pi} + \frac{2}{\pi}\left[x\cdot\cos(x)\right]_{-\pi}^{\pi}-\frac{2}{\pi}\left[\sin(x)\right]_{-\pi}^{\pi} = \\
+&= \left[\frac{1}{\pi}(x^2-2)\cdot\sin(x) + \frac{1}{\pi}\cdot 2x\cos(x)\right]_{-\pi}^{\pi} = \\
+&= \left(\frac{1}{\pi}(\pi^2-2)\cdot\sin(\pi) + \frac{1}{\pi}\cdot 2\pi\cos(\pi)\right) - \left(\frac{1}{\pi}(\pi^2-2)\cdot\sin(-\pi)-\frac{1}{\pi}\cdot 2\pi\cos(-\pi)\right) = \\
+&= -2-2 = -4
+\end{align*}
+
+Fourierkoeffizient $a_2$:
+\begin{equation*}
+a_2 = \frac{1}{\pi} \int_{-\pi}^{\pi} x^2\cdot \cos(2x)\, dx = \frac{1}{\pi}\left[x^2\cdot \frac{1}{2}\sin(2x)\right]_{-\pi}^{\pi} - \int_{-\pi}^{\pi}2x\cdot \frac{1}{2}\sin(2x)\, dx 
+\end{equation*}
+Wir rechnen zuerst die Stammfunktion des letzten Integrals aus:
+\begin{align*}
+\int 2x\cdot \frac{1}{2}\sin(2x)\, dx &=  \int x\cdot\sin(2x)\, dx = \\
+&= \left[x\cdot\frac{1}{2}(-\cos(2x))\right] - \int \frac{1}{2}(-\cos(2x))\, dx = \\
+&= -\frac{1}{2}x\cdot\cos(2x) + \frac{1}{2}\int \cos(2x)\, dx = \\
+&= -\frac{1}{2}x\cdot\cos(2x) + \frac{1}{4}\sin(2x) + C 
+\end{align*}
+Eingesetzt in das ursprüngliche Integral erhalten wir
+\begin{align*}
+a_2 &= \frac{1}{\pi}\left[x^2\cdot \frac{1}{2}\sin(2x)\right]_{-\pi}^{\pi} + \frac{1}{2}\left[x\cdot\cos(2x)\right]_{-\pi}^{\pi} - \left[ \frac{1}{4}\sin(2x)\right]_{-\pi}^{\pi} = \\
+&= \frac{1}{4\pi}\left[(2x^2-1)\sin(2x)+2x\cos(2x)\right]_{-\pi}^{\pi} = \\
+&= 1.
+\end{align*}
+
+Fourierkoeffizient $b_1$:
+
+$$b_1 = \frac{1}{\pi}\int_{-\pi}^{\pi}x^2\cdot\sin(x)\, dx = \frac{1}{\pi}\left[ 2x\sin(x)-(x^2-2)\cos(x)\right]_{-\pi}^{\pi} = 0$$
+
+Zwischenrechnung:
+\begin{align*}
+\int x^2\cdot \sin(x)\, dx &= \left[x^2\cdot(-\cos(x))\right] - \int 2x\cdot (-\cos(x))\, dx = \\
+&= -x^2\cos(x) + 2x\cdot\sin(x) - 2\int 1\cdot\sin(x)\, dx =\\
+&= -x^2\cos(x) + 2x\sin(x) + 2\cos(x) + C = \\
+&= 2x\sin(x) + (2-x^2)\cos(x) + C
+\end{align*}
+
+Fourierkoeffizient $b_2$:
+
+$$b_2 = \frac{1}{\pi}\int_{-\pi}^{\pi}x^2\cdot\sin(2x)\, dx = \frac{1}{\pi}\left[\frac{1}{2}x\sin(2x)-\frac{1}{4}(2x^2-1)\cos(2x)\right]_{-\pi}^{\pi} = 0$$
+
+Zwischenrechnung:
+\begin{align*}
+\int x^2\cdot \sin(2x)\, dx &= -\frac{1}{2}\left[x^2\cdot\cos(x)\right]+\int x\cdot\cos(2x)\, dx = \\
+&= -\frac{1}{2}x^2\cos(2x) + \frac{1}{2}\left[x\cdot\sin(2x)\right] - \frac{1}{2}\int\sin(2x)\, dx = \\
+&= -\frac{1}{2}x^2\cos(2x) + \frac{1}{2}x\sin(2x) + \frac{1}{4}\cos(2x) + C
+\end{align*}
+```
 ````
+
+```{admonition} Übung 5.4
+:class: tip
+Gegeben sei die Funktion $f:[-\pi, \pi) \mapsto \mathbb{R}$ mit 
+
+  $$ f(t)= -5\,t \ \text{ auf } \  [-\pi,\pi) $$
+
+die periodisch fortgesetzt wird. Zeichnen Sie das Schaubild der Funktion.
+Bestimmen Sie zuerst die Fourierkoeffizienten von $f$ und dann die Fourierreihe. 
+```
+````{admonition} Lösung
+:class: tip, toggle
+* Fourierkoeffizienten: $a_0=0$; $a_k=0$;  $b_k=\frac{10\,{\left(-1\right)}^k}{k}$ 
+* Fourierreihe:
+
+$$f(t)=\frac{0}{2}+\sum_{k=1}^{\infty} \left(0\cdot \cos(k\omega t) + b_k\sin(k\omega t)\right) = \sum_{k=1}^{\infty} \frac{10\,{\left(-1\right)}^k}{k}\sin(k\,t).$$
+
+```{figure} pics/plot_solution05_04.svg
+---
+width: 50%
+name: plot_solution05_04
+---
+Schaubild der Funktion $f(t)= -5\,t$ mit einer Periode $T = 2\pi$ periodisch fortgesetzt
+```
+```{dropdown} Lösungsweg
+Es gilt für die Kreisfrequenz: $\omega=\frac{2\pi}{T}=\frac{2\pi}{2\pi}=1$. Damit können nun die Fourierkoeffizienten berechnet werden.
+
+Der Koeffizient $a_0$ wird folgendermaßen berechnet:
+
+$$a_0\ =\ \frac{1}{\pi}\int_{-\pi}^{\pi} f(t)\,dt = \frac{1}{\pi}\int_{-\pi }^{\pi }-5\,t\, dt =0.$$
+
+Da auf dem Intervall $[-\pi,\pi)$ für die Funktion $f(t) = -f(-t)$ gilt, ist die Funktion $f$ ungerade. Damit sind Fourierkoeffizienten $a_k=0$. 
+
+Die Fourierkoeffizienten $b_k$ sind schwieriger zu berechnen, da wir dafür eine allgemeine Formel abhängig von $k$ brauchen. Außerdem müssen wir partielle Integration anwenden.
+\begin{align*}  
+ b_k & = \frac{1}{\pi}\left(  \int_{t=-\pi }^{t=\pi }\underbrace{\left( -5\,t\right)}_{f}\underbrace{\sin\left(k\,t\right)}_{g'}\, dt  \right) \\ 
+     &=  \frac{1}{\pi}\left( \left[\left( -5\,t\right)\left( -\frac{\cos\left(k\,t\right)}{k}\right)\right]_{-\pi }^{\pi }-\int_{-\pi }^{\pi }\left( -5\right)\left( -\frac{\cos\left(k\,t\right)}{k}\right) \, dt \right) \\ 
+     &=  \frac{1}{\pi}\left( \frac{10\,\pi \,{\left(-1\right)}^k}{k}-\left( \left[\left( -5\right)\left( -\frac{\sin\left(k\,t\right)}{k^2}\right)\right]_{-\pi }^{\pi } \right) \right) \\ 
+     &=  \frac{1}{\pi}\left( \frac{10\,\pi \,{\left(-1\right)}^k}{k}-\left( 0 \right) \right) \\ 
+     &= \frac{10\,{\left(-1\right)}^k}{k}. 
+\end{align*} 
+```
+````
+
+
+

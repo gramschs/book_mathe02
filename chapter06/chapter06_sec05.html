@@ -71,8 +71,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'chapter06/chapter06_sec05';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="7. Richtungsableitungen und vektorwertige Funktionen" href="../chapter07/chapter07_sec00.html" />
-    <link rel="prev" title="6.4 Höhere partielle Ableitungen und Hesse-Matrix" href="chapter06_sec04.html" />
+    <link rel="next" title="7. Funktionen von mehreren Variablen und partielle Ableitungen" href="../chapter07/chapter07_sec00.html" />
+    <link rel="prev" title="6.4 Rechenregeln Fourierreihen" href="chapter06_sec04.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="None"/>
   </head>
@@ -157,111 +157,122 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Part 1. Integrale</span></p>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Differential- und Integralrechnung</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter01/chapter01_sec00.html">1. Wiederholung Integral</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter01/chapter01_sec01.html">1.1 Stammfunktion und bestimmtes Integral</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter01/chapter01_sec02.html">1.2 Eigenschaften von Integralen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter01/chapter01_sec03.html">1.3 Partielle Integration</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter01/chapter01_sec04.html">1.4 Integration durch Substitution</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter01/chapter01_sec00.html">1. Differentialrechnung</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter01/chapter01_sec01.html">1.1 Ableitungen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter01/chapter01_sec02.html">1.2 Rechenregeln Ableitungen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter01/chapter01_sec03.html">1.3 Extremwerte</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter01/chapter01_sec04.html">1.4 Extremwerte mit Nebenbedingung</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter01/chapter01_sec05.html">Übungen</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter02/chapter02_sec00.html">2. Anwendungen Integral</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter02/chapter02_sec01.html">2.1 Integrieren ist Mitteln</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter02/chapter02_sec02.html">2.2 Fläche zwischen zwei Graphen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter02/chapter02_sec03.html">2.3 Bogenlänge</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter02/chapter02_sec04.html">2.4 Volumen von Rotationskörpern</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter02/chapter02_sec00.html">2. Integrale</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter02/chapter02_sec01.html">2.1 Stammfunktion und bestimmtes Integral</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter02/chapter02_sec02.html">2.2 Eigenschaften von Integralen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter02/chapter02_sec03.html">2.3 Partielle Integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter02/chapter02_sec04.html">2.4 Integration durch Substitution</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter02/chapter02_sec05.html">Übungen</a></li>
 </ul>
 </li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Part 2. Funktionenreihen</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter03/chapter03_sec00.html">3. Reihen und Potenzreihen</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec01.html">3.1 Reihen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec02.html">3.2 Konvergenzkriterien für Reihen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec03.html">3.3 Potenzreihen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec04.html">3.4 Konvergenz von Potenzreihen</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter03/chapter03_sec00.html">3. Anwendungen Integral</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec01.html">3.1 Integrieren ist Mitteln</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec02.html">3.2 Fläche zwischen zwei Graphen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec03.html">3.3 Bogenlänge</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec04.html">3.4 Volumen von Rotationskörpern</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec05.html">Übungen</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter04/chapter04_sec00.html">4. Taylorreihen</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter04/chapter04_sec01.html">4.1 Berechnung Taylorreihe</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter04/chapter04_sec02.html">4.2 Restglied von Taylorreihen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter04/chapter04_sec03.html">4.3 Wichtige Potenzreihen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter04/chapter04_sec04.html">4.4 Rechnen mit Potenzreihen</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Funktionenreihen</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter04/chapter04_sec00.html">4. Reihen und Potenzreihen</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter04/chapter04_sec01.html">4.1 Reihen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter04/chapter04_sec02.html">4.2 Konvergenzkriterien für Reihen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter04/chapter04_sec03.html">4.3 Potenzreihen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter04/chapter04_sec04.html">4.4 Konvergenz von Potenzreihen</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter04/chapter04_sec05.html">Übungen</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter05/chapter05_sec00.html">5. Fourierreihen</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter05/chapter05_sec01.html">5.1 Periodische Funktionen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter05/chapter05_sec02.html">5.2 Fourierreihen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter05/chapter05_sec03.html">5.3 Beispiele für Fourierreihen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter05/chapter05_sec04.html">5.4 Rechenregeln Fourierreihen</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter05/chapter05_sec00.html">5. Taylorreihen</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter05/chapter05_sec01.html">5.1 Berechnung Taylorreihe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter05/chapter05_sec02.html">5.2 Restglied von Taylorreihen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter05/chapter05_sec03.html">5.3 Wichtige Potenzreihen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter05/chapter05_sec04.html">5.4 Rechnen mit Potenzreihen</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter05/chapter05_sec05.html">Übungen</a></li>
 </ul>
 </li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Part 3. Mehrdimensionale Analysis</span></p>
-<ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="chapter06_sec00.html">6. Funktionen von mehreren Variablen und partielle Ableitungen</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="chapter06_sec01.html">6.1 Definition und Visualisierung</a></li>
-<li class="toctree-l2"><a class="reference internal" href="chapter06_sec02.html">6.2 Stetigkeit</a></li>
-<li class="toctree-l2"><a class="reference internal" href="chapter06_sec03.html">6.3 Partielle Ableitungen und Gradient</a></li>
-<li class="toctree-l2"><a class="reference internal" href="chapter06_sec04.html">6.4 Höhere partielle Ableitungen und Hesse-Matrix</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="chapter06_sec00.html">6. Fourierreihen</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="chapter06_sec01.html">6.1 Periodische Funktionen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter06_sec02.html">6.2 Fourierreihen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter06_sec03.html">6.3 Beispiele für Fourierreihen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter06_sec04.html">6.4 Rechenregeln Fourierreihen</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Übungen</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter07/chapter07_sec00.html">7. Richtungsableitungen und vektorwertige Funktionen</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter07/chapter07_sec01.html">7.1 Gradient und Richtungsableitung</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter07/chapter07_sec02.html">7.2 Vektorwertige Funktionen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter07/chapter07_sec03.html">7.3 Jacobi-Matrix</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter07/chapter07_sec04.html">7.4 Mehrdimensionale Kettenregel</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Höhere Differentialrechnung</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter07/chapter07_sec00.html">7. Funktionen von mehreren Variablen und partielle Ableitungen</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter07/chapter07_sec01.html">7.1 Definition und Visualisierung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter07/chapter07_sec02.html">7.2 Stetigkeit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter07/chapter07_sec03.html">7.3 Partielle Ableitungen und Gradient</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter07/chapter07_sec04.html">7.4 Höhere partielle Ableitungen und Hesse-Matrix</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter07/chapter07_sec05.html">Übungen</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter08/chapter08_sec00.html">8. Linearisierung und Extremwerte</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter08/chapter08_sec01.html">8.1 Tangentenfunktionen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter08/chapter08_sec02.html">8.2 Totales Differential</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter08/chapter08_sec03.html">8.3 Extremwerte</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter08/chapter08_sec04.html">8.4 Extremwertprobleme mit Nebenbedingung</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter08/chapter08_sec00.html">8. Richtungsableitungen und vektorwertige Funktionen</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter08/chapter08_sec01.html">8.1 Gradient und Richtungsableitung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter08/chapter08_sec02.html">8.2 Vektorwertige Funktionen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter08/chapter08_sec03.html">8.3 Jacobi-Matrix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter08/chapter08_sec04.html">8.4 Mehrdimensionale Kettenregel</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter08/chapter08_sec05.html">Übungen</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter09/chapter09_sec00.html">9. Doppelintegral</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter09/chapter09_sec01.html">9.1 Idee von Doppelintegralen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter09/chapter09_sec02.html">9.2 Berechnung von Doppelintegralen in kartesischen Koordinaten</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter09/chapter09_sec03.html">9.3 Anwendung: Flächenberechnung</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter09/chapter09_sec04.html">9.4 Anwendung: Schwerpunktberechnung</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter09/chapter09_sec00.html">9. Linearisierung und Extremwerte</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter09/chapter09_sec01.html">9.1 Tangentenfunktionen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter09/chapter09_sec02.html">9.2 Totales Differential</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter09/chapter09_sec03.html">9.3 Extremwerte</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter09/chapter09_sec04.html">9.4 Extremwertprobleme mit Nebenbedingung</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter09/chapter09_sec05.html">Übungen</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter10/chapter10_sec00.html">10. Doppelintegral in Polarkoordinaten und Dreifachintegral</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter10/chapter10_sec01.html">10.1 Polarkoordinaten</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter10/chapter10_sec02.html">10.2 Doppelintegral in Polarkoordinaten</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter10/chapter10_sec03.html">10.3 Dreifachintegral</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter10/chapter10_sec04.html">10.4 Anwendungen Dreifachintegral</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Höhere Integralrechnung</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter10/chapter10_sec00.html">10. Doppelintegral</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter10/chapter10_sec01.html">10.1 Idee von Doppelintegralen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter10/chapter10_sec02.html">10.2 Berechnung von Doppelintegralen in kartesischen Koordinaten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter10/chapter10_sec03.html">10.3 Anwendung: Flächenberechnung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter10/chapter10_sec04.html">10.4 Anwendung: Schwerpunktberechnung</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter10/chapter10_sec05.html">Übungen</a></li>
 </ul>
 </li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Part 4. Differentialgleichungen</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter11/chapter11_sec00.html">11. Einführung Differentialgleichungen</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter11/chapter11_sec01.html">11.1 Grundbegriffe</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter11/chapter11_sec02.html">11.2 Anfangs- und Randwertproblem</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter11/chapter11_sec03.html">11.3 Separable Differentialgleichungen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter11/chapter11_sec04.html">11.4 Exakte Differentialgleichungen</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter11/chapter11_sec00.html">11. Doppelintegral in Polarkoordinaten und Dreifachintegral</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter11/chapter11_sec01.html">11.1 Polarkoordinaten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter11/chapter11_sec02.html">11.2 Doppelintegral in Polarkoordinaten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter11/chapter11_sec03.html">11.3 Dreifachintegral</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter11/chapter11_sec04.html">11.4 Anwendungen Dreifachintegral</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter11/chapter11_sec05.html">Übungen</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter12/chapter12_sec00.html">12. Lineare Differentialgleichungen</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-12"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter12/chapter12_sec01.html">12.1 Lineare DGL 1. Ordnung</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter12/chapter12_sec02.html">12.2 Lösung homogene lineare DGL 1. Ordnung</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter12/chapter12_sec03.html">12.3 Lösung inhomogene lineare DGL 1. Ordnung</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter12/chapter12_sec04.html">12.4 Homogene Systeme aus zwei linearen DGL 1. Ordnung</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Differentialgleichungen</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter12/chapter12_sec00.html">12. Einführung Differentialgleichungen</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-12"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter12/chapter12_sec01.html">12.1 Grundbegriffe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter12/chapter12_sec02.html">12.2 Anfangs- und Randwertproblem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter12/chapter12_sec03.html">12.3 Separable Differentialgleichungen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter12/chapter12_sec04.html">12.4 Exakte Differentialgleichungen</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter12/chapter12_sec05.html">Übungen</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter13/chapter13_sec00.html">13. Lineare Differentialgleichungen</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-13"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter13/chapter13_sec01.html">13.1 Lineare DGL 1. Ordnung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter13/chapter13_sec02.html">13.2 Lösung homogene lineare DGL 1. Ordnung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter13/chapter13_sec03.html">13.3 Lösung inhomogene lineare DGL 1. Ordnung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter13/chapter13_sec04.html">13.4 Homogene Systeme aus zwei linearen DGL 1. Ordnung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter13/chapter13_sec05.html">Übungen</a></li>
 </ul>
 </li>
 </ul>
@@ -430,124 +441,184 @@ document.write(`
   <section class="tex2jax_ignore mathjax_ignore" id="ubungen">
 <h1>Übungen<a class="headerlink" href="#ubungen" title="Permalink to this headline">#</a></h1>
 <div class="tip admonition">
-<p class="admonition-title">Übung 6.1</p>
-<p>Berechnen Sie die ersten partiellen Ableitungen nach den Variablen.
-a) <span class="math notranslate nohighlight">\(f(x,y)=e^{x}\cdot e^{y}\)</span> <br>
-b) <span class="math notranslate nohighlight">\(f(x,y)=e^{xy}\)</span> <br>
-c) <span class="math notranslate nohighlight">\(f(x,y)=\sin(x)\cos(y)\)</span> <br>
-d) <span class="math notranslate nohighlight">\(f(x_1,x_2,x_3) = \frac{1}{2x_1^2+\sqrt{x_2^2+x_3^2}}\)</span> <br></p>
+<p class="admonition-title">Übung 5.1</p>
+<p>Welche Periode haben die folgenden Funktionen:</p>
+<ol class="arabic simple">
+<li><p>Sinus-Funktion <span class="math notranslate nohighlight">\(f(x) = \sin(x)\)</span>?</p></li>
+<li><p>Kosinus-Funktion <span class="math notranslate nohighlight">\(f(x) = \cos(x)\)</span>?</p></li>
+<li><p>Quadratische Funktion <span class="math notranslate nohighlight">\(f(x)=x^2\)</span>?</p></li>
+<li><p>Tangens-Funktion <span class="math notranslate nohighlight">\(f(x)=\tan(x)\)</span>?</p></li>
+</ol>
 </div>
 <div class="tip toggle admonition">
 <p class="admonition-title">Lösung</p>
-<p>a) <span class="math notranslate nohighlight">\(f(x,y)=e^{x}\cdot e^{y}\)</span></p>
-<div class="math notranslate nohighlight">
-\[\frac{\partial f}{\partial x}=e^x\cdot e^y \quad \text{ und } \quad \frac{\partial f}{\partial y}=e^x\cdot e^y\]</div>
-<p>b) <span class="math notranslate nohighlight">\(f(x,y)=e^{xy}\)</span></p>
-<div class="math notranslate nohighlight">
-\[\frac{\partial f}{\partial x}=ye^{xy} \quad \text{ und } \quad \frac{\partial f}{\partial y}=xe^{xy}\]</div>
-<p>c) <span class="math notranslate nohighlight">\(f(x,y)=\sin(x)\cos(y)\)</span></p>
-<div class="math notranslate nohighlight">
-\[\frac{\partial f}{\partial x}=\cos(x)\cos(y) \quad \text{ und } \quad \frac{\partial f}{\partial y}=\sin(x)\left(-\sin(y)\right)\]</div>
-<p>d) <span class="math notranslate nohighlight">\(f(x_1,x_2,x_3) = \frac{1}{2x_1^2+\sqrt{x_2^2+x_3^2}}\)</span></p>
-<div class="amsmath math notranslate nohighlight">
-\[\begin{align*}
-\frac{\partial f}{\partial x_1}&amp;=-\frac{1}{(2x_1^2+\sqrt{x_2^2+x_3^2})^2}\cdot 4x_1 \\
-\frac{\partial f}{\partial x_2}&amp;=-\frac{1}{(2x_1^2+\sqrt{x_2^2+x_3^2})^2}\cdot \frac{x_2}{\sqrt{x_2^2+x_3^2}}\\
-\frac{\partial f}{\partial x_3}&amp;=-\frac{1}{(2x_1^2+\sqrt{x_2^2+x_3^2})^2}\cdot \frac{x_3}{\sqrt{x_2^2+x_3^2}}
-\end{align*}\]</div>
+<ol class="arabic simple">
+<li><p>Sinus-Funktion <span class="math notranslate nohighlight">\(f(x) = \sin(x)\)</span> Periode <span class="math notranslate nohighlight">\(2\pi\)</span></p></li>
+<li><p>Kosinus-Funktion <span class="math notranslate nohighlight">\(f(x) = \cos(x)\)</span> Periode <span class="math notranslate nohighlight">\(2\pi\)</span></p></li>
+<li><p>Quadratische Funktion <span class="math notranslate nohighlight">\(f(x)=x^2\)</span> nicht periodisch</p></li>
+<li><p>Tangens-Funktion <span class="math notranslate nohighlight">\(f(x)=\tan(x)\)</span> Periode <span class="math notranslate nohighlight">\(\pi\)</span></p></li>
+</ol>
 </div>
 <div class="tip admonition">
-<p class="admonition-title">Übung 6.2</p>
-<p>Berechnen Sie die zweiten partiellen Ableitungen nach den Variablen. Verifizieren Sie, dass das Ergebnis unabhängig von der Reihenfolge der Differentiationsschritte ist.</p>
-<p>a) <span class="math notranslate nohighlight">\(f(x,y)=x^3+y^3 + x^2y^2+xy+1\)</span> <br>
-b) <span class="math notranslate nohighlight">\(f(x,y,z)=\frac{1}{\sqrt{x^2+y^2+z^2}}\)</span></p>
+<p class="admonition-title">Übung 5.2</p>
+<p>Zeichnen Sie die Funktionen <span class="math notranslate nohighlight">\(f(x) = \sin(kx)\)</span> und <span class="math notranslate nohighlight">\(g(x) = \cos(kx)\)</span> für <span class="math notranslate nohighlight">\(k = 2\)</span> und <span class="math notranslate nohighlight">\(k = 5\)</span>. Welche Perioden haben die vier Funktionen?</p>
 </div>
 <div class="tip toggle admonition">
 <p class="admonition-title">Lösung</p>
-<p>a) <span class="math notranslate nohighlight">\(f(x,y)=x^3+y^3 + x^2y^2+xy+1\)</span></p>
-<p>1. partielle Ableitungen:</p>
-<div class="amsmath math notranslate nohighlight">
-\[\begin{align*}
-\frac{\partial f}{\partial x} &amp;= 3x^2+2xy^2+y \\
-\frac{\partial f}{\partial y} &amp;= 3y^2+2x^2y+x 
-\end{align*}\]</div>
-<p>2. partielle Ableitungen:</p>
-<div class="amsmath math notranslate nohighlight">
-\[\begin{align*}
-\frac{\partial^2 f}{\partial x \partial x} &amp;= 6x + 2y^2 \\
-\frac{\partial^2 f}{\partial x \partial y} &amp;= \frac{\partial^2 f}{\partial y \partial x} = 4xy + 1 \\
-\frac{\partial^2 f}{\partial y \partial y} &amp;= 6y + 2x^2 
-\end{align*}\]</div>
-<p>b) <span class="math notranslate nohighlight">\(f(x,y,z)=\frac{1}{\sqrt{x^2+y^2+z^2}}\)</span></p>
-<p>1. partielle Ableitungen:</p>
-<div class="amsmath math notranslate nohighlight">
-\[\begin{align*}
-\frac{\partial f}{\partial x} &amp;= -\frac{x}{\left(\sqrt{x^2+y^2+z^2}\right)^3} \\
-\frac{\partial f}{\partial y} &amp;= -\frac{y}{\left(\sqrt{x^2+y^2+z^2}\right)^3} \\
-\frac{\partial f}{\partial z} &amp;= -\frac{z}{\left(\sqrt{x^2+y^2+z^2}\right)^3} \\
-\end{align*}\]</div>
-<p>2. partielle Ableitungen:</p>
-<div class="amsmath math notranslate nohighlight">
-\[\begin{align*}
-\frac{\partial^2 f}{\partial x \partial x} &amp;= -\frac{1}{\left(\sqrt{x^2+y^2+z^2}\right)^3}+3\frac{x^2}{\left(\sqrt{x^2+y^2+z^2}\right)^5}\\ 
-\frac{\partial^2 f}{\partial y \partial y} &amp;= -\frac{1}{\left(\sqrt{x^2+y^2+z^2}\right)^3}+3\frac{y^2}{\left(\sqrt{x^2+y^2+z^2}\right)^5}\\ 
-\frac{\partial^2 f}{\partial z \partial z} &amp;= -\frac{1}{\left(\sqrt{x^2+y^2+z^2}\right)^3}+3\frac{z^2}{\left(\sqrt{x^2+y^2+z^2}\right)^5}
-\end{align*}\]</div>
-<div class="amsmath math notranslate nohighlight">
-\[\begin{align*}
-\frac{\partial^2 f}{\partial y \partial x} &amp;= \frac{\partial^2 f}{\partial x \partial y} = \frac{3xy}{\left(\sqrt{x^2+y^2+z^2}\right)^5}\\ 
-\frac{\partial^2 f}{\partial z \partial x} &amp;= \frac{\partial^2 f}{\partial x \partial z} = \frac{3xz}{\left(\sqrt{x^2+y^2+z^2}\right)^5}\\ 
-\frac{\partial^2 f}{\partial z \partial y} &amp;= \frac{\partial^2 f}{\partial y \partial z} = \frac{3yz}{\left(\sqrt{x^2+y^2+z^2}\right)^5}
-\end{align*}\]</div>
+<p>Die Periode von <span class="math notranslate nohighlight">\(\sin(2x)\)</span> und <span class="math notranslate nohighlight">\(\cos(2x)\)</span> ist <span class="math notranslate nohighlight">\(\pi\)</span> und die Periode von <span class="math notranslate nohighlight">\(\sin(5x)\)</span> und <span class="math notranslate nohighlight">\(\cos(5x)\)</span> ist <span class="math notranslate nohighlight">\(\frac{2\pi}{5}\)</span>.</p>
+<figure class="align-default" id="plot-solution05-02a">
+<a class="reference internal image-reference" href="../_images/plot_solution05_02a.svg"><img alt="../_images/plot_solution05_02a.svg" src="../_images/plot_solution05_02a.svg" width="50%" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 8 </span><span class="caption-text">Sinusfunktion <span class="math notranslate nohighlight">\(\sin(2x)\)</span> mit einer Periode <span class="math notranslate nohighlight">\(T = \pi\)</span></span><a class="headerlink" href="#plot-solution05-02a" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="plot-solution05-02b">
+<a class="reference internal image-reference" href="../_images/plot_solution05_02b.svg"><img alt="../_images/plot_solution05_02b.svg" src="../_images/plot_solution05_02b.svg" width="50%" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 9 </span><span class="caption-text">Sinusfunktion <span class="math notranslate nohighlight">\(\sin(5x)\)</span> mit einer Periode <span class="math notranslate nohighlight">\(T = \frac{2\pi}{5}\)</span></span><a class="headerlink" href="#plot-solution05-02b" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="plot-solution05-02c">
+<a class="reference internal image-reference" href="../_images/plot_solution05_02c.svg"><img alt="../_images/plot_solution05_02c.svg" src="../_images/plot_solution05_02c.svg" width="50%" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 10 </span><span class="caption-text">Kosinusfunktion <span class="math notranslate nohighlight">\(\cos(2x)\)</span> mit einer Periode <span class="math notranslate nohighlight">\(T = \pi\)</span></span><a class="headerlink" href="#plot-solution05-02c" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="plot-solution05-02d">
+<a class="reference internal image-reference" href="../_images/plot_solution05_02d.svg"><img alt="../_images/plot_solution05_02d.svg" src="../_images/plot_solution05_02d.svg" width="50%" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 11 </span><span class="caption-text">Kosinusfunktion <span class="math notranslate nohighlight">\(\cos(5x)\)</span> mit einer Periode <span class="math notranslate nohighlight">\(T = \frac{2\pi}{5}\)</span></span><a class="headerlink" href="#plot-solution05-02d" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 </div>
 <div class="tip admonition">
-<p class="admonition-title">Übung 6.3</p>
-<p>Berechnen Sie die dritten partiellen Ableitungen. Nutzen Sie aus, dass das Ergebnis unabhängig von der Reihenfolge der Differentiationsschritte ist:</p>
-<div class="math notranslate nohighlight">
-\[f(x,y,z)=x^2y^2z^2+x^3+y^3+z^3.\]</div>
-<p>Hinweis: wie viele partielle Ableitungen 3. Ordnung gibt es bei drei Variablen? Wie viele muss man explizit ausrechnen?</p>
+<p class="admonition-title">Übung 5.3</p>
+<p>Berechnen Sie die folgenden Integrale.</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(a_0 = \frac{1}{\pi} \int_{-\pi}^{\pi} x^2\; dx\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(a_1 = \frac{1}{\pi} \int_{-\pi}^{\pi} x^2 \cos(x)\; dx\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(a_2 = \frac{1}{\pi} \int_{-\pi}^{\pi} x^2 \cos(2x)\; dx\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(b_1 = \frac{1}{\pi} \int_{-\pi}^{\pi} x^2 \sin(x)\; dx\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(b_2 = \frac{1}{\pi} \int_{-\pi}^{\pi} x^2 \sin(2x)\; dx\)</span></p></li>
+</ul>
+<p>Tipp: meist muss zuerst partielle Integration und später Substitution angewandt
+werden.</p>
 </div>
 <div class="tip toggle admonition">
 <p class="admonition-title">Lösung</p>
-<p>Es gibt insgesamt 27 Ableitungen 3. Ordnung, aber es genügen 10 explizite Ableitungen: xxx, yxx, zxx, yyy, xyy, zyy, zzz, xzz, yzz, xyz.</p>
-<p>1. partielle Ableitungen:</p>
-<div class="amsmath math notranslate nohighlight">
-\[\begin{align*}
-\frac{\partial f}{\partial x} &amp;= 2xy^2z^2 + 3x^2 \\
-\frac{\partial f}{\partial y} &amp;= 2x^2yz^2 + 3y^2 \\
-\frac{\partial f}{\partial z} &amp;= 2x^2y^2z + 3z^2 \\
-\end{align*}\]</div>
-<p>Zwischenrechnung 2. partielle Ableitungen:</p>
-<div class="amsmath math notranslate nohighlight">
-\[\begin{align*}
-\frac{\partial^2 f}{\partial x \partial x} &amp;= 2y^2z^2 + 6x \\ 
-\frac{\partial^2 f}{\partial y \partial y} &amp;= 2x^2z^2 + 6y \\ 
-\frac{\partial^2 f}{\partial z \partial z} &amp;= 2x^2y^2 + 6z \\ 
-\end{align*}\]</div>
-<p>3. partielle Ableitungen:</p>
-<div class="amsmath math notranslate nohighlight">
-\[\begin{align*}
-\frac{\partial^3f}{\partial x \partial x \partial x} &amp;= 6 \\ 
-\frac{\partial^3f}{\partial y \partial x \partial x} &amp;= 4yz^2 \\
-\frac{\partial^3f}{\partial z \partial x \partial x} &amp;= 4y^2z 
-\end{align*}\]</div>
-<div class="amsmath math notranslate nohighlight">
-\[\begin{align*}
-\frac{\partial^3f}{\partial y \partial y \partial y} &amp;= 6 \\  
-\frac{\partial^3f}{\partial x \partial y \partial y} &amp;= 4xz^2 \\
-\frac{\partial^3f}{\partial z \partial y \partial y} &amp;= 4x^2z 
-\end{align*}\]</div>
-<div class="amsmath math notranslate nohighlight">
-\[\begin{align*}  
-\frac{\partial^3f}{\partial z \partial z \partial z} &amp;= 6 \\  
-\frac{\partial^3f}{\partial x \partial z \partial z} &amp;= 4xy^2 \\   
-\frac{\partial^3f}{\partial y \partial z \partial z} &amp;= 4x^2y 
-\end{align*}\]</div>
+<div class="math notranslate nohighlight">
+\[a_0=\frac{2\pi^2}{3}, a_1 = -4, a_2 = 1, b_1 = 0, b_2 = 0\]</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Lösungsweg<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Fourierkoeffizient <span class="math notranslate nohighlight">\(a_0\)</span>:</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{equation*}
-\frac{\partial^3f}{\partial x \partial y \partial x} = 8xyz             
+a_0 = \frac{1}{\pi}\int_{-\pi}^{\pi} x^2\, dx = \frac{1}{\pi}\left[\frac{1}{3}x^3\right]_{-\pi}^{\pi} = \frac{1}{3\pi}\cdot\left(\pi^3 + \pi^3\right) = \frac{2}{3}\pi^2.
 \end{equation*}\]</div>
+<p class="sd-card-text">Fourierkoeffizient <span class="math notranslate nohighlight">\(a_1\)</span>:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+a_1 &amp;= \frac{1}{\pi}\int_{-\pi}^{\pi}x^2\cos(x)\, dx = \\
+&amp;= \frac{1}{\pi}\left[x^2\cdot \sin(x)\right]_{-\pi}^{\pi} - \frac{2}{\pi}\int_{-\pi}^{\pi}x\, \sin(x)\, dx = \\
+&amp;= \frac{1}{\pi}\left[x^2\cdot\sin(x)\right]_{-\pi}^{\pi} - \frac{2}{\pi}\left([-x\cdot\cos(x)]_{-\pi}^{\pi}-\int_{-\pi}^{\pi}-\cos(x)\, dx \right) = \\
+&amp;= \frac{1}{\pi}\left[x^2\cdot\sin(x)\right]_{-\pi}^{\pi} + \frac{2}{\pi}\left[x\cdot\cos(x)\right]_{-\pi}^{\pi}-\frac{2}{\pi}\left[\sin(x)\right]_{-\pi}^{\pi} = \\
+&amp;= \left[\frac{1}{\pi}(x^2-2)\cdot\sin(x) + \frac{1}{\pi}\cdot 2x\cos(x)\right]_{-\pi}^{\pi} = \\
+&amp;= \left(\frac{1}{\pi}(\pi^2-2)\cdot\sin(\pi) + \frac{1}{\pi}\cdot 2\pi\cos(\pi)\right) - \left(\frac{1}{\pi}(\pi^2-2)\cdot\sin(-\pi)-\frac{1}{\pi}\cdot 2\pi\cos(-\pi)\right) = \\
+&amp;= -2-2 = -4
+\end{align*}\]</div>
+<p class="sd-card-text">Fourierkoeffizient <span class="math notranslate nohighlight">\(a_2\)</span>:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+a_2 = \frac{1}{\pi} \int_{-\pi}^{\pi} x^2\cdot \cos(2x)\, dx = \frac{1}{\pi}\left[x^2\cdot \frac{1}{2}\sin(2x)\right]_{-\pi}^{\pi} - \int_{-\pi}^{\pi}2x\cdot \frac{1}{2}\sin(2x)\, dx 
+\end{equation*}\]</div>
+<p class="sd-card-text">Wir rechnen zuerst die Stammfunktion des letzten Integrals aus:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+\int 2x\cdot \frac{1}{2}\sin(2x)\, dx &amp;=  \int x\cdot\sin(2x)\, dx = \\
+&amp;= \left[x\cdot\frac{1}{2}(-\cos(2x))\right] - \int \frac{1}{2}(-\cos(2x))\, dx = \\
+&amp;= -\frac{1}{2}x\cdot\cos(2x) + \frac{1}{2}\int \cos(2x)\, dx = \\
+&amp;= -\frac{1}{2}x\cdot\cos(2x) + \frac{1}{4}\sin(2x) + C 
+\end{align*}\]</div>
+<p class="sd-card-text">Eingesetzt in das ursprüngliche Integral erhalten wir</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+a_2 &amp;= \frac{1}{\pi}\left[x^2\cdot \frac{1}{2}\sin(2x)\right]_{-\pi}^{\pi} + \frac{1}{2}\left[x\cdot\cos(2x)\right]_{-\pi}^{\pi} - \left[ \frac{1}{4}\sin(2x)\right]_{-\pi}^{\pi} = \\
+&amp;= \frac{1}{4\pi}\left[(2x^2-1)\sin(2x)+2x\cos(2x)\right]_{-\pi}^{\pi} = \\
+&amp;= 1.
+\end{align*}\]</div>
+<p class="sd-card-text">Fourierkoeffizient <span class="math notranslate nohighlight">\(b_1\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[b_1 = \frac{1}{\pi}\int_{-\pi}^{\pi}x^2\cdot\sin(x)\, dx = \frac{1}{\pi}\left[ 2x\sin(x)-(x^2-2)\cos(x)\right]_{-\pi}^{\pi} = 0\]</div>
+<p class="sd-card-text">Zwischenrechnung:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+\int x^2\cdot \sin(x)\, dx &amp;= \left[x^2\cdot(-\cos(x))\right] - \int 2x\cdot (-\cos(x))\, dx = \\
+&amp;= -x^2\cos(x) + 2x\cdot\sin(x) - 2\int 1\cdot\sin(x)\, dx =\\
+&amp;= -x^2\cos(x) + 2x\sin(x) + 2\cos(x) + C = \\
+&amp;= 2x\sin(x) + (2-x^2)\cos(x) + C
+\end{align*}\]</div>
+<p class="sd-card-text">Fourierkoeffizient <span class="math notranslate nohighlight">\(b_2\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[b_2 = \frac{1}{\pi}\int_{-\pi}^{\pi}x^2\cdot\sin(2x)\, dx = \frac{1}{\pi}\left[\frac{1}{2}x\sin(2x)-\frac{1}{4}(2x^2-1)\cos(2x)\right]_{-\pi}^{\pi} = 0\]</div>
+<p class="sd-card-text">Zwischenrechnung:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+\int x^2\cdot \sin(2x)\, dx &amp;= -\frac{1}{2}\left[x^2\cdot\cos(x)\right]+\int x\cdot\cos(2x)\, dx = \\
+&amp;= -\frac{1}{2}x^2\cos(2x) + \frac{1}{2}\left[x\cdot\sin(2x)\right] - \frac{1}{2}\int\sin(2x)\, dx = \\
+&amp;= -\frac{1}{2}x^2\cos(2x) + \frac{1}{2}x\sin(2x) + \frac{1}{4}\cos(2x) + C
+\end{align*}\]</div>
 </div>
+</details></div>
+<div class="tip admonition">
+<p class="admonition-title">Übung 5.4</p>
+<p>Gegeben sei die Funktion <span class="math notranslate nohighlight">\(f:[-\pi, \pi) \mapsto \mathbb{R}\)</span> mit</p>
+<div class="math notranslate nohighlight">
+\[ f(t)= -5\,t \ \text{ auf } \  [-\pi,\pi) \]</div>
+<p>die periodisch fortgesetzt wird. Zeichnen Sie das Schaubild der Funktion.
+Bestimmen Sie zuerst die Fourierkoeffizienten von <span class="math notranslate nohighlight">\(f\)</span> und dann die Fourierreihe.</p>
+</div>
+<div class="tip toggle admonition">
+<p class="admonition-title">Lösung</p>
+<ul class="simple">
+<li><p>Fourierkoeffizienten: <span class="math notranslate nohighlight">\(a_0=0\)</span>; <span class="math notranslate nohighlight">\(a_k=0\)</span>;  <span class="math notranslate nohighlight">\(b_k=\frac{10\,{\left(-1\right)}^k}{k}\)</span></p></li>
+<li><p>Fourierreihe:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[f(t)=\frac{0}{2}+\sum_{k=1}^{\infty} \left(0\cdot \cos(k\omega t) + b_k\sin(k\omega t)\right) = \sum_{k=1}^{\infty} \frac{10\,{\left(-1\right)}^k}{k}\sin(k\,t).\]</div>
+<figure class="align-default" id="plot-solution05-04">
+<a class="reference internal image-reference" href="../_images/plot_solution05_04.svg"><img alt="../_images/plot_solution05_04.svg" src="../_images/plot_solution05_04.svg" width="50%" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 12 </span><span class="caption-text">Schaubild der Funktion <span class="math notranslate nohighlight">\(f(t)= -5\,t\)</span> mit einer Periode <span class="math notranslate nohighlight">\(T = 2\pi\)</span> periodisch fortgesetzt</span><a class="headerlink" href="#plot-solution05-04" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Lösungsweg<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Es gilt für die Kreisfrequenz: <span class="math notranslate nohighlight">\(\omega=\frac{2\pi}{T}=\frac{2\pi}{2\pi}=1\)</span>. Damit können nun die Fourierkoeffizienten berechnet werden.</p>
+<p class="sd-card-text">Der Koeffizient <span class="math notranslate nohighlight">\(a_0\)</span> wird folgendermaßen berechnet:</p>
+<div class="math notranslate nohighlight">
+\[a_0\ =\ \frac{1}{\pi}\int_{-\pi}^{\pi} f(t)\,dt = \frac{1}{\pi}\int_{-\pi }^{\pi }-5\,t\, dt =0.\]</div>
+<p class="sd-card-text">Da auf dem Intervall <span class="math notranslate nohighlight">\([-\pi,\pi)\)</span> für die Funktion <span class="math notranslate nohighlight">\(f(t) = -f(-t)\)</span> gilt, ist die Funktion <span class="math notranslate nohighlight">\(f\)</span> ungerade. Damit sind Fourierkoeffizienten <span class="math notranslate nohighlight">\(a_k=0\)</span>.</p>
+<p class="sd-card-text">Die Fourierkoeffizienten <span class="math notranslate nohighlight">\(b_k\)</span> sind schwieriger zu berechnen, da wir dafür eine allgemeine Formel abhängig von <span class="math notranslate nohighlight">\(k\)</span> brauchen. Außerdem müssen wir partielle Integration anwenden.</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}  
+ b_k &amp; = \frac{1}{\pi}\left(  \int_{t=-\pi }^{t=\pi }\underbrace{\left( -5\,t\right)}_{f}\underbrace{\sin\left(k\,t\right)}_{g'}\, dt  \right) \\ 
+     &amp;=  \frac{1}{\pi}\left( \left[\left( -5\,t\right)\left( -\frac{\cos\left(k\,t\right)}{k}\right)\right]_{-\pi }^{\pi }-\int_{-\pi }^{\pi }\left( -5\right)\left( -\frac{\cos\left(k\,t\right)}{k}\right) \, dt \right) \\ 
+     &amp;=  \frac{1}{\pi}\left( \frac{10\,\pi \,{\left(-1\right)}^k}{k}-\left( \left[\left( -5\right)\left( -\frac{\sin\left(k\,t\right)}{k^2}\right)\right]_{-\pi }^{\pi } \right) \right) \\ 
+     &amp;=  \frac{1}{\pi}\left( \frac{10\,\pi \,{\left(-1\right)}^k}{k}-\left( 0 \right) \right) \\ 
+     &amp;= \frac{10\,{\left(-1\right)}^k}{k}. 
+\end{align*}\]</div>
+</div>
+</details></div>
 </section>
 
     <script type="text/x-thebe-config">
@@ -587,7 +658,7 @@ b) <span class="math notranslate nohighlight">\(f(x,y,z)=\frac{1}{\sqrt{x^2+y^2+
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">6.4 Höhere partielle Ableitungen und Hesse-Matrix</p>
+        <p class="prev-next-title">6.4 Rechenregeln Fourierreihen</p>
       </div>
     </a>
     <a class="right-next"
@@ -595,7 +666,7 @@ b) <span class="math notranslate nohighlight">\(f(x,y,z)=\frac{1}{\sqrt{x^2+y^2+
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">7. Richtungsableitungen und vektorwertige Funktionen</p>
+        <p class="prev-next-title">7. Funktionen von mehreren Variablen und partielle Ableitungen</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

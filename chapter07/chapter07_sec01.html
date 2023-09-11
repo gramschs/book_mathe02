@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>7.1 Gradient und Richtungsableitung &#8212; Mathematik 2 Maschinenbau</title>
+    <title>7.1 Definition und Visualisierung &#8212; Mathematik 2 Maschinenbau</title>
   
   
   
@@ -71,8 +71,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'chapter07/chapter07_sec01';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="7.2 Vektorwertige Funktionen" href="chapter07_sec02.html" />
-    <link rel="prev" title="7. Richtungsableitungen und vektorwertige Funktionen" href="chapter07_sec00.html" />
+    <link rel="next" title="7.2 Stetigkeit" href="chapter07_sec02.html" />
+    <link rel="prev" title="7. Funktionen von mehreren Variablen und partielle Ableitungen" href="chapter07_sec00.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="None"/>
   </head>
@@ -157,111 +157,122 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Part 1. Integrale</span></p>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Differential- und Integralrechnung</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter01/chapter01_sec00.html">1. Wiederholung Integral</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter01/chapter01_sec01.html">1.1 Stammfunktion und bestimmtes Integral</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter01/chapter01_sec02.html">1.2 Eigenschaften von Integralen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter01/chapter01_sec03.html">1.3 Partielle Integration</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter01/chapter01_sec04.html">1.4 Integration durch Substitution</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter01/chapter01_sec00.html">1. Differentialrechnung</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter01/chapter01_sec01.html">1.1 Ableitungen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter01/chapter01_sec02.html">1.2 Rechenregeln Ableitungen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter01/chapter01_sec03.html">1.3 Extremwerte</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter01/chapter01_sec04.html">1.4 Extremwerte mit Nebenbedingung</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter01/chapter01_sec05.html">Übungen</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter02/chapter02_sec00.html">2. Anwendungen Integral</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter02/chapter02_sec01.html">2.1 Integrieren ist Mitteln</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter02/chapter02_sec02.html">2.2 Fläche zwischen zwei Graphen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter02/chapter02_sec03.html">2.3 Bogenlänge</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter02/chapter02_sec04.html">2.4 Volumen von Rotationskörpern</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter02/chapter02_sec00.html">2. Integrale</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter02/chapter02_sec01.html">2.1 Stammfunktion und bestimmtes Integral</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter02/chapter02_sec02.html">2.2 Eigenschaften von Integralen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter02/chapter02_sec03.html">2.3 Partielle Integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter02/chapter02_sec04.html">2.4 Integration durch Substitution</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter02/chapter02_sec05.html">Übungen</a></li>
 </ul>
 </li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Part 2. Funktionenreihen</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter03/chapter03_sec00.html">3. Reihen und Potenzreihen</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec01.html">3.1 Reihen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec02.html">3.2 Konvergenzkriterien für Reihen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec03.html">3.3 Potenzreihen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec04.html">3.4 Konvergenz von Potenzreihen</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter03/chapter03_sec00.html">3. Anwendungen Integral</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec01.html">3.1 Integrieren ist Mitteln</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec02.html">3.2 Fläche zwischen zwei Graphen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec03.html">3.3 Bogenlänge</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec04.html">3.4 Volumen von Rotationskörpern</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec05.html">Übungen</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter04/chapter04_sec00.html">4. Taylorreihen</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter04/chapter04_sec01.html">4.1 Berechnung Taylorreihe</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter04/chapter04_sec02.html">4.2 Restglied von Taylorreihen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter04/chapter04_sec03.html">4.3 Wichtige Potenzreihen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter04/chapter04_sec04.html">4.4 Rechnen mit Potenzreihen</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Funktionenreihen</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter04/chapter04_sec00.html">4. Reihen und Potenzreihen</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter04/chapter04_sec01.html">4.1 Reihen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter04/chapter04_sec02.html">4.2 Konvergenzkriterien für Reihen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter04/chapter04_sec03.html">4.3 Potenzreihen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter04/chapter04_sec04.html">4.4 Konvergenz von Potenzreihen</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter04/chapter04_sec05.html">Übungen</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter05/chapter05_sec00.html">5. Fourierreihen</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter05/chapter05_sec01.html">5.1 Periodische Funktionen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter05/chapter05_sec02.html">5.2 Fourierreihen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter05/chapter05_sec03.html">5.3 Beispiele für Fourierreihen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter05/chapter05_sec04.html">5.4 Rechenregeln Fourierreihen</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter05/chapter05_sec00.html">5. Taylorreihen</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter05/chapter05_sec01.html">5.1 Berechnung Taylorreihe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter05/chapter05_sec02.html">5.2 Restglied von Taylorreihen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter05/chapter05_sec03.html">5.3 Wichtige Potenzreihen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter05/chapter05_sec04.html">5.4 Rechnen mit Potenzreihen</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter05/chapter05_sec05.html">Übungen</a></li>
 </ul>
 </li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Part 3. Mehrdimensionale Analysis</span></p>
-<ul class="current nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter06/chapter06_sec00.html">6. Funktionen von mehreren Variablen und partielle Ableitungen</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter06/chapter06_sec01.html">6.1 Definition und Visualisierung</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter06/chapter06_sec02.html">6.2 Stetigkeit</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter06/chapter06_sec03.html">6.3 Partielle Ableitungen und Gradient</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter06/chapter06_sec04.html">6.4 Höhere partielle Ableitungen und Hesse-Matrix</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter06/chapter06_sec00.html">6. Fourierreihen</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter06/chapter06_sec01.html">6.1 Periodische Funktionen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter06/chapter06_sec02.html">6.2 Fourierreihen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter06/chapter06_sec03.html">6.3 Beispiele für Fourierreihen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter06/chapter06_sec04.html">6.4 Rechenregeln Fourierreihen</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter06/chapter06_sec05.html">Übungen</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="chapter07_sec00.html">7. Richtungsableitungen und vektorwertige Funktionen</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">7.1 Gradient und Richtungsableitung</a></li>
-<li class="toctree-l2"><a class="reference internal" href="chapter07_sec02.html">7.2 Vektorwertige Funktionen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="chapter07_sec03.html">7.3 Jacobi-Matrix</a></li>
-<li class="toctree-l2"><a class="reference internal" href="chapter07_sec04.html">7.4 Mehrdimensionale Kettenregel</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Höhere Differentialrechnung</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="chapter07_sec00.html">7. Funktionen von mehreren Variablen und partielle Ableitungen</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">7.1 Definition und Visualisierung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter07_sec02.html">7.2 Stetigkeit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter07_sec03.html">7.3 Partielle Ableitungen und Gradient</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter07_sec04.html">7.4 Höhere partielle Ableitungen und Hesse-Matrix</a></li>
 <li class="toctree-l2"><a class="reference internal" href="chapter07_sec05.html">Übungen</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter08/chapter08_sec00.html">8. Linearisierung und Extremwerte</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter08/chapter08_sec01.html">8.1 Tangentenfunktionen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter08/chapter08_sec02.html">8.2 Totales Differential</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter08/chapter08_sec03.html">8.3 Extremwerte</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter08/chapter08_sec04.html">8.4 Extremwertprobleme mit Nebenbedingung</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter08/chapter08_sec00.html">8. Richtungsableitungen und vektorwertige Funktionen</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter08/chapter08_sec01.html">8.1 Gradient und Richtungsableitung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter08/chapter08_sec02.html">8.2 Vektorwertige Funktionen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter08/chapter08_sec03.html">8.3 Jacobi-Matrix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter08/chapter08_sec04.html">8.4 Mehrdimensionale Kettenregel</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter08/chapter08_sec05.html">Übungen</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter09/chapter09_sec00.html">9. Doppelintegral</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter09/chapter09_sec01.html">9.1 Idee von Doppelintegralen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter09/chapter09_sec02.html">9.2 Berechnung von Doppelintegralen in kartesischen Koordinaten</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter09/chapter09_sec03.html">9.3 Anwendung: Flächenberechnung</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter09/chapter09_sec04.html">9.4 Anwendung: Schwerpunktberechnung</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter09/chapter09_sec00.html">9. Linearisierung und Extremwerte</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter09/chapter09_sec01.html">9.1 Tangentenfunktionen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter09/chapter09_sec02.html">9.2 Totales Differential</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter09/chapter09_sec03.html">9.3 Extremwerte</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter09/chapter09_sec04.html">9.4 Extremwertprobleme mit Nebenbedingung</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter09/chapter09_sec05.html">Übungen</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter10/chapter10_sec00.html">10. Doppelintegral in Polarkoordinaten und Dreifachintegral</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter10/chapter10_sec01.html">10.1 Polarkoordinaten</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter10/chapter10_sec02.html">10.2 Doppelintegral in Polarkoordinaten</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter10/chapter10_sec03.html">10.3 Dreifachintegral</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter10/chapter10_sec04.html">10.4 Anwendungen Dreifachintegral</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Höhere Integralrechnung</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter10/chapter10_sec00.html">10. Doppelintegral</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter10/chapter10_sec01.html">10.1 Idee von Doppelintegralen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter10/chapter10_sec02.html">10.2 Berechnung von Doppelintegralen in kartesischen Koordinaten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter10/chapter10_sec03.html">10.3 Anwendung: Flächenberechnung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter10/chapter10_sec04.html">10.4 Anwendung: Schwerpunktberechnung</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter10/chapter10_sec05.html">Übungen</a></li>
 </ul>
 </li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Part 4. Differentialgleichungen</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter11/chapter11_sec00.html">11. Einführung Differentialgleichungen</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter11/chapter11_sec01.html">11.1 Grundbegriffe</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter11/chapter11_sec02.html">11.2 Anfangs- und Randwertproblem</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter11/chapter11_sec03.html">11.3 Separable Differentialgleichungen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter11/chapter11_sec04.html">11.4 Exakte Differentialgleichungen</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter11/chapter11_sec00.html">11. Doppelintegral in Polarkoordinaten und Dreifachintegral</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter11/chapter11_sec01.html">11.1 Polarkoordinaten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter11/chapter11_sec02.html">11.2 Doppelintegral in Polarkoordinaten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter11/chapter11_sec03.html">11.3 Dreifachintegral</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter11/chapter11_sec04.html">11.4 Anwendungen Dreifachintegral</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter11/chapter11_sec05.html">Übungen</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter12/chapter12_sec00.html">12. Lineare Differentialgleichungen</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-12"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter12/chapter12_sec01.html">12.1 Lineare DGL 1. Ordnung</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter12/chapter12_sec02.html">12.2 Lösung homogene lineare DGL 1. Ordnung</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter12/chapter12_sec03.html">12.3 Lösung inhomogene lineare DGL 1. Ordnung</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter12/chapter12_sec04.html">12.4 Homogene Systeme aus zwei linearen DGL 1. Ordnung</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Differentialgleichungen</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter12/chapter12_sec00.html">12. Einführung Differentialgleichungen</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-12"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter12/chapter12_sec01.html">12.1 Grundbegriffe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter12/chapter12_sec02.html">12.2 Anfangs- und Randwertproblem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter12/chapter12_sec03.html">12.3 Separable Differentialgleichungen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter12/chapter12_sec04.html">12.4 Exakte Differentialgleichungen</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter12/chapter12_sec05.html">Übungen</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter13/chapter13_sec00.html">13. Lineare Differentialgleichungen</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-13"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter13/chapter13_sec01.html">13.1 Lineare DGL 1. Ordnung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter13/chapter13_sec02.html">13.2 Lösung homogene lineare DGL 1. Ordnung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter13/chapter13_sec03.html">13.3 Lösung inhomogene lineare DGL 1. Ordnung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter13/chapter13_sec04.html">13.4 Homogene Systeme aus zwei linearen DGL 1. Ordnung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter13/chapter13_sec05.html">Übungen</a></li>
 </ul>
 </li>
 </ul>
@@ -415,7 +426,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>7.1 Gradient und Richtungsableitung</h1>
+    <h1>7.1 Definition und Visualisierung</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -426,9 +437,10 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lernziele">Lernziele</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#richtungsableitung">Richtungsableitung</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#manchmal-kann-die-richtungsableitung-auch-mit-dem-gradienten-berechnet-werden">Manchmal kann die Richtungsableitung auch mit dem Gradienten berechnet werden</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rechenregeln-fur-gradienten">Rechenregeln für Gradienten</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wiederholung-begrifflichkeiten-bei-funktionen">Wiederholung: Begrifflichkeiten bei Funktionen</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#funktionen-von-mehreren-unabhangigen-variablen">Funktionen von mehreren unabhängigen Variablen</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#darstellungen-von-funktionen-mit-mehreren-unabhangigen-variablen">Darstellungen von Funktionen mit mehreren unabhängigen Variablen</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hohenlinien">Höhenlinien</a></li>
 </ul>
             </nav>
         </div>
@@ -440,166 +452,172 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="gradient-und-richtungsableitung">
-<h1>7.1 Gradient und Richtungsableitung<a class="headerlink" href="#gradient-und-richtungsableitung" title="Permalink to this headline">#</a></h1>
-<p>Die partiellen Ableitungen sind die Ableitungen in Richtung der
-Koordinatenachsen. Bisher haben wir uns noch nicht damit beschäftigt, wie die
-Ableitung in eine beliebige Richtung berechnet wird. Das wird in diesem Kapitel
-nachgeholt.</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="definition-und-visualisierung">
+<h1>7.1 Definition und Visualisierung<a class="headerlink" href="#definition-und-visualisierung" title="Permalink to this headline">#</a></h1>
+<p>Bisher haben wir nur Funktionen kennengelernt, bei denen eine reelle Zahl in die
+Funktionsvorschrift eingesetzt wurde und eine reelle Zahl herauskam. Die
+mathematische Schreibweise dafür ist <span class="math notranslate nohighlight">\(f:\mathbb{R}\rightarrow\mathbb{R}\)</span>.</p>
+<p>Allerdings ist die Welt nicht so eindimensional. Die folgende Abbildung zeigt
+beispielsweise die durchschnittliche Solarstrahlung in Deutschland. Dies ist
+mathematisch gesehen eine Funktion von mehereren Variablen, nämlich Längen- und
+Breitengrad, also <span class="math notranslate nohighlight">\(f:\mathbb{R}^2\rightarrow\mathbb{R}\)</span>.</p>
+<figure class="align-default" id="chapter07-fig01-solar-map">
+<a class="reference internal image-reference" href="../_images/chapter07_fig01_solar_map.png"><img alt="../_images/chapter07_fig01_solar_map.png" src="../_images/chapter07_fig01_solar_map.png" style="width: 50%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 13 </span><span class="caption-text">Solarstrahlung in Deutschland</span><a class="headerlink" href="#chapter07-fig01-solar-map" title="Permalink to this image">#</a></p>
+<div class="legend">
+<p>(<a class="reference external" href="https://commons.wikimedia.org/wiki/File:SolarGIS-Solar-map-Germany-de.png">Quelle:</a> “Solar Radiation Map: Globalstrahlung Deutschland, SolarGIS 2011”, Autor: SolarGIS Lizenz: <a class="reference external" href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>)</p>
+</div>
+</figcaption>
+</figure>
+<p>In diesem Kapitel werden wir uns Funktionen von mehreren unabhängigen Variablen
+genauer ansehen und insbesondere erarbeiten, wie solche Funktionen visualisiert
+werden können.</p>
 <section id="lernziele">
 <h2>Lernziele<a class="headerlink" href="#lernziele" title="Permalink to this headline">#</a></h2>
 <div class="important admonition">
 <p class="admonition-title">Lernziele</p>
 <ul class="simple">
-<li><p>Sie wissen, was die <strong>Richtungsableitung</strong> einer Funktion von mehreren
-Variablen ist.</p></li>
-<li><p>Sie wissen, wann sie die Richtungsableitung auch mit Hilfe des Gradienten
-berechnen dürfen und kennen für diesen Fall auch die Berechnungsformel.</p></li>
-<li><p>Sie kennen die Rechenregeln für Gradienten.</p></li>
+<li><p>Sie können erklären, was eine <strong>Funktion von mehreren unabhängigen Variablen</strong> ist.</p></li>
+<li><p>Sie können eine Funktion von zwei unabhängigen Variablen als Fläche im Raum zeichnen.</p></li>
+<li><p>Sie können die <strong>Höhenlinien</strong> einer Funktion von zwei unabhängigen Variablen interpretieren und zeichnen.</p></li>
 </ul>
 </div>
 </section>
-<section id="richtungsableitung">
-<h2>Richtungsableitung<a class="headerlink" href="#richtungsableitung" title="Permalink to this headline">#</a></h2>
-<p>Die Ableitung einer Funktion von mehreren unabhängigen Variablen in eine
-Richtung wird wie bei eindimensionalen Funktionen über den Grenzwert des
-Differenzenquotienten eingeführt. Aber fangen wir langsam an. Die Funktion <span class="math notranslate nohighlight">\(f\)</span>
-soll also von mehreren Variablen abhängen. Wir nehmen an, dass es <span class="math notranslate nohighlight">\(n\)</span> Variablen
-sind und schreiben diese als <span class="math notranslate nohighlight">\(x_1\)</span>, <span class="math notranslate nohighlight">\(x_2\)</span>, <span class="math notranslate nohighlight">\(\ldots\)</span>, <span class="math notranslate nohighlight">\(x_n\)</span>. Jetzt betrachten wir
-einen festen Punkt <span class="math notranslate nohighlight">\(\vec{x} = (x_1, x_2, \ldots, x_n)\)</span> aus der Definitionsmenge,
-für den wir die Richtungsableitung bilden wollen. Die Richtung bezeichnen wir
-als <span class="math notranslate nohighlight">\(\vec{v}\)</span>. Wie bei Richtungen üblich, soll die Richtung schon normiert
-angegeben werden. Damit ist gemeint, dass der Vektor <span class="math notranslate nohighlight">\(\vec{v}\)</span> die Länge 1 hat.</p>
-<p>Als nächstes gehen wir von dem Punkt <span class="math notranslate nohighlight">\(\vec{x}\)</span> ein kurzes Stückchen in Richtung
-<span class="math notranslate nohighlight">\(\vec{v}\)</span>. Da die Richtung die Länge 1 hat, führen wir die reelle Zahl <span class="math notranslate nohighlight">\(h\)</span> ein
-und multiplizieren sie mit der Richtung. Das kurze Stückchen von <span class="math notranslate nohighlight">\(\vec{x}\)</span> in
-Richtung <span class="math notranslate nohighlight">\(\vec{v}\)</span> wird also durch</p>
+<section id="wiederholung-begrifflichkeiten-bei-funktionen">
+<h2>Wiederholung: Begrifflichkeiten bei Funktionen<a class="headerlink" href="#wiederholung-begrifflichkeiten-bei-funktionen" title="Permalink to this headline">#</a></h2>
+<p>Eine Funktion stellt eine Beziehung zwischen zwei Mengen her. Bei den bisher
+eingeführten Funktionen wird ein Element aus der sogenannten Definitionsmenge
+genommen und diesem genau ein Element aus der sogenannten Wertemenge zugeordnet.
+Wenn es darum geht, nun die Regeln dieser Beziehung genauer zu beschreiben, wird
+häufig eine Funktionsgleichung aufgestellt. Aber auch Tabellen oder grafische
+Abbildungen können dazu benutzt werden, um die Beziehung präzise zu beschreiben.</p>
+<p>Als Beispiel einer Funktion betrachten wir die Parabel. Als Definitionsmenge
+wählen wir alle reelle Zahlen, also alle Zahlen <span class="math notranslate nohighlight">\(x\in\mathbb{R}\)</span>. Als
+Funktionsvorschrift legen wir nun fest, dass jedem <span class="math notranslate nohighlight">\(x\)</span> sein eigenes Quadrat
+zugeordnet wird, also in mathematischer Schreibweise</p>
 <div class="math notranslate nohighlight">
-\[\vec{x} + h\cdot \vec{v}\]</div>
-<p>beschrieben und hat automatisch die Länge <span class="math notranslate nohighlight">\(h\)</span>.</p>
-<p>Nun wird der Differenzenquotient gebildet. Im Zähler steht die Differenz
-zwischem dem Funktionswert an der Stelle <span class="math notranslate nohighlight">\(\vec{x} + h\cdot \vec{v}\)</span> und dem
-Funktionswert am Punkt <span class="math notranslate nohighlight">\(\vec{x}\)</span>. Im Nenner die Differenz zwischen den beiden
-Punkten selbst, also <span class="math notranslate nohighlight">\(\vec{x} - \left(\vec{x}+h\vec{v} \right)\)</span>. Damit lautet
-der Differenzenquotient</p>
-<div class="math notranslate nohighlight">
-\[\frac{f(\vec{x}+h\vec{v}) - f(\vec{x})}{h}.\]</div>
-<p>Der Grenzwert für <span class="math notranslate nohighlight">\(h \to 0\)</span> ist die Richtungsableitung der Funktion <span class="math notranslate nohighlight">\(f\)</span> in
-Richtung <span class="math notranslate nohighlight">\(v\)</span>. Wir verwenden für die Richtungsableitung das Symbol <span class="math notranslate nohighlight">\(D_{v}f\)</span>.</p>
-<div class="note admonition">
-<p class="admonition-title">Was ist … die Richtungsableitung?</p>
-<p>Die Richtungsableitung der Funktion <span class="math notranslate nohighlight">\(f\)</span>, die von mehreren Variablen abhängt, in
-die Richtung <span class="math notranslate nohighlight">\(v\)</span> ist der Grenzwert</p>
-<div class="math notranslate nohighlight">
-\[D_{v}f = \lim_{h\to 0} \frac{f(\vec{x}+h\cdot \vec{v}) - f(\vec{x})}{h}.\]</div>
-<p>Das gilt allerdings nur dann, wenn die Richtungsableitung überhaupt existiert.</p>
-</div>
-<p>Wenn wir als Richtung die Koordinatenachsen wählen, landen wir wieder bei den
-partiellen Ableitungen.</p>
+\[x\mapsto x^2.\]</div>
+<p>Üblicherweise wird die Funktionsvorschrift als <span class="math notranslate nohighlight">\(f(x)=x^2\)</span> angegeben. Die
+grafische Darstellung sieht folgendermaßen aus:</p>
+<figure class="align-default" id="chapter07-plot-parabel">
+<a class="reference internal image-reference" href="../_images/chapter07_plot_parabel.svg"><img alt="../_images/chapter07_plot_parabel.svg" src="../_images/chapter07_plot_parabel.svg" width="75%" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 14 </span><span class="caption-text">Grafische Darstellung der Funktion <span class="math notranslate nohighlight">\(f(x)=x^2\)</span></span><a class="headerlink" href="#chapter07-plot-parabel" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Anhand der grafischen Darstellung wird schnell deutlich, dass zwar die
+Definitionsmenge alle reellen Zahlen umfasst, die Wertemenge jedoch nur die
+nichtnegativen reellen Zahlen enthält.</p>
 </section>
-<section id="manchmal-kann-die-richtungsableitung-auch-mit-dem-gradienten-berechnet-werden">
-<h2>Manchmal kann die Richtungsableitung auch mit dem Gradienten berechnet werden<a class="headerlink" href="#manchmal-kann-die-richtungsableitung-auch-mit-dem-gradienten-berechnet-werden" title="Permalink to this headline">#</a></h2>
-<p>Die Grenzwertbildung ist aufwendig. Schön wäre es, ein Formel für die Berechnung
-der Richtungsableitung zu haben. Die gibt es auch, aber nur, wenn die Funktion
-total differenzierbar ist. Diese Art der Differenzierbarkeit ist neu und
-tatsächlich werden wir die korrekte mathematische Definition der totalen
-Differenzierbarkeit hier weglassen. Glücklicherweise gehören Funktionen, deren
-partiellen Ableitungen alle stetig sind, zu den total differenzierbaren
-Funktionen. Daher beschränken wir uns auf diese Funktionen und halten fest:</p>
+<section id="funktionen-von-mehreren-unabhangigen-variablen">
+<h2>Funktionen von mehreren unabhängigen Variablen<a class="headerlink" href="#funktionen-von-mehreren-unabhangigen-variablen" title="Permalink to this headline">#</a></h2>
+<p>Nun betrachten wir ein Beispiel einer “2:1-Beziehung”. Auch hier benötigen wir,
+um die Funktion zu beschreiben, eine Definitionsmenge, eine Wertemenge und eine
+eindeutige Zuordnungsregel. Der flapsige Ausdruck “2:1-Beziehung” bedeutet, dass
+zwei Elementen der Definitionsmenge ein Element der Wertemenge zugeordnet werden
+soll. Die Elemente der Definitionsmenge werden auch <strong>unabhängige Variablen</strong>
+genannt, das Element der Wertemenge wird <strong>abhängige Variable</strong> genannt.</p>
+<p>Wir nennen die beiden unabhängigen Variablen <span class="math notranslate nohighlight">\(x\)</span> und <span class="math notranslate nohighlight">\(y\)</span> und legen fest, dass
+beides reelle Zahlen sind. Diesmal sollen beide Zahlen quadriert werden und aus
+den Quadraten dann die Summe gebildet werden. Mathematisch könnte das als</p>
+<div class="math notranslate nohighlight">
+\[(x,y)\mapsto x^2 + y^2\]</div>
+<p>oder als</p>
+<div class="math notranslate nohighlight">
+\[f(x,y) = x^2 + y^2\]</div>
+<p>notiert werden. Die abhängige Variable <span class="math notranslate nohighlight">\(z = f(x,y)\)</span> ist 0 oder positiv, so dass
+die Wertemenge gleich <span class="math notranslate nohighlight">\(\mathbb{R}^{+}\)</span> ist.</p>
+<p>Wenn die Funktion mehrere unabhängige Variablen hat, nennt man die Funktion auch
+<strong>multivariate Funktion</strong>.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Video zu “multivariate Funktionen” von Mathematische Methoden<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/gV5zjtVHIWE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+</details><p>Fassen wir zusammen.</p>
 <div class="note admonition">
-<p class="admonition-title">Wie wird die Richtungsableitung berechnet? </p>
-<p>Wenn alle partiellen Ableitung der Funktion <span class="math notranslate nohighlight">\(f\)</span> stetig sind, kann die
-Richtungsableitung in  Richtung <span class="math notranslate nohighlight">\(v\)</span> auch mit dem Gradienten <span class="math notranslate nohighlight">\(\nabla f\)</span> berechnet
-werden. Dann gilt:</p>
-<div class="math notranslate nohighlight">
-\[D_{v}f(\vec{x}) = \nabla f(\vec{x}) \cdot \vec{v}.\]</div>
+<p class="admonition-title">Was ist … eine Funktion mit mehreren unabhängigen Variablen?</p>
+<p>Eine Funktion ist eine eindeutige Regel, die jedem Vektor aus mehreren
+unabhängigen Variablen (aus der Definitionsmenge) genau eine reelle Zahl (aus
+der Wertemenge) zuordnet.</p>
 </div>
-<p>Im folgenden Video wird ausführlich ein Beispiel vorgerechnet.</p>
+</section>
+<section id="darstellungen-von-funktionen-mit-mehreren-unabhangigen-variablen">
+<h2>Darstellungen von Funktionen mit mehreren unabhängigen Variablen<a class="headerlink" href="#darstellungen-von-funktionen-mit-mehreren-unabhangigen-variablen" title="Permalink to this headline">#</a></h2>
+<p>Um das obige Beispiel Funktion zu visualisieren, werden jetzt alle mögliche
+Kombinationen aus <span class="math notranslate nohighlight">\(x\)</span> und <span class="math notranslate nohighlight">\(y\)</span> gebildet, d.h. die unabhängigen Variablen kommen
+aus der xy-Ebene. Zur Darstellung der abhängigen Variable brauchen wir also noch
+eine dritte Dimension, die Höhe. Die Funktion <span class="math notranslate nohighlight">\(f(x,y) =  x^2 + y^2\)</span>, ein
+sogenannter Paraboloid, sieht dann folgendermaßen aus (Hinweis: die Grafik ist interaktiv!):</p>
+<div id="chap06_sec01_fig01" style="width:100%; aspect-ratio:4/3; margin: 0 auto;""></div>
+<script type="text/javascript">
+// Generate grid
+const rValues = Array.from({ length: 101 }, (_, i) => 5 * i / 100);
+const phiValues = Array.from({ length: 101 }, (_, i) => 2 * Math.PI * i / 100);
+//
+const xValues = rValues.map(r => phiValues.map(phi => r * Math.cos(phi)));
+const yValues = rValues.map(r => phiValues.map(phi => r * Math.sin(phi)));
+// Evaluate function
+const zValues = xValues.map((xRow, i) => xRow.map((x, j) => (x ** 2 + yValues[i][j] ** 2)));
+// Plot
+const data = [{
+  x: xValues,
+  y: yValues,
+  z: zValues,
+  type: 'surface',
+  colorscale: 'Viridis'
+}];
+//
+const layout = {
+  title: 'Paraboloid f(x, y) = x^2 + y^2',
+  scene: {
+    xaxis: { title: 'x' },
+    yaxis: { title: 'y' }
+  },
+  margin: {
+    l: 10,
+    r: 10
+  }
+};
+//
+const config = {responsive: true}
+//
+Plotly.newPlot('chap06_sec01_fig01', data, layout, config);
+</script>
+<p>Zusätzlich zur Höhe wurde die Paraboloid-Fläche noch gemäß der Funktionswerte
+<span class="math notranslate nohighlight">\(f(x,y)\)</span> eingefärbt. Leider ist es gar nicht so einfach, Funktionen von mehreren
+Variablen zu zeichnen. Eine Funktion von zwei Variablen kann man noch ganz gut
+zeichnen, bei drei und gar mehr unabhängigen Variablen klappt es mit Zeichnungen
+nicht mehr.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
-Video zu “Richtungsableitung berechnen” von Mathematrick<div class="sd-summary-down docutils">
+Video “Multivariate Funktionen: Graph” von Mathematische Methoden<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/95KyHXzhRII" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/oJdN_Ics6qs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </div>
 </details></section>
-<section id="rechenregeln-fur-gradienten">
-<h2>Rechenregeln für Gradienten<a class="headerlink" href="#rechenregeln-fur-gradienten" title="Permalink to this headline">#</a></h2>
-<p>Wie Sie sehen, hat der Gradient eine große Bedeutung für das Ableiten
-mehrdimensionaler Funktionen. Es wäre auch hier gut, sich das Berechnen des
-Gradienten zu vereinfachen und ggf. neue Gradienten aus schon bekannten
-Gradienten zusammenzubauen. Im Folgenden sind die Rechenregeln für Gradienten
-angegeben.</p>
-<ul class="simple">
-<li><p>Ist <span class="math notranslate nohighlight">\(c\)</span> eine konstante reelle Zahl, so ist der Gradient davon der Nullvektor, also</p></li>
-</ul>
-<div class="math notranslate nohighlight">
-\[\nabla c = 0.\]</div>
-<ul class="simple">
-<li><p>Es gilt die Faktorregel:</p></li>
-</ul>
-<div class="math notranslate nohighlight">
-\[\nabla (c\cdot f(\vec{x})) = c \cdot \nabla f(\vec{x}).\]</div>
-<ul class="simple">
-<li><p>Es gilt die Summenregel:</p></li>
-</ul>
-<div class="math notranslate nohighlight">
-\[\nabla \left(f(\vec{x} + g(\vec{x})\right) = \nabla f(\vec{x}) + \nabla
-g(\vec{x}).\]</div>
-<ul>
-<li><p>Es gilt die Produktregel:</p>
-<div class="math notranslate nohighlight">
-\[\nabla \left(f(\vec{x})\cdot g(\vec{x})\right) = \nabla f(\vec{x}) \cdot
-  g(\vec{x}) + f(\vec{x})\cdot \nabla g(\vec{x}).\]</div>
-</li>
-<li><p>Und die Quotientenregel lautet:</p></li>
-</ul>
-<div class="math notranslate nohighlight">
-\[\nabla \left(\frac{f(\vec{x})}{g(\vec{x})}\right) = \frac{\nabla
-f(\vec{x})\cdot g(\vec{x}) - f(\vec{x})\cdot \nabla g(\vec{x})}{g^2(\vec{x})}.
-\]</div>
-<p>Auch eine Kettenregel gibt es, doch dafür müssen wir erst einmal vektorwertige
-Funktionen betrachten.</p>
-<p>Zunächst folgen aber noch Videos, die die obigen Regeln erklären.</p>
-<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
-<summary class="sd-summary-title sd-card-header">
-Video zu “Summenregel Gradient” von Mathematische Methoden<div class="sd-summary-down docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="sd-summary-up docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="sd-summary-content sd-card-body docutils">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/OoO47lj7-BM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<section id="hohenlinien">
+<h2>Höhenlinien<a class="headerlink" href="#hohenlinien" title="Permalink to this headline">#</a></h2>
+<p>Eine reduzierte Darstellung einer Funktion von zwei unabhängigen Variablen ist
+der sogenannte <strong>Contourplot</strong>, der <strong>Konturlinien</strong> visualisiert. Konturlinien
+sind auch aus dem Erdkundeunterricht bekannt, wo sie normalerweise
+<strong>Höhenlinien</strong> genannt werden.</p>
+<div class="note admonition">
+<p class="admonition-title">Was sind … Höhenlinien?</p>
+<p>Höhenlinien sind Linien in einer zweidimensionalen Ebene, die diejenigen Punkte <span class="math notranslate nohighlight">\((x,y)\)</span>
+verbinden, die den gleichen Funktionswert <span class="math notranslate nohighlight">\(f(x,y)=c\)</span> haben.</p>
 </div>
-</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
-<summary class="sd-summary-title sd-card-header">
-Video zu “Faktorregel Gradient” von Mathematische Methoden<div class="sd-summary-down docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="sd-summary-up docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="sd-summary-content sd-card-body docutils">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/DiCAQfMMDk0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-</div>
-</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
-<summary class="sd-summary-title sd-card-header">
-Video zu “Produktregel Gradient” von Mathematische Methoden<div class="sd-summary-down docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="sd-summary-up docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="sd-summary-content sd-card-body docutils">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/dUyMIwbYuy8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-</div>
-</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
-<summary class="sd-summary-title sd-card-header">
-Video zu “Quotientenregel Gradient” von Mathematische Methoden<div class="sd-summary-down docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="sd-summary-up docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="sd-summary-content sd-card-body docutils">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/GlFNR8QTa10" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-</div>
-</details></section>
+<p>Das folgende Video erklärt den Contourplot.</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/t4N7n_u8TYk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -639,7 +657,7 @@ Video zu “Quotientenregel Gradient” von Mathematische Methoden<div class="sd
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">7. Richtungsableitungen und vektorwertige Funktionen</p>
+        <p class="prev-next-title">7. Funktionen von mehreren Variablen und partielle Ableitungen</p>
       </div>
     </a>
     <a class="right-next"
@@ -647,7 +665,7 @@ Video zu “Quotientenregel Gradient” von Mathematische Methoden<div class="sd
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">7.2 Vektorwertige Funktionen</p>
+        <p class="prev-next-title">7.2 Stetigkeit</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -670,9 +688,10 @@ Video zu “Quotientenregel Gradient” von Mathematische Methoden<div class="sd
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lernziele">Lernziele</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#richtungsableitung">Richtungsableitung</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#manchmal-kann-die-richtungsableitung-auch-mit-dem-gradienten-berechnet-werden">Manchmal kann die Richtungsableitung auch mit dem Gradienten berechnet werden</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rechenregeln-fur-gradienten">Rechenregeln für Gradienten</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wiederholung-begrifflichkeiten-bei-funktionen">Wiederholung: Begrifflichkeiten bei Funktionen</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#funktionen-von-mehreren-unabhangigen-variablen">Funktionen von mehreren unabhängigen Variablen</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#darstellungen-von-funktionen-mit-mehreren-unabhangigen-variablen">Darstellungen von Funktionen mit mehreren unabhängigen Variablen</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hohenlinien">Höhenlinien</a></li>
 </ul>
   </nav></div>
 

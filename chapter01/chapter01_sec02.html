@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>1.2 Eigenschaften von Integralen &#8212; Mathematik 2 Maschinenbau</title>
+    <title>1.2 Rechenregeln Ableitungen &#8212; Mathematik 2 Maschinenbau</title>
   
   
   
@@ -66,13 +66,11 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'chapter01/chapter01_sec02';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="1.3 Partielle Integration" href="chapter01_sec03.html" />
-    <link rel="prev" title="1.1 Stammfunktion und bestimmtes Integral" href="chapter01_sec01.html" />
+    <link rel="next" title="1.3 Extremwerte" href="chapter01_sec03.html" />
+    <link rel="prev" title="1.1 Ableitungen" href="chapter01_sec01.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="None"/>
   </head>
@@ -157,111 +155,122 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Part 1. Integrale</span></p>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Differential- und Integralrechnung</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="chapter01_sec00.html">1. Wiederholung Integral</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="chapter01_sec01.html">1.1 Stammfunktion und bestimmtes Integral</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">1.2 Eigenschaften von Integralen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="chapter01_sec03.html">1.3 Partielle Integration</a></li>
-<li class="toctree-l2"><a class="reference internal" href="chapter01_sec04.html">1.4 Integration durch Substitution</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="chapter01_sec00.html">1. Differentialrechnung</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="chapter01_sec01.html">1.1 Ableitungen</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">1.2 Rechenregeln Ableitungen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter01_sec03.html">1.3 Extremwerte</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter01_sec04.html">1.4 Extremwerte mit Nebenbedingung</a></li>
 <li class="toctree-l2"><a class="reference internal" href="chapter01_sec05.html">Übungen</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter02/chapter02_sec00.html">2. Anwendungen Integral</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter02/chapter02_sec01.html">2.1 Integrieren ist Mitteln</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter02/chapter02_sec02.html">2.2 Fläche zwischen zwei Graphen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter02/chapter02_sec03.html">2.3 Bogenlänge</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter02/chapter02_sec04.html">2.4 Volumen von Rotationskörpern</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter02/chapter02_sec00.html">2. Integrale</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter02/chapter02_sec01.html">2.1 Stammfunktion und bestimmtes Integral</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter02/chapter02_sec02.html">2.2 Eigenschaften von Integralen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter02/chapter02_sec03.html">2.3 Partielle Integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter02/chapter02_sec04.html">2.4 Integration durch Substitution</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter02/chapter02_sec05.html">Übungen</a></li>
 </ul>
 </li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Part 2. Funktionenreihen</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter03/chapter03_sec00.html">3. Reihen und Potenzreihen</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec01.html">3.1 Reihen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec02.html">3.2 Konvergenzkriterien für Reihen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec03.html">3.3 Potenzreihen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec04.html">3.4 Konvergenz von Potenzreihen</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter03/chapter03_sec00.html">3. Anwendungen Integral</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec01.html">3.1 Integrieren ist Mitteln</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec02.html">3.2 Fläche zwischen zwei Graphen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec03.html">3.3 Bogenlänge</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec04.html">3.4 Volumen von Rotationskörpern</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec05.html">Übungen</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter04/chapter04_sec00.html">4. Taylorreihen</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter04/chapter04_sec01.html">4.1 Berechnung Taylorreihe</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter04/chapter04_sec02.html">4.2 Restglied von Taylorreihen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter04/chapter04_sec03.html">4.3 Wichtige Potenzreihen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter04/chapter04_sec04.html">4.4 Rechnen mit Potenzreihen</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Funktionenreihen</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter04/chapter04_sec00.html">4. Reihen und Potenzreihen</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter04/chapter04_sec01.html">4.1 Reihen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter04/chapter04_sec02.html">4.2 Konvergenzkriterien für Reihen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter04/chapter04_sec03.html">4.3 Potenzreihen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter04/chapter04_sec04.html">4.4 Konvergenz von Potenzreihen</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter04/chapter04_sec05.html">Übungen</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter05/chapter05_sec00.html">5. Fourierreihen</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter05/chapter05_sec01.html">5.1 Periodische Funktionen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter05/chapter05_sec02.html">5.2 Fourierreihen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter05/chapter05_sec03.html">5.3 Beispiele für Fourierreihen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter05/chapter05_sec04.html">5.4 Rechenregeln Fourierreihen</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter05/chapter05_sec00.html">5. Taylorreihen</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter05/chapter05_sec01.html">5.1 Berechnung Taylorreihe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter05/chapter05_sec02.html">5.2 Restglied von Taylorreihen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter05/chapter05_sec03.html">5.3 Wichtige Potenzreihen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter05/chapter05_sec04.html">5.4 Rechnen mit Potenzreihen</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter05/chapter05_sec05.html">Übungen</a></li>
 </ul>
 </li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Part 3. Mehrdimensionale Analysis</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter06/chapter06_sec00.html">6. Funktionen von mehreren Variablen und partielle Ableitungen</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter06/chapter06_sec01.html">6.1 Definition und Visualisierung</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter06/chapter06_sec02.html">6.2 Stetigkeit</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter06/chapter06_sec03.html">6.3 Partielle Ableitungen und Gradient</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter06/chapter06_sec04.html">6.4 Höhere partielle Ableitungen und Hesse-Matrix</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter06/chapter06_sec00.html">6. Fourierreihen</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter06/chapter06_sec01.html">6.1 Periodische Funktionen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter06/chapter06_sec02.html">6.2 Fourierreihen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter06/chapter06_sec03.html">6.3 Beispiele für Fourierreihen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter06/chapter06_sec04.html">6.4 Rechenregeln Fourierreihen</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter06/chapter06_sec05.html">Übungen</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter07/chapter07_sec00.html">7. Richtungsableitungen und vektorwertige Funktionen</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter07/chapter07_sec01.html">7.1 Gradient und Richtungsableitung</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter07/chapter07_sec02.html">7.2 Vektorwertige Funktionen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter07/chapter07_sec03.html">7.3 Jacobi-Matrix</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter07/chapter07_sec04.html">7.4 Mehrdimensionale Kettenregel</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Höhere Differentialrechnung</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter07/chapter07_sec00.html">7. Funktionen von mehreren Variablen und partielle Ableitungen</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter07/chapter07_sec01.html">7.1 Definition und Visualisierung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter07/chapter07_sec02.html">7.2 Stetigkeit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter07/chapter07_sec03.html">7.3 Partielle Ableitungen und Gradient</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter07/chapter07_sec04.html">7.4 Höhere partielle Ableitungen und Hesse-Matrix</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter07/chapter07_sec05.html">Übungen</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter08/chapter08_sec00.html">8. Linearisierung und Extremwerte</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter08/chapter08_sec01.html">8.1 Tangentenfunktionen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter08/chapter08_sec02.html">8.2 Totales Differential</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter08/chapter08_sec03.html">8.3 Extremwerte</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter08/chapter08_sec04.html">8.4 Extremwertprobleme mit Nebenbedingung</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter08/chapter08_sec00.html">8. Richtungsableitungen und vektorwertige Funktionen</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter08/chapter08_sec01.html">8.1 Gradient und Richtungsableitung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter08/chapter08_sec02.html">8.2 Vektorwertige Funktionen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter08/chapter08_sec03.html">8.3 Jacobi-Matrix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter08/chapter08_sec04.html">8.4 Mehrdimensionale Kettenregel</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter08/chapter08_sec05.html">Übungen</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter09/chapter09_sec00.html">9. Doppelintegral</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter09/chapter09_sec01.html">9.1 Idee von Doppelintegralen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter09/chapter09_sec02.html">9.2 Berechnung von Doppelintegralen in kartesischen Koordinaten</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter09/chapter09_sec03.html">9.3 Anwendung: Flächenberechnung</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter09/chapter09_sec04.html">9.4 Anwendung: Schwerpunktberechnung</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter09/chapter09_sec00.html">9. Linearisierung und Extremwerte</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter09/chapter09_sec01.html">9.1 Tangentenfunktionen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter09/chapter09_sec02.html">9.2 Totales Differential</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter09/chapter09_sec03.html">9.3 Extremwerte</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter09/chapter09_sec04.html">9.4 Extremwertprobleme mit Nebenbedingung</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter09/chapter09_sec05.html">Übungen</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter10/chapter10_sec00.html">10. Doppelintegral in Polarkoordinaten und Dreifachintegral</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter10/chapter10_sec01.html">10.1 Polarkoordinaten</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter10/chapter10_sec02.html">10.2 Doppelintegral in Polarkoordinaten</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter10/chapter10_sec03.html">10.3 Dreifachintegral</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter10/chapter10_sec04.html">10.4 Anwendungen Dreifachintegral</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Höhere Integralrechnung</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter10/chapter10_sec00.html">10. Doppelintegral</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter10/chapter10_sec01.html">10.1 Idee von Doppelintegralen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter10/chapter10_sec02.html">10.2 Berechnung von Doppelintegralen in kartesischen Koordinaten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter10/chapter10_sec03.html">10.3 Anwendung: Flächenberechnung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter10/chapter10_sec04.html">10.4 Anwendung: Schwerpunktberechnung</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter10/chapter10_sec05.html">Übungen</a></li>
 </ul>
 </li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Part 4. Differentialgleichungen</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter11/chapter11_sec00.html">11. Einführung Differentialgleichungen</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter11/chapter11_sec01.html">11.1 Grundbegriffe</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter11/chapter11_sec02.html">11.2 Anfangs- und Randwertproblem</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter11/chapter11_sec03.html">11.3 Separable Differentialgleichungen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter11/chapter11_sec04.html">11.4 Exakte Differentialgleichungen</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter11/chapter11_sec00.html">11. Doppelintegral in Polarkoordinaten und Dreifachintegral</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter11/chapter11_sec01.html">11.1 Polarkoordinaten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter11/chapter11_sec02.html">11.2 Doppelintegral in Polarkoordinaten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter11/chapter11_sec03.html">11.3 Dreifachintegral</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter11/chapter11_sec04.html">11.4 Anwendungen Dreifachintegral</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter11/chapter11_sec05.html">Übungen</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter12/chapter12_sec00.html">12. Lineare Differentialgleichungen</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-12"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter12/chapter12_sec01.html">12.1 Lineare DGL 1. Ordnung</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter12/chapter12_sec02.html">12.2 Lösung homogene lineare DGL 1. Ordnung</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter12/chapter12_sec03.html">12.3 Lösung inhomogene lineare DGL 1. Ordnung</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter12/chapter12_sec04.html">12.4 Homogene Systeme aus zwei linearen DGL 1. Ordnung</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Differentialgleichungen</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter12/chapter12_sec00.html">12. Einführung Differentialgleichungen</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-12"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter12/chapter12_sec01.html">12.1 Grundbegriffe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter12/chapter12_sec02.html">12.2 Anfangs- und Randwertproblem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter12/chapter12_sec03.html">12.3 Separable Differentialgleichungen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter12/chapter12_sec04.html">12.4 Exakte Differentialgleichungen</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter12/chapter12_sec05.html">Übungen</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter13/chapter13_sec00.html">13. Lineare Differentialgleichungen</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-13"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter13/chapter13_sec01.html">13.1 Lineare DGL 1. Ordnung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter13/chapter13_sec02.html">13.2 Lösung homogene lineare DGL 1. Ordnung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter13/chapter13_sec03.html">13.3 Lösung inhomogene lineare DGL 1. Ordnung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter13/chapter13_sec04.html">13.4 Homogene Systeme aus zwei linearen DGL 1. Ordnung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter13/chapter13_sec05.html">Übungen</a></li>
 </ul>
 </li>
 </ul>
@@ -402,9 +411,7 @@ document.write(`
   </button>
 `);
 </script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="fa-solid fa-list"></span>
-</label>
+
 </div></div>
       
     </div>
@@ -415,21 +422,11 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>1.2 Eigenschaften von Integralen</h1>
+    <h1>1.2 Rechenregeln Ableitungen</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
-            <div>
-                <h2> Contents </h2>
-            </div>
-            <nav aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lernziele">Lernziele</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#integrationsgrenzen">Integrationsgrenzen</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#linearitat-des-integrals">Linearität des Integrals</a></li>
-</ul>
-            </nav>
         </div>
     </div>
 </div>
@@ -439,122 +436,12 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="eigenschaften-von-integralen">
-<h1>1.2 Eigenschaften von Integralen<a class="headerlink" href="#eigenschaften-von-integralen" title="Permalink to this headline">#</a></h1>
-<p>Kennt man die Eigenschaften von Integralen, so kann das so manche Rechnung
-erheblich vereinfachen. Im Folgenden werden die wichtigsten Eigenschaften von
-Integralen präsentiert.</p>
-<section id="lernziele">
-<h2>Lernziele<a class="headerlink" href="#lernziele" title="Permalink to this headline">#</a></h2>
-<div class="important admonition">
-<p class="admonition-title">Lernziele</p>
-<ul class="simple">
-<li><p>Sie wissen sich das Integral verändert, wenn die beiden Integrationsgrenzen
-miteinander vertauscht werden:</p></li>
-</ul>
-<div class="math notranslate nohighlight">
-\[\int_{a}^{b} f(x)\,dx = - \int_{b}^{a} f(x)\, dx.\]</div>
-<ul class="simple">
-<li><p>Sie wissen, dass das Integral Null ist, wenn die untere Integrationsgrenze
-gleich der oberen Integrationsgrenze ist:</p></li>
-</ul>
-<div class="math notranslate nohighlight">
-\[\int_{a}^{a} f(x)\, dx = 0.\Rule{0 px}{0 em}{1.5 em}\]</div>
-<ul class="simple">
-<li><p>Sie wissen, dass ein Integral mit dem Punkt <span class="math notranslate nohighlight">\(c\)</span> in zwei Integrale aufgespalten
-werden kann:</p></li>
-</ul>
-<div class="math notranslate nohighlight">
-\[\int_{a}^{b} f(x) \,dx = \int_{a}^{c} f(x) \,dx + \int_{c}^{b} f(x) \,dx.
-\Rule{0 px}{0 em}{1.5 em}\]</div>
-<ul class="simple">
-<li><p>Sie kennen die <strong>Faktorregel</strong>:</p></li>
-</ul>
-<div class="math notranslate nohighlight">
-\[\int_{a}^{b} c\cdot f(x)\, dx = c\cdot
-\int_{a}^{b} f(x)\, dx.\]</div>
-<ul class="simple">
-<li><p>Sie kennen die <strong>Summenregel</strong>:</p></li>
-</ul>
-<div class="math notranslate nohighlight">
-\[\int_{a}^{b} f(x) \pm g(x) \, dx = \int_{a}^{b}f(x)\, dx \pm \int_{a}^{b}
-g(x)\, dx.\]</div>
+  <section class="tex2jax_ignore mathjax_ignore" id="rechenregeln-ableitungen">
+<h1>1.2 Rechenregeln Ableitungen<a class="headerlink" href="#rechenregeln-ableitungen" title="Permalink to this headline">#</a></h1>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Dieser Abschnitt wird gerade überarbeitet.</p>
 </div>
-</section>
-<section id="integrationsgrenzen">
-<h2>Integrationsgrenzen<a class="headerlink" href="#integrationsgrenzen" title="Permalink to this headline">#</a></h2>
-<p>Als erstes betrachten wir die Eigenschaften von Integralen, wenn der Integrand
-<span class="math notranslate nohighlight">\(f\)</span> gleich bleibt, aber die Integrationsgrenzen geändert werden.</p>
-<p>Werden die beiden Integrationsgrenzen vertauscht, so ändert sich das Vorzeichen
-des Integrals. Integrieren wir also die Funktion <span class="math notranslate nohighlight">\(f\)</span> von <span class="math notranslate nohighlight">\(b\)</span> nach <span class="math notranslate nohighlight">\(a\)</span> anstatt
-von <span class="math notranslate nohighlight">\(a\)</span> nach <span class="math notranslate nohighlight">\(b\)</span>, müssen wir dieses Integral nur mit <span class="math notranslate nohighlight">\(-1\)</span> multiplizieren, um das
-ursprüngliche Integral von <span class="math notranslate nohighlight">\(a\)</span> nach <span class="math notranslate nohighlight">\(b\)</span> zu erhalten. In Formeln sieht das so aus:</p>
-<div class="math notranslate nohighlight">
-\[\int_{a}^{b} f(x)\,dx = - \int_{\textcolor{red}{b}}^{\textcolor{red}{a}}
-f(x)\, dx.\]</div>
-<p>Gar nicht erst rechnen müssen wir, wenn das Integral über <span class="math notranslate nohighlight">\(f\)</span> von <span class="math notranslate nohighlight">\(a\)</span> bis <span class="math notranslate nohighlight">\(a\)</span>
-geht. In anderen Worten betrachten wir jetzt ein Integral, bei dem die untere
-Integrationsgrenze und die obere Integrationsgrenze zusammenfallen. Wenn wir das
-Integral als orientierte Fläche zwischen dem Funktionsgraphen <span class="math notranslate nohighlight">\(f(x)\)</span> und der
-x-Achse interpretieren, heißt das, dass gar kein Rechteck mehr existiert.
-Anstatt eines Rechtecke liegt sozusagen nur noch ein unendlich dünner Strich an
-der Stelle <span class="math notranslate nohighlight">\(x=a\)</span> vor, weil es ja von <span class="math notranslate nohighlight">\(a\)</span> nach <span class="math notranslate nohighlight">\(a\)</span> geht. Ein Strich hat keinen
-Flächeninhalt, das Integral ist also Null. Als mathematische Formel notiert
-heißt das:</p>
-<div class="math notranslate nohighlight">
-\[\int_{\textcolor{red}{a}}^{\textcolor{red}{a}} f(x)\, dx = 0.\Rule{0 px}{0
-em}{1.5 em}\]</div>
-<p>Weiter geht es… wiederum hilft die Flächeninterpretation weiter. Diesmal
-erfinden wir einen neuen Punkt <span class="math notranslate nohighlight">\(c\)</span>. Dann kann die Fläche zwischen
-Funktionsgraph, x-Achse und den Grenzen a und b in zwei Flächen aufgeteilt
-werden. Die erste Fläche ist die Fläche zwischen Funktionsgraph und x-Achse von
-<span class="math notranslate nohighlight">\(a\)</span> nach <span class="math notranslate nohighlight">\(c\)</span>. Die zweite Fläche ist die Fläche zwischen Funktionsgraph und
-x-Achse von <span class="math notranslate nohighlight">\(c\)</span> nach <span class="math notranslate nohighlight">\(b\)</span>. Und beide Flächen zusammen müssen wieder die
-ursprüngliche Fläche ergeben. Also:</p>
-<div class="math notranslate nohighlight">
-\[\int_{a}^{b} f(x) \,dx = \int_{a}^{\textcolor{red}{c}} f(x) \,dx +
-\int_{\textcolor{red}{c}}^{b} f(x) \,dx. \Rule{0 px}{0 em}{1.5 em}\]</div>
-<p>Alle drei Eigenschaften werden nochmal in dem folgenden Video erläutert.</p>
-<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
-<summary class="sd-summary-title sd-card-header">
-Video: Eigenschaften/Rechenregeln des Integrals I<div class="sd-summary-down docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="sd-summary-up docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="sd-summary-content sd-card-body docutils">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/BKgcS2wgwu0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-</div>
-</details></section>
-<section id="linearitat-des-integrals">
-<h2>Linearität des Integrals<a class="headerlink" href="#linearitat-des-integrals" title="Permalink to this headline">#</a></h2>
-<p>Linearität des Integrals klingt kompliziert, ist es aber nicht. Gemeint sind
-damit die folgenden zwei Eigenschaften.</p>
-<p>Faktorregel: Wenn die Funktion <span class="math notranslate nohighlight">\(f\)</span> mit einer konstanten Zahl <span class="math notranslate nohighlight">\(c\)</span> multipliziert
-wird und dann integriert werden soll, dann können wir auch zuerst das Integral
-von <span class="math notranslate nohighlight">\(f\)</span> berechnen und danach das Ergebnis <span class="math notranslate nohighlight">\(c\)</span> multiplizieren. Oder anders
-ausgedrückt: wenn im Integranden ein konstanter Faktor ist, dann darf man diesen
-konstanten Faktor auch vor das Integral ziehen.</p>
-<div class="math notranslate nohighlight">
-\[\int_{a}^{b} c\cdot f(x)\, dx = c\cdot
-\int_{a}^{b} f(x)\, dx.\]</div>
-<p>Summenregel: Soll die Summe oder die Differenz zweier Funktionen integriert
-werden, dürfen auch zuerst die beiden Einzelintegrale berechnet werden und
-danach Summe oder Differenz gebildet werden:</p>
-<div class="math notranslate nohighlight">
-\[\int_{a}^{b} f(x) \pm g(x) \, dx = \int_{a}^{b}f(x)\, dx \pm \int_{a}^{b}
-g(x)\, dx.\]</div>
-<p>In dem folgenden Video werden beide Eigenschaften erläutert und anhand eines
-Beispiels demonstriert.</p>
-<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
-<summary class="sd-summary-title sd-card-header">
-Video: Eigenschaften/Rechenregeln des Integrals II<div class="sd-summary-down docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="sd-summary-up docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="sd-summary-content sd-card-body docutils">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/eMGWYY96Hno" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-</div>
-</details></section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -594,7 +481,7 @@ Video: Eigenschaften/Rechenregeln des Integrals II<div class="sd-summary-down do
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">1.1 Stammfunktion und bestimmtes Integral</p>
+        <p class="prev-next-title">1.1 Ableitungen</p>
       </div>
     </a>
     <a class="right-next"
@@ -602,7 +489,7 @@ Video: Eigenschaften/Rechenregeln des Integrals II<div class="sd-summary-down do
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">1.3 Partielle Integration</p>
+        <p class="prev-next-title">1.3 Extremwerte</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -615,22 +502,6 @@ Video: Eigenschaften/Rechenregeln des Integrals II<div class="sd-summary-down do
             </div>
             
             
-              
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> Contents
-  </div>
-  <nav class="bd-toc-nav page-toc">
-    <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lernziele">Lernziele</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#integrationsgrenzen">Integrationsgrenzen</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#linearitat-des-integrals">Linearität des Integrals</a></li>
-</ul>
-  </nav></div>
-
-</div></div>
               
             
           </div>

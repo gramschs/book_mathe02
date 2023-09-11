@@ -1,53 +1,18 @@
-# 7.2 Vektorwertige Funktionen
+# 7.2 Stetigkeit
+
+Auch bei Funktionen von mehreren unabhängigen Variablen muss die Stetigkeit
+definiert werden.
 
 ## Lernziele
 
-```{admonition} Lernziel
+```{admonition} Lernziele
 :class: important
-Sie wissen, was eine **vektorwertige** Funktion bzw. ein **Vektorfeld** ist.
+Sie wissen, wann eine Funktion von mehreren unabhängigen Variablen **stetig** genannt wird.
 ```
 
-## Begrifflichkeiten
+## Stetigkeit
 
-Bis jetzt war es so, dass Funktionen von einer oder mehreren Variablen abhängen,
-aber der Funktionswert war bisher immer eine reelle Zahl, also ein Skalar. Daher
-nennt man solche Funktionen **skalarwertig**. So wie wir beim Definitionsgebiet
-von einem eindimensionalen Definitionsgebiet $x\in \mathbb{R}$ der reellen
-Zahlen zu Definitionsgebieten mit mehreren unabhängigen Variablen, also Vektoren
-$\vec{x}\in\mathbb{R}$ übergegangen sind, können wir das mit den Funktionswerten
-auch machen. Sind die Funktionswerte einer Funktion Vektoren, so nennen wir die
-Funktion **vektorwertig**.
+Das folgende Video erklärt den Begriff der Stetigkeit für Funktionen von
+mehreren unabhängigen Variablen.
 
-```{admonition} Was ist ... eine vektorwertige Funktion?
-:class: note
-Eine vektorwertige Funktion ist eine Funktion, die Vektoren als Wertemenge bzw.
-Funktionswerte hat.
-```
-
-Übrigens, in der Physik wird eine vektorwertige Funktion auch oft **Vektorfeld**
-genannt.
-
-```{dropdown} Video zu "Vektorwertige Funktionen" von Mathematische Methoden
-<iframe width="560" height="315" src="https://www.youtube.com/embed/KUSljbPOK78" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-```
-
-## Beispiel Windgeschwindigkeiten
-
-Ein Beispiel aus dem Alltag ist die Wetterkarte mit den prognostizierten
-Durchschnittstemperaturen für den morgigen Tag. Zu jeder Position spezifiziert
-durch den Breiten- und den Längengrad gibt es eine Temperatur. Die Temperatur
-ist eine sogenannte skalare Größe, denn sie wird durch eine einzelne Zahl
-dargestellt. Gerade bei Unwetterwarnungen sind jedoch auch Darstellungen des
-Windfeldes üblich. Zu jeder Position mit Längen- und Breitengrad wird eine
-Windrichtung angegeben, also eine vektorielle Größe. In den Wetterkarten wird
-dazu häufig ein Pfeil eingezeichnet ähnlich zu der folgenden Abbildung.
-
-
-```{figure} pics/fig07_vektorfeld.svg
----
-width: 300px
-name: fig07_vektorfeld
----
-Visualisierung eines Vektorfeldes ([Quelle:](https://commons.wikimedia.org/wiki/File:VectorField.svg) "A portion of the vector field (sin y, sin x)" von Jim.belk. Lizenz: gemeinfrei)
-```
-
+<iframe width="560" height="315" src="https://www.youtube.com/embed/0FoFSpOt5UY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>

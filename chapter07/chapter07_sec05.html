@@ -71,8 +71,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'chapter07/chapter07_sec05';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="8. Linearisierung und Extremwerte" href="../chapter08/chapter08_sec00.html" />
-    <link rel="prev" title="7.4 Mehrdimensionale Kettenregel" href="chapter07_sec04.html" />
+    <link rel="next" title="8. Richtungsableitungen und vektorwertige Funktionen" href="../chapter08/chapter08_sec00.html" />
+    <link rel="prev" title="7.4 Höhere partielle Ableitungen und Hesse-Matrix" href="chapter07_sec04.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="None"/>
   </head>
@@ -157,111 +157,122 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Part 1. Integrale</span></p>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Differential- und Integralrechnung</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter01/chapter01_sec00.html">1. Wiederholung Integral</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter01/chapter01_sec01.html">1.1 Stammfunktion und bestimmtes Integral</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter01/chapter01_sec02.html">1.2 Eigenschaften von Integralen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter01/chapter01_sec03.html">1.3 Partielle Integration</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter01/chapter01_sec04.html">1.4 Integration durch Substitution</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter01/chapter01_sec00.html">1. Differentialrechnung</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter01/chapter01_sec01.html">1.1 Ableitungen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter01/chapter01_sec02.html">1.2 Rechenregeln Ableitungen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter01/chapter01_sec03.html">1.3 Extremwerte</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter01/chapter01_sec04.html">1.4 Extremwerte mit Nebenbedingung</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter01/chapter01_sec05.html">Übungen</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter02/chapter02_sec00.html">2. Anwendungen Integral</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter02/chapter02_sec01.html">2.1 Integrieren ist Mitteln</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter02/chapter02_sec02.html">2.2 Fläche zwischen zwei Graphen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter02/chapter02_sec03.html">2.3 Bogenlänge</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter02/chapter02_sec04.html">2.4 Volumen von Rotationskörpern</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter02/chapter02_sec00.html">2. Integrale</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter02/chapter02_sec01.html">2.1 Stammfunktion und bestimmtes Integral</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter02/chapter02_sec02.html">2.2 Eigenschaften von Integralen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter02/chapter02_sec03.html">2.3 Partielle Integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter02/chapter02_sec04.html">2.4 Integration durch Substitution</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter02/chapter02_sec05.html">Übungen</a></li>
 </ul>
 </li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Part 2. Funktionenreihen</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter03/chapter03_sec00.html">3. Reihen und Potenzreihen</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec01.html">3.1 Reihen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec02.html">3.2 Konvergenzkriterien für Reihen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec03.html">3.3 Potenzreihen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec04.html">3.4 Konvergenz von Potenzreihen</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter03/chapter03_sec00.html">3. Anwendungen Integral</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec01.html">3.1 Integrieren ist Mitteln</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec02.html">3.2 Fläche zwischen zwei Graphen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec03.html">3.3 Bogenlänge</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec04.html">3.4 Volumen von Rotationskörpern</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec05.html">Übungen</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter04/chapter04_sec00.html">4. Taylorreihen</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter04/chapter04_sec01.html">4.1 Berechnung Taylorreihe</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter04/chapter04_sec02.html">4.2 Restglied von Taylorreihen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter04/chapter04_sec03.html">4.3 Wichtige Potenzreihen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter04/chapter04_sec04.html">4.4 Rechnen mit Potenzreihen</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Funktionenreihen</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter04/chapter04_sec00.html">4. Reihen und Potenzreihen</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter04/chapter04_sec01.html">4.1 Reihen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter04/chapter04_sec02.html">4.2 Konvergenzkriterien für Reihen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter04/chapter04_sec03.html">4.3 Potenzreihen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter04/chapter04_sec04.html">4.4 Konvergenz von Potenzreihen</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter04/chapter04_sec05.html">Übungen</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter05/chapter05_sec00.html">5. Fourierreihen</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter05/chapter05_sec01.html">5.1 Periodische Funktionen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter05/chapter05_sec02.html">5.2 Fourierreihen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter05/chapter05_sec03.html">5.3 Beispiele für Fourierreihen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter05/chapter05_sec04.html">5.4 Rechenregeln Fourierreihen</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter05/chapter05_sec00.html">5. Taylorreihen</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter05/chapter05_sec01.html">5.1 Berechnung Taylorreihe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter05/chapter05_sec02.html">5.2 Restglied von Taylorreihen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter05/chapter05_sec03.html">5.3 Wichtige Potenzreihen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter05/chapter05_sec04.html">5.4 Rechnen mit Potenzreihen</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter05/chapter05_sec05.html">Übungen</a></li>
 </ul>
 </li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Part 3. Mehrdimensionale Analysis</span></p>
-<ul class="current nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter06/chapter06_sec00.html">6. Funktionen von mehreren Variablen und partielle Ableitungen</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter06/chapter06_sec01.html">6.1 Definition und Visualisierung</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter06/chapter06_sec02.html">6.2 Stetigkeit</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter06/chapter06_sec03.html">6.3 Partielle Ableitungen und Gradient</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter06/chapter06_sec04.html">6.4 Höhere partielle Ableitungen und Hesse-Matrix</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter06/chapter06_sec00.html">6. Fourierreihen</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter06/chapter06_sec01.html">6.1 Periodische Funktionen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter06/chapter06_sec02.html">6.2 Fourierreihen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter06/chapter06_sec03.html">6.3 Beispiele für Fourierreihen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter06/chapter06_sec04.html">6.4 Rechenregeln Fourierreihen</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter06/chapter06_sec05.html">Übungen</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="chapter07_sec00.html">7. Richtungsableitungen und vektorwertige Funktionen</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="chapter07_sec01.html">7.1 Gradient und Richtungsableitung</a></li>
-<li class="toctree-l2"><a class="reference internal" href="chapter07_sec02.html">7.2 Vektorwertige Funktionen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="chapter07_sec03.html">7.3 Jacobi-Matrix</a></li>
-<li class="toctree-l2"><a class="reference internal" href="chapter07_sec04.html">7.4 Mehrdimensionale Kettenregel</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Höhere Differentialrechnung</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="chapter07_sec00.html">7. Funktionen von mehreren Variablen und partielle Ableitungen</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="chapter07_sec01.html">7.1 Definition und Visualisierung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter07_sec02.html">7.2 Stetigkeit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter07_sec03.html">7.3 Partielle Ableitungen und Gradient</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter07_sec04.html">7.4 Höhere partielle Ableitungen und Hesse-Matrix</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Übungen</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter08/chapter08_sec00.html">8. Linearisierung und Extremwerte</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter08/chapter08_sec01.html">8.1 Tangentenfunktionen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter08/chapter08_sec02.html">8.2 Totales Differential</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter08/chapter08_sec03.html">8.3 Extremwerte</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter08/chapter08_sec04.html">8.4 Extremwertprobleme mit Nebenbedingung</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter08/chapter08_sec00.html">8. Richtungsableitungen und vektorwertige Funktionen</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter08/chapter08_sec01.html">8.1 Gradient und Richtungsableitung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter08/chapter08_sec02.html">8.2 Vektorwertige Funktionen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter08/chapter08_sec03.html">8.3 Jacobi-Matrix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter08/chapter08_sec04.html">8.4 Mehrdimensionale Kettenregel</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter08/chapter08_sec05.html">Übungen</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter09/chapter09_sec00.html">9. Doppelintegral</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter09/chapter09_sec01.html">9.1 Idee von Doppelintegralen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter09/chapter09_sec02.html">9.2 Berechnung von Doppelintegralen in kartesischen Koordinaten</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter09/chapter09_sec03.html">9.3 Anwendung: Flächenberechnung</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter09/chapter09_sec04.html">9.4 Anwendung: Schwerpunktberechnung</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter09/chapter09_sec00.html">9. Linearisierung und Extremwerte</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter09/chapter09_sec01.html">9.1 Tangentenfunktionen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter09/chapter09_sec02.html">9.2 Totales Differential</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter09/chapter09_sec03.html">9.3 Extremwerte</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter09/chapter09_sec04.html">9.4 Extremwertprobleme mit Nebenbedingung</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter09/chapter09_sec05.html">Übungen</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter10/chapter10_sec00.html">10. Doppelintegral in Polarkoordinaten und Dreifachintegral</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter10/chapter10_sec01.html">10.1 Polarkoordinaten</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter10/chapter10_sec02.html">10.2 Doppelintegral in Polarkoordinaten</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter10/chapter10_sec03.html">10.3 Dreifachintegral</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter10/chapter10_sec04.html">10.4 Anwendungen Dreifachintegral</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Höhere Integralrechnung</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter10/chapter10_sec00.html">10. Doppelintegral</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter10/chapter10_sec01.html">10.1 Idee von Doppelintegralen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter10/chapter10_sec02.html">10.2 Berechnung von Doppelintegralen in kartesischen Koordinaten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter10/chapter10_sec03.html">10.3 Anwendung: Flächenberechnung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter10/chapter10_sec04.html">10.4 Anwendung: Schwerpunktberechnung</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter10/chapter10_sec05.html">Übungen</a></li>
 </ul>
 </li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Part 4. Differentialgleichungen</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter11/chapter11_sec00.html">11. Einführung Differentialgleichungen</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter11/chapter11_sec01.html">11.1 Grundbegriffe</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter11/chapter11_sec02.html">11.2 Anfangs- und Randwertproblem</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter11/chapter11_sec03.html">11.3 Separable Differentialgleichungen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter11/chapter11_sec04.html">11.4 Exakte Differentialgleichungen</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter11/chapter11_sec00.html">11. Doppelintegral in Polarkoordinaten und Dreifachintegral</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter11/chapter11_sec01.html">11.1 Polarkoordinaten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter11/chapter11_sec02.html">11.2 Doppelintegral in Polarkoordinaten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter11/chapter11_sec03.html">11.3 Dreifachintegral</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter11/chapter11_sec04.html">11.4 Anwendungen Dreifachintegral</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter11/chapter11_sec05.html">Übungen</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter12/chapter12_sec00.html">12. Lineare Differentialgleichungen</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-12"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter12/chapter12_sec01.html">12.1 Lineare DGL 1. Ordnung</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter12/chapter12_sec02.html">12.2 Lösung homogene lineare DGL 1. Ordnung</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter12/chapter12_sec03.html">12.3 Lösung inhomogene lineare DGL 1. Ordnung</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter12/chapter12_sec04.html">12.4 Homogene Systeme aus zwei linearen DGL 1. Ordnung</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Differentialgleichungen</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter12/chapter12_sec00.html">12. Einführung Differentialgleichungen</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-12"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter12/chapter12_sec01.html">12.1 Grundbegriffe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter12/chapter12_sec02.html">12.2 Anfangs- und Randwertproblem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter12/chapter12_sec03.html">12.3 Separable Differentialgleichungen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter12/chapter12_sec04.html">12.4 Exakte Differentialgleichungen</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter12/chapter12_sec05.html">Übungen</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter13/chapter13_sec00.html">13. Lineare Differentialgleichungen</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-13"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter13/chapter13_sec01.html">13.1 Lineare DGL 1. Ordnung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter13/chapter13_sec02.html">13.2 Lösung homogene lineare DGL 1. Ordnung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter13/chapter13_sec03.html">13.3 Lösung inhomogene lineare DGL 1. Ordnung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter13/chapter13_sec04.html">13.4 Homogene Systeme aus zwei linearen DGL 1. Ordnung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter13/chapter13_sec05.html">Übungen</a></li>
 </ul>
 </li>
 </ul>
@@ -430,218 +441,124 @@ document.write(`
   <section class="tex2jax_ignore mathjax_ignore" id="ubungen">
 <h1>Übungen<a class="headerlink" href="#ubungen" title="Permalink to this headline">#</a></h1>
 <div class="tip admonition">
-<p class="admonition-title">Übung 7.1</p>
-<p>Berechnen Sie den Gradient <span class="math notranslate nohighlight">\(\nabla f\)</span> der folgenden Funktionen:</p>
-<p>a) <span class="math notranslate nohighlight">\(f(x,y) = e^{-(x^2+y^2)}\)</span></p>
-<p>b) <span class="math notranslate nohighlight">\(f(x,y,z) = \frac{1+x+y+z}{1+x^2+y^2+z^2}\)</span></p>
-<p>c) <span class="math notranslate nohighlight">\(f(x_1,x_2) = x_1^4 -5x_2^2 - 10x_1x_2\)</span></p>
-<p>d) <span class="math notranslate nohighlight">\(f(x_1,x_2,x_3) = 2x_1^2 -4x_1x_2 + x_2^3\cdot \sin(x_3)\)</span></p>
+<p class="admonition-title">Übung 6.1</p>
+<p>Berechnen Sie die ersten partiellen Ableitungen nach den Variablen.
+a) <span class="math notranslate nohighlight">\(f(x,y)=e^{x}\cdot e^{y}\)</span> <br>
+b) <span class="math notranslate nohighlight">\(f(x,y)=e^{xy}\)</span> <br>
+c) <span class="math notranslate nohighlight">\(f(x,y)=\sin(x)\cos(y)\)</span> <br>
+d) <span class="math notranslate nohighlight">\(f(x_1,x_2,x_3) = \frac{1}{2x_1^2+\sqrt{x_2^2+x_3^2}}\)</span> <br></p>
 </div>
 <div class="tip toggle admonition">
 <p class="admonition-title">Lösung</p>
-<p>a)</p>
-<div class="amsmath math notranslate nohighlight">
-\[\begin{align*} 
-f(x,y) &amp;= e^{-(x^2+y^2)} \\
-\Rightarrow \quad \nabla f(x,y) &amp;= \left(-2xe^{-x^2-y^2}, -2y e^{-x^2-y^2} \right)
-\end{align*}\]</div>
-<p>b)</p>
-<div class="amsmath math notranslate nohighlight">
-\[\begin{align*}
-f(x,y,z) &amp;= \frac{1+x+y+z}{1+x^2+y^2+z^2}  \\
-\nabla f(x,y,z) &amp;= \Big( \frac{-x^2-2x(y+z+1)+y^2+z^2+1}{(x^2+y^2+z^2+1)^2}, ...\\
-&amp;\frac{1+x^2-y^2+z^2 - 2y(1+x+z)}{(1 + x^2+y^2+z^2)^2},  \frac{1+x^2+y^2-z^2 - 2z(1+x+y)}{(1 + x^2+y^2+z^2)^2}\Big)
-\end{align*}\]</div>
-<p>c)</p>
-<div class="amsmath math notranslate nohighlight">
-\[\begin{align*}
-f(x_1,x_2) &amp;= x_1^4 -5x_2^2 - 10x_1x_2 \\
-\Rightarrow \quad \nabla f(x_1,x_2) &amp;= \left( 4x_1^3-10x_2, -10(x_1+x_2) \right) 
-\end{align*}\]</div>
-<p>d)</p>
-<div class="amsmath math notranslate nohighlight">
-\[\begin{align*}
-f(x_1,x_2,x_3) &amp;= 2x_1^2 -4x_1x_2 + x_2^3\cdot \sin(x_3) \\
-\Rightarrow \quad \nabla f(x_1,x_2,x_3) &amp;= \left(4(x_1-x_2), 3x_2^2\sin(x_3)-4x_1, x_2^3\cos(x_3)\right)
-\end{align*}\]</div>
-<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
-<summary class="sd-summary-title sd-card-header">
-Lösungsweg<div class="sd-summary-down docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="sd-summary-up docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">a) <span class="math notranslate nohighlight">\(f(x,y) = e^{-(x^2+y^2)}\)</span> <br>
-Wir berechnen zunächst die partiellen Ableitungen:</p>
-<div class="amsmath math notranslate nohighlight">
-\[\begin{align*}
-\frac{\partial f}{\partial x} &amp;= -2xe^{-x^2-y^2} \\
-\frac{\partial f}{\partial y} &amp;= -2y e^{-x^2-y^2}  
-\end{align*}\]</div>
-<p class="sd-card-text">Damit ist der Gradient von f:</p>
+<p>a) <span class="math notranslate nohighlight">\(f(x,y)=e^{x}\cdot e^{y}\)</span></p>
 <div class="math notranslate nohighlight">
-\[\nabla f(x,y) = \left(-2xe^{-x^2-y^2}, -2y e^{-x^2-y^2} \right)\]</div>
-<p class="sd-card-text">b) <span class="math notranslate nohighlight">\(f(x,y,z) = \frac{1+x+y+z}{1+x^2+y^2+z^2}\)</span> <br>
-Wir berechnen zunächst die partiellen Ableitungen:</p>
-<div class="amsmath math notranslate nohighlight">
-\[\begin{align*}
-\frac{\partial f}{\partial x} &amp;=  \frac{-x^2-2x(y+z+1)+y^2+z^2+1}{(x^2+y^2+z^2+1)^2}\\
-\frac{\partial f}{\partial y} &amp;=  \frac{1+x^2-y^2+z^2 - 2y(1+x+z)}{(1 + x^2+y^2+z^2)^2} \\  
-\frac{\partial f}{\partial z} &amp;=  \frac{1+x^2+y^2-z^2 - 2z(1+x+y)}{(1 + x^2+y^2+z^2)^2}\\  
-\end{align*}\]</div>
-<p class="sd-card-text">Damit ist der Gradient von f:</p>
-<div class="amsmath math notranslate nohighlight">
-\[\begin{multline*}\nabla f(x,y,z) = \Big( \frac{-x^2-2x(y+z+1)+y^2+z^2+1}{(x^2+y^2+z^2+1)^2}, ...\\
-\frac{1+x^2-y^2+z^2 - 2y(1+x+z)}{(1 + x^2+y^2+z^2)^2},  \frac{1+x^2+y^2-z^2 - 2z(1+x+y)}{(1 + x^2+y^2+z^2)^2}\Big)
-\end{multline*}\]</div>
-<p class="sd-card-text">c) <span class="math notranslate nohighlight">\(f(x_1,x_2) = x_1^4 -5x_2^2 - 10x_1x_2\)</span> <br>
-Wir berechnen zunächst die partiellen Ableitungen:</p>
-<div class="amsmath math notranslate nohighlight">
-\[\begin{align*}
-\frac{\partial f}{\partial x_1} &amp;= 4x_1^3-10x_2 \\
-\frac{\partial f}{\partial x_2} &amp;= -10(x_1+x_2)  
-\end{align*}\]</div>
-<p class="sd-card-text">Damit ist der Gradient von f:</p>
+\[\frac{\partial f}{\partial x}=e^x\cdot e^y \quad \text{ und } \quad \frac{\partial f}{\partial y}=e^x\cdot e^y\]</div>
+<p>b) <span class="math notranslate nohighlight">\(f(x,y)=e^{xy}\)</span></p>
 <div class="math notranslate nohighlight">
-\[\nabla f(x_1,x_2) = \left( 4x_1^3-10x_2, -10(x_1+x_2) \right)\]</div>
-<p class="sd-card-text">d) <span class="math notranslate nohighlight">\(f(x_1,x_2,x_3) = 2x_1^2 -4x_1x_2 + x_2^3\cdot \sin(x_3)\)</span> <br>
-Wir berechnen zunächst die partiellen Ableitungen:</p>
+\[\frac{\partial f}{\partial x}=ye^{xy} \quad \text{ und } \quad \frac{\partial f}{\partial y}=xe^{xy}\]</div>
+<p>c) <span class="math notranslate nohighlight">\(f(x,y)=\sin(x)\cos(y)\)</span></p>
+<div class="math notranslate nohighlight">
+\[\frac{\partial f}{\partial x}=\cos(x)\cos(y) \quad \text{ und } \quad \frac{\partial f}{\partial y}=\sin(x)\left(-\sin(y)\right)\]</div>
+<p>d) <span class="math notranslate nohighlight">\(f(x_1,x_2,x_3) = \frac{1}{2x_1^2+\sqrt{x_2^2+x_3^2}}\)</span></p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
-\frac{\partial f}{\partial x} &amp;= 4(x_1-x_2) \\
-\frac{\partial f}{\partial y} &amp;= 3x_2^2\sin(x_3)-4x_1 \\  
-\frac{\partial f}{\partial z} &amp;= x_2^3\cos(x_3) \\  
+\frac{\partial f}{\partial x_1}&amp;=-\frac{1}{(2x_1^2+\sqrt{x_2^2+x_3^2})^2}\cdot 4x_1 \\
+\frac{\partial f}{\partial x_2}&amp;=-\frac{1}{(2x_1^2+\sqrt{x_2^2+x_3^2})^2}\cdot \frac{x_2}{\sqrt{x_2^2+x_3^2}}\\
+\frac{\partial f}{\partial x_3}&amp;=-\frac{1}{(2x_1^2+\sqrt{x_2^2+x_3^2})^2}\cdot \frac{x_3}{\sqrt{x_2^2+x_3^2}}
 \end{align*}\]</div>
-<p class="sd-card-text">Damit ist der Gradient von f:</p>
-<div class="math notranslate nohighlight">
-\[\nabla f(x_1,x_2,x_3) = \left(4(x_1-x_2), 3x_2^2\sin(x_3)-4x_1, x_2^3\cos(x_3)\right)\]</div>
 </div>
-</details></div>
 <div class="tip admonition">
-<p class="admonition-title">Übung 7.2</p>
-<p>Berechnen Sie die Jacobi-Matrix <span class="math notranslate nohighlight">\(J(f)\)</span> zu folgenden Funktionen.</p>
-<p>a)</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}f(x,y) = \begin{pmatrix} x^2 + y^2 \\ x^2 - y^2 \end{pmatrix}\end{split}\]</div>
-<p>b)</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}f(x,y) = \begin{pmatrix} 3x^3y^2 \\ \sin(x) \end{pmatrix}\end{split}\]</div>
+<p class="admonition-title">Übung 6.2</p>
+<p>Berechnen Sie die zweiten partiellen Ableitungen nach den Variablen. Verifizieren Sie, dass das Ergebnis unabhängig von der Reihenfolge der Differentiationsschritte ist.</p>
+<p>a) <span class="math notranslate nohighlight">\(f(x,y)=x^3+y^3 + x^2y^2+xy+1\)</span> <br>
+b) <span class="math notranslate nohighlight">\(f(x,y,z)=\frac{1}{\sqrt{x^2+y^2+z^2}}\)</span></p>
 </div>
 <div class="tip toggle admonition">
 <p class="admonition-title">Lösung</p>
-<p>a)</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}J(f) = \begin{pmatrix} 2x &amp; 2y \\ 2x &amp; -2y \end{pmatrix}\end{split}\]</div>
-<p>b)</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}J(f) = \begin{pmatrix}9x^2y^2 &amp; 6x^3y \\ \cos(x) &amp; 0 \end{pmatrix}\end{split}\]</div>
-<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
-<summary class="sd-summary-title sd-card-header">
-Lösungsweg<div class="sd-summary-down docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="sd-summary-up docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">a)</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}f(x,y) = \begin{pmatrix} x^2 + y^2 \\ x^2 - y^2 \end{pmatrix}\end{split}\]</div>
+<p>a) <span class="math notranslate nohighlight">\(f(x,y)=x^3+y^3 + x^2y^2+xy+1\)</span></p>
+<p>1. partielle Ableitungen:</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
-\frac{\partial f_1}{\partial x} &amp;= 2x\\
-\frac{\partial f_1}{\partial y} &amp;= 2y\\
-\frac{\partial f_2}{\partial x} &amp;= 2x\\
-\frac{\partial f_2}{\partial y} &amp;= -2y 
+\frac{\partial f}{\partial x} &amp;= 3x^2+2xy^2+y \\
+\frac{\partial f}{\partial y} &amp;= 3y^2+2x^2y+x 
 \end{align*}\]</div>
-<p class="sd-card-text">Damit lautet die Jacobi-Matrix</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}J(f) = \begin{pmatrix} 2x &amp; 2y \\ 2x &amp; -2y \end{pmatrix}\end{split}\]</div>
-<p class="sd-card-text">b)</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}f(x,y) = \begin{pmatrix} 3x^3y^2 \\ \sin(x) \end{pmatrix}\end{split}\]</div>
+<p>2. partielle Ableitungen:</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
-\frac{\partial f_1}{\partial x} &amp;= 9x^2y^2\\
-\frac{\partial f_1}{\partial y} &amp;= 6x^3y\\
-\frac{\partial f_2}{\partial x} &amp;= \cos(x)\\
-\frac{\partial f_2}{\partial y} &amp;= 0 
+\frac{\partial^2 f}{\partial x \partial x} &amp;= 6x + 2y^2 \\
+\frac{\partial^2 f}{\partial x \partial y} &amp;= \frac{\partial^2 f}{\partial y \partial x} = 4xy + 1 \\
+\frac{\partial^2 f}{\partial y \partial y} &amp;= 6y + 2x^2 
 \end{align*}\]</div>
-<p class="sd-card-text">Damit lautet die Jacobi-Matrix</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}J(f) = \begin{pmatrix}9x^2y^2 &amp; 6x^3y \\ \cos(x) &amp; 0 \end{pmatrix}\end{split}\]</div>
+<p>b) <span class="math notranslate nohighlight">\(f(x,y,z)=\frac{1}{\sqrt{x^2+y^2+z^2}}\)</span></p>
+<p>1. partielle Ableitungen:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+\frac{\partial f}{\partial x} &amp;= -\frac{x}{\left(\sqrt{x^2+y^2+z^2}\right)^3} \\
+\frac{\partial f}{\partial y} &amp;= -\frac{y}{\left(\sqrt{x^2+y^2+z^2}\right)^3} \\
+\frac{\partial f}{\partial z} &amp;= -\frac{z}{\left(\sqrt{x^2+y^2+z^2}\right)^3} \\
+\end{align*}\]</div>
+<p>2. partielle Ableitungen:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+\frac{\partial^2 f}{\partial x \partial x} &amp;= -\frac{1}{\left(\sqrt{x^2+y^2+z^2}\right)^3}+3\frac{x^2}{\left(\sqrt{x^2+y^2+z^2}\right)^5}\\ 
+\frac{\partial^2 f}{\partial y \partial y} &amp;= -\frac{1}{\left(\sqrt{x^2+y^2+z^2}\right)^3}+3\frac{y^2}{\left(\sqrt{x^2+y^2+z^2}\right)^5}\\ 
+\frac{\partial^2 f}{\partial z \partial z} &amp;= -\frac{1}{\left(\sqrt{x^2+y^2+z^2}\right)^3}+3\frac{z^2}{\left(\sqrt{x^2+y^2+z^2}\right)^5}
+\end{align*}\]</div>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+\frac{\partial^2 f}{\partial y \partial x} &amp;= \frac{\partial^2 f}{\partial x \partial y} = \frac{3xy}{\left(\sqrt{x^2+y^2+z^2}\right)^5}\\ 
+\frac{\partial^2 f}{\partial z \partial x} &amp;= \frac{\partial^2 f}{\partial x \partial z} = \frac{3xz}{\left(\sqrt{x^2+y^2+z^2}\right)^5}\\ 
+\frac{\partial^2 f}{\partial z \partial y} &amp;= \frac{\partial^2 f}{\partial y \partial z} = \frac{3yz}{\left(\sqrt{x^2+y^2+z^2}\right)^5}
+\end{align*}\]</div>
 </div>
-</details></div>
 <div class="tip admonition">
-<p class="admonition-title">Übung 7.3</p>
-<p>Bestimmen Sie die Jacobi-Matrix der verketteten Funktion <span class="math notranslate nohighlight">\(h = f \circ g\)</span> mit der mehrdimensionalen Kettenregel:</p>
-<p>a) <span class="math notranslate nohighlight">\(h:\mathbb{R}^2\mapsto\mathbb{R}\)</span> mit <span class="math notranslate nohighlight">\(h(x_1,x_2) = f(g(x_1,x_2))\)</span>, wobei</p>
-<div class="amsmath math notranslate nohighlight">
-\[\begin{align*}
-f:\mathbb{R}^3\mapsto\mathbb{R},   \quad &amp; f(x_1,x_2,x_3) = x_1^2 x_2^2 x_3^2,\\
-g:\mathbb{R}^2\mapsto\mathbb{R}^3, \quad &amp; g(x_1,x_2) = \begin{pmatrix} x_1 \\ x_2 \\ x_1 x_2 \end{pmatrix} 
-\end{align*}\]</div>
-<p>b) <span class="math notranslate nohighlight">\(h:\mathbb{R}^3\mapsto\mathbb{R}^3\)</span> mit <span class="math notranslate nohighlight">\(h(x_1,x_2,x_3)=f(g(x_1,x_2,x_3))\)</span>, wobei</p>
-<div class="amsmath math notranslate nohighlight">
-\[\begin{align*}
-f:\mathbb{R}^3\mapsto\mathbb{R}^3, \quad &amp; f(x_1,x_2,x_3) = \begin{pmatrix} -x_2 \\ -x_3 \\ -x_1 \end{pmatrix}\\
-g:\mathbb{R}^3\mapsto\mathbb{R}^3, \quad &amp; g(x_1,x_2,x_3) = \begin{pmatrix} x_1 x_2 \\ x_2 x_3 \\ x_3 x_1 \end{pmatrix}
-\end{align*}\]</div>
+<p class="admonition-title">Übung 6.3</p>
+<p>Berechnen Sie die dritten partiellen Ableitungen. Nutzen Sie aus, dass das Ergebnis unabhängig von der Reihenfolge der Differentiationsschritte ist:</p>
+<div class="math notranslate nohighlight">
+\[f(x,y,z)=x^2y^2z^2+x^3+y^3+z^3.\]</div>
+<p>Hinweis: wie viele partielle Ableitungen 3. Ordnung gibt es bei drei Variablen? Wie viele muss man explizit ausrechnen?</p>
 </div>
 <div class="tip toggle admonition">
 <p class="admonition-title">Lösung</p>
-<p>a)</p>
-<div class="math notranslate nohighlight">
-\[J(h)(x_1,x_2) = \left(2x_1^3 x_2^4 + 2x_1^3x_2^4, \; 2x_1^4 x_2^3 + 2x_1^4 x_2^3\right) = 
-\left(4x_1^3x_2^4, \; 4x_1^4x_2^3 \right)\]</div>
-<p>b)</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}J(h)(x_1,x_2,x_3) = \begin{pmatrix} 0 &amp; -x_3 &amp; -x_2 \\ -x_3 &amp; 0 &amp; -x_1 \\ -x_2 &amp; -x_1 &amp; 0 \end{pmatrix}\end{split}\]</div>
-<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
-<summary class="sd-summary-title sd-card-header">
-Lösungsweg<div class="sd-summary-down docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="sd-summary-up docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">a) <span class="math notranslate nohighlight">\(h:\mathbb{R}^2\mapsto\mathbb{R}\)</span> mit <span class="math notranslate nohighlight">\(h(x_1,x_2) = f(g(x_1,x_2))\)</span>, wobei</p>
+<p>Es gibt insgesamt 27 Ableitungen 3. Ordnung, aber es genügen 10 explizite Ableitungen: xxx, yxx, zxx, yyy, xyy, zyy, zzz, xzz, yzz, xyz.</p>
+<p>1. partielle Ableitungen:</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
-f:\mathbb{R}^3\mapsto\mathbb{R},   \quad &amp; f(x_1,x_2,x_3) = x_1^2 x_2^2 x_3^2,\\
-g:\mathbb{R}^2\mapsto\mathbb{R}^3, \quad &amp; g(x_1,x_2) = \begin{pmatrix} x_1 \\ x_2 \\ x_1 x_2 \end{pmatrix} 
+\frac{\partial f}{\partial x} &amp;= 2xy^2z^2 + 3x^2 \\
+\frac{\partial f}{\partial y} &amp;= 2x^2yz^2 + 3y^2 \\
+\frac{\partial f}{\partial z} &amp;= 2x^2y^2z + 3z^2 \\
 \end{align*}\]</div>
-<p class="sd-card-text">Wir berechnen zuerst die Jacobi-Matrix von <span class="math notranslate nohighlight">\(f\)</span> und <span class="math notranslate nohighlight">\(g\)</span>:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}J(f) = \left(2x_1 x_2^2 x_3^2,\; 2x_1^2 x_2 x_3^2,\; 2x_1^2 x_2^2 x_3\right) 
-\quad \text{ und } \quad
-J(g) = \begin{pmatrix} 1 &amp; 0 \\ 0 &amp; 1 \\ x_2 &amp; x_1\end{pmatrix}\end{split}\]</div>
-<p class="sd-card-text">Mit der mehrdimensionalen Kettenregel erhalten wir</p>
-<div class="amsmath math notranslate nohighlight">
-\[\begin{multline*}
-J(h) = J(f) \cdot J(g) = \left(2x_1 x_2^2 x_3^2, \; 2x_1^2 x_2 x_3^2,\; 2x_1^2 x_2^2 x_3\right) \cdot 
-\begin{pmatrix} 1 &amp; 0 \\ 0 &amp; 1 \\ x_2 &amp; x_1\end{pmatrix} = \\
-\left(2x_1 x_2^2 x_3^2 + 2x_1^2 x_2^3 x_3, \; 2x_1^2 x_2 x_3^2 + 2x_1^3 x_2^2 x_3 \right) 
-\end{multline*}\]</div>
-<p class="sd-card-text">Als nächstes ersetzen wir noch <span class="math notranslate nohighlight">\(x_3\)</span> durch <span class="math notranslate nohighlight">\(x_1 x_2\)</span> (siehe Definition von <span class="math notranslate nohighlight">\(h\)</span>) und erhalten</p>
-<div class="math notranslate nohighlight">
-\[J(h)(x_1,x_2) = \left(2x_1^3 x_2^4 + 2x_1^3x_2^4, \; 2x_1^4 x_2^3 + 2x_1^4 x_2^3\right) = 
-\left(4x_1^3x_2^4, \; 4x_1^4x_2^3 \right).\]</div>
-<p class="sd-card-text">b) <span class="math notranslate nohighlight">\(h:\mathbb{R}^3\mapsto\mathbb{R}^3\)</span> mit <span class="math notranslate nohighlight">\(h(x_1,x_2,x_3)=f(g(x_1,x_2,x_3))\)</span>, wobei</p>
+<p>Zwischenrechnung 2. partielle Ableitungen:</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
-f:\mathbb{R}^3\mapsto\mathbb{R}^3, \quad &amp; f(x_1,x_2,x_3) = \begin{pmatrix} -x_2 \\ -x_3 \\ -x_1 \end{pmatrix}\\
-g:\mathbb{R}^3\mapsto\mathbb{R}^3, \quad &amp; g(x_1,x_2,x_3) = \begin{pmatrix} x_1 x_2 \\ x_2 x_3 \\ x_3 x_1 \end{pmatrix}
+\frac{\partial^2 f}{\partial x \partial x} &amp;= 2y^2z^2 + 6x \\ 
+\frac{\partial^2 f}{\partial y \partial y} &amp;= 2x^2z^2 + 6y \\ 
+\frac{\partial^2 f}{\partial z \partial z} &amp;= 2x^2y^2 + 6z \\ 
 \end{align*}\]</div>
-<p class="sd-card-text">Wir berechnen zuerst die Jacobi-Matrix von <span class="math notranslate nohighlight">\(f\)</span> und <span class="math notranslate nohighlight">\(g\)</span>:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}J(f) = \begin{pmatrix} 0 &amp; -1 &amp; 0 \\ 0 &amp; 0 &amp; -1 \\ -1 &amp; 0 &amp; 0 \end{pmatrix} 
-\quad \text{ und } \quad
-J(g) = \begin{pmatrix} x_2 &amp; x_1 &amp; 0 \\ 0 &amp; x_3 &amp; x_2 \\ x_3 &amp; 0 &amp; x_1 \end{pmatrix}\end{split}\]</div>
-<p class="sd-card-text">Mit der mehrdimensionalen Kettenregel erhalten wir</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}J(h)(x_1,x_2,x_3) = J(f)\cdot J(g) = 
-\begin{pmatrix} 0 &amp; -1 &amp; 0 \\ 0 &amp; 0 &amp; -1 \\ -1 &amp; 0 &amp; 0 \end{pmatrix} \cdot \begin{pmatrix} x_2 &amp; x_1 &amp; 0 \\ 0 &amp; x_3 &amp; x_2 \\ x_3 &amp; 0 &amp; x_1 \end{pmatrix} =
-\begin{pmatrix} 0 &amp; -x_3 &amp; -x_2 \\ -x_3 &amp; 0 &amp; -x_1 \\ -x_2 &amp; -x_1 &amp; 0 \end{pmatrix}\end{split}\]</div>
+<p>3. partielle Ableitungen:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+\frac{\partial^3f}{\partial x \partial x \partial x} &amp;= 6 \\ 
+\frac{\partial^3f}{\partial y \partial x \partial x} &amp;= 4yz^2 \\
+\frac{\partial^3f}{\partial z \partial x \partial x} &amp;= 4y^2z 
+\end{align*}\]</div>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+\frac{\partial^3f}{\partial y \partial y \partial y} &amp;= 6 \\  
+\frac{\partial^3f}{\partial x \partial y \partial y} &amp;= 4xz^2 \\
+\frac{\partial^3f}{\partial z \partial y \partial y} &amp;= 4x^2z 
+\end{align*}\]</div>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}  
+\frac{\partial^3f}{\partial z \partial z \partial z} &amp;= 6 \\  
+\frac{\partial^3f}{\partial x \partial z \partial z} &amp;= 4xy^2 \\   
+\frac{\partial^3f}{\partial y \partial z \partial z} &amp;= 4x^2y 
+\end{align*}\]</div>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+\frac{\partial^3f}{\partial x \partial y \partial x} = 8xyz             
+\end{equation*}\]</div>
 </div>
-</details></div>
 </section>
 
     <script type="text/x-thebe-config">
@@ -681,7 +598,7 @@ J(g) = \begin{pmatrix} x_2 &amp; x_1 &amp; 0 \\ 0 &amp; x_3 &amp; x_2 \\ x_3 &am
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">7.4 Mehrdimensionale Kettenregel</p>
+        <p class="prev-next-title">7.4 Höhere partielle Ableitungen und Hesse-Matrix</p>
       </div>
     </a>
     <a class="right-next"
@@ -689,7 +606,7 @@ J(g) = \begin{pmatrix} x_2 &amp; x_1 &amp; 0 \\ 0 &amp; x_3 &amp; x_2 \\ x_3 &am
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">8. Linearisierung und Extremwerte</p>
+        <p class="prev-next-title">8. Richtungsableitungen und vektorwertige Funktionen</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

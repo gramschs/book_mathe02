@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>8.3 Extremwerte &#8212; Mathematik 2 Maschinenbau</title>
+    <title>8.3 Jacobi-Matrix &#8212; Mathematik 2 Maschinenbau</title>
   
   
   
@@ -71,8 +71,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'chapter08/chapter08_sec03';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="8.4 Extremwertprobleme mit Nebenbedingung" href="chapter08_sec04.html" />
-    <link rel="prev" title="8.2 Totales Differential" href="chapter08_sec02.html" />
+    <link rel="next" title="8.4 Mehrdimensionale Kettenregel" href="chapter08_sec04.html" />
+    <link rel="prev" title="8.2 Vektorwertige Funktionen" href="chapter08_sec02.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="None"/>
   </head>
@@ -157,111 +157,122 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Part 1. Integrale</span></p>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Differential- und Integralrechnung</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter01/chapter01_sec00.html">1. Wiederholung Integral</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter01/chapter01_sec01.html">1.1 Stammfunktion und bestimmtes Integral</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter01/chapter01_sec02.html">1.2 Eigenschaften von Integralen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter01/chapter01_sec03.html">1.3 Partielle Integration</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter01/chapter01_sec04.html">1.4 Integration durch Substitution</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter01/chapter01_sec00.html">1. Differentialrechnung</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter01/chapter01_sec01.html">1.1 Ableitungen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter01/chapter01_sec02.html">1.2 Rechenregeln Ableitungen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter01/chapter01_sec03.html">1.3 Extremwerte</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter01/chapter01_sec04.html">1.4 Extremwerte mit Nebenbedingung</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter01/chapter01_sec05.html">Übungen</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter02/chapter02_sec00.html">2. Anwendungen Integral</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter02/chapter02_sec01.html">2.1 Integrieren ist Mitteln</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter02/chapter02_sec02.html">2.2 Fläche zwischen zwei Graphen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter02/chapter02_sec03.html">2.3 Bogenlänge</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter02/chapter02_sec04.html">2.4 Volumen von Rotationskörpern</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter02/chapter02_sec00.html">2. Integrale</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter02/chapter02_sec01.html">2.1 Stammfunktion und bestimmtes Integral</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter02/chapter02_sec02.html">2.2 Eigenschaften von Integralen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter02/chapter02_sec03.html">2.3 Partielle Integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter02/chapter02_sec04.html">2.4 Integration durch Substitution</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter02/chapter02_sec05.html">Übungen</a></li>
 </ul>
 </li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Part 2. Funktionenreihen</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter03/chapter03_sec00.html">3. Reihen und Potenzreihen</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec01.html">3.1 Reihen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec02.html">3.2 Konvergenzkriterien für Reihen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec03.html">3.3 Potenzreihen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec04.html">3.4 Konvergenz von Potenzreihen</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter03/chapter03_sec00.html">3. Anwendungen Integral</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec01.html">3.1 Integrieren ist Mitteln</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec02.html">3.2 Fläche zwischen zwei Graphen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec03.html">3.3 Bogenlänge</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec04.html">3.4 Volumen von Rotationskörpern</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec05.html">Übungen</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter04/chapter04_sec00.html">4. Taylorreihen</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter04/chapter04_sec01.html">4.1 Berechnung Taylorreihe</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter04/chapter04_sec02.html">4.2 Restglied von Taylorreihen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter04/chapter04_sec03.html">4.3 Wichtige Potenzreihen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter04/chapter04_sec04.html">4.4 Rechnen mit Potenzreihen</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Funktionenreihen</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter04/chapter04_sec00.html">4. Reihen und Potenzreihen</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter04/chapter04_sec01.html">4.1 Reihen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter04/chapter04_sec02.html">4.2 Konvergenzkriterien für Reihen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter04/chapter04_sec03.html">4.3 Potenzreihen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter04/chapter04_sec04.html">4.4 Konvergenz von Potenzreihen</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter04/chapter04_sec05.html">Übungen</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter05/chapter05_sec00.html">5. Fourierreihen</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter05/chapter05_sec01.html">5.1 Periodische Funktionen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter05/chapter05_sec02.html">5.2 Fourierreihen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter05/chapter05_sec03.html">5.3 Beispiele für Fourierreihen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter05/chapter05_sec04.html">5.4 Rechenregeln Fourierreihen</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter05/chapter05_sec00.html">5. Taylorreihen</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter05/chapter05_sec01.html">5.1 Berechnung Taylorreihe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter05/chapter05_sec02.html">5.2 Restglied von Taylorreihen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter05/chapter05_sec03.html">5.3 Wichtige Potenzreihen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter05/chapter05_sec04.html">5.4 Rechnen mit Potenzreihen</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter05/chapter05_sec05.html">Übungen</a></li>
 </ul>
 </li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Part 3. Mehrdimensionale Analysis</span></p>
-<ul class="current nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter06/chapter06_sec00.html">6. Funktionen von mehreren Variablen und partielle Ableitungen</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter06/chapter06_sec01.html">6.1 Definition und Visualisierung</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter06/chapter06_sec02.html">6.2 Stetigkeit</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter06/chapter06_sec03.html">6.3 Partielle Ableitungen und Gradient</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter06/chapter06_sec04.html">6.4 Höhere partielle Ableitungen und Hesse-Matrix</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter06/chapter06_sec00.html">6. Fourierreihen</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter06/chapter06_sec01.html">6.1 Periodische Funktionen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter06/chapter06_sec02.html">6.2 Fourierreihen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter06/chapter06_sec03.html">6.3 Beispiele für Fourierreihen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter06/chapter06_sec04.html">6.4 Rechenregeln Fourierreihen</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter06/chapter06_sec05.html">Übungen</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter07/chapter07_sec00.html">7. Richtungsableitungen und vektorwertige Funktionen</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter07/chapter07_sec01.html">7.1 Gradient und Richtungsableitung</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter07/chapter07_sec02.html">7.2 Vektorwertige Funktionen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter07/chapter07_sec03.html">7.3 Jacobi-Matrix</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter07/chapter07_sec04.html">7.4 Mehrdimensionale Kettenregel</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Höhere Differentialrechnung</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter07/chapter07_sec00.html">7. Funktionen von mehreren Variablen und partielle Ableitungen</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter07/chapter07_sec01.html">7.1 Definition und Visualisierung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter07/chapter07_sec02.html">7.2 Stetigkeit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter07/chapter07_sec03.html">7.3 Partielle Ableitungen und Gradient</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter07/chapter07_sec04.html">7.4 Höhere partielle Ableitungen und Hesse-Matrix</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter07/chapter07_sec05.html">Übungen</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="chapter08_sec00.html">8. Linearisierung und Extremwerte</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="chapter08_sec01.html">8.1 Tangentenfunktionen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="chapter08_sec02.html">8.2 Totales Differential</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">8.3 Extremwerte</a></li>
-<li class="toctree-l2"><a class="reference internal" href="chapter08_sec04.html">8.4 Extremwertprobleme mit Nebenbedingung</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="chapter08_sec00.html">8. Richtungsableitungen und vektorwertige Funktionen</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="chapter08_sec01.html">8.1 Gradient und Richtungsableitung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter08_sec02.html">8.2 Vektorwertige Funktionen</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">8.3 Jacobi-Matrix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter08_sec04.html">8.4 Mehrdimensionale Kettenregel</a></li>
 <li class="toctree-l2"><a class="reference internal" href="chapter08_sec05.html">Übungen</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter09/chapter09_sec00.html">9. Doppelintegral</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter09/chapter09_sec01.html">9.1 Idee von Doppelintegralen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter09/chapter09_sec02.html">9.2 Berechnung von Doppelintegralen in kartesischen Koordinaten</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter09/chapter09_sec03.html">9.3 Anwendung: Flächenberechnung</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter09/chapter09_sec04.html">9.4 Anwendung: Schwerpunktberechnung</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter09/chapter09_sec00.html">9. Linearisierung und Extremwerte</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter09/chapter09_sec01.html">9.1 Tangentenfunktionen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter09/chapter09_sec02.html">9.2 Totales Differential</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter09/chapter09_sec03.html">9.3 Extremwerte</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter09/chapter09_sec04.html">9.4 Extremwertprobleme mit Nebenbedingung</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter09/chapter09_sec05.html">Übungen</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter10/chapter10_sec00.html">10. Doppelintegral in Polarkoordinaten und Dreifachintegral</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter10/chapter10_sec01.html">10.1 Polarkoordinaten</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter10/chapter10_sec02.html">10.2 Doppelintegral in Polarkoordinaten</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter10/chapter10_sec03.html">10.3 Dreifachintegral</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter10/chapter10_sec04.html">10.4 Anwendungen Dreifachintegral</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Höhere Integralrechnung</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter10/chapter10_sec00.html">10. Doppelintegral</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter10/chapter10_sec01.html">10.1 Idee von Doppelintegralen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter10/chapter10_sec02.html">10.2 Berechnung von Doppelintegralen in kartesischen Koordinaten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter10/chapter10_sec03.html">10.3 Anwendung: Flächenberechnung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter10/chapter10_sec04.html">10.4 Anwendung: Schwerpunktberechnung</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter10/chapter10_sec05.html">Übungen</a></li>
 </ul>
 </li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Part 4. Differentialgleichungen</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter11/chapter11_sec00.html">11. Einführung Differentialgleichungen</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter11/chapter11_sec01.html">11.1 Grundbegriffe</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter11/chapter11_sec02.html">11.2 Anfangs- und Randwertproblem</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter11/chapter11_sec03.html">11.3 Separable Differentialgleichungen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter11/chapter11_sec04.html">11.4 Exakte Differentialgleichungen</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter11/chapter11_sec00.html">11. Doppelintegral in Polarkoordinaten und Dreifachintegral</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter11/chapter11_sec01.html">11.1 Polarkoordinaten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter11/chapter11_sec02.html">11.2 Doppelintegral in Polarkoordinaten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter11/chapter11_sec03.html">11.3 Dreifachintegral</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter11/chapter11_sec04.html">11.4 Anwendungen Dreifachintegral</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter11/chapter11_sec05.html">Übungen</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter12/chapter12_sec00.html">12. Lineare Differentialgleichungen</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-12"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter12/chapter12_sec01.html">12.1 Lineare DGL 1. Ordnung</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter12/chapter12_sec02.html">12.2 Lösung homogene lineare DGL 1. Ordnung</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter12/chapter12_sec03.html">12.3 Lösung inhomogene lineare DGL 1. Ordnung</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter12/chapter12_sec04.html">12.4 Homogene Systeme aus zwei linearen DGL 1. Ordnung</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Differentialgleichungen</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter12/chapter12_sec00.html">12. Einführung Differentialgleichungen</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-12"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter12/chapter12_sec01.html">12.1 Grundbegriffe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter12/chapter12_sec02.html">12.2 Anfangs- und Randwertproblem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter12/chapter12_sec03.html">12.3 Separable Differentialgleichungen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter12/chapter12_sec04.html">12.4 Exakte Differentialgleichungen</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter12/chapter12_sec05.html">Übungen</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter13/chapter13_sec00.html">13. Lineare Differentialgleichungen</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-13"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter13/chapter13_sec01.html">13.1 Lineare DGL 1. Ordnung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter13/chapter13_sec02.html">13.2 Lösung homogene lineare DGL 1. Ordnung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter13/chapter13_sec03.html">13.3 Lösung inhomogene lineare DGL 1. Ordnung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter13/chapter13_sec04.html">13.4 Homogene Systeme aus zwei linearen DGL 1. Ordnung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter13/chapter13_sec05.html">Übungen</a></li>
 </ul>
 </li>
 </ul>
@@ -415,7 +426,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>8.3 Extremwerte</h1>
+    <h1>8.3 Jacobi-Matrix</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -426,10 +437,8 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lernziele">Lernziele</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#extremwerte-bei-eindimensionalen-funktionen">Extremwerte bei eindimensionalen Funktionen</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#extremwerte-bei-mehrdimensionalen-funktionen">Extremwerte bei mehrdimensionalen Funktionen</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kochrezept-zur-bestimmung-der-extrema-mehrdimensionaler-funktionen">Kochrezept zur Bestimmung der Extrema mehrdimensionaler Funktionen</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ausfuhrliches-beispiel">Ausführliches Beispiel</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#jacobi-matrix-einer-vektorwertigen-funktion">Jacobi-Matrix einer vektorwertigen Funktion</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#beispiel-einer-jacobi-matrix">Beispiel einer Jacobi-Matrix</a></li>
 </ul>
             </nav>
         </div>
@@ -441,290 +450,82 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="extremwerte">
-<h1>8.3 Extremwerte<a class="headerlink" href="#extremwerte" title="Permalink to this headline">#</a></h1>
-<p>Neben der Linearisierung einer mehrdimensionalen Funktion ist auch die
-Berechnung von Minima (Tiefpunkten) und Maxima (Hochpunkten) interessant für die
-Praxis. Extremwerte können für beliebig mehrdimensionale skalarwertige
-Funktionen existieren, aber wir beschränken uns in diesem Kapitel auf Funktionen
-von zwei unabhängigen Variablen.</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="jacobi-matrix">
+<h1>8.3 Jacobi-Matrix<a class="headerlink" href="#jacobi-matrix" title="Permalink to this headline">#</a></h1>
+<p>Der Gradient einer skalarwertigen Funktion entspricht bei vektorwertigen Funktionen der Jacobi-Matrix.</p>
 <section id="lernziele">
 <h2>Lernziele<a class="headerlink" href="#lernziele" title="Permalink to this headline">#</a></h2>
 <div class="important admonition">
-<p class="admonition-title">Lernziele</p>
-<p>Sie wissen, dass drei Bedingungen überprüft werden müssen, um zu entscheiden, ob die Funktion <span class="math notranslate nohighlight">\(f:\mathbb{R}^2\to\mathbb{R}\)</span> Extremwerte hat.</p>
-<ol class="arabic simple">
-<li><p>Ein Punkt <span class="math notranslate nohighlight">\((x_0,y_0)\)</span> ist ein Kandidatat für eine Extremstelle, wenn die folgende erste Bedingung erfüllt ist:</p></li>
-</ol>
-<div class="math notranslate nohighlight">
-\[\frac{\partial f(x_0,y_0)}{\partial x} = 0 \quad \text{ und } \quad 
-\frac{\partial f(x_0,y_0)}{\partial y} = 0.\]</div>
-<ol class="arabic simple" start="2">
-<li><p>Damit der Kandidat <span class="math notranslate nohighlight">\((x_0,y_0)\)</span> auch wirklich ein Extremwert ist, muss zusätzlich
-die Determinante der Hesse-Matrix positiv sein, also:</p></li>
-</ol>
-<div class="math notranslate nohighlight">
-\[\det(H_f(x_0, y_0)) = \frac{\partial^2 f(x_0, y_0)}{\partial x\partial x}\cdot
-\frac{\partial^2 f(x_0,y_0)}{\partial y \partial y} - \left(\frac{\partial^2
-f(x_0,y_0}{\partial x \partial y}\right)^2 &gt; 0.\]</div>
-<ol class="arabic simple" start="3">
-<li><p>Zuletzt entscheidet dann das Vorzeichen von dem Term <span class="math notranslate nohighlight">\(\frac{\partial^2 f(x_0,y_0)}{\partial x \partial y}\)</span> darüber, ob ein Minimum oder ein Maximum vorliegt:</p></li>
-</ol>
-<div class="amsmath math notranslate nohighlight">
-\[\begin{align*}
-\frac{\partial^2 f(x_0, y_0)}{\partial x \partial x} &lt; 0 &amp; \qquad \Rightarrow \text{relatives Maximum} \\
-\frac{\partial^2 f(x_0, y_0)}{\partial x \partial x} &gt; 0 &amp; \qquad \Rightarrow \text{relatives Minimum} \\
-\end{align*}\]</div>
+<p class="admonition-title">Lernziel</p>
+<p>Sie wissen, wie die <strong>Jacobi-Matrix</strong> einer vektorwertigen Funktion berechnet wird.</p>
 </div>
 </section>
-<section id="extremwerte-bei-eindimensionalen-funktionen">
-<h2>Extremwerte bei eindimensionalen Funktionen<a class="headerlink" href="#extremwerte-bei-eindimensionalen-funktionen" title="Permalink to this headline">#</a></h2>
-<p>Betrachten wir zunächst eine eindimensionale Funktion
-<span class="math notranslate nohighlight">\(f:\mathbb{R}\to\mathbb{R}\)</span>. Um herauszufinden, welche x-Werte als Extrema
-(Maximum/Hochpunkt oder Minimum/Tiefpunkt) möglich sind, wird die 1. Ableitung
-Null gesetzt:</p>
-<div class="math notranslate nohighlight">
-\[f'(x)=0.\]</div>
-<p>Diese Bedingung ist <em>notwendig</em>, damit überhaupt ein Maximum oder Minimum
-vorliegen kann. Leider reicht diese Bedingung noch nicht aus. Alle Nullstellen
-der 1. Ableitung sind <em>mögliche</em> Extrema, es könnten aber auch Sattelpunkte sein
-wie in der folgenden Abbildung der Funktion <span class="math notranslate nohighlight">\(f(x)=x^3\)</span>:</p>
-<figure class="align-default" id="fig-part06-sattelpunkt1d">
-<a class="reference internal image-reference" href="../_images/fig08_sattelpunkt1D.svg"><img alt="../_images/fig08_sattelpunkt1D.svg" src="../_images/fig08_sattelpunkt1D.svg" width="300px" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 16 </span><span class="caption-text">Sattelpunkt</span><a class="headerlink" href="#fig-part06-sattelpunkt1d" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
-<p>Daher müssen wir noch zusätzliche Bedingungen überprüfen, bevor wir entscheiden
-können, ob ein Minimum oder Maximum vorliegt. Die möglichen Extremwerte müssen
-noch zusätzlich mit der 2. Ableitung geprüft werden:</p>
+<section id="jacobi-matrix-einer-vektorwertigen-funktion">
+<h2>Jacobi-Matrix einer vektorwertigen Funktion<a class="headerlink" href="#jacobi-matrix-einer-vektorwertigen-funktion" title="Permalink to this headline">#</a></h2>
+<p>Die Jacobi-Matrix einer vektorwertigen Funktion von mehreren Variablen ist eine
+Matrix, die genau wie der Gradient alle partiellen Ableitungen einsammelt. Da
+aber die Funktionswerte der Matrix selbst Vektoren sind, entsteht eine Matrix.</p>
+<p>Kochrezept zur Berechnung der Jacobi-Matrix:</p>
 <ul class="simple">
-<li><p>Der Punkt <span class="math notranslate nohighlight">\(x_0\)</span> ist ein <strong>Maximum/Hochpunkt</strong>, wenn</p>
-<ul>
-<li><p>die 1. Ableitung Null ist, d.h. <span class="math notranslate nohighlight">\(f'(x_0) = 0\)</span> und</p></li>
-<li><p>die 2. Ableitung <strong>negativ</strong> ist, d.h. <span class="math notranslate nohighlight">\(f''(x_0) &lt; 0\)</span>.</p></li>
+<li><p>Interpretiere die vektorwertige Funktion zeilenweise als skalarwertige
+Funktion.</p></li>
+<li><p>Bilde den Gradienten für jede Zeile.</p></li>
+<li><p>Schreibe die Gradienten untereinander in eine Matrix.</p></li>
 </ul>
-</li>
-<li><p>Der Punkt <span class="math notranslate nohighlight">\(x_0\)</span> ist ein <strong>Minimum/Tiefpunkt</strong>, wenn</p>
-<ul>
-<li><p>die 1. Ableitung Null ist, d.h. <span class="math notranslate nohighlight">\(f'(x_0) = 0\)</span> und</p></li>
-<li><p>die 2. Ableitung <strong>positiv</strong> ist, d.h. <span class="math notranslate nohighlight">\(f''(x_0) &gt; 0\)</span>.</p></li>
-</ul>
-</li>
-</ul>
-<p>Diese beiden Bedingungen nennt man dann <strong>hinreichende</strong> Bedingungen.</p>
-<p>Achtung: Wenn allerdings die zweite Ableitung Null ist, also <span class="math notranslate nohighlight">\(f''(x_0) = 0\)</span>,
-kann man keine Entscheidung treffen und muss weitere Bedingungen überprüfen.</p>
-<p>Dieses Prozedere übertragen wir jetzt auf Funktionen von zwei Variablen.</p>
-</section>
-<section id="extremwerte-bei-mehrdimensionalen-funktionen">
-<h2>Extremwerte bei mehrdimensionalen Funktionen<a class="headerlink" href="#extremwerte-bei-mehrdimensionalen-funktionen" title="Permalink to this headline">#</a></h2>
-<p>Die notwendige Bedingung für Extremwerte eindimensionaler Funktion lässt sich
-sofort auf mehrdimensionale Funktionen übertragen. Wir müssen uns nur in
-Erinnerung rufen, dass die 1. Ableitung eindimensionaler Funktionen dem
-Gradienten entspricht. Und da der Gradient der Zeilenvektor ist, der alle
-partielle Ableitungen zusammenfasst, lautet die <strong>notwendige Bedingung für einen
-Extremwert</strong> der skalarwertigen Funktion <span class="math notranslate nohighlight">\(f\)</span></p>
-<div class="math notranslate nohighlight">
-\[\frac{\partial f(x_0, y_0)}{\partial x} = 0 \quad \text{ und }
-\quad \frac{\partial f(x_0,y_0)}{\partial y} = 0.\]</div>
-<p>Diese Gleichung können wir auch vektoriell schreiben:</p>
-<div class="math notranslate nohighlight">
-\[\nabla f(x_0,y_0) = \left( \frac{\partial f(x_0, y_0)}{\partial
-x},\frac{\partial f(x_0,y_0)}{\partial y}\right) = (0,0).\]</div>
-<p>Der Gradient der Funktion muss der Nullvektor sein, so wie die 1. Ableitung Null
-sein muss.</p>
-<p>Das folgende Video erläutert nochmal die notwendige Bedingung, der Dozent zeigt
-jedoch gleich die Bedingung für eine Funktion, die von beliebig vielen Variablen
-abhängt. Das ist eine Verallgemeinerung von der oben vorgestellten Bedingung.</p>
+<p>Die Jacobi-Matrix ist sozusagen die Erweiterung des Gradienten für
+<em>vektor</em>wertige Funktion von mehreren Variablen.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
-Video zu “Notwendige Bedingung für Extremwerte” von Mathematische Methoden<div class="sd-summary-down docutils">
+Video zu “Jacobi-Matrix” von Mathematische Methoden<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/A_f5qpyl0bk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-</div>
-</details><p>Im folgenden Video werden mehrere  Beispiele vorgerechnet.</p>
-<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
-<summary class="sd-summary-title sd-card-header">
-Video zu “Beispiele notwendige Bedingung” von Mathematische Methoden<div class="sd-summary-down docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="sd-summary-up docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="sd-summary-content sd-card-body docutils">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/AMYCKnbgU3s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-</div>
-</details><p>Wenn die notwendige Bedingung erfüllt ist, also die partiellen Ableitungen 1.
-Ordnung Null sind, dann reicht das noch nicht aus. Zusätzlich muss noch die
-folgende <strong>hinreichende Bedingung</strong> gelten: Die <strong>Determinante der Hesse-Matrix
-ist positiv</strong>.</p>
-<div class="math notranslate nohighlight">
-\[\det(H_f\,(x_0,y_0)) = \frac{\partial^2 f(x_0,y_0)}{\partial x\partial x}\cdot
-\frac{\partial^2 f(x_0,y_0)}{\partial y \partial y} 
-- \left(\frac{\partial^2 f(x_0,y_0)}{\partial x \partial y}\right)^2 &gt; 0.\]</div>
-<p>Sobald durch die zweite Bedingung geklärt ist, dass tatsächlich ein Extremwert
-vorliegt, muss noch berechnet werden, ob ein Maximum (Hochpunkt) oder ein
-Minimum (Tiefpunkt) vorliegt. Dazu muss das Vorzeichen der reinen 2. partiellen
-Ableitung nach <span class="math notranslate nohighlight">\(x\)</span> überprüft werden, also das Vorzeichen von <span class="math notranslate nohighlight">\(\frac{\partial^2
-f(x_0,y_0)}{\partial x\partial x}\)</span>. Es gilt:</p>
-<div class="amsmath math notranslate nohighlight">
-\[\begin{align*} \frac{\partial^2 f(x_0,y_0)}{\partial x\partial x} &lt; 0 &amp;
-\qquad \Rightarrow \text{Maximum (Hochpunkt)} \\
-\frac{\partial^2 f(x_0,y_0)}{\partial x\partial x} &gt; 0 &amp; \qquad
-\Rightarrow \text{Minimum (Tiefpunkt)} \\
-\end{align*}\]</div>
-<p>Das folgende Video zeigt erneut die hinreichende Bedingung etwas allgemeiner als
-unsere obigen Betrachtungen.</p>
-<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
-<summary class="sd-summary-title sd-card-header">
-Video zu “Hinreichende Bedingung für Extremwerte” von Mathematische Methoden<div class="sd-summary-down docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="sd-summary-up docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="sd-summary-content sd-card-body docutils">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/eT0nrz_Mujo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-</div>
-</details><p>Da die Bestimmung von Extremwerten ein schwiriges, aber sehr wichtiges Thema
-ist, folgen noch weitere Videos der Universität Köln, in denen Beispiel
-vorgerechnet werden.</p>
-<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
-<summary class="sd-summary-title sd-card-header">
-Video zu “Beispiel 1a Extremwerte” von Mathematische Methoden<div class="sd-summary-down docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="sd-summary-up docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="sd-summary-content sd-card-body docutils">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/oGWN1pZaJBc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-</div>
-</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
-<summary class="sd-summary-title sd-card-header">
-Video zu “Beispiel 1b Extremwerte” von Mathematische Methoden<div class="sd-summary-down docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="sd-summary-up docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="sd-summary-content sd-card-body docutils">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/8IF5uLY7Gwk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-</div>
-</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
-<summary class="sd-summary-title sd-card-header">
-Video zu “Beispiel 1c Extremwerte” von Mathematische Methoden<div class="sd-summary-down docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="sd-summary-up docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="sd-summary-content sd-card-body docutils">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/khMbyiPsSS4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-</div>
-</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
-<summary class="sd-summary-title sd-card-header">
-Video zu “Beispiel 2 Extremwerte” von Mathematische Methoden<div class="sd-summary-down docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="sd-summary-up docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="sd-summary-content sd-card-body docutils">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/MGV0uSj8lbg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/FqaCPP8OZWU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </div>
 </details></section>
-<section id="kochrezept-zur-bestimmung-der-extrema-mehrdimensionaler-funktionen">
-<h2>Kochrezept zur Bestimmung der Extrema mehrdimensionaler Funktionen<a class="headerlink" href="#kochrezept-zur-bestimmung-der-extrema-mehrdimensionaler-funktionen" title="Permalink to this headline">#</a></h2>
-<p>Falls die Extremstellen einer Funktion <span class="math notranslate nohighlight">\(f\)</span> gesucht sind, können Sie
-folgendermaßen vorgehen:</p>
-<ol class="arabic">
-<li><p>Berechnen Sie die partiellen Ableitungen der Funktion.</p></li>
-<li><p>Setzen Sie aus den partiellen Ableitungen den Gradienten zusammen.</p></li>
-<li><p>Lösen Sie die Gleichung <span class="math notranslate nohighlight">\(\nabla f(x,y) = (0,0)\)</span>. Oder anders ausgedrückt, setzen sie alle partiellen Ableitungen gleich Null und bestimmen Sie die Nullstellen.</p></li>
-<li><p>Untersuchen Sie für <strong>jeden</strong> Punkt aus Schritt 3 die Hessematrix:</p>
-<ul class="simple">
-<li><p>Berechnen Sie die Hesse-Matrix für diesen Punkt.</p></li>
-<li><p>Berechnen Sie die Determinante der Hesse-Matrix für diesen Punkt und prüfen Sie, ob sie positiv ist.</p></li>
-<li><p>Wenn die Determinante positiv ist, dann berechnen Sie das Vorzeichen von</p></li>
-</ul>
+<section id="beispiel-einer-jacobi-matrix">
+<h2>Beispiel einer Jacobi-Matrix<a class="headerlink" href="#beispiel-einer-jacobi-matrix" title="Permalink to this headline">#</a></h2>
+<p>Wir schauen uns an dem folgenden Beispiel an, wie die Jacobi-Matrix der
+vektorwertigen Funktion</p>
 <div class="math notranslate nohighlight">
-\[\frac{\partial^2 f(x_0,y_0)}{\partial x\partial x}.\]</div>
-<ul class="simple">
-<li><p>Entscheiden Sie dann anhand des Vorzeichens, ob ein Minimum (Tiefpunkt) oder ein Maximum (Hochpunkt) vorliegt.</p></li>
-</ul>
-</li>
-</ol>
-</section>
-<section id="ausfuhrliches-beispiel">
-<h2>Ausführliches Beispiel<a class="headerlink" href="#ausfuhrliches-beispiel" title="Permalink to this headline">#</a></h2>
-<p>Als Beispiel betrachten wir die Funktion</p>
+\[\begin{split}f:\mathbb{R}^3\longrightarrow\mathbb{R}^2 \quad \text{mit} \quad
+f(x,y,z)=\begin{pmatrix} x^2 + y^3 + \sin(z) \\ z^2\end{pmatrix}\end{split}\]</div>
+<p>berechnet wird.</p>
+<p>Schritt 1: Die erste Zeile enthält die Funktion <span class="math notranslate nohighlight">\(f_1(x,y,z)=x^2 + y^3 + \sin(z)\)</span> mit dem
+Gradienten</p>
 <div class="math notranslate nohighlight">
-\[f(x,y) = \frac{1}{1+x^2+y^2}.\]</div>
-<p>Als erstes berechnen wir die partiellen Ableitungen nach <span class="math notranslate nohighlight">\(x\)</span> und <span class="math notranslate nohighlight">\(y\)</span>:</p>
-<div class="amsmath math notranslate nohighlight">
-\[\begin{align*}
-\frac{\partial f(x,y)}{\partial x} &amp;= \frac{-2x}{(1 + x^2 + y^2)^2} \\
-\frac{\partial f(x,y)}{\partial y} &amp;= \frac{-2y}{(1 + x^2 + y^2)^2} \\
-\end{align*}\]</div>
-<p>Der Gradient der Funktion <span class="math notranslate nohighlight">\(f\)</span> lautet also</p>
+\[\nabla f_1(x,y,z) = \left(2x , 3y^2, \cos(z)\right).\]</div>
+<p>Schritt 2: Die zweite Zeile enthält die Funktion <span class="math notranslate nohighlight">\(f_2(x,y,z)=z^2\)</span> mit dem Gradienten</p>
 <div class="math notranslate nohighlight">
-\[\nabla f(x,y) = \left(\frac{-2x}{(1 + x^2 + y^2)^2}, \frac{-2y}{(1 + x^2 +
-y^2)^2} \right).\]</div>
-<p>Jetzt werden der Gradient bzw. die partiellen Ableitungen Null gesetzt und wir
-erhalten die beiden folgenden Gleichungen:</p>
-<div class="amsmath math notranslate nohighlight">
-\[\begin{align*}
-\frac{-2x}{(1 + x^2 + y^2)^2} &amp;= 0 \\
-\frac{-2y}{(1 + x^2 + y^2)^2} &amp;= 0 \\
-\end{align*}\]</div>
-<p>Wir multiplizieren bei jeder Gleichung mit dem Nenner <span class="math notranslate nohighlight">\((1 + x^2 + y^2)^2\)</span> und
-erhalten direkt die Nullstelle der 1. Gleichung <span class="math notranslate nohighlight">\(x = 0\)</span> und die Nullstelle der
-2. Gleichung <span class="math notranslate nohighlight">\(y = 0\)</span>. Damit kommt nur ein einziger Kandidat als Extremstelle
-infrage nämlich</p>
+\[\nabla f_2(x,y,z) = \left(0, 0, 2z\right).\]</div>
+<p>Schritt 3: Aus beiden Zeilen wird dann die Matrix zusammengesetzt, die Jacobi-Matrix
+lautet also</p>
 <div class="math notranslate nohighlight">
-\[(x_0, y_0) = (0,0).\]</div>
-<p>Nun wird die Hesse-Matrix berechnet. Dazu werden die 2. partiellen Ableitungen
-gebildet:</p>
-<div class="amsmath math notranslate nohighlight">
-\[\begin{align*}
-\frac{\partial^2 f(x,y)}{\partial x \partial x} &amp;= \frac{6x^2 - 2(y^2+1)}{(1 + x^2 + y^2)^3} \\
-\frac{\partial^2 f(x,y)}{\partial y \partial x} &amp;= \frac{8xy}{(1 + x^2 + y^2)^3} \\
-\frac{\partial^2 f(x,y)}{\partial x \partial y} &amp;= \frac{8xy}{(1 + x^2 + y^2)^3} \\
-\frac{\partial^2 f(x,y)}{\partial y \partial y} &amp;= -\frac{2(x^2 - 3y^2 +1)}{(x^2 + y^2 + 1)^3} \\
-\end{align*}\]</div>
-<p>Damit lautet die Hesse-Matrix:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}H_{f}(x,y) =
-\begin{pmatrix}
-\frac{6x^2 - 2(y^2+1)}{(1 + x^2 + y^2)^2} &amp; \frac{8xy}{(1 + x^2 + y^2)^3} \\
-\frac{8xy}{(1 + x^2 + y^2)^3} &amp; -\frac{2(x^2 - 3y^2 +1)}{(x^2 + y^2 + 1)^3} \\
+\[\begin{split}J(f)(x,y,z)=
+\begin{pmatrix} 
+2x &amp; 3x^2 &amp; \cos(z)\\ 
+0 &amp; 0 &amp; 2z
 \end{pmatrix}.
 \end{split}\]</div>
-<p>Nun werden alle Kandidaten nacheinander in die Hesse-Matrix eingesetzt. Da wir aber nur einen einzigen Kandidaten haben, setzen wir jetzt den Punkt <span class="math notranslate nohighlight">\((0,0)\)</span> ein und erhalten</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}H_{f}(0,0) = 
-\begin{pmatrix}
--2 &amp; 0 \\
-0 &amp; -2 \\
-\end{pmatrix}. 
-\end{split}\]</div>
-<p>Davon berechnen wir die Determinante und testen, ob sie positiv ist:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\det 
-\begin{pmatrix}
--2 &amp; 0 \\
-0 &amp; -2 \\
-\end{pmatrix} = (-2)\cdot (-2) - (0 \cdot 0) = + 4 &gt; 0.\end{split}\]</div>
-<p>Damit ist der Punkt <span class="math notranslate nohighlight">\((0,0)\)</span> eine Extremstelle. Jetzt bleibt nur noch die
-Überprüfung, ob ein Minimum oder ein Maximum vorliegt. Das Vorzeichen von</p>
-<div class="math notranslate nohighlight">
-\[\frac{\partial^2 f(x,y)}{\partial x \partial x}\]</div>
-<p>an der Stelle <span class="math notranslate nohighlight">\((0,0)\)</span> ist negativ, da</p>
-<div class="math notranslate nohighlight">
-\[\frac{\partial^2 f(0,0)}{\partial x \partial x} = -2.\]</div>
-<p>Damit hat die Funktion <span class="math notranslate nohighlight">\(f\)</span> an der Stelle <span class="math notranslate nohighlight">\((0,0)\)</span> ein Maximum (Hochpunkt).</p>
-<p>Das folgende Video zeigt ein weiteres Beispiel.</p>
+<p>Weitere Beispiele finden Sie in den folgenden Videos.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
-Video zu “Extremwerte mehrdimensionaler Funktionen” von Mathematrick<div class="sd-summary-down docutils">
+Video zu “Jacobi-Matrix Beispiel 1” von Mathematische Methoden<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/GwyPVdoQ37g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/LiFyUo6snK8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Video zu “Jacobi-Matrix aufstellen” von Mathematrick<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/kMizXsfSK2o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </div>
 </details></section>
 </section>
@@ -766,7 +567,7 @@ Video zu “Extremwerte mehrdimensionaler Funktionen” von Mathematrick<div cla
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">8.2 Totales Differential</p>
+        <p class="prev-next-title">8.2 Vektorwertige Funktionen</p>
       </div>
     </a>
     <a class="right-next"
@@ -774,7 +575,7 @@ Video zu “Extremwerte mehrdimensionaler Funktionen” von Mathematrick<div cla
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">8.4 Extremwertprobleme mit Nebenbedingung</p>
+        <p class="prev-next-title">8.4 Mehrdimensionale Kettenregel</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -797,10 +598,8 @@ Video zu “Extremwerte mehrdimensionaler Funktionen” von Mathematrick<div cla
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lernziele">Lernziele</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#extremwerte-bei-eindimensionalen-funktionen">Extremwerte bei eindimensionalen Funktionen</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#extremwerte-bei-mehrdimensionalen-funktionen">Extremwerte bei mehrdimensionalen Funktionen</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kochrezept-zur-bestimmung-der-extrema-mehrdimensionaler-funktionen">Kochrezept zur Bestimmung der Extrema mehrdimensionaler Funktionen</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ausfuhrliches-beispiel">Ausführliches Beispiel</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#jacobi-matrix-einer-vektorwertigen-funktion">Jacobi-Matrix einer vektorwertigen Funktion</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#beispiel-einer-jacobi-matrix">Beispiel einer Jacobi-Matrix</a></li>
 </ul>
   </nav></div>
 

@@ -1,207 +1,123 @@
 # Übungen
 
-```{admonition} Übung 7.1
+```{admonition} Übung 6.1
 :class: tip
-Berechnen Sie den Gradient $\nabla f$ der folgenden Funktionen:
-
-a) $f(x,y) = e^{-(x^2+y^2)}$
-
-b) $f(x,y,z) = \frac{1+x+y+z}{1+x^2+y^2+z^2}$ 
-
-c) $f(x_1,x_2) = x_1^4 -5x_2^2 - 10x_1x_2$
-
-d) $f(x_1,x_2,x_3) = 2x_1^2 -4x_1x_2 + x_2^3\cdot \sin(x_3)$  
+Berechnen Sie die ersten partiellen Ableitungen nach den Variablen.
+a) $f(x,y)=e^{x}\cdot e^{y}$ <br>
+b) $f(x,y)=e^{xy}$ <br>
+c) $f(x,y)=\sin(x)\cos(y)$ <br>
+d) $f(x_1,x_2,x_3) = \frac{1}{2x_1^2+\sqrt{x_2^2+x_3^2}}$ <br>
 ```
 ````{admonition} Lösung
 :class: tip, toggle
-a)
-\begin{align*} 
-f(x,y) &= e^{-(x^2+y^2)} \\
-\Rightarrow \quad \nabla f(x,y) &= \left(-2xe^{-x^2-y^2}, -2y e^{-x^2-y^2} \right)
-\end{align*}
+a) $f(x,y)=e^{x}\cdot e^{y}$
 
-b)
+$$\frac{\partial f}{\partial x}=e^x\cdot e^y \quad \text{ und } \quad \frac{\partial f}{\partial y}=e^x\cdot e^y$$
 
+b) $f(x,y)=e^{xy}$
+
+$$\frac{\partial f}{\partial x}=ye^{xy} \quad \text{ und } \quad \frac{\partial f}{\partial y}=xe^{xy}$$
+
+c) $f(x,y)=\sin(x)\cos(y)$
+
+$$\frac{\partial f}{\partial x}=\cos(x)\cos(y) \quad \text{ und } \quad \frac{\partial f}{\partial y}=\sin(x)\left(-\sin(y)\right)$$
+
+d) $f(x_1,x_2,x_3) = \frac{1}{2x_1^2+\sqrt{x_2^2+x_3^2}}$
 \begin{align*}
-f(x,y,z) &= \frac{1+x+y+z}{1+x^2+y^2+z^2}  \\
-\nabla f(x,y,z) &= \Big( \frac{-x^2-2x(y+z+1)+y^2+z^2+1}{(x^2+y^2+z^2+1)^2}, ...\\
-&\frac{1+x^2-y^2+z^2 - 2y(1+x+z)}{(1 + x^2+y^2+z^2)^2},  \frac{1+x^2+y^2-z^2 - 2z(1+x+y)}{(1 + x^2+y^2+z^2)^2}\Big)
+\frac{\partial f}{\partial x_1}&=-\frac{1}{(2x_1^2+\sqrt{x_2^2+x_3^2})^2}\cdot 4x_1 \\
+\frac{\partial f}{\partial x_2}&=-\frac{1}{(2x_1^2+\sqrt{x_2^2+x_3^2})^2}\cdot \frac{x_2}{\sqrt{x_2^2+x_3^2}}\\
+\frac{\partial f}{\partial x_3}&=-\frac{1}{(2x_1^2+\sqrt{x_2^2+x_3^2})^2}\cdot \frac{x_3}{\sqrt{x_2^2+x_3^2}}
 \end{align*}
-
-c)
-\begin{align*}
-f(x_1,x_2) &= x_1^4 -5x_2^2 - 10x_1x_2 \\
-\Rightarrow \quad \nabla f(x_1,x_2) &= \left( 4x_1^3-10x_2, -10(x_1+x_2) \right) 
-\end{align*}
-
-d)
-\begin{align*}
-f(x_1,x_2,x_3) &= 2x_1^2 -4x_1x_2 + x_2^3\cdot \sin(x_3) \\
-\Rightarrow \quad \nabla f(x_1,x_2,x_3) &= \left(4(x_1-x_2), 3x_2^2\sin(x_3)-4x_1, x_2^3\cos(x_3)\right)
-\end{align*}
-```{dropdown} Lösungsweg
-a) $f(x,y) = e^{-(x^2+y^2)}$ <br>
-Wir berechnen zunächst die partiellen Ableitungen:
-\begin{align*}
-\frac{\partial f}{\partial x} &= -2xe^{-x^2-y^2} \\
-\frac{\partial f}{\partial y} &= -2y e^{-x^2-y^2}  
-\end{align*}
-Damit ist der Gradient von f:
-
-$$\nabla f(x,y) = \left(-2xe^{-x^2-y^2}, -2y e^{-x^2-y^2} \right)$$
-
-b) $f(x,y,z) = \frac{1+x+y+z}{1+x^2+y^2+z^2}$ <br>
-Wir berechnen zunächst die partiellen Ableitungen: 
-\begin{align*}
-\frac{\partial f}{\partial x} &=  \frac{-x^2-2x(y+z+1)+y^2+z^2+1}{(x^2+y^2+z^2+1)^2}\\
-\frac{\partial f}{\partial y} &=  \frac{1+x^2-y^2+z^2 - 2y(1+x+z)}{(1 + x^2+y^2+z^2)^2} \\  
-\frac{\partial f}{\partial z} &=  \frac{1+x^2+y^2-z^2 - 2z(1+x+y)}{(1 + x^2+y^2+z^2)^2}\\  
-\end{align*}
-Damit ist der Gradient von f:
-\begin{multline*}\nabla f(x,y,z) = \Big( \frac{-x^2-2x(y+z+1)+y^2+z^2+1}{(x^2+y^2+z^2+1)^2}, ...\\
-\frac{1+x^2-y^2+z^2 - 2y(1+x+z)}{(1 + x^2+y^2+z^2)^2},  \frac{1+x^2+y^2-z^2 - 2z(1+x+y)}{(1 + x^2+y^2+z^2)^2}\Big)
-\end{multline*}
-c) $f(x_1,x_2) = x_1^4 -5x_2^2 - 10x_1x_2$ <br>
-Wir berechnen zunächst die partiellen Ableitungen:
-\begin{align*}
-\frac{\partial f}{\partial x_1} &= 4x_1^3-10x_2 \\
-\frac{\partial f}{\partial x_2} &= -10(x_1+x_2)  
-\end{align*}
-Damit ist der Gradient von f:
-
-$$\nabla f(x_1,x_2) = \left( 4x_1^3-10x_2, -10(x_1+x_2) \right)$$
-
-d) $f(x_1,x_2,x_3) = 2x_1^2 -4x_1x_2 + x_2^3\cdot \sin(x_3)$ <br>
-Wir berechnen zunächst die partiellen Ableitungen: 
-\begin{align*}
-\frac{\partial f}{\partial x} &= 4(x_1-x_2) \\
-\frac{\partial f}{\partial y} &= 3x_2^2\sin(x_3)-4x_1 \\  
-\frac{\partial f}{\partial z} &= x_2^3\cos(x_3) \\  
-\end{align*}
-Damit ist der Gradient von f:
-
-$$\nabla f(x_1,x_2,x_3) = \left(4(x_1-x_2), 3x_2^2\sin(x_3)-4x_1, x_2^3\cos(x_3)\right)$$
-```
 ````
 
-```{admonition} Übung 7.2
+```{admonition} Übung 6.2
 :class: tip
-Berechnen Sie die Jacobi-Matrix $J(f)$ zu folgenden Funktionen.
+Berechnen Sie die zweiten partiellen Ableitungen nach den Variablen. Verifizieren Sie, dass das Ergebnis unabhängig von der Reihenfolge der Differentiationsschritte ist.
 
-a) 
-
-$$f(x,y) = \begin{pmatrix} x^2 + y^2 \\ x^2 - y^2 \end{pmatrix}$$
-
-b)
-
-$$f(x,y) = \begin{pmatrix} 3x^3y^2 \\ \sin(x) \end{pmatrix}$$
+a) $f(x,y)=x^3+y^3 + x^2y^2+xy+1$ <br>
+b) $f(x,y,z)=\frac{1}{\sqrt{x^2+y^2+z^2}}$ 
 ```
 ````{admonition} Lösung
 :class: tip, toggle
-a)
+a) $f(x,y)=x^3+y^3 + x^2y^2+xy+1$ 
 
-$$J(f) = \begin{pmatrix} 2x & 2y \\ 2x & -2y \end{pmatrix}$$
-
-b)
-
-$$J(f) = \begin{pmatrix}9x^2y^2 & 6x^3y \\ \cos(x) & 0 \end{pmatrix}$$
-```{dropdown} Lösungsweg
-a)
-
-$$f(x,y) = \begin{pmatrix} x^2 + y^2 \\ x^2 - y^2 \end{pmatrix}$$
-
+1\. partielle Ableitungen:
 \begin{align*}
-\frac{\partial f_1}{\partial x} &= 2x\\
-\frac{\partial f_1}{\partial y} &= 2y\\
-\frac{\partial f_2}{\partial x} &= 2x\\
-\frac{\partial f_2}{\partial y} &= -2y 
+\frac{\partial f}{\partial x} &= 3x^2+2xy^2+y \\
+\frac{\partial f}{\partial y} &= 3y^2+2x^2y+x 
 \end{align*}
-Damit lautet die Jacobi-Matrix
-
-$$J(f) = \begin{pmatrix} 2x & 2y \\ 2x & -2y \end{pmatrix}$$
-
-b) 
-
-$$f(x,y) = \begin{pmatrix} 3x^3y^2 \\ \sin(x) \end{pmatrix}$$
-
+2\. partielle Ableitungen:
 \begin{align*}
-\frac{\partial f_1}{\partial x} &= 9x^2y^2\\
-\frac{\partial f_1}{\partial y} &= 6x^3y\\
-\frac{\partial f_2}{\partial x} &= \cos(x)\\
-\frac{\partial f_2}{\partial y} &= 0 
+\frac{\partial^2 f}{\partial x \partial x} &= 6x + 2y^2 \\
+\frac{\partial^2 f}{\partial x \partial y} &= \frac{\partial^2 f}{\partial y \partial x} = 4xy + 1 \\
+\frac{\partial^2 f}{\partial y \partial y} &= 6y + 2x^2 
 \end{align*}
 
-Damit lautet die Jacobi-Matrix
+b) $f(x,y,z)=\frac{1}{\sqrt{x^2+y^2+z^2}}$ 
 
-$$J(f) = \begin{pmatrix}9x^2y^2 & 6x^3y \\ \cos(x) & 0 \end{pmatrix}$$
-```
+1\. partielle Ableitungen:
+\begin{align*}
+\frac{\partial f}{\partial x} &= -\frac{x}{\left(\sqrt{x^2+y^2+z^2}\right)^3} \\
+\frac{\partial f}{\partial y} &= -\frac{y}{\left(\sqrt{x^2+y^2+z^2}\right)^3} \\
+\frac{\partial f}{\partial z} &= -\frac{z}{\left(\sqrt{x^2+y^2+z^2}\right)^3} \\
+\end{align*}
+
+2\. partielle Ableitungen:
+\begin{align*}
+\frac{\partial^2 f}{\partial x \partial x} &= -\frac{1}{\left(\sqrt{x^2+y^2+z^2}\right)^3}+3\frac{x^2}{\left(\sqrt{x^2+y^2+z^2}\right)^5}\\ 
+\frac{\partial^2 f}{\partial y \partial y} &= -\frac{1}{\left(\sqrt{x^2+y^2+z^2}\right)^3}+3\frac{y^2}{\left(\sqrt{x^2+y^2+z^2}\right)^5}\\ 
+\frac{\partial^2 f}{\partial z \partial z} &= -\frac{1}{\left(\sqrt{x^2+y^2+z^2}\right)^3}+3\frac{z^2}{\left(\sqrt{x^2+y^2+z^2}\right)^5}
+\end{align*}
+\begin{align*}
+\frac{\partial^2 f}{\partial y \partial x} &= \frac{\partial^2 f}{\partial x \partial y} = \frac{3xy}{\left(\sqrt{x^2+y^2+z^2}\right)^5}\\ 
+\frac{\partial^2 f}{\partial z \partial x} &= \frac{\partial^2 f}{\partial x \partial z} = \frac{3xz}{\left(\sqrt{x^2+y^2+z^2}\right)^5}\\ 
+\frac{\partial^2 f}{\partial z \partial y} &= \frac{\partial^2 f}{\partial y \partial z} = \frac{3yz}{\left(\sqrt{x^2+y^2+z^2}\right)^5}
+\end{align*}
 ````
 
-```{admonition} Übung 7.3
+```{admonition} Übung 6.3
 :class: tip
-Bestimmen Sie die Jacobi-Matrix der verketteten Funktion $h = f \circ g$ mit der mehrdimensionalen Kettenregel:
+Berechnen Sie die dritten partiellen Ableitungen. Nutzen Sie aus, dass das Ergebnis unabhängig von der Reihenfolge der Differentiationsschritte ist:
 
-a) $h:\mathbb{R}^2\mapsto\mathbb{R}$ mit $h(x_1,x_2) = f(g(x_1,x_2))$, wobei
-\begin{align*}
-f:\mathbb{R}^3\mapsto\mathbb{R},   \quad & f(x_1,x_2,x_3) = x_1^2 x_2^2 x_3^2,\\
-g:\mathbb{R}^2\mapsto\mathbb{R}^3, \quad & g(x_1,x_2) = \begin{pmatrix} x_1 \\ x_2 \\ x_1 x_2 \end{pmatrix} 
-\end{align*}
+$$f(x,y,z)=x^2y^2z^2+x^3+y^3+z^3.$$
 
-b) $h:\mathbb{R}^3\mapsto\mathbb{R}^3$ mit $h(x_1,x_2,x_3)=f(g(x_1,x_2,x_3))$, wobei
-\begin{align*}
-f:\mathbb{R}^3\mapsto\mathbb{R}^3, \quad & f(x_1,x_2,x_3) = \begin{pmatrix} -x_2 \\ -x_3 \\ -x_1 \end{pmatrix}\\
-g:\mathbb{R}^3\mapsto\mathbb{R}^3, \quad & g(x_1,x_2,x_3) = \begin{pmatrix} x_1 x_2 \\ x_2 x_3 \\ x_3 x_1 \end{pmatrix}
-\end{align*}
+Hinweis: wie viele partielle Ableitungen 3. Ordnung gibt es bei drei Variablen? Wie viele muss man explizit ausrechnen?
 ```
 ````{admonition} Lösung
 :class: tip, toggle
-a)
+Es gibt insgesamt 27 Ableitungen 3. Ordnung, aber es genügen 10 explizite Ableitungen: xxx, yxx, zxx, yyy, xyy, zyy, zzz, xzz, yzz, xyz.
 
-$$J(h)(x_1,x_2) = \left(2x_1^3 x_2^4 + 2x_1^3x_2^4, \; 2x_1^4 x_2^3 + 2x_1^4 x_2^3\right) = 
-\left(4x_1^3x_2^4, \; 4x_1^4x_2^3 \right)$$
-
-b)
-
-$$J(h)(x_1,x_2,x_3) = \begin{pmatrix} 0 & -x_3 & -x_2 \\ -x_3 & 0 & -x_1 \\ -x_2 & -x_1 & 0 \end{pmatrix}$$
-
-```{dropdown} Lösungsweg
-a) $h:\mathbb{R}^2\mapsto\mathbb{R}$ mit $h(x_1,x_2) = f(g(x_1,x_2))$, wobei
+1\. partielle Ableitungen:
 \begin{align*}
-f:\mathbb{R}^3\mapsto\mathbb{R},   \quad & f(x_1,x_2,x_3) = x_1^2 x_2^2 x_3^2,\\
-g:\mathbb{R}^2\mapsto\mathbb{R}^3, \quad & g(x_1,x_2) = \begin{pmatrix} x_1 \\ x_2 \\ x_1 x_2 \end{pmatrix} 
+\frac{\partial f}{\partial x} &= 2xy^2z^2 + 3x^2 \\
+\frac{\partial f}{\partial y} &= 2x^2yz^2 + 3y^2 \\
+\frac{\partial f}{\partial z} &= 2x^2y^2z + 3z^2 \\
 \end{align*}
-Wir berechnen zuerst die Jacobi-Matrix von $f$ und $g$:
 
-$$J(f) = \left(2x_1 x_2^2 x_3^2,\; 2x_1^2 x_2 x_3^2,\; 2x_1^2 x_2^2 x_3\right) 
-\quad \text{ und } \quad
-J(g) = \begin{pmatrix} 1 & 0 \\ 0 & 1 \\ x_2 & x_1\end{pmatrix}$$
-
-Mit der mehrdimensionalen Kettenregel erhalten wir
-\begin{multline*}
-J(h) = J(f) \cdot J(g) = \left(2x_1 x_2^2 x_3^2, \; 2x_1^2 x_2 x_3^2,\; 2x_1^2 x_2^2 x_3\right) \cdot 
-\begin{pmatrix} 1 & 0 \\ 0 & 1 \\ x_2 & x_1\end{pmatrix} = \\
-\left(2x_1 x_2^2 x_3^2 + 2x_1^2 x_2^3 x_3, \; 2x_1^2 x_2 x_3^2 + 2x_1^3 x_2^2 x_3 \right) 
-\end{multline*} 
-Als nächstes ersetzen wir noch $x_3$ durch $x_1 x_2$ (siehe Definition von $h$) und erhalten
-
-$$J(h)(x_1,x_2) = \left(2x_1^3 x_2^4 + 2x_1^3x_2^4, \; 2x_1^4 x_2^3 + 2x_1^4 x_2^3\right) = 
-\left(4x_1^3x_2^4, \; 4x_1^4x_2^3 \right).$$
-
-b) $h:\mathbb{R}^3\mapsto\mathbb{R}^3$ mit $h(x_1,x_2,x_3)=f(g(x_1,x_2,x_3))$, wobei
+Zwischenrechnung 2. partielle Ableitungen:
 \begin{align*}
-f:\mathbb{R}^3\mapsto\mathbb{R}^3, \quad & f(x_1,x_2,x_3) = \begin{pmatrix} -x_2 \\ -x_3 \\ -x_1 \end{pmatrix}\\
-g:\mathbb{R}^3\mapsto\mathbb{R}^3, \quad & g(x_1,x_2,x_3) = \begin{pmatrix} x_1 x_2 \\ x_2 x_3 \\ x_3 x_1 \end{pmatrix}
+\frac{\partial^2 f}{\partial x \partial x} &= 2y^2z^2 + 6x \\ 
+\frac{\partial^2 f}{\partial y \partial y} &= 2x^2z^2 + 6y \\ 
+\frac{\partial^2 f}{\partial z \partial z} &= 2x^2y^2 + 6z \\ 
 \end{align*}
-Wir berechnen zuerst die Jacobi-Matrix von $f$ und $g$:
 
-$$J(f) = \begin{pmatrix} 0 & -1 & 0 \\ 0 & 0 & -1 \\ -1 & 0 & 0 \end{pmatrix} 
-\quad \text{ und } \quad
-J(g) = \begin{pmatrix} x_2 & x_1 & 0 \\ 0 & x_3 & x_2 \\ x_3 & 0 & x_1 \end{pmatrix}$$
-
-Mit der mehrdimensionalen Kettenregel erhalten wir
-
-$$J(h)(x_1,x_2,x_3) = J(f)\cdot J(g) = 
-\begin{pmatrix} 0 & -1 & 0 \\ 0 & 0 & -1 \\ -1 & 0 & 0 \end{pmatrix} \cdot \begin{pmatrix} x_2 & x_1 & 0 \\ 0 & x_3 & x_2 \\ x_3 & 0 & x_1 \end{pmatrix} =
-\begin{pmatrix} 0 & -x_3 & -x_2 \\ -x_3 & 0 & -x_1 \\ -x_2 & -x_1 & 0 \end{pmatrix}$$
-```
+3\. partielle Ableitungen:
+\begin{align*}
+\frac{\partial^3f}{\partial x \partial x \partial x} &= 6 \\ 
+\frac{\partial^3f}{\partial y \partial x \partial x} &= 4yz^2 \\
+\frac{\partial^3f}{\partial z \partial x \partial x} &= 4y^2z 
+\end{align*}
+\begin{align*}
+\frac{\partial^3f}{\partial y \partial y \partial y} &= 6 \\  
+\frac{\partial^3f}{\partial x \partial y \partial y} &= 4xz^2 \\
+\frac{\partial^3f}{\partial z \partial y \partial y} &= 4x^2z 
+\end{align*}
+\begin{align*}  
+\frac{\partial^3f}{\partial z \partial z \partial z} &= 6 \\  
+\frac{\partial^3f}{\partial x \partial z \partial z} &= 4xy^2 \\   
+\frac{\partial^3f}{\partial y \partial z \partial z} &= 4x^2y 
+\end{align*}
+\begin{equation*}
+\frac{\partial^3f}{\partial x \partial y \partial x} = 8xyz             
+\end{equation*}
 ````

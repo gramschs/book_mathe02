@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>12.1 Lineare DGL 1. Ordnung &#8212; Mathematik 2 Maschinenbau</title>
+    <title>12.1 Grundbegriffe &#8212; Mathematik 2 Maschinenbau</title>
   
   
   
@@ -71,8 +71,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'chapter12/chapter12_sec01';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="12.2 Lösung homogene lineare DGL 1. Ordnung" href="chapter12_sec02.html" />
-    <link rel="prev" title="12. Lineare Differentialgleichungen" href="chapter12_sec00.html" />
+    <link rel="next" title="12.2 Anfangs- und Randwertproblem" href="chapter12_sec02.html" />
+    <link rel="prev" title="12. Einführung Differentialgleichungen" href="chapter12_sec00.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="None"/>
   </head>
@@ -157,111 +157,122 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Part 1. Integrale</span></p>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Differential- und Integralrechnung</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter01/chapter01_sec00.html">1. Wiederholung Integral</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter01/chapter01_sec01.html">1.1 Stammfunktion und bestimmtes Integral</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter01/chapter01_sec02.html">1.2 Eigenschaften von Integralen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter01/chapter01_sec03.html">1.3 Partielle Integration</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter01/chapter01_sec04.html">1.4 Integration durch Substitution</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter01/chapter01_sec00.html">1. Differentialrechnung</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter01/chapter01_sec01.html">1.1 Ableitungen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter01/chapter01_sec02.html">1.2 Rechenregeln Ableitungen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter01/chapter01_sec03.html">1.3 Extremwerte</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter01/chapter01_sec04.html">1.4 Extremwerte mit Nebenbedingung</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter01/chapter01_sec05.html">Übungen</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter02/chapter02_sec00.html">2. Anwendungen Integral</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter02/chapter02_sec01.html">2.1 Integrieren ist Mitteln</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter02/chapter02_sec02.html">2.2 Fläche zwischen zwei Graphen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter02/chapter02_sec03.html">2.3 Bogenlänge</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter02/chapter02_sec04.html">2.4 Volumen von Rotationskörpern</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter02/chapter02_sec00.html">2. Integrale</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter02/chapter02_sec01.html">2.1 Stammfunktion und bestimmtes Integral</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter02/chapter02_sec02.html">2.2 Eigenschaften von Integralen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter02/chapter02_sec03.html">2.3 Partielle Integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter02/chapter02_sec04.html">2.4 Integration durch Substitution</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter02/chapter02_sec05.html">Übungen</a></li>
 </ul>
 </li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Part 2. Funktionenreihen</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter03/chapter03_sec00.html">3. Reihen und Potenzreihen</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec01.html">3.1 Reihen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec02.html">3.2 Konvergenzkriterien für Reihen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec03.html">3.3 Potenzreihen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec04.html">3.4 Konvergenz von Potenzreihen</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter03/chapter03_sec00.html">3. Anwendungen Integral</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec01.html">3.1 Integrieren ist Mitteln</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec02.html">3.2 Fläche zwischen zwei Graphen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec03.html">3.3 Bogenlänge</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec04.html">3.4 Volumen von Rotationskörpern</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec05.html">Übungen</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter04/chapter04_sec00.html">4. Taylorreihen</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter04/chapter04_sec01.html">4.1 Berechnung Taylorreihe</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter04/chapter04_sec02.html">4.2 Restglied von Taylorreihen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter04/chapter04_sec03.html">4.3 Wichtige Potenzreihen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter04/chapter04_sec04.html">4.4 Rechnen mit Potenzreihen</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Funktionenreihen</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter04/chapter04_sec00.html">4. Reihen und Potenzreihen</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter04/chapter04_sec01.html">4.1 Reihen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter04/chapter04_sec02.html">4.2 Konvergenzkriterien für Reihen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter04/chapter04_sec03.html">4.3 Potenzreihen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter04/chapter04_sec04.html">4.4 Konvergenz von Potenzreihen</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter04/chapter04_sec05.html">Übungen</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter05/chapter05_sec00.html">5. Fourierreihen</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter05/chapter05_sec01.html">5.1 Periodische Funktionen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter05/chapter05_sec02.html">5.2 Fourierreihen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter05/chapter05_sec03.html">5.3 Beispiele für Fourierreihen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter05/chapter05_sec04.html">5.4 Rechenregeln Fourierreihen</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter05/chapter05_sec00.html">5. Taylorreihen</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter05/chapter05_sec01.html">5.1 Berechnung Taylorreihe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter05/chapter05_sec02.html">5.2 Restglied von Taylorreihen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter05/chapter05_sec03.html">5.3 Wichtige Potenzreihen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter05/chapter05_sec04.html">5.4 Rechnen mit Potenzreihen</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter05/chapter05_sec05.html">Übungen</a></li>
 </ul>
 </li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Part 3. Mehrdimensionale Analysis</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter06/chapter06_sec00.html">6. Funktionen von mehreren Variablen und partielle Ableitungen</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter06/chapter06_sec01.html">6.1 Definition und Visualisierung</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter06/chapter06_sec02.html">6.2 Stetigkeit</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter06/chapter06_sec03.html">6.3 Partielle Ableitungen und Gradient</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter06/chapter06_sec04.html">6.4 Höhere partielle Ableitungen und Hesse-Matrix</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter06/chapter06_sec00.html">6. Fourierreihen</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter06/chapter06_sec01.html">6.1 Periodische Funktionen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter06/chapter06_sec02.html">6.2 Fourierreihen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter06/chapter06_sec03.html">6.3 Beispiele für Fourierreihen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter06/chapter06_sec04.html">6.4 Rechenregeln Fourierreihen</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter06/chapter06_sec05.html">Übungen</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter07/chapter07_sec00.html">7. Richtungsableitungen und vektorwertige Funktionen</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter07/chapter07_sec01.html">7.1 Gradient und Richtungsableitung</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter07/chapter07_sec02.html">7.2 Vektorwertige Funktionen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter07/chapter07_sec03.html">7.3 Jacobi-Matrix</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter07/chapter07_sec04.html">7.4 Mehrdimensionale Kettenregel</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Höhere Differentialrechnung</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter07/chapter07_sec00.html">7. Funktionen von mehreren Variablen und partielle Ableitungen</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter07/chapter07_sec01.html">7.1 Definition und Visualisierung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter07/chapter07_sec02.html">7.2 Stetigkeit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter07/chapter07_sec03.html">7.3 Partielle Ableitungen und Gradient</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter07/chapter07_sec04.html">7.4 Höhere partielle Ableitungen und Hesse-Matrix</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter07/chapter07_sec05.html">Übungen</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter08/chapter08_sec00.html">8. Linearisierung und Extremwerte</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter08/chapter08_sec01.html">8.1 Tangentenfunktionen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter08/chapter08_sec02.html">8.2 Totales Differential</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter08/chapter08_sec03.html">8.3 Extremwerte</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter08/chapter08_sec04.html">8.4 Extremwertprobleme mit Nebenbedingung</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter08/chapter08_sec00.html">8. Richtungsableitungen und vektorwertige Funktionen</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter08/chapter08_sec01.html">8.1 Gradient und Richtungsableitung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter08/chapter08_sec02.html">8.2 Vektorwertige Funktionen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter08/chapter08_sec03.html">8.3 Jacobi-Matrix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter08/chapter08_sec04.html">8.4 Mehrdimensionale Kettenregel</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter08/chapter08_sec05.html">Übungen</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter09/chapter09_sec00.html">9. Doppelintegral</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter09/chapter09_sec01.html">9.1 Idee von Doppelintegralen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter09/chapter09_sec02.html">9.2 Berechnung von Doppelintegralen in kartesischen Koordinaten</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter09/chapter09_sec03.html">9.3 Anwendung: Flächenberechnung</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter09/chapter09_sec04.html">9.4 Anwendung: Schwerpunktberechnung</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter09/chapter09_sec00.html">9. Linearisierung und Extremwerte</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter09/chapter09_sec01.html">9.1 Tangentenfunktionen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter09/chapter09_sec02.html">9.2 Totales Differential</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter09/chapter09_sec03.html">9.3 Extremwerte</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter09/chapter09_sec04.html">9.4 Extremwertprobleme mit Nebenbedingung</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter09/chapter09_sec05.html">Übungen</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter10/chapter10_sec00.html">10. Doppelintegral in Polarkoordinaten und Dreifachintegral</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter10/chapter10_sec01.html">10.1 Polarkoordinaten</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter10/chapter10_sec02.html">10.2 Doppelintegral in Polarkoordinaten</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter10/chapter10_sec03.html">10.3 Dreifachintegral</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter10/chapter10_sec04.html">10.4 Anwendungen Dreifachintegral</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Höhere Integralrechnung</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter10/chapter10_sec00.html">10. Doppelintegral</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter10/chapter10_sec01.html">10.1 Idee von Doppelintegralen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter10/chapter10_sec02.html">10.2 Berechnung von Doppelintegralen in kartesischen Koordinaten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter10/chapter10_sec03.html">10.3 Anwendung: Flächenberechnung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter10/chapter10_sec04.html">10.4 Anwendung: Schwerpunktberechnung</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter10/chapter10_sec05.html">Übungen</a></li>
 </ul>
 </li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Part 4. Differentialgleichungen</span></p>
-<ul class="current nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter11/chapter11_sec00.html">11. Einführung Differentialgleichungen</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter11/chapter11_sec01.html">11.1 Grundbegriffe</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter11/chapter11_sec02.html">11.2 Anfangs- und Randwertproblem</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter11/chapter11_sec03.html">11.3 Separable Differentialgleichungen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter11/chapter11_sec04.html">11.4 Exakte Differentialgleichungen</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter11/chapter11_sec00.html">11. Doppelintegral in Polarkoordinaten und Dreifachintegral</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter11/chapter11_sec01.html">11.1 Polarkoordinaten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter11/chapter11_sec02.html">11.2 Doppelintegral in Polarkoordinaten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter11/chapter11_sec03.html">11.3 Dreifachintegral</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter11/chapter11_sec04.html">11.4 Anwendungen Dreifachintegral</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter11/chapter11_sec05.html">Übungen</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="chapter12_sec00.html">12. Lineare Differentialgleichungen</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-12"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">12.1 Lineare DGL 1. Ordnung</a></li>
-<li class="toctree-l2"><a class="reference internal" href="chapter12_sec02.html">12.2 Lösung homogene lineare DGL 1. Ordnung</a></li>
-<li class="toctree-l2"><a class="reference internal" href="chapter12_sec03.html">12.3 Lösung inhomogene lineare DGL 1. Ordnung</a></li>
-<li class="toctree-l2"><a class="reference internal" href="chapter12_sec04.html">12.4 Homogene Systeme aus zwei linearen DGL 1. Ordnung</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Differentialgleichungen</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="chapter12_sec00.html">12. Einführung Differentialgleichungen</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-12"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">12.1 Grundbegriffe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter12_sec02.html">12.2 Anfangs- und Randwertproblem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter12_sec03.html">12.3 Separable Differentialgleichungen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter12_sec04.html">12.4 Exakte Differentialgleichungen</a></li>
 <li class="toctree-l2"><a class="reference internal" href="chapter12_sec05.html">Übungen</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter13/chapter13_sec00.html">13. Lineare Differentialgleichungen</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-13"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter13/chapter13_sec01.html">13.1 Lineare DGL 1. Ordnung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter13/chapter13_sec02.html">13.2 Lösung homogene lineare DGL 1. Ordnung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter13/chapter13_sec03.html">13.3 Lösung inhomogene lineare DGL 1. Ordnung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter13/chapter13_sec04.html">13.4 Homogene Systeme aus zwei linearen DGL 1. Ordnung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter13/chapter13_sec05.html">Übungen</a></li>
 </ul>
 </li>
 </ul>
@@ -415,7 +426,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>12.1 Lineare DGL 1. Ordnung</h1>
+    <h1>12.1 Grundbegriffe</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -426,8 +437,11 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lernziele">Lernziele</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lineare-differentialgleichungen-1-ordnung">Lineare Differentialgleichungen 1. Ordnung</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#storfunktion-entscheidet-uber-homogen-und-inhomogen">Störfunktion entscheidet über homogen und inhomogen</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#eine-differentialgleichung-ist-auch-nur-eine-gleichung">Eine Differentialgleichung ist auch nur eine Gleichung</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#es-gibt-viele-schreibweisen-fur-dgl">Es gibt viele Schreibweisen für DGL</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#die-ordnung-entscheidet-uber-die-anzahl-der-integrationskonstanten">Die Ordnung entscheidet über die Anzahl der Integrationskonstanten</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gewohnlich-betrachten-wir-gewohnliche-dgl">Gewöhnlich betrachten wir gewöhnliche DGL</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zusammenfassung-und-ausblick">Zusammenfassung und Ausblick</a></li>
 </ul>
             </nav>
         </div>
@@ -439,90 +453,292 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="lineare-dgl-1-ordnung">
-<h1>12.1 Lineare DGL 1. Ordnung<a class="headerlink" href="#lineare-dgl-1-ordnung" title="Permalink to this headline">#</a></h1>
-<p>Differentialgleichungen 1. Ordnung haben wir bereits in den vorherigen Kapiteln
-kennengelernt. Ein spezieller Typ von Differentialgleichung, der in den
-Ingenieurwissenschaften sehr häufig verwendet wird, ist die <strong>lineare
-Differentialgleichung</strong>. Obwohl es auch lineare Differentialgleichungen höherer
-Ordnung gibt, beschränken wir uns in dieser Vorlesung auf lineare
-Differentialgleichungen 1. Ordnung. Unser erstes Ziel in diesem Kapitel ist es
-zu lernen, wie man erkennt, ob eine gegebene Differentialgleichung von diesem
-Typ ist.</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="grundbegriffe">
+<h1>12.1 Grundbegriffe<a class="headerlink" href="#grundbegriffe" title="Permalink to this headline">#</a></h1>
+<p>In diesem Abschnitt führen wir zunächst die grundlegenden Begriffe rund um das
+Thema Differentialgleichungen anhand eines einfachen Beispieles ein.</p>
 <section id="lernziele">
 <h2>Lernziele<a class="headerlink" href="#lernziele" title="Permalink to this headline">#</a></h2>
 <div class="important admonition">
 <p class="admonition-title">Lernziele</p>
 <ul class="simple">
-<li><p>Sie können bei einer gegebenen Differentialgleichung entscheiden, ob es sich
-um eine <strong>lineare Differentialgleichung</strong> handelt oder nicht.</p></li>
-<li><p>Sie wissen, was die <strong>Störfunktion</strong> einer linearen Differentialgleichung ist.</p></li>
-<li><p>Sie können bei einer gegebenen linearen Differentialgleichung entscheiden, ob
-diese eine <strong>homogene</strong> oder eine <strong>inhomogene</strong> Differentialgleichung ist.</p></li>
+<li><p>Sie wissen, was eine <strong>Differentialgleichung</strong> ist.</p></li>
+<li><p>Sie kennen verschiedene Schreibweisen zur Formulierung von Differentialgleichungen.</p></li>
+<li><p>Sie können die <strong>Ordnung einer Differentialgleichung</strong> ablesen.</p></li>
+<li><p>Sie können erklären, was eine <strong>gewöhnliche Differentialgleichung</strong> und was eine <strong>partielle Differentialgleichung</strong> ist.</p></li>
+<li><p>Sie können unterscheiden, ob eine Differentialgleichung in der <strong>expliziten Form</strong> oder der <strong>impliziten Form</strong> formuliert wurde.</p></li>
 </ul>
 </div>
 </section>
-<section id="lineare-differentialgleichungen-1-ordnung">
-<h2>Lineare Differentialgleichungen 1. Ordnung<a class="headerlink" href="#lineare-differentialgleichungen-1-ordnung" title="Permalink to this headline">#</a></h2>
-<p>Eine lineare Differentialgleichung ist eine Differentialgleichung, in der die
-Funktion und ihre Ableitungen ausschließlich linear auftreten. Das bedeutet, sie
-werden beispielsweise nicht quadriert, es gibt keine Produkterme und sie
-erscheinen nicht innerhalb von Funktionen wie Sinus oder Exponentialfunktion
-oder anderen nichtlinearen Funktionen.</p>
-<div class="note admonition">
-<p class="admonition-title">Was ist … eine lineare DGL 1. Ordnung?</p>
-<p>Formal können wir eine lineare Differentialgleichung 1. Ordnung in der Form</p>
+<section id="eine-differentialgleichung-ist-auch-nur-eine-gleichung">
+<h2>Eine Differentialgleichung ist auch nur eine Gleichung<a class="headerlink" href="#eine-differentialgleichung-ist-auch-nur-eine-gleichung" title="Permalink to this headline">#</a></h2>
+<p>Bisher haben wir Gleichungen kennengelernt, bei denen nach einer oder mehreren
+reellen Zahlen gesucht wurde. Die reellen Zahlen, die die Gleichung erfüllen,
+nennen wir Lösung der Gleichung. Damit ist gemeint, dass man die gefundene
+reelle Zahl, also die Lösung, in die Gleichung einsetzt und überprüft, ob linke
+und rechte Seite übereinstimmen.</p>
+<p>Beispielsweise wird die Gleichung</p>
 <div class="math notranslate nohighlight">
-\[a_1(x)y' + a_0(x)y = r(x)\]</div>
-<p>darstellen. Die rechte Seite <span class="math notranslate nohighlight">\(r(x)\)</span> wird <strong>Störfunktion</strong> genannt.</p>
+\[ x^2 - x - 6 = 0\]</div>
+<p>von zwei reellen Zahlen erfüllt, nämlich <span class="math notranslate nohighlight">\(x_1 = -2\)</span> und <span class="math notranslate nohighlight">\(x_2=3\)</span>. Wir können
+beide Zahlen in die Gleichung einsetzen und erhalten <span class="math notranslate nohighlight">\(x_1^2 -x_1 - 6 = 4 + 2 - 6
+= 0\)</span> und <span class="math notranslate nohighlight">\(x_2^2 - x_2 - 6 = 9 -3 - 6 = 0\)</span>. Damit sind beide Zahlen eine Lösung
+dieser Gleichung. Wie wir jedoch auf die Lösung der Gleichung kommen, durch
+Raten, ein systematisches Verfahren oder durch den Computer, ist ein eigenes
+mathematisches Thema. Auch ist nicht von vornherein klar, ob die Gleichung
+überhaupt lösbar ist und wie viele Lösungen es ggf. gibt.</p>
+<p>Gerade in den Ingenieurwissenschaften wird oft nicht eine Zahl gesucht, sondern
+eine Funktion! Und oft spielen Ableitungen dabei eine wichtige Rolle. Ein
+simples mathematisches Beispiel für eine Gleichung mit einer Funktion und einer
+Ableitung ist die folgende Gleichung:</p>
+<div class="math notranslate nohighlight">
+\[f''(x) = -f(x).\]</div>
+<p>Gesucht wird also eine Funktion, die zweimal abgeleitet die Funktion selbst
+wieder ergibt, nur mit umgekehrten Vorzeichen. Eine Funktion, die diese
+Gleichung löst, ist die Sinus-Funktion. Probieren wir es aus und bilden erst
+einmal die Ableitungen:</p>
+<div class="math notranslate nohighlight">
+\[f(x) = \sin(x) \quad \Rightarrow f'(x) = \cos(x) \quad \Rightarrow f''(x) =
+-\sin(x).\]</div>
+<p>Eingesetzt in die Gleichung erhalten wir also <span class="math notranslate nohighlight">\(-\sin(x) = -\sin(x)\)</span>. Damit
+erfüllt die Sinus-Funktion die Gleichung <span class="math notranslate nohighlight">\(f''(x) = -f(x).\)</span></p>
+<div class="tip admonition">
+<p class="admonition-title">Mini-Übung</p>
+<p>Welche der folgenden Funktionen ist erfüllt die Gleichung</p>
+<div class="math notranslate nohighlight">
+\[f''(x) = - f(x)?\]</div>
+<p>a) <span class="math notranslate nohighlight">\(f(x) = \cos(x)\)</span> <br>
+b) <span class="math notranslate nohighlight">\(f(x) = e^x\)</span> <br>
+c) <span class="math notranslate nohighlight">\(f(x) = \sin(x) + 3\cos(x)\)</span> <br></p>
 </div>
-<p><strong>Beispiel 1:</strong> Die Differentialgleichung</p>
-<div class="math notranslate nohighlight">
-\[3x \cdot y' - \sin(x)\cdot y = x^2\]</div>
-<p>ist eine lineare Differentialgleichung 1. Ordnung. Zwar treten in dieser
-Differentialgleichung nichtlineare Terme auf (<span class="math notranslate nohighlight">\(\sin(x)\)</span> und <span class="math notranslate nohighlight">\(x^2\)</span>), doch
-beziehen sich diese ausschließlich auf die Variable <span class="math notranslate nohighlight">\(x\)</span> und nicht auf die
-gesuchte Funktion <span class="math notranslate nohighlight">\(y\)</span> oder ihre Ableitung <span class="math notranslate nohighlight">\(y'\)</span>.</p>
-<p><strong>Beispiel 2:</strong> Die Differentialgleichung</p>
-<div class="math notranslate nohighlight">
-\[3x \cdot y' - x\cdot \sin(y) = x^2\]</div>
-<p>ist hingegen keine lineare Differentialgleichung, sondern eine nichtlineare
-Differentialgleichung 1. Ordnung, da die gesuchte Funktion <span class="math notranslate nohighlight">\(y\)</span> innerhalb der
-nichtlinearen Sinus-Funktion <span class="math notranslate nohighlight">\(\sin(y)\)</span> auftritt.</p>
-</section>
-<section id="storfunktion-entscheidet-uber-homogen-und-inhomogen">
-<h2>Störfunktion entscheidet über homogen und inhomogen<a class="headerlink" href="#storfunktion-entscheidet-uber-homogen-und-inhomogen" title="Permalink to this headline">#</a></h2>
-<p>Bei linearen Differentialgleichungen lassen sich Lösungsmethoden anwenden, die
-auf der Theorie von linearen Gleichungssystemen beruhen. Bei der Lösung von
-solchen Gleichungssystemen ist es entscheidend zu unterscheiden, ob das
-Gleichungssystem homogen oder inhomogen ist. Daher adaptieren wir diese beiden
-Begriffe auch für lineare Differentialgleichungen.</p>
-<div class="note admonition">
-<p class="admonition-title">Was ist … eine homogene lineare DGL?</p>
-<p>Eine lineare Differentialgleichung wird <strong>homogen</strong> genannt, wenn die
-Störfunktion gleich der Nullfunktion ist. Ansonsten wird sie <strong>inhomogen</strong>
-genannt.</p>
+<div class="tip toggle admonition">
+<p class="admonition-title">Lösung</p>
+<p>a) ableiten: <span class="math notranslate nohighlight">\(f(x)=\cos(x) \quad \Rightarrow f'(x)=-\sin(x) \quad \Rightarrow f''(x)=-\cos(x)\)</span> <br>
+eingesetzt: <span class="math notranslate nohighlight">\(-\cos(x) = -\cos(x)\)</span> erfüllt die Gleichung</p>
+<p>b) ableiten: <span class="math notranslate nohighlight">\(f(x)=e^x \quad \Rightarrow f'(x)=e^x \quad \Rightarrow f''(x)=e^x\)</span> <br>
+eingesetzt: <span class="math notranslate nohighlight">\(e^x \neq -e^x\)</span> erfüllt die Gleichung nicht</p>
+<p>c) ableiten:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+f(x) &amp;=\sin(x)+3\cos(x) \\
+\Rightarrow \quad f''(x)&amp;=\cos(x)-3\sin(x) \\
+\Rightarrow \quad f''(x)&amp;=-\sin(x)-3\cos(x)
+\end{align*}\]</div>
+<p>eingesetzt: <span class="math notranslate nohighlight">\(-\sin(x)-3\cos(x) = -\left(\sin(x)+3\cos(x)\right)\)</span> erfüllt die Gleichung</p>
 </div>
-<p><strong>Beispiel 1:</strong> Die Differentialgleichung</p>
-<div class="math notranslate nohighlight">
-\[3x \cdot y' - \sin(x)\cdot y = 0\]</div>
-<p>ist eine homogene lineare Differentialgleichung 1. Ordnung. Die rechte Seite,
-also die Störfunktion, ist überall Null.</p>
-<p><strong>Beispiel 2:</strong> Die Differentialgleichung</p>
-<div class="math notranslate nohighlight">
-\[3x \cdot y' - \sin(x)\cdot y = x^2\]</div>
-<p>ist hingegen eine inhomogene lineare Differentialgleichung 1. Ordnung. Die
-rechte Seite, also die Störfunktion <span class="math notranslate nohighlight">\(r(x)=x^2\)</span>, ist nicht die Nullfunktion.</p>
+<p>Wir übernehmen die Begriffe für Gleichungen reeller Zahlen nun für diese neue
+Art von Gleichungen, die sogenannten Differentialgleichungen.</p>
+<div class="admonition-was-ist-eine-differentialgleichung admonition">
+<p class="admonition-title">Was ist … eine Differentialgleichung?</p>
+<p>Eine Gleichung, bei der eine Funktion gesucht wird und ihre Ableitungen in der Gleichung ebenfalls vorkommen, nennen wir <strong>Differentialgleichung</strong>. Oft kürzen wir das Wort Differentialgleichung mit DGL ab.</p>
+</div>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
-Video zu “Differentialgleichungen, linear/nicht linear, homogen/inhomogen” von Daniel Jung<div class="sd-summary-down docutils">
+Video zu “Gewöhnliche Differentialgleichung”<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/dlAVRF4jWHA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe src="https://frankfurt-university.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=2df731d3-5569-405e-b6ed-b0180090a481&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=false&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
 </div>
 </details></section>
+<section id="es-gibt-viele-schreibweisen-fur-dgl">
+<span id="sec-11-01-b"></span><h2>Es gibt viele Schreibweisen für DGL<a class="headerlink" href="#es-gibt-viele-schreibweisen-fur-dgl" title="Permalink to this headline">#</a></h2>
+<p>So wie Gleichungen für Zahlen mit unterschiedlichen Variablen formuliert werden,
+werden auch bei Differentialgleichungen unterschiedliche Schreibweisen benutzt.
+Meistens werden die Bezeichnungen aus dem Anwendungskontext übernommen.</p>
+<p>Zunächst einmal können die Bezeichnungen für die Variablen der gesuchten
+Funktion variieren. In dem obigen Beispiel</p>
+<div class="math notranslate nohighlight">
+\[f''(x)=-f(x)\]</div>
+<p>wurde als Variablenname <span class="math notranslate nohighlight">\(x\)</span> benutzt. Die Variablen der gesuchten Funktion werden
+als <strong>unabhängige Variablen</strong> bezeichnet. Die gesuchte Funktion wird auch als
+<strong>abhängige Variable</strong> bezeichnet, obwohl es sich um eine Funktion handelt.
+Sollte es sich jedoch um eine Funktion in Abhängigkeit einer zeitlichen Größe
+handeln, würde die DGL wohl eher als</p>
+<div class="math notranslate nohighlight">
+\[f''(t)=-f(t)\]</div>
+<p>formuliert werden. Bei zeitlichen Ableitungen wird in den
+Ingenieurwissenschaften auch eher ein Punkt über den Funktionsnamen gesetzt, um
+anzudeuten, dass eine zeitliche Größe betrachtet wird, also</p>
+<div class="math notranslate nohighlight">
+\[\ddot{f}(t)=-f(t).\]</div>
+<p>Auch würde wohl auch eher die gesuchte Funktion mit <span class="math notranslate nohighlight">\(x\)</span> bezeichnet werden, also</p>
+<div class="math notranslate nohighlight">
+\[\ddot{x}(t)=-x(t).\]</div>
+<p>Oft finden wir auch die Schreibweise mit dem Differentialoperator und der
+Bezeichnung <span class="math notranslate nohighlight">\(y\)</span> für die gesuchte Funktion, also</p>
+<div class="math notranslate nohighlight">
+\[\frac{d^2y}{dt^2}=-y(t).\]</div>
+<p>Und da die unabhängige Variable nicht so wichtig ist, weil es bei
+Differentialgleichungen um die unbekannte Funktion geht, wird sie manchmal
+weggelassen, also</p>
+<div class="math notranslate nohighlight">
+\[y''=-y.\]</div>
+<p>Alle Schreibweisen – so unterschiedlich sie auch wirken mögen – drücken dieselbe
+Frage aus: welche Funktion muss zweimal abgeleitet werden, damit sie das
+Negative von sich selbst ist?</p>
+</section>
+<section id="die-ordnung-entscheidet-uber-die-anzahl-der-integrationskonstanten">
+<span id="sec-11-01-a"></span><h2>Die Ordnung entscheidet über die Anzahl der Integrationskonstanten<a class="headerlink" href="#die-ordnung-entscheidet-uber-die-anzahl-der-integrationskonstanten" title="Permalink to this headline">#</a></h2>
+<p>Als wir verschiedene Funktionen daraufhin überprüft haben, ob sie die
+Differentialgleichung</p>
+<div class="math notranslate nohighlight">
+\[y''(x) = - y(x)\]</div>
+<p>erfüllen, haben wir schon festgestellt, dass es mehrere Funktionen geben kann,
+die passen. Wir schauen uns nun ein etwas einfacheres Beispiel an:</p>
+<div class="math notranslate nohighlight">
+\[y''(x) = -\sin(x).\]</div>
+<p>Auf der rechten Seite kommt die gesuchte Funktion <span class="math notranslate nohighlight">\(y(x)\)</span> nicht mehr vor, sondern
+sie steht nur noch als 2. Ableitung auf der linken Seite der Gleichung. Ein
+einfacher Ansatz, um die DGL zu lösen ist, auf beiden Seiten unbestimmt zu
+integrieren. Wir erhalten</p>
+<div class="math notranslate nohighlight">
+\[\int y''(x)\, dx = \int -\sin(x)\, dx \quad \Rightarrow \quad y'(x) = \cos(x)
++ C_1.\]</div>
+<p>Die Integrationskonstante, die eigentlich auch auf der linken Seite entstanden
+wäre, haben wir dabei schon auf die rechte Seite gebracht. Nun haben wir eine
+DGL mit der 1. Ableitung der gesuchten Funktion. Wir integrieren einfach noch
+einmal unbestimmt auf beiden Seiten und bekommen</p>
+<div class="math notranslate nohighlight">
+\[\int y'(x)\, dx = \int \cos(x) + C_1 \, dx \quad \Rightarrow \quad y(x) =
+\sin(x) + C_1 x + C_2.\]</div>
+<p>Die gefundene Funktion <span class="math notranslate nohighlight">\(y(x)=\sin(x)+C_1 x + C_2\)</span> ist nicht nur <em>eine</em> Funktion,
+sondern eine ganze Schar von Funktionen. Es können zwei verschiedene Parameter
+<span class="math notranslate nohighlight">\(C_1\)</span> und <span class="math notranslate nohighlight">\(C_2\)</span> gewählt werden. Mathematisch gesehen gibt es bei der Wahl der
+Parameter keine Einschränkungen; wir könnten jede reelle Zahl wählen. Daher gibt
+es unendlich viele Lösungen der Differentialgleichung.</p>
+<div class="tip admonition">
+<p class="admonition-title">Mini-Übung</p>
+<p>Überprüfen Sie, ob die folgenden drei Variationen von <span class="math notranslate nohighlight">\(C_1\)</span> und <span class="math notranslate nohighlight">\(C_2\)</span> tatsächlich die DGL</p>
+<div class="math notranslate nohighlight">
+\[y''(x)=-\sin(x)\]</div>
+<p>erfüllen.</p>
+<p>a) <span class="math notranslate nohighlight">\(C_1 = 1\)</span> und <span class="math notranslate nohighlight">\(C_2 = 0\)</span>, also <span class="math notranslate nohighlight">\(y_1(x) = \sin(x) + x\)</span> <br>
+b) <span class="math notranslate nohighlight">\(C_1 = 0\)</span> und <span class="math notranslate nohighlight">\(C_2 = 1\)</span>, also <span class="math notranslate nohighlight">\(y_2(x) = \sin(x) + 1\)</span> <br>
+c) <span class="math notranslate nohighlight">\(C_1 = -2\)</span> und <span class="math notranslate nohighlight">\(C_2 = 3\)</span>, also <span class="math notranslate nohighlight">\(y_3(x) = \sin(x) -2x + 3\)</span><br></p>
+</div>
+<div class="tip toggle admonition">
+<p class="admonition-title">Lösung</p>
+<p>Um zu überprüfen, ob die gegebenen Variationen die DGL <span class="math notranslate nohighlight">\(y''(x) = -\sin(x)\)</span>
+erfüllen, müssen wir die zweite Ableitung jeder Funktion berechnen und
+überprüfen, ob sie gleich <span class="math notranslate nohighlight">\(-\sin(x)\)</span> ist.</p>
+<p>a) <span class="math notranslate nohighlight">\(y_1(x) = \sin(x) + x\)</span></p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+\Rightarrow \quad y_1'(x)  &amp;= \cos(x) + 1 \\
+\Rightarrow \quad y_1''(x) &amp;= -\sin(x) 
+\end{align*}\]</div>
+<p>Da <span class="math notranslate nohighlight">\(y_1''(x) = -\sin(x)\)</span> gilt, erfüllt <span class="math notranslate nohighlight">\(y_1\)</span> die DGL.</p>
+<p>b) <span class="math notranslate nohighlight">\(y_2(x) = \sin(x) + 1\)</span></p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+\Rightarrow \quad y_2'(x) &amp;= \cos(x) \\
+\Rightarrow \quad y_2''(x) &amp;= -\sin(x) 
+\end{align*}\]</div>
+<p>Da <span class="math notranslate nohighlight">\(y_2''(x) = -\sin(x)\)</span> gilt, erfüllt <span class="math notranslate nohighlight">\(y_2\)</span> ebenfalls die DGL.</p>
+<p>c) <span class="math notranslate nohighlight">\(y_3(x) = \sin(x) - 2x + 3\)</span></p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+\Rightarrow \quad y_3'(x)  &amp;= \cos(x) - 2 \\
+\Rightarrow \quad y_3''(x) &amp;= -\sin(x) 
+\end{align*}\]</div>
+<p>Da <span class="math notranslate nohighlight">\(y_3''(x) = -\sin(x)\)</span> gilt, erfüllt auch <span class="math notranslate nohighlight">\(y_3\)</span> die DGL.</p>
+<p>Alle drei Funktionen erfüllen die Differentialgleichung <span class="math notranslate nohighlight">\(y''(x) = -\sin(x)\)</span> und
+sind daher Lösungen der Differentialgleichung.</p>
+</div>
+<p>Durch dieses Beispiel haben wir zwei Sachen kennengelernt, die typisch für
+Differentialgleichungen sind:</p>
+<ul class="simple">
+<li><p>Um die gesuchte Funktion einer Differentialgleichung zu finden, müssen wir
+integrieren.</p></li>
+<li><p>Je höher die Ableitung der gesuchten Funktion ist, desto öfter müssen wir
+integrieren. Und je öfter wir integrieren müssen, desto mehr
+Integrationskonstanten entstehen.</p></li>
+</ul>
+<p>Der Grad der höchsten Ableitung der gesuchten Funktion ist so wichtig, dass
+Differentialgleichungen danach eingeteilt werden. Wir halten daher folgende
+Definition fest.</p>
+<div class="admonition-was-ist-die-ordnung-einer-differentialgleichung admonition">
+<p class="admonition-title">Was ist … die Ordnung einer Differentialgleichung?</p>
+<p>Die höchste vorkommene Ableitung der gesuchten Funktion nennen wir <strong>Ordnung</strong> der Differentialgleichung.</p>
+</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Video zu “Ordnung einer gewöhnlichen Differentialgleichung”<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<iframe src="https://frankfurt-university.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=e9c4b3da-35c2-4320-babb-b0180090ad24&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=false&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
+</div>
+</details></section>
+<section id="gewohnlich-betrachten-wir-gewohnliche-dgl">
+<h2>Gewöhnlich betrachten wir gewöhnliche DGL<a class="headerlink" href="#gewohnlich-betrachten-wir-gewohnliche-dgl" title="Permalink to this headline">#</a></h2>
+<p>Im Zusammenhang mit Differentialgleichungen werden häufig die beiden Adjektive
+gewöhnlich und partiell verwendet. Eines vorneweg, in diesem und in den nächsten
+Kapiteln werden wir nur gewöhnliche Differentialgleichungen betrachten.</p>
+<p>Die gesuchte Funktion der Differentialgleichung kann von einer unabhängigen
+Variable abhängen, also eindimensional sein, aber auch von mehreren unabhängigen
+Variablen abhängen, also mehrdimensional sein. Dementsprechend können normale
+Ableitungen in der Differentialgleichung auftreten, wie wir es in den oben
+stehenden Beispielen gesehen haben, oder partielle Ableitungen.</p>
+<p>Eine Differentialgleichung, bei der nur Ableitungen nach einer Variable
+vorkommen, heißt <strong>gewöhnliche Differentialgleichung</strong>. Kommen in der
+Differentialgleichungen Ableitungen nach mehreren unabhängigen Variablen vor, so
+nennen wir diese Gleichung <strong>partielle Differentialgleichung</strong>. Hier sehen Sie
+ein Beispiel für eine partielle DGL, in der Ableitungen nach dem Ort <span class="math notranslate nohighlight">\(x\)</span> und der
+Zeit <span class="math notranslate nohighlight">\(t\)</span> vorkommen:</p>
+<div class="math notranslate nohighlight">
+\[\frac{\partial u(x,t)}{\partial t} - a^2 \frac{\partial^2 u(x,t)}{\partial
+x^2} = 0.\]</div>
+<div class="admonition-was-ist-eine-gewohnliche-differentialgleichung admonition">
+<p class="admonition-title">Was ist … eine gewöhnliche Differentialgleichung?</p>
+<p>Eine Differentialgleichung, bei der die gesuchte Funktion nur von einer
+unabhängigen Variable abhängt, wird als <strong>gewöhnliche Differentialgleichung</strong>
+bezeichnet. Kommen in der Differentialgleichungen Ableitungen nach mehreren
+unabhängigen Variablen vor, so nennen wir diese Gleichung <strong>partielle
+Differentialgleichung</strong>.</p>
+</div>
+<p>Die Beispiele, die wir bisher betrachtet haben, waren so formuliert, dass die
+höchste Ableitung auf der linken Seite stand und alle anderen Terme auf der
+rechten Seite der Gleichung. Das muss aber nicht so sein. Eine
+Differentialgleichung, die nach der höchsten Ableitung aufgelöst ist, nennen wir
+<strong>explizite Differentialgleichung</strong>. Ein Beispiel für eine explizite DGL ist</p>
+<div class="math notranslate nohighlight">
+\[y'' = -3y' + 2y.\]</div>
+<p>Ist hingegen die DGL <em>nicht</em> nach der höchsten Ableitung aufgelöst, so
+bezeichnen wir diese als <strong>implizite Differentialgleichung</strong>. Wir können das
+Beispiel umformen zu</p>
+<div class="math notranslate nohighlight">
+\[y'' + 3y' -  2y = 0.\]</div>
+<p>Es war einfach, die explizite Differentialgleichung in eine implizite
+Differentialgleichung umzuformen. Leider lässt sich nicht jede implizite
+Differentialgleichung in eine explizite DGL umformen.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Video zu “Explizite und implizite Differentialgleichungen”<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<iframe src="https://frankfurt-university.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=f685aee3-bac5-4459-839e-b01800ec5f8a&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=false&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
+</div>
+</details></section>
+<section id="zusammenfassung-und-ausblick">
+<h2>Zusammenfassung und Ausblick<a class="headerlink" href="#zusammenfassung-und-ausblick" title="Permalink to this headline">#</a></h2>
+<p>In diesem Kapitel haben wir die grundlegenden Konzepte von
+Differentialgleichungen behandelt. Da es sich um eine Einführung zum Thema
+handelt, haben wir uns zunächst damit beschäftigt, was eine
+Differentialgleichung ist und welche Schreibweisen es für
+Differentialgleichungen gibt. Obwohl in dieser Vorlesung nur gewöhnliche
+Differentialgleichungen thematisiert werden, sind wir auf den Unterschied
+zwischen gewöhnlichen und partiellen Differentialgleichungen eingegangen.
+Zusätzlich haben wir uns mit der Ordnung einer Differentialgleichung beschäftigt
+und wie sie die Anzahl der Integrationskonstanten beeinflusst. Im nächsten
+Kapitel wird es darum gehen, wie aus unendlich vielen Lösungen einer
+Differentialgleichung eine spezielle Lösung herausgesucht wird.</p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -562,7 +778,7 @@ Video zu “Differentialgleichungen, linear/nicht linear, homogen/inhomogen” v
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">12. Lineare Differentialgleichungen</p>
+        <p class="prev-next-title">12. Einführung Differentialgleichungen</p>
       </div>
     </a>
     <a class="right-next"
@@ -570,7 +786,7 @@ Video zu “Differentialgleichungen, linear/nicht linear, homogen/inhomogen” v
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">12.2 Lösung homogene lineare DGL 1. Ordnung</p>
+        <p class="prev-next-title">12.2 Anfangs- und Randwertproblem</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -593,8 +809,11 @@ Video zu “Differentialgleichungen, linear/nicht linear, homogen/inhomogen” v
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lernziele">Lernziele</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lineare-differentialgleichungen-1-ordnung">Lineare Differentialgleichungen 1. Ordnung</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#storfunktion-entscheidet-uber-homogen-und-inhomogen">Störfunktion entscheidet über homogen und inhomogen</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#eine-differentialgleichung-ist-auch-nur-eine-gleichung">Eine Differentialgleichung ist auch nur eine Gleichung</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#es-gibt-viele-schreibweisen-fur-dgl">Es gibt viele Schreibweisen für DGL</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#die-ordnung-entscheidet-uber-die-anzahl-der-integrationskonstanten">Die Ordnung entscheidet über die Anzahl der Integrationskonstanten</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gewohnlich-betrachten-wir-gewohnliche-dgl">Gewöhnlich betrachten wir gewöhnliche DGL</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zusammenfassung-und-ausblick">Zusammenfassung und Ausblick</a></li>
 </ul>
   </nav></div>
 

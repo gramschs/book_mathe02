@@ -1,119 +1,91 @@
-# 2.3 Bogenlänge
+# 2.3 Partielle Integration
 
-Nachdem wir bisher das Integral dazu genutzt haben, Flächen zu berechnen, wird
-das Integral in diesem Abschnitt dazu genutzt, Längen zu berechnen.
+Wird ein Produkt abgeleitet, ist es etwas komplizierter. Es darf nicht einfach
+jeder Faktor für sich abgeleitet werden, sondern es gilt die Produktregel:
+
+$$\left( u(x)\cdot v(x)\right)^{\prime} = u^{\prime}(x)\cdot v(x) +
+u(x)\cdot v^{\prime}(x).$$
+
+Da Integration die Umkehrung der Ableitung ist, dürfen Produkte auch nicht
+einfach so integriert werden. Dafür gibt es die Produktregel für Integrale, die
+offiziell **partielle Integration** heißt.
 
 ## Lernziele
 
 ```{admonition} Lernziele
 :class: important
-* Sie wissen, was die **Bogenlänge** eines Funktionsgraphens ist.
-* Sie können die Bogenlänge eines Funktionsgraphens $f(x)$ einer stetig
-  differenzierbaren Funktion $f$ zwischen dem Startpunkt $(a,f(a))$ und dem
-  Endpunkt $(b,f(b))$ mit der folgenden Formel berechnen:
+Sie können ein Produkt von zwei Funktionen $u\cdot v$ mit der partiellen
+Integrationsregel im Intervall $[a,b]$ integrieren: 
 
-$$\text{Bogenlänge} = \int_{a}^{b} \sqrt{1+(f'(x))^2}\, dx.$$
+$$\int_{a}^{b} u(x) \cdot
+v'(x) \, dx = \big[u(x)\cdot v(x)\big]_{a}^{b} 
+- \int_{a}^{b} u'(x) \cdot v(x) \, dx.$$
 ```
 
-## Länge eines Funktionsgraphens
+## Integrieren von Produkten
 
-```{admonition} Was ist ... die Bogenlänge?
-:class: note
-Die Bogenlänge eines Funktionsgraphens ist die Strecke, die man zwischen Start
-und Ziel zurücklegt. Start und Ziel sind dabei zwei Punkte, die beide auf dem
-Funktionsgraphen liegen.
-```
+Die partielle Integration kann durch folgende Formel ausgedrückt werden:
 
-## Wie wird die Bogenlänge berechnet?
+$$\int_{a}^{b} u(x) \cdot v'(x) \, dx = \big[u(x)\cdot v(x)\big]_{a}^{b} 
+- \int_{a}^{b} u'(x) \cdot v(x) \, dx.$$
 
-Solange wir nicht mit einem Kilometerzähler einen Funktionsgraphen abfahren,
-brauchen wir ein anderes Hilfsmittel, um die Streckenlänge zu berechnen. Für
-Funktionen, die stetig differenzierbar sind, gibt es eine passende Formel.
-Stetig differenzierbare Funktion heißt, dass die Funktion eine 1. Ableitung
-haben muss und diese Ableitung soll wiederum stetig sein. Die üblichen
-Funktionen in den Ingenieurwissenschaften erfüllen diese Bedingung, so dass Sie
-sich im Normalfall keine Gedanken um diese Bedingung machen müssen.
+Hierbei sind $u(x)$ und $v(x)$ zwei Funktionen, deren Produkt integriert werden
+soll, und $u'(x)$ und $v'(x)$ sind die Ableitungen von $u(x)$ und $v(x)$.
 
-```{admonition} Kochrezept zur Berechnung der Bogenlänge
-:class: note
-Wenn die Bogenlänge des Funktionsgraphens $f(x)$ vom Startpunkt $(a,f(a))$ bis zum Endpunkt $(b,f(b))$ berechnet werden soll und die Funktion $f$ stetig differenzierbar ist, gehen Sie folgenermaßen vor:
+## Beispiel für partielle Integration
 
-1. Berechnen Sie die 1. Ableitung $f'$.
-2. Quadrieren Sie die 1. Ableitung und versuchen Sie, den Term $\sqrt{1+\left(f'(x)\right)^2}$ so weit wie möglich zu vereinfachen.
-3. Berechnen Sie dann das folgende Integral (oft müssen Sie dabei die Substitutionsregel benutzen):
+Ein Beispiel für die Anwendung der partiellen Integration ist die Berechnung des
+Integrals 
 
-$$\text{Bogenlänge} = \int_{a}^{b} \sqrt{1+(f'(x))^2}\, dx.$$
-```
+$$\int_{0}^{\pi} \sin(x)\cdot 2x \, dx.$$
 
-## Beispiel zur Berechnung der Bogenlänge
+Als erstes müssen wir auswählen, welche Funktion $u$ sein soll und was $v$. Wir wählen
 
-Als nächstes betrachten wir die Funktion $f(x)=x^{\frac{3}{2}}+1$ für positive
-reelle Zahlen $x\geq 0$. Wir wählen als
+$$u(x)=2x \quad \text{ und } \quad v'(x)=\sin(x).$$
 
-* Start $a=1 \Rightarrow f(1)=1^{\frac{3}{2}}+1 =2$ und als
-* Ziel $b=4 \Rightarrow f(4)=4^{\frac{3}{2}}+1 = 8+1 = 9$,
+Dann werden in einer Nebenrechnung die Ableitung $u^{\prime}$ von $u$ und eine
+Stammfunktion $v$ von $v^{\prime}$ ausgerechnet:
 
-also den Start $(1,2)$ und das Ziel $(4,9)$. Die Formel für die Bogenlänge
-beinhaltet den Term $(f'(x))^{2}$, also das Quadrat der 1. Ableitung. Diesen
-Term berechnen wir vorab in einer Nebenrechnung. Zuerst wird die 1. Ableitung
-berechnet:
+$$u^{\prime}(x) = 2 \quad \text{ und } \quad v(x)=-\cos(x).$$
 
-$$f(x)=x^{\frac{3}{2}} + 1 \Rightarrow f'(x)= \frac{3}{2}x^{\frac{1}{2}} = \frac{3}{2}\sqrt{x}.$$
+Das wird alles in die obige Formel eingesetzt:
 
-Damit erhalten wir 
+$$\int_{0}^{\pi} \sin(x)\cdot 2x \, dx = \big[2x \cdot \left(-\cos(x)\right)\big]_{0}^{\pi} -
+\int_{0}^{\pi} 2 \cdot (-\cos(x)) \, dx.$$
 
-$$(f'(x))^{2} = \big( \frac{3}{2}\sqrt{x} \big)^{2} = \frac{9}{4}x.$$
+Das bestimmte Integral $\big[2x \cdot \left(-\cos(x)\right)\big]_{0}^{\pi}$
+können wir jetzt zwar direkt ausrechnen, aber übrig bleibt noch das Integral
+$\int_{0}^{\pi} 2 \cdot (-\cos(x)) \, dx$, das noch weiter ausgerechnet werden
+muss. 
 
-Der Term $\sqrt{1+\frac{9}{4}x}$ lässt sich leider nicht weiter vereinfachen, so dass für die Berechnung des Integrals
+Aber das geht jetzt relativ leicht, denn von der Funktion $v(x)=-\cos(x)$ kennen wir ebenfalls eine Stammfunktion, nämlich $V(x)=-\sin(x)$. Daher ist $\int_{0}^{\pi} 2
+\cdot (-\cos(x)) \, dx = 2 \big[-\sin(x)\big]_{0}^{\pi}$ und insgesamt gilt dann:
 
-$$L = \int_{1}^{4} \sqrt{1 + \frac{9}{4}x}\, dx$$
+$$\int_{0}^{\pi} \sin(x)\cdot 2x \, dx = \big[2x \cdot
+\left(-\cos(x)\right)\big]_{0}^{\pi} - 2 \big[-\sin(x)\big]_{0}^{\pi}.$$
 
-die Substitutionsregel benutzt werden muss. Wir setzen $z = 1 + \frac{9}{4}x$. Dann gilt
+Jetzt werden obere und untere Grenze eingesetzt und die Differenz gebildet. Das
+Ergebnis ist
 
-\begin{align*}
-L & = \int_{1}^{4} \sqrt{1 + \frac{9}{4}x}\, dx = \\
-  & = \int \sqrt{z} \cdot \frac{4}{9} \, dz  = \frac{4}{9}\cdot\frac{2}{3} \left[ z^{\frac{3}{2}}\right] = \\
-  & = \frac{8}{27} \left[\left(1+\frac{9}{4}x\right)^{\frac{3}{2}}\right]_{1}^{4} = \\
-  & \approx 7.6337.
-\end{align*}
+$$\int_{0}^{\pi} \sin(x)\cdot 2x \, dx = 2\pi.$$
 
-In dem folgenden Video wird ein zweites Beispiel vorgeführt.
+Achtung: Hätten wir eine andere Wahl getroffen, nämlich 
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/xYr6zDAgIo8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+$$u(x)=\sin(x) \quad \text{ und } \quad v'(x)=2x,$$
 
-## Wie kommt man auf die Formel zur Berechnung der Bogenlänge?
+dann wäre die Suche nach der Stammfunktion von $v'$ zwar einfacher gelaufen (das
+wäre $v(x)=x^2$ gewesen), aber insgesamt wäre es zu kompliziert, denn wir hätten
 
-Um zu erklären, wie die Formel zur Berechnung der Bogenlänge enstanden ist, betrachten wir das folgende Beispiel: $f(x)=x^3-4x^2+2x+5$. Der Start soll bei $(1,4)$ liegen, Endpunkt ist $(4,13)$. Die einfachste Näherung der Bogenlänge ist die Luftlinie, also die die direkte Strecke zwischen Start und Ziel. Das lässt sich mit dem Satz des Pythagoras berechnen:
+$$\int_{0}^{\pi} \sin(x)\cdot 2x \, dx = \big[\sin(x)\cdot x^2 \big]_{0}^{\pi} -
+\int_{0}^{\pi} \cos(x)\cdot x^2 \, dx.$$
 
-$$L \approx \sqrt{\Delta x^2 + \Delta y^2} = \sqrt{(4-1)^2 + (13-4)^2} = \sqrt{9+81} = \sqrt{108}.$$
+Das letzte Integral kann nicht gelöst werden.
 
-Dies ist nur eine grobe Näherung an die echte Bogenlänge. Besser wird es mit zwei Zwischenstopps.
+## Weiteres Lernmaterial
 
-$$L \approx \sqrt{(\Delta x_1)^2 + (\Delta y_1)^2} + \sqrt{(\Delta x_2)^2 + (\Delta y_2)^2}  + \sqrt{(\Delta x_3)^2 + (\Delta y_3)^2} .$$
+Hier finden Sie noch zwei Videos, in denen die partielle Integration erklärt
+wird und an Beispielen vorgeführt wird.
 
-Zwei Zwischenstopps ergeben drei Luftlinienstücke, deren Summe eine Schätzung für die echte Bogenlänge ist. Noch besser wird es, wenn es noch mehr Zwischenstopps gibt. Am einfachsten ist es, wenn wir immer den gleichen Abstand auf der x-Achse für die Zwischenstopps wählen, nämlich $\Delta x = \frac{b-a}{N}$. Dann sind es $N$ Luftlinienstücke, die aufsummiert werden.
+<iframe width="560" height="315" src="https://www.youtube.com/embed/s-IDbDtRAbg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-\begin{align*}
-L \approx L_1 + L_2 + \dots + L_N &= \sqrt{(\Delta x)^2 + (\Delta y_1)^2} + \sqrt{(\Delta x)^2 + (\Delta y_2)^2} + \ldots + \sqrt{(\Delta x)^2 + (\Delta y_N)^2} \\
-& = \sum_{i=1}^{N} \sqrt{(\Delta x)^2 + (\Delta y_i)^2}.
-\end{align*}
-
-Jetzt wird ein Trick angewandet. Der Term $(\Delta x)^2$ wird ausgeklammert:
-
-$$L \approx \sum_{i=1}^{N} \sqrt{\big(1+\frac{(\Delta y_i)^2}{(\Delta x)^2}\big)\cdot (\Delta x)^2}.$$
-
-Somit kann die Wurzel $\sqrt{(\Delta x)^2}$ vereinfacht werden ud wir haben
-
-$$L \approx \sum_{i=1}^{N} \sqrt{\left(1+\left(\frac{\Delta y_i}{\Delta x}\right)^2\right)}\cdot\Delta x.$$
-
-Das war aber nicht der eigentliche Grund, warum wir den Trick mit dem Ausklammern angewendet haben. Der wahre Grund ist, dass nun der Term
-
-$$\frac{\Delta y_i}{\Delta x}$$
-
-unter der Wurzel steht (etwas präziser steht $\big(\frac{\Delta y_i}{\Delta x}\big)^2$ unter der Wurzel). Und das ist ein Term, den wir bereits sehr gut kennen. Er wird Differenzenquotient genannt. Der Differenzenquotient beschreibt die Steigung der Sekante. 
-
-Wenn wir jetzt mehr und mehr Zwischenstopps einfügen, passiert Folgendes. Aus der Summe wird ein Integral. Wenn die Funktion $f$ differenzierbar ist und die 1. Ableitung stetig, konvergiert der Deifferenzenquotient gegen den Differentialquotienten $\frac{dy}{dz}$, also die 1. Ableitung. Und die Differenz $\Delta x$ wird zum Differential $dx$. Im Grenzwert steht dann also Folgendes da:
-
-$$L = \lim_{N\to\infty} \sum_{i=1}^{N} \sqrt{1 + \left(\frac{\Delta y_i}{\Delta x}\right)^2} \Delta x = \int_{a}^{b} \sqrt{1+f'(x)}\, dx.$$
-
-Und so kann man die Formel zur Berechnung der Bogenlänge begründen.
+<iframe width="560" height="315" src="https://www.youtube.com/embed/LlGrOTQ9TlU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>

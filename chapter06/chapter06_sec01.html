@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>6.1 Definition und Visualisierung &#8212; Mathematik 2 Maschinenbau</title>
+    <title>6.1 Periodische Funktionen &#8212; Mathematik 2 Maschinenbau</title>
   
   
   
@@ -71,8 +71,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'chapter06/chapter06_sec01';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="6.2 Stetigkeit" href="chapter06_sec02.html" />
-    <link rel="prev" title="6. Funktionen von mehreren Variablen und partielle Ableitungen" href="chapter06_sec00.html" />
+    <link rel="next" title="6.2 Fourierreihen" href="chapter06_sec02.html" />
+    <link rel="prev" title="6. Fourierreihen" href="chapter06_sec00.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="None"/>
   </head>
@@ -157,111 +157,122 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Part 1. Integrale</span></p>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Differential- und Integralrechnung</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter01/chapter01_sec00.html">1. Wiederholung Integral</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter01/chapter01_sec01.html">1.1 Stammfunktion und bestimmtes Integral</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter01/chapter01_sec02.html">1.2 Eigenschaften von Integralen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter01/chapter01_sec03.html">1.3 Partielle Integration</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter01/chapter01_sec04.html">1.4 Integration durch Substitution</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter01/chapter01_sec00.html">1. Differentialrechnung</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter01/chapter01_sec01.html">1.1 Ableitungen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter01/chapter01_sec02.html">1.2 Rechenregeln Ableitungen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter01/chapter01_sec03.html">1.3 Extremwerte</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter01/chapter01_sec04.html">1.4 Extremwerte mit Nebenbedingung</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter01/chapter01_sec05.html">Übungen</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter02/chapter02_sec00.html">2. Anwendungen Integral</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter02/chapter02_sec01.html">2.1 Integrieren ist Mitteln</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter02/chapter02_sec02.html">2.2 Fläche zwischen zwei Graphen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter02/chapter02_sec03.html">2.3 Bogenlänge</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter02/chapter02_sec04.html">2.4 Volumen von Rotationskörpern</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter02/chapter02_sec00.html">2. Integrale</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter02/chapter02_sec01.html">2.1 Stammfunktion und bestimmtes Integral</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter02/chapter02_sec02.html">2.2 Eigenschaften von Integralen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter02/chapter02_sec03.html">2.3 Partielle Integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter02/chapter02_sec04.html">2.4 Integration durch Substitution</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter02/chapter02_sec05.html">Übungen</a></li>
 </ul>
 </li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Part 2. Funktionenreihen</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter03/chapter03_sec00.html">3. Reihen und Potenzreihen</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec01.html">3.1 Reihen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec02.html">3.2 Konvergenzkriterien für Reihen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec03.html">3.3 Potenzreihen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec04.html">3.4 Konvergenz von Potenzreihen</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter03/chapter03_sec00.html">3. Anwendungen Integral</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec01.html">3.1 Integrieren ist Mitteln</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec02.html">3.2 Fläche zwischen zwei Graphen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec03.html">3.3 Bogenlänge</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec04.html">3.4 Volumen von Rotationskörpern</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec05.html">Übungen</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter04/chapter04_sec00.html">4. Taylorreihen</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter04/chapter04_sec01.html">4.1 Berechnung Taylorreihe</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter04/chapter04_sec02.html">4.2 Restglied von Taylorreihen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter04/chapter04_sec03.html">4.3 Wichtige Potenzreihen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter04/chapter04_sec04.html">4.4 Rechnen mit Potenzreihen</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Funktionenreihen</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter04/chapter04_sec00.html">4. Reihen und Potenzreihen</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter04/chapter04_sec01.html">4.1 Reihen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter04/chapter04_sec02.html">4.2 Konvergenzkriterien für Reihen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter04/chapter04_sec03.html">4.3 Potenzreihen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter04/chapter04_sec04.html">4.4 Konvergenz von Potenzreihen</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter04/chapter04_sec05.html">Übungen</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter05/chapter05_sec00.html">5. Fourierreihen</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter05/chapter05_sec01.html">5.1 Periodische Funktionen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter05/chapter05_sec02.html">5.2 Fourierreihen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter05/chapter05_sec03.html">5.3 Beispiele für Fourierreihen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter05/chapter05_sec04.html">5.4 Rechenregeln Fourierreihen</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter05/chapter05_sec00.html">5. Taylorreihen</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter05/chapter05_sec01.html">5.1 Berechnung Taylorreihe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter05/chapter05_sec02.html">5.2 Restglied von Taylorreihen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter05/chapter05_sec03.html">5.3 Wichtige Potenzreihen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter05/chapter05_sec04.html">5.4 Rechnen mit Potenzreihen</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter05/chapter05_sec05.html">Übungen</a></li>
 </ul>
 </li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Part 3. Mehrdimensionale Analysis</span></p>
-<ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="chapter06_sec00.html">6. Funktionen von mehreren Variablen und partielle Ableitungen</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">6.1 Definition und Visualisierung</a></li>
-<li class="toctree-l2"><a class="reference internal" href="chapter06_sec02.html">6.2 Stetigkeit</a></li>
-<li class="toctree-l2"><a class="reference internal" href="chapter06_sec03.html">6.3 Partielle Ableitungen und Gradient</a></li>
-<li class="toctree-l2"><a class="reference internal" href="chapter06_sec04.html">6.4 Höhere partielle Ableitungen und Hesse-Matrix</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="chapter06_sec00.html">6. Fourierreihen</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">6.1 Periodische Funktionen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter06_sec02.html">6.2 Fourierreihen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter06_sec03.html">6.3 Beispiele für Fourierreihen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter06_sec04.html">6.4 Rechenregeln Fourierreihen</a></li>
 <li class="toctree-l2"><a class="reference internal" href="chapter06_sec05.html">Übungen</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter07/chapter07_sec00.html">7. Richtungsableitungen und vektorwertige Funktionen</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter07/chapter07_sec01.html">7.1 Gradient und Richtungsableitung</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter07/chapter07_sec02.html">7.2 Vektorwertige Funktionen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter07/chapter07_sec03.html">7.3 Jacobi-Matrix</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter07/chapter07_sec04.html">7.4 Mehrdimensionale Kettenregel</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Höhere Differentialrechnung</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter07/chapter07_sec00.html">7. Funktionen von mehreren Variablen und partielle Ableitungen</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter07/chapter07_sec01.html">7.1 Definition und Visualisierung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter07/chapter07_sec02.html">7.2 Stetigkeit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter07/chapter07_sec03.html">7.3 Partielle Ableitungen und Gradient</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter07/chapter07_sec04.html">7.4 Höhere partielle Ableitungen und Hesse-Matrix</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter07/chapter07_sec05.html">Übungen</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter08/chapter08_sec00.html">8. Linearisierung und Extremwerte</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter08/chapter08_sec01.html">8.1 Tangentenfunktionen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter08/chapter08_sec02.html">8.2 Totales Differential</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter08/chapter08_sec03.html">8.3 Extremwerte</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter08/chapter08_sec04.html">8.4 Extremwertprobleme mit Nebenbedingung</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter08/chapter08_sec00.html">8. Richtungsableitungen und vektorwertige Funktionen</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter08/chapter08_sec01.html">8.1 Gradient und Richtungsableitung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter08/chapter08_sec02.html">8.2 Vektorwertige Funktionen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter08/chapter08_sec03.html">8.3 Jacobi-Matrix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter08/chapter08_sec04.html">8.4 Mehrdimensionale Kettenregel</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter08/chapter08_sec05.html">Übungen</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter09/chapter09_sec00.html">9. Doppelintegral</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter09/chapter09_sec01.html">9.1 Idee von Doppelintegralen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter09/chapter09_sec02.html">9.2 Berechnung von Doppelintegralen in kartesischen Koordinaten</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter09/chapter09_sec03.html">9.3 Anwendung: Flächenberechnung</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter09/chapter09_sec04.html">9.4 Anwendung: Schwerpunktberechnung</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter09/chapter09_sec00.html">9. Linearisierung und Extremwerte</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter09/chapter09_sec01.html">9.1 Tangentenfunktionen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter09/chapter09_sec02.html">9.2 Totales Differential</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter09/chapter09_sec03.html">9.3 Extremwerte</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter09/chapter09_sec04.html">9.4 Extremwertprobleme mit Nebenbedingung</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter09/chapter09_sec05.html">Übungen</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter10/chapter10_sec00.html">10. Doppelintegral in Polarkoordinaten und Dreifachintegral</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter10/chapter10_sec01.html">10.1 Polarkoordinaten</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter10/chapter10_sec02.html">10.2 Doppelintegral in Polarkoordinaten</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter10/chapter10_sec03.html">10.3 Dreifachintegral</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter10/chapter10_sec04.html">10.4 Anwendungen Dreifachintegral</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Höhere Integralrechnung</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter10/chapter10_sec00.html">10. Doppelintegral</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter10/chapter10_sec01.html">10.1 Idee von Doppelintegralen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter10/chapter10_sec02.html">10.2 Berechnung von Doppelintegralen in kartesischen Koordinaten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter10/chapter10_sec03.html">10.3 Anwendung: Flächenberechnung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter10/chapter10_sec04.html">10.4 Anwendung: Schwerpunktberechnung</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter10/chapter10_sec05.html">Übungen</a></li>
 </ul>
 </li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Part 4. Differentialgleichungen</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter11/chapter11_sec00.html">11. Einführung Differentialgleichungen</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter11/chapter11_sec01.html">11.1 Grundbegriffe</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter11/chapter11_sec02.html">11.2 Anfangs- und Randwertproblem</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter11/chapter11_sec03.html">11.3 Separable Differentialgleichungen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter11/chapter11_sec04.html">11.4 Exakte Differentialgleichungen</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter11/chapter11_sec00.html">11. Doppelintegral in Polarkoordinaten und Dreifachintegral</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter11/chapter11_sec01.html">11.1 Polarkoordinaten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter11/chapter11_sec02.html">11.2 Doppelintegral in Polarkoordinaten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter11/chapter11_sec03.html">11.3 Dreifachintegral</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter11/chapter11_sec04.html">11.4 Anwendungen Dreifachintegral</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter11/chapter11_sec05.html">Übungen</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter12/chapter12_sec00.html">12. Lineare Differentialgleichungen</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-12"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter12/chapter12_sec01.html">12.1 Lineare DGL 1. Ordnung</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter12/chapter12_sec02.html">12.2 Lösung homogene lineare DGL 1. Ordnung</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter12/chapter12_sec03.html">12.3 Lösung inhomogene lineare DGL 1. Ordnung</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter12/chapter12_sec04.html">12.4 Homogene Systeme aus zwei linearen DGL 1. Ordnung</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Differentialgleichungen</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter12/chapter12_sec00.html">12. Einführung Differentialgleichungen</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-12"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter12/chapter12_sec01.html">12.1 Grundbegriffe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter12/chapter12_sec02.html">12.2 Anfangs- und Randwertproblem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter12/chapter12_sec03.html">12.3 Separable Differentialgleichungen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter12/chapter12_sec04.html">12.4 Exakte Differentialgleichungen</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter12/chapter12_sec05.html">Übungen</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter13/chapter13_sec00.html">13. Lineare Differentialgleichungen</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-13"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter13/chapter13_sec01.html">13.1 Lineare DGL 1. Ordnung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter13/chapter13_sec02.html">13.2 Lösung homogene lineare DGL 1. Ordnung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter13/chapter13_sec03.html">13.3 Lösung inhomogene lineare DGL 1. Ordnung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter13/chapter13_sec04.html">13.4 Homogene Systeme aus zwei linearen DGL 1. Ordnung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter13/chapter13_sec05.html">Übungen</a></li>
 </ul>
 </li>
 </ul>
@@ -415,7 +426,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>6.1 Definition und Visualisierung</h1>
+    <h1>6.1 Periodische Funktionen</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -426,10 +437,14 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lernziele">Lernziele</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wiederholung-begrifflichkeiten-bei-funktionen">Wiederholung: Begrifflichkeiten bei Funktionen</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#funktionen-von-mehreren-unabhangigen-variablen">Funktionen von mehreren unabhängigen Variablen</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#darstellungen-von-funktionen-mit-mehreren-unabhangigen-variablen">Darstellungen von Funktionen mit mehreren unabhängigen Variablen</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hohenlinien">Höhenlinien</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#periodische-funktionen-was-ist-das">Periodische Funktionen - was ist das?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#beispiele-periodischer-funktionen">Beispiele periodischer Funktionen</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sinus-und-kosinusfunktion">Sinus- und Kosinusfunktion</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rechteckfunktion">Rechteckfunktion</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dreiecksfunktion">Dreiecksfunktion</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sagezahnfunktion">Sägezahnfunktion</a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -441,171 +456,149 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="definition-und-visualisierung">
-<h1>6.1 Definition und Visualisierung<a class="headerlink" href="#definition-und-visualisierung" title="Permalink to this headline">#</a></h1>
-<p>Bisher haben wir nur Funktionen kennengelernt, bei denen eine reelle Zahl in die
-Funktionsvorschrift eingesetzt wurde und eine reelle Zahl herauskam. Die
-mathematische Schreibweise dafür ist <span class="math notranslate nohighlight">\(f:\mathbb{R}\rightarrow\mathbb{R}\)</span>.</p>
-<p>Allerdings ist die Welt nicht so eindimensional. Die folgende Abbildung zeigt
-beispielsweise die durchschnittliche Solarstrahlung in Deutschland. Dies ist
-mathematisch gesehen eine Funktion von mehereren Variablen, nämlich Längen- und
-Breitengrad, also <span class="math notranslate nohighlight">\(f:\mathbb{R}^2\rightarrow\mathbb{R}\)</span>.</p>
-<figure class="align-default" id="chapter06-fig01-solar-map">
-<a class="reference internal image-reference" href="../_images/chapter06_fig01_solar_map.png"><img alt="../_images/chapter06_fig01_solar_map.png" src="../_images/chapter06_fig01_solar_map.png" style="width: 50%;" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 13 </span><span class="caption-text">Solarstrahlung in Deutschland</span><a class="headerlink" href="#chapter06-fig01-solar-map" title="Permalink to this image">#</a></p>
-<div class="legend">
-<p>(<a class="reference external" href="https://commons.wikimedia.org/wiki/File:SolarGIS-Solar-map-Germany-de.png">Quelle:</a> “Solar Radiation Map: Globalstrahlung Deutschland, SolarGIS 2011”, Autor: SolarGIS Lizenz: <a class="reference external" href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>)</p>
-</div>
-</figcaption>
-</figure>
-<p>In diesem Kapitel werden wir uns Funktionen von mehreren unabhängigen Variablen
-genauer ansehen und insbesondere erarbeiten, wie solche Funktionen visualisiert
-werden können.</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="periodische-funktionen">
+<h1>6.1 Periodische Funktionen<a class="headerlink" href="#periodische-funktionen" title="Permalink to this headline">#</a></h1>
+<p>In diesem Kapitel werden wir uns mit periodischen Funktionen beschäftigen.
+Insbesondere im Maschinenbau finden sich zahlreiche Anwendungen von periodischen
+Funktionen, z.B. in der Technischen Mechanik oder in der Regelungstechnik. Viele
+mechanische Systeme, wie z.B. Federsysteme, Pendel oder rotierende Wellen,
+führen periodische Schwingungen aus. Auch in der Regelungstechnik werden
+periodische Steuergrößen erzeugt, die zur Regelung von Systemen verwendet
+werden. Beispiele sind periodische Signale, wie z.B. Rechteck-, Dreieck- oder
+Sinusfunktionen. Diese Signale werden verwendet, um elektrische, mechanische
+oder hydraulische Systeme zu steuern.</p>
 <section id="lernziele">
 <h2>Lernziele<a class="headerlink" href="#lernziele" title="Permalink to this headline">#</a></h2>
 <div class="important admonition">
 <p class="admonition-title">Lernziele</p>
 <ul class="simple">
-<li><p>Sie können erklären, was eine <strong>Funktion von mehreren unabhängigen Variablen</strong> ist.</p></li>
-<li><p>Sie können eine Funktion von zwei unabhängigen Variablen als Fläche im Raum zeichnen.</p></li>
-<li><p>Sie können die <strong>Höhenlinien</strong> einer Funktion von zwei unabhängigen Variablen interpretieren und zeichnen.</p></li>
+<li><p>Sie können erklären, was eine <strong>periodische Funktion</strong> ist.</p></li>
+<li><p>Sie können Beispiele von periodischen Funktionen nennen wie</p>
+<ul>
+<li><p>Sinus- und Kosinusfunktion,</p></li>
+<li><p>Rechteckfunktion,</p></li>
+<li><p>Dreiecksfunktion und</p></li>
+<li><p>Sägezahnfunktion.</p></li>
+</ul>
+</li>
 </ul>
 </div>
 </section>
-<section id="wiederholung-begrifflichkeiten-bei-funktionen">
-<h2>Wiederholung: Begrifflichkeiten bei Funktionen<a class="headerlink" href="#wiederholung-begrifflichkeiten-bei-funktionen" title="Permalink to this headline">#</a></h2>
-<p>Eine Funktion stellt eine Beziehung zwischen zwei Mengen her. Bei den bisher
-eingeführten Funktionen wird ein Element aus der sogenannten Definitionsmenge
-genommen und diesem genau ein Element aus der sogenannten Wertemenge zugeordnet.
-Wenn es darum geht, nun die Regeln dieser Beziehung genauer zu beschreiben, wird
-häufig eine Funktionsgleichung aufgestellt. Aber auch Tabellen oder grafische
-Abbildungen können dazu benutzt werden, um die Beziehung präzise zu beschreiben.</p>
-<p>Als Beispiel einer Funktion betrachten wir die Parabel. Als Definitionsmenge
-wählen wir alle reelle Zahlen, also alle Zahlen <span class="math notranslate nohighlight">\(x\in\mathbb{R}\)</span>. Als
-Funktionsvorschrift legen wir nun fest, dass jedem <span class="math notranslate nohighlight">\(x\)</span> sein eigenes Quadrat
-zugeordnet wird, also in mathematischer Schreibweise</p>
-<div class="math notranslate nohighlight">
-\[x\mapsto x^2.\]</div>
-<p>Üblicherweise wird die Funktionsvorschrift als <span class="math notranslate nohighlight">\(f(x)=x^2\)</span> angegeben. Die
-grafische Darstellung sieht folgendermaßen aus:</p>
-<figure class="align-default" id="chapter06-plot-parabel">
-<a class="reference internal image-reference" href="../_images/chapter06_plot_parabel.svg"><img alt="../_images/chapter06_plot_parabel.svg" src="../_images/chapter06_plot_parabel.svg" width="75%" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 14 </span><span class="caption-text">Grafische Darstellung der Funktion <span class="math notranslate nohighlight">\(f(x)=x^2\)</span></span><a class="headerlink" href="#chapter06-plot-parabel" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
-<p>Anhand der grafischen Darstellung wird schnell deutlich, dass zwar die
-Definitionsmenge alle reellen Zahlen umfasst, die Wertemenge jedoch nur die
-nichtnegativen reellen Zahlen enthält.</p>
-</section>
-<section id="funktionen-von-mehreren-unabhangigen-variablen">
-<h2>Funktionen von mehreren unabhängigen Variablen<a class="headerlink" href="#funktionen-von-mehreren-unabhangigen-variablen" title="Permalink to this headline">#</a></h2>
-<p>Nun betrachten wir ein Beispiel einer “2:1-Beziehung”. Auch hier benötigen wir,
-um die Funktion zu beschreiben, eine Definitionsmenge, eine Wertemenge und eine
-eindeutige Zuordnungsregel. Der flapsige Ausdruck “2:1-Beziehung” bedeutet, dass
-zwei Elementen der Definitionsmenge ein Element der Wertemenge zugeordnet werden
-soll. Die Elemente der Definitionsmenge werden auch <strong>unabhängige Variablen</strong>
-genannt, das Element der Wertemenge wird <strong>abhängige Variable</strong> genannt.</p>
-<p>Wir nennen die beiden unabhängigen Variablen <span class="math notranslate nohighlight">\(x\)</span> und <span class="math notranslate nohighlight">\(y\)</span> und legen fest, dass
-beides reelle Zahlen sind. Diesmal sollen beide Zahlen quadriert werden und aus
-den Quadraten dann die Summe gebildet werden. Mathematisch könnte das als</p>
-<div class="math notranslate nohighlight">
-\[(x,y)\mapsto x^2 + y^2\]</div>
-<p>oder als</p>
-<div class="math notranslate nohighlight">
-\[f(x,y) = x^2 + y^2\]</div>
-<p>notiert werden. Die abhängige Variable <span class="math notranslate nohighlight">\(z = f(x,y)\)</span> ist 0 oder positiv, so dass
-die Wertemenge gleich <span class="math notranslate nohighlight">\(\mathbb{R}^{+}\)</span> ist.</p>
-<p>Wenn die Funktion mehrere unabhängige Variablen hat, nennt man die Funktion auch
-<strong>multivariate Funktion</strong>.</p>
-<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
-<summary class="sd-summary-title sd-card-header">
-Video zu “multivariate Funktionen” von Mathematische Methoden<div class="sd-summary-down docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="sd-summary-up docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="sd-summary-content sd-card-body docutils">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/gV5zjtVHIWE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-</div>
-</details><p>Fassen wir zusammen.</p>
+<section id="periodische-funktionen-was-ist-das">
+<h2>Periodische Funktionen - was ist das?<a class="headerlink" href="#periodische-funktionen-was-ist-das" title="Permalink to this headline">#</a></h2>
+<p>Bei einer periodischen Funktion wiederholen sich in regelmäßigen Abständen die Funktionswerte wieder. Der Abstand, nachdem sich die Funktionswerte beginnen zu wiederholen, heißt <strong>Periodendauer</strong>.</p>
 <div class="note admonition">
-<p class="admonition-title">Was ist … eine Funktion mit mehreren unabhängigen Variablen?</p>
-<p>Eine Funktion ist eine eindeutige Regel, die jedem Vektor aus mehreren
-unabhängigen Variablen (aus der Definitionsmenge) genau eine reelle Zahl (aus
-der Wertemenge) zuordnet.</p>
+<p class="admonition-title">Was ist … eine periodische Funktion?</p>
+<p>Eine Funktion heißt periodisch, wenn sich die Funktionswerte regelmäßig wiederholen. Als mathematische Formel ausgedrückt ist eine Funktion <span class="math notranslate nohighlight">\(f\)</span> periodisch mit der Periode <span class="math notranslate nohighlight">\(p\)</span>, wenn gilt:</p>
+<div class="math notranslate nohighlight">
+\[f(x+p) = f(x).\]</div>
 </div>
-</section>
-<section id="darstellungen-von-funktionen-mit-mehreren-unabhangigen-variablen">
-<h2>Darstellungen von Funktionen mit mehreren unabhängigen Variablen<a class="headerlink" href="#darstellungen-von-funktionen-mit-mehreren-unabhangigen-variablen" title="Permalink to this headline">#</a></h2>
-<p>Um das obige Beispiel Funktion zu visualisieren, werden jetzt alle mögliche
-Kombinationen aus <span class="math notranslate nohighlight">\(x\)</span> und <span class="math notranslate nohighlight">\(y\)</span> gebildet, d.h. die unabhängigen Variablen kommen
-aus der xy-Ebene. Zur Darstellung der abhängigen Variable brauchen wir also noch
-eine dritte Dimension, die Höhe. Die Funktion <span class="math notranslate nohighlight">\(f(x,y) =  x^2 + y^2\)</span>, ein
-sogenannter Paraboloid, sieht dann folgendermaßen aus (Hinweis: die Grafik ist interaktiv!):</p>
-<div id="chap06_sec01_fig01" style="width:100%; aspect-ratio:4/3; margin: 0 auto;""></div>
-<script type="text/javascript">
-// Generate grid
-const rValues = Array.from({ length: 101 }, (_, i) => 5 * i / 100);
-const phiValues = Array.from({ length: 101 }, (_, i) => 2 * Math.PI * i / 100);
-//
-const xValues = rValues.map(r => phiValues.map(phi => r * Math.cos(phi)));
-const yValues = rValues.map(r => phiValues.map(phi => r * Math.sin(phi)));
-// Evaluate function
-const zValues = xValues.map((xRow, i) => xRow.map((x, j) => (x ** 2 + yValues[i][j] ** 2)));
-// Plot
-const data = [{
-  x: xValues,
-  y: yValues,
-  z: zValues,
-  type: 'surface',
-  colorscale: 'Viridis'
-}];
-//
-const layout = {
-  title: 'Paraboloid f(x, y) = x^2 + y^2',
-  scene: {
-    xaxis: { title: 'x' },
-    yaxis: { title: 'y' }
-  },
-  margin: {
-    l: 10,
-    r: 10
-  }
-};
-//
-const config = {responsive: true}
-//
-Plotly.newPlot('chap06_sec01_fig01', data, layout, config);
-</script>
-<p>Zusätzlich zur Höhe wurde die Paraboloid-Fläche noch gemäß der Funktionswerte
-<span class="math notranslate nohighlight">\(f(x,y)\)</span> eingefärbt. Leider ist es gar nicht so einfach, Funktionen von mehreren
-Variablen zu zeichnen. Eine Funktion von zwei Variablen kann man noch ganz gut
-zeichnen, bei drei und gar mehr unabhängigen Variablen klappt es mit Zeichnungen
-nicht mehr.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
-Video “Multivariate Funktionen: Graph” von Mathematische Methoden<div class="sd-summary-down docutils">
+Video “Periodische Funktion” von lernflix<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/oJdN_Ics6qs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/e3lpwsKp75Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </div>
 </details></section>
-<section id="hohenlinien">
-<h2>Höhenlinien<a class="headerlink" href="#hohenlinien" title="Permalink to this headline">#</a></h2>
-<p>Eine reduzierte Darstellung einer Funktion von zwei unabhängigen Variablen ist
-der sogenannte <strong>Contourplot</strong>, der <strong>Konturlinien</strong> visualisiert. Konturlinien
-sind auch aus dem Erdkundeunterricht bekannt, wo sie normalerweise
-<strong>Höhenlinien</strong> genannt werden.</p>
-<div class="note admonition">
-<p class="admonition-title">Was sind … Höhenlinien?</p>
-<p>Höhenlinien sind Linien in einer zweidimensionalen Ebene, die diejenigen Punkte <span class="math notranslate nohighlight">\((x,y)\)</span>
-verbinden, die den gleichen Funktionswert <span class="math notranslate nohighlight">\(f(x,y)=c\)</span> haben.</p>
+<section id="beispiele-periodischer-funktionen">
+<h2>Beispiele periodischer Funktionen<a class="headerlink" href="#beispiele-periodischer-funktionen" title="Permalink to this headline">#</a></h2>
+<section id="sinus-und-kosinusfunktion">
+<h3>Sinus- und Kosinusfunktion<a class="headerlink" href="#sinus-und-kosinusfunktion" title="Permalink to this headline">#</a></h3>
+<p>Sinus und Kosinus sind die beiden wichtigsten periodischen Funktionen. Sie werden auch dazu genutzt, um andere periodische Funktionen zu approximieren (Stichwort: Fourierreihe). Beide haben eine Periode von <span class="math notranslate nohighlight">\(2\pi\)</span>.</p>
+<figure class="align-default" id="chap05-plot-sinus">
+<a class="reference internal image-reference" href="../_images/plot_sinus.png"><img alt="../_images/plot_sinus.png" src="../_images/plot_sinus.png" style="width: 600px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 2 </span><span class="caption-text">Sinusfunktion mit einer Periode <span class="math notranslate nohighlight">\(p = 2\pi\)</span></span><a class="headerlink" href="#chap05-plot-sinus" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Wir werden in den nächsten Kapiteln die Sinus- und Kosinusfunktionen
+modifizieren. Im folgenden Video werden die verschiedenen Möglichkeiten, die
+Sinusfunktion zu transformieren wiederholt. Für die Kosinusfunktion gelten die
+gleichen Transformationen analog.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Video “Sinusfunktion Transformation” von Daniel Jung<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/d_u7yYf30yA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </div>
-<p>Das folgende Video erklärt den Contourplot.</p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/t4N7n_u8TYk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</details></section>
+<section id="rechteckfunktion">
+<h3>Rechteckfunktion<a class="headerlink" href="#rechteckfunktion" title="Permalink to this headline">#</a></h3>
+<p>Die Rechteckfunktion ist zunächst einmal keine periodische Funktion. Als erstes
+werden eine Periode <span class="math notranslate nohighlight">\(T\)</span> und eine Konstante <span class="math notranslate nohighlight">\(c\)</span> festgelegt. Dann wird die
+Rechteckfunktion definiert als die Funktion, deren Funktionswerte im Intervall
+<span class="math notranslate nohighlight">\([-\frac{T}{2}, \frac{T}{2}]\)</span> gleich der Konstante <span class="math notranslate nohighlight">\(c\)</span> sind. Und außerhalb
+dieses Intervalls sollen die Funktionswerte 0 sein (übrigens, manchmal wird auch
+ein anderer Wert als 0 genommen). Mathematisch wird das folgendermaßen
+ausgedrückt:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*} 
+f(t) = 
+\begin{cases} 
+c &amp; \text{ für } -\frac{T}{2} \leq x \leq \frac{T}{2},\\
+0 &amp; \text{ sonst.} 
+\end{cases} 
+\end{equation*}\]</div>
+<p>Der Funktionsgraph der Rechteckfunktion sieht folgendermaßen aus:</p>
+<figure class="align-default" id="chap05-plot-rechteck">
+<a class="reference internal image-reference" href="../_images/plot_rechteck.png"><img alt="../_images/plot_rechteck.png" src="../_images/plot_rechteck.png" style="width: 600px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 3 </span><span class="caption-text">Beispiel einer Rechteckfunktion: Periode <span class="math notranslate nohighlight">\(T = 1\)</span> und <span class="math notranslate nohighlight">\(c = 1\)</span></span><a class="headerlink" href="#chap05-plot-rechteck" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Jetzt wird die Periode von <span class="math notranslate nohighlight">\(0\)</span> bis <span class="math notranslate nohighlight">\(T\)</span> gelb markiert.</p>
+<figure class="align-default" id="chap05-plot-rechteck-period">
+<a class="reference internal image-reference" href="../_images/plot_rechteck_period.png"><img alt="../_images/plot_rechteck_period.png" src="../_images/plot_rechteck_period.png" style="width: 600px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 4 </span><span class="caption-text">Beispiel einer Rechteckfunktion: das Periodenintervall <span class="math notranslate nohighlight">\([0,T]\)</span> ist gelb markiert</span><a class="headerlink" href="#chap05-plot-rechteck-period" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Als letztes wird der Funktionsgraph periodisch wiederholt. Damit ist gemeint,
+dass das gelb markierte Gebiet links und rechts immer wieder drangehängt wird.
+Dadruch entsteht eine neue Funktion, deren Funktionsgraph in der nächsten
+Abbildung zu sehen ist.</p>
+<figure class="align-default" id="chap05-plot-rechteck-periodisch">
+<a class="reference internal image-reference" href="../_images/plot_rechteck_periodisch.png"><img alt="../_images/plot_rechteck_periodisch.png" src="../_images/plot_rechteck_periodisch.png" style="width: 600px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 5 </span><span class="caption-text">Beispiel einer Rechteckfunktion, die periodisch fortgesetzt wurde</span><a class="headerlink" href="#chap05-plot-rechteck-periodisch" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Diese neue Funktion ist nun eine periodische Funktion. Sie wird häufig in der
+Signalverarbeitung verwendet. Beispielsweise dient sie als Taktsignal für
+digitale Prozessoren und Controller.</p>
+</section>
+<section id="dreiecksfunktion">
+<h3>Dreiecksfunktion<a class="headerlink" href="#dreiecksfunktion" title="Permalink to this headline">#</a></h3>
+<p>Die Dreiecksfunktion ist eine periodische Funktion, die ebenfalls in der
+Signalverarbeitung häufig vorkommt. Sie hat eine Periode <span class="math notranslate nohighlight">\(T\)</span> und oszilliert
+zwischen zwei Werten <span class="math notranslate nohighlight">\(c_1\)</span> und <span class="math notranslate nohighlight">\(c_2\)</span>, wobei der Anstieg von <span class="math notranslate nohighlight">\(c_1\)</span> auf <span class="math notranslate nohighlight">\(c_2\)</span>
+linear ist und der Abfall von <span class="math notranslate nohighlight">\(c_2\)</span> auf <span class="math notranslate nohighlight">\(c_1\)</span> ebenfalls linear ist.</p>
+<figure class="align-default" id="chap05-plot-dreieck">
+<a class="reference internal image-reference" href="../_images/plot_dreieck.png"><img alt="../_images/plot_dreieck.png" src="../_images/plot_dreieck.png" style="width: 600px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 6 </span><span class="caption-text">Beispiel einer Dreiecksfunktion, die zwischen <span class="math notranslate nohighlight">\(0\)</span> und <span class="math notranslate nohighlight">\(1\)</span> oszilliert und die Periode <span class="math notranslate nohighlight">\(T = 2\)</span> hat</span><a class="headerlink" href="#chap05-plot-dreieck" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="sagezahnfunktion">
+<h3>Sägezahnfunktion<a class="headerlink" href="#sagezahnfunktion" title="Permalink to this headline">#</a></h3>
+<p>Die Sägezahnfunktion ist eine weitere periodische Funktion, die in der
+Signalverarbeitung häufig verwendet wird. Sie hat eine Periode <span class="math notranslate nohighlight">\(T\)</span> und
+oszilliert zwischen <span class="math notranslate nohighlight">\(-1\)</span> und <span class="math notranslate nohighlight">\(1\)</span>, wobei der Anstieg von <span class="math notranslate nohighlight">\(-1\)</span> auf <span class="math notranslate nohighlight">\(1\)</span> linear ist
+und der Abfall von <span class="math notranslate nohighlight">\(1\)</span> auf <span class="math notranslate nohighlight">\(-1\)</span> plötzlich stattfindet.</p>
+<figure class="align-default" id="chap05-plot-saegezahn">
+<a class="reference internal image-reference" href="../_images/plot_saegezahn.png"><img alt="../_images/plot_saegezahn.png" src="../_images/plot_saegezahn.png" style="width: 600px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 7 </span><span class="caption-text">Beispiel einer Sägezahnfunktion, die zwischen <span class="math notranslate nohighlight">\(-1\)</span> und <span class="math notranslate nohighlight">\(1\)</span> oszilliert und die Periode <span class="math notranslate nohighlight">\(T = 2\)</span> hat</span><a class="headerlink" href="#chap05-plot-saegezahn" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
 </section>
 </section>
 
@@ -646,7 +639,7 @@ verbinden, die den gleichen Funktionswert <span class="math notranslate nohighli
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">6. Funktionen von mehreren Variablen und partielle Ableitungen</p>
+        <p class="prev-next-title">6. Fourierreihen</p>
       </div>
     </a>
     <a class="right-next"
@@ -654,7 +647,7 @@ verbinden, die den gleichen Funktionswert <span class="math notranslate nohighli
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">6.2 Stetigkeit</p>
+        <p class="prev-next-title">6.2 Fourierreihen</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -677,10 +670,14 @@ verbinden, die den gleichen Funktionswert <span class="math notranslate nohighli
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lernziele">Lernziele</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wiederholung-begrifflichkeiten-bei-funktionen">Wiederholung: Begrifflichkeiten bei Funktionen</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#funktionen-von-mehreren-unabhangigen-variablen">Funktionen von mehreren unabhängigen Variablen</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#darstellungen-von-funktionen-mit-mehreren-unabhangigen-variablen">Darstellungen von Funktionen mit mehreren unabhängigen Variablen</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hohenlinien">Höhenlinien</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#periodische-funktionen-was-ist-das">Periodische Funktionen - was ist das?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#beispiele-periodischer-funktionen">Beispiele periodischer Funktionen</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sinus-und-kosinusfunktion">Sinus- und Kosinusfunktion</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rechteckfunktion">Rechteckfunktion</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dreiecksfunktion">Dreiecksfunktion</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sagezahnfunktion">Sägezahnfunktion</a></li>
+</ul>
+</li>
 </ul>
   </nav></div>
 

@@ -1,4 +1,4 @@
-# 10. Doppelintegral in Polarkoordinaten und Dreifachintegral
+# 10. Doppelintegral
 
 Themen:
 

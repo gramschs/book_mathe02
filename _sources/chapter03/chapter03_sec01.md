@@ -1,175 +1,207 @@
-(ref03_sec01)=
-# 3.1 Reihen
-
-Reihen sind sehr spezielle Folgen. Falls Sie Ihr Wissen über Folgen auffrischen
-wollen, können Sie die Internetseite [Folgen, Grenzwerte und
-Stetigkeit](https://gramschs.github.io/book_mathe01/chapter09/chapter09_sec00.html)
-aus der Mathematik 1 Vorlesung als Startpunkt nehmen.
+# 3.1 Integrieren ist Mitteln
 
 ## Lernziele
 
 ```{admonition} Lernziele
 :class: important
-* Sie können den Fachbegriff **Partialsumme** einer Reihe erklären.
-* Sie können den Fachbegriff **Reihe** erklären.
-* Sie wissen, was eine **konvergente** Reihe ist und wie der Grenzwert bezeichnet wird.
-* Sie wissen, was eine **divergente** Reihe ist. 
-* Sie kennen als Beispiel für Reihen die
-    * **geometrische Reihe** und
-    * **harmonische Reihe**.
+* Sie können den Mittelwert einer Liste von Zahlen berechnen.
+* Sie können den Mittelwert einer Funktion in einem Intervall berechnen.
 ```
 
-## Was ist eine Partialsumme und was ist eine Reihe?
+## Mittelwert von Zahlen
 
-Das Lieblingsbeispiel vieler Mathematiker:innen zur Einführung von Reihen ist
-das vom griechischem Philosophen
-[Zenon](https://de.wikipedia.org/wiki/Zenon_von_Elea) beschriebene Paradoxon von
-[Achilles und der
-Schildkröte](https://de.wikipedia.org/wiki/Achilles_und_die_Schildkröte). Wir
-betrachten hier rein mathematische Beispiele.
+Ein Auto fährt in der Stadt mit 50 km/h und muss leicht abbremsen. Dabei werden
+folgende Geschwindigkeiten gemessen:
 
-Eine Reihe wird aus einer Folge gebildet. Als Beispiel betrachten wir die Folge
-$(a_k)$ mit $a_k=\left(\frac{1}{2}\right)^{k}$. Explizit hingeschrieben lautet
-die Folge $(a_k)$ also: $\frac{1}{2}$, $\frac{1}{4}$, $\frac{1}{8}$,
-$\frac{1}{16}$, $\frac{1}{32}$, usw. Daraus bilden wir eine neue Folge, die wir
-$(s_n)$ bezeichnen, indem wir Summen nach dem folgenden Schema bilden:
+<span style="font-weight:normal">Zeit in s</span> | <span style="font-weight:normal">1</span>   | <span style="font-weight:normal">2</span>    | <span style="font-weight:normal">3</span> | <span style="font-weight:normal">4</span> | <span style="font-weight:normal">5</span> | <span style="font-weight:normal">6</span> |
+| --- | :---: | :---: | :---: | :---: | :---: | :---: |
+|Geschwindigkeit in km/h |  50.0    | 48.9  | 45.7 | 41.8 | 40.0 | 45.0 |
+|  |
 
-\begin{align*} s_1 &= a_1 = \frac{1}{2}\\
-s_2 &= a_1 + a_2 =  \frac{1}{2} + \frac{1}{4} = \frac{3}{4}\\
-s_3 &= a_1 + a_2 + a_3 = \frac{1}{2} + \frac{1}{4} + \frac{1}{8} = \frac{7}{8}\\
-\vdots\\
-s_n &= a_1 + a_2 + \ldots + a_n =  \frac{1}{2} + \frac{1}{4} + \dots +
-\left(\frac{1}{2}\right)^{n} \end{align*}
+Wenn jetzt danach gefragt wird, mit welcher Durchschnittsgeschwindigkeit das
+Auto in diesen sechs Sekunden unterwegs war, bilden wir den Mittelwert. Dazu
+addieren wir die sechs Geschwindigkeiten und teilen durch die Anzahl der
+Geschwindigkeitsmessungen.
 
-Jedes Folgenglied $(s_n)$ enthält Summen. Jede dieser Summen wird
-**Partialsumme** genannt. Die Folge aus Partialsummen wiord **Reihe** genannt.
+$$\frac{1}{6}\big(50.0 + 48.9 + 45.7 + 41.8 + 40.0 + 45.0 \big) \approx 45.23.$$
 
-```{admonition} Was ist ... eine Reihe?
-Eine Reihe ist eine Folge, die aus einer anderen Folge durch Summation gebildet wird. Etwas präziser formuliert starten wir mit einer Folge $(a_k)$ und bilden draus die Folge der Partialsummen nach dem Schema
+Die Durchschnittgeschwindigkeit betrug also 45.23 km/h. Einen guten Eindruck der
+einzelnen Messwerte im Vergleich zu ihrem Mittelwert vermittelt das folgende
+Streudiagramm. Die blauen Kreise stehen für die gemessenen Werte aus der
+Tabelle. Auf der x-Achse sind die Zeitpunkte, auf der y-Achse die
+Geschwindigkeiten. Die schwarze Gerade repräsentiert den Mittelwert als
+konstante Funktion.
 
-$$s_n = a_1 + a_2 + \ldots + a_n = \sum_{k=1}^{n} a_k.$$
+<div id="chap03_sec01_fig01" class="jxgbox" style="width:75%; aspect-ratio:16/9; margin: 0 auto;""></div>
+<script type="text/javascript">
+    board = JXG.JSXGraph.initBoard('chap03_sec01_fig01', 
+        {boundingbox:[-1, 53, 8, 32], axis:false, showCopyright: false});
+    let axis0 = board.create('axis', [[0.0, 35.0], [1.0, 35.0]], {name:'Zeit [s]', withLabel:true});
+    let axis1 = board.create('axis', [[0.0, 35.0], [0.0, 36.0]], {name:'Geschwindigkeit [km/h]', 
+                    withLabel:true, label: {position: 'rt', offset: [-20, -15]}});
+    let x_blue = [1.0,  2.0, 3.0,   4.0,  5.0,  6.0]; 
+    let y_blue = [50.0, 48.9, 45.7, 41.8, 40.0, 45.0];
+    for (let i = 0; i < 6; i++) {
+        board.create('point', [x_blue[i], y_blue[i]],
+        {name:'', size:3, fillColor:'#005a94', strokeColor:'#005a94', fixed:true});
+    }
+    board.create('line', [[-.5,45.23],[7.5,45.23]], 
+      {straightFirst:false, straightLast:false, strokeWidth:2, strokeColor:'#000000', fixed:true})
+</script><br>
 
-Die Folge $(s_n)$ wird dann Reihe zu der Folge $(a_k)$ genannt.
-```
+Allgemein können wir den Mittelwert von Messwerten folgendermaßen berechnen. Wir
+bezeichnen die Anzahl der Messungen mit $N$ und die einzelnen Messungen mit
+$y_1, y_2, \ldots, y_N$. Für den Mittelwert führen wir die Abkürzung $\bar{y}$
+ein. Dann wird der Mittelwert nach der Formel
 
-## Konvergenz und Divergenz von Reihen
+$$\bar{y} = \frac{1}{N}\big(y_1 + y_2 + \ldots + y_n \big)$$
 
-Reihen sind also nichts anderes als Folgen. Allerdings haben Reihen eine
-besondere Struktur, da sie ja sehr systematisch durch Summation aus Folgen
-gebildet werden. Das hilft später, Kriterien für die Konvergenz und Divergenz
-von Reihen zu finden, die diese Systematik ausnutzen.
+berechnet. Um die Pünktchen in der Formel zu sparen, verwenden wir das
+Summensymbol $\Sigma$:
 
-```{admonition} Was ist ... eine konvergente Reihe?
+$$\bar{y} = \frac{1}{N} \sum_{i=1}^{N} y_i.$$
+
+Zusammenfassend halten wir folgende Definition eines Mittelwertes fest.
+
+```{admonition} Was ist ... der Mittelwert?
 :class: note
-Eine Reihe wird konvergent genannt, wenn die Folge der Partialsummen gegen einen Grenzwert konvergiert. Dieser Grenzwert wird dann mit dem mathematischen Symbol
+Der Mittelwert einer Liste von Zahlen ist die Summe der Zahlen geteilt durch ihre Anzahl. Berechnet wird der Mittelwert mit der Formel
 
-$$\sum_{k=1}^{\infty} a_k$$
+$$\bar{y} = \frac{1}{N} \sum_{i=1}^{N} y_i.$$
 
-bezeichnet. 
+Dabei ist $\bar{y}$ die Bezeichnung für den Mittelwert, $N$ die Anzahl der Zahlen und $y_i$ sind die einzelnen Zahlen.
 ```
 
-Im Falle von Konvergenz wird also einfach der Limes $\lim_{n \to \infty}$
-weggelassen und der Index $n$ durch das Unendlich-Symbol $\infty$ ersetzt, wie
-die rot markierten Bezeichnungen zeigen:
+## Mehr ist besser  
 
-$$\lim_{n \to \infty} s_n = \lim_{\textcolor{red}{n \to \infty}}
-\sum_{k=1}^{\textcolor{red}{n}} a_k = \sum_{k=1}^{\textcolor{red}{\infty}}
-a_k.$$
+In einer Sekunde kann ganz schön viel passieren. Wir gehen jetzt davon aus, dass
+die Geschwindigkeit des Autos zweimal pro Sekunde gemessen wurde und nicht nur
+einmal pro Sekunde.
 
-Eigentlich darf diese Bezeichnung nur dann verwendet werden, wenn die Reihe auch
-wirklich konvergiert. Oft wird diese Bezeichnung aber auch für Reihen im
-Allgemeinen verwendet.
+Die Geschwindigkeit zu den Zeitpunkten 1.5 s, 2.5 s, 3.5 s, 4.5 s und 5.5 s
+ergänzen unsere bisherigen Messungen und können als rote Kreise in dem folgenden
+Diagramm abgelesen werden.
 
-```{admonition} Was ist ... eine divergente Reihe?
+<div id="chap03_sec01_fig02" class="jxgbox" style="width:75%; aspect-ratio:16/9; margin: 0 auto;""></div>
+<script type="text/javascript">
+var board = JXG.JSXGraph.initBoard('chap03_sec01_fig02', { 
+  boundingbox: [-1, 53, 8, 32], axis:false,
+  showCopyright: false
+});
+var l1 = board.create('axis', [[0.0, 35.0], [1.0, 35.0]], {name:'Zeit [s]', withLabel:true});
+var l2 = board.create('axis', [[0.0, 35.0], [0.0, 36.0]], {name:'Geschwindigkeit [km/h]', withLabel:true, label: {position: 'rt', offset: [-20, -15]}});
+//board.create('functiongraph', [function(x){return 50.0;},0.0, 1.0], {dash:2, strokeWidth:2, strokeColor:'#005a94'});
+//board.create('functiongraph', [function(x){return 1/10520*(711*Math.pow(x,4)-4772*Math.pow(x,3)-189*Math.pow(x,2)+11850*x+518400);},1.0, 6.0], {strokeWidth:2,strokeColor:'#005a94'});
+//board.create('functiongraph', [function(x){return -5*x*x+70*x-195;},6.0, 7.0], {dash:2, strokeWidth:2,strokeColor:'#005a94'});
+var op1 = board.create('point',[1.0,50.0],{name:'', size:3, fillColor:'#005a94', strokeColor:'#005a94', fixed:true});
+var op2 = board.create('point',[2.0,48.9],{name:'', size:3, fillColor:'#005a94', strokeColor:'#005a94', fixed:true});
+var op3 = board.create('point',[3.0,45.7],{name:'', size:3, fillColor:'#005a94', strokeColor:'#005a94', fixed:true});
+var op4 = board.create('point',[4.0,41.8],{name:'', size:3, fillColor:'#005a94', strokeColor:'#005a94', fixed:true});
+var op5 = board.create('point',[5.0,40.0],{name:'', size:3, fillColor:'#005a94', strokeColor:'#005a94', fixed:true});
+var op6 = board.create('point',[6.0,45.0],{name:'', size:3, fillColor:'#005a94', strokeColor:'#005a94', fixed:true});
+var p1 = board.create('point',[1.5,49.7], {name:'49.7 km/h', size:3, fillColor:'#e60000', strokeColor:'#e60000', fixed:true});
+var p2 = board.create('point',[2.5,47.5], {name:'47.5 km/h', size:3, fillColor:'#e60000', strokeColor:'#e60000', fixed:true});
+var p3 = board.create('point',[3.5,43.7], {name:'43.7 km/h', size:3, fillColor:'#e60000', strokeColor:'#e60000', fixed:true});
+var p4 = board.create('point',[4.5,40.4], {name:'40.4 km/h', size:3, fillColor:'#e60000', strokeColor:'#e60000', fixed:true});
+var p5 = board.create('point',[5.5,41.3], {name:'41.3 km/h', size:3, fillColor:'#e60000', strokeColor:'#e60000', fixed:true});
+board.create('line', [[-.5,44.91],[7.5,44.91]], 
+        {straightFirst:false, straightLast:false, strokeWidth:2, strokeColor:'#000000', fixed:true})
+</script><br>
+
+An der Berechnung des Mittelwertes ändert sich nicht, aber normalerweise ist er
+bei 11 Messungen genauer als bei sechs Messungen. Wir rechnen also 
+
+$$\frac{1}{11}\big(50.0 + 49.7 + 48.9 + 47.5 + 45.7 + 43.7 + 41.8 + 40.4 + 40.0
++ 41.3 + 45 \big) \approx 44.91.$$
+
+Noch genauer würde es werden, wenn wir noch mehr Messwerte hinzunehmen. Der
+Mittelwert wäre dann perfekt, wenn wir unendliche viele Messungen hätten. Dann
+wäre der Mittelwert der Grenzwert
+
+$$\bar{y} = \lim_{N\to\infty} \frac{1}{N} \sum_{i=1}^{N} y_i.$$
+
+Das setzt aber voraus, dass wir kontinuerlich die Geschwindigkeit messen. Oder
+anders ausgedrückt, das setzt voraus, dass wir die Geschwindigkeit als eine
+Funktion darstellen können, als ein sogenanntes Zeit-Geschwindigkeitsdiagramm.
+Für den perfekten Mittelwert müssen wir also den Mittelwert der Funktion
+ausrechnen, aber was ist der Mittelwert einer Funktion?
+
+## Mittelwert einer Funktion
+
+Um einen Weg zu finden, den Mittelwert $m$ einer Funktion $f$ zu berechnen,
+starten wir erstmal mit einigen wenigen Messwerten. In unserem Beispiel können
+wir die Zeitpunkte, zu denen eine Messung durchgeführt wird, mit $x_1$, $x_2$,
+usw. bis $x_N$ ausdrücken. Die dazugehörigen Geschwindigkeitenmessungen bzw.
+Funktionswerte bezeichnen wir dann mit $f(x_1)$, $f(x_2)$ usw. bis $f(x_N)$.
+Dann gilt für die Berechnung des Mittelwertes
+
+$$m = \frac{1}{N} \sum_{i=1}^{N} f(x_i).$$
+
+Aber eigentlich wollen wir ja den Grenzwert 
+
+$$m = \lim_{N\to\infty} \frac{1}{N} \sum_{i=1}^{N} f(x_i)$$
+
+ausrechnen. Um diesen Grenzwert auszurechnen, wenden wir jetzt zwei Tricks an.
+Wenn wir unendlich viele Messungen nehmen, um den Mittelwert auszurechnen,
+können wir eine Messung auch weglassen. Bei unendlich vielen Messungen fällt
+eine Messung nicht ins Gewicht. Wir lassen die letzte Messung weg. Dadurch
+müssen wir nur noch durch $(N-1)$ teilen und bis $N-1$ summieren. Damit schreibt
+sich die Formel für den Mittelwert nun als
+
+$$m = \lim_{N\to\infty} \frac{1}{N-1} \sum_{i=1}^{N-1} f(x_i).$$
+
+Das war der erste Trick. Nun erweitern wir die Messungen der Geschwindigkeit mit
+dem Bruch $(b-a)/(b-a)$. Dabei ist $a$ der Startpunkt, zu dem die Messungen
+beginnen, und $b$ der Endpunkt. Durch $b-a$ wird also das Intervall auf der
+x-Achse beschreiben, in dem wir die Funktion $f$ mitteln wollen. Am Wert der
+Summe ändert sich nichts, wenn wir jeden Messwert mit dem Bruch $(b-a)/(b-a)$
+multiplizieren, da wir ja nur mit 1 multiplizieren. Wir können also mit beiden
+Tricks den Mittelwert schreiben als
+
+$$m = \lim_{N\to\infty} \frac{1}{N-1} \sum_{i=1}^{N-1} f(x_i)\cdot \frac{b-a}{b-a}.$$
+
+Wenn in einer Summe jeder Term mit einer konstanten Zahl multipliziert wird,
+dürfen wir diese konstante Zahl in die Summe reinmultiplizieren oder
+ausklammern. Wir klammern jetzt die Zahl $1/(b-a)$ aus und multiplizieren
+stattdessen die Zahl $1/(N-1)$ in die Summe.
+
+$$m = \frac{1}{b-a} \lim_{N\to\infty} \sum_{i=1}^{N-1} f(x_i)\cdot
+\frac{b-a}{N-1}.$$
+
+Das Intervall $b-a$ wird also in $(N-1)$ kleine Stückchen unterteilt. Jedes
+Stückchen ist dabei gleich groß und könnte mit $\Delta x$ bezeichnet werden. In
+der folgenden Grafik zeigen wir das anhand unserer 11 Messwerte. Wir lassen die
+letzte Messung weg und erhalten $\Delta x = 0.5 s$. Der Startzeitpunkt ist $a =
+1 s$ und der Endzeitpunkt ist $b = 6 s$.
+
+```{figure} pics/chapter03_sec01_fig03.png
+---
+width: 600px
+name: chapter03_sec01_fig03
+---
+Annäherung des Mittelwertes einer Funktion $f$ über die Summe von Produkten $f(x_i)\cdot \Delta x$ im Intervall $[a,b]$
+```
+
+Wir summieren also über die Flächeninhalte $f(x_i)\cdot \Delta x$. Wenn die
+Anzahl der Messungen zunimmt, werden die Stückchen $\Delta x$ kleiner, dafür
+summieren wir über mehr Rechtecke. Diesen Grenzwert kennen wir schon, es ist der
+orientierte Flächeninhalt der Funktion $f$ mit der x-Achse, also das Integral 
+
+$$m = \frac{1}{b-a} \int_{a}^{b} f(x) \, dx.$$
+
+```{admonition} Was ist ... der Mittelwert einer Funktion?
 :class: note
-Eine Reihe wird divergent genannt, wenn die Folge der Partialsummen divergiert, also *nicht* gegen einen Grenzwert konvergiert. 
+Der Mittelwert einer Funktion in einem Intervall ist das bestimmte Integral auf diesem Intervall geteilt durch die Intervall-Länge.
+
+Etwas präziser formuliert berechnet sich der Mittelwert $m$ einer stetigen Funktion $f$ im Intervall $[a,b]$ über die Formel
+
+$$m = \frac{1}{b-a} \int_{a}^{b} f(x) \, dx.$$
 ```
 
-```{dropdown} Video zu Reihen - Einführung, Konvergenz und Divergenz
-<iframe width="560" height="315" src="https://www.youtube.com/embed/1vQ67chDVbU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-```
+## Beispiel
 
-## Die geometrische Reihe
+Berechnen Sie den Mittelwert der Funktion $f(x) = -0.05x^2+1.2x+7.8$ in dem
+Intervall $[0,24]$. Vergleichen Sie anschließend Ihre Ergebnis mit der Rechnung
+in dem folgenden Video.
 
-Manche Reihen sind wichtiger als andere und haben daher einen eigenen Namen. Die
-geometrische Reihe gehört zu diesen wichtigen Reihen. Sie heißt geometrische
-Reihe, weil sie aus der geometrischen Folge gebildet wird.
-
-Zur Erinnerung: eine Folge heißt geometrische Folge, wenn der Quotient zweier
-benachbarter Folgenglieder eine konstante Zahl ist. Wird also $a_2$ durch $a_1$
-geteilt, kommt eine Zahl heraus, die wir $q$ nennen. Und wird $a_3$ durch $a_2$
-geteilt, dann kommt auch $q$ heraus. Und das gleiche gilt für $a_{4} / a_{3}$
-und für $a_{5} / a_{4}$, es kommt immer $q$ heraus, also
-
-$$\frac{a_{k+1}}{a_k} = q.$$
-
-Das bedeutet aber auch, dass alle Folgenglieder $a_k$ auf das erste Folgenglied
-$a_1$ zurückgeführt werden können:
-
-\begin{align*} a_1 &= a_1 \\
-a_2 &= a_1 \cdot q \\
-a_3 &= a_2 \cdot q = \left( a_1 \cdot q \right) \cdot q = a_1 \cdot q^2 \\
-a_4 &= a_3 \cdot q = \left( a_1 \cdot q^2 \right) \cdot q = a_1 \cdot q^3 \\
-\vdots \\
-a_{k} &= a_{k-1} \cdot q = a_1 \cdot q^{k-1} \\ \end{align*}
-
-Damit haben wir folgende Partialsummen:
-
-\begin{align*} s_1 &= a_1 \\
-s_2 &= a_1 + a_2 = a_1 + a_1 \cdot q = a_1 \cdot \big(1 + q\big) \\
-s_3 &= a_1 + a_2 + a_3 = a_1 + a_1 \cdot q + a_1 \cdot q^2 = a_1 \cdot \big(1 +
-q + q^2\big) \\
-\vdots \\
-s_n &= a_1 + a_2 + \dots + a_n = a_1 + a_1 \cdot q + \ldots + a_1 \cdot q^{n-1}
-= a_1 \cdot \big(1 + q + \ldots q^{n-1}\big) \\
-\end{align*}
-
-```{admonition} Was ist ... die geometrische Reihe?
-:class: note
-Die geometrische Reihe ist die Folge $(s_n)$ der Partialsummen
-
-$$s_n = 1 + q + q^2 + q^3 + \ldots + q^{n-1} = \sum_{k=0}^{n} q^{k}.$$
-```
-
-Falls Sie sich wundern, dass wir diesmal mit $k=0$ als Index anfangen, das ist
-einfach praktischer, weil $q^{0} = 1$ gilt und wir uns umständliche
-Schreibweisen sparen können.
-
-Was die Konvergenz bzw. Divergenz anbelangt, es kommt auf die Zahl $q$ an, ob
-die geometrische Reihe konvergiert oder divergiert.
-
-```{admonition} Wann konvergiert die geometrische Reihe?
-:class: note
-Wenn der Betrag der Zahl $q$ kleiner als Eins ist, also $|q|<1$ gilt, dann konvergiert die geometrische Reihe und ihr Grenzwert ist
-
-$$\sum_{k=0}^{\infty} q^k = \frac{1}{1-q}.$$
-
-Für $|q|\geq 1$ divergiert die geometrische Reihe.
-```
-
-```{dropdown} Video zu geometrische Reihe
-<iframe width="560" height="315" src="https://www.youtube.com/embed/y_9ccgrwTZo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-```
-
-```{dropdown} Mathe-Song zur geometrischen Reihe von DorFuchs
-<iframe width="560" height="315" src="https://www.youtube.com/embed/2TCDiK7GpNM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-```
-
-## Die harmonische Reihe
-
-Jetzt haben wir uns das Beispiel einer konvergenten Reihe angesehen
-(zumindestens, wenn $|q|<1$), jetzt kommt eine berühmte divergente Reihe, die
-harmonische Reihe.
-
-```{admonition} Was ist ... die hamonische Reihe?
-:class: note
-Die harmonische Reihe wird aus der Summe der harmonischen Folge $a_k = \frac{1}{k}$ gebildet:
-
-$$s_n = \frac{1}{1} + \frac{1}{2} + \frac{1}{3} + \ldots + \frac{1}{n} = \sum_{k=1}^{n} \frac{1}{k}.$$
-
-Sie ist divergent.
-```
-
-```{dropdown} Video zu harmonische Reihe
-<iframe width="560" height="315" src="https://www.youtube.com/embed/n2ELwRkgKhc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-```
+<iframe width="560" height="315" src="https://www.youtube.com/embed/FC-0Z_DIJs8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>

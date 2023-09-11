@@ -1,4 +1,4 @@
-# 11. Einführung Differentialgleichungen 
+# 11. Doppelintegral in Polarkoordinaten und Dreifachintegral
 
 Themen:
 

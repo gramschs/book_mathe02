@@ -1,134 +1,129 @@
-# 10.1 Polarkoordinaten
+# 10.1 Idee von Doppelintegralen
 
-Polarkoordinaten bieten eine alternative Möglichkeit, die Position von Punkten
-in der Ebene zu beschreiben. Die häufigste Beschreibung der Position von Punkten
-sind kartesische Koordinaten. Insbesondere bei technischen Systemen, bei denen
-Symmetrie oder Rotation wichtig sind, sind Polarkoordinaten jedoch eine bessere
-Möglichkeit, die Position der Punkte anzugeben.
+Nachdem wir in den vorhergehenden Kapiteln Ableitungen von eindimensionalen
+Funktionen auf mehrdimensionale Funktionen verallgemeinert haben, werden wir in
+diesem Kapitel Integrale von Funktionen mit zwei Variablen betrachten, also von
+Funktionen $f:\mathbb{R}^2\to\mathbb{R}$. Dieses sogenannte Doppelintegral hat
+in der Technischen Mechanik viele Anwendungen und wird insbesondere bei
+Schwerpunktsberechnungen gebraucht.
 
 
 ## Lernziele
 
 ```{admonition} Lernziele
 :class: important
-* Sie wissen, was **Polarkoordinaten** sind.
-* Sie können kartesische Koordinaten in Polarkoordinaten umrechnen.
-* Sie können Polarkoordinaten in kartesische Koordinaten umrechnen.
+Sie können erklären, was ein **Doppelintegral** $\iint_{A} f(x,y)\, dA$ ist.
 ```
 
-## Kartesische Koordinaten
+## Grundkonzept
 
-Das am häufigsten verwendete Koordinatensystem ist das **kartesische
-koordinatensystem**. Es ist nach dem Methematiker [René
-Descartes](https://de.wikipedia.org/wiki/René_Descartes) benannt, obwohl
-Descartes ein solches Koordinatensystem nie beschrieben hat. Das Hauptmerkmal
-von kartesischen Koordinatensytemen ist, dass die Koordinatenachsen senkrecht
-aufeinander stehen. Die folgende Abbildung zeigt ein zweidimensionales
-kartesisches Koordinatensystem mit dem Koordinatenursprung $(0,0)$ und einem
-Punkt an der Position $P(2\sqrt{3},2)$.
+Bei eindimensionalen Funktionen entspricht das Integral $\int_{a}^{b} f(x)\, dx$
+dem Flächeninhalt der Fläche $A$ (siehe Abbildung).
 
-```{figure} pics/fig10_01.svg
+```{figure} pics/part10_integral1D.svg
 ---
-width: 75%
-name: fig10_01
+width: 300px
+name: fig_part10_integral1D
 ---
-Kartesisches zweidimensionales Koordinatensystem
+Integral entspricht dem Flächeninhalt
+
+([Quelle:](https://commons.wikimedia.org/w/index.php?curid=1039841) "Wikimedia", Autor: 4C - Eigenes Werk, based on JPG version, Lizenz: [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/))
 ```
 
-## Polarkoordinaten
+Dementsprechend beschreibt das Doppelintegral einer Funktion von zwei Variablen
+das Volumen $V$, das zwischen der Fläche $B$ (B wie Boden oder Bereich) und der
+Fläche $f(x,y)$ entsteht. Dabei stammen die Punkte $(x,y)$ aus $B$.
 
-Eine alternative Beschreibung ist, die Entfernung und den Winkel zum Punkt
-anzugeben. Die Entfernung des Punktes wird bezogen auf den Koordinatenursprung
-angegeben. Der Winkel wird gegen den Uhrzeigersinn von der positiven x-Achse aus
-gemessen.  Üblicherweise wird zuerst die Entfernung $r$ notiert und dann der
-Winkel $\varphi$, also
-
-$$(r, \varphi).$$
-
-Diese Art von Koordinaten wird als **Polarkoordinaten** bezeichnet. 
-
-In dem Beispiel wird so aus dem Punkt $(2\sqrt{3},2)$ in kartesischen
-Koordinaten der Punkt $(4, 30^{\circ})$, wie wir gleich sehen, wenn wir die
-Umrechnung von kartesischen zu Polarkoordinaten behandeln.
-
-```{figure} pics/fig10_02.svg
+```{figure} pics/part10_sketch_doubleintegral.svg
 ---
-width: 75%
-name: fig10_02
+width: 600px
+name: fig_part10_sketch_doubleintegral
 ---
-Zweidimensionales Polarkoordinatensystem
+Integral entspricht dem Volumen
 ```
 
-## Umrechnung von Polarkoordinaten in kartesische Koordinaten
+Doppelintegrale haben vielfältige Anwendungen in den Ingenieurwissenschaften.
+Sie dienen u.a. zur Berechnung von 
 
-Die Umrechnung von Polarkoordinaten in kartesische Koordinaten erfolgt mit den
-Formeln:
+* Flächeninhalt,
+* Schwerpunkt einer Fläche und
+* Flächenmoment.
 
-\begin{align*}
-x &= r\cdot \cos(\varphi) \\ 
-y &= r\cdot \sin(\varphi)
-\end{align*}
 
-Bei dem obigen Beispiel ist $r=4$ und $\varphi=30^{\circ}$. Mit den beiden
-Formeln zur Berechnung der kartesischen Koordinaten $x$ und $y$ erhalten wir
+## Definition Doppelintegral
 
-\begin{align*}
-x &= 4 \cdot \cos(30^{\circ}) = 2\sqrt{3}, \\ 
-y &= 4 \cdot \sin(30^{\circ}) = 2.
-\end{align*}
+Für die Berechnung des Volumens der Funktion $f(x,y)$ über einem Bereich $B$
+gehen wir so vor, wie im eindimensionalen Fall bei der Berechnung des
+Flächeninhaltes einer eindimensionalen Funktion. Wir zerlegen den Bereich $B$
+mit einem sogenannten **Gitter**, d.h. wir teilen den Bereich $B$ in viele
+kleine Teilbereiche ein, die wir mit $B_i$ durchnummerieren. Von jedem
+Teilbereich $B_i$ können wir die x- und y-Koordinate des Mittelpunkts bestimmen.
+Diese Koordinaten nennen wir $(x_i,y_i)$. 
 
-Zur Erinnerung folgt hier eine Einführung in Polarkoordinaten:
+Wenn die Teilbereiche rechteckig sind (das müssen sie nicht sein, wir könnten
+auch beispielsweise Kreise oder andere Muster nehmen), dann kann das Volumen der
+Säule $V_i$ (siehe Abbildung rote Säule) berechnet werden als
 
-```{dropdown} Video "Ebene Polarkoordinaten" von Daniel Jung
-<iframe width="560" height="315" src="https://www.youtube.com/embed/l8ZF4m0fPxM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-```
+$$V_i = f(x_i,y_i) \cdot \Delta x \cdot \Delta y.$$
 
-## Umrechnung von kartesischen Koordinaten in Polarkoordinaten
-
-Die umgekehrte Berechnung von kartesischen Koordinaten in Polarkoordinaten ist
-etwas schwieriger. Die Berechnung des Radius $r$ ist noch einfach, da ein
-rechtwinkliges Dreieck vorliegt und wir den Satz des Pythagoras anwenden können:
-
-$$r = \sqrt{x^2 + y^2}.$$
-
-Danach können wir entweder die Ankathete $x$ oder die Gegenkathete $y$ ausnutzen, um den Winkel $\varphi$ zu bestimmen. Im rechtwinkligen Dreieck gelten
-
-$$\cos(\varphi) =
-\frac{x}{r} \quad \text{ oder } \quad \sin(\varphi) = \frac{y}{r}.$$
-
-```{figure} pics/fig10_03.svg
+```{figure} pics/part10_sketch_volume.svg
 ---
-width: 75%
-name: fig10_03
+width: 600px
+name: fig_part10_sketch_volume
 ---
-Die Umrechnung kartesische Koordinaten in Polarkoordinaten nutzt das rechtwinklige Dreieck aus.
+Volumen als Summe einzelner Säulen, hier mit rechteckigem Gitter
 ```
 
-Mit den Umkehrfunktionen der Sinus- und der Kosinusfunktion erhalten wir
+Jetzt müssen wir noch alle Säulen aufaddieren, um eine Annäherung für das
+Volumen zwischen Boden und Deckel $f(x,y)$ zu bekommen, also
 
-$$\varphi = \arccos\left(\frac{x}{r}\right) \quad \text{ oder } \quad \varphi =
-\arcsin\left( \frac{y}{r}\right).$$
+$$V\approx f(x_1,y_1) \cdot \Delta y \cdot \Delta x + f(x_2,y_2) \cdot \Delta y
+\cdot \Delta x + \ldots f(x_N,y_N) \cdot \Delta y \cdot \Delta x.$$
 
-Wo ist jetzt das Problem? Lösen wir die Gleichung
+Dabei haben wir jetzt angenommen, dass alle Teilbereiche $B_i$ die gleiche Form
+haben und als Rechtecke mit den Seitenlängen $\Delta x$ und $\Delta y$
+beschrieben werden. Wir können das Summenzeichen verwenden:
 
-$$\sin(\varphi) = \frac{1}{2},$$
+$$V\approx \sum_{i=1}^{N} f(x_i,y_i) \cdot \Delta y \cdot \Delta x .$$
 
-so hat diese Gleichung innerhalb des Intervalls $[0, 360^{\circ}]$ zwei
-Lösungen, nämlich $30^{\circ}$ und $150^{\circ}$. Aber welcher Winkel ist der
-richtige Winkel? Da die x-Koordinate positiv ist und der Punkt $P(2\sqrt{2},2)$
-im 1. Quadranten liegt, ist der richtige Winkel $\varphi = 30^{\circ}$.
-Überprüfen Sie daher immer durch eine Zeichnung, welches der richtige Winkel ist.
+Wenn wir nun die Teilbereiche $B_i$ immer kleiner machen, so brauchen wir immer
+mehr Säulen, also $N\rightarrow\infty$. Falls der Grenzwert 
 
-In dem folgenden Video wird gezeigt, wie eine Funktion mit Variablen in
-kartesischen Koordinaten in eine Funktion mit Variablen in Polarkoordinaten
-umgerechnet werden kann:
+$$\lim_{N\rightarrow\infty} \sum_{i=1}^{N} f(x_i,y_i) \cdot \Delta y  \cdot
+\Delta x$$
 
-```{dropdown} Video zu "Polarkoordinaten" von Prof. Hoever
-<iframe width="560" height="315" src="https://www.youtube.com/embed/MCRDcJKeR20" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+existiert, nennen wir ihn Integral von $f(x,y)$ über $B$ und schreiben das als
+sogenanntes **Doppelintegral**
+
+$$V = \iint_{B} f(x,y) \, dy \, dx.$$
+
+Bei den obigen Überlegungen sind wir davon ausgegangen, dass der Bereich $B$ in
+rechteckige Teilbereiche $B_i$ aufgeteilt wird. Das muss nicht so sein, wir
+hätten auch andere Aufteilungen wählen können. Daher ist die etwas allgemeiner
+formulierte Definition eines Doppelintegrals wie folgt:
+
+```{admonition} Was ist ... ein Doppelintegral?
+:class: note
+Doppelintegrale sind Integrale für zweidimensionale Funktionen
+$f:\mathbb{R}^2\to\mathbb{R}$ mit einer Definitionsmenge $A \subset
+\mathbb{R}^2$. Die Definitionsmenge $A$ wird in $N$ Teilgebiete zerlegt, die
+$A_i$ genannt werden. Der Flächeninhalt dieser Teilgebiete wird mit $\Delta A_i$
+bezeichnet. Wenn der Grenzwert
+
+$$\lim_{N\rightarrow\infty} \sum_{i=1}^{N} f(x_i,y_i) \cdot \Delta A_i$$
+
+existiert, wird er als Doppelintegral von $f$ über $A$ bezeichnet und mit
+
+$$\iint_{A} f(x,y)\, dA$$
+
+abgekürzt.
 ```
 
-```{admonition} Weiteres Lernmaterial
-:class: seealso
-https://de.serlo.org/mathe/45643/polarkoordinaten
-https://studyflix.de/mathematik/polarkoordinaten-1476
+Im folgenden Video wird das Grundkonzept des Doppelintegrals erklärt. Im nachfolgenden Video wird die geometrische Interpretation des Doppelintegrals zur Berechnung eines Volumens präsentiert.
+
+```{dropdown} Video zu "Doppelintegral - Definition" von Mathematische Methoden
+<iframe width="560" height="315" src="https://www.youtube.com/embed/7VjP3jEGW24" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+```
+```{dropdown} Video zu "Doppelintegral - Volumeninterpretation" von Mathematische Methoden
+<iframe width="560" height="315" src="https://www.youtube.com/embed/FtoHJaUR6T8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 ```

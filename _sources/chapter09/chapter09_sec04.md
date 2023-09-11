@@ -1,125 +1,145 @@
-# 9.4 Anwendung: Schwerpunktberechnung
+# 9.4 Extremwertprobleme mit Nebenbedingung
 
-Häufig wird das Doppelintegral dazu benutzt, den Schwerpunkt einer ebenen
-homogenen Platte zu berechnen.
+Im letzten Abschnitt haben wir uns mit Extremwerten einer mehrdimensionalen
+Funktion beschäftigt. An die Variablen haben wir aber keinerlei Bedingungen
+gestellt. In der Praxis kommt es aber oft vor, dass Einschränkungen an die
+Variablen selbst gestellt werden. Diese werden oft als eine zusätzliche
+Gleichung formuliert. In diesem Kapitel lernen wir eine Lösungsmethoden kennen.
 
 ## Lernziele
 
-```{admonition} Lernziel
+```{admonition} Lernziele
 :class: important
-Sie können mit dem Doppelintegral den Schwerpunkt $(x_S, y_S)$ einer homogenen ebenen Fläche mit den Formeln
-
-$$x_S = \frac{1}{A}\iint_{A} x \, dA \quad \text{ und } \quad y_S = \frac{1}{A} \iint_{A} y\, dA$$
-
-berechnen.
+* Sie wissen, was ein Extremwertproblem mit Nebenbedingung ist.
+* Sie wissen, was eine Zielfunktion ist.
+* Sie können ein Extremwertproblem mit Nebenbedingung durch die
+  Eliminationsmethode lösen.
 ```
 
-## Schwerpunktberechnung
+## Was sind Extremwertprobleme mit Nebenbedingung?
 
-Für den Schwerpunkt einer ebenen homogenen Fläche gilt für die x-Koordinate die
-folgende Formel
+Eine Funktion zu maximieren oder zu minimieren ohne weitere Einschränkung ist in
+der Praxis oft unrealistisch. Natürlich würde jeder gerne reich sein und das
+Einkommen maximieren. Aber ist man auch bereit, die notwendigen Überstunden zu
+leisten oder für einen besser bezahlten Job umzuziehen?
 
-$$x_S = \frac{1}{A} \int_{x=a}^{x=b} \left( \int_{y=f_u(x)}^{y=f_o(x)} x \, dy \right) \, dx$$ 
+Wir betrachten ein Beispiel aus der Geometrie. Ein Draht der Länge l = 1 m soll
+zu einem Rechteck gebogen werden. Wie müssen die Seitenlängen $x$ und $y$
+gewählt werden, damit der Flächeninhalt des Rechtecks maximal ist?
 
-und für die y-Koordinate des Schwerpunkts die Formel
+Als erstes übersetzen wir die Angaben in eine Funktion und eine Gleichung. Das
+Ziel ist ein maximaler Flächeninhalt. Wir bezeichnen den Flächeninhalt mit $A$.
+Er berechnet sich mit der Formel
 
-$$y_S = \frac{1}{A} \int_{x=a}^{x=b} \left( \int_{y=f_u(x)}^{y=f_o(x)} y \, dy \right) \, dx.$$ 
+$$A(x,y) = x \cdot y.$$
 
-## Beispiel Schwerpunktberechnung
+Die Funktion $A$ wird **Zielfunktion** genannt. Sie hängt von zwei Variablen ab.
+Würden wir jetzt ohne weitere Einschränkungen das Maximum dieser Funktion
+suchen, so müssten wir die Seitenlängen $x$ und $y$ unendlich groß wählen. Ein
+Minimum liegt offensichtich vor, wenn $x = 0$ und $y = 0$. Aber das Minimum ist
+ja nicht gesucht.
 
-Wir bleiben bei dem Beispiel der vorhergehenden Kapitel mit den beiden Funktionen
+Erst durch die **Nebenbedingung**, dass die Länge des Drahtes 1 m ist, ist die
+Suche nach einem Maximum sinnvoll. Diese Nebenbedingung formulieren wir als
+Gleichung, indem wir den Umfang des Rechtecks gleich der Länge des Drahtes
+setzen:
 
-$$f_o(x) = -x + 1$$
+$$2\cdot x + 2 \cdot y = 1.$$
 
-und
+Streng genommen haben wir damit den Definitionsbereich der Funktion $A$
+eingeschränkt. Das folgende Video erläutert nochmal, was ein Extremwertproblem
+mit Nebenbedingungen ist.
 
-$$f_u(x) = x^2 - 5.$$
-
-Aus dem letzten Kapitel wissen wir bereits, dass sich die beiden Funktionen in
-den Punkten $(-3,4)$ und $(2,-1)$ schneiden.
-
-```{figure} pics/part09_plot_example02.svg
----
-width: 75%
-name: part09_plot_example04
----
-Gesucht ist der Schwerpunkt der schraffierten Fläche $A$, die durch die Gerade $f_o(x)=-x+1$ und die Parabel $f_u(x)=x^2-5$ umrandet wird.
+```{dropdown} Video zu "Extrema mit Nebenbedingungen" von Mathematische Methoden
+<iframe width="560" height="315" src="https://www.youtube.com/embed/MMpljay-naE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 ```
 
-Gesucht ist diesmal der Schwerpunkt dieser ebenen homogenen Fläche.
+## Eliminationsmethode
 
-**1. Schritt: Berechnung Flächeninhalt $A$**
+Für die Lösung von Extremwertproblemen mit Nebenbedingungen gibt es mehrere
+Strategien. Im Folgenden betrachten wir die sogenannte **Eliminationsmethode**.
+Gehen Sie wie folgt vor, wenn Sie ein Extremwertproblem mit Nebenbedingungen
+lösen wollen.
 
-Zuerst wird der Flächeninhalt $A$ mit dem Doppelintegral
+1. Formulieren Sie die Zielfunktion als Funktion von mehreren Variablen.
+2. Formulieren Sie die Nebenbedingung als Gleichung.
+3. Lösen Sie die Gleichung nach einer Variable auf.
+4. Setzen Sie die aufgelöste Gleichung in die Zielfunktion ein.
+5. Jetzt hängt die Zielfunktion von einer Variable weniger ab und die Gleichung
+   braucht nicht mehr berücksichtigt werden (sie ist ja indirekt jetzt in der
+   Zielfunktion enthalten0.
+6. Bestimmen Sie die Extremwerte ohne Nebenbedingung.
+7. Beantworten Sie mit diesen Erkenntnissen die ursprüngliche Frage.
 
-$$A= \iint_{A}1\, dA = \int_{x=-3}^{x=2} \left(\int_{y=x^2-5}^{y=-x+1}
-1 \; dy\right)dx$$
+Schritt 1 und 2 haben wir für das Beispiel mit dem Draht schon durchgeführt.
+Also lösen wir jetzt die Gleichung $2\cdot x + 2 \cdot y = 1$ nach $y$ auf:
 
-berechnet. Aus dem letzten Kapitel wissen wir bereits, dass $A = \frac{125}{6}
-\approx 20.8333$.
+$$y = \frac{1}{2} \left(1 - 2\cdot x\right) = -x + \frac{1}{2}$$
 
-**2. Schritt: Berechnung x-Schwerpunkt $x_S$**
+und setzen die nach $y$ aufgelöste Gleichung in die Zielfunktion ein:
 
-Nun berechnen wir den Schwerpunkt der Fläche in x-Richtung. Dazu wird die Formel 
+$$\tilde{A}(x) = x \cdot (-x+\frac{1}{2}).$$
 
-$$x_S = \frac{1}{A} \int_{x=a}^{x=b} \left( \int_{y=f_u(x)}^{y=f_o(x)} x \, dy \right) \, dx$$ 
+Um deutlich zu machen, dass diese neue Funktion nur noch von $x$ abhängt, haben
+wir ihr einen neuen Namen gegeben, nämlich $\tilde{A}$. Jetzt vereinfachen wir
+die Funktion noch, indem wir ausmultiplizieren:
 
-verwendet. Zuerst berechnen wir das innere Integral $I(x)$, indem wir nach $y$ integrieren:
+$$\tilde{A}(x) = x \cdot (-x+\frac{1}{2}) = -x^2 + \frac{1}{2}x.$$
 
-\begin{align*}
-I(x)&= \int_{y=f_u(x)}^{y=f_o(x)} x \, dy = \\
-    &= \int_{y=x^2-5}^{y=-x+1} x \, dy = \\
-    &= \big[ xy \big]_{y=x^2-5}^{y=-x+1} = \\
-    &= x\cdot(-x+1) - x\cdot(x^2-5) = \\
-    &= -x^3-x^2+6x.
-\end{align*}
+Als letztes folgt Schritt 6, die Bestimmung der Extremwerte. Dazu bilden wir die
+erste Ableitung
 
-Dann wird das innere Integral in das äußere Integral eingesetzt und nach $x$
-integriert:
+$$\tilde{A}'(x) = -2 x + \frac{1}{2}.$$
 
-\begin{align*}
-\int_{x=-3}^{x=2} -x^3-x^2+6x \, dx &= \left[-\frac{1}{4}x^4-\frac{1}{3}x^3+3x^2\right]_{x=-3}^{x=2} = \\
-&= -\frac{125}{12} \approx -10.417.\\
-\end{align*}
-
-Nun kann alles in die Formel eingesetzt werden:
-
-$$x_S = \frac{1}{\frac{125}{6}} \cdot \left(-\frac{125}{12}\right) = -\frac{1}{2}.$$
-
-**3. Schritt: Berechnung y-Schwerpunkt $y_S$**
-
-Als letztes wird der Schwerpunkt der Fläche in y-Richtung berechnet. Dazu wird die Formel
-
-$$y_S = \frac{1}{A} \int_{x=a}^{x=b} \left( \int_{y=f_u(x)}^{y=f_o(x)} y \, dy \right) \, dx$$
-
-verwendet. Zunächst berechnen wir wieder einmal nur das innere Integral durch Integration nach $y$:
+Für die Suche nach Kandidaten für Extremstellen setzen wir $\tilde{A}'(x) = 0$ und
+bestimmen die Nullstellen:
 
 \begin{align*}
-I(x) &= \int_{y=x^2-5}^{-x+1} y \, dy = \\
-    &= \big[\frac{1}{2}y^2 \big]{y=x^2-5}^{-x+1} = \\
-    &= \frac{1}{2}\left(-x+1\right)^2 - \frac{1}{2}\left( x^2-5\right)^2 = \\
-    &= -\frac{1}{2}x^4+\frac{11}{2}x^2-x-12.
+-2x + \frac{1}{2} &= 0 \\
+\Rightarrow x &= \frac{1}{4}.\\
 \end{align*}
 
-Eingesetzt in das äußere Integral erhalten wir
+Als nächstes überprüfen wir, ob $x = \frac{1}{4}$ wirklich ein Extremum ist,
+indem wir die 2. Ableitung bilden
 
-\begin{align*}
-\int_{x=-3}^{x=2} -\frac{1}{2}x^4+\frac{11}{2}x^2-x-12 \, dx 
-&= \left[-\frac{1}{10}x^5+\frac{11}{6}x^3-\frac{1}{2}x^2-12x \right]_{x=-3}^{x=2} = \\
-&= -\frac{125}{6} \approx -20.8333.
-\end{align*}
+$$\tilde{A}''(x) = -2$$
 
-Nun noch alles in die ursprüngliche Formel einsetzen und wir erhalten für den Schwerpunkt $y_S$ in y-Richtung:
+und dann den Punkt $x = \frac{1}{4}$ einsetzen:
 
-$$y_S = \frac{1}{\frac{125}{6}} \cdot \left( -\frac{125}{6} \right) = -1.$$
+$$\tilde{A}''(\frac{1}{4}) = -2.$$
 
-Damit ist der Schwerpunkt der Fläche $(-0.5, -1)$.
+Da die 2. Ableitung an der Stelle $x = \frac{1}{4}$ negativ ist, können wir
+schlussfolgern, dass $x = \frac{1}{4}$ eine Extremstelle ist und dass es sich
+dabei um ein Maximum (Hochpunkt) handelt.
 
-```{figure} pics/part09_plot_example03.svg
----
-width: 75%
-name: part09_plot_example05
----
-Schwerpunkt der schraffierten Fläche $A$, die durch die Gerade $f_o(x)=-x+1$ und die Parabel $f_u(x)=x^2-5$ umrandet wird.
+Damit haben wir die erste Seitenlänge $x$ gefunden. Jetzt fehlt noch Schritt 7,
+die Beantwortung der ursprünglichen Frage. Es war ja nach den beiden
+Seitenlängen gefragt. Aus der Nebenbedingung
+
+$$2\cdot x + 2 \cdot y = 1$$
+
+erhalten wir aber für $x = \frac{1}{4}$ sofort, dass $y=\frac{1}{4}$ gelten
+muss.
+
+Das vom Flächeninhalt her maximale Rechteckt mit einer Drahtlänge von 1 m
+entsteht, wenn der Draht zu einem Quadrat gebogen wird, bei dem jede Seite eine
+Länge von 0.25 m hat.
+
+Das folgende Video zeigt die Eliminationsmethode.
+
+```{dropdown} Video zu "Eliminationsmethode" von Mathematische Methoden
+<iframe width="560" height="315" src="https://www.youtube.com/embed/JOMh6OiGZbA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 ```
 
+In dem folgenden Video werden mögliche Kandidaten für Extrema gesucht. Es wird
+allerdings nicht überprüft, ob die Kandidaten wirklich Extremwerte sind.
+
+```{dropdown} Video zu "Beispiel Eliminationsmethode" von Mathematische Methoden
+<iframe width="560" height="315" src="https://www.youtube.com/embed/4AFGmSQwpH4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+```
+
+Ein weiteres Beispiel wird in dem folgenden Video gezeigt.
+
+```{dropdown} Video zu "Extremwertaufgaben" von Magda liebt Mathe
+<iframe width="560" height="315" src="https://www.youtube.com/embed/4D4hpF8w69Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+```

@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>4.1 Berechnung Taylorreihe &#8212; Mathematik 2 Maschinenbau</title>
+    <title>4.1 Reihen &#8212; Mathematik 2 Maschinenbau</title>
   
   
   
@@ -71,8 +71,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'chapter04/chapter04_sec01';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="4.2 Restglied von Taylorreihen" href="chapter04_sec02.html" />
-    <link rel="prev" title="4. Taylorreihen" href="chapter04_sec00.html" />
+    <link rel="next" title="4.2 Konvergenzkriterien für Reihen" href="chapter04_sec02.html" />
+    <link rel="prev" title="4. Reihen und Potenzreihen" href="chapter04_sec00.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="None"/>
   </head>
@@ -157,111 +157,122 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Part 1. Integrale</span></p>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Differential- und Integralrechnung</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter01/chapter01_sec00.html">1. Wiederholung Integral</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter01/chapter01_sec01.html">1.1 Stammfunktion und bestimmtes Integral</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter01/chapter01_sec02.html">1.2 Eigenschaften von Integralen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter01/chapter01_sec03.html">1.3 Partielle Integration</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter01/chapter01_sec04.html">1.4 Integration durch Substitution</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter01/chapter01_sec00.html">1. Differentialrechnung</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter01/chapter01_sec01.html">1.1 Ableitungen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter01/chapter01_sec02.html">1.2 Rechenregeln Ableitungen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter01/chapter01_sec03.html">1.3 Extremwerte</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter01/chapter01_sec04.html">1.4 Extremwerte mit Nebenbedingung</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter01/chapter01_sec05.html">Übungen</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter02/chapter02_sec00.html">2. Anwendungen Integral</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter02/chapter02_sec01.html">2.1 Integrieren ist Mitteln</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter02/chapter02_sec02.html">2.2 Fläche zwischen zwei Graphen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter02/chapter02_sec03.html">2.3 Bogenlänge</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter02/chapter02_sec04.html">2.4 Volumen von Rotationskörpern</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter02/chapter02_sec00.html">2. Integrale</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter02/chapter02_sec01.html">2.1 Stammfunktion und bestimmtes Integral</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter02/chapter02_sec02.html">2.2 Eigenschaften von Integralen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter02/chapter02_sec03.html">2.3 Partielle Integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter02/chapter02_sec04.html">2.4 Integration durch Substitution</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter02/chapter02_sec05.html">Übungen</a></li>
 </ul>
 </li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Part 2. Funktionenreihen</span></p>
-<ul class="current nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter03/chapter03_sec00.html">3. Reihen und Potenzreihen</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec01.html">3.1 Reihen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec02.html">3.2 Konvergenzkriterien für Reihen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec03.html">3.3 Potenzreihen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec04.html">3.4 Konvergenz von Potenzreihen</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter03/chapter03_sec00.html">3. Anwendungen Integral</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec01.html">3.1 Integrieren ist Mitteln</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec02.html">3.2 Fläche zwischen zwei Graphen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec03.html">3.3 Bogenlänge</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec04.html">3.4 Volumen von Rotationskörpern</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec05.html">Übungen</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="chapter04_sec00.html">4. Taylorreihen</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">4.1 Berechnung Taylorreihe</a></li>
-<li class="toctree-l2"><a class="reference internal" href="chapter04_sec02.html">4.2 Restglied von Taylorreihen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="chapter04_sec03.html">4.3 Wichtige Potenzreihen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="chapter04_sec04.html">4.4 Rechnen mit Potenzreihen</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Funktionenreihen</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="chapter04_sec00.html">4. Reihen und Potenzreihen</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">4.1 Reihen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter04_sec02.html">4.2 Konvergenzkriterien für Reihen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter04_sec03.html">4.3 Potenzreihen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter04_sec04.html">4.4 Konvergenz von Potenzreihen</a></li>
 <li class="toctree-l2"><a class="reference internal" href="chapter04_sec05.html">Übungen</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter05/chapter05_sec00.html">5. Fourierreihen</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter05/chapter05_sec01.html">5.1 Periodische Funktionen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter05/chapter05_sec02.html">5.2 Fourierreihen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter05/chapter05_sec03.html">5.3 Beispiele für Fourierreihen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter05/chapter05_sec04.html">5.4 Rechenregeln Fourierreihen</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter05/chapter05_sec00.html">5. Taylorreihen</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter05/chapter05_sec01.html">5.1 Berechnung Taylorreihe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter05/chapter05_sec02.html">5.2 Restglied von Taylorreihen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter05/chapter05_sec03.html">5.3 Wichtige Potenzreihen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter05/chapter05_sec04.html">5.4 Rechnen mit Potenzreihen</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter05/chapter05_sec05.html">Übungen</a></li>
 </ul>
 </li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Part 3. Mehrdimensionale Analysis</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter06/chapter06_sec00.html">6. Funktionen von mehreren Variablen und partielle Ableitungen</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter06/chapter06_sec01.html">6.1 Definition und Visualisierung</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter06/chapter06_sec02.html">6.2 Stetigkeit</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter06/chapter06_sec03.html">6.3 Partielle Ableitungen und Gradient</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter06/chapter06_sec04.html">6.4 Höhere partielle Ableitungen und Hesse-Matrix</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter06/chapter06_sec00.html">6. Fourierreihen</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter06/chapter06_sec01.html">6.1 Periodische Funktionen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter06/chapter06_sec02.html">6.2 Fourierreihen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter06/chapter06_sec03.html">6.3 Beispiele für Fourierreihen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter06/chapter06_sec04.html">6.4 Rechenregeln Fourierreihen</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter06/chapter06_sec05.html">Übungen</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter07/chapter07_sec00.html">7. Richtungsableitungen und vektorwertige Funktionen</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter07/chapter07_sec01.html">7.1 Gradient und Richtungsableitung</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter07/chapter07_sec02.html">7.2 Vektorwertige Funktionen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter07/chapter07_sec03.html">7.3 Jacobi-Matrix</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter07/chapter07_sec04.html">7.4 Mehrdimensionale Kettenregel</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Höhere Differentialrechnung</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter07/chapter07_sec00.html">7. Funktionen von mehreren Variablen und partielle Ableitungen</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter07/chapter07_sec01.html">7.1 Definition und Visualisierung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter07/chapter07_sec02.html">7.2 Stetigkeit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter07/chapter07_sec03.html">7.3 Partielle Ableitungen und Gradient</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter07/chapter07_sec04.html">7.4 Höhere partielle Ableitungen und Hesse-Matrix</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter07/chapter07_sec05.html">Übungen</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter08/chapter08_sec00.html">8. Linearisierung und Extremwerte</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter08/chapter08_sec01.html">8.1 Tangentenfunktionen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter08/chapter08_sec02.html">8.2 Totales Differential</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter08/chapter08_sec03.html">8.3 Extremwerte</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter08/chapter08_sec04.html">8.4 Extremwertprobleme mit Nebenbedingung</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter08/chapter08_sec00.html">8. Richtungsableitungen und vektorwertige Funktionen</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter08/chapter08_sec01.html">8.1 Gradient und Richtungsableitung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter08/chapter08_sec02.html">8.2 Vektorwertige Funktionen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter08/chapter08_sec03.html">8.3 Jacobi-Matrix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter08/chapter08_sec04.html">8.4 Mehrdimensionale Kettenregel</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter08/chapter08_sec05.html">Übungen</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter09/chapter09_sec00.html">9. Doppelintegral</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter09/chapter09_sec01.html">9.1 Idee von Doppelintegralen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter09/chapter09_sec02.html">9.2 Berechnung von Doppelintegralen in kartesischen Koordinaten</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter09/chapter09_sec03.html">9.3 Anwendung: Flächenberechnung</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter09/chapter09_sec04.html">9.4 Anwendung: Schwerpunktberechnung</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter09/chapter09_sec00.html">9. Linearisierung und Extremwerte</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter09/chapter09_sec01.html">9.1 Tangentenfunktionen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter09/chapter09_sec02.html">9.2 Totales Differential</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter09/chapter09_sec03.html">9.3 Extremwerte</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter09/chapter09_sec04.html">9.4 Extremwertprobleme mit Nebenbedingung</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter09/chapter09_sec05.html">Übungen</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter10/chapter10_sec00.html">10. Doppelintegral in Polarkoordinaten und Dreifachintegral</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter10/chapter10_sec01.html">10.1 Polarkoordinaten</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter10/chapter10_sec02.html">10.2 Doppelintegral in Polarkoordinaten</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter10/chapter10_sec03.html">10.3 Dreifachintegral</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter10/chapter10_sec04.html">10.4 Anwendungen Dreifachintegral</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Höhere Integralrechnung</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter10/chapter10_sec00.html">10. Doppelintegral</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter10/chapter10_sec01.html">10.1 Idee von Doppelintegralen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter10/chapter10_sec02.html">10.2 Berechnung von Doppelintegralen in kartesischen Koordinaten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter10/chapter10_sec03.html">10.3 Anwendung: Flächenberechnung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter10/chapter10_sec04.html">10.4 Anwendung: Schwerpunktberechnung</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter10/chapter10_sec05.html">Übungen</a></li>
 </ul>
 </li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Part 4. Differentialgleichungen</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter11/chapter11_sec00.html">11. Einführung Differentialgleichungen</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter11/chapter11_sec01.html">11.1 Grundbegriffe</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter11/chapter11_sec02.html">11.2 Anfangs- und Randwertproblem</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter11/chapter11_sec03.html">11.3 Separable Differentialgleichungen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter11/chapter11_sec04.html">11.4 Exakte Differentialgleichungen</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter11/chapter11_sec00.html">11. Doppelintegral in Polarkoordinaten und Dreifachintegral</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter11/chapter11_sec01.html">11.1 Polarkoordinaten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter11/chapter11_sec02.html">11.2 Doppelintegral in Polarkoordinaten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter11/chapter11_sec03.html">11.3 Dreifachintegral</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter11/chapter11_sec04.html">11.4 Anwendungen Dreifachintegral</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter11/chapter11_sec05.html">Übungen</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter12/chapter12_sec00.html">12. Lineare Differentialgleichungen</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-12"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter12/chapter12_sec01.html">12.1 Lineare DGL 1. Ordnung</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter12/chapter12_sec02.html">12.2 Lösung homogene lineare DGL 1. Ordnung</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter12/chapter12_sec03.html">12.3 Lösung inhomogene lineare DGL 1. Ordnung</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter12/chapter12_sec04.html">12.4 Homogene Systeme aus zwei linearen DGL 1. Ordnung</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Differentialgleichungen</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter12/chapter12_sec00.html">12. Einführung Differentialgleichungen</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-12"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter12/chapter12_sec01.html">12.1 Grundbegriffe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter12/chapter12_sec02.html">12.2 Anfangs- und Randwertproblem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter12/chapter12_sec03.html">12.3 Separable Differentialgleichungen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter12/chapter12_sec04.html">12.4 Exakte Differentialgleichungen</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter12/chapter12_sec05.html">Übungen</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter13/chapter13_sec00.html">13. Lineare Differentialgleichungen</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-13"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter13/chapter13_sec01.html">13.1 Lineare DGL 1. Ordnung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter13/chapter13_sec02.html">13.2 Lösung homogene lineare DGL 1. Ordnung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter13/chapter13_sec03.html">13.3 Lösung inhomogene lineare DGL 1. Ordnung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter13/chapter13_sec04.html">13.4 Homogene Systeme aus zwei linearen DGL 1. Ordnung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter13/chapter13_sec05.html">Übungen</a></li>
 </ul>
 </li>
 </ul>
@@ -415,7 +426,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>4.1 Berechnung Taylorreihe</h1>
+    <h1>4.1 Reihen</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -426,9 +437,10 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lernziele">Lernziele</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#taylorpolynom">Taylorpolynom</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kochrezept-zur-berechnung-von-taylorpolynomen">Kochrezept zur Berechnung von Taylorpolynomen</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#taylorreihe">Taylorreihe</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#was-ist-eine-partialsumme-und-was-ist-eine-reihe">Was ist eine Partialsumme und was ist eine Reihe?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#konvergenz-und-divergenz-von-reihen">Konvergenz und Divergenz von Reihen</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#die-geometrische-reihe">Die geometrische Reihe</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#die-harmonische-reihe">Die harmonische Reihe</a></li>
 </ul>
             </nav>
         </div>
@@ -440,119 +452,187 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="berechnung-taylorreihe">
-<h1>4.1 Berechnung Taylorreihe<a class="headerlink" href="#berechnung-taylorreihe" title="Permalink to this headline">#</a></h1>
-<p>Im Kapitel über Potenzreihen haben wir uns bereits mit der Frage beschäftigt, in
-welchem Intervall eine Potenzreihe eine gegebene Funktion gut approximiert. Was
-uns aber noch fehlt ist die Frage, wie wir zu solchen Potenzreihen kommen. Daher
-gibt es in diesem Kapitel eine Anleitung dazu.</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="reihen">
+<span id="ref03-sec01"></span><h1>4.1 Reihen<a class="headerlink" href="#reihen" title="Permalink to this headline">#</a></h1>
+<p>Reihen sind sehr spezielle Folgen. Falls Sie Ihr Wissen über Folgen auffrischen
+wollen, können Sie die Internetseite <a class="reference external" href="https://gramschs.github.io/book_mathe01/chapter09/chapter09_sec00.html">Folgen, Grenzwerte und
+Stetigkeit</a>
+aus der Mathematik 1 Vorlesung als Startpunkt nehmen.</p>
 <section id="lernziele">
 <h2>Lernziele<a class="headerlink" href="#lernziele" title="Permalink to this headline">#</a></h2>
 <div class="important admonition">
 <p class="admonition-title">Lernziele</p>
 <ul class="simple">
-<li><p>Sie kennen die Formel für ein <strong>Taylorpolynom der Ordnung n</strong> auswendig:</p></li>
+<li><p>Sie können den Fachbegriff <strong>Partialsumme</strong> einer Reihe erklären.</p></li>
+<li><p>Sie können den Fachbegriff <strong>Reihe</strong> erklären.</p></li>
+<li><p>Sie wissen, was eine <strong>konvergente</strong> Reihe ist und wie der Grenzwert bezeichnet wird.</p></li>
+<li><p>Sie wissen, was eine <strong>divergente</strong> Reihe ist.</p></li>
+<li><p>Sie kennen als Beispiel für Reihen die</p>
+<ul>
+<li><p><strong>geometrische Reihe</strong> und</p></li>
+<li><p><strong>harmonische Reihe</strong>.</p></li>
 </ul>
-<div class="math notranslate nohighlight">
-\[T_n(x) =\sum_{k=0}^{n} \frac{f^{(k)}(x_0)}{k!} \cdot (x-x_0)^k.\]</div>
-<ul class="simple">
-<li><p>Sie kennen die Formel für die <strong>Taylorreihe</strong> auswendig:</p></li>
+</li>
 </ul>
-<div class="math notranslate nohighlight">
-\[T(x)=\sum_{k=0}^{\infty} \frac{f^{(k)}(x_0)}{k!} (x-x_0)^k.\]</div>
 </div>
 </section>
-<section id="taylorpolynom">
-<h2>Taylorpolynom<a class="headerlink" href="#taylorpolynom" title="Permalink to this headline">#</a></h2>
-<p>Für Funktionen, die genügend oft differenzierbar sind, gibt es ein Kochrezept
-zur Berechnung der Koeffizienten der dazugehörigen Potenzreihe. Um dieses
-Kochrezept anzuwenden, beschäftigen wir uns zunächst mit dem sogenannten
-Taylorpolynom.</p>
-<div class="note admonition">
-<p class="admonition-title">Was ist … ein Taylorpolynom?</p>
-<p>Ein <strong>Taylorpolynom</strong> zu einer Funktion <span class="math notranslate nohighlight">\(f\)</span> kann nur gebildet werden, wenn die Funktion <span class="math notranslate nohighlight">\(f\)</span> n-mal stetig differenzierbar ist. Wenn das aber der Fall ist, dann wird noch ein Entwicklungspunkt <span class="math notranslate nohighlight">\(x_0\)</span> gewählt. Das Taylorpolynom <span class="math notranslate nohighlight">\(T_n\)</span> zu <span class="math notranslate nohighlight">\(f\)</span> vom Grad <span class="math notranslate nohighlight">\(n\)</span> am Entwicklungspunkt <span class="math notranslate nohighlight">\(x_0\)</span> ist dann:</p>
+<section id="was-ist-eine-partialsumme-und-was-ist-eine-reihe">
+<h2>Was ist eine Partialsumme und was ist eine Reihe?<a class="headerlink" href="#was-ist-eine-partialsumme-und-was-ist-eine-reihe" title="Permalink to this headline">#</a></h2>
+<p>Das Lieblingsbeispiel vieler Mathematiker:innen zur Einführung von Reihen ist
+das vom griechischem Philosophen
+<a class="reference external" href="https://de.wikipedia.org/wiki/Zenon_von_Elea">Zenon</a> beschriebene Paradoxon von
+<a class="reference external" href="https://de.wikipedia.org/wiki/Achilles_und_die_Schildkr%C3%B6te">Achilles und der
+Schildkröte</a>. Wir
+betrachten hier rein mathematische Beispiele.</p>
+<p>Eine Reihe wird aus einer Folge gebildet. Als Beispiel betrachten wir die Folge
+<span class="math notranslate nohighlight">\((a_k)\)</span> mit <span class="math notranslate nohighlight">\(a_k=\left(\frac{1}{2}\right)^{k}\)</span>. Explizit hingeschrieben lautet
+die Folge <span class="math notranslate nohighlight">\((a_k)\)</span> also: <span class="math notranslate nohighlight">\(\frac{1}{2}\)</span>, <span class="math notranslate nohighlight">\(\frac{1}{4}\)</span>, <span class="math notranslate nohighlight">\(\frac{1}{8}\)</span>,
+<span class="math notranslate nohighlight">\(\frac{1}{16}\)</span>, <span class="math notranslate nohighlight">\(\frac{1}{32}\)</span>, usw. Daraus bilden wir eine neue Folge, die wir
+<span class="math notranslate nohighlight">\((s_n)\)</span> bezeichnen, indem wir Summen nach dem folgenden Schema bilden:</p>
 <div class="amsmath math notranslate nohighlight">
-\[\begin{align*}
-T_n(x) &amp;=f(x_0) + \frac{f'(x_0)}{1!}(x-x_0)^1 + \frac{f''(x_0)}{2!}(x-x_0)^2 + \ldots \\
-       &amp;=\sum_{k=0}^{n} \frac{f^{(k)}(x_0)}{k!} \cdot (x-x_0)^k.
-\end{align*}\]</div>
-<p>Dabei steht <span class="math notranslate nohighlight">\(k!\)</span> für die Fakultät der Zahl <span class="math notranslate nohighlight">\(k\)</span>.</p>
+\[\begin{align*} s_1 &amp;= a_1 = \frac{1}{2}\\
+s_2 &amp;= a_1 + a_2 =  \frac{1}{2} + \frac{1}{4} = \frac{3}{4}\\
+s_3 &amp;= a_1 + a_2 + a_3 = \frac{1}{2} + \frac{1}{4} + \frac{1}{8} = \frac{7}{8}\\
+\vdots\\
+s_n &amp;= a_1 + a_2 + \ldots + a_n =  \frac{1}{2} + \frac{1}{4} + \dots +
+\left(\frac{1}{2}\right)^{n} \end{align*}\]</div>
+<p>Jedes Folgenglied <span class="math notranslate nohighlight">\((s_n)\)</span> enthält Summen. Jede dieser Summen wird
+<strong>Partialsumme</strong> genannt. Die Folge aus Partialsummen wiord <strong>Reihe</strong> genannt.</p>
+<div class="admonition-was-ist-eine-reihe admonition">
+<p class="admonition-title">Was ist … eine Reihe?</p>
+<p>Eine Reihe ist eine Folge, die aus einer anderen Folge durch Summation gebildet wird. Etwas präziser formuliert starten wir mit einer Folge <span class="math notranslate nohighlight">\((a_k)\)</span> und bilden draus die Folge der Partialsummen nach dem Schema</p>
+<div class="math notranslate nohighlight">
+\[s_n = a_1 + a_2 + \ldots + a_n = \sum_{k=1}^{n} a_k.\]</div>
+<p>Die Folge <span class="math notranslate nohighlight">\((s_n)\)</span> wird dann Reihe zu der Folge <span class="math notranslate nohighlight">\((a_k)\)</span> genannt.</p>
 </div>
-<p>Hier gibt es ein Video, das die Fakultät <span class="math notranslate nohighlight">\(k!\)</span> erklärt.</p>
+</section>
+<section id="konvergenz-und-divergenz-von-reihen">
+<h2>Konvergenz und Divergenz von Reihen<a class="headerlink" href="#konvergenz-und-divergenz-von-reihen" title="Permalink to this headline">#</a></h2>
+<p>Reihen sind also nichts anderes als Folgen. Allerdings haben Reihen eine
+besondere Struktur, da sie ja sehr systematisch durch Summation aus Folgen
+gebildet werden. Das hilft später, Kriterien für die Konvergenz und Divergenz
+von Reihen zu finden, die diese Systematik ausnutzen.</p>
+<div class="note admonition">
+<p class="admonition-title">Was ist … eine konvergente Reihe?</p>
+<p>Eine Reihe wird konvergent genannt, wenn die Folge der Partialsummen gegen einen Grenzwert konvergiert. Dieser Grenzwert wird dann mit dem mathematischen Symbol</p>
+<div class="math notranslate nohighlight">
+\[\sum_{k=1}^{\infty} a_k\]</div>
+<p>bezeichnet.</p>
+</div>
+<p>Im Falle von Konvergenz wird also einfach der Limes <span class="math notranslate nohighlight">\(\lim_{n \to \infty}\)</span>
+weggelassen und der Index <span class="math notranslate nohighlight">\(n\)</span> durch das Unendlich-Symbol <span class="math notranslate nohighlight">\(\infty\)</span> ersetzt, wie
+die rot markierten Bezeichnungen zeigen:</p>
+<div class="math notranslate nohighlight">
+\[\lim_{n \to \infty} s_n = \lim_{\textcolor{red}{n \to \infty}}
+\sum_{k=1}^{\textcolor{red}{n}} a_k = \sum_{k=1}^{\textcolor{red}{\infty}}
+a_k.\]</div>
+<p>Eigentlich darf diese Bezeichnung nur dann verwendet werden, wenn die Reihe auch
+wirklich konvergiert. Oft wird diese Bezeichnung aber auch für Reihen im
+Allgemeinen verwendet.</p>
+<div class="note admonition">
+<p class="admonition-title">Was ist … eine divergente Reihe?</p>
+<p>Eine Reihe wird divergent genannt, wenn die Folge der Partialsummen divergiert, also <em>nicht</em> gegen einen Grenzwert konvergiert.</p>
+</div>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
-Video zu “Fakultät” von Mathematrick<div class="sd-summary-down docutils">
+Video zu Reihen - Einführung, Konvergenz und Divergenz<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/nVdUcZmmU7w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/1vQ67chDVbU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </div>
 </details></section>
-<section id="kochrezept-zur-berechnung-von-taylorpolynomen">
-<span id="ref04-sec01-kochrezept"></span><h2>Kochrezept zur Berechnung von Taylorpolynomen<a class="headerlink" href="#kochrezept-zur-berechnung-von-taylorpolynomen" title="Permalink to this headline">#</a></h2>
-<ol class="arabic simple">
-<li><p>Erst einmal folgende Frage beantworten: Bis zu welchem Polynomgrad <span class="math notranslate nohighlight">\(n\)</span> soll
-die Funktion <span class="math notranslate nohighlight">\(f(x)\)</span> approximiert werden? <span class="math notranslate nohighlight">\(\rightarrow n\)</span> aufschreiben</p></li>
-<li><p>Die ersten <span class="math notranslate nohighlight">\(n\)</span> Ableitungen der Funktion <span class="math notranslate nohighlight">\(f\)</span> bestimmen, also <span class="math notranslate nohighlight">\(f'(x), f''(x),
-f'''(x), f^{(iv)}(x), \ldots\)</span>.</p></li>
-<li><p>Die Koeffizienten ausrechnen, indem nun der Entwicklungspunkt <span class="math notranslate nohighlight">\(x_0\)</span> in die
-Funktion <span class="math notranslate nohighlight">\(f\)</span> und in die Ableitungen eingesetzt wird.</p></li>
-<li><p>Die Fakultäten ausrechnen.</p></li>
-<li><p>Alles in die Formel für das Taylorpolynom einsetzen.</p></li>
-</ol>
-<p>Probieren wir das an einem Beispiel aus. Die Funktion <span class="math notranslate nohighlight">\(f(x)=\sin(x)\)</span> soll durch
-ein Taylorpolynom Grad 3 am Entwicklungspunkt <span class="math notranslate nohighlight">\(x_0=0\)</span> approximiert werden.</p>
-<p>Schritt 1: Wir halten fest, der Grad ist 3 (<span class="math notranslate nohighlight">\(n=3\)</span>), d.h. wir brauchen die
-ersten drei Ableitungen.</p>
-<p>Schritt 2: Wir bilden die ersten drei Ableitungen:</p>
-<div class="amsmath math notranslate nohighlight">
-\[\begin{align*} 
-f'(x)  &amp;= \cos(x) \\
-f''(x) &amp;= -\sin(x) \\
-f^{(3)}(x) &amp;= -\cos(x) \end{align*}\]</div>
-<p>Schritt 3: Wir rechnen die Koeffizienten des Taylorpolynoms aus, indem wir <span class="math notranslate nohighlight">\(x_0
-= 0\)</span> in die Funktion und die ersten drei Ableitungen einsetzen:</p>
-<div class="amsmath math notranslate nohighlight">
-\[\begin{align*}
-f(0) &amp;= \sin(0) = 0 \\
-f'(0) &amp;= \cos(0) = 1 \\
-f''(0) &amp;= - \sin(0) = 0 \\
-f^{(3)}(0) &amp;= -\cos(0) = -1 \end{align*}\]</div>
-<p>Schritt 4: Die Fakultäten bis 3 werden ausgerechnet:</p>
+<section id="die-geometrische-reihe">
+<h2>Die geometrische Reihe<a class="headerlink" href="#die-geometrische-reihe" title="Permalink to this headline">#</a></h2>
+<p>Manche Reihen sind wichtiger als andere und haben daher einen eigenen Namen. Die
+geometrische Reihe gehört zu diesen wichtigen Reihen. Sie heißt geometrische
+Reihe, weil sie aus der geometrischen Folge gebildet wird.</p>
+<p>Zur Erinnerung: eine Folge heißt geometrische Folge, wenn der Quotient zweier
+benachbarter Folgenglieder eine konstante Zahl ist. Wird also <span class="math notranslate nohighlight">\(a_2\)</span> durch <span class="math notranslate nohighlight">\(a_1\)</span>
+geteilt, kommt eine Zahl heraus, die wir <span class="math notranslate nohighlight">\(q\)</span> nennen. Und wird <span class="math notranslate nohighlight">\(a_3\)</span> durch <span class="math notranslate nohighlight">\(a_2\)</span>
+geteilt, dann kommt auch <span class="math notranslate nohighlight">\(q\)</span> heraus. Und das gleiche gilt für <span class="math notranslate nohighlight">\(a_{4} / a_{3}\)</span>
+und für <span class="math notranslate nohighlight">\(a_{5} / a_{4}\)</span>, es kommt immer <span class="math notranslate nohighlight">\(q\)</span> heraus, also</p>
 <div class="math notranslate nohighlight">
-\[0!=1, \quad 1!=1, \quad 2!=2, \quad 3!=6.\]</div>
-<p>Schritt 5: Wir setzen alles in die Formel für das Taylorpolynom ein:</p>
+\[\frac{a_{k+1}}{a_k} = q.\]</div>
+<p>Das bedeutet aber auch, dass alle Folgenglieder <span class="math notranslate nohighlight">\(a_k\)</span> auf das erste Folgenglied
+<span class="math notranslate nohighlight">\(a_1\)</span> zurückgeführt werden können:</p>
 <div class="amsmath math notranslate nohighlight">
-\[\begin{align*} T_3(x) &amp;= f(x_0) + f'(x_0)\cdot (x-x_0) + \frac{f''(x_0)}{2}\cdot
-(x-x_0)^2 + \frac{f^{(3)}(x_0)}{6} \cdot (x-x_0)^3 = \\
-    &amp;= \sin(0) + 1\cdot (x-0) + \frac{0}{2}\cdot (x-0)^2 + \frac{-1}{6}\cdot (x-0)^3 = \\
-    &amp;= x - \frac{1}{6}x^3.
+\[\begin{align*} a_1 &amp;= a_1 \\
+a_2 &amp;= a_1 \cdot q \\
+a_3 &amp;= a_2 \cdot q = \left( a_1 \cdot q \right) \cdot q = a_1 \cdot q^2 \\
+a_4 &amp;= a_3 \cdot q = \left( a_1 \cdot q^2 \right) \cdot q = a_1 \cdot q^3 \\
+\vdots \\
+a_{k} &amp;= a_{k-1} \cdot q = a_1 \cdot q^{k-1} \\ \end{align*}\]</div>
+<p>Damit haben wir folgende Partialsummen:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*} s_1 &amp;= a_1 \\
+s_2 &amp;= a_1 + a_2 = a_1 + a_1 \cdot q = a_1 \cdot \big(1 + q\big) \\
+s_3 &amp;= a_1 + a_2 + a_3 = a_1 + a_1 \cdot q + a_1 \cdot q^2 = a_1 \cdot \big(1 +
+q + q^2\big) \\
+\vdots \\
+s_n &amp;= a_1 + a_2 + \dots + a_n = a_1 + a_1 \cdot q + \ldots + a_1 \cdot q^{n-1}
+= a_1 \cdot \big(1 + q + \ldots q^{n-1}\big) \\
 \end{align*}\]</div>
-<p>Am besten das folgende Video gucken :-)</p>
+<div class="note admonition">
+<p class="admonition-title">Was ist … die geometrische Reihe?</p>
+<p>Die geometrische Reihe ist die Folge <span class="math notranslate nohighlight">\((s_n)\)</span> der Partialsummen</p>
+<div class="math notranslate nohighlight">
+\[s_n = 1 + q + q^2 + q^3 + \ldots + q^{n-1} = \sum_{k=0}^{n} q^{k}.\]</div>
+</div>
+<p>Falls Sie sich wundern, dass wir diesmal mit <span class="math notranslate nohighlight">\(k=0\)</span> als Index anfangen, das ist
+einfach praktischer, weil <span class="math notranslate nohighlight">\(q^{0} = 1\)</span> gilt und wir uns umständliche
+Schreibweisen sparen können.</p>
+<p>Was die Konvergenz bzw. Divergenz anbelangt, es kommt auf die Zahl <span class="math notranslate nohighlight">\(q\)</span> an, ob
+die geometrische Reihe konvergiert oder divergiert.</p>
+<div class="note admonition">
+<p class="admonition-title">Wann konvergiert die geometrische Reihe?</p>
+<p>Wenn der Betrag der Zahl <span class="math notranslate nohighlight">\(q\)</span> kleiner als Eins ist, also <span class="math notranslate nohighlight">\(|q|&lt;1\)</span> gilt, dann konvergiert die geometrische Reihe und ihr Grenzwert ist</p>
+<div class="math notranslate nohighlight">
+\[\sum_{k=0}^{\infty} q^k = \frac{1}{1-q}.\]</div>
+<p>Für <span class="math notranslate nohighlight">\(|q|\geq 1\)</span> divergiert die geometrische Reihe.</p>
+</div>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
-Video zu “Taylorpolynom berechnen” von Mathematrick<div class="sd-summary-down docutils">
+Video zu geometrische Reihe<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/o95cOqnLekw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/y_9ccgrwTZo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Mathe-Song zur geometrischen Reihe von DorFuchs<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/2TCDiK7GpNM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </div>
 </details></section>
-<section id="taylorreihe">
-<h2>Taylorreihe<a class="headerlink" href="#taylorreihe" title="Permalink to this headline">#</a></h2>
-<p>Und was ist nun die Taylorreihe? Ganz einfach, ein Taylorpolynom, das bis
-Unendlich geht, sieht nur kompliziert aus, wenn man es formal aufschreibt.</p>
+<section id="die-harmonische-reihe">
+<h2>Die harmonische Reihe<a class="headerlink" href="#die-harmonische-reihe" title="Permalink to this headline">#</a></h2>
+<p>Jetzt haben wir uns das Beispiel einer konvergenten Reihe angesehen
+(zumindestens, wenn <span class="math notranslate nohighlight">\(|q|&lt;1\)</span>), jetzt kommt eine berühmte divergente Reihe, die
+harmonische Reihe.</p>
 <div class="note admonition">
-<p class="admonition-title">Was ist … eine Taylorreihe?</p>
-<p>Zu einer Funktion <span class="math notranslate nohighlight">\(f\)</span>, die unendlich oft differenzierbar ist, kann die folgende Potenzreihe</p>
+<p class="admonition-title">Was ist … die hamonische Reihe?</p>
+<p>Die harmonische Reihe wird aus der Summe der harmonischen Folge <span class="math notranslate nohighlight">\(a_k = \frac{1}{k}\)</span> gebildet:</p>
 <div class="math notranslate nohighlight">
-\[T(x)=\sum_{k=0}^{\infty} \frac{f^{(k)}(x_0)}{k!} (x-x_0)^k\]</div>
-<p>gebildet werden. Diese Potenzreihe wird Taylorreihe zu <span class="math notranslate nohighlight">\(f\)</span> am Entwicklungspunkt <span class="math notranslate nohighlight">\(x_
-0\)</span> genannt.</p>
+\[s_n = \frac{1}{1} + \frac{1}{2} + \frac{1}{3} + \ldots + \frac{1}{n} = \sum_{k=1}^{n} \frac{1}{k}.\]</div>
+<p>Sie ist divergent.</p>
 </div>
-</section>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Video zu harmonische Reihe<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/n2ELwRkgKhc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+</details></section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -592,7 +672,7 @@ Unendlich geht, sieht nur kompliziert aus, wenn man es formal aufschreibt.</p>
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">4. Taylorreihen</p>
+        <p class="prev-next-title">4. Reihen und Potenzreihen</p>
       </div>
     </a>
     <a class="right-next"
@@ -600,7 +680,7 @@ Unendlich geht, sieht nur kompliziert aus, wenn man es formal aufschreibt.</p>
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">4.2 Restglied von Taylorreihen</p>
+        <p class="prev-next-title">4.2 Konvergenzkriterien für Reihen</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -623,9 +703,10 @@ Unendlich geht, sieht nur kompliziert aus, wenn man es formal aufschreibt.</p>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lernziele">Lernziele</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#taylorpolynom">Taylorpolynom</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kochrezept-zur-berechnung-von-taylorpolynomen">Kochrezept zur Berechnung von Taylorpolynomen</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#taylorreihe">Taylorreihe</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#was-ist-eine-partialsumme-und-was-ist-eine-reihe">Was ist eine Partialsumme und was ist eine Reihe?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#konvergenz-und-divergenz-von-reihen">Konvergenz und Divergenz von Reihen</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#die-geometrische-reihe">Die geometrische Reihe</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#die-harmonische-reihe">Die harmonische Reihe</a></li>
 </ul>
   </nav></div>
 

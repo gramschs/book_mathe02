@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>12.4 Homogene Systeme aus zwei linearen DGL 1. Ordnung &#8212; Mathematik 2 Maschinenbau</title>
+    <title>12.4 Exakte Differentialgleichungen &#8212; Mathematik 2 Maschinenbau</title>
   
   
   
@@ -72,7 +72,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Übungen" href="chapter12_sec05.html" />
-    <link rel="prev" title="12.3 Lösung inhomogene lineare DGL 1. Ordnung" href="chapter12_sec03.html" />
+    <link rel="prev" title="12.3 Separable Differentialgleichungen" href="chapter12_sec03.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="None"/>
   </head>
@@ -157,111 +157,122 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Part 1. Integrale</span></p>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Differential- und Integralrechnung</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter01/chapter01_sec00.html">1. Wiederholung Integral</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter01/chapter01_sec01.html">1.1 Stammfunktion und bestimmtes Integral</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter01/chapter01_sec02.html">1.2 Eigenschaften von Integralen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter01/chapter01_sec03.html">1.3 Partielle Integration</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter01/chapter01_sec04.html">1.4 Integration durch Substitution</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter01/chapter01_sec00.html">1. Differentialrechnung</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter01/chapter01_sec01.html">1.1 Ableitungen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter01/chapter01_sec02.html">1.2 Rechenregeln Ableitungen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter01/chapter01_sec03.html">1.3 Extremwerte</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter01/chapter01_sec04.html">1.4 Extremwerte mit Nebenbedingung</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter01/chapter01_sec05.html">Übungen</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter02/chapter02_sec00.html">2. Anwendungen Integral</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter02/chapter02_sec01.html">2.1 Integrieren ist Mitteln</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter02/chapter02_sec02.html">2.2 Fläche zwischen zwei Graphen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter02/chapter02_sec03.html">2.3 Bogenlänge</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter02/chapter02_sec04.html">2.4 Volumen von Rotationskörpern</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter02/chapter02_sec00.html">2. Integrale</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter02/chapter02_sec01.html">2.1 Stammfunktion und bestimmtes Integral</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter02/chapter02_sec02.html">2.2 Eigenschaften von Integralen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter02/chapter02_sec03.html">2.3 Partielle Integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter02/chapter02_sec04.html">2.4 Integration durch Substitution</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter02/chapter02_sec05.html">Übungen</a></li>
 </ul>
 </li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Part 2. Funktionenreihen</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter03/chapter03_sec00.html">3. Reihen und Potenzreihen</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec01.html">3.1 Reihen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec02.html">3.2 Konvergenzkriterien für Reihen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec03.html">3.3 Potenzreihen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec04.html">3.4 Konvergenz von Potenzreihen</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter03/chapter03_sec00.html">3. Anwendungen Integral</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec01.html">3.1 Integrieren ist Mitteln</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec02.html">3.2 Fläche zwischen zwei Graphen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec03.html">3.3 Bogenlänge</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec04.html">3.4 Volumen von Rotationskörpern</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec05.html">Übungen</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter04/chapter04_sec00.html">4. Taylorreihen</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter04/chapter04_sec01.html">4.1 Berechnung Taylorreihe</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter04/chapter04_sec02.html">4.2 Restglied von Taylorreihen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter04/chapter04_sec03.html">4.3 Wichtige Potenzreihen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter04/chapter04_sec04.html">4.4 Rechnen mit Potenzreihen</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Funktionenreihen</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter04/chapter04_sec00.html">4. Reihen und Potenzreihen</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter04/chapter04_sec01.html">4.1 Reihen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter04/chapter04_sec02.html">4.2 Konvergenzkriterien für Reihen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter04/chapter04_sec03.html">4.3 Potenzreihen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter04/chapter04_sec04.html">4.4 Konvergenz von Potenzreihen</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter04/chapter04_sec05.html">Übungen</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter05/chapter05_sec00.html">5. Fourierreihen</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter05/chapter05_sec01.html">5.1 Periodische Funktionen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter05/chapter05_sec02.html">5.2 Fourierreihen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter05/chapter05_sec03.html">5.3 Beispiele für Fourierreihen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter05/chapter05_sec04.html">5.4 Rechenregeln Fourierreihen</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter05/chapter05_sec00.html">5. Taylorreihen</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter05/chapter05_sec01.html">5.1 Berechnung Taylorreihe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter05/chapter05_sec02.html">5.2 Restglied von Taylorreihen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter05/chapter05_sec03.html">5.3 Wichtige Potenzreihen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter05/chapter05_sec04.html">5.4 Rechnen mit Potenzreihen</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter05/chapter05_sec05.html">Übungen</a></li>
 </ul>
 </li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Part 3. Mehrdimensionale Analysis</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter06/chapter06_sec00.html">6. Funktionen von mehreren Variablen und partielle Ableitungen</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter06/chapter06_sec01.html">6.1 Definition und Visualisierung</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter06/chapter06_sec02.html">6.2 Stetigkeit</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter06/chapter06_sec03.html">6.3 Partielle Ableitungen und Gradient</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter06/chapter06_sec04.html">6.4 Höhere partielle Ableitungen und Hesse-Matrix</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter06/chapter06_sec00.html">6. Fourierreihen</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter06/chapter06_sec01.html">6.1 Periodische Funktionen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter06/chapter06_sec02.html">6.2 Fourierreihen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter06/chapter06_sec03.html">6.3 Beispiele für Fourierreihen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter06/chapter06_sec04.html">6.4 Rechenregeln Fourierreihen</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter06/chapter06_sec05.html">Übungen</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter07/chapter07_sec00.html">7. Richtungsableitungen und vektorwertige Funktionen</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter07/chapter07_sec01.html">7.1 Gradient und Richtungsableitung</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter07/chapter07_sec02.html">7.2 Vektorwertige Funktionen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter07/chapter07_sec03.html">7.3 Jacobi-Matrix</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter07/chapter07_sec04.html">7.4 Mehrdimensionale Kettenregel</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Höhere Differentialrechnung</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter07/chapter07_sec00.html">7. Funktionen von mehreren Variablen und partielle Ableitungen</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter07/chapter07_sec01.html">7.1 Definition und Visualisierung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter07/chapter07_sec02.html">7.2 Stetigkeit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter07/chapter07_sec03.html">7.3 Partielle Ableitungen und Gradient</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter07/chapter07_sec04.html">7.4 Höhere partielle Ableitungen und Hesse-Matrix</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter07/chapter07_sec05.html">Übungen</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter08/chapter08_sec00.html">8. Linearisierung und Extremwerte</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter08/chapter08_sec01.html">8.1 Tangentenfunktionen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter08/chapter08_sec02.html">8.2 Totales Differential</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter08/chapter08_sec03.html">8.3 Extremwerte</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter08/chapter08_sec04.html">8.4 Extremwertprobleme mit Nebenbedingung</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter08/chapter08_sec00.html">8. Richtungsableitungen und vektorwertige Funktionen</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter08/chapter08_sec01.html">8.1 Gradient und Richtungsableitung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter08/chapter08_sec02.html">8.2 Vektorwertige Funktionen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter08/chapter08_sec03.html">8.3 Jacobi-Matrix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter08/chapter08_sec04.html">8.4 Mehrdimensionale Kettenregel</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter08/chapter08_sec05.html">Übungen</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter09/chapter09_sec00.html">9. Doppelintegral</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter09/chapter09_sec01.html">9.1 Idee von Doppelintegralen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter09/chapter09_sec02.html">9.2 Berechnung von Doppelintegralen in kartesischen Koordinaten</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter09/chapter09_sec03.html">9.3 Anwendung: Flächenberechnung</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter09/chapter09_sec04.html">9.4 Anwendung: Schwerpunktberechnung</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter09/chapter09_sec00.html">9. Linearisierung und Extremwerte</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter09/chapter09_sec01.html">9.1 Tangentenfunktionen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter09/chapter09_sec02.html">9.2 Totales Differential</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter09/chapter09_sec03.html">9.3 Extremwerte</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter09/chapter09_sec04.html">9.4 Extremwertprobleme mit Nebenbedingung</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter09/chapter09_sec05.html">Übungen</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter10/chapter10_sec00.html">10. Doppelintegral in Polarkoordinaten und Dreifachintegral</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter10/chapter10_sec01.html">10.1 Polarkoordinaten</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter10/chapter10_sec02.html">10.2 Doppelintegral in Polarkoordinaten</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter10/chapter10_sec03.html">10.3 Dreifachintegral</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter10/chapter10_sec04.html">10.4 Anwendungen Dreifachintegral</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Höhere Integralrechnung</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter10/chapter10_sec00.html">10. Doppelintegral</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter10/chapter10_sec01.html">10.1 Idee von Doppelintegralen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter10/chapter10_sec02.html">10.2 Berechnung von Doppelintegralen in kartesischen Koordinaten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter10/chapter10_sec03.html">10.3 Anwendung: Flächenberechnung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter10/chapter10_sec04.html">10.4 Anwendung: Schwerpunktberechnung</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter10/chapter10_sec05.html">Übungen</a></li>
 </ul>
 </li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Part 4. Differentialgleichungen</span></p>
-<ul class="current nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter11/chapter11_sec00.html">11. Einführung Differentialgleichungen</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter11/chapter11_sec01.html">11.1 Grundbegriffe</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter11/chapter11_sec02.html">11.2 Anfangs- und Randwertproblem</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter11/chapter11_sec03.html">11.3 Separable Differentialgleichungen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter11/chapter11_sec04.html">11.4 Exakte Differentialgleichungen</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter11/chapter11_sec00.html">11. Doppelintegral in Polarkoordinaten und Dreifachintegral</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter11/chapter11_sec01.html">11.1 Polarkoordinaten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter11/chapter11_sec02.html">11.2 Doppelintegral in Polarkoordinaten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter11/chapter11_sec03.html">11.3 Dreifachintegral</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter11/chapter11_sec04.html">11.4 Anwendungen Dreifachintegral</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter11/chapter11_sec05.html">Übungen</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="chapter12_sec00.html">12. Lineare Differentialgleichungen</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-12"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="chapter12_sec01.html">12.1 Lineare DGL 1. Ordnung</a></li>
-<li class="toctree-l2"><a class="reference internal" href="chapter12_sec02.html">12.2 Lösung homogene lineare DGL 1. Ordnung</a></li>
-<li class="toctree-l2"><a class="reference internal" href="chapter12_sec03.html">12.3 Lösung inhomogene lineare DGL 1. Ordnung</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">12.4 Homogene Systeme aus zwei linearen DGL 1. Ordnung</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Differentialgleichungen</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="chapter12_sec00.html">12. Einführung Differentialgleichungen</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-12"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="chapter12_sec01.html">12.1 Grundbegriffe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter12_sec02.html">12.2 Anfangs- und Randwertproblem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter12_sec03.html">12.3 Separable Differentialgleichungen</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">12.4 Exakte Differentialgleichungen</a></li>
 <li class="toctree-l2"><a class="reference internal" href="chapter12_sec05.html">Übungen</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter13/chapter13_sec00.html">13. Lineare Differentialgleichungen</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-13"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter13/chapter13_sec01.html">13.1 Lineare DGL 1. Ordnung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter13/chapter13_sec02.html">13.2 Lösung homogene lineare DGL 1. Ordnung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter13/chapter13_sec03.html">13.3 Lösung inhomogene lineare DGL 1. Ordnung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter13/chapter13_sec04.html">13.4 Homogene Systeme aus zwei linearen DGL 1. Ordnung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter13/chapter13_sec05.html">Übungen</a></li>
 </ul>
 </li>
 </ul>
@@ -415,7 +426,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>12.4 Homogene Systeme aus zwei linearen DGL 1. Ordnung</h1>
+    <h1>12.4 Exakte Differentialgleichungen</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -426,9 +437,10 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lernziele">Lernziele</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#was-ist-ein-system-von-differentialgleichungen">Was ist ein System von Differentialgleichungen?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wie-wird-ein-system-2-ordnung-gelost">Wie wird ein System 2. Ordnung gelöst?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#beispiel-zur-losung-eines-systems-2-ordnung">Beispiel zur Lösung eines Systems 2. Ordnung</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#was-ist-eine-exakte-differentialgleichung">Was ist eine exakte Differentialgleichung?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#beispiel-einer-exakten-differentialgleichung">Beispiel einer exakten Differentialgleichung</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wie-werden-exakte-differentialgleichugnen-gelost">Wie werden exakte Differentialgleichugnen gelöst?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#beispiel-zur-losung-einer-exakten-differentialgleichung">Beispiel zur Lösung einer exakten Differentialgleichung</a></li>
 </ul>
             </nav>
         </div>
@@ -440,177 +452,156 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="homogene-systeme-aus-zwei-linearen-dgl-1-ordnung">
-<h1>12.4 Homogene Systeme aus zwei linearen DGL 1. Ordnung<a class="headerlink" href="#homogene-systeme-aus-zwei-linearen-dgl-1-ordnung" title="Permalink to this headline">#</a></h1>
-<p>In Natur und Technik wird häufig nicht nur eine Differentialgleichung benötigt,
-um einen Prozess zu beschreiben, sondern viele Differentialgleichungen. Dabei
-kann es sein, dass die gesuchten Funktionen in mehreren Differentialgleichungen
-vorkommen. Es entsteht ein System von Differentialgleichungen. Wir beschränken
-uns in diesem Kapitel auf den einfachsten Fall, der auftreten kann.</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="exakte-differentialgleichungen">
+<h1>12.4 Exakte Differentialgleichungen<a class="headerlink" href="#exakte-differentialgleichungen" title="Permalink to this headline">#</a></h1>
+<p>In diesem Kapitel werden wir uns mit exakten Differentialgleichungen
+beschäftigen.</p>
 <section id="lernziele">
 <h2>Lernziele<a class="headerlink" href="#lernziele" title="Permalink to this headline">#</a></h2>
 <div class="important admonition">
 <p class="admonition-title">Lernziele</p>
-<ul class="simple">
-<li><p>Sie können erklären, was ein <strong>System von Differentialgleichungen</strong> ist.</p></li>
-<li><p>Sie können ein <strong>System von linearen Differentialgleichungen 2. Ordnung</strong> lösen.</p></li>
+<ul>
+<li><p>Sie können anhand des Exaktheitskriterium überprüfen, ob eine
+Differentialgleichung 1. Ordnung der Form</p>
+<div class="math notranslate nohighlight">
+\[p(x, y) + q(x, y) \cdot y' = 0\]</div>
+<p>exakt ist.</p>
+</li>
+<li><p>Sie können eine exakte Differentialgleichung lösen.</p></li>
 </ul>
 </div>
 </section>
-<section id="was-ist-ein-system-von-differentialgleichungen">
-<h2>Was ist ein System von Differentialgleichungen?<a class="headerlink" href="#was-ist-ein-system-von-differentialgleichungen" title="Permalink to this headline">#</a></h2>
-<p>Sind mehrere Differentialgleichungen nicht unabhängig voneinander, sondern
-treten die gesuchten Funktionen oder die Störfunktionen in mehreren
-Differentialgleichungen gleichzeitig auf, so sprechen wir von einem <strong>System von
-Differentialgleichungen</strong>. Wir betrachten in dieser Vorlesung nur Systeme von
-zwei Differentialgleichungen, bei denen beide Differentialgleichungen homogen,
-linear und von 1. Ordnung sind. Zusätzlich fordern wir, dass die Koeffizienten
-konstant sind.</p>
-<p>Ein System von Differentialgleichungen</p>
-<div class="amsmath math notranslate nohighlight">
-\[\begin{align*}
-y_1' &amp;= a_{11}y_1 + a_{12}y_2 \\ 
-y_2' &amp;= a_{21}y_1 + a_{22}y_2
-\end{align*}\]</div>
-<p>heißt homogenes System von Differentialgleichungen 1. Ordnung mit konstanten
-Koeffizienten.</p>
-<p>Es werden also zwei Funktionen <span class="math notranslate nohighlight">\(y_1\)</span> und <span class="math notranslate nohighlight">\(y_2\)</span> gesucht, die jeweils in der
-anderen Differentialgleichung ebenfalls auftauchen. Um dem System jetzt auch
-eine Ordnung zuzuweisen, summieren wir über die Ordnungen der einzelnen
-Differentialgleichungen. Daher hat das System aus den beiden
-Differentialgleichungen 1. Ordnung insgesamt die Ordnung 2.</p>
+<section id="was-ist-eine-exakte-differentialgleichung">
+<h2>Was ist eine exakte Differentialgleichung?<a class="headerlink" href="#was-ist-eine-exakte-differentialgleichung" title="Permalink to this headline">#</a></h2>
+<p>Bei den exakten Differentialgleichungen handelt es sich um
+Differentialgleichungen 1. Ordnung. Wenn die Differentialgleichung in die Form</p>
+<div class="math notranslate nohighlight">
+\[p(x, y) + q(x, y) \cdot y' = 0\]</div>
+<p>gebracht werden kann und wenn zusätzlich die sogenannte <strong>Exaktheitsbedingung</strong></p>
+<div class="math notranslate nohighlight">
+\[\frac{\partial p(x, y)}{\partial
+y} = \frac{\partial q(x, y)}{\partial x}\]</div>
+<p>erfüllt ist, dann wird die Differentialgleichung <strong>exakt</strong> genannt.</p>
 </section>
-<section id="wie-wird-ein-system-2-ordnung-gelost">
-<h2>Wie wird ein System 2. Ordnung gelöst?<a class="headerlink" href="#wie-wird-ein-system-2-ordnung-gelost" title="Permalink to this headline">#</a></h2>
-<p>Zur Lösung von Systemen von linearen Differentialgleichungen kombinieren wir die
-Lösung einzelner Differentialgleichungen mit der Lösung von linearen
-Gleichungssystemen. Da wir uns auf konstante Koeffizienten beschränken, können
-wir die Koeffizienten in eine Matrix schreiben.</p>
+<section id="beispiel-einer-exakten-differentialgleichung">
+<h2>Beispiel einer exakten Differentialgleichung<a class="headerlink" href="#beispiel-einer-exakten-differentialgleichung" title="Permalink to this headline">#</a></h2>
+<p>Die Differentialgleichung</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}A = 
-\begin{pmatrix} 
-a_{11} &amp; a_{12} \\ 
-a_{21} &amp; a_{22} 
-\end{pmatrix}.\end{split}\]</div>
-<p>Dadurch können wir das System von Differentialgleichungen als
-Matrix-Vektor-Multiplikation darstellen:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\begin{pmatrix} 
-a_{11} &amp; a_{12} \\ 
-a_{21} &amp; a_{22} \end{pmatrix} \cdot
-\begin{pmatrix} y_1 \\ y_2 \end{pmatrix} = 
-\begin{pmatrix} y_{1}'\\ y_{2}' \end{pmatrix}.\end{split}\]</div>
-<p>Bei den homogenen lineare Differentialgleichungen zeigte sich, dass diese durch
-eine Exponentialfunktion gelöst werden können. Als Lösungsansatz wählen wir
-daher</p>
-<div class="math notranslate nohighlight">
-\[y_1 = C_1 \, e^{\lambda x} \quad \text{ und } 
-\quad y_2 = C_2 \, e^{\lambda x}.\]</div>
-<p>Dabei haben wir drei unbekannte Konstanten, nämlich <span class="math notranslate nohighlight">\(C_1\)</span>, <span class="math notranslate nohighlight">\(C_2\)</span> und <span class="math notranslate nohighlight">\(\lambda\)</span>.
-Die beiden Konstanten <span class="math notranslate nohighlight">\(C_1\)</span> und <span class="math notranslate nohighlight">\(C_2\)</span> werden unsere Integrationskonstanten
-werden. Da wir ein System 2. Ordnung haben, brauchen wir zwei
-Integrationskonstanten. Aber <span class="math notranslate nohighlight">\(\lambda\)</span> muss noch bestimmt werden. Wir machen
-weiter und bilden die erste Ableitung der beiden Ansatzfunktionen</p>
-<div class="math notranslate nohighlight">
-\[y_1'= C_1 \, \lambda e^{\lambda x} \quad \text{ und } 
-\quad y_2' = C_2 \, \lambda e^{\lambda x}.\]</div>
-<p>Setzen wir nun beide Ansatzfunktionen in das System von Differentialgleichungen
-ein, so erhalten wir</p>
+\[(y - x) + (y+x)\cdot y' = 0\]</div>
+<p>ist von 1. Ordnung und lässt sich mit</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
-C_1 \, \lambda e^{\lambda x} &amp;= a_{11} C_1 \, e^{\lambda x} + a_{12} C_2 \, e^{\lambda x} \\ 
-C_2 \, \lambda e^{\lambda x} &amp;= a_{21} C_1 \, e^{\lambda x} + a_{22} C_2 \, e^{\lambda x}
+p(x, y) &amp;= y - x\\
+q(x, y) &amp;= y + x
 \end{align*}\]</div>
-<p>Wir teilen durch <span class="math notranslate nohighlight">\(e^{\lambda x}\)</span> und erhalten</p>
+<p>in der oben beschriebenen Form schreiben. Als nächstes wird überprüft, ob die
+Exaktheitsbedingung erfüllt ist.</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
-C_1 \, \lambda  &amp;= a_{11} C_1 + a_{12} C_2 \\ 
-C_2 \, \lambda  &amp;= a_{21} C_1 + a_{22} C_2 
+\frac{\partial p(x, y)}{\partial y} &amp;= \frac{\partial}{\partial y}(y - x) = 1, \\
+\frac{\partial q(x, y)}{\partial x} &amp;= \frac{\partial}{\partial x}(y + x) = 1. 
 \end{align*}\]</div>
-<p>Bringen wir die Terme <span class="math notranslate nohighlight">\(C_1 \, \lambda\)</span> und <span class="math notranslate nohighlight">\(C_2 \, \lambda\)</span> jeweils aud die rechte Seite und schreiben das Gleichungssystem in Matrixform, so erhalten wir</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\begin{pmatrix} 
-a_{11} - \lambda &amp; a_{21} \\
-a_{21} &amp; a_{22} - \lambda 
-\end{pmatrix} \cdot 
-\begin{pmatrix} C_1 \\ C_2 \end{pmatrix} =
-\begin{pmatrix} 0 \\ 0 \end{pmatrix}. \end{split}\]</div>
-<p>Wenn die Determinante dieses linearen Gleichungssystems ungleich Null ist, dann
-kommen nur <span class="math notranslate nohighlight">\(C_1 = C_2 = 0\)</span> als Lösung infrage. Damit wären aber auch <span class="math notranslate nohighlight">\(y_1\)</span> und
-<span class="math notranslate nohighlight">\(y_2\)</span> die Nullfunktionen. Das System von Differentialgleichungen hat nur
-Funktionen als Lösung, die nicht die Nullfunktion sind, wenn die Determinante
-dieses Gleichungssystems Null ist.</p>
-<p>Wir setzen also</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\det \begin{pmatrix} 
-a_{11} - \lambda &amp; a_{12} \\
-a_{21} &amp; a_{22} - \lambda 
-\end{pmatrix} \overset{!}{=} 0\end{split}\]</div>
-<p>an und bestimmen <span class="math notranslate nohighlight">\(\lambda\)</span> so, dass die Determinante Null ist. Diese Gleichung
-wird übrigens <strong>charakteristische Gleichung</strong> genannt und wird folgendermaßen notiert:</p>
-<div class="math notranslate nohighlight">
-\[(a_{11}-\lambda) \cdot (a_{22}-\lambda) - a_{21} \, a_{12} = 0.\]</div>
-<p>Es gibt drei mögliche Lösungen, die sogenannten Eigenwerte der
-charakteristischen Gleichung:</p>
-<ul class="simple">
-<li><p>2 Nullstellen, d.h. <span class="math notranslate nohighlight">\(\lambda_1 \neq \lambda_2\)</span> reell</p></li>
-<li><p>1 Nullstelle, d.h. <span class="math notranslate nohighlight">\(\lambda_1 = \lambda_2\)</span> reell</p></li>
-<li><p>0 Nullstellen, d.h. <span class="math notranslate nohighlight">\(\lambda_1 \neq \lambda_2\)</span> komplex, weil für die komplexen Zahlen eine quadratische Gleichung immer zwei Lösungen hat</p></li>
-</ul>
-<p>Je nachdem, welcher dieser dieser Fälle eintritt, lauten die Lösungen wie folgt.</p>
-<p><strong>1. Fall: 2 Nullstellen</strong></p>
-<p>Es gilt also <span class="math notranslate nohighlight">\(\lambda_1 \neq \lambda_2\)</span> reell.</p>
-<ol class="arabic simple">
-<li><p>Lösungsfunktion: <span class="math notranslate nohighlight">\(y_1(x)=C_1\cdot e^{\lambda_1 x} + C_2\cdot e^{\lambda_2 x}\)</span></p></li>
-<li><p>Lösungsfunktion: erhalten wir, indem wir die <span class="math notranslate nohighlight">\(y_1\)</span> in die 1. DGL einsetzen und dann nach <span class="math notranslate nohighlight">\(y_2\)</span> auflösen:</p></li>
-</ol>
-<div class="math notranslate nohighlight">
-\[y_2(x)=\frac{1}{a_{12}}(y_1' - a_{11} y_1) \]</div>
-<p><strong>2. Fall: 1 Nullstelle</strong></p>
-<p>Es gilt also <span class="math notranslate nohighlight">\(\lambda_1 = \lambda_2 = \alpha\)</span> reell.</p>
-<ol class="arabic simple">
-<li><p>Lösungsfunktion: <span class="math notranslate nohighlight">\(y_1(x)=(C_1+C_2 x) \cdot e^{\alpha x} \)</span></p></li>
-<li><p>Lösungsfunktion:</p></li>
-</ol>
-<div class="math notranslate nohighlight">
-\[y_2(x)=\frac{1}{a_{12}}(y_1' - a_{11} y_1) \]</div>
-<p><strong>3. Fall: 0 Nullstellen</strong></p>
-<p>Es gilt also <span class="math notranslate nohighlight">\(\lambda_1 \neq \lambda_2\)</span> komplex, die komplexen Nullstellen können geschrieben werden als <span class="math notranslate nohighlight">\(\lambda_{1/2}=\alpha \pm \omega i\)</span>.</p>
-<ol class="arabic simple">
-<li><p>Lösungsfunktion: <span class="math notranslate nohighlight">\(y_1(x)=e^{\alpha x}\left(C_1\sin(\omega x) + C_2 \cos(\omega x)\right) \)</span></p></li>
-<li><p>Lösungsfunktion:</p></li>
-</ol>
-<div class="math notranslate nohighlight">
-\[y_2(x)=\frac{1}{a_{12}}(y_1' - a_{11} y_1) \]</div>
+<p>Beide partielle Ableitungen sind gleich und daher ist die Differentialgleichung
+exakt.</p>
 </section>
-<section id="beispiel-zur-losung-eines-systems-2-ordnung">
-<h2>Beispiel zur Lösung eines Systems 2. Ordnung<a class="headerlink" href="#beispiel-zur-losung-eines-systems-2-ordnung" title="Permalink to this headline">#</a></h2>
-<p>Wir betrachten das homogene System 2. Ordnung</p>
+<section id="wie-werden-exakte-differentialgleichugnen-gelost">
+<h2>Wie werden exakte Differentialgleichugnen gelöst?<a class="headerlink" href="#wie-werden-exakte-differentialgleichugnen-gelost" title="Permalink to this headline">#</a></h2>
+<p>Liegt eine exakte Differentialgleichung vor, so wird die Differentialgleichung
+oft etwas informell mit dem Differentialquotienten <span class="math notranslate nohighlight">\(y'=\frac{dy}{dx}\)</span>
+folgendermaßen notiert:</p>
+<div class="math notranslate nohighlight">
+\[p(x, y) + q(x, y) \frac{dy}{dx} = 0 \quad 
+\Rightarrow \quad p(x,y) \, dx + q(t, x) \, dy = 0. \]</div>
+<p>Das erinnert an das totale Differential. Für die Lösungsidee starten wir mit
+einer Funktion <span class="math notranslate nohighlight">\(F\)</span>, die von zwei Variablen abhängt, nämlich <span class="math notranslate nohighlight">\(x_1\)</span> und <span class="math notranslate nohighlight">\(x_2\)</span>, und
+für die gilt:</p>
+<div class="math notranslate nohighlight">
+\[F(x_1, x_2) = \tilde{c}.\]</div>
+<p>Dabei ist <span class="math notranslate nohighlight">\(\tilde{c}\in\mathbb{R}\)</span> eine reelle Konstante.</p>
+<p>Nun soll die erste Variable <span class="math notranslate nohighlight">\(x_1\)</span> gleich <span class="math notranslate nohighlight">\(x\)</span> sein, also <span class="math notranslate nohighlight">\(x_1 = x\)</span>. Die zweite
+Variable soll der Funktionswert <span class="math notranslate nohighlight">\(y(x)\)</span> sein, also <span class="math notranslate nohighlight">\(x_2=y(x)\)</span>. Damit ist <span class="math notranslate nohighlight">\(F\)</span> eine
+Funktion, die eigentlich nur von <span class="math notranslate nohighlight">\(x\)</span> abhängt. Einmal direkt und einmal indirekt
+als verkettete Funktion. Die erste Ableitung nach <span class="math notranslate nohighlight">\(x\)</span> muss mit der
+mehrdimensionalen Kettenregel berechnet werden:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}F'(x, y(x)) = \left(\frac{\partial F}{\partial x}, \, \frac{\partial F}{\partial y}\right) \cdot 
+\begin{pmatrix} 1 \\ y' \end{pmatrix} 
+= \frac{\partial F}{\partial x} + \frac{\partial F}{\partial y} y'.\end{split}\]</div>
+<p>Wird die rechte Seite der Gleichung <span class="math notranslate nohighlight">\(F(x_1, x_2) = \tilde{c}\)</span> abgeleitet, ist dies Null.
+Damit gilt für die erste Ableitung der Funktion <span class="math notranslate nohighlight">\(F(x,y)\)</span></p>
+<div class="math notranslate nohighlight">
+\[\frac{\partial F}{\partial x} + \frac{\partial F}{\partial y} y' = 0.\]</div>
+<p>Das ist genau die Form der exakten Differentialgleichung mit</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
-y_1' &amp;= -8y_1 - 2y_2 \\
-y_2' &amp;= 15y_1 + 5y_2 
+p(x,y) &amp;= \frac{\partial F(x,y)}{\partial x} \\
+q(x,y) &amp;= \frac{\partial F(x,y)}{\partial y}
 \end{align*}\]</div>
-<p>mit der Koeffizientenmatrix</p>
+<p>Aber wir kommen wir nun auf <span class="math notranslate nohighlight">\(F(x,y)\)</span>?</p>
+<p>Wir integrieren die erste Funktion <span class="math notranslate nohighlight">\(p(x,y)\)</span> nach <span class="math notranslate nohighlight">\(dx\)</span>. Die dabei entstehende
+Integrationskonstante kann noch von <span class="math notranslate nohighlight">\(y\)</span> abhängen. Wird nämlich partiell nach <span class="math notranslate nohighlight">\(x\)</span>
+abgeleitet, so werden Terme mit <span class="math notranslate nohighlight">\(y\)</span> nämlich Null. Deshalb schreiben wir dafür
+<span class="math notranslate nohighlight">\(C(y)\)</span> und erhalten</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}A = \begin{pmatrix} -8 &amp; -2 \\ 15 &amp; 5 \end{pmatrix}.\end{split}\]</div>
-<p>Die Nullstellen der charakteristischen Gleichung</p>
+\[F(x,y) = \int p(x,t) \, dx + C(y).\]</div>
+<p>Jetzt leiten wir diese Funktion partiell nach <span class="math notranslate nohighlight">\(y\)</span> ab. Dabei erhalten wir zum
+einen die partielle Ableitung des Integrals <span class="math notranslate nohighlight">\(\int p(x,t) \, dx\)</span>, zum anderen die
+Ableitung <span class="math notranslate nohighlight">\(C'(y)\)</span>. Das Ergebnis muss <span class="math notranslate nohighlight">\(q(x,y)\)</span> sein. Aus dieser Gleichung wird
+dann <span class="math notranslate nohighlight">\(C(y)\)</span> durch Integration nach <span class="math notranslate nohighlight">\(y\)</span> bestimmt. Sobald <span class="math notranslate nohighlight">\(F(x,y)\)</span> eindeutig
+bestimmt ist, wird dann</p>
 <div class="math notranslate nohighlight">
-\[\det (A-\lambda I) = 0\]</div>
-<p>sind <span class="math notranslate nohighlight">\(\lambda_1 = -5\)</span> und <span class="math notranslate nohighlight">\(\lambda_2 = 2\)</span>.</p>
-<p>Damit ist die erste Lösungsfunktion</p>
-<div class="math notranslate nohighlight">
-\[y_1(x) = C_1 \, e^{-5x} + C_2 \, e^{2x}.\]</div>
-<p>Wir berechnen schon einmal die erste Ableitung davon, da wir <span class="math notranslate nohighlight">\(y_1'\)</span> für die
-Berechnung von <span class="math notranslate nohighlight">\(y_2\)</span> brauchen:</p>
-<div class="math notranslate nohighlight">
-\[y_1'(x) = -5 C_1 e^{-5x} + 2 C_2 e^{2x}.\]</div>
-<p>Die zweite Lösungsfunktion ist damit</p>
-<div class="math notranslate nohighlight">
-\[y_2(x) = \frac{1}{-2} (y_1' - (-8)\cdot y_1) = (\frac{5}{2}C_1+8) e^{-5x} +
-(8-C_2) e^{2x}.\]</div>
+\[F(x,y) = \tilde{c}\]</div>
+<p>gesetzt und nach <span class="math notranslate nohighlight">\(y\)</span> aufgelöst.</p>
 </section>
+<section id="beispiel-zur-losung-einer-exakten-differentialgleichung">
+<h2>Beispiel zur Lösung einer exakten Differentialgleichung<a class="headerlink" href="#beispiel-zur-losung-einer-exakten-differentialgleichung" title="Permalink to this headline">#</a></h2>
+<p>Wir betrachten erneut die exakte Differentialgleichung</p>
+<div class="math notranslate nohighlight">
+\[(y - x) + (y+x)\cdot y' = 0.\]</div>
+<p>Wir haben oben die Exaktheitsbedingung schon nachgerechnet und können daher
+direkt den Ansatz</p>
+<div class="math notranslate nohighlight">
+\[F(x,y) = \tilde{c}\]</div>
+<p>mit</p>
+<div class="math notranslate nohighlight">
+\[\frac{\partial F(x,y)}{\partial x} = y - x\]</div>
+<p>verwenden. Durch Integration nach <span class="math notranslate nohighlight">\(x\)</span> erhalten wir</p>
+<div class="math notranslate nohighlight">
+\[F(x,y) = \int p(x,y) \, dx + C(y) = \int (y-x)\, dx + C(y) 
+= yx -\frac{1}{2}x^2 + C(y).\]</div>
+<p>Partiell ableiten nach <span class="math notranslate nohighlight">\(y\)</span> und gleichsetzen mit <span class="math notranslate nohighlight">\(q(x,y)=y+x\)</span> liefert</p>
+<div class="math notranslate nohighlight">
+\[x+C'(y) = y+x.\]</div>
+<p>Damit erhalten wir</p>
+<div class="math notranslate nohighlight">
+\[C'(y)=y \quad \Rightarrow C(y) = \int y\, dy = \frac{1}{2}y^2 + c_1.\]</div>
+<p>Damit ist</p>
+<div class="math notranslate nohighlight">
+\[F(x,y) = yx -\frac{1}{2}x^2 + \frac{1}{2}y^2  + c_1 = \tilde{c}.\]</div>
+<p>Wir setzen <span class="math notranslate nohighlight">\(C= \tilde{c} - c_1\)</span> und lösen nach <span class="math notranslate nohighlight">\(y\)</span> auf:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+yx -\frac{1}{2}x^2 + \frac{1}{2}y^2  = c \qquad &amp;| \cdot 2 \\
+2yx - x^2 + y^2 = 2c \qquad &amp;| +2x^2 \\
+y^2 + 2xy + x^2 = 2c + 2x^2 \qquad &amp; \\
+(y+x)^2 = 2c + 2x^2 \qquad &amp; | \sqrt{} \\
+y + x = \pm \sqrt{2c + 2x^2} \qquad &amp; | -x \\
+y(x) = \pm \sqrt{2c + 2x^2} - x \\
+\end{align*}\]</div>
+<p>Die allgemeine Lösung der Differentialgleichung <span class="math notranslate nohighlight">\((y - x) + (y+x)\cdot y' = 0\)</span>
+ist</p>
+<div class="math notranslate nohighlight">
+\[y(x) = \pm \sqrt{2c + 2x^2} - x.\]</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Video zu “Exakte Differentialgleichung” von Lernkompass<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/PGiwJ57E1nc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+</details></section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -650,7 +641,7 @@ Berechnung von <span class="math notranslate nohighlight">\(y_2\)</span> brauche
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">12.3 Lösung inhomogene lineare DGL 1. Ordnung</p>
+        <p class="prev-next-title">12.3 Separable Differentialgleichungen</p>
       </div>
     </a>
     <a class="right-next"
@@ -681,9 +672,10 @@ Berechnung von <span class="math notranslate nohighlight">\(y_2\)</span> brauche
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lernziele">Lernziele</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#was-ist-ein-system-von-differentialgleichungen">Was ist ein System von Differentialgleichungen?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wie-wird-ein-system-2-ordnung-gelost">Wie wird ein System 2. Ordnung gelöst?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#beispiel-zur-losung-eines-systems-2-ordnung">Beispiel zur Lösung eines Systems 2. Ordnung</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#was-ist-eine-exakte-differentialgleichung">Was ist eine exakte Differentialgleichung?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#beispiel-einer-exakten-differentialgleichung">Beispiel einer exakten Differentialgleichung</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wie-werden-exakte-differentialgleichugnen-gelost">Wie werden exakte Differentialgleichugnen gelöst?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#beispiel-zur-losung-einer-exakten-differentialgleichung">Beispiel zur Lösung einer exakten Differentialgleichung</a></li>
 </ul>
   </nav></div>
 

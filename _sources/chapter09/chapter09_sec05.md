@@ -1,243 +1,349 @@
 # Übungen
 
-```{admonition} Übung 9.1
+```{admonition} Übung 8.1
 :class: miniexercise
-Berechnen Sie das Doppelintegral 
+Bestimmen Sie die Gleichung der Tangentialebene bzw. die Linearisierung für die Funktion
 
-$$\int_{x=0}^{x=1}\left(\int_{y=-x}^{y=x} xy+1 \, dy\right) \, dx.$$
+$$f:\mathbb{R}^2 \mapsto \mathbb{R}, \; f(x,y)=\frac{x^2+y^2}{1+x^2+y^2}$$
+
+am Punkt $(1,2)$.
 ```
 ````{admonition} Lösung
 :class: minisolution, toggle
-$$\int_{x=0}^{x=1}\left(\int_{y=-x}^{y=x} xy+1 \, dy\right) \, dx = 1$$
+
+$$T_{f,1}(x,y)=\frac{5}{6}+\frac{1}{18}\cdot (x-1)+\frac{1}{9}\cdot (y-2)$$
+
 ```{dropdown} Lösungsweg
+Das Taylorpolynom vom Grad 1 einer Funktion $f(x,y)$ bei $(x_0,y_0)$ hat die allgemeinen Form 
+
+$$T_{f,1}(x,y)
+ = f(x_0,y_0)+\frac{\partial f(x_0,y_0)}{\partial x}\cdot(x-x_0)+\frac{\partial f(x_0,y_0)}{\partial y}\cdot(y-y_0).$$
+
+Der Funktionswert in Punkt $(1,2)$ ist $f(1,2) = \frac{5}{6}$. 
+ 
+Die partiellen Ableitungen von $f$ lauten : 
+ 
 \begin{align*}
-\int_{x=0}^{x=1}\left(\int_{y=-x}^{y=x} xy+1 \, dy \right)\, dx 
-&= \int_{x=0}^{x=1} \left[\frac{1}{2}xy^2+y \right]_{y=-x}^{y=x} \, dx = \\
-&= \int_{x=0}^{x=1} \left(\frac{1}{2}xx^2+x\right)-\left(\frac{1}{2}x(-x)^2+(-x)\right)\, dx = \\
-&= \int_{x=0}^{x=1} 2x\, dx = \\
-&= \big[ x^2\big]_{x=0}^{x=1} = 1-0 = 1.
+\frac{\partial f(x,y)}{\partial x} &=
+\frac{2x}{x^2+y^2+1} - \frac{2x \left(x^2+y^2\right)}{\left(x^2+y^2+1\right)^2} \\
+\qquad \Rightarrow & \frac{\partial f(1,2)}{\partial x} = \frac{1}{18}\\
+\frac{\partial f(x,y)}{\partial y} &=
+\frac{2y}{x^2+y^2+1}-\frac{2y\left(x^2+y^2\right)}{\left(x^2+y^2+1\right)^2} \\
+\qquad \Rightarrow & \frac{\partial f(1,2)}{\partial y} = \frac{1}{9}\\
 \end{align*}
+
+Damit erhält man das Taylorpolynom von $f$ bei $(x_0,y_0)=(1,2)$ als 
+
+\begin{align*} 
+T_{f,1}(x,y)
+& = f(1,2)+\frac{\partial f}{\partial x}(1,2)\cdot(x-1)+\frac{\partial f}{\partial y}(1,2)\cdot(y-2)\\
+& = \frac{5}{6}+\frac{1}{18}\cdot (x-1)+\frac{1}{9}\cdot (y-2)\ . 
+\end{align*} 
 ```
 ````
 
-```{admonition} Übung 9.2
+```{admonition} Übung 8.2
 :class: miniexercise
-Berechnen Sie das Doppelintegral 
+Bestimmen Sie die Gleichung der Tangentialebene bzw. die Linearisierung für die Funktion
 
-$$\int_{x=0}^{x=2\pi}\left(\int_{y=-\sin(x)-1}^{y=\sin(x)+1} xy+1 \, dy\right) \, dx.$$
+$$f:\mathbb{R}^2 \mapsto \mathbb{R}, \; f(x,y)=\sqrt{x^2 + y^2}$$
+
+am Punkt $(1,0)$.
 ```
 ````{admonition} Lösung
 :class: minisolution, toggle
-$$\int_{x=0}^{x=2\pi}\left(\int_{y=-\sin(x)-1}^{y=\sin(x)+1} xy+1 \, dy\right) \, dx = 4\pi$$
+$$T_{1,f}(x,y) = x$$
 ```{dropdown} Lösungsweg
+Das Taylorpolynom vom Grad 1 einer Funktion $f(x,y)$ bei $(x_0,y_0)$ hat die allgemeinen Form 
+
+$$T_{f,1}(x,y)
+ = f(x_0,y_0)+\frac{\partial f(x_0,y_0)}{\partial x}\cdot(x-x_0)+\frac{\partial f(x_0,y_0)}{\partial y}\cdot(y-y_0).$$
+
+Der Funktionswert im Punkt $(1,0)$ ist $f(1,0) = 1$. 
+ 
+Die partiellen Ableitungen von $f$ lauten:
+
 \begin{align*}
-\int_{x=0}^{x=2\pi}\left(\int_{y=-\sin(x)-1}^{y=\sin(x)+1} xy+1 \, dy\right) \, dx
-&= \int_{x=0}^{x=2\pi} \left[ \frac{1}{2}xy^2+y\right]_{y=-\sin(x)-1}^{y=\sin(x)+1} \, dx = \\
-&= \int_{x=0}^{x=2\pi} \left(\frac{1}{2}x (\sin(x)+1)^2 + (\sin(x)+1) \right) 
-    - \left(\frac{1}{2}x (-\sin(x)-1)^2 - \sin(x) -1 \right) \, dx = \\
-&= \int_{x=0}^{x=2\pi} 2\sin(x)+2 \, dx = \\
-&= 2 \big[-\cos(x)+x \big]_{x=0}^{x=2\pi} = \\
-&= 2\left(-\cos(2\pi) + 2\pi \right)-2 \left(-\cos(0)+0 \right) = \\
-&= -2 + 4\pi + 2 = 4\pi.    
+\frac{\partial f(x,y)}{\partial x} &= \frac{x}{\sqrt{x^2+y^2}}, \\
+\frac{\partial f(x,y)}{\partial y} &= \frac{y}{\sqrt{x^2+y^2}}.
 \end{align*}
+
+Am Entwicklungspunkt $(x_0,y_0)=(1,0)$ sind die partiellen Ableitungen
+
+\begin{align*}
+\frac{\partial f(1,0)}{\partial x} &= 1, \\
+\frac{\partial f(1,0)}{\partial y} &= 0.
+\end{align*}
+
+Damit ist das Taylorpolynom  1. Grades von $f$ am Entwicklungspunkt $(x_0,y_0)=(1,0)$ 
+
+$$T_{f,1}(x,y) = 1 + 1\cdot(x-1) + 0\cdot (y-y_0) = x.$$
 ```
 ````
 
-```{admonition} Übung 9.3
+```{admonition} Übung 8.3 
 :class: miniexercise
-Berechnen Sie das Doppelintegral 
+Bestimmen Sie alle Extremwerte der Funktion $f:\mathbb{R}^2 \rightarrow\mathbb{R}$ gegeben durch  
 
-$$\int_{x=0}^{x=2\pi}\left(\int_{y=-\sin(x)-1}^{y=\sin(x)+1} x \, dy\right) \, dx.$$
+$$f(x,y)=x^3+y^3 - x - y$$
+
+und untersuchen Sie, ob in diesen Punkten lokale Minima bzw. Maxima vorliegen. 
 ```
 ````{admonition} Lösung
 :class: minisolution, toggle
-$$\int_{x=0}^{x=2\pi}\left(\int_{y=-\sin(x)-1}^{y=\sin(x)+1} x \, dy \right)\, dx = 4(\pi^2-\pi)$$
+* $(\sqrt{\frac{1}{3}}, \sqrt{\frac{1}{3}})$ Minimum
+* $(\sqrt{\frac{1}{3}}, - \sqrt{\frac{1}{3}})$ kein Extremum 
+* $(-\sqrt{\frac{1}{3}}, \sqrt{\frac{1}{3}})$ kein Extremum
+* $(-\sqrt{\frac{1}{3}}, -\sqrt{\frac{1}{3}})$ Maximum
 ```{dropdown} Lösungsweg
-\begin{align*}
-\int_{x=0}^{x=2\pi}\left(\int_{y=-\sin(x)-1}^{y=\sin(x)+1} x \, dy\right) \, dx
-&= \int_{x=0}^{x=2\pi} \big[xy \big]_{y=-\sin(x)-1}^{y=\sin(x)+1} \, dx = \\
-&= \int_{x=0}^{x=2\pi} \left(x(\sin(x)+1) \right) - \left(x (-\sin(x)-1) \right) \, dx = \\
-&= 2 \int_{x=0}^{x=2\pi} x\cdot (\sin(x)+1) \, dx = \\
-&= 2 \big[x \cdot(-\cos(x)+x) \big]_{x=0}^{x=2\pi} - 2\int_{x=0}^{x=2\pi} -\cos(x)+x \, dx = \\
-&= 2\cdot 2\pi ((-1)+2\pi) + 2\big[\sin(x)\big]_{x=0}^{x=2\pi} - 2 \left[\frac{1}{2}x^2 \right]_{x=0}^{x=2\pi} = \\
-&= -4\pi + 8\pi^2 + (0-0) - 4\pi^2 = \\
-&= 4\pi^2-4\pi.
+Die ersten partiellen Ableitungen lauten:
+\begin{align*} 
+\frac{\partial f(x,y)}{\partial x} &= 3 x^2-1, \\ 
+\frac{\partial f(x,y)}{\partial y} & =3 y^2-1. \\
 \end{align*}
+ 
+Um die stationären Punkte, also die möglichen Kandidaten zu finden, ist das folgende Gleichungssystem zu lösen: 
+ 
+$$
+\begin{cases} 
+\frac{\partial f(x,y)}{\partial x} = 3 x^2 - 1 = 0 \\ 
+\frac{\partial f(x,y)}{\partial y} = 3 y^2 - 1 = 0. 
+\end{cases} 
+$$
+
+Dieses Gleichungssystem hat 4 Lösungen, nämlich 
+
+1. $(x_{1},y_{1})=(-\frac{\sqrt{3}}{3},-\frac{\sqrt{3}}{3})$, 
+2. $(x_{2},y_{2})=(\frac{\sqrt{3}}{3},-\frac{\sqrt{3}}{3})$, 
+3. $(x_{3},y_{3})=(-\frac{\sqrt{3}}{3},\frac{\sqrt{3}}{3})$ und 
+4. $(x_{4},y_{4})=(\frac{\sqrt{3}}{3},\frac{\sqrt{3}}{3})$,  
+
+die die stationären Punkte darstellen.
+ 
+Um den Typ der stationären Punkte zu bestimmen, werden die zweiten partiellen Ableitungen berechnet:
+\begin{align*}
+\frac{\partial^2 f(x,y)}{\partial x \partial x} &= 6x, \\ 
+\frac{\partial^2 f(x,y)}{\partial y \partial x} &= 0, \\
+\frac{\partial^2 f(x,y)}{\partial y \partial y} &= 6y, \\ 
+\frac{\partial^2 f(x,y)}{\partial x \partial y} &= 0.
+\end{align*}
+
+Die Hesse-Matrix besteht aus den zweiten partiellen Ableitungen
+
+$$
+\mathbf{H}(x,y)= 
+\left( \begin{array}{cc} 
+\frac{\partial^2 f(x,y)}{\partial x \partial x} & \frac{\partial^2 f(x,y)}{\partial x \partial y} \\ 
+\frac{\partial^2 f(x,y)}{\partial y \partial x} & \frac{\partial^2 f(x,y)}{\partial y \partial y}
+\end{array} \right) 
+= \left( \begin{array}{cc} 
+6x & 0 \\ 
+0  & 6y
+\end{array} \right) . 
+$$
+
+Die Determinante der Hesse-Matrix ist
+
+$$\det(\mathbf{H}(x,y)) = 6x \cdot 6y - 0 \cdot 0 = 36 xy.$$
+
+Nun wird für jeden stationären Punkt überprüft, ob tatsächlich ein Extremum vorliegt.
+
+1. $(x_{1},y_{1})=(-\frac{\sqrt{3}}{3},-\frac{\sqrt{3}}{3})$:
+
+Die Determinante der Hesse-Matrix für diesen Punkt ist
+
+$$\det\left(\mathbf{H}\left(-\frac{\sqrt{3}}{3},-\frac{\sqrt{3}}{3}\right)\right) = 
+36\cdot \left(-\frac{\sqrt{3}}{3}\right) \cdot \left(-\frac{\sqrt{3}}{3}\right) = 12 > 0.$$
+
+Damit ist der Punkt $(x_{1},y_{1})=(-\frac{\sqrt{3}}{3},-\frac{\sqrt{3}}{3})$ ein Extremum. Da das Vorzeichen von $\frac{\partial^2 f(-\frac{\sqrt{3}}{3},-\frac{\sqrt{3}}{3})}{\partial x \partial x}$ negativ ist, ist die Hesse-Matrix negativ definit und dieser Punkt ist ein Maximum (Hochpunkt).
+
+2. $(x_{2},y_{2})=(\frac{\sqrt{3}}{3},-\frac{\sqrt{3}}{3})$
+
+Die Determinante der Hesse-Matrix für diesen Punkt ist
+
+$$\det\left(\mathbf{H}\left(\frac{\sqrt{3}}{3},-\frac{\sqrt{3}}{3}\right)\right) =
+36 \cdot \frac{\sqrt{3}}{3} \cdot \left(-\frac{\sqrt{3}}{3}\right) = -12 < 0.$$
+
+Damit ist die Hesse-Matrix für diesen Punkt indefinit und der Punkt $(x_{2},y_{2})$ ist kein Extremum.
+
+3. $(x_{3},y_{3})=(-\frac{\sqrt{3}}{3},\frac{\sqrt{3}}{3})$ 
+
+Die Determinante der Hesse-Matrix für diesen Punkt ist
+
+$$\det\left(\mathbf{H}\left(-\frac{\sqrt{3}}{3},\frac{\sqrt{3}}{3}\right)\right) =
+36 \cdot \left(-\frac{\sqrt{3}}{3}\right) \cdot \frac{\sqrt{3}}{3} = -12 < 0.$$
+
+Damit ist die Hesse-Matrix für diesen Punkt indefinit und der Punkt $(x_{3},y_{3})$ ist kein Extremum.
+
+4. $(x_{4},y_{4})=(\frac{\sqrt{3}}{3},\frac{\sqrt{3}}{3})$
+
+Die Determinante der Hesse-Matrix für diesen Punkt ist
+
+$$\det\left(\mathbf{H}\left(\frac{\sqrt{3}}{3},\frac{\sqrt{3}}{3}\right)\right) =
+36 \cdot \frac{\sqrt{3}}{3} \cdot \frac{\sqrt{3}}{3} = 12 > 0.$$
+
+Damit ist der Punkt $(x_{4},y_{4})=(\frac{\sqrt{3}}{3},\frac{\sqrt{3}}{3})$ ein Extremum. Da das Vorzeichen von $\frac{\partial^2 f(\frac{\sqrt{3}}{3},\frac{\sqrt{3}}{3})}{\partial x \partial x}$ positiv ist, ist die Hesse-Matrix positiv definit und dieser Punkt ist ein Minimum (Tiefpunkt).
 ```
 ````
 
-```{admonition} Übung 9.4
+```{admonition} Übung 8.4
 :class: miniexercise
-Berechnen Sie das Doppelintegral 
+Bestimmen Sie alle Extremwerte der Funktion $f:\mathbb{R}^2 \rightarrow\mathbb{R}$ gegeben durch  
 
-$$\int_{x=0}^{x=1}\left(\int_{y=0}^{y=x} \sqrt{xy} \, dy\right) \, dx.$$
+$$f(x,y) = -x^3-\frac{3x^2}{2}+6x-2y^3-9y^2+24y+3$$
+
+und untersuchen Sie, ob in diesen Punkten lokale Minima bzw. Maxima vorliegen. 
 ```
 ````{admonition} Lösung
 :class: minisolution, toggle
-$$\int_{x=0}^{x=1}\left(\int_{y=0}^{y=x} \sqrt{xy} \, dy \right) \, dx = \frac{2}{9}$$
+* $(1,1)$ Maximum
+* $(-2,1)$ kein Extremum 
+* $(1,-4)$ kein Extremum 
+* $(-2,-4)$ Minimum
 ```{dropdown} Lösungsweg
-\begin{align*}
-\int_{x=0}^{x=1}\left(\int_{y=0}^{y=x} \sqrt{xy} \, dy \right) \, dx 
-&= \int_{x=0}^{x=1} \left[ \sqrt{x}\frac{2}{3}y^{\frac{3}{2}}\right]_{y=0}^{y=x} \, dx = \\
-&= \int_{x=0}^{x=1} \frac{2}{3}x^2 \, dx = \\
-&= \left[\frac{2}{9}x^3 \right]_{x=0}^{x=1} = \\
-&= \frac{2}{9}.
+Die ersten partiellen Ableitungen lauten:
+\begin{align*} 
+\frac{\partial f(x,y)}{\partial x} &= -3 x^2 -3x + 6, \\ 
+\frac{\partial f(x,y)}{\partial y} &= -6 y^2 - 18y + 24. 
 \end{align*}
+
+Um die stationären Punkte zu finden, ist das folgende Gleichungssystem zu lösen: 
+
+$$ 
+\begin{cases} 
+\frac{\partial f(x,y)}{\partial x} = -3x^2-3x+6=0 \\ 
+\frac{\partial f(x,y)}{\partial y} =-6y^2-18y+24=0. 
+\end{cases} 
+$$
+
+Dieses Gleichungssystem hat 4 Lösungen, nämlich
+ 
+1. $(x_{1},y_{1})=(1,1)$, 
+2. $(x_{2},y_{2})=(-2,1)$, 
+3. $(x_{3},y_{3})=(1,-4)$ und 
+4. $(x_{4},y_{4})=(-2,-4)$,  
+
+die die stationären Punkte darstellen.
+ 
+Um den Typ der stationären Punkte zu bestimmen, werden die zweiten partiellen Ableitungen berechnet:
+
+\begin{align*}
+\frac{\partial^2 f(x,y)}{\partial x \partial x} &= -6x-3, \\ 
+\frac{\partial^2 f(x,y)}{\partial y \partial x} &= 0, \\
+\frac{\partial^2 f(x,y)}{\partial y \partial y} &= -12y-18, \\ 
+\frac{\partial^2 f(x,y)}{\partial x \partial y} &= 0. 
+\end{align*}
+ 
+Die Hesse-Matrix besteht aus den zweiten Ableitungen
+ 
+ $$
+\mathbf{H}(x,y)= 
+\left( \begin{array}{cc} 
+\frac{\partial^2 f(x,y)}{\partial x \partial x} & \frac{\partial^2 f(x,y)}{\partial x \partial y} \\ 
+\frac{\partial^2 f(x,y)}{\partial y \partial x} & \frac{\partial^2 f(x,y)}{\partial y \partial y}
+\end{array} \right) 
+= \left( \begin{array}{cc} 
+-6x-3 & 0 \\ 
+0     & -12y-18
+\end{array} \right). 
+$$
+
+Die Determinante der Hesse-Matrix ist
+
+$$\det(\mathbf{H}(x,y)) = (-6x-3) \cdot (-12y-18) - 0 \cdot 0 = 72xy + 108x +36y + 54.$$
+
+Nun wird für jeden stationären Punkt überprüft, ob tatsächlich ein Extremum vorliegt.
+
+1. $(x_{1},y_{1})=(1,1)$
+
+Die Determinante der Hesse-Matrix für diesen Punkt ist
+
+$$\det(\mathbf{H}(1,1)) = 270 > 0.$$
+
+Damit ist der Punkt $(x_{1},y_{1})=(1,1)$ ein Extremum. Da das Vorzeichen von $\frac{\partial^2 f(1,1)}{\partial x \partial x} = -9$ negativ ist, ist die Hesse-Matrix negativ definit und dieser Punkt ist ein Maximum (Hochpunkt).
+
+2. $(x_{2},y_{2})=(-2,1)$
+
+Die Determinante der Hesse-Matrix für diesen Punkt ist
+
+$$\det(\mathbf{H}(-2,1)) = -270 < 0.$$
+
+Damit ist die Hesse-Matrix für diesen Punkt indefinit und der Punkt $(x_{2},y_{2})$ ist kein Extremum.
+
+3. $(x_{3},y_{3})=(1,-4)$
+
+Die Determinante der Hesse-Matrix für diesen Punkt ist
+
+$$\det(\mathbf{H}(1,-4)) = -270 < 0.$$
+
+Damit ist die Hesse-Matrix für diesen Punkt indefinit und der Punkt $(x_{3},y_{3})$ ist kein Extremum.
+
+4. $(x_{4},y_{4})=(-2,-4)$
+
+Die Determinante der Hesse-Matrix für diesen Punkt ist
+
+$$\det(\mathbf{H}(-2,-4)) = 270 > 0.$$
+
+Damit ist der Punkt $(x_{4},y_{4})=(-2,-4)$ ein Extremum. Da das Vorzeichen von $\frac{\partial^2 f(-2,-4)}{\partial x \partial x} = -6\cdot(-2)-3=9$ positiv ist, ist die Hesse-Matrix positiv definit und dieser Punkt ist ein Minimum (Tiefpunkt).
 ```
 ````
 
-```{admonition} Übung 9.5
+```{admonition} Übung 8.5
 :class: miniexercise
-Berechnen Sie das Doppelintegral 
-
-$$\int_{x=0}^{x=2\pi}\left(\int_{y=x(x-\pi)^2(x-2\pi)}^{y=\sin(x)^2} 1 \, dy \right)\, dx.$$
+Die Querschnittsfläche eines Tunnels kann als Rechteck beschrieben werden, auf
+dem sich ein Halbkreis befindet. Wie müssen die geometrischen Abmessungen
+gewählt werden, wenn der Umfang minimal sein soll und der Flächeninhalt 50 m²
+betragen soll. 
 ```
 ````{admonition} Lösung
 :class: minisolution, toggle
-$$\int_{x=0}^{x=2\pi}\left(\int_{y=x(x-\pi)^2(x-2\pi)}^{y=\sin(x)^2} 1 \, dy \right)\, dx = \pi + \frac{4}{15}\pi^5$$
+Seitenlänge des Rechtecks: $x = 7.48 \text{m}$ (Boden) und $y = 3.75 \text{m}$ (Höhe des Rechtecks ohne Halbkreis)
 ```{dropdown} Lösungsweg
+Der Umfang $U$ der Tunnel-Querschnittsfläche ist
+
+$$U(x,y) = x + 2y + \frac{\pi}{2} x = (1 + \frac{\pi}{2})x + 2y.$$
+
+Da der Umfang minimiert werden soll, ist dies unsere Zielfunktion, die von den beiden Seitenlängen des Rechtecks $x$ und $y$ abhängt. Dabei haben wir $x$ als Boden des Tunnels gewählt.
+
+Die Nebenbedingung ist, dass die Querschnittsfläche 50 m² beträgt. Als Gleichung formuliert gilt dann
+
+$$A = xy + \frac{\pi}{8}x^2 = 50.$$
+
+Wir verwenden das Eliminationsverfahren und lösen die Nebenbedingung nach $y$ auf:
+
+$$\Rightarrow y = \frac{50 - \frac{\pi}{8}x^2}{x}, \quad x\neq 0.$$
+
+In die Zielfunktion eingesetzt erhalten wir
+
 \begin{align*}
-\int_{x=0}^{x=2\pi}\left(\int_{y=x(x-\pi)^2(x-2\pi)}^{y=\sin(x)^2} 1 \, dy \right)\, dx
-&= \int_{x=0}^{x=2\pi} \big[ y \big]_{y=x(x-\pi)^2(x-2\pi)}^{y=\sin^2(x)} \, dx = \\
-&= \int_{x=0}^{x=2\pi} \sin^2(x) - x (x-\pi)^2 (x-2\pi) \, dx
+\tilde{U}(x) &= (1+\frac{\pi}{2})x + \frac{100}{x} - \frac{\pi}{4}x = \\
+&= (1+\frac{\pi}{4})x + \frac{100}{x}.
 \end{align*}
-Nebenrechnung für den zweiten Integranden:
-\begin{align*}
-x (x-\pi)^2 (x-2\pi) 
-&= (x^2-2\pi x + \pi^2)\cdot (x^2-2\pi x) = \\
-&= x^4 -2\pi x^3 + \pi^2 x^2 - 2\pi x^3 + 4\pi^2x^2 - 2\pi^3x = \\
-&= x^4 - 4\pi x^3 + 5\pi^2 x^2 - 2\pi^3 x 
-\end{align*}
-Eingesetzt in das obige Integral gilt dann zusammen mit dem Trick $\sin^2(x) =\frac{1}{2}-\frac{1}{2}\cos(2x)$ (Additionstheorem bzw. Doppelwinkelfunktion)
-\begin{align*}
-\int_{x=0}^{x=2\pi}\left(\int_{y=x(x-\pi)^2(x-2\pi)}^{y=\sin(x)^2} 1 \, dy \right)\, dx
-&= \int_{x=0}^{x=2\pi} \sin^2(x) \, dx - \int_{x=0}^{x=2\pi} x^4 - 4\pi x^3 + 5\pi^2 x^2 - 2\pi^3x \, dx = \\
-&= \frac{1}{2} \left[x-\frac{1}{2}\sin(2x)) \right]_{x=0}^{x=2\pi} - \left[\frac{1}{5}x^5 - \pi x^4 + \frac{5}{3}\pi^2x^3 - \pi^3 x^2 \right]_{x=0}^{x=2\pi} = \\
-&= \frac{1}{2}2\pi - \left(\frac{1}{5}(2\pi)^5 - \pi(2\pi)^4 + \frac{5}{3}\pi^2(2\pi)^3 - \pi^3 (2\pi)^2 \right) = \\
-&= \pi - \frac{4}{15}\pi^5. 
-\end{align*}
+
+Die 1. Ableitung ist
+
+$$\tilde{U}'(x) = (1+\frac{\pi}{2}) - \frac{100}{x^2}.$$
+
+Wir setzen die 1. Ableitung gleich Null, um Kandidaten für Extrema zu bestimmen,
+
+$$(1+\frac{\pi}{2}) - \frac{100}{x^2} = 0$$
+
+und lösen die Gleichung. Das Ergebnis ist 
+
+$$x_{1,2} = \pm \sqrt{\frac{100}{1+\frac{\pi}{4}}} \approx \pm 7.48.$$
+
+Es kommt nur die positive Nullstelle infrage, da es keine negativen Längen gibt. Von diesem Kandidaten müssen wir aber erst noch zeigen, dass es sich um ein Extremum handelt. Wir bilden die 2. Ableitung
+
+$$\tilde{U}''(x) = \frac{200}{x^3}.$$
+
+Die mögliche Extremstelle $x_1 = 7.48$ eingesetzt ergibt 
+
+$$\tilde{U}''\left(\sqrt{\frac{100}{1+\frac{\pi}{4}}}\right) \approx 0.48.$$
+
+Da die 2. Ableitung ungleich Null ist, ist $x_1$ tatsächlich ein Extremum. Das Vorzeichen der 2. Ableitung ist positiv, damit ist $x_1$ ein Minimum (Tiefpunkt).
+
+Der Tunnel hat also minimalen Umfang bei einer Querschnittsfläche von 50 m², wenn die Seitenlänge x = 7.48 m (Boden) und die Seitenlänge y = 3.75 m gewählt werden.
 ```
 ````
-
-```{admonition} Übung 9.6
-:class: miniexercise
-Berechnen Sie den Schwerpunkt der Fläche eines Dreiecks mit den Koordinaten $(1,0)$, $(0,1)$ und $(-1,0)$. Machen Sie sich dazu eine Skizze des Integrationsgebietes.
-```
-````{admonition} Lösung
-:class: minisolution, toggle
-Schwerpunkt $S(0, \frac{1}{3})$
-```{dropdown} Lösungsweg
-Zuerst fertigen wir eine Zeichnung an.
-
-![Zeichnung 9.6](pics/drawing_exercise_09_06.svg)
-
-Die x-Koordinate des Schwerpunkts ist Null, weil das Dreieck symmetrisch zur
-y-Achse ist. Diese Symmetrie nutzen wir auch aus, um die y-Koordinate des
-Schwerpunkts zu berechnen. Anstatt das Integral von $x=-1$ bis $x=1$ zu
-berechnen und dabei zwei verschiedene Randfunktionen betrachten zu müssen,
-betrachten wir nur die rechte Hälfte des Dreiecks. Der Schwerpunkt der rechten
-Hälfte in y-Richtung muss gleich dem Schwerpunkt des gesamten Dreiecks in
-y-Richtung sein.
-
-Die Formel zur Berechnung der y-Koordinate des Schwerpunkts lautet also
-
-$$y_S = \frac{1}{A} \int_{x=0}^{x=1} \left( \int_{y=0}^{y=-x+1} y \, dy \right) \, dx.$$
-
-Zuerst berechnen wir $A$ mit der Formel $A = \frac{1}{2} g h$ mit der Grundseite $g$ und der Höhe $h$. Aus der Zeichnung lesen wir ab: $g = 1$ und $h=1$. Also ist der Flächeninhalt des rechten Dreiecks 
-
-$$A=\frac{1}{2}.$$
-
-Alternativ hätten wir auch den Flächeninhalt mit einem Doppelintegral berechnen können. Das innere Integral $I(x)$ ist
-
-\begin{align*}
-I(x) 
-&= \int_{y=0}^{y=-x+1} y \, dy = \\
-&= \left[ \frac{1}{2}y^2 \right]_{y=0}^{y=-x+1} = \\
-&= \frac{1}{2} (-x+1)^2 = \\
-&= \frac{1}{2}x^2 - x + \frac{1}{2}. 
-\end{align*}
-
-Eingesetzt in das äußere Integral erhalten wir
-
-\begin{align*}
-\int_{x=0}^{x=1} \left( \int_{y=0}^{y=-x+1} y \, dy \right) \, dx
-&= \int_{x=0}^{x=1} \frac{1}{2}x^2 - x + \frac{1}{2} \, dx = \\
-&= \left[\frac{1}{6} x^3 - \frac{1}{2}x^2 + \frac{1}{2} x \right]_{x=0}^{x=1} = \\
-&= \frac{1}{6} - \frac{1}{2} + \frac{1}{2} = \frac{1}{6}.
-\end{align*}
-
-Alles zusammengesetzt ist also die y-Koordinate des Schwerpunkts
-
-\begin{align*}
-y_S 
-&= \frac{1}{A}\int_{x=0}^{x=1} \left( \int_{y=0}^{y=-x+1} y \, dy \right) \, dx = \\
-&= \frac{1}{\frac{1}{2}} \cdot \frac{1}{6} = \frac{1}{3}.
-\end{align*}
-
-Damit ist der Schwerpunkt des Dreiecks $S(0, \frac{1}{3})$.
-```
-````
-
-```{admonition} Übung 9.7
-:class: miniexercise
-Berechnen Sie den Schwerpunkt der Fläche, die durch die beiden Kurven $f(x)=x^2-4x-1$ und $g(x)=2x-6$ eingeschlossen wird. Machen Sie sich dazu eine Skizze des Integrationsgebietes. 
-```
-````{admonition} Lösung
-:class: minisolution, toggle
-Schwerpunkt $S(3, -\frac{8}{5})$
-```{dropdown} Lösungsweg
-Zuerst fertigen wir eine Zeichnung an:
-
-![Zeichnung 9.6](pics/drawing_exercise_09_07.svg)
-
-Als erstes werden die Schnittstellen berechnet:
-
-$$f_o(x) = f_u(x) \quad \Rightarrow \mathbb{L} = \{1,5\}.$$
-
-Danach wird der Flächeninhalt $A$ berechnet:
-
-\begin{align*}
-A 
-&= \int_{x=1}^{x=5} \left( \int_{y=x^2-4x-1}^{y=2x-6} 1 \, dy\right) \, dx = \\
-&= \int_{x=1}^{x=5} \big[ y \big]_{y=x^2-4x-1}^{y=2x-6} \, dx = \\
-&= \int_{x=1}^{x=5} -x^2+6x-5 \, dx = \\
-&= \left[-\frac{1}{3}x^3 + 3x^2 - 5x \right]_{x=1}^{x=5} = \\
-& = \frac{32}{3} \\
-\end{align*}
-
-Als nächstes wird die x-Koordinate des Schwerpunkts berechnet:
-
-\begin{align*}
-x_S 
-&= \frac{1}{A} \int_{x=1}^{x=5} \left(\int_{y=x^2-4x-1}^{y=2x-6} x \, dy \right) \, dx = \\
-&= \frac{3}{32} \int_{x=1}^{x=5} \left[ xy \right]_{y=x^2-4x-1}^{y=2x-6} \, dx = \\
-&= \frac{3}{32} \int_{x=1}^{x=5} -x^3+6x^2-5x \, dx = \\
-&= \frac{3}{32} \left[-\frac{1}{4}x^4+2x^3-\frac{5}{2}x^2\right]_{x=1}^{x=5} = \\
-&= \frac{3}{32} \cdot 32 = 3.
-\end{align*}
-
-Und nun noch die y-Koordinate des Schwerpunktes:
-
-\begin{align*}
-y_S 
-&= \frac{1}{A} \int_{x=1}^{x=5} \left( \int_{y=x^2-4x-1}^{y=2x-6} y \, dy \right) \, dx = \\
-&= \frac{3}{32} \int_{x=1}^{x=5} \left[ \frac{1}{2}y^2 \right]_{y=x^2-4x-1}^{y=2x-6} \, dx = \\
-&= \frac{3}{32} \int_{x=1}^{x=5} -\frac{1}{2} x^4 + 4x^3 - 5x^2 - 16x + \frac{35}{2} \, dx = \\
-&= \frac{3}{32} \left[-\frac{1}{10}x^5 + x^4 - \frac{5}{3}x^3-8x^2+\frac{35}{2}x \right]_{x=1}^{x=5} = \\
-&= \frac{3}{32} \cdot \left( -\frac{256}{15}\right) = -\frac{8}{5} = -1.6.
-\end{align*}
-```
-````
-
-
-
-
-
-
-
-
-
-
-
 
 
