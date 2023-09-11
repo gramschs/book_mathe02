@@ -4,7 +4,7 @@
 format: jb-book
 root: intro
 parts:
-- caption: Part 1. Integrale
+- caption: Differential- und Integralrechnung
   chapters:
   - file: chapter01/chapter01_sec00.md
     sections:
@@ -20,8 +20,6 @@ parts:
     - file: chapter02/chapter02_sec03.md
     - file: chapter02/chapter02_sec04.md
     - file: chapter02/chapter02_sec05.md
-- caption: Part 2. Funktionenreihen
-  chapters:
   - file: chapter03/chapter03_sec00.md
     sections:
     - file: chapter03/chapter03_sec01.md
@@ -29,6 +27,8 @@ parts:
     - file: chapter03/chapter03_sec03.md
     - file: chapter03/chapter03_sec04.md
     - file: chapter03/chapter03_sec05.md
+- caption: Funktionenreihen
+  chapters:
   - file: chapter04/chapter04_sec00.md
     sections:
     - file: chapter04/chapter04_sec01.md
@@ -43,8 +43,6 @@ parts:
     - file: chapter05/chapter05_sec03.md    
     - file: chapter05/chapter05_sec04.md
     - file: chapter05/chapter05_sec05.md
-- caption: Part 3. Mehrdimensionale Analysis
-  chapters:
   - file: chapter06/chapter06_sec00.md
     sections: 
     - file: chapter06/chapter06_sec01.md
@@ -52,6 +50,8 @@ parts:
     - file: chapter06/chapter06_sec03.md    
     - file: chapter06/chapter06_sec04.md
     - file: chapter06/chapter06_sec05.md
+- caption: Höhere Differentialrechnung
+  chapters:
   - file: chapter07/chapter07_sec00.md
     sections: 
     - file: chapter07/chapter07_sec01.md
@@ -73,6 +73,8 @@ parts:
     - file: chapter09/chapter09_sec03.md    
     - file: chapter09/chapter09_sec04.md
     - file: chapter09/chapter09_sec05.md  
+- caption: Höhere Integralrechnung
+  chapters:
   - file: chapter10/chapter10_sec00.md
     sections: 
     - file: chapter10/chapter10_sec01.md
@@ -80,15 +82,15 @@ parts:
     - file: chapter10/chapter10_sec03.md    
     - file: chapter10/chapter10_sec04.md
     - file: chapter10/chapter10_sec05.md  
-- caption: Part 4. Differentialgleichungen
-  chapters:
   - file: chapter11/chapter11_sec00.md
     sections: 
     - file: chapter11/chapter11_sec01.md
     - file: chapter11/chapter11_sec02.md
     - file: chapter11/chapter11_sec03.md    
     - file: chapter11/chapter11_sec04.md
-    - file: chapter11/chapter11_sec05.md  
+    - file: chapter11/chapter11_sec05.md
+- caption: Differentialgleichungen
+  chapters:  
   - file: chapter12/chapter12_sec00.md
     sections: 
     - file: chapter12/chapter12_sec01.md
@@ -96,3 +98,10 @@ parts:
     - file: chapter12/chapter12_sec03.md    
     - file: chapter12/chapter12_sec04.md
     - file: chapter12/chapter12_sec05.md  
+  - file: chapter13/chapter13_sec00.md
+    sections: 
+    - file: chapter13/chapter13_sec01.md
+    - file: chapter13/chapter13_sec02.md
+    - file: chapter13/chapter13_sec03.md    
+    - file: chapter13/chapter13_sec04.md
+    - file: chapter13/chapter13_sec05.md  

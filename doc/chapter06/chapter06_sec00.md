@@ -1,4 +1,4 @@
-# 6. Funktionen von mehreren Variablen und partielle Ableitungen
+# 6. Fourierreihen
 
 Themen:
 

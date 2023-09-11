@@ -1,166 +1,51 @@
-# 11.4 Exakte Differentialgleichungen
+# 11.4 Anwendungen Dreifachintegral
 
-In diesem Kapitel werden wir uns mit exakten Differentialgleichungen
-beschäftigen. 
+Nun kommen Anwendungen des Dreifachintegrals. 
 
 ## Lernziele
 
 ```{admonition} Lernziele
 :class: important
-* Sie können anhand des Exaktheitskriterium überprüfen, ob eine
-  Differentialgleichung 1. Ordnung der Form
-  
-  $$p(x, y) + q(x, y) \cdot y' = 0$$ 
+* Sie können mit einem Dreifachintegral das Volumen $V$ eines Körpers berechnen
 
-  exakt ist.
-* Sie können eine exakte Differentialgleichung lösen.
+$$V=\iiint_{V}1\,dV.$$
+
+* Sie können mit drei Dreifachintegralen den Schwerpunkt $S(x_S,y_S,z_S)$ eines Körpers berechnen:
+
+$$x_S = \frac{1}{V}\iiint_{V}x\, dV, \qquad y_S = \frac{1}{V}\iiint_{V}y\, dV \qquad \text{und} \quad z_S = \frac{1}{V}\iiint_{V}z\, dV.$$
 ```
 
-## Was ist eine exakte Differentialgleichung?
+## Volumen berechnen
 
-Bei den exakten Differentialgleichungen handelt es sich um
-Differentialgleichungen 1. Ordnung. Wenn die Differentialgleichung in die Form 
+Die Berechnung des Volumens eines dreidimensionalen Körpers ist eine der direktesten Anwendungen des Volumenintegrals. Hierbei ist die Funktion, die integriert wird, einfach die Konstante 1. Das Volumen $V$ eines Körpers ist dann das Integral über den gesamten Körper, d.h.,
 
-$$p(x, y) + q(x, y) \cdot y' = 0$$
+$$V = \iiint_{V} 1 \, dV.$$
 
-gebracht werden kann und wenn zusätzlich die sogenannte **Exaktheitsbedingung**
+## Berechnung von Masse
 
-$$\frac{\partial p(x, y)}{\partial
-y} = \frac{\partial q(x, y)}{\partial x}$$
+Die Berechnung der Masse eines Körpers mit bekannter Dichte ist eine weitere
+wichtige Anwendung von Volumenintegralen. Wenn wir die Dichte $\rho(x, y, z)$
+des Körpers an jedem Punkt kennen, können wir die Masse $M$ des Körpers
+berechnen, indem wir die Dichte über das gesamte Volumen des Körpers
+integrieren:
 
-erfüllt ist, dann wird die Differentialgleichung **exakt** genannt.
+$$M = \iiint_{V} \rho(x, y, z) \, dV.$$
 
-## Beispiel einer exakten Differentialgleichung
+## Berechnung des Schwerpunktes
 
-Die Differentialgleichung
-
-$$(y - x) + (y+x)\cdot y' = 0$$
-
-ist von 1. Ordnung und lässt sich mit
-
-\begin{align*}
-p(x, y) &= y - x\\
-q(x, y) &= y + x
-\end{align*}
-
-in der oben beschriebenen Form schreiben. Als nächstes wird überprüft, ob die
-Exaktheitsbedingung erfüllt ist.
+Die Berechnung des Schwerpunktes $S(x_S, y_S, z_S)$ eines dreidimensionalen
+Körpers erfolgt analog zur Berechnung des Schwerpunktes von Flächen, indem das
+Volumenintegral jeweils über die Funktionen $x$, $y$ und $z$ berechnet wird. Dabei wird vorausgesetzt, dass wir einen homogenen Körper betrachten, dessen Dichte konstant ist.
 
 \begin{align*}
-\frac{\partial p(x, y)}{\partial y} &= \frac{\partial}{\partial y}(y - x) = 1, \\
-\frac{\partial q(x, y)}{\partial x} &= \frac{\partial}{\partial x}(y + x) = 1. 
+x_s &= \frac{1}{V} \iiint_{V} x \, dV, \\
+y_s &= \frac{1}{V} \iiint_{V} y \, dV, \\
+z_s &= \frac{1}{V} \iiint_{V} z \, dV. \\
 \end{align*}
 
-Beide partielle Ableitungen sind gleich und daher ist die Differentialgleichung
-exakt.
+Das folgende Video geht auf die Bedeutung und Anwendung der Doppel- und
+Dreifachintegrale ein.
 
-## Wie werden exakte Differentialgleichugnen gelöst?
-
-Liegt eine exakte Differentialgleichung vor, so wird die Differentialgleichung
-oft etwas informell mit dem Differentialquotienten $y'=\frac{dy}{dx}$
-folgendermaßen notiert:
-
-$$p(x, y) + q(x, y) \frac{dy}{dx} = 0 \quad 
-\Rightarrow \quad p(x,y) \, dx + q(t, x) \, dy = 0. $$
-
-Das erinnert an das totale Differential. Für die Lösungsidee starten wir mit
-einer Funktion $F$, die von zwei Variablen abhängt, nämlich $x_1$ und $x_2$, und
-für die gilt:
-
-$$F(x_1, x_2) = \tilde{c}.$$
-
-Dabei ist $\tilde{c}\in\mathbb{R}$ eine reelle Konstante. 
-
-Nun soll die erste Variable $x_1$ gleich $x$ sein, also $x_1 = x$. Die zweite
-Variable soll der Funktionswert $y(x)$ sein, also $x_2=y(x)$. Damit ist $F$ eine
-Funktion, die eigentlich nur von $x$ abhängt. Einmal direkt und einmal indirekt
-als verkettete Funktion. Die erste Ableitung nach $x$ muss mit der
-mehrdimensionalen Kettenregel berechnet werden:
-
-$$F'(x, y(x)) = \left(\frac{\partial F}{\partial x}, \, \frac{\partial F}{\partial y}\right) \cdot 
-\begin{pmatrix} 1 \\ y' \end{pmatrix} 
-= \frac{\partial F}{\partial x} + \frac{\partial F}{\partial y} y'.$$
-
-Wird die rechte Seite der Gleichung $F(x_1, x_2) = \tilde{c}$ abgeleitet, ist dies Null.
-Damit gilt für die erste Ableitung der Funktion $F(x,y)$
-
-$$\frac{\partial F}{\partial x} + \frac{\partial F}{\partial y} y' = 0.$$
-
-Das ist genau die Form der exakten Differentialgleichung mit
-
-\begin{align*}
-p(x,y) &= \frac{\partial F(x,y)}{\partial x} \\
-q(x,y) &= \frac{\partial F(x,y)}{\partial y}
-\end{align*}
-
-Aber wir kommen wir nun auf $F(x,y)$?
-
-Wir integrieren die erste Funktion $p(x,y)$ nach $dx$. Die dabei entstehende
-Integrationskonstante kann noch von $y$ abhängen. Wird nämlich partiell nach $x$
-abgeleitet, so werden Terme mit $y$ nämlich Null. Deshalb schreiben wir dafür
-$C(y)$ und erhalten
-
-$$F(x,y) = \int p(x,t) \, dx + C(y).$$
-
-Jetzt leiten wir diese Funktion partiell nach $y$ ab. Dabei erhalten wir zum
-einen die partielle Ableitung des Integrals $\int p(x,t) \, dx$, zum anderen die
-Ableitung $C'(y)$. Das Ergebnis muss $q(x,y)$ sein. Aus dieser Gleichung wird
-dann $C(y)$ durch Integration nach $y$ bestimmt. Sobald $F(x,y)$ eindeutig
-bestimmt ist, wird dann 
-
-$$F(x,y) = \tilde{c}$$
-
-gesetzt und nach $y$ aufgelöst.
-
-## Beispiel zur Lösung einer exakten Differentialgleichung
-
-Wir betrachten erneut die exakte Differentialgleichung
-
-$$(y - x) + (y+x)\cdot y' = 0.$$
-
-Wir haben oben die Exaktheitsbedingung schon nachgerechnet und können daher
-direkt den Ansatz
-
-$$F(x,y) = \tilde{c}$$
-
-mit 
-
-$$\frac{\partial F(x,y)}{\partial x} = y - x$$
-
-verwenden. Durch Integration nach $x$ erhalten wir
-
-$$F(x,y) = \int p(x,y) \, dx + C(y) = \int (y-x)\, dx + C(y) 
-= yx -\frac{1}{2}x^2 + C(y).$$
-
-Partiell ableiten nach $y$ und gleichsetzen mit $q(x,y)=y+x$ liefert
-
-$$x+C'(y) = y+x.$$
-
-Damit erhalten wir 
-
-$$C'(y)=y \quad \Rightarrow C(y) = \int y\, dy = \frac{1}{2}y^2 + c_1.$$
-
-Damit ist
-
-$$F(x,y) = yx -\frac{1}{2}x^2 + \frac{1}{2}y^2  + c_1 = \tilde{c}.$$
-
-Wir setzen $C= \tilde{c} - c_1$ und lösen nach $y$ auf:
-
-\begin{align*}
-yx -\frac{1}{2}x^2 + \frac{1}{2}y^2  = c \qquad &| \cdot 2 \\
-2yx - x^2 + y^2 = 2c \qquad &| +2x^2 \\
-y^2 + 2xy + x^2 = 2c + 2x^2 \qquad & \\
-(y+x)^2 = 2c + 2x^2 \qquad & | \sqrt{} \\
-y + x = \pm \sqrt{2c + 2x^2} \qquad & | -x \\
-y(x) = \pm \sqrt{2c + 2x^2} - x \\
-\end{align*}
-
-Die allgemeine Lösung der Differentialgleichung $(y - x) + (y+x)\cdot y' = 0$
-ist
-
-$$y(x) = \pm \sqrt{2c + 2x^2} - x.$$
-
-
-```{dropdown} Video zu "Exakte Differentialgleichung" von Lernkompass
-<iframe width="560" height="315" src="https://www.youtube.com/embed/PGiwJ57E1nc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+```{dropdown} Video zu "Mehrdimensionale Integration | Bedeutung und Anwendung" von MathePeter
+<iframe width="560" height="315" src="https://www.youtube.com/embed/H1Pj4SMVZ8s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 ```

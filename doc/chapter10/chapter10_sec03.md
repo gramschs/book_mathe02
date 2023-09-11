@@ -1,109 +1,71 @@
-# 10.3 Dreifachintegral
+# 10.3 Anwendung: Flächenberechnung
 
-Ein Volumenintegral ist eine spezielle Art von Integral, das oft im Maschinenbau
-auftritt. Es ist eine Erweiterung des Konzepts des Flächenintegrals auf
-dreidimensionale Räume. Insbesondere bei der Berechnung von Massen,
-Schwerpunkten oder Trägheitsmomenten von Körpern werden Volumenintegrale
-gebraucht. In diesem Kapitel führen wir das Volumenintegral ein und zeigen die
-Berechnung in kartesischen Koordinaten durch ein Dreifachintegral. In nächsten
-Kapitel werden wir dann die Anwendungen des Volumenintegrals kennenlernen.
+Mit dem Doppelintegral kann auch die Fläche eines Gebietes berechnet werden, das
+durch zwei Funktionen umrandet wird.
 
 ## Lernziele
 
 ```{admonition} Lernziele
 :class: important
-Sie können ein **Volumenintegral** als **Dreifachintegral** (in kartesischen Koordinaten) berechnen.
+Sie können mit einem Doppelintegral den Flächeninhalt einer Fläche $A$ berechnen.
 ```
 
-## Volumenintegral
+## Anwendungen von Doppelintegralen
 
-Ein Volumenintegral ist ein Integral, bei dem das Integrationsgebiet
-dreidimensional ist. Es wird also eine Funktion $f:\mathbb{R}^3\to\mathbb{R}$
-über ein Volumen integriert. Die mathematische Notation für das Volumenintegral
-ist
+Der Flächeninhalt kann mit der Formel
 
-$$\iiint_{V} f(x,y,z) \, dV.$$
+$$A = \iint_{A} 1 \, dA = \int_{x=a}^{x=b} \int_{y=f_u(x)}^{y=f_o(x)} 1 \, dy \,
+dx.$$ 
 
-Konkret wird das Volumenintegral berechnet, indem ein Koordinatensystem eingeführt wird, das Integrationsgebiet $V$ durch Randfunktionen beschrieben wird und das Volumenelement $dV$ durch Linienelemente ausgedrückt wird. Im nächsten Abschnitt schauen wir uns das für kartesische Koordinaten an.
+berechnet werden, also $f(x,y)=1$.
 
-## Berechnung durch Dreifachintegral
+## Beispiel Doppelintegral zur Flächenberechnung
 
-Wir verwenden ein kartesisches Koordinatensystem mit den drei Koordinatenachsen $e_x$, $e_y$ und $e_z$. Dann versuchen wir, die Ränder des Integrationsgebietes $V$ durch Funktionen zu beschreiben.
+Gesucht wird der Flächeninhalt $A$, der durch die Umrandung der beiden Funktionen 
 
-```{figure} pics/part10_skizze_dreifachintegral.svg
+$$f_o(x) = -x + 1$$
+
+und
+
+$$f_u(x) = x^2 - 5$$
+
+entsteht. Aus dem letzten Kapitel wissen wir bereits, dass sich die beiden
+Funktionen in den Punkten $(-3,4)$ und $(2,-1)$ schneiden.
+
+```{figure} pics/part10_plot_example02.svg
 ---
-width: 600px
-name: part10_skizze_dreifachintegral
+width: 75%
+name: part10_plot_example03
 ---
-Skizze: Integrationsgebiet des Volumenintegrals 
+Gesucht ist der schraffierte Flächeninhalt $A$, der durch die Gerade $f_o(x)=-x+1$ und die Parabel $f_u(x)=x^2-5$ umrandet wird.
 ```
 
-**Integrationsgebiet durch Funktionen beschreiben**
-   
-Der Deckel und der Boden des  Volumens $V$ sind Funktionen, die von $x$ und $y$
-abhängen. In der Skizze sind sie blau eingefärbt. Wir bezeichnen sie
-folgendermaßen:
+Der Flächeninhalt $A$ lässt sich mit dem Doppelintegral
 
-* $F_{o}(x,y)$: obere Fläche 
-* $F_{u}(x,y)$: untere Fläche
+$$\iint_{A} 1 \, dA = \int_{x=-3}^{x=2} \left(\int_{y=x^2-5}^{y=-x+1}
+1 \; dy\right)dx$$
 
-Als nächstes beschreiben wir das Gebiet $A$, aus dem die Werte für $(x,y)$
-kommen dürfen. In der Skizze ist das das rot eingefärbte Gebiet in der xy-Ebene.
-Um das Gebiet zu beschreiben, werden die obere und die untere Grenzfunktion
-beschrieben:
+berechnen.
 
-* $g_{o}(x)$: obere Grenzfunktion und
-* $g_{u}(x)$: untere Grenzfunktion.
+Zuerst wird das innere Integral $I(x)$ berechnet, indem nach $y$ integriert wird:
 
-Die x-Werte wiederum, die in die beiden Grenzfunktionen eingesetzt werden
-dürfen, stammen aus dem Intervall $[a,b]$.
+\begin{align*}
+I(x) &= \int_{y=x^2-5}^{y=-x+1} 1 \, dy = \\
+     &= \left[ y \right]_{y=x^2-5}^{y=-x+1} = \\
+     &= (-x+1) -(x^2-5) = \\
+     &= -x^2-x+6.
+\end{align*} 
 
-Das Volumenintegral kann jetzt durch drei Integrationen berechnet werden:
+Das innere Integral $I(x) = -x^2-x+6$ wird nun in das äußere Integral eingesetzt
+und nach $x$ integriert:
 
-$$\iiint_{V}f(x,y,z)\, dV = 
-\int_{x=a}^{x=b} \left( 
-    \int_{y=g_{u}(x)}^{y=g_{o}(x)} \left( 
-        \int_{z = F_{u}(x,y)}^{z = F_{o}(x,y)} f(x,y,z)\, dz \right) \, dy
-    \right) \, dx.$$
+\begin{align*}
+\int_{x=-3}^{x=2} I(x)\, dx &= \int_{x=-3}^{x=2}  -x^2-x+6\, dx =\\
+&= \left[-\frac{1}{3}x^3-\frac{1}{2}x^2+6x \right]_{x=-3}^{x=2} = \\
+&= \frac{125}{6} \approx 20.8333.
+\end{align*}
 
+Damit gilt insgesamt
 
-**Drei einzelne Integrationen durchführen**
-
-Jetzt werden die drei Integrale einzeln berechnet. Zunächst wird das innere
-Integral
-
-$$M(x,y) = \int_{z = F_{u}(x,y)}^{z = F_{o}(x,y)} f(x,y,z)\, dz$$
-
-durch Integration nach $z$ ausgrechnet. Das Ergebnis dieser Integration ist eine
-Funktion, die noch von $x$ und $y$ abhängt. Wir nennen diese $M(x,y)$. Sie wird
-in das mittlere Integral eingesetzt und dann wird nach $y$ integriert.
-
-$$I(x) =  \int_{y=g_{u}(x)}^{y=g_{o}(x)} M(x,y) \, dy.$$
-
-Das Ergebnis ist eine Funktion, die nur noch von $x$ abhängt und diw wir $I$
-nennen. Dann wird auch noch das äußere Integral berechnet,
-
-$$V = \int_{x=a}^{x=b} I(X) \, dx,$$
-
-so dass am Ende das Ergebnis eine Zahl ist.
-
-
-In dem folgenden Video wird der Unterschied Doppelintegral zu Dreifachintegral
-erklärt.
-
-```{dropdown} Video zu "Doppelintegral vs. Dreifachintegral" von Daniel Jung
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Ec6xuobv8Mk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-```
-
-Hier wird ein Dreifachintegral ausgerechnet, indem die drei Integrationen
-nacheinander durchgeführt werden:
-
-```{dropdown} Video zu "Mehrdimensionale Integrale: Dreifachintegrale in kartesischen Koordinaten" von Holger Schmidt
-<iframe width="560" height="315" src="https://www.youtube.com/embed/HZRAUqbVKeQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-```
-
-Ein weiteres Beispiel finden Sie hier.
-
-```{dropdown} Video zu "Übungsblatt 9, Aufgabe A1" von Dr.-Ing. Denis Busch
-<iframe width="560" height="315" src="https://www.youtube.com/embed/mY6Z8TQe2iQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-```
+$$A= \iint_{A}1\, dA = \int_{x=-3}^{x=2} \left(\int_{y=x^2-5}^{y=-x+1}
+1 \; dy\right)dx = \frac{125}{6} \approx 20.8333.$$

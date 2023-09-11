@@ -1,115 +1,131 @@
-# 5.2 Fourierreihen 
+# 5.2 Restglied von Taylorreihen
 
-Periodische Vorgänge gibt es sowohl in der Natur als auch in der Technik. In der
-Technik gehören insbesondere Drehbewegungen dazu. Es ist nicht sinnvoll,
-periodische Funktionen durch Potenzreihen bzw. Taylorreihen zu approximieren.
-Stattdessen werden wir periodische Funktionen als Überlagerung von Sinus- und
-Kosinus-Funktionen approximieren, also sogenannte **Fourierreihen**. 
+Taylorreihen und ihre Konvergenzeigenschaften sind für Ingenieure von großer
+Bedeutung, da sie bei der Lösung von Differentialgleichungen, der Optimierung
+von Funktionen und der numerischen Berechnung von Integralen verwendet werden.
+Taylorreihen bieten eine Möglichkeit, Funktionen durch einfachere, polynomiale
+Funktionen zu approximieren, die leichter zu handhaben sind. Die Kenntnis des
+Restglieds ermöglicht es Ingenieuren, die Genauigkeit der Approximation
+abzuschätzen und zu entscheiden, wie viele Terme der Taylorreihe für eine
+ausreichend genaue Lösung erforderlich sind.
 
-Die Idee der Fourierreihe wird in dem folgenden Video erklärt.
-
-```{dropdown} Video "Fourierreihe Übersicht" von Daniel Jung
-<iframe width="560" height="315" src="https://www.youtube.com/embed/_Hm3yGqWaeo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-```
-
-## Lernziele Fourierreihen
+## Lernziele
 
 ```{admonition} Lernziele
 :class: important
-* Sie können eine periodische Funktion in eine **Fourierreihe** umschreiben.
-* Sie können dazu die **Fourierkoeffizienten** berechnen. 
-* Sie kennen die Kriterien, wann eine Funktion in eine Fourierreihe entwickelt werden darf.
+Sie können mit dem Restglied der Taylorreihe den Fehler abschätzen, der entsteht, wenn eine Funktion durch ein Taylorpolynom vom Grad n ersetzt wird.
 ```
 
-## Trigonometrische Polynome
+## Restglied der Taylorreihe
 
-Bevor uns dem Thema Fourierreihe widmen, klären wir erst einmal den Begriff
-**trigonometrisches Polynom**. Wir haben ja bereits im letzten Kapitel die
-beiden wichtigsten periodischen Funktionen kennengelernt: Sinus- und
-Kosinusfunktion. Beide haben die Periode $2\pi$. Als erstes wollen wir Sinus
-und Kosinus so umschreiben, dass sie nicht die Periode $2\pi$ haben, sondern
-eine beliebige Periode, die als $T$ abgekürzt wird. Das klappt mit dem folgenden
-Trick. Wir nehmen nicht $\sin(x)$, sondern $\sin(\omega \cdot t)$ mit
+Die Idee der Taylorreihe ist ja, eine komplizierte Funktion $f$ durch eine
+Potenzreihe zu darzustellen. Allerdings ist das Aufsummieren von unendlich
+vielen Summanden für die Taylorreihe auch nicht praktikabel. Stattdessen wird in
+der Praxis die Taylorreihe ab einem bestimmten Grad abgebrochen. Oder anders
+ausgedrückt, als Näherung für die Funktion $f$ in der Umgebung eines
+Entwicklungspunktes $x_0$ wird ein Taylorpolynom vom Grad $n$ genutzt. Aber wie
+groß ist eigentlich der Fehler, wenn statt der Funktion $f$ das Taylorpolynom
+$T_n$ genommen wird? Welcher Rest bleibt da? Eines ist schon einmal klar. Würden
+wir für das Taylorpolynom einen anderen Grad $m$ nehmen, so würde sich auch ein
+anderer Fehler ergeben. Der Rest ist also auch vom Grad des Taylorpolynoms
+abhängig. Wir fassen zusammen:
 
-$$\omega = \frac{2\pi}{T}.$$
-
-Wenn jetzt für $t$ die Periode $T$ eingesetzt wird, ist das das Gleiche wie
-$2\pi$. Und $\omega = 1$ ist die normale Sinus-/Kosinusfunktion.
-
-Außerdem können wir die Sinus-/Kosinusfunktionen mit doppelter, dreifacher,
-vierfacher ... Frequenz miteinander kombinieren, z.B. so:
-
-$$f(x) = 3\cdot\cos(\omega t) -17\cdot\sin(\omega t) -2\cdot\cos(2\omega t) +
-\frac{3}{8}\cdot\sin(2\omega t).$$
-
-Die Funktion $f$ hat die Periode $T = 2\pi$ und wird trigonometrisches Polynom
-genannt.
-
-```{admonition} Was ist ... ein trigonometrisches Polynom?
+```{admonition} Was ist ... das Restglied der Taylorreihe?
 :class: note
-Ein trigonometrisches Polynom ist eine Funktion, die als Linearkombination von Sinus- und Kosinusfunktionen geschrieben werden kann:
+Wir nennen die Differenz zwischen der Funktion $f$ und dem dazugehörigen Taylorpolynom $T_n$ vom Grad $n$ das Restglied $R_n$. In Formel ausgedrückt ist das Restglied
 
-$$f(x) = \frac{a_0}{2} + a_1 \cos(\omega t) + b_1 \sin(\omega t) + a_2\cos(2\omega t) + b_2\sin(2\omega t) + \ldots + a_n\cos(n\omega t) + b_n\sin(n\omega t).$$
-
-Hierbei sind $a_0$, $a_1$, $b_1$, $a_2$, $b_2$, ..., $a_n$, $b_n$ Konstanten, die bestimmt werden
-müssen, um die Funktion f(x) vollständig zu beschreiben. 
+$$R_n(x) = f(x) - T_n(x).$$
 ```
 
-Und warum nehmen wir $\frac{a_0}{2}$ und nicht einfach $a_0$? Das hat etwas mit
-komplexen trigonometrischen Polynomen zu tun, die wir in dieser Vorlesung aber
-nicht mehr behandeln. Dennoch halten wir uns an dieser Stelle an die übliche
-Schreibweise.
+Jetzt haben wir dem Fehler zwar einen neuen Namen gegeben, Restglied, aber das
+hilft uns erstmal noch nicht weiter. Allerdings hat ein Mathematiker namens
+[Joseph-Louis Lagrange](https://de.wikipedia.org/wiki/Joseph-Louis_Lagrange)
+gezeigt, dass für das Restglied die folgende Formel gilt:
 
-```{dropdown} Video "Vorbereitung Fourierreihe Sinus/Kosinus" von Daniel Jung
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Wpp4FSUj9zU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-```
+$$R_n(x) = f(x) - T_n(x) =
+\frac{f^{(n+1)}(\textcolor{red}{z})}{(n+1)!}\cdot(x-x_0)^{n+1},$$
 
-## Wie findet man zu einer Funktion das trigonometrische Polynom?
+wobei der Punkt $z$ eine Zwischenstelle ist, die irgendwo zwischen $x$ und $x_0$
+liegt.
 
-Die Koeffizienten $a_k$ und $b_k$, also die Vorfaktoren vor den Sinus- und den
-Kosinusfunktionen im trigonometrischen Polynom heißen **Fourierkoeffizienten**.
-Wenn wir einfach irgendwelche Zaheln dafür wählen, ergibt sich dadurch eine
-Funktion. Wenn wir aber den umgelehrten Weg gehen wollen, dass die Funktion $f$
-durch das trigonometrische Polynom angenähert werden soll, dann müssen wir die
-Fourierkoeffizienten nach der folgenden Formel berechnen.
+Leider ist die Formel nicht ganz so einfach anzuwenden, denn die Zwischenstelle $z$ ist ja nicht bekannt. Wir wissen nur, dass $z$ irgendwo zwischen dem Entwicklungspunkt $x_0$ und $x$ liegt. Aber egal wo $z$ jetzt wirklich liegt, wir können einfach für alle Werte $z$ die $(n+1)$-te Ableitung 
 
-```{admonition} Wie werden die Fourierkoeffizienten berechnet?
-:class: note
-Wir starten mit einer gegebenen Funktion $f$, die die Periode $T$ und die
-Frequenz $\omega = \frac{2\pi}{T}$ hat. Die Fourierkoeffizienten werden dann
-berechnet als
+$$f^{(n+1)}(z)$$
+
+zeichnen. Aus der Zeichnung können wir dann das Maximum $M$ von $f^{(n+1)}(z)$ für alle Punkte zwischen $x_0$ und $x$ ablesen oder anderweitig berechnen. Es gilt also
+
+$$f^{(n+1)}(z) \leq M.$$
+
+Und mit dieser Abschätzung kann jetzt endlich auch der Fehler abgeschätzt
+werden, wenn $T_n$ anstatt der Funktion $f$ verwendet werden soll. Da wir nicht
+wissen, ob $T_n$ die Funktion $f$ über- oder unterschätzt, wissen wir auch
+nicht, ob $R_n(x)$ negativ oder positiv ist. Daher nehmen wir einfach mal den
+Betrag von $R_n(x)$, da es ja auch nur um eine grobe Abschätzung des Fehlers
+geht.
 
 \begin{align*}
-a_k &= \frac{2}{T} \int_{-T/2}^{T/2} f(t) \, \cos(k \, \omega \, t) \, dt, \quad k = 0, 1, 2, \ldots \\
-b_k &= \frac{2}{T} \int_{-T/2}^{T/2} f(t) \, \sin(k \, \omega \, t) \, dt, \quad k = 1, 2, \ldots \\
+\left|R_n(x) \right| &= \left| f(x) - T_n(x) \right| = \\
+    &= \left| \frac{f^{(n+1)}(z)}{(n+1)!}\cdot(x-x_0)^{n+1} \right| \leq\\
+    &\leq \frac{M}{(n+1)!} \cdot |x-x_0|^{n+1}.
 \end{align*}
+
+Fast fertig, jetzt muss noch ein Maximum von $|x - x_0|$ bestimmt werden. Wir
+nennen diese Zahl mal $d$ (wie Distanz). Dann kann der Fehler, der Betrag des
+Restglieds des Taylorpolynoms, abgeschätzt werden als
+
+$$\left|R_n(x) \right| \leq  \frac{M}{(n+1)!}\cdot d^{n+1}.$$
+
+Das folgende Video fasst die obigen Erklärungen zusammen.
+
+```{dropdown} Video zu "Taylor Restglied" von Prof. Hoever
+<iframe width="560" height="315" src="https://www.youtube.com/embed/oz1hejsyNlk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 ```
 
-## Fourierreihe
+## Beispiel
 
-Wenn wir den Grad $n$ des trigonometrischen Polynoms erhöhen, so können wir
-vermuten, dass die Approximation der Funktion $f$ immer besser wird. Tatsächlich
-ist es nicht ganz so einfach. Nur wenn die sogenannten **Dirichlet-Bedingungen**
-erfüllt sind, konvergiert das trigonometrische Polynom für $n \to \infty$ gegen
-die periodische Funktion $f$. Die Dirichlet-Bedingungen lauten:
+Probieren wir das an einem Beispiel aus. Die Funktion $f(x)=\sin(x)$ soll durch
+ein Taylorpolynom Grad 3 am Entwicklungspunkt $x_0=0$ approximiert werden. Im
+Abschnitt [Kochrezept Taylorpolynome](ref04_sec01_kochrezept) haben wir ja schon
+das Taylorpolynom $T_{3}$ berechnet als
 
-1. Das Periodenintervall lässt sich in Teilintervall unterteilen, in denen die
-   Funktion $f$ stetig und monoton ist. Dabei darf es höchstens endlich viele
-   Teilintervalle geben.
-2. Bei den Unstetigkeitsstellen existeriet sowohl der linksseitige als auch der
-   rechtsseitige Grenzwert. 
+$$T_3(x) = x - \frac{1}{6}x^3.$$
 
-Bei allen praktisch vorkommenen Beispielen im Maschinenbau ist dies aber der
-Fall. Wenn der Grad $n$ gegen unendlich geht, nennen wir die Reihe Fourierreihe.
+Die vierte Ableitung der Sinusfunktion ist wieder die Sinusfunktion selbst, also  $f^{(4)}(x) = \sin(x)$.
+ 
+Das Restglied ist also
 
-```{admonition} Was ist ... die Fourierreihe?
-:class: note
-Die meisten Funktionen $f$ mit der Periode $T$ und der Kreisfrequenz $\omega$
-können als eine unendliche Summe von Sinus- und Kosinusfunktionen approximiert
-mit den Fourierkoeffizienten $a_k$ und $b_k$ werden:
+$$R_3(x) = \frac{\sin(z)}{(3+1)!}\cdot x^{3+1} = \frac{\sin(z)}{24}\cdot x^4.$$
 
-$$f(t) = \frac{a_0}{2} + \sum_{k=1}^{\infty} \left(a_k \cos(k \omega t) + b_k
-\sin(k \omega t) \right).$$
+für eine Zwischenstelle $z$ zwischen $0$ und $x$. Wir wählen einen Winkel von
+$\alpha = 5^{\circ}$, was im Bogenmaß $\frac{\pi}{36}\approx 0.0873$ rad
+entspricht und untersuchen daher die Approximation an der Stelle $x = 0.0873$.
+Wenn wir die Sinusfunktion im Intervall $[0, 0.0873]$ zeichnen, so können wir
+ablesen, dass das Maximum gerade bei $x = 0.0873$ erreicht wird, also ist
 
-Diese Funktionenreihe nennt man **Fourierreihe**.
+$$M = \sin(0.0873) \approx 0.0872.$$
+
+Der Term $x - 0$ kann durch $m = 0.0873$ abgeschätzt werden, durch den Punkt am
+rechten Intervallende, der am weitesten vom Entwicklungspunkt $x_0=0$ entfernt
+ist. Also gilt
+
+$$R_3(0.0873) \leq \frac{0.0872}{24}\cdot 0.0873^4 = 2.11 \cdot 10^{-7}.$$
+
+Dieser maximale Fehler ist in den meisten Fällen so klein, dass im Intervall
+$[-5^{\circ}, + 5^{\circ}]$ die Sinusfunktion auch durch 
+
+$$\sin(x) \approx T_3(x) = x - \frac{1}{6}x^3.$$
+
+In vielen Fällen ist es sogar legitim, die Sinusfunktion nur durch das Taylorpolynom ersten Grades zu approximieren, also
+
+$$\sin(x) \approx T_1(x) = x.$$
+
+Diese Approximation nennt sich
+[Kleinwinkelnäherung](https://de.wikipedia.org/wiki/Kleinwinkelnäherung) und
+wird beispielsweise bei der Berechnung der Bewegungsgleichung des Fadenpendels
+benötigt.
+
+Ein weiteres Beispiel können Sie sich in dem folgenden Video ansehen.
+
+```{dropdown} Video zu "Taylorpolynom, Restglied" von Daniel Jung
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Rc_diK5l7iY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 ```

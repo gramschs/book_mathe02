@@ -1,76 +1,123 @@
-# 5.4 Rechenregeln Fourierreihen
+# 5.4 Rechnen mit Potenzreihen
 
-Zuletzt betrachten wir noch einige Eigenschaften von Fourierreihen.
+In diesem Abschnitt befassen wir uns mit den Rechenregeln für Potenzreihen.
 
 ## Lernziele
 
 ```{admonition} Lernziele
 :class: important
-* Sie wissen, dass sich bei geraden oder ungeraden Funktionen die Berechnung der
-  Fourierkoeffizienten vereinfacht.
-* Sie können die Summe zweier Fourierreihen bilden.
-* Sie können die Ableitung einer Fourierreihe berechnen.
+* Sie können Potenzreihen mit demselben Entwicklungspunkt
+  * addieren,
+  * subtrahieren, 
+  * multiplizieren und
+  * dividieren.
+* Sie können Potenzreihen ableiten und integrieren.
+* Sie können mit Potenzreihen den Grenzwert einer Funktion bestimmen.
 ```
 
-## Gerade und ungerade Funktionen
+## Addition und Subtraktion
 
-Wenn die Funktion $f$, zu der eine Fourierreihe gesucht ist, bestimmte
-Symmetrieeigenschaften hat, kann sich dadurch die Berechnung der
-Fourierkoeffizienten vereinfachen.
+Zwei Potenzreihen können addiert oder subtrahiert werden, wenn sie denselben
+Entwicklungspunkt $x_0$ haben. Um sie zu addieren oder zu subtrahieren, müssen
+lediglich die Koeffizienten addiert bzw. subtrahiert werden.
 
-Ist die Funktion $f$ gerade, gilt also $f(t) = f(-t)$, dann fallen alle Terme
-mit der Sinusfunktion weg (die ja ungerade ist). Also gilt automatisch $b_k =
-0$. Außerdem ist dann auch das Produkt $f(t)\cdot \cos(k \omega t)$ eine gerade
-Funktion, da die Kosinusfunktion ebenfalls gerade ist. Wir brauchen nicht von
-$-T/2$ bis $T/2$ integrieren, sondern können auch nur von $0$ bis $T/2$
-integrieren und das Ergebnis verdoppeln. Damit erhalten wir für **gerade
-Funktionen** $f$ die folgende Fourierreihe:
+Lauten die beiden Potenzreihen
 
-$$f(t) = \frac{a_0}{2} + \sum_{k=1}^{\infty} a_k \cos(k \omega t)$$
+$$\sum_{k=0}^{\infty}a_k (x-x_0)^k \text{ und } \sum_{k=0}^{\infty} b_k
+(x-x_0)^k,$$
 
-mit den Fourierkoeffizienten 
+dann ist die Summe
 
-$$a_k = \frac{4}{T}\int_{0}^{T/2} f(t) \cos(k \omega t) \, dt.$$
+$$\sum_{k=0}^{\infty} (a_k + b_k)\cdot (x-x_0)^k$$
 
-Für **ungerade Funktionen** $f$, also solche für die $f(t) = -f(-t)$ gilt,
-fallen die $a_k$ weg. Es bleibt eine reine Sinusreihe übrig.
+und die Differenz
 
-$$f(t) = \sum_{k=1}^{\infty} b_k \sin(k \omega t)$$
+$$\sum_{k=0}^{\infty} (a_k - b_k)\cdot (x-x_0)^k.$$
+
+Allerdings muss der Konvergenzradius neu überprüft werden. Wenn eine der
+Potenzreihen einen kleineren Konvergenzradius als die andere hat, dann hat die
+Summe/Differenz mindestens denselben kleineren Konvergenzradius. Möglicherweise
+ist der Konvergenzradius jedoch größer.
+
+## Ableiten und Integrieren
+
+Potenzreihen lassen sich sehr einfach ableiten oder integrieren. Dazu wird jeder
+einzelne Term der Reihe abgeleitet oder integriert. Der Konvergenzradius bleibt
+dabei erhalten.
+
+## Multiplikation und Division
+
+Die Multiplikation und Division zweier Potenzreihen ist leider etwas komplizierter.
+
+Um zwei Potenzreihen zu multiplizieren, verwenden wir die Cauchy-Produkt-Formel. Damit die Formel nicht zu unübersichtlich wird, nehmen wir den Entwicklungspunkt $x_0=0$, aber natürlich gilt die Formel auch für andere Entwicklungspunkte.
+
+$$\left(\sum_{k=0}^{\infty} a_k x^k \right) \cdot \left(\sum_{k=0}^{\infty} b_k x^k \right) = \left(\sum_{k=0}^{\infty} c_k x^k \right) $$
 
 mit 
 
-$$b_k = \frac{4}{T} \int_{0}^{T/2} f(t) \sin(k \omega t) \, dt.$$
+$$c_k = \sum_{l=0}^{k} a_l b_{k-l} 
+= a_0 b_k + a_1 b_{k_1} + a_2 b_{k_2} + \ldots a_k b_0.$$
 
-```{dropdown} Vide "Fourierreihe: gerade/ungerade" von Daniel Jung
-<iframe width="560" height="315" src="https://www.youtube.com/embed/7Uig_X9Lg3s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-```
+Der Konvergenzradius muss neu überprüft werden.
 
-## Addition
+Wenn die Potenzreihe $A(x)$ durch die Potenzreihe $B(x)$ geteilt werden soll,
+dann muss eine neue Potenzreihe $C(x)$ gefunden werden, so dass
 
-Wenn zwei Funktionen $f$ und $g$ die gleiche Periode $T$ haben, so hat die Summe
-der beiden Funktionen ebenfalls wieder die Periode $T$. Liegen nun für beide
-Funktionen Fourierreihen vor, so dürfen wir auch einfach die
-Fourierkoeffizienten addieren, um eine Approximation der Funktion $f+g$ zu
-erhalten. 
+$$A(x) = B(x) \cdot C(x)$$
 
-## Ableitung
+gilt. Für die Multiplikation $B(x) \cdot C(x)$ gilt jedoch
 
-Wenn eine Funktion $f$ durch eine Fourierreihe dargestellt wird, also
+$$\left(\sum_{k=0}^{\infty} b_k x^k \right) \cdot \left(\sum_{k=0}^{\infty} c_k
+x^k \right) = \left(\sum_{k=0}^{\infty} d_k x^k \right) $$
 
-$$f(t) = \frac{a_0}{2} + \sum_{k=1}^{\infty} \left(a_k \cos(k \omega t) + b_k
-\sin(k \omega t) \right)$$
+mit den Koeffizienten 
 
-gilt, dann ist ihre Ableitung wieder eine Fourierreihe.
+$$d_k = \sum_{l=0}^{k} b_l c_{k-l} = b_0 c_k + b_1 c_{k_1} + b_2 c_{k_2} +
+\ldots b_k c_0.$$
 
-$$f'(t) = \sum_{k=1}^{\infty} \left(\alpha_k \cos(k \omega t) + \beta_k
-\sin(k \omega t) \right).$$
+Damit das Produkt $B(x) \cdot C(x)$ gleich der Potenzreihe $A(x)$ ist, muss
+jeder Koeffizient $d_k$ mit $a_k$ übereinstimmen. Wir vergleichen also die
+Koeffizienten
 
-Allerdings fällt der erste Term $a_0/2$ weg und die neuen Fourierkoeffizienten
-$\alpha_k$ und $\beta_k$ können mit den Formeln
+$a_k = d_k$
 
-\begin{align*}
-\alpha_k &= b_k \cdot k \cdot \omega \\
-\beta_k  &= -a_k \cdot k \cdot \omega
-\end{align*}
+und berechnen daraus die gesuchten $c_k$. Das funktioniert allerdings nur, wenn
+wir nicht ins Unendliche gehen, sondern die Potenzreihe abbrechen. Der
+Konvergenzradius muss ebenfalls neu bestimmt werden.
 
-berechnet werden.
+## Bestimmung von Grenzwerten mit Potenzreihen
+
+Potenzreihen bieten eine alternative Methode zur Berechnung von
+Funktionsgrenzwerten im Vergleich zum Verfahren von Bernoulli-de l'Hospital.
+Beim Verfahren von Bernoulli-de l'Hospital werden Zähler und Nennen getrennt
+voneinander abgeleitet, bis der Funktionsgrenzwert bestimmt werden kann.
+Gegebenfalls ist es jedoch möglich, eine Funktion als Potenzreihe darzustellen,
+dann die Division durchzuführen und daraus den Grenzwert direkt zu bilden. Am
+einfachsten ist es, ein Beispiel zu betrachten.
+
+Berechnen Sie den Grenzwert der Funktion $f(x) = \sin(x)/x$, wenn $x$ gegen 0
+strebt, also
+
+$$\lim_{x \to 0}\frac{\sin(x)}{x}.$$
+
+$x=0$ darf in die Funktion nicht eingesetzt werden, da ansonsten durch 0 geteilt werden würde. Die Potenzreihe der Sinusfunktion lautet:
+
+$$\sin(x) = x - \frac{x^3}{3!} + \frac{x^5}{5!} - \frac{x^7}{7!} + \ldots$$
+
+und damit ist
+
+$$\frac{\sin(x)}{x} = 1 - \frac{x^2}{3!} + \frac{x^4}{5!} - \frac{x^6}{7!} + \ldots .$$
+
+Für jeden einzelnen Term können wir jetzt aber den Grenzwert berechnen, also
+
+$$
+\lim_{x\to 0} \left(1 \right) = 1, \;
+\lim_{x\to 0} \left(\frac{x^2}{3!} \right) = 0, \;
+\lim_{x\to 0} \left(\frac{x^4}{5!} \right) = 0, \ldots $$
+
+Nur der erste Term hat den Grenzwert 1, alle nachfolgenden Grenzwerte sind 0. Da
+alle Grenzwerte endlich sind, dürfen wir die Grenzwerte addieren bzw. subtrahieren
+und erhalten so den gesuchten Grenzwert 
+
+$$\lim_{x \to 0}\frac{\sin(x)}{x} = 1.$$
+

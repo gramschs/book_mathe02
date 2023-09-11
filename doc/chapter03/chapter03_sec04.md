@@ -1,81 +1,65 @@
-# 3.4 Konvergenz von Potenzreihen
+# 3.4 Volumen von Rotationskörpern
 
-## Lernziele
+In diesem Abschnitt beschäftigen wir uns mit Rotationskörpern. Rotationskörper
+werden manchmal auch Drehkörper genannt. Ein Rotationskörper ist ein
+dreidimensionales Objekt, das durch die Rotation einer Fläche um eine Achse
+erzeugt wird. Der Rotationskörper wird durch die Form der rotierten Fläche sowie
+die Achse, um die sie gedreht wird, bestimmt.
+
+## Lernziele 
 
 ```{admonition} Lernziele
 :class: important
-* Sie können erklären, was der **Konvergenzbereich** einer Potenzreihe ist.
-* Sie können den Konvergenzbereich einer Potenzreihe geometrisch interpretieren und anhand des **Konvergenzradius** entscheiden, ob eine Potenzreihe konvergiert oder divergiert oder berechnen, was in den **Randpunkten** passiert.
-* Sie kennen zwei Formeln auswendig, um den Konvergenzradius $r$ einer Potenzreihe zu berechnen, nämlich
+Sie können das **Volumen eines Rotationskörpers** berechnen, der dadurch
+entsteht, dass eine Kurve
+*  um die x-Achse gedreht wird:
 
-$$r = \lim_{k\to\infty}\left| \frac{a_k}{a_{k+1}}\right| \quad \text{ und } \quad r = \lim_{k\to\infty}\frac{1}{\sqrt[k]{|a_k|}},$$
+$$V = \pi \int_{a}^{b} f(x)^2 \, dx,$$
 
-und können diese auch anwenden. 
+*  um die y-Achse gedreht wird:
+
+$$V = \pi \int_{f(a)}^{f(b)} \left(f^{-1}(y) \right)^2 \, dy .$$
 ```
 
-## Manchmal kann man eine Funktion mit einer Potenzreihe approximieren, manchmal nicht
 
-Experiment:
+## Rotation um x-Achse
 
-1. Gehen Sie mit Ihrem Mauszeiger auf das GeoGebra-Applet [Taylor polynomial
-   graphs](https://www.geogebra.org/m/s9SkCsvC) und klicken Sie darauf (ggf. auf
-   den Pfeil klicken), um es zu aktivieren.
-2. Schauen Sie sich zunächst die Approximation der Kosinusfunktion an. Schieben
-   Sie den Slider für n von 1 bis 30 und beobachten Sie? Ab wann ist Ihrer
-   Meinung nach die Potenzreihe eine gute Approximation der Kosinusfunktion? 
-3. Ändern Sie jetzt die Funktion und geben Sie `f(x) = ln(x)` ein. Schieben Sie
-   den Schieberegler wieder von 1 bis 30. Was beobachten Sie diesmal?
+Die Berechnung des Volumens eines Rotationskörpers kann durch Integration
+erfolgen. Die grundlegende Idee ist, dass das Volumen des Rotationskörpers als
+Summe von dünnen Scheiben, die senkrecht zur Rotationsachse stehen, dargestellt
+werden kann. Die Berechnung des Volumens erfolgt dann durch Integration der
+Fläche dieser Scheiben entlang der Rotationsachse.
 
-Für jedes x wird die Summe $\sum_{k=0}^{\infty} a_k (x-x_0)^k$ einen anderen
-Grenzwert annehmen, sofern der Grenzwert überhaupt existiert. Diejenigen x, für
-die die Folge der Partialsummen konvergiert, nennen wir Konvergenzbereich.
+Konkret betrachten wir nun die Rotation um die x-Achse. Die Fläche, die um die
+x-Achse gedreht werden soll, soll oben durch die Funktion $f$, unten durch die
+x-Achse sowie links durch die Gerade $x=a$ und rechts durch Gerade $x=b$
+begrenzt werden. Dann wird das Volumen $V$ des Rotationskörpers mit der Formel
 
-```{admonition} Was ist ... der Konvergenzbereich einer Potenzreihe?
-:class: note
-Die Menge aller Zahlen $x$, für die die spezielle Potenzreihe
+$$V = \pi \int_a^b f(x)^2 \, dx$$
 
-$$p(x) = \sum_{k=0}^{\infty} a_k x^k$$
+berechnet.
 
-konvergiert, wird **Konvergenzbereich** genannt.
-```
+<iframe width="560" height="315" src="https://www.youtube.com/embed/mk7PZfAmB1g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-## Konvergenzradius 
+## Rotation um y-Achse
 
-Wenn man den Konvergenzbereich von Potenzfunktionen näher untersucht, stellt man
-fest, dass der Konvergenzbereich ein Intervall ist, in dessen Mitte die 0 liegt.
-Das Intervall ist symmetrisch zur Null, kann also als $(-r, +r)$ dargestellt
-werden. Die Zahl $r$ wird als **Konvergenzradius** bezeichnet. 
+Eine Methode zur Berechnung des Volumens eines Rotationskörpers, der um die
+y-Achse gedreht wird, ist die Verwendung der Umkehrfunktion. Wir können die
+x-Achse als Rotationsachse betrachten, indem wir die Funktion $f(x)$ durch ihre
+Umkehrfunktion $f^{-1}(y)$ ersetzen.
 
-Wenn $x < -r$ ist oder $r < x$ ist, dann divergiert die Potenzreihe. Was
-passiert, wenn $x = -r$ ist oder $x = +r$ gilt, ist nicht klar. Diese
-sogenannten Randpunkte des Konvergenzbereichs müssen gesondert untersucht
-werden.
+Wenn wir die Funktion $f(x)$ um die y-Achse drehen, erhalten wir einen
+Rotationskörper mit der Form des Querschnitts um die y-Achse. Um das Volumen
+dieses Rotationskörpers zu berechnen, können wir das Volumen der umgedrehten
+Funktion um die x-Achse berechnen. Das Volumen des Rotationskörpers ist dann das
+gleiche wie das Volumen des umgedrehten Körpers.
 
-Betrachten wir nicht eine spezielle Potenzreihe sondern eine allgemeine
-Potenzreihe 
+Die Formel zur Berechnung des Volumens eines Rotationskörpers, der um die
+y-Achse gedreht wird, ist gegeben durch:
 
-$$p(x) = \sum_{k=0}^{\infty} a_k (x - x_0)^k,$$
+$$V = \pi  \int_c^d  (f^{-1}(y))^2 \, dy ,$$
 
-dann ist nicht die 0 in der Mitte des Konvergenzbereichs, sondern $x_0$. Der
-Konvergenzbereich ist dann $(-r + x_0, +r + x_0)$.
+wobei $c = f(a)$ und $d = f(b)$ die Grenzen der Integration sind und $f^{-1}(y)$ die
+Umkehrfunktion von $f(x)$ ist.
 
-```{dropdown} Video Konvergenzradius (von Prof. Hoever)
-<iframe width="560" height="315" src="https://www.youtube.com/embed/69PgueE9CI0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-```
-
-## Formeln zur Berechnung des Konvergenzradius
-
-Die beiden folgenden Videos zeigen, wie die beiden Formeln
-
-* Wurzelkriterium
-* Quotientenkriterium
-  
-zur Berechnung des Konvergenzradius funktionieren.
-
-```{dropdown} Video Wurzel-Formel bei Konvergenzradius (von Prof. Hoever)
-<iframe width="560" height="315" src="https://www.youtube.com/embed/yO2mP5aToMU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-```
-
-```{dropdown} Video Quotienten-Formel bei Konvergenzradius (von Prof. Hoever)
-<iframe width="560" height="315" src="https://www.youtube.com/embed/ConZiKDKA9Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-```
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Jv1DrugW1nk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
