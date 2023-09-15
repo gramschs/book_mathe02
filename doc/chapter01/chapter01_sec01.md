@@ -85,9 +85,9 @@ fig.show()
 :class: tip
 Wenn Sie mit dem Mauszeiger über die Punkte des Diagramms fahren, werden Zeit und zurückgelegte Strecke eingeblendet. 
 
-1. Berechnen Sie die Durchschnittgesgeschwindigkeit im Zeitraum [10 min, 40 min]. 
-2. Berechnen Sie die Durchschnittgesgeschwindigkeit im Zeitraum [15 min, 20 min]. 
-3. Berechnen Sie die Durchschnittgesgeschwindigkeit im Zeitraum [20 min, 30 min]. 
+1. Berechnen Sie die Durchschnittsgeschwindigkeit im Zeitraum [10 min, 40 min]. 
+2. Berechnen Sie die Durchschnittsgeschwindigkeit im Zeitraum [15 min, 20 min]. 
+3. Berechnen Sie die Durchschnittsgeschwindigkeit im Zeitraum [20 min, 30 min]. 
 ```
 ```{admonition} Lösung
 :class: tip, toggle
