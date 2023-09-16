@@ -12,9 +12,13 @@ jupytext:
 
 # 1.1 Ableitungen
 
-```{warning}
-Dieser Abschnitt wird gerade überarbeitet.
-```
+Die Differentialrechnung ist ein zentrales Thema der Analysis. Mit Hilfe der
+Differentialrechnung wird untersucht, wie sich Funktionen verändern. In diesem
+Kapitel werden die dazu nötigen Begriffe eingeführt. Zunächst geht es um
+Veränderungen in einem Bereich (mittlere Änderungsrate, Differenzenquotient und
+Steigung einer Sekante) und dann um punktuelle Veränderungen (momentane
+Änderungsrate, Differentialquotienten, Steigung einer Tangente, Ableitung).
+
 
 ## Lernziele
 
@@ -25,6 +29,12 @@ Dieser Abschnitt wird gerade überarbeitet.
 * Sie können den **Differenzenquotienten** einer Funktion berechnen.
 * Sie können den Differenzenquotient als **Steigung der Sekante** geometrisch
   interpretieren.
+* Sie wissen, was die **momentane Änderungsrate** einer zeitabhängigen Größe ist
+  und können diese berechnen.
+* Sie können den **Differentialquotienten** bzw. die **Ableitung** einer
+  Funktion berechnen.
+* Sie können den Differentialquotient/Ableitung als **Steigung der Tangente**
+  geometrisch interpretieren.
 ```
 
 
@@ -83,7 +93,9 @@ fig.show()
 
 ```{admonition} Mini-Übung
 :class: tip
-Wenn Sie mit dem Mauszeiger über die Punkte des Diagramms fahren, werden Zeit und zurückgelegte Strecke eingeblendet. 
+Wenn Sie mit dem Mauszeiger über die Punkte des Diagramms fahren, werden die
+Zeit und die Strecke, die seit der Autobahnauffahrt zurückgelegt wurde,
+eingeblendet.
 
 1. Berechnen Sie die Durchschnittsgeschwindigkeit im Zeitraum [10 min, 40 min]. 
 2. Berechnen Sie die Durchschnittsgeschwindigkeit im Zeitraum [15 min, 20 min]. 
@@ -157,7 +169,6 @@ Definitionsmenge gehört, bezeichnen wir den Term
 als Differenzenquotient von $f$ im Intervall $[x_1, x_2]$.
 ```
 
-+++
 
 ## Der Differenzenquotient geometrisch interpretiert
 
@@ -175,3 +186,113 @@ dann ist der Differenzenquotient die Steigung dieser Gerade. Diese spezielle
 Gerade, die zwei Punkte eines Funktionsgraphens miteinander verbindet, wird
 **Sekante** genannt. Der Differenzenquotient ist also die Steigung der Sekante.
 
+```{dropdown} Video zu "Mittlere Änderungsrate" von Mathematrick
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ClE5PYr5P0Y?si=eKrxyS4I5UrsGr05" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+```
+
+## Die momentane Änderungsrate oder der Differentialquotient
+
+Die mittlere Änderungsrate gibt uns eine durchschnittliche Veränderung innerhalb
+eines Intervalls $[t_1, t_2]$. Aber was ist, wenn wir wissen möchten, wie sich
+eine zeitabhängige Größe genau in einem bestimmten Zeitpunkt ändert? Hier kommt
+die momentane Änderungsrate ins Spiel. Bei der Betrachtung der momentanen
+Änderungsrate konzentrieren wir uns auf ein Zeitintervall, das so klein wird,
+dass es fast einem einzelnen Punkt entspricht. In diesem Kontext nähert sich
+$t_2$ kontinuierlich $t_1$ an, bis sie praktisch identisch sind. Mathematisch
+ausgedrückt betrachten wir den Grenzwert $t_2 \to t_1$. Da die mittlere
+Änderungsrate für das Intervall $[t_1, t_2]$ definiert ist, ändert sie sich mit
+dem Intervall. Es entsteht eine Folge von mittleren Änderungsraten für immer
+kleiner werdende Intervalle $[t_1, t_2]$. Wenn diese Folge von mittleren
+Änderungsraten einen Grenzwert hat, nennen wir diesen Grenzwert **momentane
+Änderungsrate**.
+
+```{admonition} Was ist ... die momentane Änderungsrate?
+:class: note
+Die momentane Änderungsrate beschreibt die Änderung einer zeitabhängigen Größe für ein
+unendlich kleines Intervall. Mathematisch ausgedrückt, ist sie der Grenzwert der
+mittleren Änderungsrate:
+\begin{equation*} 
+\text{momentane Änderungsrate} = 
+\lim_{t_2 \to t_1} \frac{f(t_2) - f(t_1)}{t_2 - t_1},
+\end{equation*}
+sofern der Grenzwert existiert.
+```
+
+Im Gegensatz zum Differenzenquotienten, der sich auf ein Zeitintervall
+[t<sub>1</sub>, t<sub>2</sub>] bezieht, bezieht sich der Differentialquotient
+auf einen einzelnen Zeitpunkt $t_1$.
+
+Betrachten wir das obige Beispiel des deutschen Touristen auf der italienischen
+Autobahn. Während die mittlere Änderungsrate uns die durchschnittliche
+Geschwindigkeit über ein bestimmtes Zeitintervall gibt, würde die momentane
+Änderungsrate uns die exakte Geschwindigkeit zu einem bestimmten Zeitpunkt, z.B.
+genau 20 Minuten nach der Autobahnauffahrt, anzeigen.
+
+Auch hier können wir den Begriff der momentanen Änderungsrate auf beliebige
+funktionale Zusammenhänge verallgemeinern. Aus dem Differenzenquotienten wird so
+der Differentialquotient.
+
+```{admonition} Was ist ... der Differentialquotient?
+:class: note
+Wenn das Intervall des Differenzenquotienten unendlich klein wird und der
+Grenzwert des Differenzenquotienten  
+\begin{equation*} 
+\lim_{x_2 \to x_1} \frac{f(x_2) - f(x_1)}{x_2 - x_1}
+\end{equation*}
+existiert, nennt man diesen Grenzwert Differentialquotient der Funktion $f$ an
+der Stelle $x_1$.
+```
+
+
+## Geometrische Interpretation des Differentialquotienten
+
+Während der Differenzenquotient die Steigung einer Sekante zwischen zwei Punkten
+eines Funktionsgraphen beschreibt, gibt der Differentialquotient die Steigung
+der Tangente an einem bestimmten Punkt des Graphen an. Die **Tangente** ist eine
+Gerade, die den Graphen nur an diesem einen Punkt berührt.
+
+Mathematisch ausgedrückt, wenn der Abstand $\Delta x$ zwischen zwei x-Werten $x$
+und $x + \Delta x$ gegen Null geht, nähert sich die Sekante einer Tangente an.
+Der Differentialquotient
+
+\begin{equation*} 
+\lim_{\Delta x \to 0}\frac{f(x + \Delta x) - f(x)}{\Delta x} 
+\end{equation*}
+
+gibt dann die Steigung dieser Tangente am Punkt $(x, f(x)$ an. Die Steigung der
+Tangente der Funktion $f$ an der Stelle $x$ wird meist mit einem Strich
+abgekürzt, also
+
+\begin{equation*} 
+f'(x) = \lim_{\Delta x \to 0}\frac{f(x + \Delta x) - f(x)}{\Delta x}. 
+\end{equation*}
+
+Man spricht das als "f Strich an der Stelle x ist ..." oder sagt "die Ableitung
+der Funktion f an der Stelle x ist ...".
+
+Geometrisch gesehen ist die Tangente die beste lineare Näherung der Funktion an
+einem Punkt. Sie gibt uns eine Vorstellung davon, wie sich die Funktion in der
+unmittelbaren Umgebung dieses Punktes verhält.
+
+Um noch einmal auf das Beispiel zurückzukommen: Betrachten Sie die
+Geschwindigkeit eines Autos auf der Autobahn. Während der Differenzenquotient
+uns die durchschnittliche Geschwindigkeit zwischen zwei Zeitpunkten gibt, würde
+der Differentialquotient uns die exakte Geschwindigkeit zu einem bestimmten
+Zeitpunkt anzeigen.
+
+```{dropdown} Video zu "Differentialquotient" von Mathematrick
+<iframe width="560" height="315" src="https://www.youtube.com/embed/_L6wmTzod_I?si=Fj3jbGIOcc3mC4wc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+```
+
+```{dropdown} Video zu "Ableitung" von Mathematische Methoden
+<iframe width="560" height="315" src="https://www.youtube.com/embed/FW7Vd1VI3uw?si=Ij7j2mb5CIKNYUEH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+```
+
+
+## Zusammenfassung und Ausblick
+
+In diesem Kapitel haben wir mit der Ableitung den zentralen Begriff der
+Differentialrechnung kennengelernt. Es ist jedoch mühsam, die Ableitung bzw. den
+Differentialquotienten als Grenzwert einer Folge von Differenzenquotienten zu
+berechnen. Daher werden wir uns im nächsten Kapitel mit Rechenregeln für
+Ableitungen beschäftigen, die die Grenzwertbildung vermeiden.
