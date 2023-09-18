@@ -187,7 +187,7 @@ Gerade, die zwei Punkte eines Funktionsgraphens miteinander verbindet, wird
 **Sekante** genannt. Der Differenzenquotient ist also die Steigung der Sekante.
 
 ```{dropdown} Video zu "Mittlere Änderungsrate" von Mathematrick
-<iframe width="560" height="315" src="https://www.youtube.com/embed/ClE5PYr5P0Y?si=eKrxyS4I5UrsGr05" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/sXxK-JATrc0?si=bdcHhSJOUHSl3fNg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 ```
 
 ## Die momentane Änderungsrate oder der Differentialquotient

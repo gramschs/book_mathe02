@@ -67,9 +67,13 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'chapter01/chapter01_sec02';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="2. Integrale" href="../chapter02/chapter02_sec00.html" />
+    <link rel="prev" title="1.1 Ableitungen" href="chapter01_sec01.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="None"/>
   </head>
@@ -155,9 +159,10 @@ const thebe_selector_output = ".output, .cell_output"
             </li>
         </ul>
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Differential- und Integralrechnung</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="chapter01_sec00.html">1. Differentialrechnung</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="chapter01_sec00.html">1. Differentialrechnung</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="chapter01_sec01.html">1.1 Ableitungen</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">1.2 Rechenregeln Ableitungen</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../chapter02/chapter02_sec00.html">2. Integrale</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -406,7 +411,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -422,6 +429,20 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lernziele">Lernziele</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#die-ableitungsfunktion">Die Ableitungsfunktion</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ableitungen-von-wichtigen-grundfunktionen">Ableitungen von wichtigen Grundfunktionen</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#faktorregel-und-summenregel">Faktorregel und Summenregel</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#produktregel-und-quotientenregel">Produktregel und Quotientenregel</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kettenregel">Kettenregel</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zusammenfassung-und-ausblick">Zusammenfassung und Ausblick</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -433,10 +454,251 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="rechenregeln-ableitungen">
 <h1>1.2 Rechenregeln Ableitungen<a class="headerlink" href="#rechenregeln-ableitungen" title="Permalink to this headline">#</a></h1>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>Dieser Abschnitt wird gerade überarbeitet.</p>
+<p>In diesem Kapitel beschäftigen wir uns damit, wie die mühsame Methode der
+Grenzwertbildung aus einer Folge von Differenzenquotienten vereinfacht werden
+kann. Dazu betrachten wir die Ableitungen von grundlegenden Funktionen. Mit
+Hilfe von Ableitungsregeln können daraus die Ableitungen von komplizierteren
+Funktionen gebildet werden.</p>
+<section id="lernziele">
+<h2>Lernziele<a class="headerlink" href="#lernziele" title="Permalink to this headline">#</a></h2>
+<div class="important admonition">
+<p class="admonition-title">Lernziele</p>
+<ul class="simple">
+<li><p>Sie wissen, was eine <strong>Ableitungsfunktion</strong> ist.</p></li>
+<li><p>Sie kennen von grundlegenden Funktionen die Ableitungsfunktionen auswendig.</p></li>
+<li><p>Sie beherrschen die folgenden Ableitungsregeln:</p>
+<ul>
+<li><p>Faktorregel</p></li>
+<li><p>Summenregel</p></li>
+<li><p>Produktregel</p></li>
+<li><p>Quotientenregel</p></li>
+<li><p>Kettenregel</p></li>
+</ul>
+</li>
+</ul>
 </div>
+</section>
+<section id="die-ableitungsfunktion">
+<h2>Die Ableitungsfunktion<a class="headerlink" href="#die-ableitungsfunktion" title="Permalink to this headline">#</a></h2>
+<p>Im letzten Kapitel haben wir den Differentialquotienten bzw. die Ableitung an
+einer einzelnen Stelle berechnet. In diesem Abschnitt wollen wir dieses Vorgehen
+auf ein Intervall verallgemeinern. Wir betrachten dazu als Beispiel die Funktion
+<span class="math notranslate nohighlight">\(f(x) = x^2\)</span>. Zunächst berechnen wir die Ableitung an einer einzelnen Stelle,
+beispielsweise für <span class="math notranslate nohighlight">\(x_1 = 2\)</span>. Dazu bilden wir den Grenzwert der Folge der
+Differentialquotienten:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+f'(2) 
+&amp;= \lim_{x_2 \to 2} \frac{f(x_2) - f(2)}{x_2 - 2} = \\
+&amp;= \lim_{x_2 \to 2} \frac{x_2^2 - 4}{x_2 - 2} = \\
+&amp;= \lim_{x_2 \to 2} \frac{(x_2 - 2) \cdot (x_2 + 2)}{x_2 - 2} = \\
+&amp;= \lim_{x_2 \to 2} x_2 + 2 = \\
+&amp;= 4.
+\end{align*}\]</div>
+<p>Jetzt verallgemeinern wir die Grenzwertbildung auf beliebige Stellen
+<span class="math notranslate nohighlight">\(x\in\mathbb{R}\)</span>. Die Vorgehensweise zur Berechnung des Grenzwertes bleibt dabei
+gleich:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+f'(x) 
+&amp;= \lim_{x_2 \to x} \frac{f(x_2) - f(x)}{x_2 - x} = \\
+&amp;= \lim_{x_2 \to x} \frac{x_2^2 - x^2}{x_2 - x} = \\
+&amp;= \lim_{x_2 \to x} \frac{(x_2 - x) \cdot (x_2 + x)}{x_2 - x} = \\
+&amp;= \lim_{x_2 \to x} x_2 + x = \\
+&amp;= 2x.
+\end{align*}\]</div>
+<p>Wir haben also zu jeder Stelle <span class="math notranslate nohighlight">\(x\in\mathbb{R}\)</span> einen Wert für die Ableitung
+<span class="math notranslate nohighlight">\(f'(x)\)</span> an dieser Stelle gefunden, nämlich <span class="math notranslate nohighlight">\(f'(x) = 2x\)</span>. Damit ist <span class="math notranslate nohighlight">\(f'\)</span> eine
+Funktion, denn jedem x-Wert wird eindeutig ein y-Wert f’(x) zugeordnet. Diese
+Erkenntnis klingt erst einmal banal, hilft ungemein bei der konkreten Berechnung
+von Ableitungen. Für häufig vorkommene Funktionen sind deren
+Ableitungsfunktionen in Tabellen hinterlegt. Und wie wir in den nächsten
+Abschnitten sehen werden, können viele komplizierte Funktionen aus einfachen
+Grundfunktionen zusammengesetzt werden. Kennen wir die Ableitungsfunktionen der
+Grundfunktionen, können wir so wieder die Ableitungsfunktion der komplizierten
+Funktion zusammensetzen.</p>
+<div class="note admonition">
+<p class="admonition-title">Was ist … die Ableitungsfunktion?</p>
+<p>Wenn für eine Funktion <span class="math notranslate nohighlight">\(f\)</span> an jeder Stelle ihrer Definitionsmenge die Ableitung
+existiert, kann eine neue Funktion gebildet werden, die jedes <span class="math notranslate nohighlight">\(x\)</span> aus der
+Definitionsmenge auf die Ableitung <span class="math notranslate nohighlight">\(f'(x)\)</span> abbildet. Diese Funktion <span class="math notranslate nohighlight">\(f'\)</span> wird
+Ableitungsfunktion von <span class="math notranslate nohighlight">\(f\)</span> genannt.</p>
+</div>
+</section>
+<section id="ableitungen-von-wichtigen-grundfunktionen">
+<h2>Ableitungen von wichtigen Grundfunktionen<a class="headerlink" href="#ableitungen-von-wichtigen-grundfunktionen" title="Permalink to this headline">#</a></h2>
+<p>Eine <strong>konstante Funktion</strong> ist besonders leicht abzuleiten, denn die Ableitung
+ist an jeder Stelle Null:</p>
+<div class="math notranslate nohighlight">
+\[f(x)=C \Rightarrow f'(x)=0.\]</div>
+<p>Beispiel:</p>
+<div class="math notranslate nohighlight">
+\[f(x) = 5 \Rightarrow f'(x) = 0.\]</div>
+<p>Die Ableitung einer Potenzfunktion ergibt wieder eine Potenzfunktion, allerdings
+wird der Exponent um Eins verringert und der alte Exponent wird ein neuer
+Vorfaktor. Für natürliche Exponenten <span class="math notranslate nohighlight">\(n\in\mathbb{N}\)</span> lautet die
+Ableitung:</p>
+<div class="math notranslate nohighlight">
+\[f(x)=x^{n} \Rightarrow f'(x)=n\cdot x^{n-1}.\]</div>
+<p>Die Wurzelfunktion ist etwas schwieriger abzuleiten.</p>
+<div class="math notranslate nohighlight">
+\[f(x)=\sqrt{x} \Rightarrow f'(x)=\frac{1}{2\sqrt{x}}.\]</div>
+<p>Tatsächlich kann die Wurzelfunktion auch als Potenzfunktion interpretiert
+werden, also <span class="math notranslate nohighlight">\(\sqrt{x} = x^{\frac{1}{2}}\)</span>. Für Potenzfunktionen, bei denen der
+Exponent ein Bruch oder gar eine reelle Zahl ist, gelten dieselben
+Ableitungsregeln wie für Potenzfunktionen mit natürlichem Expoenten. Die einzige
+Einschränkung dabei ist, dass <span class="math notranslate nohighlight">\(x\)</span> positiv sein muss.</p>
+<div class="math notranslate nohighlight">
+\[f(x) = x^{r} \Rightarrow f'(x) = r\cdot x^{r-1}, \quad x &gt;0.\]</div>
+<p>Mit diesem Wissen kann die Ableitung der Wurzelfunktion auch folgendermaßen
+berechnet werden:</p>
+<div class="math notranslate nohighlight">
+\[f(x) = x^{\frac{1}{2}} \Rightarrow f'(x) = \frac{1}{2} x^{-\frac{1}{2}} = \frac{1}{2} \frac{1}{x^{\frac{1}{2}}} = \frac{1}{2}\frac{1}{\sqrt{x}}.\]</div>
+<p>Die Liste der Ableitungen der trigonometrischen Funktionen lautet:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+f(x)=\sin(x) &amp;\Rightarrow f'(x)=\cos(x) \\ 
+f(x)=\cos(x) &amp;\Rightarrow f'(x)=-\sin(x) \\ 
+f(x)=\tan(x) &amp;\Rightarrow f'(x)=\frac{1}{\cos^2(x)} \\ 
+f(x)=\cot(x) &amp;\Rightarrow f'(x)=-\frac{1}{\sin^2(x)} \\ 
+\end{align*}\]</div>
+<p>Am einfachsten lässt sich die Exponentialfunktion ableiten, sie bleibt sie
+selbst.</p>
+<div class="math notranslate nohighlight">
+\[f(x)=e^{x}=\exp(x) \Rightarrow f'(x)=e^{x}=\exp(x).\]</div>
+<p>Zum Abschluss der Liste mit den wichtigsten Ableitungsfunktionen notieren wir
+noch die Ableitung der Logarithmsfunktion:</p>
+<div class="math notranslate nohighlight">
+\[f(x)=\ln(x) \Rightarrow f'(x)=\frac{1}{x}.\]</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Video zu “Wichtige Ableitungen” von Mathematische Methoden<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Jf7-EVLjpZg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+</details></section>
+<section id="faktorregel-und-summenregel">
+<h2>Faktorregel und Summenregel<a class="headerlink" href="#faktorregel-und-summenregel" title="Permalink to this headline">#</a></h2>
+<p>Als nächstes betrachten wir die Ableitung von zusammengesetzten Funktionen. Wird
+eine Funktion mit einer konstanten reellen Zahl multipliziert, so muss auch ihre
+Ableitung mit dieser Zahl multipliziert werden.</p>
+<div class="note admonition">
+<p class="admonition-title">Was ist … die Faktorregel?</p>
+<p>Die Faktorregel ist eine Rechenregel zur Berechnung von Ableitungen. Wird eine
+Funktion mit einer konstanten reellen Zahl multipliziert, so muss auch ihre
+Ableitungsfunktion mit dieser Zahl multipliziert werden.</p>
+<div class="math notranslate nohighlight">
+\[(C\cdot f(x))' = C\cdot f'(x).\]</div>
+</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Video zu “Faktorregel” von Mathematische Methoden<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/RqSJcYYeRf4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+</details><p>Wenn zwei Funktionen addiert werden, die beide differenzierbar sind, ist die
+Summe ebenfalls wieder ableitbar. Wie die Summe abgeleitet werden muss, gibt die
+Summenregel vor.</p>
+<div class="note admonition">
+<p class="admonition-title">Was ist … die Summenregel?</p>
+<p>Die Summenregel ist eine Rechenregel zur Berechnung von Ableitungen. Sind zwei
+Funktionen differenzierbar, so ist auch ihre Summe differenzierbar. Die
+Ableitungsfunktion ist dann die Summe der einzeln abgeleiteten Funktionen.</p>
+<div class="math notranslate nohighlight">
+\[(f(x)+g(x))' = f'(x) + g'(x).\]</div>
+</div>
+<p>Gibt es einen Differenzenregel? Eine eigene Differenzenregel brauchen wir nicht,
+denn wir können die Faktorregel mit der Summenregel kombinieren.</p>
+<div class="math notranslate nohighlight">
+\[(f(x) - g(x))' = (f(x) + (-1)\cdot g(x))' = f'(x) + (-1)\cdot g'(x) = f'(x) -
+g'(x).\]</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Video zu “Summenregel” von Mathematische Methoden<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/KOoPcV7enYA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+</details></section>
+<section id="produktregel-und-quotientenregel">
+<h2>Produktregel und Quotientenregel<a class="headerlink" href="#produktregel-und-quotientenregel" title="Permalink to this headline">#</a></h2>
+<p>Etwas komplizierter wird es, wenn Funktionen miteinander multipliziert oder
+dividiert werden.</p>
+<div class="note admonition">
+<p class="admonition-title">Was ist … die Produktregel?</p>
+<p>Die Produktregel ist eine Rechenregel zur Berechnung von Ableitungen. Sind zwei
+Funktionen differenzierbar, so ist auch ihr Produkt differenzierbar. Die
+Ableitung des Produktes wird dann folgendermaßen berechnet:</p>
+<div class="math notranslate nohighlight">
+\[(f(x)\cdot g(x))' = f'(x)\cdot g(x) + f(x)\cdot g'(x).\]</div>
+</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Video zu “Produktregel” von Mathematische Methoden<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/I1jECE16wzo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+</details><div class="note admonition">
+<p class="admonition-title">Was ist … die Quotientenregel?</p>
+<p>Die Quotientenregel ist eine Rechenregel zur Berechnung von Ableitungen. Sind
+zwei Funktionen differenzierbar, so ist auch ihr Quotient differenzierbar (falls
+durch die Nennerfunktion geteilt werden darf). Die Ableitung des Quotienten wird
+dann folgendermaßen berechnet:</p>
+<div class="math notranslate nohighlight">
+\[\left(\frac{f(x)}{g(x)}\right)' = \frac{f'(x)\cdot g(x) - f(x)\cdot g'(x)}{g(x)^2}.\]</div>
+</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Video zu “Quotientenregel” von Mathematische Methoden<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ydbsCKqIbNw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+</details></section>
+<section id="kettenregel">
+<h2>Kettenregel<a class="headerlink" href="#kettenregel" title="Permalink to this headline">#</a></h2>
+<p>Wird eine Funktion <span class="math notranslate nohighlight">\(g\)</span> in einer andere Funktion <span class="math notranslate nohighlight">\(f\)</span> eingesetzt, so nennen wir
+diesen Vorgang “Verketten” und das Ergebnis ist die verkettete Funktion <span class="math notranslate nohighlight">\(f(g)\)</span>.</p>
+<div class="note admonition">
+<p class="admonition-title">Was ist … die Kettenregel?</p>
+<p>Die Kettenregel ist eine Rechenregel zur Berechnung von Ableitungen. Sind zwei
+Funktionen differenzierbar, so ist auch ihre Verkettung differenzierbar. Die
+Ableitung der verketteten Funktion wird dann folgendermaßen berechnet:</p>
+<div class="math notranslate nohighlight">
+\[\left(f(g(x))\right)' = f'\left(g(x)\right) \cdot g'(x).\]</div>
+</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Video zu “Kettenregel” von Mathematische Methoden<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/E_4Obqxxr8E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+</details></section>
+<section id="zusammenfassung-und-ausblick">
+<h2>Zusammenfassung und Ausblick<a class="headerlink" href="#zusammenfassung-und-ausblick" title="Permalink to this headline">#</a></h2>
+<p>In diesem Kapitel haben wir uns damit beschäftigt, wie Ableitungen berechnet
+werden können, wenn ihre Ableitungsfunktion bekannt ist. Zu grundlegenden
+Funktionen sollte man die Ableitungsfunktionen auswendig wissen. Wenn eine
+komplizierte Funktion aus einfachen Grundfunktionen zusammengesetzt ist, können
+wir dann ihre Ableitung durch Anwenden der Ableitungsregeln (Faktorregel,
+Summenregel, Produktregel, Quotientenregel oder Kettenregel) bilden.</p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -470,6 +732,24 @@ document.write(`
   
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="chapter01_sec01.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">1.1 Ableitungen</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../chapter02/chapter02_sec00.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">2. Integrale</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div></div>
   
 </div>
@@ -479,6 +759,26 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lernziele">Lernziele</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#die-ableitungsfunktion">Die Ableitungsfunktion</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ableitungen-von-wichtigen-grundfunktionen">Ableitungen von wichtigen Grundfunktionen</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#faktorregel-und-summenregel">Faktorregel und Summenregel</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#produktregel-und-quotientenregel">Produktregel und Quotientenregel</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kettenregel">Kettenregel</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zusammenfassung-und-ausblick">Zusammenfassung und Ausblick</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
