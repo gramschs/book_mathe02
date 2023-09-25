@@ -67,9 +67,13 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'chapter01/chapter01_sec03';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="2. Integrale" href="../chapter02/chapter02_sec00.html" />
+    <link rel="prev" title="1.2 Rechenregeln Ableitungen" href="chapter01_sec02.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="None"/>
   </head>
@@ -155,10 +159,11 @@ const thebe_selector_output = ".output, .cell_output"
             </li>
         </ul>
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Differential- und Integralrechnung</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="chapter01_sec00.html">1. Differentialrechnung</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="chapter01_sec00.html">1. Differentialrechnung</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="chapter01_sec01.html">1.1 Ableitungen</a></li>
 <li class="toctree-l2"><a class="reference internal" href="chapter01_sec02.html">1.2 Rechenregeln Ableitungen</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">1.3 Extremwerte</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../chapter02/chapter02_sec00.html">2. Integrale</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -407,7 +412,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -423,6 +430,17 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lernziele">Lernziele</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#minimum-und-maximum-einer-funktion-was-ist-das">Minimum und Maximum einer Funktion – was ist das?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wie-finden-wir-hoch-und-tiefpunkte">Wie finden wir Hoch- und Tiefpunkte?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zusammenfassung-und-ausblick">Zusammenfassung und Ausblick</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -434,10 +452,156 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="extremwerte">
 <h1>1.3 Extremwerte<a class="headerlink" href="#extremwerte" title="Permalink to this headline">#</a></h1>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>Dieser Abschnitt wird gerade überarbeitet.</p>
+<p>Beschreibt eine Funktion einen technischen Prozess oder beispielsweise
+temperaturabhängige Materialkennwerte, so ist die Information sehr interessant,
+ob in einem bestimmten Intervall minimale oder maximale Werte angenommen werden.
+In diesem Kapitel beschäftigen wir uns daher damit, die Minima oder Maxima einer
+Funktion zu bestimmen.</p>
+<section id="lernziele">
+<h2>Lernziele<a class="headerlink" href="#lernziele" title="Permalink to this headline">#</a></h2>
+<div class="important admonition">
+<p class="admonition-title">Lernziele</p>
+<ul class="simple">
+<li><p>Sie wissen, was das Minimum oder Maximum einer Funktion ist.</p></li>
+<li><p>Sie können Minima oder Maxima von 2x differenzierbaren Funktionen berechnen.</p></li>
+</ul>
 </div>
+</section>
+<section id="minimum-und-maximum-einer-funktion-was-ist-das">
+<h2>Minimum und Maximum einer Funktion – was ist das?<a class="headerlink" href="#minimum-und-maximum-einer-funktion-was-ist-das" title="Permalink to this headline">#</a></h2>
+<p>Die Funktion <span class="math notranslate nohighlight">\(f(x) = x^2 -6x + 11\)</span> hat den folgenden Funktionsgraphen.</p>
+<figure class="align-default" id="fig01-parabel">
+<a class="reference internal image-reference" href="../_images/chapter01_sec03_fig01.png"><img alt="../_images/chapter01_sec03_fig01.png" src="../_images/chapter01_sec03_fig01.png" style="width: 75%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 1 </span><span class="caption-text">Der kleinste Funktionswert (= Minimum) dieser Parabel <span class="math notranslate nohighlight">\(f(x) = x^2 -6x + 11\)</span> ist
+2. Er befindet sich an der Stelle <span class="math notranslate nohighlight">\(x = 3\)</span>. Der dazugehörige Punkt <span class="math notranslate nohighlight">\((3 | 2)\)</span> ist
+ein Tiefpunkt.</span><a class="headerlink" href="#fig01-parabel" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Der kleinste Funktionswert <span class="math notranslate nohighlight">\(f(x)\)</span>, der vorkommt, ist 2. Es gilt also</p>
+<div class="math notranslate nohighlight">
+\[f(x) \geq 2 \quad \text{ für alle } x\in\mathbb{R}.\]</div>
+<p>Einen solchen kleinsten Wert nennen wir <strong>Minimum</strong>. Mathematisch wird das
+folgendermaßen notiert:</p>
+<div class="math notranslate nohighlight">
+\[\min_{x\in\mathbb{R}} f(x) = 2.\]</div>
+<p>Um zu verdeutlichen, dass in diesem Beispiel die 2 sogar für alle reellen Zahlen
+<span class="math notranslate nohighlight">\(x\in\mathbb{R}\)</span> der kleinste Funktionswert ist, sagt man oft auch <strong>globales
+Minimum</strong>. Es könnte aber auch sein, dass dieser Funktionswert nur in einem
+bestimmten Bereich der kleinste Funktionswert ist. Dazu werden wir noch ein
+Beispiel betrachten. Wir halten noch fest, dass der Punkt <span class="math notranslate nohighlight">\((3 | 2)\)</span>
+<strong>Tiefpunkt</strong> genannt wird.</p>
+<p>Als zweites Beispiel betrachten wir die Funktion <span class="math notranslate nohighlight">\(f(x) = \frac{1}{2}x^3 -3x^2 +
+\frac{9}{2}x+2\)</span>. Diese Funktion hat kein globales Minimum, denn es werden
+Funktionswerte bis <span class="math notranslate nohighlight">\(-\infty\)</span> angenommen. Aber die Funktion hat das lokale
+Minimum 2 an der Stelle <span class="math notranslate nohighlight">\(x = 3\)</span>.</p>
+<figure class="align-default" id="fig02-kubisches-polynom">
+<a class="reference internal image-reference" href="../_images/chapter01_sec03_fig02.png"><img alt="../_images/chapter01_sec03_fig02.png" src="../_images/chapter01_sec03_fig02.png" style="width: 75%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 2 </span><span class="caption-text">Der kleinste Funktionswert (= Minimum) der Funktion <span class="math notranslate nohighlight">\(f(x) = \frac{1}{2}x^3 -3x^2 +
+\frac{9}{2}x+2\)</span> im Intervall <span class="math notranslate nohighlight">\([2,4]\)</span> ist 2. Da sich das Minimum nur auf dieses
+Intervall bezieht und nicht auf die ganze Definitionsmenge, ist es ein lokales
+Minimum. Es befindet sich an der Stelle <span class="math notranslate nohighlight">\(x = 3\)</span>. Der dazugehörige Punkt <span class="math notranslate nohighlight">\((3 |
+2)\)</span> ist ein lokaler Tiefpunkt.</span><a class="headerlink" href="#fig02-kubisches-polynom" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<div class="note admonition">
+<p class="admonition-title">Was ist … ein Minimum einer Funktion?</p>
+<p>Wir betrachten eine reellwertige Funktion <span class="math notranslate nohighlight">\(f\)</span> mit der Definitionsmenge
+<span class="math notranslate nohighlight">\(D\subseteq\mathbb{R}\)</span>, also <span class="math notranslate nohighlight">\(f: D \rightarrow \mathbb{R}\)</span>. Die Funktion <span class="math notranslate nohighlight">\(f\)</span> hat
+an der Stelle <span class="math notranslate nohighlight">\(x_0\)</span> ein <strong>lokales Minimum</strong>, wenn es ein Intervall <span class="math notranslate nohighlight">\(I = (a,b)\)</span>
+gibt, das <span class="math notranslate nohighlight">\(x_0\)</span> enthält, und gleichzeitig die Bedingung</p>
+<div class="math notranslate nohighlight">
+\[f(x_0) \leq f(x)\]</div>
+<p>für alle  <span class="math notranslate nohighlight">\(x\in (a,b)\)</span> erfüllt ist. Gilt sogar</p>
+<div class="math notranslate nohighlight">
+\[f(x_0) \leq f(x)\]</div>
+<p>für alle <span class="math notranslate nohighlight">\(x\in D\)</span>, dann hat die Funktion <span class="math notranslate nohighlight">\(f\)</span> an der Stelle <span class="math notranslate nohighlight">\(x_0\)</span> ein
+<strong>globales Minimum</strong>.</p>
+</div>
+<p>Für das Maximum gilt eine analoge Definition, bei der nur das
+Ungleichheitszeichen anders ist.</p>
+<div class="note admonition">
+<p class="admonition-title">Was ist … ein Maximum einer Funktion?</p>
+<p>Wir betrachten eine reellwertige Funktion <span class="math notranslate nohighlight">\(f\)</span> mit der Definitionsmenge
+<span class="math notranslate nohighlight">\(D\subseteq\mathbb{R}\)</span>, also <span class="math notranslate nohighlight">\(f: D \rightarrow \mathbb{R}\)</span>. Die Funktion <span class="math notranslate nohighlight">\(f\)</span> hat
+an der Stelle <span class="math notranslate nohighlight">\(x_0\)</span> ein <strong>lokales Maximum</strong>, wenn es ein Intervall <span class="math notranslate nohighlight">\(I = (a,b)\)</span>
+gibt, das <span class="math notranslate nohighlight">\(x_0\)</span> enthält, und gleichzeitig die Bedingung</p>
+<div class="math notranslate nohighlight">
+\[f(x_0) \geq f(x)\]</div>
+<p>für alle  <span class="math notranslate nohighlight">\(x\in (a,b)\)</span> erfüllt ist. Gilt sogar</p>
+<div class="math notranslate nohighlight">
+\[f(x_0) \geq f(x)\]</div>
+<p>für alle <span class="math notranslate nohighlight">\(x\in D\)</span>, dann hat die Funktion <span class="math notranslate nohighlight">\(f\)</span> an der Stelle <span class="math notranslate nohighlight">\(x_0\)</span> ein
+<strong>globales Maximum</strong>.</p>
+</div>
+</section>
+<section id="wie-finden-wir-hoch-und-tiefpunkte">
+<h2>Wie finden wir Hoch- und Tiefpunkte?<a class="headerlink" href="#wie-finden-wir-hoch-und-tiefpunkte" title="Permalink to this headline">#</a></h2>
+<p>Wir betrachten weiterhin das obige Beispiel, die Funktion <span class="math notranslate nohighlight">\(f(x) = \frac{1}{2}x^3
+-3x^2 + \frac{9}{2}x+2\)</span>. Zeichen wir veschiedene Tangenten ein, so stellen wir
+fest, dass die Steigung der Tangente im lokalen Hochpunkt (1|4) und im lokalen
+Tiefpunkt (3|2) jeweils Null ist. Für die Stellen <span class="math notranslate nohighlight">\(x_{\text{HP}} = 1\)</span> und
+<span class="math notranslate nohighlight">\(x_{\text{TP}} = 3\)</span> gilt also</p>
+<div class="math notranslate nohighlight">
+\[f'(x_{\text{HP}}) = f'(1) = 0\]</div>
+<p>bzw.</p>
+<div class="math notranslate nohighlight">
+\[f'(x_{\text{TP}}) = f'(3) = 0.\]</div>
+<p>Tatsächlich gilt diese Aussage für alle differenzierbaren Funktionen. Wenn die
+differenzierbare Funktion <span class="math notranslate nohighlight">\(f\)</span> an der Stelle <span class="math notranslate nohighlight">\(x_0\)</span> ein Minimum oder ein Maximum
+hat, dann gilt</p>
+<div class="math notranslate nohighlight">
+\[f'(x_0) = 0.\]</div>
+<p>Die Umkehrung dieser Aussage ist allerdings nicht wahr. Wenn die 1. Ableitung
+einer differenzierbaren Funktion an der Stelle <span class="math notranslate nohighlight">\(x_0\)</span> gleich Null ist, muss sie
+dort nicht ein Maximum oder ein Minimum haben.</p>
+<p>Die Funktion <span class="math notranslate nohighlight">\(f(x)=x^3\)</span> hat die 1. Ableitung <span class="math notranslate nohighlight">\(f'(x)=3x^2\)</span>. An der Stelle <span class="math notranslate nohighlight">\(x_0=0\)</span>
+ist die 1. Ableitung Null, aber <span class="math notranslate nohighlight">\(f\)</span> hat kein Minimum und kein Maximum, auch
+nicht an dieser Stelle. Der Punkt <span class="math notranslate nohighlight">\((0,0)\)</span> wird Sattelpunkt genannt.</p>
+<figure class="align-default" id="chapter01-sec03-fig03">
+<a class="reference internal image-reference" href="../_images/chapter01_sec03_fig03.svg"><img alt="../_images/chapter01_sec03_fig03.svg" src="../_images/chapter01_sec03_fig03.svg" width="75%" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 3 </span><span class="caption-text">Die Funktion <span class="math notranslate nohighlight">\(f(x)=x^3\)</span> hat an der Stelle <span class="math notranslate nohighlight">\(x_0 = 0\)</span> kein Minimum und auch kein Maximum, obwohl die Steigung der Tangente an dieser Stelle Null ist, also <span class="math notranslate nohighlight">\(f'(x)=3x^2 \Rightarrow f'(0)=0\)</span> gilt.</span><a class="headerlink" href="#chapter01-sec03-fig03" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Diese Bedingung ist <em>notwendig</em>, damit überhaupt ein Maximum oder Minimum
+vorliegen kann. Leider reicht diese Bedingung noch nicht aus. Alle Nullstellen
+der 1. Ableitung sind <em>mögliche</em> Extrema, es könnten aber auch Sattelpunkte
+sein.</p>
+<p>Daher müssen wir noch zusätzliche Bedingungen überprüfen, bevor wir entscheiden
+können, ob ein Minimum oder Maximum vorliegt. Die möglichen Extremwerte müssen
+noch zusätzlich mit der 2. Ableitung geprüft werden:</p>
+<ul class="simple">
+<li><p>Die Funktion <span class="math notranslate nohighlight">\(f\)</span> hat an der Stelle <span class="math notranslate nohighlight">\(x_0\)</span> ein <strong>Maximum</strong>, wenn</p>
+<ul>
+<li><p>die 1. Ableitung an dieser Stelle Null ist, d.h. <span class="math notranslate nohighlight">\(f'(x_0) = 0\)</span> und</p></li>
+<li><p>die 2. Ableitung an dieser Stelle <strong>negativ</strong> ist, d.h. <span class="math notranslate nohighlight">\(f''(x_0) &lt; 0\)</span>.</p></li>
+</ul>
+</li>
+<li><p>Die Funktion <span class="math notranslate nohighlight">\(f\)</span> hat an der Stelle <span class="math notranslate nohighlight">\(x_0\)</span> ein <strong>Minimum</strong>, wenn</p>
+<ul>
+<li><p>die 1. Ableitung an dieser Stelle Null ist, d.h. <span class="math notranslate nohighlight">\(f'(x_0) = 0\)</span> und</p></li>
+<li><p>die 2. Ableitung an dieser Stelle <strong>positiv</strong> ist, d.h. <span class="math notranslate nohighlight">\(f''(x_0) &gt; 0\)</span>.</p></li>
+</ul>
+</li>
+</ul>
+<p>Diese beiden Bedingungen nennt man dann <strong>hinreichende</strong> Bedingungen.</p>
+<p>Achtung: Wenn allerdings die zweite Ableitung Null ist, also <span class="math notranslate nohighlight">\(f''(x_0) = 0\)</span>,
+kann man keine Entscheidung treffen und muss weitere Bedingungen überprüfen.
+Alternativ gibt es noch das sogenannte <strong>Vorzeichenwechselkriterium</strong>, das hier
+nicht weiter ausgeführt wird.</p>
+</section>
+<section id="zusammenfassung-und-ausblick">
+<h2>Zusammenfassung und Ausblick<a class="headerlink" href="#zusammenfassung-und-ausblick" title="Permalink to this headline">#</a></h2>
+<p>In diesem Kapitel haben wir uns mit den Begriffen Minimum und Maximum einer
+Funktion beschäftigt. Ist eine Funktion differenzierbar, so sind die Nullstellen
+der 1. Ableitung Kandidaten für Extrema. Ob tatsächlich ein Extremum (Minimum
+oder Maximum) vorliegt, muss einzeln geprüft werden. Für diese Prüfung gibt es
+mehrere Kriterien, in dieser Vorlesung verwenden wir den Test mit der 2.
+Ableitung. Im nächsten Kapitel beschäftigen wir uns mit Extrema mit
+Zusatzbedingung.</p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -471,6 +635,24 @@ document.write(`
   
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="chapter01_sec02.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">1.2 Rechenregeln Ableitungen</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../chapter02/chapter02_sec00.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">2. Integrale</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div></div>
   
 </div>
@@ -480,6 +662,23 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lernziele">Lernziele</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#minimum-und-maximum-einer-funktion-was-ist-das">Minimum und Maximum einer Funktion – was ist das?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wie-finden-wir-hoch-und-tiefpunkte">Wie finden wir Hoch- und Tiefpunkte?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zusammenfassung-und-ausblick">Zusammenfassung und Ausblick</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
