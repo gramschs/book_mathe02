@@ -67,9 +67,13 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'chapter01/chapter01_sec04';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="2. Integrale" href="../chapter02/chapter02_sec00.html" />
+    <link rel="prev" title="1.3 Extremwerte" href="chapter01_sec03.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="None"/>
   </head>
@@ -155,11 +159,12 @@ const thebe_selector_output = ".output, .cell_output"
             </li>
         </ul>
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Differential- und Integralrechnung</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="chapter01_sec00.html">1. Differentialrechnung</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="chapter01_sec00.html">1. Differentialrechnung</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="chapter01_sec01.html">1.1 Ableitungen</a></li>
 <li class="toctree-l2"><a class="reference internal" href="chapter01_sec02.html">1.2 Rechenregeln Ableitungen</a></li>
 <li class="toctree-l2"><a class="reference internal" href="chapter01_sec03.html">1.3 Extremwerte</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">1.4 Extremwerte mit Nebenbedingung</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../chapter02/chapter02_sec00.html">2. Integrale</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -408,7 +413,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -424,6 +431,17 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lernziele">Lernziele</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#was-sind-extremwertprobleme-mit-nebenbedingung">Was sind Extremwertprobleme mit Nebenbedingung?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#eliminationsmethode">Eliminationsmethode</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zusammenfassung-und-ausblick">Zusammenfassung und Ausblick</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -435,10 +453,156 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="extremwerte-mit-nebenbedingung">
 <h1>1.4 Extremwerte mit Nebenbedingung<a class="headerlink" href="#extremwerte-mit-nebenbedingung" title="Permalink to this headline">#</a></h1>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>Dieser Abschnitt wird gerade überarbeitet.</p>
+<p>Im letzten Abschnitt haben wir uns mit Extremwerten beschäftigt. An die
+Variablen selbst haben wir aber keinerlei Bedingungen gestellt. In der Praxis
+kommt es aber oft vor, dass Einschränkungen an die Variablen gestellt werden.
+Diese werden als eine zusätzliche Gleichung formuliert. In diesem Kapitel lernen
+wir zuerst, was Extremwerte mit Nebenbedingungen sind. Dann beschäftigen wir uns
+mit der »Eliminationsmethode« zur Lösung von Extremwertproblemen mit
+Nebenbedingungen.</p>
+<section id="lernziele">
+<h2>Lernziele<a class="headerlink" href="#lernziele" title="Permalink to this headline">#</a></h2>
+<div class="important admonition">
+<p class="admonition-title">Lernziele</p>
+<ul class="simple">
+<li><p>Sie wissen, was ein <strong>Extremwertproblem mit Nebenbedingung</strong> ist.</p></li>
+<li><p>Sie können ein Extremwertproblem mit Nebenbedingung durch die
+<strong>Eliminationsmethode</strong> lösen.</p></li>
+</ul>
 </div>
+</section>
+<section id="was-sind-extremwertprobleme-mit-nebenbedingung">
+<h2>Was sind Extremwertprobleme mit Nebenbedingung?<a class="headerlink" href="#was-sind-extremwertprobleme-mit-nebenbedingung" title="Permalink to this headline">#</a></h2>
+<p>Eine Funktion zu maximieren oder zu minimieren ohne weitere Einschränkung ist in
+der Praxis oft unrealistisch. Natürlich würde jeder gerne reich sein und das
+Einkommen maximieren. Aber ist man auch bereit, die notwendigen Überstunden zu
+leisten oder für einen besser bezahlten Job umzuziehen?</p>
+<p>Wir betrachten ein Beispiel aus der Geometrie. Ein Draht der Länge l = 1 m soll
+zu einem Rechteck gebogen werden. Wie müssen die Seitenlängen <span class="math notranslate nohighlight">\(x\)</span> und <span class="math notranslate nohighlight">\(y\)</span>
+gewählt werden, damit der Flächeninhalt des Rechtecks maximal ist?</p>
+<p>Als erstes übersetzen wir die Angaben der Textaufgabe in eine Funktion und eine
+Gleichung. Wir fangen mit der Gleichung an, die als <strong>Nebenbedingung</strong>
+bezeichnet wird. Die Länge des Drahtes ist vorgegeben und entspricht dem Umfang
+des Rechtecks. Es gilt also</p>
+<div class="math notranslate nohighlight">
+\[2\cdot x + 2 \cdot y = 1.\]</div>
+<p>Das Ziel ist ein maximaler Flächeninhalt. Wir bezeichnen den Flächeninhalt mit
+<span class="math notranslate nohighlight">\(A\)</span>. Er berechnet sich mit der Formel</p>
+<div class="math notranslate nohighlight">
+\[A = x \cdot y.\]</div>
+<p>Aus der Nebenbedingung und der Formel für den Flächeninhalt basteln wir uns eine
+Funktion, die sogenannte <strong>Zielfunktion</strong>. Als erstes entscheiden wir uns für
+eine Variable (z.B. <span class="math notranslate nohighlight">\(x\)</span>). Dann lösen wir die Nebenbedingung nach der anderen
+Variablen auf (hier also <span class="math notranslate nohighlight">\(y\)</span>). Aus der Nebenbedingung <span class="math notranslate nohighlight">\(2\cdot x + 2 \cdot y = 1\)</span>
+wird also:</p>
+<div class="math notranslate nohighlight">
+\[y = \frac{1}{2} \left(1 - 2\cdot x\right) = -x + \frac{1}{2}.\]</div>
+<p>Dann setzen die nach <span class="math notranslate nohighlight">\(y\)</span> aufgelöste Gleichung in die Formel für <span class="math notranslate nohighlight">\(A\)</span> ein:</p>
+<div class="math notranslate nohighlight">
+\[A(x) = x \cdot (-x+\frac{1}{2}).\]</div>
+<p>Die Funktion <span class="math notranslate nohighlight">\(A\)</span> wird Zielfunktion genannt, weil sie das Ziel (maximaler
+Flächeninhalt) beschreibt. Sie hängt nur noch von der Variablen <span class="math notranslate nohighlight">\(x\)</span> ab, <span class="math notranslate nohighlight">\(y\)</span> ist
+eliminiert worden.</p>
+<p>Würden wir jetzt ohne weitere Einschränkungen das Maximum dieser Funktion
+suchen, so müssten wir die Seitenlängen <span class="math notranslate nohighlight">\(x\)</span> (und damit auch <span class="math notranslate nohighlight">\(y\)</span>) unendlich groß
+wählen. Ein Minimum liegt offensichtlich vor, wenn <span class="math notranslate nohighlight">\(x = 0\)</span> (und damit auch <span class="math notranslate nohighlight">\(y =
+0\)</span>) ist. Aber das Minimum ist ja nicht gesucht. Erst durch die Nebenbedingung,
+dass die Länge des Drahtes 1 m ist, ist die Suche nach einem Maximum sinnvoll.
+Daher werden diese Art von Problemstellungen <strong>Extremwertprobleme mit
+Nebenbedingung</strong> genannt.</p>
+</section>
+<section id="eliminationsmethode">
+<h2>Eliminationsmethode<a class="headerlink" href="#eliminationsmethode" title="Permalink to this headline">#</a></h2>
+<p>Für die Lösung von Extremwertproblemen mit Nebenbedingungen gibt es mehrere
+Strategien. Im Folgenden betrachten wir die sogenannte <strong>Eliminationsmethode</strong>.
+Gehen Sie wie folgt vor, wenn Sie ein Extremwertproblem mit Nebenbedingungen
+lösen wollen.</p>
+<ol class="arabic simple">
+<li><p>Formulieren Sie die Nebenbedingung als Gleichung.</p></li>
+<li><p>Lösen Sie die Nebenbedingung nach einer Variable auf.</p></li>
+<li><p>Formulieren Sie die Zielfunktion (nutzen Sie dabei die nach einer Variablen
+aufgelöste Nebenbedingung).</p></li>
+<li><p>Bestimmen Sie die Extremwerte der Zielfunktion.</p></li>
+<li><p>Beantworten Sie mit diesen Erkenntnissen die ursprüngliche Frage.</p></li>
+</ol>
+<p>Schritt 1, 2 und 3 haben wir für das Beispiel mit dem Draht schon durchgeführt.
+Aus der Nebenbedingung <span class="math notranslate nohighlight">\(2x + 2y = 1\)</span> und der Formel für Flächeninhalte von
+Rechtecken <span class="math notranslate nohighlight">\(A = x\cdot y\)</span> haben wir die Zielfunktion</p>
+<div class="math notranslate nohighlight">
+\[A(x) = x \cdot (-x+\frac{1}{2})\]</div>
+<p>hergeleitet. Jetzt vereinfachen wir die Funktion noch, indem wir
+ausmultiplizieren:</p>
+<div class="math notranslate nohighlight">
+\[A(x) = x \cdot (-x+\frac{1}{2}) = -x^2 + \frac{1}{2}x.\]</div>
+<p>Nun folgt Schritt 4, die Bestimmung der Extremwerte. Dazu bilden wir die 1.
+Ableitung der Zielfunktion:</p>
+<div class="math notranslate nohighlight">
+\[A'(x) = -2 x + \frac{1}{2}.\]</div>
+<p>Für die Suche nach Kandidaten für Extremstellen setzen wir <span class="math notranslate nohighlight">\(A'(x) = 0\)</span> und
+bestimmen die Nullstellen:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+-2x + \frac{1}{2} &amp;= 0 \\
+\Rightarrow x &amp;= \frac{1}{4}.\\
+\end{align*}\]</div>
+<p>Als nächstes überprüfen wir, ob <span class="math notranslate nohighlight">\(x = \frac{1}{4}\)</span> wirklich ein Extremum ist,
+indem wir die 2. Ableitung bilden</p>
+<div class="math notranslate nohighlight">
+\[A''(x) = -2\]</div>
+<p>und dann die Stelle <span class="math notranslate nohighlight">\(x = \frac{1}{4}\)</span> in die 2. Ableitung einsetzen:</p>
+<div class="math notranslate nohighlight">
+\[A''(\frac{1}{4}) = -2.\]</div>
+<p>Da die 2. Ableitung an der Stelle <span class="math notranslate nohighlight">\(x = \frac{1}{4}\)</span> negativ ist, können wir
+schlussfolgern, dass <span class="math notranslate nohighlight">\(x = \frac{1}{4}\)</span> eine Extremstelle ist und dass die
+Funktion <span class="math notranslate nohighlight">\(A\)</span> an dieser Stelle ein Maximum hat.</p>
+<p>Damit haben wir die erste Seitenlänge <span class="math notranslate nohighlight">\(x\)</span> gefunden. Jetzt fehlt noch Schritt 5,
+die Beantwortung der ursprünglichen Frage. Es war ja nach beiden Seitenlängen
+gefragt. Aus der Nebenbedingung</p>
+<div class="math notranslate nohighlight">
+\[2\cdot x + 2 \cdot y = 1\]</div>
+<p>erhalten wir afür <span class="math notranslate nohighlight">\(x = \frac{1}{4}\)</span> sofort, dass <span class="math notranslate nohighlight">\(y=\frac{1}{4}\)</span> gelten muss.</p>
+<p>Das vom Flächeninhalt her maximale Rechteckt mit einer Drahtlänge von 1 m
+entsteht, wenn der Draht zu einem Quadrat gebogen wird, bei dem jede Seite eine
+Länge von 0.25 m hat.</p>
+<p>In dem folgenden Video können Sie sich eine vergleichbare Aufgabenstellungen
+ansehen.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Video zu “Extremwertaufgaben” von Magda liebt Mathe<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/4D4hpF8w69Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Video zu “Extremwertaufgabe Beispiel” von Mathematrick<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/pXm_6ZxGVp8?si=vPA9Bg38JD7B4HEk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Video zu “Extremwertaufgabe Quader maximales Volumen” von MAthematrick<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/i3z1sK4JqYA?si=9t3rOsZFQYouLbr6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+</details></section>
+<section id="zusammenfassung-und-ausblick">
+<h2>Zusammenfassung und Ausblick<a class="headerlink" href="#zusammenfassung-und-ausblick" title="Permalink to this headline">#</a></h2>
+<p>In diesem Kapitel haben Sie gelernt, was ein Extremwertproblem mit
+Nebenbedingung ist und wie man es löst. Tatsächlich verbirgt sich hinter der
+Zielfunktion ursprünglich eine Funktion, die von zwei Variablen abhängt. Wir
+werden auf das Thema Extremwertprobleme mit Nebenbedingungen noch einmal
+zurückkommen, wenn wir Extremwertberechnungen von mehrdimensionalen Funktionen
+behandeln.</p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -472,6 +636,24 @@ document.write(`
   
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="chapter01_sec03.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">1.3 Extremwerte</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../chapter02/chapter02_sec00.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">2. Integrale</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div></div>
   
 </div>
@@ -481,6 +663,23 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lernziele">Lernziele</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#was-sind-extremwertprobleme-mit-nebenbedingung">Was sind Extremwertprobleme mit Nebenbedingung?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#eliminationsmethode">Eliminationsmethode</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zusammenfassung-und-ausblick">Zusammenfassung und Ausblick</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
