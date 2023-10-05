@@ -55,7 +55,7 @@ Durchschnittsgeschwindigkeit höher als die erlaubte Geschwindigkeit, wird
 automatisch ein Bußgeldverfahren eingeleitet.
 
 Ein deutscher Tourist ist mit seinem Pkw auf der Autobahn unterwegs. Nachdem er
-auf die Autobahn aufgefahren ist, protokolliert sein Fahrtenschreiber dreimal
+auf die Autobahn aufgefahren ist, protokolliert sein Fahrtenschreiber zweimal
 pro Minute die zurückgelegte Strecke. Die Höchstgeschwindigkeit auf
 italienischen Autobahnen ist 130 km/h. Wird er einen Bußgeldbescheid bekommen?
 
@@ -64,27 +64,20 @@ italienischen Autobahnen ist 130 km/h. Wird er einen Bußgeldbescheid bekommen?
 import numpy as np
 import plotly.express as px
 
-t = np.linspace(10, 40, 91)
-v = np.array([126.15338352, 126.49564866, 124.35022414, 125.87816443, 126.20696608,
- 124.95444079, 128.44578754, 126.94806568, 126.26024726, 127.23297097,
- 125.19978525, 127.69765993, 126.24715084, 124.97870157, 126.58576195,
- 125.16482471, 126.81436067, 125.43389495, 125.4693086 , 123.75087393,
- 125.91089725, 128.97207015, 125.36010679, 127.02841208, 124.17665284,
- 127.58666025, 124.32453023, 127.8072856 , 127.18899723, 125.23975044,
- 124.17863936, 126.91204387, 128.71914545, 129.1362791 , 130.907928,
- 133.55471212, 135.53258782, 134.41012697, 135.16891874, 134.24454479,
- 134.4576227 , 135.69746795, 136.46782703, 134.88242462, 132.25486494,
- 135.43951289, 131.73502969, 133.85094214, 135.25239654, 133.61209273,
- 135.34498774, 136.02784544, 136.68294526, 135.08131722, 135.56567131,
- 133.82665751, 133.67007453, 134.36904437, 134.85722446, 136.24814849,
- 136.98381544, 131.29044508, 131.64834418, 130.25264147, 127.4859585,
- 127.95614561, 124.77370291, 124.75191859, 123.05482126, 121.75950736,
- 122.23326904, 119.47659862, 120.47929885, 121.75958698, 119.97401422,
- 118.69556004, 130.4820603 , 130.92546842, 129.16566364, 131.39161811,
- 129.9079236 , 129.95842169, 127.29467381, 130.69431831, 130.34639392,
- 130.28881128, 129.60258212, 129.05129734, 129.54145907, 128.70977913,
- 130.81804945,])
-s_km = np.cumsum(v * 10 / 36 * 20) / 1000 
+s_km = np.array([1.1, 
+    2.1, 3.1, 4.2, 5.2, 6.3, 
+    7.3, 8.4, 9.4, 10.5, 11.5, 
+    12.6, 13.6, 14.7, 15.7, 16.8, 
+    17.8, 18.9, 20.0, 21.0, 22.1, 
+    23.1, 24.2, 25.3, 26.4, 27.6, 
+    28.7, 29.8, 30.9, 32.0, 33.2, 
+    34.3, 35.4, 36.5, 37.7, 38.8, 
+    39.9, 41.1, 42.2, 43.3, 44.4, 
+    45.5, 46.6, 47.7, 48.8, 49.8, 
+    50.8, 51.8, 52.8, 53.8, 54.8, 
+    55.9, 57.0, 58.1, 59.2, 60.2, 
+    61.3, 62.4, 63.5, 64.6, 65.6])
+t = np.linspace(10, 40, len(s_km))
 fig = px.scatter(x = t, y = s_km,
                  labels = {'x': 'Zeit [min]', 'y': 'Strecke seit Autobahnauffahrt [km]'},
                  title='Protokoll des Fahrtenschreibers')
@@ -103,20 +96,20 @@ eingeblendet.
 ```
 ```{admonition} Lösung
 :class: tip, toggle
-1. Die Strecke zum Zeitpunkt t<sub>1</sub> = 10 min ist s<sub>1</sub> = 0.7008521 km. Zum Zeitpunkt t<sub>2</sub> = 40 min wurden s<sub>2</sub> = 65.23726 km zurückgelegt. Damit ist die Durchschnittsgeschwindigkeit im Zeitraum [10 min, 40 min]
+1. Die Strecke zum Zeitpunkt t<sub>1</sub> = 10 min ist s<sub>1</sub> = 1.1 km. Zum Zeitpunkt t<sub>2</sub> = 40 min wurden s<sub>2</sub> = 65.6 km zurückgelegt. Damit ist die Durchschnittsgeschwindigkeit im Zeitraum [10 min, 40 min]
 
-$$\frac{65.23726 \text{ km} - 0.7008521 \text{ km}}{40 \text{ min} - 10 \text{ min}} = 
-\frac{64.5364079 \text{ km}}{30 \text{ min}} = \frac{64.5364079 \text{ km}}{0.5 \text{ h}} \approx 129.07 \text{ km/h}.$$
+$$\frac{65.6 \text{ km} - 1.1 \text{ km}}{40 \text{ min} - 10 \text{ min}} = 
+\frac{64.5 \text{ km}}{30 \text{ min}} = \frac{64.5 \text{ km}}{0.5 \text{ h}} = 129.0 \text{ km/h}.$$
 
-2. Die Strecke zum Zeitpunkt t<sub>1</sub> = 15 min ist s<sub>1</sub> = 11.21555 km. Zum Zeitpunkt t<sub>2</sub> = 20 min wurden s<sub>2</sub> = 21.71135 km zurückgelegt. Damit ist die Durchschnittsgeschwindigkeit im Zeitraum [15 min, 20 min]
+2. Die Strecke zum Zeitpunkt t<sub>1</sub> = 15 min ist s<sub>1</sub> = 11.5 km. Zum Zeitpunkt t<sub>2</sub> = 20 min wurden s<sub>2</sub> = 22.1 km zurückgelegt. Damit ist die Durchschnittsgeschwindigkeit im Zeitraum [15 min, 20 min]
 
-$$\frac{21.71135 \text{ km} - 11.21555 \text{ km}}{20 \text{ min} - 15 \text{ min}} = 
-\frac{10.4958 \text{ km}}{5 \text{ min}} = \frac{10.49795 \text{ km}}{1/12 \text{ h}} \approx 125.95 \text{ km/h}.$$
+$$\frac{22.1 \text{ km} - 11.5 \text{ km}}{20 \text{ min} - 15 \text{ min}} = 
+\frac{10.6 \text{ km}}{5 \text{ min}} = \frac{10.6 \text{ km}}{1/12 \text{ h}} = 127.2 \text{ km/h}.$$
 
-3. Die Strecke zum Zeitpunkt t<sub>1</sub> = 20 min ist s<sub>1</sub> = 21.71135 km. Zum Zeitpunkt t<sub>2</sub> = 30 min wurden s<sub>2</sub> = 44.04965 km zurückgelegt. Damit ist die Durchschnittsgeschwindigkeit im Zeitraum [20 min, 30 min]
+3. Die Strecke zum Zeitpunkt t<sub>1</sub> = 20 min ist s<sub>1</sub> = 22.1 km. Zum Zeitpunkt t<sub>2</sub> = 30 min wurden s<sub>2</sub> = 44.4 km zurückgelegt. Damit ist die Durchschnittsgeschwindigkeit im Zeitraum [20 min, 30 min]
 
-$$\frac{44.04965 \text{ km} - 21.71135 \text{ km}}{30 \text{ min} - 20 \text{ min}} = 
-\frac{22.3383 \text{ km}}{10 \text{ min}} = \frac{22.3383 \text{ km}}{1/6 \text{ h}} \approx 134.03 \text{ km/h}.$$
+$$\frac{44.4 \text{ km} - 22.1 \text{ km}}{30 \text{ min} - 20 \text{ min}} = 
+\frac{22.3 \text{ km}}{10 \text{ min}} = \frac{22.3 \text{ km}}{1/6 \text{ h}} = 133.8 \text{ km/h}.$$
 
 Je nachdem, wo das Auto die Kontrollpunkte passiert hat, droht ein Bußgeld.
 ```
