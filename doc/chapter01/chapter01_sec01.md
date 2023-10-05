@@ -55,7 +55,7 @@ Durchschnittsgeschwindigkeit höher als die erlaubte Geschwindigkeit, wird
 automatisch ein Bußgeldverfahren eingeleitet.
 
 Ein deutscher Tourist ist mit seinem Pkw auf der Autobahn unterwegs. Nachdem er
-auf die Autobahn aufgefahren ist, protokolliert sein Fahrtenschreiber dreimal
+auf die Autobahn aufgefahren ist, protokolliert sein Fahrtenschreiber zweimal
 pro Minute die zurückgelegte Strecke. Die Höchstgeschwindigkeit auf
 italienischen Autobahnen ist 130 km/h. Wird er einen Bußgeldbescheid bekommen?
 
