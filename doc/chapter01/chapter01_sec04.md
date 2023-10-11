@@ -42,11 +42,11 @@ $A$. Er berechnet sich mit der Formel
 
 $$A = x \cdot y.$$
 
-Aus der Nebenbedingung und der Formel für den Flächeninhalt basteln wir uns eine
-Funktion, die sogenannte **Zielfunktion**. Als erstes entscheiden wir uns für
-eine Variable (z.B. $x$). Dann lösen wir die Nebenbedingung nach der anderen
-Variablen auf (hier also $y$). Aus der Nebenbedingung $2\cdot x + 2 \cdot y = 1$
-wird also:
+Die Bedingung nennen wir **Hauptbedingung**. Aus der Nebenbedingung und
+Hauptbedingung basteln wir uns eine Funktion, die sogenannte **Zielfunktion**.
+Als erstes entscheiden wir uns für eine Variable (z.B. $x$). Dann lösen wir die
+Nebenbedingung nach der anderen Variablen auf (hier also $y$). Aus der
+Nebenbedingung $2\cdot x + 2 \cdot y = 1$ wird also:
 
 $$y = \frac{1}{2} \left(1 - 2\cdot x\right) = -x + \frac{1}{2}.$$
 
