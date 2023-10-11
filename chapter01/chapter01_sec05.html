@@ -66,6 +66,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'chapter01/chapter01_sec05';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -438,10 +440,6 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="ubungen">
 <h1>Übungen<a class="headerlink" href="#ubungen" title="Permalink to this headline">#</a></h1>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>Dieser Abschnitt wird gerade überarbeitet.</p>
-</div>
 <div class="tip admonition">
 <p class="admonition-title">Übung 1.1</p>
 <p>Gehen Sie auf die Trainingsseite <a class="reference external" href="https://mathebattle.de/edu_randomtasks/training_show/129">Mathebattle: Ableitung ganzrationale Funktionen</a> und lösen Sie solange die dortigen Ableitungsaufgaben, bis Sie drei hintereinander richtig gelöst haben.</p>
@@ -473,6 +471,112 @@ document.write(`
 <div class="tip admonition">
 <p class="admonition-title">Übung 1.8</p>
 <p>Gehen Sie auf die Trainingsseite <a class="reference external" href="https://mathebattle.de/edu_randomtasks/training_show/398">Mathebattle: Extrempunkte</a> und lösen Sie solange die dortigen Ableitungsaufgaben, bis Sie drei hintereinander richtig gelöst haben.</p>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Übung 1.9 </p>
+<p>Ein Rechteckt hat seine obere Seite unter der Parabel <span class="math notranslate nohighlight">\(f(x) = 16 - x^2\)</span> und
+seine untere Seite auf der x-Achse. Die beiden vertikalen Seiten des Rechtecks
+sind parallel zur y-Achse. Bestimmen Sie die Abmessungen des Rechtecks, so dass
+sein Flächeninhalt maximal ist.</p>
+<p>Fertigen Sie dazu eine Skizze an.</p>
+</div>
+<div class="tip toggle admonition">
+<p class="admonition-title">Lösung</p>
+<p>Die Parabel <span class="math notranslate nohighlight">\(f(x) = -x^2 + 16\)</span> ist symmetrisch zur y-Achse, daher ist auch das
+Rechteck symmetrisch zur y-Achse. Daher genügt es, nur die rechte Hälfte des
+Rechtecks zu betrachten und <span class="math notranslate nohighlight">\(x&gt;0\)</span> zu fordern.</p>
+<p>Die Hauptbedingung lautet</p>
+<div class="math notranslate nohighlight">
+\[A = x\cdot y.\]</div>
+<p>Die Nebenbedingung lautet</p>
+<div class="math notranslate nohighlight">
+\[y = -x^2 + 16.\]</div>
+<p>Daraus wird die Zielfunktion</p>
+<div class="math notranslate nohighlight">
+\[A(x) = x \cdot (-x^2 + 16),\]</div>
+<p>die maximiert werden soll. Wir vereinfachen die Zielfunktion und erhalten</p>
+<div class="math notranslate nohighlight">
+\[\Rightarrow A(x) = -x^3 + 16x.\]</div>
+<p>Wir bilden die 1. Ableitung:</p>
+<div class="math notranslate nohighlight">
+\[A'(x) = -3x^2+16.\]</div>
+<p>Notwendige Bedingung für Extremwerte ist, dass <span class="math notranslate nohighlight">\(A'(x)=0\)</span> erfüllt ist. Daher lösen
+wir die Gleichung</p>
+<div class="math notranslate nohighlight">
+\[-3x^2+16 = 0\]</div>
+<p>und erhalten als Lösung <span class="math notranslate nohighlight">\(x_1 = \sqrt{\frac{16}{3}} = \frac{4}{3}\sqrt{3}\)</span> und <span class="math notranslate nohighlight">\(x_2 =
+-\sqrt{\frac{16}{3}}\)</span>. Die negative Stelle <span class="math notranslate nohighlight">\(x_2\)</span> wird nicht weiter betrachtet,
+da wir nur die rechte Seite des Rechtecks betrachten und daher <span class="math notranslate nohighlight">\(x&gt;0\)</span>
+vorausgesetzt haben. Als nächstes überprüfen wir mit der 2. Ableitung, ob ein
+Extremwert vorliegt (hinreichende Bedingung).</p>
+<div class="math notranslate nohighlight">
+\[A''(x) = -6x \quad \Rightarrow A''(x_1) = -6\cdot \frac{4}{3}\sqrt{3} =
+-8\sqrt{3} &lt; 0.\]</div>
+<p>Da die 2. Ableitung an der Stelle <span class="math notranslate nohighlight">\(x_1\)</span> negativ ist, liegt ein Maximum vor. Für
+das entsprechende <span class="math notranslate nohighlight">\(y_1\)</span> gilt dann</p>
+<div class="math notranslate nohighlight">
+\[y_2 = f(x_1) = 16 - x_1^2 = 16 - \left(  \sqrt{\frac{16}{3}}\right)^2 =
+\frac{32}{3}.\]</div>
+<p>Antwort: Somit ist die linke Seite des gesuchten kompletten Rechtecks an der
+Stelle <span class="math notranslate nohighlight">\(x = -\frac{4}{3}\sqrt{3}\)</span> (was <span class="math notranslate nohighlight">\(x_2\)</span> entspricht) und die rechte Seite
+an der Stelle <span class="math notranslate nohighlight">\(x = \frac{4}{3}\sqrt{3}\)</span>. Die obere Seite liegt bei <span class="math notranslate nohighlight">\(y = \frac{32}{3}\)</span>.
+Der Flächeninhalt des kompletten gesuchten Rechtecke ist</p>
+<div class="math notranslate nohighlight">
+\[A_{\text{gesamt}} = 2 \cdot  \frac{4}{3}\sqrt{3} \cdot \frac{32}{3} =
+\frac{256}{9}\sqrt{3}.\]</div>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Übung 1.10</p>
+<p>Ein senkrechter Zylinder wird in eine Kugel mit dem Radius 1 m eingesetzt, so
+dass beide Mittelpunkte übereinstimmen. Bestimmen Sie Radius <span class="math notranslate nohighlight">\(r\)</span>, Höhe <span class="math notranslate nohighlight">\(h\)</span> und
+Volumen <span class="math notranslate nohighlight">\(V\)</span> des Zylinders, wenn der Zylinder das maximale Volumen haben soll.</p>
+<p>Fertigen Sie dazu eine Skizze des Querschnitts an.</p>
+</div>
+<div class="tip toggle admonition">
+<p class="admonition-title">Lösung</p>
+<p>Die Hauptbedingung (Volumen des Zylinders) lautet</p>
+<div class="math notranslate nohighlight">
+\[V = \pi r^2 \cdot h.\]</div>
+<p>Die Nebenbedingung lautet (erkenntlich aus Skizze des Querschnitts)</p>
+<div class="math notranslate nohighlight">
+\[r^2 + \left(\frac{h}{2}\right)^2 = 1.\]</div>
+<p>Aufgelöst nach der Höhe <span class="math notranslate nohighlight">\(h\)</span> lautet die Nebenbedingung</p>
+<div class="math notranslate nohighlight">
+\[h = 2\sqrt{1-r^2}.\]</div>
+<p>Eingesetzt in die Hauptbedingung erhalten wir die Zielfunktion</p>
+<div class="math notranslate nohighlight">
+\[V(r) = 2\pi r^2 \cdot \sqrt{1-r^2},\]</div>
+<p>die maximiert werden soll. Dazu berechnen wir die 1. Ableitung als</p>
+<div class="math notranslate nohighlight">
+\[V'(r) = \frac{4\pi r - 6\pi r^3}{\sqrt{1-r^2}}.\]</div>
+<p>Um die möglichen Extremwertstellen zu berechnen (notwendige Bedingung), setzen
+wir die 1. Ableitung gleich Null:</p>
+<div class="math notranslate nohighlight">
+\[V'(r) = 0  \quad \Rightarrow \frac{4\pi r - 6\pi r^3}{\sqrt{1-r^2}} = 0.\]</div>
+<p>Wir multiplizieren die Gleichung auf beiden Seiten mit <span class="math notranslate nohighlight">\(\sqrt{1-r^2}\)</span> und
+klammern <span class="math notranslate nohighlight">\(r\)</span> aus:</p>
+<div class="math notranslate nohighlight">
+\[\Rightarrow r\cdot \left(4\pi - 6 \pi r^2\right) = 0.\]</div>
+<p>Die erste Lösung dieser Gleichung <span class="math notranslate nohighlight">\(r_1 = 0\)</span> verwerfen wir, denn ein Zylinder mit
+Radius 0 ist nicht existent. Aus <span class="math notranslate nohighlight">\(4\pi - 6 \pi r^2 = 0\)</span> folgen die beiden
+Lösungen <span class="math notranslate nohighlight">\(r_2 = \sqrt{\frac{2}{3}}\)</span> und <span class="math notranslate nohighlight">\(r_3 = -\sqrt{\frac{2}{3}}\)</span>. Die dritte
+Lösung verwerfen wir ebenfalls, da ein Zylinder keinen negativen Radius haben
+kann. Wir betrachten nur noch die Stelle <span class="math notranslate nohighlight">\(r_2 = \sqrt{\frac{2}{3}}\)</span>.</p>
+<p>Um zu überprüfen, ob die Stelle <span class="math notranslate nohighlight">\(r_2 = \sqrt{\frac{2}{3}} = \frac{1}{3}\sqrt{6}\)</span>
+einen Extremwert hat (hinreichende Bedingung), bilden wir die 2. Ableitung und
+erhalten nach einigen Umformungen:</p>
+<div class="math notranslate nohighlight">
+\[V''(r) = \frac{2\pi (6r^4 - 9r^2 + 2)}{(1-r^2)^{\frac{3}{2}}}.\]</div>
+<p>Setzen wir nun <span class="math notranslate nohighlight">\(r_2 = \frac{1}{3}\sqrt{6}\)</span> in die 2. Ableitung ein, erhalten wir</p>
+<div class="math notranslate nohighlight">
+\[V''\left(\sqrt{\frac{2}{3}}\right) = -8\pi\sqrt{3} &lt; 0.\]</div>
+<p>Somit hat die Zielfunktion <span class="math notranslate nohighlight">\(V(r)\)</span> an der Stelle <span class="math notranslate nohighlight">\(r_2 = \frac{1}{3}\sqrt{6}\)</span> ein
+Maximum. Die dazugehörige Höhe ist</p>
+<div class="math notranslate nohighlight">
+\[h_2 = 2 \sqrt{1- r_2^2} = \frac{2}{3}\sqrt{3}\]</div>
+<p>und das maximale Volumen</p>
+<div class="math notranslate nohighlight">
+\[V = \pi r_2^2 \cdot h_2 = \frac{4}{9}\sqrt{3}\pi.\]</div>
 </div>
 </section>
 
