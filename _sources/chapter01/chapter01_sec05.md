@@ -22,7 +22,7 @@ Gehen Sie auf die Trainingsseite [Mathebattle: Kettenregel](https://mathebattle.
 
 ```{admonition} Übung 1.5
 :class: tip
-Gehen Sie auf die Trainingsseite [Mathebattle: Produktregel](https://mathebattle.de/edu_randomtasks/training_show/714) und lösen Sie solange die dortigen Ableitungsaufgaben, bis Sie drei hintereinander richtig gelöst haben.
+Gehen Sie auf die Trainingsseite [Mathebattle: Produktregel](https://mathebattle.de/edu_randomtasks/training_show/131) und lösen Sie solange die dortigen Ableitungsaufgaben, bis Sie drei hintereinander richtig gelöst haben.
 ```
 
 ```{admonition} Übung 1.6
