@@ -6,7 +6,7 @@ Koeffizienten](https://lx4.mint-kolleg.kit.edu/MATeX/generatorview.php?data=eXZy
 erzeugt. Dort können Sie sich auch selbst weitere Aufgaben mit Lösung erzeugen.
 Wählen Sie dazu Stufe 1b.
 
-```{admonition} Übung 12.1
+```{admonition} Übung 13.1
 :class: miniexercise
 Lösen Sie das Anfangswertproblem
 
@@ -42,7 +42,7 @@ Hinweis: Direkt integrieren hätte auch funktioniert.
 ````
 
 
-```{admonition} Übung 12.2
+```{admonition} Übung 13.2
 :class: miniexercise
 Lösen Sie das Anfangswertproblem
 
@@ -102,7 +102,7 @@ $$x(t) = -t + \frac{1}{5} + \frac{24}{5} e^{-5t}$$
 ```
 ````
 
-```{admonition} Übung 12.3
+```{admonition} Übung 13.3
 :class: miniexercise
 Lösen Sie das Anfangswertproblem
 
@@ -162,7 +162,7 @@ $$y(x) = \frac{1}{10} \cdot \left( \sin(5x) + \cos(5x)\right) - \frac{11}{10}\cd
 ```
 ````
 
-```{admonition} Übung 12.4
+```{admonition} Übung 13.4
 :class: miniexercise
 Lösen Sie das Anfangswertproblem
 
@@ -222,7 +222,7 @@ $$x(t) = -\frac{1}{6} e^{-t} + \frac{1}{6}\cdot e^{2t}.$$
 ```
 ````
 
-```{admonition} Übung 12.5
+```{admonition} Übung 13.5
 :class: miniexercise
 Lösen Sie das Anfangswertproblem
 
@@ -282,7 +282,7 @@ $$y(x) = \left(-\frac{1}{3}x^2 - \frac{8}{9}x - \frac{17}{27} \right) + \frac{98
 ```
 ````
 
-```{admonition} Übung 12.6
+```{admonition} Übung 13.6
 :class: miniexercise
 Lösen Sie das Anfangswertproblem
 
@@ -342,7 +342,7 @@ $$x(t) = \frac{1}{10} \left(\cos(2t) - 2\sin(2t)\right) - \frac{11}{10}\cdot e^{
 ```
 ````
 
-```{admonition} Übung 12.7
+```{admonition} Übung 13.7
 :class: miniexercise
 Lösen Sie das Anfangswertproblem
 
@@ -402,7 +402,7 @@ $$y(x) = e^{2x}.$$
 ```
 ````
 
-```{admonition} Übung 12.8
+```{admonition} Übung 13.8
 :class: miniexercise
 Lösen Sie das Anfangswertproblem
 
@@ -462,7 +462,7 @@ $$x(t) = -\frac{1}{25}e^{-3t}\cdot (15t+8) + \frac{17}{25}\cdot e^{2t}.$$
 ```
 ````
 
-```{admonition} Übung 12.9
+```{admonition} Übung 13.9
 :class: miniexercise
 Berechnen Sie die Lösungen des folgenden homogenen Systems von linearen Differentialgleichungen 1. Ordnung:
 
@@ -511,7 +511,7 @@ $$y_2(x) = -4C_1 e^{-3x} + C_2 e^{2x}.$$
 ```
 ````
 
-```{admonition} Übung 12.10
+```{admonition} Übung 13.10
 :class: miniexercise
 Berechnen Sie die Lösungen des folgenden homogenen Systems von linearen Differentialgleichungen 1. Ordnung:
 

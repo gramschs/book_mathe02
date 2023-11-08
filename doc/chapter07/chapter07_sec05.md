@@ -1,6 +1,6 @@
 # Übungen
 
-```{admonition} Übung 6.1
+```{admonition} Übung 7.1
 :class: tip
 Berechnen Sie die ersten partiellen Ableitungen nach den Variablen.
 a) $f(x,y)=e^{x}\cdot e^{y}$ <br>
@@ -30,7 +30,7 @@ d) $f(x_1,x_2,x_3) = \frac{1}{2x_1^2+\sqrt{x_2^2+x_3^2}}$
 \end{align*}
 ````
 
-```{admonition} Übung 6.2
+```{admonition} Übung 7.2
 :class: tip
 Berechnen Sie die zweiten partiellen Ableitungen nach den Variablen. Verifizieren Sie, dass das Ergebnis unabhängig von der Reihenfolge der Differentiationsschritte ist.
 
@@ -75,7 +75,7 @@ b) $f(x,y,z)=\frac{1}{\sqrt{x^2+y^2+z^2}}$
 \end{align*}
 ````
 
-```{admonition} Übung 6.3
+```{admonition} Übung 7.3
 :class: tip
 Berechnen Sie die dritten partiellen Ableitungen. Nutzen Sie aus, dass das Ergebnis unabhängig von der Reihenfolge der Differentiationsschritte ist:
 

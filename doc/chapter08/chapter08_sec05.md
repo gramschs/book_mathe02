@@ -1,6 +1,6 @@
 # Übungen
 
-```{admonition} Übung 7.1
+```{admonition} Übung 8.1
 :class: tip
 Berechnen Sie den Gradient $\nabla f$ der folgenden Funktionen:
 
@@ -84,7 +84,7 @@ $$\nabla f(x_1,x_2,x_3) = \left(4(x_1-x_2), 3x_2^2\sin(x_3)-4x_1, x_2^3\cos(x_3)
 ```
 ````
 
-```{admonition} Übung 7.2
+```{admonition} Übung 8.2
 :class: tip
 Berechnen Sie die Jacobi-Matrix $J(f)$ zu folgenden Funktionen.
 
@@ -137,7 +137,7 @@ $$J(f) = \begin{pmatrix}9x^2y^2 & 6x^3y \\ \cos(x) & 0 \end{pmatrix}$$
 ```
 ````
 
-```{admonition} Übung 7.3
+```{admonition} Übung 8.3
 :class: tip
 Bestimmen Sie die Jacobi-Matrix der verketteten Funktion $h = f \circ g$ mit der mehrdimensionalen Kettenregel:
 

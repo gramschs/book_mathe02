@@ -1,6 +1,6 @@
 # Übungen
 
-```{admonition} Übung 1.1
+```{admonition} Übung 2.1
 :class: tip
 Integrieren Sie 
 
@@ -44,7 +44,7 @@ Klammert man den Term $\frac{2}{3}(x+1)^{\frac{3}{2}}$ aus und fasst den Rest zu
 ```
 ````
 
-```{admonition} Übung 1.2
+```{admonition} Übung 2.2
 :class: tip
 Berechnen Sie das Integral 
 
@@ -67,7 +67,7 @@ Hier ist die partielle Integration einmal anzuwenden und man erhält:
  ```
  ````
 
-```{admonition} Übung 1.3
+```{admonition} Übung 2.3
 :class: tip
 Berechnen Sie 
 
@@ -82,7 +82,7 @@ $$\int_{0}^{\pi} \cos(x)\cdot x \, dx = -2.$$
 ```
 ````
 
-```{admonition} Übung 1.4
+```{admonition} Übung 2.4
 :class: tip
 Berechnen Sie
 
@@ -97,7 +97,7 @@ $$\int_{-\pi}^{\pi} x^2\cdot \cos(x)\, dx = -4\pi.$$
 ```
 ````
 
-```{admonition} Übung 1.5
+```{admonition} Übung 2.5
 :class: tip
 Berechnen Sie
 
@@ -112,7 +112,7 @@ $$\int_{-2\pi}^{2\pi} e^x\cdot \cos(x)\, dx = -\frac{1}{2}e^{2\pi}-\frac{1}{2}e^
 ```
 ````
 
-```{admonition} Übung 1.6
+```{admonition} Übung 2.6
 :class: tip
 Berechnen Sie
 
@@ -127,7 +127,7 @@ $$\int_{1}^{e^2} x^2\cdot \ln(x) \, dx = \frac{5}{9}e^6 + \frac{1}{9} \approx 22
 ```
 ````
 
-```{admonition} Übung 1.7
+```{admonition} Übung 2.7
 :class: tip
 Berechnen Sie
 
@@ -141,7 +141,7 @@ $$\int_{0}^{\frac{\pi}{2}} \cos(x)\cdot e^{\sin(x)}\, dx = e - 1 \approx 1.7183\
 ```
 ````
 
-```{admonition} Übung 1.8
+```{admonition} Übung 2.8
 :class: tip
 Berechnen Sie 
 
@@ -155,7 +155,7 @@ $$\int_{2}^{3}\frac{1}{(1-x)^3}\, dx = -\frac{3}{8} = - 0.375$$
 ```
 ````
 
-```{admonition} Übung 1.9
+```{admonition} Übung 2.9
 :class: tip
 Berechnen Sie
 

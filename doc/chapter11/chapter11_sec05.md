@@ -1,6 +1,6 @@
 # Übungen
 
-```{admonition} Übung 10.1
+```{admonition} Übung 11.1
 :class: miniexercise
 Berechnen Sie den Schwerpunkt des Dreiecks mit den Ecken $P_1(2,5), \, P_2(6,2)$
 und $P_3(5,7)$. Machen Sie sich dazu eine Skizze des Integrationsgebietes.
@@ -15,7 +15,7 @@ Fläche: $A=\frac{17}{2}$, Schwerpunkt: $S(\frac{13}{3}, \frac{14}{3})$
 ```
 ````
 
-```{admonition} Übung 10.2
+```{admonition} Übung 11.2
 :class: miniexercise
 Berechnen Sie den Schwerpunkt eines Halbkreises mit Radius $R=5$. Machen Sie
 sich dazu eine Skizze des Integrationsgebietes. Verwenden Sie Polarkoordinaten.
@@ -28,7 +28,7 @@ Schwerpunkt: $S(0, \frac{20}{3\pi})$
 ```
 ````
 
-```{admonition} Übung 10.3
+```{admonition} Übung 11.3
 :class: miniexercise
 Gegeben ist ein Prisma mit einer Länge von 2 cm (z-Richtung). Die
 dreieckige Querschnittsfläche sei gegeben durch die Punkte $(0,0), (1,0)$ und

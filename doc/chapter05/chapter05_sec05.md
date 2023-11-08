@@ -1,7 +1,7 @@
 # Übungen
 
 
-```{admonition} Übung 4.1
+```{admonition} Übung 5.1
 :class: tip
 Berechnen Sie das Taylorpolynom der Ordnung 3 
 
@@ -62,7 +62,7 @@ Das Taylorpolynom von $f$ im Entwicklungspunkt $x_{0}=0$ ist
 ```
 ````
 
-```{admonition} Übung 4.2
+```{admonition} Übung 5.2
 :class: tip
 Berechnen Sie das Taylorpolynom der Ordnung 3 
 
@@ -125,7 +125,7 @@ Das Taylorpolynom von $f$ im Entwicklungspunkt $x_{0}=1$ ist
 ```
 ````
 
-```{admonition} Übung 4.3
+```{admonition} Übung 5.3
 :class: tip
 Berechnen Sie das Taylorpolynom der Ordnung 3 
 
@@ -168,7 +168,7 @@ Das Taylorpolynom von $f$ im Entwicklungspunkt $x_{0}=0$ ist
 ```
 ````
 
-```{admonition} Übung 4.4
+```{admonition} Übung 5.4
 :class: tip
 Berechnen Sie das Taylorpolynom der Ordnung 3 
 
@@ -211,7 +211,7 @@ Das Taylorpolynom von $f$ im Entwicklungspunkt $x_{0}=0$ ist
 ```
 ````
 
-```{admonition} Übung 4.5
+```{admonition} Übung 5.5
 :class: tip
 Berechnen Sie das Taylorpolynom der Ordnung 3 
 
@@ -254,7 +254,7 @@ $$f(0) = 0, \quad f'(0)=0, \quad f''(0)=2, \quad f^{(3)}(0)=0.$$
 ```
 ````
 
-```{admonition} Übung 4.6
+```{admonition} Übung 5.6
 :class: tip
 Berechnen Sie das Taylorpolynom der Ordnung 3 
 

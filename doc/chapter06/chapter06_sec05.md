@@ -1,6 +1,6 @@
 # Übungen
 
-```{admonition} Übung 5.1
+```{admonition} Übung 6.1
 :class: tip
 Welche Periode haben die folgenden Funktionen:
 
@@ -17,7 +17,7 @@ Welche Periode haben die folgenden Funktionen:
 4. Tangens-Funktion $f(x)=\tan(x)$ Periode $\pi$
 ````
 
-```{admonition} Übung 5.2
+```{admonition} Übung 6.2
 :class: tip
 Zeichnen Sie die Funktionen $f(x) = \sin(kx)$ und $g(x) = \cos(kx)$ für $k = 2$ und $k = 5$. Welche Perioden haben die vier Funktionen?
 ```
@@ -57,7 +57,7 @@ Kosinusfunktion $\cos(5x)$ mit einer Periode $T = \frac{2\pi}{5}$
 ```
 ````
 
-```{admonition} Übung 5.3
+```{admonition} Übung 6.3
 :class: tip
 Berechnen Sie die folgenden Integrale. 
 
@@ -133,7 +133,7 @@ Zwischenrechnung:
 ```
 ````
 
-```{admonition} Übung 5.4
+```{admonition} Übung 6.4
 :class: tip
 Gegeben sei die Funktion $f:[-\pi, \pi) \mapsto \mathbb{R}$ mit 
 
