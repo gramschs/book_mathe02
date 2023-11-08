@@ -1,6 +1,6 @@
 # Übungen
 
-```{admonition} Übung 11.1
+```{admonition} Übung 12.1
 :class: miniexercise
 Bestimmen Sie die Lösung des Anfangwertproblems
 
@@ -41,7 +41,7 @@ $$y(x) = \sqrt{\frac{2}{5}e^{5x}+\frac{3}{5}}.$$
 ```
 ````
 
-```{admonition} Übung 11.2
+```{admonition} Übung 12.2
 :class: miniexercise
 Bestimmen Sie die Lösung des Anfangwertproblems
 
@@ -81,7 +81,7 @@ $$y(x) = 5 \cdot e^{2x^3}.$$
 ```
 ````
 
-```{admonition} Übung 11.3
+```{admonition} Übung 12.3
 :class: miniexercise
 Bestimmen Sie die Lösung des Anfangwertproblemes
 
@@ -120,7 +120,7 @@ $$x(t) = \ln(e^t) = t.$$
 ```
 ````
 
-```{admonition} Übung 11.4
+```{admonition} Übung 12.4
 :class: miniexercise
 Bestimmen Sie die Lösung des Anfangwertproblemes
 
@@ -159,7 +159,7 @@ $$x(t) = - \frac{2}{3}t.$$
 ```
 ````
 
-```{admonition} Übung 11.5
+```{admonition} Übung 12.5
 :class: miniexercise
 Bestimmen Sie die Lösung des Anfangwertproblems
 
@@ -202,7 +202,7 @@ $$x(t) = t.$$
 ```
 ````
 
-```{admonition} Übung 11.6
+```{admonition} Übung 12.6
 :class: miniexercise
 Bestimmen Sie die Lösung des Anfangwertproblems
 
@@ -242,7 +242,7 @@ $$x(t) = \sqrt{-2\cos(t) + 4}.$$
 ```
 ````
 
-```{admonition} Übung 11.7
+```{admonition} Übung 12.7
 :class: miniexercise
 Lösen Sie die exakte Differentialgleichung
 
@@ -284,7 +284,7 @@ $$-\frac{1}{5} e^{5x} + \frac{1}{2} y^2 = C \quad
 ```
 ````
 
-```{admonition} Übung 11.8
+```{admonition} Übung 12.8
 :class: miniexercise
 Lösen Sie die exakte Differentialgleichung
 

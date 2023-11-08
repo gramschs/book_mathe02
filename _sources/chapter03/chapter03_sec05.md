@@ -1,6 +1,6 @@
 # Übungen
 
-```{admonition} Übung 2.1
+```{admonition} Übung 3.1
 :class: tip
 Berechnen Sie den Mittelwert der Funktion $f(x)=\frac{1}{2}x^2 +1$ im Intervall $[0,2]$.
 ```
@@ -11,7 +11,7 @@ $$m = \frac{1}{2-0}\int_{0}^{2}\frac{1}{2}x^2 +1 \, dx = \frac{5}{3} \approx 1.6
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Y4cPEgR3LUg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 ````
 
-```{admonition} Übung 2.2
+```{admonition} Übung 3.2
 :class: tip
 Berechnen Sie den Mittelwert $\bar{f}$ der Funktion $f(x)=mx+n$ auf einem beliebigen Intervall $[a,b]$. Interpretieren Sie das Ergebnis geometrisch.
 ```
@@ -25,7 +25,7 @@ Der Mittelwert der der linearen Funktion $f(x)=mx+n$ ist gerade das arithmetisch
 ```
 ````
 
-```{admonition} Übung 2.3
+```{admonition} Übung 3.3
 :class: tip
 Berechnen Sie den Flächeninhalt $A$, der zwischen dem Graphen der Funktion 
 
@@ -42,7 +42,7 @@ $$A = \frac{1}{6}$$
 ```
 ````
 
-```{admonition} Übung 2.4
+```{admonition} Übung 3.4
 :class: tip
 Berechnen Sie den Flächeninhalt $A$, der zwischen dem Graphen der Funktion 
 
@@ -73,7 +73,7 @@ $$A_2 = \int_{1}^{3} x^3 - 4x^2 + 3x \, dx = -\frac{8}{3}$$
 ```
 ````
 
-```{admonition} Übung 2.5
+```{admonition} Übung 3.5
 :class: tip
 Berechnen Sie den Flächeninhalt $A$, der zwischen den beiden Graphen der Funktionen 
 
@@ -98,7 +98,7 @@ $$A = \int_{-4}^{16} \left(\frac{1}{4}x^2 + 16\right) - \left(-3x \right)  \, dx
 ```
 ````
 
-```{admonition} Übung 2.6
+```{admonition} Übung 3.6
 :class: tip
 Berechnen Sie den Flächeninhalt $A$, der zwischen den beiden Graphen der Funktionen 
 
@@ -123,7 +123,7 @@ $$A = \int_{-2}^{5/2} \left( x+2 \right) - \left(-x^2+2x+\frac{1}{2} \right)  \,
 ```
 ````
 
-```{admonition} Übung 2.7
+```{admonition} Übung 3.7
 :class: tip
 Berechnen Sie den Flächeninhalt $A$, der zwischen den beiden Graphen der Funktionen 
 
@@ -149,7 +149,7 @@ $$A = \int_{0}^{3/7} \left(-3x^2+x-1\right) - \left(4\cdot (x-\frac{1}{4})^2-\fr
 ```
 ````
 
-```{admonition} Übung 2.8
+```{admonition} Übung 3.8
 :class: tip
 Berechnen Sie den Flächeninhalt $A$, der zwischen den beiden Graphen der Funktionen 
 
@@ -184,7 +184,7 @@ $$A = A_1 + A_2 = \frac{1}{4}\left(-3\sqrt{2}\pi + 16 + 8\sqrt{2} \right) \appro
 ```
 ````
 
-```{admonition} Übung 2.9
+```{admonition} Übung 3.9
 :class: tip
 Berechnen Sie die Bogenlänge $L$ der Funktion $f(x)=x$ im Intervall $[0,1]$.
 ```
@@ -201,7 +201,7 @@ $$L = \int_{0}^{1} \sqrt{1+(1)^2}\, dx = \int_{0}^{1} \sqrt{2}\, dx = \sqrt{2}$$
 ```
 ````
 
-```{admonition} Übung 2.10
+```{admonition} Übung 3.10
 :class: tip
 Berechnen Sie die Bogenlänge $L$ der Funktion $f(x)=x^{\frac{3}{2}}$ im Intervall $[0,1]$.
 ```
@@ -225,7 +225,7 @@ $$
 ```
 ````
 
-```{admonition} Übung 2.11
+```{admonition} Übung 3.11
 :class: tip
 Berechnen Sie das Volumen $V$ des Rotationskörpers, das entsteht, wenn die Funktion $f(x)=-x^2+4$ im Intervall $[-2,2]$ um die x-Achse gedreht wird.
 ```
@@ -240,7 +240,7 @@ $$V = 2\pi\cdot \frac{256}{15}\approx 107.23$$
 ```
 ````
 
-```{admonition} Übung 2.12
+```{admonition} Übung 3.12
 :class: tip
 Berechnen Sie das Volumen $V$ des Rotationskörpers, das entsteht, wenn die Funktion $f(x)=\sin(x)+1$ im Intervall $[0,\frac{3\pi}{2}]$ um die x-Achse gedreht wird.
 ```

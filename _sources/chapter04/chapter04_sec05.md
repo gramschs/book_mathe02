@@ -1,6 +1,6 @@
 # Übungen
 
-```{admonition} Übung 3.1
+```{admonition} Übung 4.1
 :class: tip
 Untersuchen Sie die Reihe 
 
@@ -38,7 +38,7 @@ Wegen $r<1$ ist die Reihe (absolut) konvergent.
 ```
 ````
 
-```{admonition} Übung 3.2
+```{admonition} Übung 4.2
 :class: tip
 Untersuchen Sie die Reihe 
 
@@ -76,7 +76,7 @@ Wegen $r<1$ ist die Reihe (absolut) konvergent.
 ````
 
 
-```{admonition} Übung 3.3
+```{admonition} Übung 4.3
 :class: tip
 Untersuchen Sie die Reihe 
 
@@ -97,7 +97,7 @@ Somit divergiert die Reihe. Die Anwendung des Wurzel- sowie des Quotientenkriter
 ```
 ````
 
-```{admonition} Übung 3.4
+```{admonition} Übung 4.4
 :class: tip
 Bestimmen Sie den Konvergenzradius $r$ der Potenzreihe 
 

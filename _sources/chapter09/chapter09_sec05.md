@@ -1,6 +1,6 @@
 # Übungen
 
-```{admonition} Übung 8.1
+```{admonition} Übung 9.1
 :class: miniexercise
 Bestimmen Sie die Gleichung der Tangentialebene bzw. die Linearisierung für die Funktion
 
@@ -42,7 +42,7 @@ T_{f,1}(x,y)
 ```
 ````
 
-```{admonition} Übung 8.2
+```{admonition} Übung 9.2
 :class: miniexercise
 Bestimmen Sie die Gleichung der Tangentialebene bzw. die Linearisierung für die Funktion
 
@@ -81,7 +81,7 @@ $$T_{f,1}(x,y) = 1 + 1\cdot(x-1) + 0\cdot (y-y_0) = x.$$
 ```
 ````
 
-```{admonition} Übung 8.3 
+```{admonition} Übung 9.3 
 :class: miniexercise
 Bestimmen Sie alle Extremwerte der Funktion $f:\mathbb{R}^2 \rightarrow\mathbb{R}$ gegeben durch  
 
@@ -139,7 +139,7 @@ $$
 = \left( \begin{array}{cc} 
 6x & 0 \\ 
 0  & 6y
-\end{array} \right) . 
+\end{array} \right). 
 $$
 
 Die Determinante der Hesse-Matrix ist
@@ -186,7 +186,7 @@ Damit ist der Punkt $(x_{4},y_{4})=(\frac{\sqrt{3}}{3},\frac{\sqrt{3}}{3})$ ein 
 ```
 ````
 
-```{admonition} Übung 8.4
+```{admonition} Übung 9.4
 :class: miniexercise
 Bestimmen Sie alle Extremwerte der Funktion $f:\mathbb{R}^2 \rightarrow\mathbb{R}$ gegeben durch  
 
@@ -288,7 +288,7 @@ Damit ist der Punkt $(x_{4},y_{4})=(-2,-4)$ ein Extremum. Da das Vorzeichen von 
 ```
 ````
 
-```{admonition} Übung 8.5
+```{admonition} Übung 9.5
 :class: miniexercise
 Die Querschnittsfläche eines Tunnels kann als Rechteck beschrieben werden, auf
 dem sich ein Halbkreis befindet. Wie müssen die geometrischen Abmessungen

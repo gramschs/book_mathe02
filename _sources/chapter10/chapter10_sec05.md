@@ -1,6 +1,6 @@
 # Übungen
 
-```{admonition} Übung 9.1
+```{admonition} Übung 10.1
 :class: miniexercise
 Berechnen Sie das Doppelintegral 
 
@@ -20,7 +20,7 @@ $$\int_{x=0}^{x=1}\left(\int_{y=-x}^{y=x} xy+1 \, dy\right) \, dx = 1$$
 ```
 ````
 
-```{admonition} Übung 9.2
+```{admonition} Übung 10.2
 :class: miniexercise
 Berechnen Sie das Doppelintegral 
 
@@ -43,7 +43,7 @@ $$\int_{x=0}^{x=2\pi}\left(\int_{y=-\sin(x)-1}^{y=\sin(x)+1} xy+1 \, dy\right) \
 ```
 ````
 
-```{admonition} Übung 9.3
+```{admonition} Übung 10.3
 :class: miniexercise
 Berechnen Sie das Doppelintegral 
 
@@ -66,7 +66,7 @@ $$\int_{x=0}^{x=2\pi}\left(\int_{y=-\sin(x)-1}^{y=\sin(x)+1} x \, dy \right)\, d
 ```
 ````
 
-```{admonition} Übung 9.4
+```{admonition} Übung 10.4
 :class: miniexercise
 Berechnen Sie das Doppelintegral 
 
@@ -86,7 +86,7 @@ $$\int_{x=0}^{x=1}\left(\int_{y=0}^{y=x} \sqrt{xy} \, dy \right) \, dx = \frac{2
 ```
 ````
 
-```{admonition} Übung 9.5
+```{admonition} Übung 10.5
 :class: miniexercise
 Berechnen Sie das Doppelintegral 
 
@@ -119,7 +119,7 @@ Eingesetzt in das obige Integral gilt dann zusammen mit dem Trick $\sin^2(x) =\f
 ```
 ````
 
-```{admonition} Übung 9.6
+```{admonition} Übung 10.6
 :class: miniexercise
 Berechnen Sie den Schwerpunkt der Fläche eines Dreiecks mit den Koordinaten $(1,0)$, $(0,1)$ und $(-1,0)$. Machen Sie sich dazu eine Skizze des Integrationsgebietes.
 ```
@@ -178,7 +178,7 @@ Damit ist der Schwerpunkt des Dreiecks $S(0, \frac{1}{3})$.
 ```
 ````
 
-```{admonition} Übung 9.7
+```{admonition} Übung 10.7
 :class: miniexercise
 Berechnen Sie den Schwerpunkt der Fläche, die durch die beiden Kurven $f(x)=x^2-4x-1$ und $g(x)=2x-6$ eingeschlossen wird. Machen Sie sich dazu eine Skizze des Integrationsgebietes. 
 ```
