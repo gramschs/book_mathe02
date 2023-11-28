@@ -96,7 +96,7 @@ die periodische Funktion $f$. Die Dirichlet-Bedingungen lauten:
 1. Das Periodenintervall lässt sich in Teilintervall unterteilen, in denen die
    Funktion $f$ stetig und monoton ist. Dabei darf es höchstens endlich viele
    Teilintervalle geben.
-2. Bei den Unstetigkeitsstellen existeriet sowohl der linksseitige als auch der
+2. Bei den Unstetigkeitsstellen existiert sowohl der linksseitige als auch der
    rechtsseitige Grenzwert. 
 
 Bei allen praktisch vorkommenen Beispielen im Maschinenbau ist dies aber der
