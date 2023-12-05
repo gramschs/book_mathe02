@@ -136,6 +136,7 @@ const config = {responsive: true}
 //
 Plotly.newPlot('chap06_sec03_fig01', data, layout, config);
 </script>
+<p><br><br><br><br><br></p>
 
 Als erstes bilden wir die 1. partielle Ableitung nach $x$. Wir bewegen uns also
 entlang der x-Achse und betrachten $y$ nicht als eine Variable, sondern als eine
