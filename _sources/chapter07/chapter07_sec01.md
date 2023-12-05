@@ -109,6 +109,7 @@ aus der xy-Ebene. Zur Darstellung der abhängigen Variable brauchen wir also noc
 eine dritte Dimension, die Höhe. Die Funktion $f(x,y) =  x^2 + y^2$, ein
 sogenannter Paraboloid, sieht dann folgendermaßen aus (Hinweis: die Grafik ist interaktiv!): 
 
+
 <div id="chap06_sec01_fig01" style="width:100%; aspect-ratio:4/3; margin: 0 auto;""></div>
 <script type="text/javascript">
 // Generate grid
@@ -144,6 +145,7 @@ const config = {responsive: true}
 //
 Plotly.newPlot('chap06_sec01_fig01', data, layout, config);
 </script>
+<p><br><br><br></p>
 
 Zusätzlich zur Höhe wurde die Paraboloid-Fläche noch gemäß der Funktionswerte
 $f(x,y)$ eingefärbt. Leider ist es gar nicht so einfach, Funktionen von mehreren
