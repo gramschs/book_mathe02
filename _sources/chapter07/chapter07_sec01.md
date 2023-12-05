@@ -145,7 +145,7 @@ const config = {responsive: true}
 //
 Plotly.newPlot('chap06_sec01_fig01', data, layout, config);
 </script>
-<p><br><br><br></p>
+<p><br><br><br><br></p>
 
 Zusätzlich zur Höhe wurde die Paraboloid-Fläche noch gemäß der Funktionswerte
 $f(x,y)$ eingefärbt. Leider ist es gar nicht so einfach, Funktionen von mehreren
