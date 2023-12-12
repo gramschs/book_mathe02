@@ -175,6 +175,10 @@ f(x,y)}{\partial x \, \partial y}$$
 
 gilt.
 
+```{dropdown} Video zu "Hesse-Matrix" von Mathematrick
+<iframe width="560" height="315" src="https://www.youtube.com/embed/vFlpLRPcqp8?si=3Gi_k9gPf7lZktp6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+```
+
 ```{dropdown} Video zu "Hesse-Matrix" von Mathematische Methoden
 <iframe width="560" height="315" src="https://www.youtube.com/embed/4Vy4HDLU7nU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 ```

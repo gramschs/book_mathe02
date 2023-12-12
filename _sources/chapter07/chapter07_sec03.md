@@ -208,9 +208,12 @@ Funktion zu bestimmen:
 
 $$\nabla f(x,y) = \left(3x^2 - 2x - 5, 3y^2 + 4y + 1\right).$$
 
-Der Gradient sowie ein weiteres Beispiel werden in dem folgendem Video
+Der Gradient sowie ein weiteres Beispiel werden in den folgenden Videos
 präsentiert.
 
+```{dropdown} Video zu "Gradient" von Mathematrick
+<iframe width="560" height="315" src="https://www.youtube.com/embed/BbOUhSRh57I?si=750hDMUywwy1p2YZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+```
 
 ```{dropdown} Video zu "Gradient" von Mathematische Methoden
 <iframe width="560" height="315" src="https://www.youtube.com/embed/627f_DgQJpY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
