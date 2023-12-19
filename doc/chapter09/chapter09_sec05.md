@@ -347,3 +347,10 @@ Der Tunnel hat also minimalen Umfang bei einer Querschnittsfläche von 50 m², w
 ````
 
 
+Tipp: weitere Übungsaufgaben zu Extremwertproblemen ohne Nebenbedingungen bietet
+der MATEX-Aufgabengenerator
+
+> [MATEX 05 Mehrdimensionale Analysis: Extremwertaufgaben (ohne
+> Nebenbedingungen)](https://lx4.mint-kolleg.kit.edu/MATeX/generatorview.php?data=NGVJb2NoT3FLU0ZIOFkzOGxOVC91dz09)
+
+Wählen Sie Stufe 3.
