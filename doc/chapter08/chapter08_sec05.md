@@ -141,67 +141,67 @@ $$J(f) = \begin{pmatrix}9x^2y^2 & 6x^3y \\ \cos(x) & 0 \end{pmatrix}$$
 :class: tip
 Bestimmen Sie die Jacobi-Matrix der verketteten Funktion $h = f \circ g$ mit der mehrdimensionalen Kettenregel:
 
-a) $h:\mathbb{R}^2\mapsto\mathbb{R}$ mit $h(x_1,x_2) = f(g(x_1,x_2))$, wobei
+a) $h:\mathbb{R}^2\mapsto\mathbb{R}$ mit $h(x,y) = f(g(x,y))$, wobei
 \begin{align*}
-f:\mathbb{R}^3\mapsto\mathbb{R},   \quad & f(x_1,x_2,x_3) = x_1^2 x_2^2 x_3^2,\\
-g:\mathbb{R}^2\mapsto\mathbb{R}^3, \quad & g(x_1,x_2) = \begin{pmatrix} x_1 \\ x_2 \\ x_1 x_2 \end{pmatrix} 
+f:\mathbb{R}^3\mapsto\mathbb{R},   \quad & f(x,y,z) = x^2 y^2 z^2,\\
+g:\mathbb{R}^2\mapsto\mathbb{R}^3, \quad & g(x,y) = \begin{pmatrix} x \\ y \\ x y \end{pmatrix} 
 \end{align*}
 
-b) $h:\mathbb{R}^3\mapsto\mathbb{R}^3$ mit $h(x_1,x_2,x_3)=f(g(x_1,x_2,x_3))$, wobei
+b) $h:\mathbb{R}^3\mapsto\mathbb{R}^3$ mit $h(x,y,z)=f(g(x,y,z))$, wobei
 \begin{align*}
-f:\mathbb{R}^3\mapsto\mathbb{R}^3, \quad & f(x_1,x_2,x_3) = \begin{pmatrix} -x_2 \\ -x_3 \\ -x_1 \end{pmatrix}\\
-g:\mathbb{R}^3\mapsto\mathbb{R}^3, \quad & g(x_1,x_2,x_3) = \begin{pmatrix} x_1 x_2 \\ x_2 x_3 \\ x_3 x_1 \end{pmatrix}
+f:\mathbb{R}^3\mapsto\mathbb{R}^3, \quad & f(x,y,z) = \begin{pmatrix} -y \\ -z \\ -x \end{pmatrix}\\
+g:\mathbb{R}^3\mapsto\mathbb{R}^3, \quad & g(x,y,z) = \begin{pmatrix} x y \\ y z \\ z x \end{pmatrix}
 \end{align*}
 ```
 ````{admonition} Lösung
 :class: tip, toggle
 a)
 
-$$J(h)(x_1,x_2) = \left(2x_1^3 x_2^4 + 2x_1^3x_2^4, \; 2x_1^4 x_2^3 + 2x_1^4 x_2^3\right) = 
-\left(4x_1^3x_2^4, \; 4x_1^4x_2^3 \right)$$
+$$J(h)(x,y) = \left(2x^3 y^4 + 2x^3y^4, \; 2x^4 y^3 + 2x^4 y^3\right) = 
+\left(4x^3 y^4, \; 4x^4 y^3 \right)$$
 
 b)
 
-$$J(h)(x_1,x_2,x_3) = \begin{pmatrix} 0 & -x_3 & -x_2 \\ -x_3 & 0 & -x_1 \\ -x_2 & -x_1 & 0 \end{pmatrix}$$
+$$J(h)(x,y,z) = \begin{pmatrix} 0 & -z & -y\\ -z & 0 & -x \\ -y & -x & 0 \end{pmatrix}$$
 
 ```{dropdown} Lösungsweg
-a) $h:\mathbb{R}^2\mapsto\mathbb{R}$ mit $h(x_1,x_2) = f(g(x_1,x_2))$, wobei
+a) $h:\mathbb{R}^2\mapsto\mathbb{R}$ mit $h(x,y) = f(g(x,y))$, wobei
 \begin{align*}
-f:\mathbb{R}^3\mapsto\mathbb{R},   \quad & f(x_1,x_2,x_3) = x_1^2 x_2^2 x_3^2,\\
-g:\mathbb{R}^2\mapsto\mathbb{R}^3, \quad & g(x_1,x_2) = \begin{pmatrix} x_1 \\ x_2 \\ x_1 x_2 \end{pmatrix} 
+f:\mathbb{R}^3\mapsto\mathbb{R},   \quad & f(x,y,z) = x^2 y^2 z^2,\\
+g:\mathbb{R}^2\mapsto\mathbb{R}^3, \quad & g(x,y) = \begin{pmatrix} x \\ y \\ x y \end{pmatrix} 
 \end{align*}
 Wir berechnen zuerst die Jacobi-Matrix von $f$ und $g$:
 
-$$J(f) = \left(2x_1 x_2^2 x_3^2,\; 2x_1^2 x_2 x_3^2,\; 2x_1^2 x_2^2 x_3\right) 
+$$J(f) = \left(2x y^2 z^2,\; 2x^2 y z^2,\; 2x^2 y^2 z\right) 
 \quad \text{ und } \quad
-J(g) = \begin{pmatrix} 1 & 0 \\ 0 & 1 \\ x_2 & x_1\end{pmatrix}$$
+J(g) = \begin{pmatrix} 1 & 0 \\ 0 & 1 \\ y & x\end{pmatrix}$$
 
 Mit der mehrdimensionalen Kettenregel erhalten wir
 \begin{multline*}
-J(h) = J(f) \cdot J(g) = \left(2x_1 x_2^2 x_3^2, \; 2x_1^2 x_2 x_3^2,\; 2x_1^2 x_2^2 x_3\right) \cdot 
-\begin{pmatrix} 1 & 0 \\ 0 & 1 \\ x_2 & x_1\end{pmatrix} = \\
-\left(2x_1 x_2^2 x_3^2 + 2x_1^2 x_2^3 x_3, \; 2x_1^2 x_2 x_3^2 + 2x_1^3 x_2^2 x_3 \right) 
+J(h) = J(f) \cdot J(g) = \left(2x y^2 z^2, \; 2x^2 y z^2,\; 2x^2 y^2 z\right) \cdot 
+\begin{pmatrix} 1 & 0 \\ 0 & 1 \\ y & x\end{pmatrix} = \\
+\left(2x y^2 z^2 + 2x^2 y^3 z, \; 2x^2 y z^2 + 2x^3 y^2 z \right) 
 \end{multline*} 
-Als nächstes ersetzen wir noch $x_3$ durch $x_1 x_2$ (siehe Definition von $h$) und erhalten
+Als nächstes ersetzen wir noch $z$ durch $x y$ (siehe Definition von $h$) und erhalten
 
-$$J(h)(x_1,x_2) = \left(2x_1^3 x_2^4 + 2x_1^3x_2^4, \; 2x_1^4 x_2^3 + 2x_1^4 x_2^3\right) = 
-\left(4x_1^3x_2^4, \; 4x_1^4x_2^3 \right).$$
+$$J(h)(x,y) = \left(2x^3 y^4 + 2x^3 y^4, \; 2x^4 y^3 + 2x^4 y^3\right) = 
+\left(4x^3 y^4, \; 4x^4 y^3 \right).$$
 
-b) $h:\mathbb{R}^3\mapsto\mathbb{R}^3$ mit $h(x_1,x_2,x_3)=f(g(x_1,x_2,x_3))$, wobei
+b) $h:\mathbb{R}^3\mapsto\mathbb{R}^3$ mit $h(x,y,z)=f(g(x,y,z))$, wobei
 \begin{align*}
-f:\mathbb{R}^3\mapsto\mathbb{R}^3, \quad & f(x_1,x_2,x_3) = \begin{pmatrix} -x_2 \\ -x_3 \\ -x_1 \end{pmatrix}\\
-g:\mathbb{R}^3\mapsto\mathbb{R}^3, \quad & g(x_1,x_2,x_3) = \begin{pmatrix} x_1 x_2 \\ x_2 x_3 \\ x_3 x_1 \end{pmatrix}
+f:\mathbb{R}^3\mapsto\mathbb{R}^3, \quad & f(x,y,z) = \begin{pmatrix} -y \\ -z \\ -x \end{pmatrix}\\
+g:\mathbb{R}^3\mapsto\mathbb{R}^3, \quad & g(x,y,z) = \begin{pmatrix} x y \\ y z \\ z x \end{pmatrix}
 \end{align*}
 Wir berechnen zuerst die Jacobi-Matrix von $f$ und $g$:
 
 $$J(f) = \begin{pmatrix} 0 & -1 & 0 \\ 0 & 0 & -1 \\ -1 & 0 & 0 \end{pmatrix} 
 \quad \text{ und } \quad
-J(g) = \begin{pmatrix} x_2 & x_1 & 0 \\ 0 & x_3 & x_2 \\ x_3 & 0 & x_1 \end{pmatrix}$$
+J(g) = \begin{pmatrix} y & x & 0 \\ 0 & z & y \\ z & 0 & x \end{pmatrix}$$
 
 Mit der mehrdimensionalen Kettenregel erhalten wir
 
-$$J(h)(x_1,x_2,x_3) = J(f)\cdot J(g) = 
-\begin{pmatrix} 0 & -1 & 0 \\ 0 & 0 & -1 \\ -1 & 0 & 0 \end{pmatrix} \cdot \begin{pmatrix} x_2 & x_1 & 0 \\ 0 & x_3 & x_2 \\ x_3 & 0 & x_1 \end{pmatrix} =
-\begin{pmatrix} 0 & -x_3 & -x_2 \\ -x_3 & 0 & -x_1 \\ -x_2 & -x_1 & 0 \end{pmatrix}$$
+$$J(h)(x,y,z) = J(f)\cdot J(g) = 
+\begin{pmatrix} 0 & -1 & 0 \\ 0 & 0 & -1 \\ -1 & 0 & 0 \end{pmatrix} \cdot \begin{pmatrix} y & x & 0 \\ 0 & z & y \\ z & 0 & x \end{pmatrix} =
+\begin{pmatrix} 0 & -z & -y \\ -z & 0 & -x \\ -y & -x & 0 \end{pmatrix}$$
 ```
 ````
