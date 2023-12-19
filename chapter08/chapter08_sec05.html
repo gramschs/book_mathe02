@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
     <title>Übungen &#8212; Mathematik 2 Maschinenbau</title>
-    <script src="../_static/plotly-2.27.0.min.js"></script>    <script src="../_static/plotly-2.27.0.min.js"></script>    <script src="../_static/plotly-2.27.0.min.js"></script>  
+    <script src="../_static/plotly-2.27.0.min.js"></script>  
   
   
   <script data-cfasync="false">
@@ -585,28 +585,28 @@ Lösungsweg<div class="sd-summary-down docutils">
 <div class="tip admonition">
 <p class="admonition-title">Übung 8.3</p>
 <p>Bestimmen Sie die Jacobi-Matrix der verketteten Funktion <span class="math notranslate nohighlight">\(h = f \circ g\)</span> mit der mehrdimensionalen Kettenregel:</p>
-<p>a) <span class="math notranslate nohighlight">\(h:\mathbb{R}^2\mapsto\mathbb{R}\)</span> mit <span class="math notranslate nohighlight">\(h(x_1,x_2) = f(g(x_1,x_2))\)</span>, wobei</p>
+<p>a) <span class="math notranslate nohighlight">\(h:\mathbb{R}^2\mapsto\mathbb{R}\)</span> mit <span class="math notranslate nohighlight">\(h(x,y) = f(g(x,y))\)</span>, wobei</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
-f:\mathbb{R}^3\mapsto\mathbb{R},   \quad &amp; f(x_1,x_2,x_3) = x_1^2 x_2^2 x_3^2,\\
-g:\mathbb{R}^2\mapsto\mathbb{R}^3, \quad &amp; g(x_1,x_2) = \begin{pmatrix} x_1 \\ x_2 \\ x_1 x_2 \end{pmatrix} 
+f:\mathbb{R}^3\mapsto\mathbb{R},   \quad &amp; f(x,y,z) = x^2 y^2 z^2,\\
+g:\mathbb{R}^2\mapsto\mathbb{R}^3, \quad &amp; g(x,y) = \begin{pmatrix} x \\ y \\ x y \end{pmatrix} 
 \end{align*}\]</div>
-<p>b) <span class="math notranslate nohighlight">\(h:\mathbb{R}^3\mapsto\mathbb{R}^3\)</span> mit <span class="math notranslate nohighlight">\(h(x_1,x_2,x_3)=f(g(x_1,x_2,x_3))\)</span>, wobei</p>
+<p>b) <span class="math notranslate nohighlight">\(h:\mathbb{R}^3\mapsto\mathbb{R}^3\)</span> mit <span class="math notranslate nohighlight">\(h(x,y,z)=f(g(x,y,z))\)</span>, wobei</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
-f:\mathbb{R}^3\mapsto\mathbb{R}^3, \quad &amp; f(x_1,x_2,x_3) = \begin{pmatrix} -x_2 \\ -x_3 \\ -x_1 \end{pmatrix}\\
-g:\mathbb{R}^3\mapsto\mathbb{R}^3, \quad &amp; g(x_1,x_2,x_3) = \begin{pmatrix} x_1 x_2 \\ x_2 x_3 \\ x_3 x_1 \end{pmatrix}
+f:\mathbb{R}^3\mapsto\mathbb{R}^3, \quad &amp; f(x,y,z) = \begin{pmatrix} -y \\ -z \\ -x \end{pmatrix}\\
+g:\mathbb{R}^3\mapsto\mathbb{R}^3, \quad &amp; g(x,y,z) = \begin{pmatrix} x y \\ y z \\ z x \end{pmatrix}
 \end{align*}\]</div>
 </div>
 <div class="tip toggle admonition">
 <p class="admonition-title">Lösung</p>
 <p>a)</p>
 <div class="math notranslate nohighlight">
-\[J(h)(x_1,x_2) = \left(2x_1^3 x_2^4 + 2x_1^3x_2^4, \; 2x_1^4 x_2^3 + 2x_1^4 x_2^3\right) = 
-\left(4x_1^3x_2^4, \; 4x_1^4x_2^3 \right)\]</div>
+\[J(h)(x,y) = \left(2x^3 y^4 + 2x^3y^4, \; 2x^4 y^3 + 2x^4 y^3\right) = 
+\left(4x^3 y^4, \; 4x^4 y^3 \right)\]</div>
 <p>b)</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}J(h)(x_1,x_2,x_3) = \begin{pmatrix} 0 &amp; -x_3 &amp; -x_2 \\ -x_3 &amp; 0 &amp; -x_1 \\ -x_2 &amp; -x_1 &amp; 0 \end{pmatrix}\end{split}\]</div>
+\[\begin{split}J(h)(x,y,z) = \begin{pmatrix} 0 &amp; -z &amp; -y\\ -z &amp; 0 &amp; -x \\ -y &amp; -x &amp; 0 \end{pmatrix}\end{split}\]</div>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Lösungsweg<div class="sd-summary-down docutils">
@@ -614,44 +614,44 @@ Lösungsweg<div class="sd-summary-down docutils">
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">a) <span class="math notranslate nohighlight">\(h:\mathbb{R}^2\mapsto\mathbb{R}\)</span> mit <span class="math notranslate nohighlight">\(h(x_1,x_2) = f(g(x_1,x_2))\)</span>, wobei</p>
+<p class="sd-card-text">a) <span class="math notranslate nohighlight">\(h:\mathbb{R}^2\mapsto\mathbb{R}\)</span> mit <span class="math notranslate nohighlight">\(h(x,y) = f(g(x,y))\)</span>, wobei</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
-f:\mathbb{R}^3\mapsto\mathbb{R},   \quad &amp; f(x_1,x_2,x_3) = x_1^2 x_2^2 x_3^2,\\
-g:\mathbb{R}^2\mapsto\mathbb{R}^3, \quad &amp; g(x_1,x_2) = \begin{pmatrix} x_1 \\ x_2 \\ x_1 x_2 \end{pmatrix} 
+f:\mathbb{R}^3\mapsto\mathbb{R},   \quad &amp; f(x,y,z) = x^2 y^2 z^2,\\
+g:\mathbb{R}^2\mapsto\mathbb{R}^3, \quad &amp; g(x,y) = \begin{pmatrix} x \\ y \\ x y \end{pmatrix} 
 \end{align*}\]</div>
 <p class="sd-card-text">Wir berechnen zuerst die Jacobi-Matrix von <span class="math notranslate nohighlight">\(f\)</span> und <span class="math notranslate nohighlight">\(g\)</span>:</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}J(f) = \left(2x_1 x_2^2 x_3^2,\; 2x_1^2 x_2 x_3^2,\; 2x_1^2 x_2^2 x_3\right) 
+\[\begin{split}J(f) = \left(2x y^2 z^2,\; 2x^2 y z^2,\; 2x^2 y^2 z\right) 
 \quad \text{ und } \quad
-J(g) = \begin{pmatrix} 1 &amp; 0 \\ 0 &amp; 1 \\ x_2 &amp; x_1\end{pmatrix}\end{split}\]</div>
+J(g) = \begin{pmatrix} 1 &amp; 0 \\ 0 &amp; 1 \\ y &amp; x\end{pmatrix}\end{split}\]</div>
 <p class="sd-card-text">Mit der mehrdimensionalen Kettenregel erhalten wir</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{multline*}
-J(h) = J(f) \cdot J(g) = \left(2x_1 x_2^2 x_3^2, \; 2x_1^2 x_2 x_3^2,\; 2x_1^2 x_2^2 x_3\right) \cdot 
-\begin{pmatrix} 1 &amp; 0 \\ 0 &amp; 1 \\ x_2 &amp; x_1\end{pmatrix} = \\
-\left(2x_1 x_2^2 x_3^2 + 2x_1^2 x_2^3 x_3, \; 2x_1^2 x_2 x_3^2 + 2x_1^3 x_2^2 x_3 \right) 
+J(h) = J(f) \cdot J(g) = \left(2x y^2 z^2, \; 2x^2 y z^2,\; 2x^2 y^2 z\right) \cdot 
+\begin{pmatrix} 1 &amp; 0 \\ 0 &amp; 1 \\ y &amp; x\end{pmatrix} = \\
+\left(2x y^2 z^2 + 2x^2 y^3 z, \; 2x^2 y z^2 + 2x^3 y^2 z \right) 
 \end{multline*}\]</div>
-<p class="sd-card-text">Als nächstes ersetzen wir noch <span class="math notranslate nohighlight">\(x_3\)</span> durch <span class="math notranslate nohighlight">\(x_1 x_2\)</span> (siehe Definition von <span class="math notranslate nohighlight">\(h\)</span>) und erhalten</p>
+<p class="sd-card-text">Als nächstes ersetzen wir noch <span class="math notranslate nohighlight">\(z\)</span> durch <span class="math notranslate nohighlight">\(x y\)</span> (siehe Definition von <span class="math notranslate nohighlight">\(h\)</span>) und erhalten</p>
 <div class="math notranslate nohighlight">
-\[J(h)(x_1,x_2) = \left(2x_1^3 x_2^4 + 2x_1^3x_2^4, \; 2x_1^4 x_2^3 + 2x_1^4 x_2^3\right) = 
-\left(4x_1^3x_2^4, \; 4x_1^4x_2^3 \right).\]</div>
-<p class="sd-card-text">b) <span class="math notranslate nohighlight">\(h:\mathbb{R}^3\mapsto\mathbb{R}^3\)</span> mit <span class="math notranslate nohighlight">\(h(x_1,x_2,x_3)=f(g(x_1,x_2,x_3))\)</span>, wobei</p>
+\[J(h)(x,y) = \left(2x^3 y^4 + 2x^3 y^4, \; 2x^4 y^3 + 2x^4 y^3\right) = 
+\left(4x^3 y^4, \; 4x^4 y^3 \right).\]</div>
+<p class="sd-card-text">b) <span class="math notranslate nohighlight">\(h:\mathbb{R}^3\mapsto\mathbb{R}^3\)</span> mit <span class="math notranslate nohighlight">\(h(x,y,z)=f(g(x,y,z))\)</span>, wobei</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
-f:\mathbb{R}^3\mapsto\mathbb{R}^3, \quad &amp; f(x_1,x_2,x_3) = \begin{pmatrix} -x_2 \\ -x_3 \\ -x_1 \end{pmatrix}\\
-g:\mathbb{R}^3\mapsto\mathbb{R}^3, \quad &amp; g(x_1,x_2,x_3) = \begin{pmatrix} x_1 x_2 \\ x_2 x_3 \\ x_3 x_1 \end{pmatrix}
+f:\mathbb{R}^3\mapsto\mathbb{R}^3, \quad &amp; f(x,y,z) = \begin{pmatrix} -y \\ -z \\ -x \end{pmatrix}\\
+g:\mathbb{R}^3\mapsto\mathbb{R}^3, \quad &amp; g(x,y,z) = \begin{pmatrix} x y \\ y z \\ z x \end{pmatrix}
 \end{align*}\]</div>
 <p class="sd-card-text">Wir berechnen zuerst die Jacobi-Matrix von <span class="math notranslate nohighlight">\(f\)</span> und <span class="math notranslate nohighlight">\(g\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}J(f) = \begin{pmatrix} 0 &amp; -1 &amp; 0 \\ 0 &amp; 0 &amp; -1 \\ -1 &amp; 0 &amp; 0 \end{pmatrix} 
 \quad \text{ und } \quad
-J(g) = \begin{pmatrix} x_2 &amp; x_1 &amp; 0 \\ 0 &amp; x_3 &amp; x_2 \\ x_3 &amp; 0 &amp; x_1 \end{pmatrix}\end{split}\]</div>
+J(g) = \begin{pmatrix} y &amp; x &amp; 0 \\ 0 &amp; z &amp; y \\ z &amp; 0 &amp; x \end{pmatrix}\end{split}\]</div>
 <p class="sd-card-text">Mit der mehrdimensionalen Kettenregel erhalten wir</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}J(h)(x_1,x_2,x_3) = J(f)\cdot J(g) = 
-\begin{pmatrix} 0 &amp; -1 &amp; 0 \\ 0 &amp; 0 &amp; -1 \\ -1 &amp; 0 &amp; 0 \end{pmatrix} \cdot \begin{pmatrix} x_2 &amp; x_1 &amp; 0 \\ 0 &amp; x_3 &amp; x_2 \\ x_3 &amp; 0 &amp; x_1 \end{pmatrix} =
-\begin{pmatrix} 0 &amp; -x_3 &amp; -x_2 \\ -x_3 &amp; 0 &amp; -x_1 \\ -x_2 &amp; -x_1 &amp; 0 \end{pmatrix}\end{split}\]</div>
+\[\begin{split}J(h)(x,y,z) = J(f)\cdot J(g) = 
+\begin{pmatrix} 0 &amp; -1 &amp; 0 \\ 0 &amp; 0 &amp; -1 \\ -1 &amp; 0 &amp; 0 \end{pmatrix} \cdot \begin{pmatrix} y &amp; x &amp; 0 \\ 0 &amp; z &amp; y \\ z &amp; 0 &amp; x \end{pmatrix} =
+\begin{pmatrix} 0 &amp; -z &amp; -y \\ -z &amp; 0 &amp; -x \\ -y &amp; -x &amp; 0 \end{pmatrix}\end{split}\]</div>
 </div>
 </details></div>
 </section>
