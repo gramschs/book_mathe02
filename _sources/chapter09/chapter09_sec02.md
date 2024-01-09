@@ -57,7 +57,7 @@ x_n$ entlang der Koordinatenachsen sum $\Delta x_1, \Delta x_2, \ldots, \Delta
 x_n$ ändern.
 ```
 
-```{dropdown} Video zu "Totales Differential" von Mathematische Methoden 
+```{dropdown} Video zu "Totales Differential" von Mathematrick
 <iframe width="560" height="315" src="https://www.youtube.com/embed/T8Qy5czGWgo?si=xBljhFB7358ADMAY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 ```
 
