@@ -123,6 +123,10 @@ Doppelintegrale auf einem Rechteckgebiet.
 <iframe width="560" height="315" src="https://www.youtube.com/embed/7HRXCYZSYnI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 ```
 
+```{dropdown} Video zu "Mehrdimensionale INTEGRATION – Doppelintegral mit Grenzen" von Mathematrick
+<iframe width="560" height="315" src="https://www.youtube.com/embed/n8NDyxOMVEw?si=EcYFuvJyetiVSJNt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+```
+
 ## Beispiel: A ist kein Rechteck
 
 Als nächstes betrachten wir ein Beispiel, bei dem das Integrationsgebiet kein
