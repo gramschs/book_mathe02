@@ -118,6 +118,6 @@ Zwischenrechnung 2. partielle Ableitungen:
 \frac{\partial^3f}{\partial y \partial z \partial z} &= 4x^2y 
 \end{align*}
 \begin{equation*}
-\frac{\partial^3f}{\partial x \partial y \partial x} = 8xyz             
+\frac{\partial^3f}{\partial z \partial y \partial x} = 8xyz             
 \end{equation*}
 ````
