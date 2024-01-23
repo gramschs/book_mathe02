@@ -99,7 +99,7 @@ $$\ddot{s}(t) = -g.$$
 
 Bemerkung: Da die Weg-Zeit-Funktion eine zeitliche Größe ist, benutzen wir hier
 die Schreibweise mit der unabhängigen Variable $t$ und den zwei Punkten, um die
-2. Anbleitung nach $t$ zu formulieren. Mehr dazu finden Sie im Abschnitt
+2. Ableitung nach $t$ zu formulieren. Mehr dazu finden Sie im Abschnitt
 [](sec_11_01_b).
 
 Wir integrieren die Differentialgleichung zunächst unbestimmt, um die
