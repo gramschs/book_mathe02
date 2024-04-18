@@ -5,7 +5,7 @@ Zuletzt betrachten wir noch einige Eigenschaften von Fourierreihen.
 ## Lernziele
 
 ```{admonition} Lernziele
-:class: important
+:class: goals
 * Sie wissen, dass sich bei geraden oder ungeraden Funktionen die Berechnung der
   Fourierkoeffizienten vereinfacht.
 * Sie können die Summe zweier Fourierreihen bilden.

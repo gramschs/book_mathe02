@@ -9,7 +9,7 @@ Randwertproblemen beschäftigen.
 ## Lernziele
 
 ```{admonition} Lernziele
-:class: important
+:class: goals
 * Sie können den Unterschied zwischen der **allgemeinen Lösung** und einer **speziellen Lösung** einer Differentialgleichung erklären.
 * Sie wissen, was ein **Anfangswertproblem** ist.
 * Sie wissen, was ein **Randwertproblem** ist.

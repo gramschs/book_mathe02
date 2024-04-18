@@ -7,7 +7,7 @@ Differentialgleichung 1. Ordnung zu lösen.
 ## Lernziele
 
 ```{admonition} Lernziel
-:class: important
+:class: goals
 Sie können eine **homogene lineare Differentialgleichung 1. Ordnung** lösen.
 ```
 

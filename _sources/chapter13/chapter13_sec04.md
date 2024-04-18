@@ -9,7 +9,7 @@ uns in diesem Kapitel auf den einfachsten Fall, der auftreten kann.
 
 ## Lernziele
 ```{admonition} Lernziele
-:class: important
+:class: goals
 * Sie können erklären, was ein **System von Differentialgleichungen** ist.
 * Sie können ein **System von linearen Differentialgleichungen 2. Ordnung** lösen.
 ```

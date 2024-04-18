@@ -15,7 +15,7 @@ Die Idee der Fourierreihe wird in dem folgenden Video erklärt.
 ## Lernziele Fourierreihen
 
 ```{admonition} Lernziele
-:class: important
+:class: goals
 * Sie können eine periodische Funktion in eine **Fourierreihe** umschreiben.
 * Sie können dazu die **Fourierkoeffizienten** berechnen. 
 * Sie kennen die Kriterien, wann eine Funktion in eine Fourierreihe entwickelt werden darf.

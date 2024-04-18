@@ -6,7 +6,7 @@ durch zwei Funktionen umrandet wird.
 ## Lernziele
 
 ```{admonition} Lernziele
-:class: important
+:class: goals
 Sie können mit einem Doppelintegral den Flächeninhalt einer Fläche $A$ berechnen.
 ```
 

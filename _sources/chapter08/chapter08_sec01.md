@@ -8,7 +8,7 @@ nachgeholt.
 ## Lernziele
 
 ```{admonition} Lernziele
-:class: important
+:class: goals
 * Sie wissen, was die **Richtungsableitung** einer Funktion von mehreren
   Variablen ist.
 * Sie wissen, wann sie die Richtungsableitung auch mit Hilfe des Gradienten

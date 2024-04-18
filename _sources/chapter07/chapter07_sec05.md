@@ -1,7 +1,7 @@
 # Übungen
 
 ```{admonition} Übung 7.1
-:class: tip
+:class: miniexercise
 Berechnen Sie die ersten partiellen Ableitungen nach den Variablen.
 a) $f(x,y)=e^{x}\cdot e^{y}$ <br>
 b) $f(x,y)=e^{xy}$ <br>
@@ -9,7 +9,7 @@ c) $f(x,y)=\sin(x)\cos(y)$ <br>
 d) $f(x_1,x_2,x_3) = \frac{1}{2x_1^2+\sqrt{x_2^2+x_3^2}}$ <br>
 ```
 ````{admonition} Lösung
-:class: tip, toggle
+:class: miniexercise, toggle
 a) $f(x,y)=e^{x}\cdot e^{y}$
 
 $$\frac{\partial f}{\partial x}=e^x\cdot e^y \quad \text{ und } \quad \frac{\partial f}{\partial y}=e^x\cdot e^y$$
@@ -31,14 +31,14 @@ d) $f(x_1,x_2,x_3) = \frac{1}{2x_1^2+\sqrt{x_2^2+x_3^2}}$
 ````
 
 ```{admonition} Übung 7.2
-:class: tip
+:class: miniexercise
 Berechnen Sie die zweiten partiellen Ableitungen nach den Variablen. Verifizieren Sie, dass das Ergebnis unabhängig von der Reihenfolge der Differentiationsschritte ist.
 
 a) $f(x,y)=x^3+y^3 + x^2y^2+xy+1$ <br>
 b) $f(x,y,z)=\frac{1}{\sqrt{x^2+y^2+z^2}}$ 
 ```
 ````{admonition} Lösung
-:class: tip, toggle
+:class: miniexercise, toggle
 a) $f(x,y)=x^3+y^3 + x^2y^2+xy+1$ 
 
 1\. partielle Ableitungen:
@@ -76,7 +76,7 @@ b) $f(x,y,z)=\frac{1}{\sqrt{x^2+y^2+z^2}}$
 ````
 
 ```{admonition} Übung 7.3
-:class: tip
+:class: miniexercise
 Berechnen Sie die dritten partiellen Ableitungen. Nutzen Sie aus, dass das Ergebnis unabhängig von der Reihenfolge der Differentiationsschritte ist:
 
 $$f(x,y,z)=x^2y^2z^2+x^3+y^3+z^3.$$
@@ -84,7 +84,7 @@ $$f(x,y,z)=x^2y^2z^2+x^3+y^3+z^3.$$
 Hinweis: wie viele partielle Ableitungen 3. Ordnung gibt es bei drei Variablen? Wie viele muss man explizit ausrechnen?
 ```
 ````{admonition} Lösung
-:class: tip, toggle
+:class: miniexercise, toggle
 Es gibt insgesamt 27 Ableitungen 3. Ordnung, aber es genügen 10 explizite Ableitungen: xxx, yxx, zxx, yyy, xyy, zyy, zzz, xzz, yzz, xyz.
 
 1\. partielle Ableitungen:

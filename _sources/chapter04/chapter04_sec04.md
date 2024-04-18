@@ -3,7 +3,7 @@
 ## Lernziele
 
 ```{admonition} Lernziele
-:class: important
+:class: goals
 * Sie können erklären, was der **Konvergenzbereich** einer Potenzreihe ist.
 * Sie können den Konvergenzbereich einer Potenzreihe geometrisch interpretieren und anhand des **Konvergenzradius** entscheiden, ob eine Potenzreihe konvergiert oder divergiert oder berechnen, was in den **Randpunkten** passiert.
 * Sie kennen zwei Formeln auswendig, um den Konvergenzradius $r$ einer Potenzreihe zu berechnen, nämlich

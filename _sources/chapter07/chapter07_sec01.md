@@ -1,3 +1,15 @@
+---
+jupytext:
+  cell_metadata_filter: -all
+  formats: md:myst
+  main_language: python
+  text_representation:
+    extension: .md
+    format_name: myst
+    format_version: 0.13
+    jupytext_version: 1.14.7
+---
+
 # 7.1 Definition und Visualisierung
 
 Bisher haben wir nur Funktionen kennengelernt, bei denen eine reelle Zahl in die
@@ -26,7 +38,7 @@ werden können.
 ## Lernziele
 
 ```{admonition} Lernziele
-:class: important
+:class: goals
 * Sie können erklären, was eine **Funktion von mehreren unabhängigen Variablen** ist. 
 * Sie können eine Funktion von zwei unabhängigen Variablen als Fläche im Raum zeichnen.
 * Sie können die **Höhenlinien** einer Funktion von zwei unabhängigen Variablen interpretieren und zeichnen.
@@ -109,43 +121,27 @@ aus der xy-Ebene. Zur Darstellung der abhängigen Variable brauchen wir also noc
 eine dritte Dimension, die Höhe. Die Funktion $f(x,y) =  x^2 + y^2$, ein
 sogenannter Paraboloid, sieht dann folgendermaßen aus (Hinweis: die Grafik ist interaktiv!): 
 
+```{code-cell} ipython3
+:tags: [remove-input]
+import numpy as np
+import plotly.graph_objects as go
 
-<div id="chap06_sec01_fig01" style="width:100%; aspect-ratio:4/3; margin: 0 auto;""></div>
-<script type="text/javascript">
-// Generate grid
-const rValues = Array.from({ length: 101 }, (_, i) => 5 * i / 100);
-const phiValues = Array.from({ length: 101 }, (_, i) => 2 * Math.PI * i / 100);
-//
-const xValues = rValues.map(r => phiValues.map(phi => r * Math.cos(phi)));
-const yValues = rValues.map(r => phiValues.map(phi => r * Math.sin(phi)));
-// Evaluate function
-const zValues = xValues.map((xRow, i) => xRow.map((x, j) => (x ** 2 + yValues[i][j] ** 2)));
-// Plot
-const data = [{
-  x: xValues,
-  y: yValues,
-  z: zValues,
-  type: 'surface',
-  colorscale: 'Viridis'
-}];
-//
-const layout = {
-  title: 'Paraboloid f(x, y) = x^2 + y^2',
-  scene: {
-    xaxis: { title: 'x' },
-    yaxis: { title: 'y' }
-  },
-  margin: {
-    l: 10,
-    r: 10
-  }
-};
-//
-const config = {responsive: true}
-//
-Plotly.newPlot('chap06_sec01_fig01', data, layout, config);
-</script>
-<p><br><br><br><br></p>
+# generate grid
+r = np.linspace(0, 5, 101)
+phi = np.linspace(0, 2*np.pi, 101)
+grid_r, grid_phi = np.meshgrid(r, phi) 
+x = grid_r * np.cos(grid_phi)
+y = grid_r * np.sin(grid_phi)
+
+# evaluate function
+z = 0.5 * (x**2 + y**2) 
+
+# plot
+fig = go.Figure()
+fig.add_trace(go.Surface(z=z, x=x, y=y, colorscale='viridis'))
+fig.update_layout(title='Paraboloid f(x,y)=x^2 + y^2', 
+xaxis_title='x-Achse', yaxis_title='y-Achse')
+```
 
 Zusätzlich zur Höhe wurde die Paraboloid-Fläche noch gemäß der Funktionswerte
 $f(x,y)$ eingefärbt. Leider ist es gar nicht so einfach, Funktionen von mehreren

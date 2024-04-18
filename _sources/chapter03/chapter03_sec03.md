@@ -6,7 +6,7 @@ das Integral in diesem Abschnitt dazu genutzt, Längen zu berechnen.
 ## Lernziele
 
 ```{admonition} Lernziele
-:class: important
+:class: goals
 * Sie wissen, was die **Bogenlänge** eines Funktionsgraphens ist.
 * Sie können die Bogenlänge eines Funktionsgraphens $f(x)$ einer stetig
   differenzierbaren Funktion $f$ zwischen dem Startpunkt $(a,f(a))$ und dem

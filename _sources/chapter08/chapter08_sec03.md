@@ -5,7 +5,7 @@ Der Gradient einer skalarwertigen Funktion entspricht bei vektorwertigen Funktio
 ## Lernziele
 
 ```{admonition} Lernziel
-:class: important
+:class: goals
 Sie wissen, wie die **Jacobi-Matrix** einer vektorwertigen Funktion berechnet wird.
 ```
 

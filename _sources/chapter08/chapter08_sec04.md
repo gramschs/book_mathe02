@@ -7,7 +7,7 @@ angehen.
 ## Lernziele
 
 ```{admonition} Lernziel
-:class: important
+:class: goals
 Sie können die **mehrdimensionale Kettenregel** anwenden.
 ```
 

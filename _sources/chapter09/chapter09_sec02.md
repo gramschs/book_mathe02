@@ -3,7 +3,7 @@
 ## Lernziel
 
 ```{admonition} Lernziel
-:class: important
+:class: goals
 Sie können das **totale Differential** einer Funktion von mehreren Variablen
 berechnen.
 ```

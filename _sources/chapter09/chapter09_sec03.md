@@ -9,7 +9,7 @@ von zwei unabhängigen Variablen.
 ## Lernziele
 
 ```{admonition} Lernziele
-:class: important
+:class: goals
 Sie wissen, dass drei Bedingungen überprüft werden müssen, um zu entscheiden, ob die Funktion $f:\mathbb{R}^2\to\mathbb{R}$ Extremwerte hat.
 1. Ein Punkt $(x_0,y_0)$ ist ein Kandidatat für eine Extremstelle, wenn die folgende erste Bedingung erfüllt ist:
 

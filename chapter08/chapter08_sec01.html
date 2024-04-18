@@ -3,14 +3,14 @@
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" data-content_root="" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>8.1 Gradient und Richtungsableitung &#8212; Mathematik 2 Maschinenbau</title>
-    <script src="../_static/plotly-2.27.0.min.js"></script>    <script src="../_static/plotly-2.27.0.min.js"></script>    <script src="../_static/plotly-2.27.0.min.js"></script>    <script src="../_static/plotly-2.27.0.min.js"></script>    <script src="../_static/plotly-2.27.0.min.js"></script>    <script src="../_static/plotly-2.27.0.min.js"></script>    <script src="../_static/plotly-2.27.0.min.js"></script>    <script src="../_static/plotly-2.27.0.min.js"></script>    <script src="../_static/plotly-2.27.0.min.js"></script>    <script src="../_static/plotly-2.27.0.min.js"></script>  
+  
   
   
   <script data-cfasync="false">
@@ -19,15 +19,15 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
 
   
-  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+  <link href="../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
@@ -35,19 +35,19 @@
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/exercise.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/proof.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/myadmonitions.css" />
     <link rel="stylesheet" type="text/css" href="../_static/jsxgraph.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/my_styles.css" />
     <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
@@ -75,7 +75,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="8.2 Vektorwertige Funktionen" href="chapter08_sec02.html" />
     <link rel="prev" title="8. Richtungsableitungen und vektorwertige Funktionen" href="chapter08_sec00.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
   
   
@@ -83,7 +83,15 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
   
   <input type="checkbox"
           class="sidebar-toggle"
@@ -118,11 +126,14 @@ const thebe_selector_output = ".output, .cell_output"
 </form></div>
   </div>
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
+      
+      
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -137,9 +148,11 @@ const thebe_selector_output = ".output, .cell_output"
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
+
   
 
 <a class="navbar-brand logo" href="../intro.html">
+  
   
   
   
@@ -397,20 +410,22 @@ const thebe_selector_output = ".output, .cell_output"
 </button>
 
 
+
 <script>
 document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
 `);
 </script>
 
+
 <script>
 document.write(`
   <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
@@ -450,17 +465,17 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="gradient-und-richtungsableitung">
-<h1>8.1 Gradient und Richtungsableitung<a class="headerlink" href="#gradient-und-richtungsableitung" title="Permalink to this headline">#</a></h1>
+<h1>8.1 Gradient und Richtungsableitung<a class="headerlink" href="#gradient-und-richtungsableitung" title="Permalink to this heading">#</a></h1>
 <p>Die partiellen Ableitungen sind die Ableitungen in Richtung der
 Koordinatenachsen. Bisher haben wir uns noch nicht damit beschäftigt, wie die
 Ableitung in eine beliebige Richtung berechnet wird. Das wird in diesem Kapitel
 nachgeholt.</p>
 <section id="lernziele">
-<h2>Lernziele<a class="headerlink" href="#lernziele" title="Permalink to this headline">#</a></h2>
-<div class="important admonition">
+<h2>Lernziele<a class="headerlink" href="#lernziele" title="Permalink to this heading">#</a></h2>
+<div class="goals admonition">
 <p class="admonition-title">Lernziele</p>
 <ul class="simple">
 <li><p>Sie wissen, was die <strong>Richtungsableitung</strong> einer Funktion von mehreren
@@ -472,7 +487,7 @@ berechnen dürfen und kennen für diesen Fall auch die Berechnungsformel.</p></l
 </div>
 </section>
 <section id="richtungsableitung">
-<h2>Richtungsableitung<a class="headerlink" href="#richtungsableitung" title="Permalink to this headline">#</a></h2>
+<h2>Richtungsableitung<a class="headerlink" href="#richtungsableitung" title="Permalink to this heading">#</a></h2>
 <p>Die Ableitung einer Funktion von mehreren unabhängigen Variablen in eine
 Richtung wird wie bei eindimensionalen Funktionen über den Grenzwert des
 Differenzenquotienten eingeführt. Aber fangen wir langsam an. Die Funktion <span class="math notranslate nohighlight">\(f\)</span>
@@ -510,7 +525,7 @@ die Richtung <span class="math notranslate nohighlight">\(v\)</span> ist der Gre
 partiellen Ableitungen.</p>
 </section>
 <section id="manchmal-kann-die-richtungsableitung-auch-mit-dem-gradienten-berechnet-werden">
-<h2>Manchmal kann die Richtungsableitung auch mit dem Gradienten berechnet werden<a class="headerlink" href="#manchmal-kann-die-richtungsableitung-auch-mit-dem-gradienten-berechnet-werden" title="Permalink to this headline">#</a></h2>
+<h2>Manchmal kann die Richtungsableitung auch mit dem Gradienten berechnet werden<a class="headerlink" href="#manchmal-kann-die-richtungsableitung-auch-mit-dem-gradienten-berechnet-werden" title="Permalink to this heading">#</a></h2>
 <p>Die Grenzwertbildung ist aufwendig. Schön wäre es, ein Formel für die Berechnung
 der Richtungsableitung zu haben. Die gibt es auch, aber nur, wenn die Funktion
 total differenzierbar ist. Diese Art der Differenzierbarkeit ist neu und
@@ -538,7 +553,7 @@ Video zu “Richtungsableitung berechnen” von Mathematrick<div class="sd-summa
 </div>
 </details></section>
 <section id="rechenregeln-fur-gradienten">
-<h2>Rechenregeln für Gradienten<a class="headerlink" href="#rechenregeln-fur-gradienten" title="Permalink to this headline">#</a></h2>
+<h2>Rechenregeln für Gradienten<a class="headerlink" href="#rechenregeln-fur-gradienten" title="Permalink to this heading">#</a></h2>
 <p>Wie Sie sehen, hat der Gradient eine große Bedeutung für das Ableiten
 mehrdimensionaler Funktionen. Es wäre auch hier gut, sich das Berechnen des
 Gradienten zu vereinfachen und ggf. neue Gradienten aus schon bekannten
@@ -639,11 +654,10 @@ Video zu “Quotientenregel Gradient” von Mathematische Methoden<div class="sd
 
               
               
-                <footer class="bd-footer-article">
+              
+              
+                <footer class="prev-next-footer">
                   
-<div class="footer-article-items footer-article__inner">
-  
-    <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="chapter08_sec00.html"
@@ -663,10 +677,7 @@ Video zu “Quotientenregel Gradient” von Mathematische Methoden<div class="sd
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
-</div></div>
-  
 </div>
-
                 </footer>
               
             </div>
@@ -674,6 +685,7 @@ Video zu “Quotientenregel Gradient” von Mathematische Methoden<div class="sd
             
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
 
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
@@ -706,6 +718,7 @@ By Simone Gramsch
   
   <div class="footer-item">
     
+
   </div>
   
   <div class="footer-item">
@@ -731,8 +744,8 @@ By Simone Gramsch
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
 
   <footer class="bd-footer">
   </footer>

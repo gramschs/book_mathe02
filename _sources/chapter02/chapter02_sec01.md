@@ -7,7 +7,7 @@ Integral ein, ohne die dazugehörigen Anwendungen und Herleitungen
 ## Lernziele
 
 ```{admonition} Lernziele
-:class: important
+:class: goals
 * Sie wissen, was eine **Stammfunktion** ist.
 * Sie wissen, dass wenn es eine Stammfunktion gibt, es gleich unendlich viele
   Stammfunktionen gibt, die sich durch eine **Integrationskonstante**

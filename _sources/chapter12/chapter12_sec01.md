@@ -7,7 +7,7 @@ Thema Differentialgleichungen anhand eines einfachen Beispieles ein.
 ## Lernziele
 
 ```{admonition} Lernziele
-:class: important
+:class: goals
 * Sie wissen, was eine **Differentialgleichung** ist.
 * Sie kennen verschiedene Schreibweisen zur Formulierung von Differentialgleichungen.
 * Sie können die **Ordnung einer Differentialgleichung** ablesen.
@@ -56,7 +56,7 @@ erfüllt die Sinus-Funktion die Gleichung $f''(x) = -f(x).$
 
 
 ```{admonition} Mini-Übung
-:class: tip
+:class: miniexercise
 Welche der folgenden Funktionen ist erfüllt die Gleichung
 
 $$f''(x) = - f(x)?$$
@@ -68,7 +68,7 @@ c) $f(x) = \sin(x) + 3\cos(x)$ <br>
 ```
 
 ```{admonition} Lösung
-:class: tip, toggle
+:class: miniexercise, toggle
 a) ableiten: $f(x)=\cos(x) \quad \Rightarrow f'(x)=-\sin(x) \quad \Rightarrow f''(x)=-\cos(x)$ <br>
 eingesetzt: $-\cos(x) = -\cos(x)$ erfüllt die Gleichung
 
@@ -182,7 +182,7 @@ es unendlich viele Lösungen der Differentialgleichung.
 
 
 ```{admonition} Mini-Übung
-:class: tip
+:class: miniexercise
 Überprüfen Sie, ob die folgenden drei Variationen von $C_1$ und $C_2$ tatsächlich die DGL
 
 $$y''(x)=-\sin(x)$$
@@ -195,7 +195,7 @@ c) $C_1 = -2$ und $C_2 = 3$, also $y_3(x) = \sin(x) -2x + 3$<br>
 ```
 
 ````{admonition} Lösung
-:class: tip, toggle
+:class: miniexercise, toggle
 Um zu überprüfen, ob die gegebenen Variationen die DGL $y''(x) = -\sin(x)$
 erfüllen, müssen wir die zweite Ableitung jeder Funktion berechnen und
 überprüfen, ob sie gleich $-\sin(x)$ ist.

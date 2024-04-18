@@ -8,7 +8,7 @@ gibt es in diesem Kapitel eine Anleitung dazu.
 ## Lernziele 
 
 ```{admonition} Lernziele
-:class: important
+:class: goals
 * Sie kennen die Formel für ein **Taylorpolynom der Ordnung n** auswendig:
 
 $$T_n(x) =\sum_{k=0}^{n} \frac{f^{(k)}(x_0)}{k!} \cdot (x-x_0)^k.$$

@@ -10,7 +10,7 @@ in kartesischen Koordinaten.
 ## Lernziele
 
 ```{admonition} Lernziele
-:class: important
+:class: goals
 Sie können ein **Doppelintegral in kartesischen Koordinaten** berechnen, indem Sie zuerst die **innere Integration** und dann die **äußere Integration** durchführen:
 
 $$\iint_{A}f(x,y)\, dA = \int_{x=a}^{x=b} \left( \int_{y=f_u(x)}^{y=f_o(x)} f(x,y)\, dy\right)dx.$$

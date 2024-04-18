@@ -3,7 +3,7 @@
 ## Lernziele
 
 ```{admonition} Lernziele
-:class: important
+:class: goals
 * Sie können den Mittelwert einer Liste von Zahlen berechnen.
 * Sie können den Mittelwert einer Funktion in einem Intervall berechnen.
 ```

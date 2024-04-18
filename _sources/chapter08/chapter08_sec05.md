@@ -1,7 +1,7 @@
 # Übungen
 
 ```{admonition} Übung 8.1
-:class: tip
+:class: miniexercise
 Berechnen Sie den Gradient $\nabla f$ der folgenden Funktionen:
 
 a) $f(x,y) = e^{-(x^2+y^2)}$
@@ -13,7 +13,7 @@ c) $f(x_1,x_2) = x_1^4 -5x_2^2 - 10x_1x_2$
 d) $f(x_1,x_2,x_3) = 2x_1^2 -4x_1x_2 + x_2^3\cdot \sin(x_3)$  
 ```
 ````{admonition} Lösung
-:class: tip, toggle
+:class: miniexercise, toggle
 a)
 \begin{align*} 
 f(x,y) &= e^{-(x^2+y^2)} \\
@@ -85,7 +85,7 @@ $$\nabla f(x_1,x_2,x_3) = \left(4(x_1-x_2), 3x_2^2\sin(x_3)-4x_1, x_2^3\cos(x_3)
 ````
 
 ```{admonition} Übung 8.2
-:class: tip
+:class: miniexercise
 Berechnen Sie die Jacobi-Matrix $J(f)$ zu folgenden Funktionen.
 
 a) 
@@ -97,7 +97,7 @@ b)
 $$f(x,y) = \begin{pmatrix} 3x^3y^2 \\ \sin(x) \end{pmatrix}$$
 ```
 ````{admonition} Lösung
-:class: tip, toggle
+:class: miniexercise, toggle
 a)
 
 $$J(f) = \begin{pmatrix} 2x & 2y \\ 2x & -2y \end{pmatrix}$$
@@ -138,7 +138,7 @@ $$J(f) = \begin{pmatrix}9x^2y^2 & 6x^3y \\ \cos(x) & 0 \end{pmatrix}$$
 ````
 
 ```{admonition} Übung 8.3
-:class: tip
+:class: miniexercise
 Bestimmen Sie die Jacobi-Matrix der verketteten Funktion $h = f \circ g$ mit der mehrdimensionalen Kettenregel:
 
 a) $h:\mathbb{R}^2\mapsto\mathbb{R}$ mit $h(x,y) = f(g(x,y))$, wobei
@@ -154,7 +154,7 @@ g:\mathbb{R}^3\mapsto\mathbb{R}^3, \quad & g(x,y,z) = \begin{pmatrix} x y \\ y z
 \end{align*}
 ```
 ````{admonition} Lösung
-:class: tip, toggle
+:class: miniexercise, toggle
 a)
 
 $$J(h)(x,y) = \left(2x^3 y^4 + 2x^3y^4, \; 2x^4 y^3 + 2x^4 y^3\right) = 

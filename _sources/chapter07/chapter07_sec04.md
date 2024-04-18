@@ -9,7 +9,7 @@ muss man aufhören. Das lässt sich analog auf Funktionen von mehreren Variablen
 ## Lernziele 
 
 ```{admonition} Lernziele
-:class: important
+:class: goals
 * Sie können **höhere partielle Ableitungen** berechenen.
 * Sie wissen, was mit **gemischten partiellen Ableitungen** gemeint ist.
 * Sie können die **Hesse-Matrix** berechnen.
