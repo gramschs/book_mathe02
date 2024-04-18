@@ -12,7 +12,7 @@ ausreichend genaue Lösung erforderlich sind.
 ## Lernziele
 
 ```{admonition} Lernziele
-:class: important
+:class: goals
 Sie können mit dem Restglied der Taylorreihe den Fehler abschätzen, der entsteht, wenn eine Funktion durch ein Taylorpolynom vom Grad n ersetzt wird.
 ```
 

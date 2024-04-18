@@ -13,7 +13,7 @@ oder hydraulische Systeme zu steuern.
 ## Lernziele 
 
 ```{admonition} Lernziele
-:class: important
+:class: goals
 * Sie können erklären, was eine **periodische Funktion** ist.
 * Sie können Beispiele von periodischen Funktionen nennen wie
     * Sinus- und Kosinusfunktion,

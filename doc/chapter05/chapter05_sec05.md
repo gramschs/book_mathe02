@@ -2,7 +2,7 @@
 
 
 ```{admonition} Übung 5.1
-:class: tip
+:class: miniexercise
 Berechnen Sie das Taylorpolynom der Ordnung 3 
 
 $$f(x) = \frac{1}{x+1}$$
@@ -10,7 +10,7 @@ $$f(x) = \frac{1}{x+1}$$
 für die Entwicklungspunkte $x_0 = 0$ und $x_0 = 1$. 
 ```
 ````{admonition} Lösung
-:class: tip, toggle
+:class: miniexercise, toggle
 Das Taylorpolynom von $f$ im Entwicklungspunkt $x_{0}=0$ ist 
  \begin{equation*} 
     T_{3}(x) = 1-x+x^2-x^3 .
@@ -63,7 +63,7 @@ Das Taylorpolynom von $f$ im Entwicklungspunkt $x_{0}=0$ ist
 ````
 
 ```{admonition} Übung 5.2
-:class: tip
+:class: miniexercise
 Berechnen Sie das Taylorpolynom der Ordnung 3 
 
 $$f(x) = \sqrt{x+1}$$
@@ -71,7 +71,7 @@ $$f(x) = \sqrt{x+1}$$
 für die Entwicklungspunkte $x_0 = 0$ und $x_0 = 1$. 
 ```
 ````{admonition} Lösung
-:class: tip, toggle
+:class: miniexercise, toggle
  Das Taylorpolynom von $f$ im Entwicklungspunkt $x_{0}=0$ ist 
  \begin{equation*} 
     T_{3}(x)
@@ -126,7 +126,7 @@ Das Taylorpolynom von $f$ im Entwicklungspunkt $x_{0}=1$ ist
 ````
 
 ```{admonition} Übung 5.3
-:class: tip
+:class: miniexercise
 Berechnen Sie das Taylorpolynom der Ordnung 3 
 
 $$f(x) = \ln((1+x)^2)$$
@@ -134,7 +134,7 @@ $$f(x) = \ln((1+x)^2)$$
 für den Entwicklungspunkt $x_0 = 0$. 
 ```
 ````{admonition} Lösung
-:class: tip, toggle
+:class: miniexercise, toggle
 Das Taylorpolynom von $f$ im Entwicklungspunkt $x_{0}=0$ ist 
  \begin{equation*} 
     T_{3}(x) = 2x - x^{2} +\frac{2}{3}x^{3}.
@@ -169,7 +169,7 @@ Das Taylorpolynom von $f$ im Entwicklungspunkt $x_{0}=0$ ist
 ````
 
 ```{admonition} Übung 5.4
-:class: tip
+:class: miniexercise
 Berechnen Sie das Taylorpolynom der Ordnung 3 
 
 $$f(x) = \ln\left(\frac{1+x}{1-x} \right)$$
@@ -177,7 +177,7 @@ $$f(x) = \ln\left(\frac{1+x}{1-x} \right)$$
 für den Entwicklungspunkt $x_0 = 0$. 
 ```
 ````{admonition} Lösung
-:class: tip, toggle
+:class: miniexercise, toggle
 Das Taylorpolynom von $f$ im Entwicklungspunkt $x_{0}=0$ ist 
  \begin{equation*} 
     T_{3}(x) = 2x +\frac{2}{3}x^{3}.
@@ -212,7 +212,7 @@ Das Taylorpolynom von $f$ im Entwicklungspunkt $x_{0}=0$ ist
 ````
 
 ```{admonition} Übung 5.5
-:class: tip
+:class: miniexercise
 Berechnen Sie das Taylorpolynom der Ordnung 3 
 
 $$f(x) = \sin(x^2)$$
@@ -220,7 +220,7 @@ $$f(x) = \sin(x^2)$$
 für den Entwicklungspunkt $x_0 = 0$. 
 ```
 ````{admonition} Lösung
-:class: tip, toggle
+:class: miniexercise, toggle
 Das Taylorpolynom von $f$ im Entwicklungspunkt $x_{0}=0$ ist 
  \begin{equation*} 
  T_{3}(x) =  x^2.
@@ -255,7 +255,7 @@ $$f(0) = 0, \quad f'(0)=0, \quad f''(0)=2, \quad f^{(3)}(0)=0.$$
 ````
 
 ```{admonition} Übung 5.6
-:class: tip
+:class: miniexercise
 Berechnen Sie das Taylorpolynom der Ordnung 3 
 
 $$f(x)=x^3\,\left(\ln\left(x\right)-3\right)$$
@@ -263,7 +263,7 @@ $$f(x)=x^3\,\left(\ln\left(x\right)-3\right)$$
 für den Entwicklungspunkt $x_0 = 3$. 
 ```
 ````{admonition} Lösung
-:class: tip, toggle
+:class: miniexercise, toggle
 Das Taylorpolynom von $f$ im Entwicklungspunkt $x_{0}=3$ ist 
  \begin{equation*} 
     T_{3}(x)=  27\,\ln\left(3\right)-81

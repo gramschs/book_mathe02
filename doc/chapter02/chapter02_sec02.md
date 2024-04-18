@@ -7,7 +7,7 @@ Integralen präsentiert.
 ## Lernziele
 
 ```{admonition} Lernziele
-:class: important
+:class: goals
 * Sie wissen sich das Integral verändert, wenn die beiden Integrationsgrenzen
   miteinander vertauscht werden:
 

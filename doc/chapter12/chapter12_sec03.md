@@ -7,7 +7,7 @@ Differentialgleichungen und zeigt, wie man sie löst.
 ## Lernziele 
 
 ```{admonition} Lernziele
-:class: important
+:class: goals
 * Sie wissen, was eine **separable** Differentialgleichung ist.
 * Sie können das Lösungsverfahren **Trennung der Variablen** anwenden, um eine
   separable Differentialgleichung zu lösen.

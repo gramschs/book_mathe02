@@ -6,7 +6,7 @@ homogenen Platte zu berechnen.
 ## Lernziele
 
 ```{admonition} Lernziel
-:class: important
+:class: goals
 Sie können mit dem Doppelintegral den Schwerpunkt $(x_S, y_S)$ einer homogenen ebenen Fläche mit den Formeln
 
 $$x_S = \frac{1}{A}\iint_{A} x \, dA \quad \text{ und } \quad y_S = \frac{1}{A} \iint_{A} y\, dA$$

@@ -1,48 +1,48 @@
 # Übungen
 
 ```{admonition} Übung 1.1
-:class: tip
+:class: miniexercise
 Gehen Sie auf die Trainingsseite [Mathebattle: Ableitung ganzrationale Funktionen](https://mathebattle.de/edu_randomtasks/training_show/129) und lösen Sie solange die dortigen Ableitungsaufgaben, bis Sie drei hintereinander richtig gelöst haben.
 ```
 
 ```{admonition} Übung 1.2
-:class: tip
+:class: miniexercise
 Gehen Sie auf die Trainingsseite [Mathebattle: Ableiten mit x im Nenner](https://mathebattle.de/edu_randomtasks/training_show/727) und lösen Sie solange die dortigen Ableitungsaufgaben, bis Sie drei hintereinander richtig gelöst haben.
 ```
 
 ```{admonition} Übung 1.3
-:class: tip
+:class: miniexercise
 Gehen Sie auf die Trainingsseite [Mathebattle: Ableiten mit Wurzel](https://mathebattle.de/edu_randomtasks/training_show/726) und lösen Sie solange die dortigen Ableitungsaufgaben, bis Sie drei hintereinander richtig gelöst haben.
 ```
 
 ```{admonition} Übung 1.4
-:class: tip
+:class: miniexercise
 Gehen Sie auf die Trainingsseite [Mathebattle: Kettenregel](https://mathebattle.de/edu_randomtasks/training_show/714) und lösen Sie solange die dortigen Ableitungsaufgaben, bis Sie drei hintereinander richtig gelöst haben.
 ```
 
 ```{admonition} Übung 1.5
-:class: tip
+:class: miniexercise
 Gehen Sie auf die Trainingsseite [Mathebattle: Produktregel](https://mathebattle.de/edu_randomtasks/training_show/131) und lösen Sie solange die dortigen Ableitungsaufgaben, bis Sie drei hintereinander richtig gelöst haben.
 ```
 
 ```{admonition} Übung 1.6
-:class: tip
+:class: miniexercise
 Gehen Sie auf die Trainingsseite [Mathebattle: Ketten- und Produktregel](https://mathebattle.de/edu_randomtasks/training_show/724) und lösen Sie solange die dortigen Ableitungsaufgaben, bis Sie drei hintereinander richtig gelöst haben.
 ```
 
 
 ```{admonition} Übung 1.7
-:class: tip
+:class: miniexercise
 Gehen Sie auf die Trainingsseite [Mathebattle: alles zusammen](https://mathebattle.de/edu_randomtasks/training_show/466) und lösen Sie solange die dortigen Ableitungsaufgaben, bis Sie drei hintereinander richtig gelöst haben.
 ```
 
 ```{admonition} Übung 1.8
-:class: tip
+:class: miniexercise
 Gehen Sie auf die Trainingsseite [Mathebattle: Extrempunkte](https://mathebattle.de/edu_randomtasks/training_show/398) und lösen Sie solange die dortigen Ableitungsaufgaben, bis Sie drei hintereinander richtig gelöst haben.
 ```
 
 ```{admonition} Übung 1.9 
-:class: tip
+:class: miniexercise
 Ein Rechteckt hat seine obere Seite unter der Parabel $f(x) = 16 - x^2$ und
 seine untere Seite auf der x-Achse. Die beiden vertikalen Seiten des Rechtecks
 sind parallel zur y-Achse. Bestimmen Sie die Abmessungen des Rechtecks, so dass
@@ -51,7 +51,7 @@ sein Flächeninhalt maximal ist.
 Fertigen Sie dazu eine Skizze an.
 ```
 ```{admonition} Lösung
-:class: tip, toggle
+:class: miniexercise, toggle
 Die Parabel $f(x) = -x^2 + 16$ ist symmetrisch zur y-Achse, daher ist auch das
 Rechteck symmetrisch zur y-Achse. Daher genügt es, nur die rechte Hälfte des
 Rechtecks zu betrachten und $x>0$ zu fordern.
@@ -106,7 +106,7 @@ $$A_{\text{gesamt}} = 2 \cdot  \frac{4}{3}\sqrt{3} \cdot \frac{32}{3} =
 ```
 
 ```{admonition} Übung 1.10
-:class: tip
+:class: miniexercise
 Ein senkrechter Zylinder wird in eine Kugel mit dem Radius 1 m eingesetzt, so
 dass beide Mittelpunkte übereinstimmen. Bestimmen Sie Radius $r$, Höhe $h$ und
 Volumen $V$ des Zylinders, wenn der Zylinder das maximale Volumen haben soll.
@@ -114,7 +114,7 @@ Volumen $V$ des Zylinders, wenn der Zylinder das maximale Volumen haben soll.
 Fertigen Sie dazu eine Skizze des Querschnitts an.
 ```
 ```{admonition} Lösung
-:class: tip, toggle
+:class: miniexercise, toggle
 Die Hauptbedingung (Volumen des Zylinders) lautet
 
 $$V = \pi r^2 \cdot h.$$

@@ -5,7 +5,7 @@ Nun kommen Anwendungen des Dreifachintegrals.
 ## Lernziele
 
 ```{admonition} Lernziele
-:class: important
+:class: goals
 * Sie können mit einem Dreifachintegral das Volumen $V$ eines Körpers berechnen
 
 $$V=\iiint_{V}1\,dV.$$

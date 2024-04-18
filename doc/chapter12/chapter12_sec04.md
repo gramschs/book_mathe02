@@ -6,7 +6,7 @@ beschäftigen.
 ## Lernziele
 
 ```{admonition} Lernziele
-:class: important
+:class: goals
 * Sie können anhand des Exaktheitskriterium überprüfen, ob eine
   Differentialgleichung 1. Ordnung der Form
   

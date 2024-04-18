@@ -18,7 +18,7 @@ In diesem Kapitel geht es um Potenzreihen und die Approximation von Funktionen d
 ## Lernziele
 
 ```{admonition} Lernziele
-:class: important
+:class: goals
 * Sie können erklären, was eine **Potenzreihe** (im Gegensatz zu einer Reihe) ist.
 * Sie können die **spezielle Darstellungsform einer Potenzreihe** auswendig aufschreiben:
 

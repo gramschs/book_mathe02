@@ -11,7 +11,7 @@ Schwerpunktsberechnungen gebraucht.
 ## Lernziele
 
 ```{admonition} Lernziele
-:class: important
+:class: goals
 Sie können erklären, was ein **Doppelintegral** $\iint_{A} f(x,y)\, dA$ ist.
 ```
 

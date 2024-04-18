@@ -15,7 +15,7 @@ $$y'= -5y$$
 für $y(0)=5$.
 ```
 ````{admonition} Lösung
-:class: minisolution, toggle
+:class: miniexercise, toggle
 Allgemeine Lösung:
 
 $$y(x)=C\, e^{-5x}, \quad C\in\mathbb{R}$$
@@ -51,7 +51,7 @@ $$\dot{x} + 5x = -5t$$
 für $x(0)=5$.
 ```
 ````{admonition} Lösung
-:class: minisolution, toggle
+:class: miniexercise, toggle
 Allgemeine Lösung:
 
 $$x(t) = -t + \frac{1}{5} + C\cdot e^{-5t}, \quad C\in\mathbb{R}$$
@@ -111,7 +111,7 @@ $$y'-5y = \sin(-5x)$$
 für $y(0)=-1$.
 ```
 ````{admonition} Lösung
-:class: minisolution, toggle
+:class: miniexercise, toggle
 Allgemeine Lösung:
 
 $$y(x) = \frac{1}{10} \left(\sin(5x) + \cos(x)\right) + C\cdot e^{5x}$$
@@ -171,7 +171,7 @@ $$2\dot{x} - 4x =e^{-t}$$
 für $x(0)=0$.
 ```
 ````{admonition} Lösung
-:class: minisolution, toggle
+:class: miniexercise, toggle
 Allgemeine Lösung
 
 $$x(t) = -\frac{1}{6} e^{-t} + C\cdot e^{2t}.$$
@@ -231,7 +231,7 @@ $$y'-3y = x^2+2x+1$$
 für $y(0)=3$.
 ```
 ````{admonition} Lösung 
-:class: minisolution, toggle
+:class: miniexercise, toggle
 Allgemeine Lösung:
 
 $$y(x) = -\frac{1}{3}x^2 - \frac{8}{9}x - \frac{17}{27} + C\cdot e^{3x} , \quad C\in\mathbb{R}$$
@@ -291,7 +291,7 @@ $$\dot{x} + 4x = \sin(-2t)$$
 für $x(0)=-1$.
 ```
 ````{admonition} Lösung 
-:class: minisolution, toggle
+:class: miniexercise, toggle
 Allgemeine Lösung:
 
 $$x(t) = \frac{1}{10} \left(\cos(2t) - 2\sin(2t)\right) + C\cdot e^{-4t}, \quad C\in\mathbb{R}$$
@@ -351,7 +351,7 @@ $$y'-3y = -e^{2x}$$
 für $y(0)=1$.
 ```
 ````{admonition} Lösung 
-:class: minisolution, toggle
+:class: miniexercise, toggle
 Allgemeine Lösung:
 
 $$y(x)= C\, e^{3x} + e^{2x}, \quad C\in\mathbb{R}$$
@@ -411,7 +411,7 @@ $$\dot{x} - 2x = (3t+1) \, e^{-3t}$$
 für $x(0)=-5$.
 ```
 ````{admonition} Lösung 
-:class: minisolution, toggle
+:class: miniexercise, toggle
 Allgemeine Lösung:
 
 $$x(t) = -\frac{1}{25}e^{-3t}\cdot (15t+8) + C\cdot e^{2t}, \quad C\in\mathbb{R}$$
@@ -472,7 +472,7 @@ y_2' &= 4 y_1 - 2y_2 &
 \end{align*} 
 ```
 ````{admonition} Lösung
-:class: minisolution, toggle
+:class: miniexercise, toggle
 \begin{align*}
 y_1(x) &= C_1 e^{-3x} + C_2 e^{2x} \\
 y_2(x) &= -4 C_1 e^{-3x}  + C_2 e^{2x}
@@ -521,7 +521,7 @@ y_2' &= 4y_1 +y_2 &
 \end{align*} 
 ```
 ````{admonition} Lösung
-:class: minisolution, toggle
+:class: miniexercise, toggle
 \begin{align*}
 y_1(x) &= C_1 e^{-x} + C_2 e^{3x} \\
 y_2(x) &= -2C_1 e^{-x} + 2 C_2 e^{3x}

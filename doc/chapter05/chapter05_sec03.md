@@ -7,7 +7,7 @@ werden wir uns mit einigen dieser Taylorreihen beschäftigen.
 ## Lernziele
 
 ```{admonition} Lernziele
-:class: important
+:class: goals
 Sie kennen die wichtigsten Potenz- bzw. Taylorreihen.
 ```
 

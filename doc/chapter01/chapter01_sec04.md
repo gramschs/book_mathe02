@@ -12,7 +12,7 @@ Nebenbedingungen.
 ## Lernziele
 
 ```{admonition} Lernziele
-:class: important
+:class: goals
 * Sie wissen, was ein **Extremwertproblem mit Nebenbedingung** ist.
 * Sie können ein Extremwertproblem mit Nebenbedingung durch die
   **Eliminationsmethode** lösen.

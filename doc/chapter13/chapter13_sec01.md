@@ -12,7 +12,7 @@ Typ ist.
 
 ## Lernziele
 ```{admonition} Lernziele
-:class: important
+:class: goals
 * Sie können bei einer gegebenen Differentialgleichung entscheiden, ob es sich
   um eine **lineare Differentialgleichung** handelt oder nicht.
 * Sie wissen, was die **Störfunktion** einer linearen Differentialgleichung ist.

@@ -10,7 +10,7 @@ Funktionen gebildet werden.
 ## Lernziele
 
 ```{admonition} Lernziele
-:class: important
+:class: goals
 * Sie wissen, was eine **Ableitungsfunktion** ist.
 * Sie kennen von grundlegenden Funktionen die Ableitungsfunktionen auswendig.
 * Sie beherrschen die folgenden Ableitungsregeln:

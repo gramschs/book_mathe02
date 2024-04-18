@@ -15,7 +15,7 @@ eine **Tangentialebene**. Für Funktionen $f: \mathbb{R}^n \rightarrow
 ## Lernziele
 
 ```{admonition} Lernziele
-:class: important
+:class: goals
 * Sie können die Tangentenfunktion einer Funktion $f: \mathbb{R}^n \rightarrow
 \mathbb{R}$ aufstellen und damit die Funktion $f$ linearisieren:
 

@@ -3,7 +3,7 @@
 ## Lernziele
 
 ```{admonition} Lernziel
-:class: important
+:class: goals
 Sie wissen, was eine **vektorwertige** Funktion bzw. ein **Vektorfeld** ist.
 ```
 

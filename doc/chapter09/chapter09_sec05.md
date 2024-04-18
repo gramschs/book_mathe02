@@ -9,7 +9,7 @@ $$f:\mathbb{R}^2 \mapsto \mathbb{R}, \; f(x,y)=\frac{x^2+y^2}{1+x^2+y^2}$$
 am Punkt $(1,2)$.
 ```
 ````{admonition} Lösung
-:class: minisolution, toggle
+:class: miniexercise, toggle
 
 $$T_{f,1}(x,y)=\frac{5}{6}+\frac{1}{18}\cdot (x-1)+\frac{1}{9}\cdot (y-2)$$
 
@@ -51,7 +51,7 @@ $$f:\mathbb{R}^2 \mapsto \mathbb{R}, \; f(x,y)=\sqrt{x^2 + y^2}$$
 am Punkt $(1,0)$.
 ```
 ````{admonition} Lösung
-:class: minisolution, toggle
+:class: miniexercise, toggle
 $$T_{1,f}(x,y) = x$$
 ```{dropdown} Lösungsweg
 Das Taylorpolynom vom Grad 1 einer Funktion $f(x,y)$ bei $(x_0,y_0)$ hat die allgemeinen Form 
@@ -90,7 +90,7 @@ $$f(x,y)=x^3+y^3 - x - y$$
 und untersuchen Sie, ob in diesen Punkten lokale Minima bzw. Maxima vorliegen. 
 ```
 ````{admonition} Lösung
-:class: minisolution, toggle
+:class: miniexercise, toggle
 * $(\sqrt{\frac{1}{3}}, \sqrt{\frac{1}{3}})$ Minimum
 * $(\sqrt{\frac{1}{3}}, - \sqrt{\frac{1}{3}})$ kein Extremum 
 * $(-\sqrt{\frac{1}{3}}, \sqrt{\frac{1}{3}})$ kein Extremum
@@ -195,7 +195,7 @@ $$f(x,y) = -x^3-\frac{3x^2}{2}+6x-2y^3-9y^2+24y+3$$
 und untersuchen Sie, ob in diesen Punkten lokale Minima bzw. Maxima vorliegen. 
 ```
 ````{admonition} Lösung
-:class: minisolution, toggle
+:class: miniexercise, toggle
 * $(1,1)$ Maximum
 * $(-2,1)$ kein Extremum 
 * $(1,-4)$ kein Extremum 
@@ -296,7 +296,7 @@ gewählt werden, wenn der Umfang minimal sein soll und der Flächeninhalt 50 m²
 betragen soll. 
 ```
 ````{admonition} Lösung
-:class: minisolution, toggle
+:class: miniexercise, toggle
 Seitenlänge des Rechtecks: $x = 7.48 \text{m}$ (Boden) und $y = 3.75 \text{m}$ (Höhe des Rechtecks ohne Halbkreis)
 ```{dropdown} Lösungsweg
 Der Umfang $U$ der Tunnel-Querschnittsfläche ist

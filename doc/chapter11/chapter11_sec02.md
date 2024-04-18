@@ -7,7 +7,7 @@ Integrale mit Polarkoordinaten umgeschrieben und dadurch berechnet.
 ## Lernziele
 
 ```{admonition} Lernziele
-:class: important
+:class: goals
 Sie können ein Doppelintegral in kartesischen Koordinaten in ein Doppelintegral in Polarkoordinaten umrechnen, d.h.
 
 $$\iint_{A}f(x,y)\, dA = \int_{\varphi=\alpha}^{\varphi=\beta}

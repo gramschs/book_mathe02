@@ -7,7 +7,7 @@ Bestimmen Sie die Lösung des Anfangwertproblems
 $$y \, y'- e^{5x} = 0, \qquad \text{für} \quad y(0)=1.$$
 ``` 
 ````{admonition} Lösung
-:class: minisolution, toggle
+:class: miniexercise, toggle
 Allgemeine Lösung:
 
 $$y(x) = \pm \sqrt{\frac{2}{5}e^{5x}+2c}$$
@@ -48,7 +48,7 @@ Bestimmen Sie die Lösung des Anfangwertproblems
 $$y'- 6yx^2 = 0, \quad \text{für} \quad y(0)=5.$$
 ```
 ````{admonition} Lösung
-:class: minisolution, toggle
+:class: miniexercise, toggle
 Allgemeine Lösung: 
 
 $$y(x) = c e^{2x^3}$$
@@ -89,7 +89,7 @@ $$\dot{x} = e^{t-x} \quad \text{ für } \quad x(1)=1.$$
 ```
 
 ````{admonition} Lösung
-:class: minisolution, toggle
+:class: miniexercise, toggle
 Allgemeine Lösung:
 
 $$x(t) = \ln(e^t + C)$$
@@ -127,7 +127,7 @@ Bestimmen Sie die Lösung des Anfangwertproblemes
 $$9x\dot{x} - 4t = 0 \quad \text{ für } \quad x(1.5)=-1.$$
 ```
 ````{admonition} Lösung
-:class: minisolution, toggle
+:class: miniexercise, toggle
 Allgemeine Lösung:
 
 $$x(t) = \pm \sqrt{\frac{4}{9}t^2 + \frac{2}{9}c}$$
@@ -166,7 +166,7 @@ Bestimmen Sie die Lösung des Anfangwertproblems
 $$t\cdot \dot{x} + \dot{x} - x = 1 \quad \text{für} \quad x(3)=3.$$
 ```
 ````{admonition} Lösung
-:class: minisolution, toggle
+:class: miniexercise, toggle
 Allgemeine Lösung:
 
 $$x(t) = C\cdot (t+1) - 1$$
@@ -209,7 +209,7 @@ Bestimmen Sie die Lösung des Anfangwertproblems
 $$x\cdot \dot{x} -\sin(t) = 0 \quad \text{für} \quad x\left(\frac{\pi}{2}\right)=2.$$
 ```
 ````{admonition} Lösung
-:class: minisolution, toggle
+:class: miniexercise, toggle
 Allgemeine Lösung:
 
 $$x(t) = \pm \sqrt{-2\cos(t) + 2C}$$
@@ -249,7 +249,7 @@ Lösen Sie die exakte Differentialgleichung
 $$y \, y'- e^{5x} = 0.$$
 ```
 ````{admonition} Lösung
-:class: minisolution, toggle
+:class: miniexercise, toggle
 Allgemeine Lösung:
 
 $$y(x) = \pm \sqrt{\frac{2}{5} e^{5x} + C}$$
@@ -291,7 +291,7 @@ Lösen Sie die exakte Differentialgleichung
 $$9y \, y' = 4x.$$
 ```
 ````{admonition} Lösung
-:class: minisolution, toggle
+:class: miniexercise, toggle
 Allgemeine Lösung
 
 $$y(x) = \pm \frac{\sqrt{2}}{3} \sqrt{2x^2 + C}$$

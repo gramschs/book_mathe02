@@ -10,7 +10,7 @@ Funktionsgraphen und der x-Achse berechnet werden.
 ## Lernziele
 
 ```{admonition} Lernziele
-:class: important
+:class: goals
 * Sie wissen, wie man mit dem bestimmten Integral $\int_{a}^{b} f(x)\, dx$ den
   Flächeninhalt zwischen dem Funktionsgraphen $f(x)$, der x-Achse und den parallelen
   Geraden $x=a$ und $x=b$ berechnet, wenn 

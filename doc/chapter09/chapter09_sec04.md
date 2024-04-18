@@ -9,7 +9,7 @@ Gleichung formuliert. In diesem Kapitel lernen wir eine Lösungsmethoden kennen.
 ## Lernziele
 
 ```{admonition} Lernziele
-:class: important
+:class: goals
 * Sie wissen, was ein Extremwertproblem mit Nebenbedingung ist.
 * Sie wissen, was eine Zielfunktion ist.
 * Sie können ein Extremwertproblem mit Nebenbedingung durch die

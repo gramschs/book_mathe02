@@ -23,7 +23,7 @@ Funktion zu bestimmen.
 ## Lernziele
 
 ```{admonition} Lernziele
-:class: important
+:class: goals
 * Sie wissen, was das Minimum oder Maximum einer Funktion ist.
 * Sie können Minima oder Maxima von 2x differenzierbaren Funktionen berechnen.
 ```

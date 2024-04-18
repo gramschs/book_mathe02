@@ -11,7 +11,7 @@ Kapitel werden wir dann die Anwendungen des Volumenintegrals kennenlernen.
 ## Lernziele
 
 ```{admonition} Lernziele
-:class: important
+:class: goals
 Sie können ein **Volumenintegral** als **Dreifachintegral** (in kartesischen Koordinaten) berechnen.
 ```
 

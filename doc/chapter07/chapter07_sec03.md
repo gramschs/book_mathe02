@@ -1,3 +1,15 @@
+---
+jupytext:
+  cell_metadata_filter: -all
+  formats: md:myst
+  main_language: python
+  text_representation:
+    extension: .md
+    format_name: myst
+    format_version: 0.13
+    jupytext_version: 1.14.7
+---
+
 # 7.3 Partielle Ableitungen und Gradient
 
 Ableitungen kennen Sie schon, was genau meint jetzt wiederum der Fachbegriff
@@ -11,7 +23,7 @@ wir uns mit partiellen Ableitungen 1. Ordnung.
 ## Lernziele
 
 ```{admonition} Lernziele
-:class: important
+:class: goals
 * Sie wissen, was eine **partielle Ableitung** einer Funktion von mehreren
 Variablen ist und können sie auch berechnen.
 * Sie wissen, wie der **Gradient** einer Funktion von mehreren Variablen
@@ -99,44 +111,25 @@ betrachten eine Funktion, die von zwei unabhängigen Variablen abhängt, nämlic
 
 $$f(x,y) = x^3 + y^3 - x^2 + 2y^2 - 5x + y + 3.$$
 
-<div id="chap06_sec03_fig01" style="width:100%; aspect-ratio:4/3; margin: 0 auto;""></div>
-<script type="text/javascript">
-// Generate grid
-// Set the range of x and y values
-const range = 2;
-const step = 0.25;
-// Generate the x and y values
-const xValues = Array.from({ length: range * 2 / step }, (_, i) => -range + i * step);
-const yValues = Array.from({ length: range * 2 / step }, (_, i) => -range + i * step);
-// Evaluate function
-// Calculate the z values using the function f(x, y) = x^3 + y^3 - x^2 + 2y^2 - 5x + y + 3
-const zValues = xValues.map(x => yValues.map(y => x ** 3 + y ** 3 - x ** 2 + 2 * y ** 2 - 5 * x + y + 3));
-// Plot
-const data = [{
-  x: xValues,
-  y: yValues,
-  z: zValues,
-  type: 'surface',
-  colorscale: 'Viridis'
-}];
-//
-const layout = {
-  scene: {
-    xaxis: { title: 'x' },
-    yaxis: { title: 'y' }
-  },
-  margin: {
-    t: 0,
-    l: 10,
-    r: 10
-  }
-};
-//
-const config = {responsive: true}
-//
-Plotly.newPlot('chap06_sec03_fig01', data, layout, config);
-</script>
-<p><br><br><br><br><br></p>
+```{code-cell} ipython3
+:tags: [remove-input]
+import numpy as np
+import plotly.graph_objects as go
+
+# generate grid
+x = np.linspace(-2, 2, 101)
+y = np.linspace(-2, 2, 101)
+X, Y = np.meshgrid(x, y) 
+
+# evaluate function
+Z = X**3 + Y**3 - X**2 + 2*Y**2 - 5*X + Y + 3
+
+# plot
+fig = go.Figure()
+fig.add_trace(go.Surface(z=Z, x=x, y=y, colorscale='viridis'))
+fig.update_layout(title='f(x,y)=x^3 + y^3 - x^2 + 2y^2 - 5x + y + 3', 
+xaxis_title='x-Achse', yaxis_title='y-Achse')
+```
 
 Als erstes bilden wir die 1. partielle Ableitung nach $x$. Wir bewegen uns also
 entlang der x-Achse und betrachten $y$ nicht als eine Variable, sondern als eine

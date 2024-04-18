@@ -1,7 +1,7 @@
 # Übungen
 
 ```{admonition} Übung 4.1
-:class: tip
+:class: miniexercise
 Untersuchen Sie die Reihe 
 
 $$ \sum_{n=1}^\infty -\frac{4\cdot3^{n+3}}{5^n}$$
@@ -9,7 +9,7 @@ $$ \sum_{n=1}^\infty -\frac{4\cdot3^{n+3}}{5^n}$$
 auf sowohl mit dem Quotienten- als auch dem Wurzelkriterium auf Konvergenz.
 ```
 ````{admonition} Lösung
-:class: tip, toggle
+:class: miniexercise, toggle
 Die Reihe ist (absolut) konvergent. 
 ```{dropdown} Lösungsweg
 Wir definieren $a_n := -\frac{4\cdot 3^{n+3}}{5^n}$. 
@@ -39,7 +39,7 @@ Wegen $r<1$ ist die Reihe (absolut) konvergent.
 ````
 
 ```{admonition} Übung 4.2
-:class: tip
+:class: miniexercise
 Untersuchen Sie die Reihe 
 
 $$\sum_{n=1}^\infty 4\frac{6^n}{{11}^{n+4}}$$
@@ -48,7 +48,7 @@ sowohl mit dem Quotienten- als auch dem Wurzelkriterium auf Konvergenz.
 ```
 
 ````{admonition} Lösung
-:class: tip, toggle
+:class: miniexercise, toggle
 Die Reihe ist (absolut) konvergent. 
 ```{dropdown} Lösungsweg
 Wir definieren $a_n := 4\frac{6^n}{{11}^{n+4}}$. 
@@ -77,7 +77,7 @@ Wegen $r<1$ ist die Reihe (absolut) konvergent.
 
 
 ```{admonition} Übung 4.3
-:class: tip
+:class: miniexercise
 Untersuchen Sie die Reihe 
 
 $$\sum_{n=1}^\infty \frac{\frac{1}{{\left(-8\right)}^{n+2}}\,{10}^{n+4}}{4}$$
@@ -86,7 +86,7 @@ sowohl mit dem Quotienten- als auch dem Wurzelkriterium auf Konvergenz.
 ```
 
 ````{admonition} Lösung
-:class: tip, toggle
+:class: miniexercise, toggle
 Die Reihe ist divergent.
 ```{dropdown} Lösungsweg
 Die Summanden bilden keine Nullfolge, denn 
@@ -98,7 +98,7 @@ Somit divergiert die Reihe. Die Anwendung des Wurzel- sowie des Quotientenkriter
 ````
 
 ```{admonition} Übung 4.4
-:class: tip
+:class: miniexercise
 Bestimmen Sie den Konvergenzradius $r$ der Potenzreihe 
 
 $$\sum_{n=1}^{\infty}\frac{8^n}{n}\cdot(x-2)^n.$$
@@ -106,7 +106,7 @@ $$\sum_{n=1}^{\infty}\frac{8^n}{n}\cdot(x-2)^n.$$
 Untersuchen Sie gegebenenfalls die Konvergenz im Randbereich und geben Sie den Konvergenzbereich an.
 ```
 ````{admonition} Lösung
-:class: tip, toggle
+:class: miniexercise, toggle
 Konvergenzradius $r=\frac{1}{8}$ und Konvergenzbereich: $[\frac{15}{8}; \frac{17}{8})$, d.h. $\frac{15}{8} \leq x < \frac{17}{8}$
 ```{dropdown} Lösungsweg
 Tipp bzw. Quelle der Aufgabe:  [YouTube MathemaTrick -- Konvergenzradius bestimmen](https://www.youtube.com/watch?v=gn8jCoSJb24) 

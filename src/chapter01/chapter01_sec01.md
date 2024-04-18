@@ -92,7 +92,7 @@ fig.show()
 ```
 
 ```{admonition} Mini-Übung
-:class: tip
+:class: miniexercise
 Wenn Sie mit dem Mauszeiger über die Punkte des Diagramms fahren, werden die
 Zeit und die Strecke, die seit der Autobahnauffahrt zurückgelegt wurde,
 eingeblendet.
@@ -102,7 +102,7 @@ eingeblendet.
 3. Berechnen Sie die Durchschnittsgeschwindigkeit im Zeitraum [20 min, 30 min]. 
 ```
 ```{admonition} Lösung
-:class: tip, toggle
+:class: miniexercise, toggle
 1. Die Strecke zum Zeitpunkt t<sub>1</sub> = 10 min ist s<sub>1</sub> = 0.7008521 km. Zum Zeitpunkt t<sub>2</sub> = 40 min wurden s<sub>2</sub> = 65.23726 km zurückgelegt. Damit ist die Durchschnittsgeschwindigkeit im Zeitraum [10 min, 40 min]
 
 $$\frac{65.23726 \text{ km} - 0.7008521 \text{ km}}{40 \text{ min} - 10 \text{ min}} = 

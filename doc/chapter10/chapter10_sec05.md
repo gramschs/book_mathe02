@@ -7,7 +7,7 @@ Berechnen Sie das Doppelintegral
 $$\int_{x=0}^{x=1}\left(\int_{y=-x}^{y=x} xy+1 \, dy\right) \, dx.$$
 ```
 ````{admonition} Lösung
-:class: minisolution, toggle
+:class: miniexercise, toggle
 $$\int_{x=0}^{x=1}\left(\int_{y=-x}^{y=x} xy+1 \, dy\right) \, dx = 1$$
 ```{dropdown} Lösungsweg
 \begin{align*}
@@ -27,7 +27,7 @@ Berechnen Sie das Doppelintegral
 $$\int_{x=0}^{x=2\pi}\left(\int_{y=-\sin(x)-1}^{y=\sin(x)+1} xy+1 \, dy\right) \, dx.$$
 ```
 ````{admonition} Lösung
-:class: minisolution, toggle
+:class: miniexercise, toggle
 $$\int_{x=0}^{x=2\pi}\left(\int_{y=-\sin(x)-1}^{y=\sin(x)+1} xy+1 \, dy\right) \, dx = 4\pi$$
 ```{dropdown} Lösungsweg
 \begin{align*}
@@ -50,7 +50,7 @@ Berechnen Sie das Doppelintegral
 $$\int_{x=0}^{x=2\pi}\left(\int_{y=-\sin(x)-1}^{y=\sin(x)+1} x \, dy\right) \, dx.$$
 ```
 ````{admonition} Lösung
-:class: minisolution, toggle
+:class: miniexercise, toggle
 $$\int_{x=0}^{x=2\pi}\left(\int_{y=-\sin(x)-1}^{y=\sin(x)+1} x \, dy \right)\, dx = 4(\pi^2-\pi)$$
 ```{dropdown} Lösungsweg
 \begin{align*}
@@ -73,7 +73,7 @@ Berechnen Sie das Doppelintegral
 $$\int_{x=0}^{x=1}\left(\int_{y=0}^{y=x} \sqrt{xy} \, dy\right) \, dx.$$
 ```
 ````{admonition} Lösung
-:class: minisolution, toggle
+:class: miniexercise, toggle
 $$\int_{x=0}^{x=1}\left(\int_{y=0}^{y=x} \sqrt{xy} \, dy \right) \, dx = \frac{2}{9}$$
 ```{dropdown} Lösungsweg
 \begin{align*}
@@ -93,7 +93,7 @@ Berechnen Sie das Doppelintegral
 $$\int_{x=0}^{x=2\pi}\left(\int_{y=x(x-\pi)^2(x-2\pi)}^{y=\sin(x)^2} 1 \, dy \right)\, dx.$$
 ```
 ````{admonition} Lösung
-:class: minisolution, toggle
+:class: miniexercise, toggle
 $$\int_{x=0}^{x=2\pi}\left(\int_{y=x(x-\pi)^2(x-2\pi)}^{y=\sin(x)^2} 1 \, dy \right)\, dx = \pi + \frac{4}{15}\pi^5$$
 ```{dropdown} Lösungsweg
 \begin{align*}
@@ -124,7 +124,7 @@ Eingesetzt in das obige Integral gilt dann zusammen mit dem Trick $\sin^2(x) =\f
 Berechnen Sie den Schwerpunkt der Fläche eines Dreiecks mit den Koordinaten $(1,0)$, $(0,1)$ und $(-1,0)$. Machen Sie sich dazu eine Skizze des Integrationsgebietes.
 ```
 ````{admonition} Lösung
-:class: minisolution, toggle
+:class: miniexercise, toggle
 Schwerpunkt $S(0, \frac{1}{3})$
 ```{dropdown} Lösungsweg
 Zuerst fertigen wir eine Zeichnung an.
@@ -183,7 +183,7 @@ Damit ist der Schwerpunkt des Dreiecks $S(0, \frac{1}{3})$.
 Berechnen Sie den Schwerpunkt der Fläche, die durch die beiden Kurven $f(x)=x^2-4x-1$ und $g(x)=2x-6$ eingeschlossen wird. Machen Sie sich dazu eine Skizze des Integrationsgebietes. 
 ```
 ````{admonition} Lösung
-:class: minisolution, toggle
+:class: miniexercise, toggle
 Schwerpunkt $S(3, -\frac{8}{5})$
 ```{dropdown} Lösungsweg
 Zuerst fertigen wir eine Zeichnung an:

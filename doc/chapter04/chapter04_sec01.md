@@ -9,7 +9,7 @@ aus der Mathematik 1 Vorlesung als Startpunkt nehmen.
 ## Lernziele
 
 ```{admonition} Lernziele
-:class: important
+:class: goals
 * Sie können den Fachbegriff **Partialsumme** einer Reihe erklären.
 * Sie können den Fachbegriff **Reihe** erklären.
 * Sie wissen, was eine **konvergente** Reihe ist und wie der Grenzwert bezeichnet wird.

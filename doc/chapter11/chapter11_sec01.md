@@ -10,7 +10,7 @@ Möglichkeit, die Position der Punkte anzugeben.
 ## Lernziele
 
 ```{admonition} Lernziele
-:class: important
+:class: goals
 * Sie wissen, was **Polarkoordinaten** sind.
 * Sie können kartesische Koordinaten in Polarkoordinaten umrechnen.
 * Sie können Polarkoordinaten in kartesische Koordinaten umrechnen.

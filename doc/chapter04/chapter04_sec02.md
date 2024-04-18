@@ -8,7 +8,7 @@ Dazu lernen wir verschiedene Kriterien kennen.
 ## Lernziele
 
 ```{admonition} Lernziele
-:class: important
+:class: goals
 * Sie können das **Nullfolgen-Kriterium** anwenden, um zu überprüfen, ob es überhaupt möglich ist, dass die Reihe konvergiert.
 * Sie können mit den **Konvergenzkriterien** überprüfen, ob eine Reihe konvergiert, indem Sie die folgenden Kriterien anwenden können:
     * **Quotientenkriterium** oder

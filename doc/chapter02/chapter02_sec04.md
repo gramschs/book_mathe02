@@ -11,7 +11,7 @@ Die Umkehrung davon ist die Integration durch Substitution.
 ## Lernziele
 
 ```{admonition} Lernziele
-:class: important
+:class: goals
 Sie können die Substitutionsregel
 
 $$\int_{a}^{b} f(g(x))\cdot g^{\prime}(x) \, dx = \int_{g(a)}^{g(b)} f(z) \,
