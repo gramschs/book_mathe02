@@ -115,8 +115,6 @@ $$f(x,y) = x^3 + y^3 - x^2 + 2y^2 - 5x + y + 3.$$
 :tags: [remove-input]
 import numpy as np
 import plotly.graph_objects as go
-import plotly.io as pio
-pio.renderers.default = "notebook"
 
 # generate grid
 x = np.linspace(-2, 2, 101)
