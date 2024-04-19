@@ -121,10 +121,12 @@ aus der xy-Ebene. Zur Darstellung der abhängigen Variable brauchen wir also noc
 eine dritte Dimension, die Höhe. Die Funktion $f(x,y) =  x^2 + y^2$, ein
 sogenannter Paraboloid, sieht dann folgendermaßen aus (Hinweis: die Grafik ist interaktiv!): 
 
-```{code-cell} ipython3
+```{code-cell} 
 :tags: [remove-input]
 import numpy as np
 import plotly.graph_objects as go
+import plotly.io as pio
+pio.renderers.default = "notebook"
 
 # generate grid
 r = np.linspace(0, 5, 101)
