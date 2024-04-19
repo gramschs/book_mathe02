@@ -125,8 +125,6 @@ sogenannter Paraboloid, sieht dann folgendermaßen aus (Hinweis: die Grafik ist 
 :tags: [remove-input]
 import numpy as np
 import plotly.graph_objects as go
-import plotly.io as pio
-pio.renderers.default = "notebook"
 
 # generate grid
 r = np.linspace(0, 5, 101)
