@@ -10,7 +10,6 @@ jupytext:
     jupytext_version: 1.14.7
 ---
 
-
 # 1.3 Extremwerte
 
 Beschreibt eine Funktion einen technischen Prozess oder beispielsweise
@@ -19,7 +18,6 @@ ob in einem bestimmten Intervall minimale oder maximale Werte angenommen werden.
 In diesem Kapitel beschäftigen wir uns daher damit, die Minima oder Maxima einer
 Funktion zu bestimmen.
 
-
 ## Lernziele
 
 ```{admonition} Lernziele
@@ -27,7 +25,6 @@ Funktion zu bestimmen.
 * Sie wissen, was das Minimum oder Maximum einer Funktion ist.
 * Sie können Minima oder Maxima von 2x differenzierbaren Funktionen berechnen.
 ```
-
 
 ## Minimum und Maximum einer Funktion -- was ist das?
 
@@ -113,7 +110,6 @@ für alle $x\in D$, dann hat die Funktion $f$ an der Stelle $x_0$ ein
 **globales Maximum**.
 ```
 
-
 ## Wie finden wir Hoch- und Tiefpunkte?
 
 Wir betrachten weiterhin das obige Beispiel, die Funktion $f(x) = \frac{1}{2}x^3
@@ -136,7 +132,7 @@ $$f'(x_0) = 0.$$
 
 Die Umkehrung dieser Aussage ist allerdings nicht wahr. Wenn die 1. Ableitung
 einer differenzierbaren Funktion an der Stelle $x_0$ gleich Null ist, muss sie
-dort nicht ein Maximum oder ein Minimum haben. 
+dort nicht ein Maximum oder ein Minimum haben.
 
 Die Funktion $f(x)=x^3$ hat die 1. Ableitung $f'(x)=3x^2$. An der Stelle $x_0=0$
 ist die 1. Ableitung Null, aber $f$ hat kein Minimum und kein Maximum, auch
@@ -160,19 +156,18 @@ können, ob ein Minimum oder Maximum vorliegt. Die möglichen Extremwerte müsse
 noch zusätzlich mit der 2. Ableitung geprüft werden:
 
 * Die Funktion $f$ hat an der Stelle $x_0$ ein **Maximum**, wenn
-    * die 1. Ableitung an dieser Stelle Null ist, d.h. $f'(x_0) = 0$ und
-    * die 2. Ableitung an dieser Stelle **negativ** ist, d.h. $f''(x_0) < 0$. 
+  * die 1. Ableitung an dieser Stelle Null ist, d.h. $f'(x_0) = 0$ und
+  * die 2. Ableitung an dieser Stelle **negativ** ist, d.h. $f''(x_0) < 0$.
 * Die Funktion $f$ hat an der Stelle $x_0$ ein **Minimum**, wenn
-    * die 1. Ableitung an dieser Stelle Null ist, d.h. $f'(x_0) = 0$ und
-    * die 2. Ableitung an dieser Stelle **positiv** ist, d.h. $f''(x_0) > 0$.
-    
-Diese beiden Bedingungen nennt man dann **hinreichende** Bedingungen. 
+  * die 1. Ableitung an dieser Stelle Null ist, d.h. $f'(x_0) = 0$ und
+  * die 2. Ableitung an dieser Stelle **positiv** ist, d.h. $f''(x_0) > 0$.
+
+Diese beiden Bedingungen nennt man dann **hinreichende** Bedingungen.
 
 Achtung: Wenn allerdings die zweite Ableitung Null ist, also $f''(x_0) = 0$,
 kann man keine Entscheidung treffen und muss weitere Bedingungen überprüfen.
 Alternativ gibt es noch das sogenannte **Vorzeichenwechselkriterium**, das hier
 nicht weiter ausgeführt wird.
-
 
 ## Zusammenfassung und Ausblick
 

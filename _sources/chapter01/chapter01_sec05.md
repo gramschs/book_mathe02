@@ -30,7 +30,6 @@ Gehen Sie auf die Trainingsseite [Mathebattle: Produktregel](https://mathebattle
 Gehen Sie auf die Trainingsseite [Mathebattle: Ketten- und Produktregel](https://mathebattle.de/edu_randomtasks/training_show/724) und lösen Sie solange die dortigen Ableitungsaufgaben, bis Sie drei hintereinander richtig gelöst haben.
 ```
 
-
 ```{admonition} Übung 1.7
 :class: miniexercise
 Gehen Sie auf die Trainingsseite [Mathebattle: alles zusammen](https://mathebattle.de/edu_randomtasks/training_show/466) und lösen Sie solange die dortigen Ableitungsaufgaben, bis Sie drei hintereinander richtig gelöst haben.
@@ -41,7 +40,7 @@ Gehen Sie auf die Trainingsseite [Mathebattle: alles zusammen](https://mathebatt
 Gehen Sie auf die Trainingsseite [Mathebattle: Extrempunkte](https://mathebattle.de/edu_randomtasks/training_show/398) und lösen Sie solange die dortigen Ableitungsaufgaben, bis Sie drei hintereinander richtig gelöst haben.
 ```
 
-```{admonition} Übung 1.9 
+```{admonition} Übung 1.9
 :class: miniexercise
 Ein Rechteckt hat seine obere Seite unter der Parabel $f(x) = 16 - x^2$ und
 seine untere Seite auf der x-Achse. Die beiden vertikalen Seiten des Rechtecks
@@ -50,6 +49,7 @@ sein Flächeninhalt maximal ist.
 
 Fertigen Sie dazu eine Skizze an.
 ```
+
 ```{admonition} Lösung
 :class: miniexercise, toggle
 Die Parabel $f(x) = -x^2 + 16$ ist symmetrisch zur y-Achse, daher ist auch das
@@ -113,6 +113,7 @@ Volumen $V$ des Zylinders, wenn der Zylinder das maximale Volumen haben soll.
 
 Fertigen Sie dazu eine Skizze des Querschnitts an.
 ```
+
 ```{admonition} Lösung
 :class: miniexercise, toggle
 Die Hauptbedingung (Volumen des Zylinders) lautet
@@ -170,8 +171,3 @@ und das maximale Volumen
 
 $$V = \pi r_2^2 \cdot h_2 = \frac{4}{9}\sqrt{3}\pi.$$
 ```
-
-
-
-
-

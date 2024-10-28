@@ -30,7 +30,6 @@ Integral ein, ohne die dazugehörigen Anwendungen und Herleitungen
   Flächeninhalte**. 
 ```
 
-
 ## Stammfunktion
 
 ```{admonition} Was ist ... eine Stammfunktion?
@@ -44,7 +43,7 @@ Beispiel: Wir betrachten die Funktion $f(x)=x$. Mit ein bisschen Probieren fäll
 auf, dass die Funktion $F(x)=\frac{1}{2}x^2$ abgeleitet genau $x$ ergibt. Also
 ist die Funktion $F$ eine Stammfunktion von $f$. Jetzt probieren wir die
 Funktion $\tilde{F}(x)=\frac{1}{2}x^2+1$ aus. Wenn wir diese Funktion ableiten,
-kommt 
+kommt
 
 $$\tilde{F}'(x) = \left( \frac{1}{2}x^2 + 1 \right)'= x + 0 = x$$
 
@@ -75,7 +74,7 @@ $$\tilde{F}'(x) = \left(F(x)+c\right)' = F'(x) + 0 = f(x).$$
 <iframe width="560" height="315" src="https://www.youtube.com/embed/m__ID4PHBIA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 ```
 
-## Wichtige Stammfunktionen 
+## Wichtige Stammfunktionen
 
 Zu Funktionen, die häufig im Maschinenbau vorkommen, sollten Sie die
 Stammfunktionen auswendig kennen.
@@ -85,21 +84,21 @@ Stammfunktionen auswendig kennen.
 * $f(x) = x^{-1}=\frac{1}{x} \Rightarrow F(x) = |\ln(x)| + c$
 * $f(x) = e^{x} \Rightarrow F(x)=e^{x}+c$
 * $f(x) = \sin(x) \Rightarrow F(x)=-\cos(x)+c$
-* $f(x) = \cos(x) \Rightarrow F(x)=\sin(x)+c$ 
+* $f(x) = \cos(x) \Rightarrow F(x)=\sin(x)+c$
 * $f(x)=\frac{1}{1+x^2} \Rightarrow F(x) = \arctan(x) + c$
 
 ```{dropdown} Video: wichtige Stammfunktionen
 <iframe width="560" height="315" src="https://www.youtube.com/embed/hKiAG99XmTE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 ```
 
-## Bestimmtes Integral 
+## Bestimmtes Integral
 
 Stammfunktionen sind für viele technische Anwendungen nützlich, weil sie
 sozusagen die Umkehrung der Ableitung sind. Das Suchen einer Stammfunktion wird
 **Integration** genannt. Eine Anwendung der Stammfunktion ist die Berechnung des
 sogenannten bestimmten Integrals. Das **bestimmte Integral** ist wichtig für die
 Berechnung von Flächeninhalten, Längen von Kurven und Volumen von
-Rotationskörpern. 
+Rotationskörpern.
 
 Der sogenannte **Hauptsatz der Differential- und Integralrechnung** sagt aus,
 dass das bestimmte Integral mit Hilfe von Stammfunktionen folgendermaßen
@@ -146,7 +145,7 @@ folgende Schreibweise üblich:
 $$\int_{-1}^{3} 5x^2 \, dx = \left[\frac{5}{3}x^3 \right]_{-1}^{3} = 45 -
 \left(-\frac{5}{3}\right) = \frac{140}{3}.$$
 
-Zuerst kommt die mathematische Schreibweise für das bestimme Integral mit 
+Zuerst kommt die mathematische Schreibweise für das bestimme Integral mit
 
 $$\int_{-1}^{3}  5x^2 \, dx.$$
 
@@ -157,7 +156,7 @@ Funktion, von der die Stammfunktion gesucht wird, hier also $f(x)=5x^2\, dx$,
 wird **Integrand** genannt. Da manchmal Funktionen auch Parameter enthalten,
 muss eindeutig geklärt werden, welches die Variable der Funktion ist. Das wird
 durch die **Integrationsvariable** spezifiziert, hier $dx$. Warum da ein "d"
-dabei steht, kommt in einem späteren Kapitel. 
+dabei steht, kommt in einem späteren Kapitel.
 
 In der Rechnung muss als erstes die Stammfunktion $F$ berechnet werden. Um klar
 zu machen, dass das jetzt die Stammfunktion ist, werden sehr große eckige

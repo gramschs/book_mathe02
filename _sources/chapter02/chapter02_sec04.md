@@ -58,7 +58,7 @@ multipliziert, aber dummerweise nicht mit $6x$. Also ergänzen wir noch die
 fehlende $6$ im Integranden und teilen aber wieder durch $6$, da wir ja den
 Integranden nicht verändern wollen. Zusammengefasst also
 
-$$\int_{0}^{1} \sqrt{1+3x^2}\cdot x \, dx = 
+$$\int_{0}^{1} \sqrt{1+3x^2}\cdot x \, dx =
 \textcolor{red}{\frac{1}{6}}\int_{0}^{1} \sqrt{1+3x^2}\cdot \textcolor{red}{6}x \, dx.$$
 
 Für das so umgeschriebene Integral dürfen wir die Substitutionsregel anwenden.

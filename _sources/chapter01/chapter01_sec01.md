@@ -19,7 +19,6 @@ Veränderungen in einem Bereich (mittlere Änderungsrate, Differenzenquotient un
 Steigung einer Sekante) und dann um punktuelle Veränderungen (momentane
 Änderungsrate, Differentialquotienten, Steigung einer Tangente, Ableitung).
 
-
 ## Lernziele
 
 ```{admonition} Lernziele
@@ -36,7 +35,6 @@ Steigung einer Sekante) und dann um punktuelle Veränderungen (momentane
 * Sie können den Differentialquotient/Ableitung als **Steigung der Tangente**
   geometrisch interpretieren.
 ```
-
 
 ## Die mittlere Änderungsrate oder der Differenzenquotient
 
@@ -94,6 +92,7 @@ eingeblendet.
 2. Berechnen Sie die Durchschnittsgeschwindigkeit im Zeitraum [15 min, 20 min]. 
 3. Berechnen Sie die Durchschnittsgeschwindigkeit im Zeitraum [20 min, 30 min]. 
 ```
+
 ```{admonition} Lösung
 :class: miniexercise, toggle
 1. Die Strecke zum Zeitpunkt t<sub>1</sub> = 10 min ist s<sub>1</sub> = 1.1 km. Zum Zeitpunkt t<sub>2</sub> = 40 min wurden s<sub>2</sub> = 65.6 km zurückgelegt. Damit ist die Durchschnittsgeschwindigkeit im Zeitraum [10 min, 40 min]
@@ -119,8 +118,8 @@ auf andere zeitabhängige Größen verallgemeinert werden. Ist auf der x-Achse d
 Zeit $t$ aufgetragen und auf der y-Achse die zeitabhängige Größe $f(t)$, so gibt
 der Quotient
 
-\begin{equation*} 
-\frac{f(t_2) - f(t_1)}{t_2 - t_1} 
+\begin{equation*}
+\frac{f(t_2) - f(t_1)}{t_2 - t_1}
 \end{equation*}
 
 die sogenannte **mittlere Änderungsrate** der zeitabhängigen Größe $f(t)$ an.
@@ -143,8 +142,8 @@ Weise analysiert werden. Die abhängige Größe (Wirkung) bezeichnen wir mit $f$
 die Ursache mit $x$. Betrachten wir zwei Messungen zur Ursache $x_1$ und zur
 Ursache $x_2$, dann wird der Quotient
 
-\begin{equation*} 
-\frac{f(x_2) - f(x_1)}{x_2 - x_1} 
+\begin{equation*}
+\frac{f(x_2) - f(x_1)}{x_2 - x_1}
 \end{equation*}
 
 ganz allgemein **Differenzenquotient** genannt. Im Zähler steht eine Differenz,
@@ -162,7 +161,6 @@ Definitionsmenge gehört, bezeichnen wir den Term
 als Differenzenquotient von $f$ im Intervall $[x_1, x_2]$.
 ```
 
-
 ## Der Differenzenquotient geometrisch interpretiert
 
 Bisher haben wir zwei verschiedene Kontrollpunkte auf der Autobahn oder
@@ -170,7 +168,7 @@ allgemein zwei verschiedene Ursachen $x_1$ und $x_2$ betrachtet. Betrachten wir
 die Punkte $(x_1, f(x_1))$ und $(x_2, f(x_2))$ rein geometrisch, also mit ihren
 Koordinaten $(x_1,y_1)$ und $(x_2,y_2)$, so lautet der Differenzenquotient
 
-\begin{equation*} 
+\begin{equation*}
 \frac{f(x_2) - f(x_1)}{x_2 - x_1} = \frac{y_2 - y_1}{x_2 - x_1} = \frac{\Delta y}{\Delta x}.
 \end{equation*}
 
@@ -211,9 +209,9 @@ mittleren Änderungsrate:
 sofern der Grenzwert existiert.
 ```
 
-Im Gegensatz zum Differenzenquotienten, der sich auf ein Zeitintervall
-[t<sub>1</sub>, t<sub>2</sub>] bezieht, bezieht sich der Differentialquotient
-auf einen einzelnen Zeitpunkt $t_1$.
+Im Gegensatz zum Differenzenquotienten, der sich auf ein Zeitintervall $t_1,
+t_2]$ bezieht, bezieht sich der Differentialquotient auf einen einzelnen
+Zeitpunkt $t_1$.
 
 Betrachten wir das obige Beispiel des deutschen Touristen auf der italienischen
 Autobahn. Während die mittlere Änderungsrate uns die durchschnittliche
@@ -236,7 +234,6 @@ existiert, nennt man diesen Grenzwert Differentialquotient der Funktion $f$ an
 der Stelle $x_1$.
 ```
 
-
 ## Geometrische Interpretation des Differentialquotienten
 
 Während der Differenzenquotient die Steigung einer Sekante zwischen zwei Punkten
@@ -248,16 +245,16 @@ Mathematisch ausgedrückt, wenn der Abstand $\Delta x$ zwischen zwei x-Werten $x
 und $x + \Delta x$ gegen Null geht, nähert sich die Sekante einer Tangente an.
 Der Differentialquotient
 
-\begin{equation*} 
-\lim_{\Delta x \to 0}\frac{f(x + \Delta x) - f(x)}{\Delta x} 
+\begin{equation*}
+\lim_{\Delta x \to 0}\frac{f(x + \Delta x) - f(x)}{\Delta x}
 \end{equation*}
 
 gibt dann die Steigung dieser Tangente am Punkt $(x, f(x)$ an. Die Steigung der
 Tangente der Funktion $f$ an der Stelle $x$ wird meist mit einem Strich
 abgekürzt, also
 
-\begin{equation*} 
-f'(x) = \lim_{\Delta x \to 0}\frac{f(x + \Delta x) - f(x)}{\Delta x}. 
+\begin{equation*}
+f'(x) = \lim_{\Delta x \to 0}\frac{f(x + \Delta x) - f(x)}{\Delta x}.
 \end{equation*}
 
 Man spricht das als "f Strich an der Stelle x ist ..." oder sagt "die Ableitung
@@ -280,7 +277,6 @@ Zeitpunkt anzeigen.
 ```{dropdown} Video zu "Ableitung" von Mathematische Methoden
 <iframe width="560" height="315" src="https://www.youtube.com/embed/FW7Vd1VI3uw?si=Ij7j2mb5CIKNYUEH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 ```
-
 
 ## Zusammenfassung und Ausblick
 

@@ -133,6 +133,7 @@ Berechnen Sie
 
 $$\int_{0}^{\frac{\pi}{2}} \cos(x)\cdot e^{\sin(x)}\, dx.\Rule{0 pt}{0 em}{1.5 em}$$
 ```
+
 ````{admonition} Lösung
 :class: miniexercise, toggle
 $$\int_{0}^{\frac{\pi}{2}} \cos(x)\cdot e^{\sin(x)}\, dx = e - 1 \approx 1.7183\Rule{0 pt}{0 em}{1.5 em}$$
@@ -147,6 +148,7 @@ Berechnen Sie
 
 $$\int_{2}^{3}\frac{1}{(1-x)^3}\, dx.$$
 ```
+
 ````{admonition} Lösung
 :class: miniexercise, toggle
 $$\int_{2}^{3}\frac{1}{(1-x)^3}\, dx = -\frac{3}{8} = - 0.375$$
@@ -161,6 +163,7 @@ Berechnen Sie
 
 $$\int_{0}^{1} 2x^7 \cdot e^{x^2}\, dx.$$
 ```
+
 ````{admonition} Lösung
 :class: miniexercise, toggle
 $$\int_{0}^{1} 2x^7 \cdot e^{x^2}\, dx = -2e + 6 \approx 0.5634$$
@@ -169,9 +172,9 @@ $$\int_{0}^{1} 2x^7 \cdot e^{x^2}\, dx = -2e + 6 \approx 0.5634$$
 ```
 ````
 
- ## Weitere Übungsaufgaben
+## Weitere Übungsaufgaben
 
  Für weitere Übungsaufgaben steht Ihnen der MATEX-Übungsaufgaben-Generator zur Verfügung. Wählen Sie anfangs Stufe 1 und steigern Sie sich auf Stufe 3.
 
- * [Aufgaben partielle Integration](https://lx4.mint-kolleg.kit.edu/MATeX/generatorview.php?data=dmtSYUVJNWovTE04cjdDTjE2VUEvZz09)
- * [Aufgaben mit Substitution](https://lx4.mint-kolleg.kit.edu/MATeX/generatorview.php?data=ZHBLcm1YaUcxRE81SStKbWhwTW1Tdz09)
+* [Aufgaben partielle Integration](https://lx4.mint-kolleg.kit.edu/MATeX/generatorview.php?data=dmtSYUVJNWovTE04cjdDTjE2VUEvZz09)
+* [Aufgaben mit Substitution](https://lx4.mint-kolleg.kit.edu/MATeX/generatorview.php?data=ZHBLcm1YaUcxRE81SStKbWhwTW1Tdz09)
