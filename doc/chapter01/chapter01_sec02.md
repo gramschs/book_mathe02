@@ -6,7 +6,6 @@ kann. Dazu betrachten wir die Ableitungen von grundlegenden Funktionen. Mit
 Hilfe von Ableitungsregeln können daraus die Ableitungen von komplizierteren
 Funktionen gebildet werden.
 
-
 ## Lernziele
 
 ```{admonition} Lernziele
@@ -21,8 +20,7 @@ Funktionen gebildet werden.
   * Kettenregel
 ```
 
-
-## Die Ableitungsfunktion 
+## Die Ableitungsfunktion
 
 Im letzten Kapitel haben wir den Differentialquotienten bzw. die Ableitung an
 einer einzelnen Stelle berechnet. In diesem Abschnitt wollen wir dieses Vorgehen
@@ -32,7 +30,7 @@ beispielsweise für $x_1 = 2$. Dazu bilden wir den Grenzwert der Folge der
 Differentialquotienten:
 
 \begin{align*}
-f'(2) 
+f'(2)
 &= \lim_{x_2 \to 2} \frac{f(x_2) - f(2)}{x_2 - 2} = \\
 &= \lim_{x_2 \to 2} \frac{x_2^2 - 4}{x_2 - 2} = \\
 &= \lim_{x_2 \to 2} \frac{(x_2 - 2) \cdot (x_2 + 2)}{x_2 - 2} = \\
@@ -45,7 +43,7 @@ $x\in\mathbb{R}$. Die Vorgehensweise zur Berechnung des Grenzwertes bleibt dabei
 gleich:
 
 \begin{align*}
-f'(x) 
+f'(x)
 &= \lim_{x_2 \to x} \frac{f(x_2) - f(x)}{x_2 - x} = \\
 &= \lim_{x_2 \to x} \frac{x_2^2 - x^2}{x_2 - x} = \\
 &= \lim_{x_2 \to x} \frac{(x_2 - x) \cdot (x_2 + x)}{x_2 - x} = \\
@@ -71,7 +69,6 @@ existiert, kann eine neue Funktion gebildet werden, die jedes $x$ aus der
 Definitionsmenge auf die Ableitung $f'(x)$ abbildet. Diese Funktion $f'$ wird
 Ableitungsfunktion von $f$ genannt.
 ```
-
 
 ## Ableitungen von wichtigen Grundfunktionen
 
@@ -110,10 +107,10 @@ $$f(x) = x^{\frac{1}{2}} \Rightarrow f'(x) = \frac{1}{2} x^{-\frac{1}{2}} = \fra
 
 Die Liste der Ableitungen der trigonometrischen Funktionen lautet:
 \begin{align*}
-f(x)=\sin(x) &\Rightarrow f'(x)=\cos(x) \\ 
-f(x)=\cos(x) &\Rightarrow f'(x)=-\sin(x) \\ 
-f(x)=\tan(x) &\Rightarrow f'(x)=\frac{1}{\cos^2(x)} \\ 
-f(x)=\cot(x) &\Rightarrow f'(x)=-\frac{1}{\sin^2(x)} \\ 
+f(x)=\sin(x) &\Rightarrow f'(x)=\cos(x) \\
+f(x)=\cos(x) &\Rightarrow f'(x)=-\sin(x) \\
+f(x)=\tan(x) &\Rightarrow f'(x)=\frac{1}{\cos^2(x)} \\
+f(x)=\cot(x) &\Rightarrow f'(x)=-\frac{1}{\sin^2(x)} \\
 \end{align*}
 
 Am einfachsten lässt sich die Exponentialfunktion ableiten, sie bleibt sie
@@ -129,7 +126,6 @@ $$f(x)=\ln(x) \Rightarrow f'(x)=\frac{1}{x}.$$
 ```{dropdown} Video zu "Wichtige Ableitungen" von Mathematische Methoden
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Jf7-EVLjpZg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 ```
-
 
 ## Faktorregel und Summenregel
 
@@ -168,17 +164,16 @@ Gibt es einen Differenzenregel? Eine eigene Differenzenregel brauchen wir nicht,
 denn wir können die Faktorregel mit der Summenregel kombinieren.
 
 $$(f(x) - g(x))' = (f(x) + (-1)\cdot g(x))' = f'(x) + (-1)\cdot g'(x) = f'(x) -
-g'(x).$$ 
+g'(x).$$
 
 ```{dropdown} Video zu "Summenregel" von Mathematische Methoden
 <iframe width="560" height="315" src="https://www.youtube.com/embed/KOoPcV7enYA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 ```
 
-
 ## Produktregel und Quotientenregel
 
 Etwas komplizierter wird es, wenn Funktionen miteinander multipliziert oder
-dividiert werden. 
+dividiert werden.
 
 ```{admonition} Was ist ... die Produktregel?
 :class: note
@@ -207,11 +202,10 @@ $$\left(\frac{f(x)}{g(x)}\right)' = \frac{f'(x)\cdot g(x) - f(x)\cdot g'(x)}{g(x
 <iframe width="560" height="315" src="https://www.youtube.com/embed/ydbsCKqIbNw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 ```
 
-
 ## Kettenregel
 
 Wird eine Funktion $g$ in einer andere Funktion $f$ eingesetzt, so nennen wir
-diesen Vorgang "Verketten" und das Ergebnis ist die verkettete Funktion $f(g)$. 
+diesen Vorgang "Verketten" und das Ergebnis ist die verkettete Funktion $f(g)$.
 
 ```{admonition} Was ist ... die Kettenregel?
 :class: note
@@ -225,7 +219,6 @@ $$\left(f(g(x))\right)' = f'\left(g(x)\right) \cdot g'(x).$$
 ```{dropdown} Video zu "Kettenregel" von Mathematische Methoden
 <iframe width="560" height="315" src="https://www.youtube.com/embed/E_4Obqxxr8E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 ```
-
 
 ## Zusammenfassung und Ausblick
 

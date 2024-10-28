@@ -8,7 +8,7 @@ Integralen präsentiert.
 
 ```{admonition} Lernziele
 :class: goals
-* Sie wissen sich das Integral verändert, wenn die beiden Integrationsgrenzen
+* Sie wissen, wie sich das Integral verändert, wenn die beiden Integrationsgrenzen
   miteinander vertauscht werden:
 
 $$\int_{a}^{b} f(x)\,dx = - \int_{b}^{a} f(x)\, dx.$$
@@ -43,7 +43,7 @@ $f$ gleich bleibt, aber die Integrationsgrenzen geändert werden.
 Werden die beiden Integrationsgrenzen vertauscht, so ändert sich das Vorzeichen
 des Integrals. Integrieren wir also die Funktion $f$ von $b$ nach $a$ anstatt
 von $a$ nach $b$, müssen wir dieses Integral nur mit $-1$ multiplizieren, um das
-ursprüngliche Integral von $a$ nach $b$ zu erhalten. In Formeln sieht das so aus: 
+ursprüngliche Integral von $a$ nach $b$ zu erhalten. In Formeln sieht das so aus:
 
 $$\int_{a}^{b} f(x)\,dx = - \int_{\textcolor{red}{b}}^{\textcolor{red}{a}}
 f(x)\, dx.$$
@@ -94,7 +94,7 @@ $$\int_{a}^{b} c\cdot f(x)\, dx = c\cdot
 
 Summenregel: Soll die Summe oder die Differenz zweier Funktionen integriert
 werden, dürfen auch zuerst die beiden Einzelintegrale berechnet werden und
-danach Summe oder Differenz gebildet werden: 
+danach Summe oder Differenz gebildet werden:
 
 $$\int_{a}^{b} f(x) \pm g(x) \, dx = \int_{a}^{b}f(x)\, dx \pm \int_{a}^{b}
 g(x)\, dx.$$

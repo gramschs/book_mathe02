@@ -15,10 +15,10 @@ offiziell **partielle Integration** heißt.
 ```{admonition} Lernziele
 :class: goals
 Sie können ein Produkt von zwei Funktionen $u\cdot v$ mit der partiellen
-Integrationsregel im Intervall $[a,b]$ integrieren: 
+Integrationsregel im Intervall $[a,b]$ integrieren:
 
 $$\int_{a}^{b} u(x) \cdot
-v'(x) \, dx = \big[u(x)\cdot v(x)\big]_{a}^{b} 
+v'(x) \, dx = \big[u(x)\cdot v(x)\big]_{a}^{b}
 - \int_{a}^{b} u'(x) \cdot v(x) \, dx.$$
 ```
 
@@ -26,7 +26,7 @@ v'(x) \, dx = \big[u(x)\cdot v(x)\big]_{a}^{b}
 
 Die partielle Integration kann durch folgende Formel ausgedrückt werden:
 
-$$\int_{a}^{b} u(x) \cdot v'(x) \, dx = \big[u(x)\cdot v(x)\big]_{a}^{b} 
+$$\int_{a}^{b} u(x) \cdot v'(x) \, dx = \big[u(x)\cdot v(x)\big]_{a}^{b}
 - \int_{a}^{b} u'(x) \cdot v(x) \, dx.$$
 
 Hierbei sind $u(x)$ und $v(x)$ zwei Funktionen, deren Produkt integriert werden
@@ -35,7 +35,7 @@ soll, und $u'(x)$ und $v'(x)$ sind die Ableitungen von $u(x)$ und $v(x)$.
 ## Beispiel für partielle Integration
 
 Ein Beispiel für die Anwendung der partiellen Integration ist die Berechnung des
-Integrals 
+Integrals
 
 $$\int_{0}^{\pi} \sin(x)\cdot 2x \, dx.$$
 
@@ -56,7 +56,7 @@ $$\int_{0}^{\pi} \sin(x)\cdot 2x \, dx = \big[2x \cdot \left(-\cos(x)\right)\big
 Das bestimmte Integral $\big[2x \cdot \left(-\cos(x)\right)\big]_{0}^{\pi}$
 können wir jetzt zwar direkt ausrechnen, aber übrig bleibt noch das Integral
 $\int_{0}^{\pi} 2 \cdot (-\cos(x)) \, dx$, das noch weiter ausgerechnet werden
-muss. 
+muss.
 
 Aber das geht jetzt relativ leicht, denn von der Funktion $v(x)=-\cos(x)$ kennen wir ebenfalls eine Stammfunktion, nämlich $V(x)=-\sin(x)$. Daher ist $\int_{0}^{\pi} 2
 \cdot (-\cos(x)) \, dx = 2 \big[-\sin(x)\big]_{0}^{\pi}$ und insgesamt gilt dann:
@@ -69,7 +69,7 @@ Ergebnis ist
 
 $$\int_{0}^{\pi} \sin(x)\cdot 2x \, dx = 2\pi.$$
 
-Achtung: Hätten wir eine andere Wahl getroffen, nämlich 
+Achtung: Hätten wir eine andere Wahl getroffen, nämlich
 
 $$u(x)=\sin(x) \quad \text{ und } \quad v'(x)=2x,$$
 

@@ -161,3 +161,6 @@ Network Trash Folder
 Temporary Items
 .apdisk
 
+
+# MyST build outputs
+_build

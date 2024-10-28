@@ -8,7 +8,6 @@ wir zuerst, was Extremwerte mit Nebenbedingungen sind. Dann beschäftigen wir un
 mit der »Eliminationsmethode« zur Lösung von Extremwertproblemen mit
 Nebenbedingungen.
 
-
 ## Lernziele
 
 ```{admonition} Lernziele
@@ -17,7 +16,6 @@ Nebenbedingungen.
 * Sie können ein Extremwertproblem mit Nebenbedingung durch die
   **Eliminationsmethode** lösen.
 ```
-
 
 ## Was sind Extremwertprobleme mit Nebenbedingung?
 
@@ -65,7 +63,6 @@ wählen. Ein Minimum liegt offensichtlich vor, wenn $x = 0$ (und damit auch $y =
 dass die Länge des Drahtes 1 m ist, ist die Suche nach einem Maximum sinnvoll.
 Daher werden diese Art von Problemstellungen **Extremwertprobleme mit
 Nebenbedingung** genannt.
-
 
 ## Eliminationsmethode
 
@@ -145,7 +142,6 @@ ansehen.
 <iframe width="560" height="315" src="https://www.youtube.com/embed/i3z1sK4JqYA?si=9t3rOsZFQYouLbr6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 ```
 
-
 ## Zusammenfassung und Ausblick
 
 In diesem Kapitel haben Sie gelernt, was ein Extremwertproblem mit
@@ -153,4 +149,4 @@ Nebenbedingung ist und wie man es löst. Tatsächlich verbirgt sich hinter der
 Zielfunktion ursprünglich eine Funktion, die von zwei Variablen abhängt. Wir
 werden auf das Thema Extremwertprobleme mit Nebenbedingungen noch einmal
 zurückkommen, wenn wir Extremwertberechnungen von mehrdimensionalen Funktionen
-behandeln. 
+behandeln.
