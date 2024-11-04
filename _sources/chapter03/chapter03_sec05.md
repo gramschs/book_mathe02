@@ -4,6 +4,7 @@
 :class: miniexercise
 Berechnen Sie den Mittelwert der Funktion $f(x)=\frac{1}{2}x^2 +1$ im Intervall $[0,2]$.
 ```
+
 ````{admonition} Lösung
 :class: miniexercise, toggle
 $$m = \frac{1}{2-0}\int_{0}^{2}\frac{1}{2}x^2 +1 \, dx = \frac{5}{3} \approx 1.6666$$
@@ -36,7 +37,7 @@ Wir setzen die lineare Funktion $f(x)=mx+n$ in die Formel ein und erhalten:
 &= \frac{1}{2} m (b+a) + n = \\
 &= \frac{1}{2} m b + \frac{1}{2} m a + \frac{1}{2}n + \frac{1}{2}n = \\
 &= \frac{1}{2} (mb+n) + \frac{1}{2} (ma+n) = \\
-&= \frac{1}{2} f(b) + \frac{1}{2} f(b).
+&= \frac{1}{2} f(b) + \frac{1}{2} f(a).
 \end{align*}
 
 Der Mittelwert der linearen Funktion $f(x) = mx+n$ ist gleich dem arithmetischen Mittel der beiden Funktionswerte $f(a)$ und $f(b)$.
