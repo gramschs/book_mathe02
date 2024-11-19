@@ -526,12 +526,15 @@ dabei erhalten.</p>
 <section id="multiplikation-und-division">
 <h2>Multiplikation und Division<a class="headerlink" href="#multiplikation-und-division" title="Link to this heading">#</a></h2>
 <p>Die Multiplikation und Division zweier Potenzreihen ist leider etwas komplizierter.</p>
-<p>Um zwei Potenzreihen zu multiplizieren, verwenden wir die Cauchy-Produkt-Formel. Damit die Formel nicht zu unübersichtlich wird, nehmen wir den Entwicklungspunkt <span class="math notranslate nohighlight">\(x_0=0\)</span>, aber natürlich gilt die Formel auch für andere Entwicklungspunkte.</p>
+<p>Um zwei Potenzreihen zu multiplizieren, verwenden wir die Cauchy-Produkt-Formel.
+Damit die Formel nicht zu unübersichtlich wird, nehmen wir den Entwicklungspunkt
+<span class="math notranslate nohighlight">\(x_0=0\)</span>, aber natürlich gilt die Formel auch für andere Entwicklungspunkte.</p>
 <div class="math notranslate nohighlight">
-\[\left(\sum_{k=0}^{\infty} a_k x^k \right) \cdot \left(\sum_{k=0}^{\infty} b_k x^k \right) = \left(\sum_{k=0}^{\infty} c_k x^k \right) \]</div>
+\[\left(\sum_{k=0}^{\infty} a_k x^k \right) \cdot \left(\sum_{k=0}^{\infty} b_k x^k \right)
+= \left(\sum_{k=0}^{\infty} c_k x^k \right) \]</div>
 <p>mit</p>
 <div class="math notranslate nohighlight">
-\[c_k = \sum_{l=0}^{k} a_l b_{k-l} 
+\[c_k = \sum_{l=0}^{k} a_l b_{k-l}
 = a_0 b_k + a_1 b_{k_1} + a_2 b_{k_2} + \ldots a_k b_0.\]</div>
 <p>Der Konvergenzradius muss neu überprüft werden.</p>
 <p>Wenn die Potenzreihe <span class="math notranslate nohighlight">\(A(x)\)</span> durch die Potenzreihe <span class="math notranslate nohighlight">\(B(x)\)</span> geteilt werden soll,
@@ -553,7 +556,19 @@ Koeffizienten</p>
 <p>und berechnen daraus die gesuchten <span class="math notranslate nohighlight">\(c_k\)</span>. Das funktioniert allerdings nur, wenn
 wir nicht ins Unendliche gehen, sondern die Potenzreihe abbrechen. Der
 Konvergenzradius muss ebenfalls neu bestimmt werden.</p>
-</section>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Video “Multiplikation zweier Potenzreihen” von Joachim Gaukel</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/7hRJKp-QJw0?si=Xe-Q2HJHNfsHHCf2" title="YouTube video player" frameborder="0" allow="accelerometer;
+autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Video “Division zweier Potenzreihen” von Joachim Gaukel</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/7m26r05BjbE?si=NKu4dvyqaqLnJPeG" title="YouTube video player" frameborder="0" allow="accelerometer;
+autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+</details></section>
 <section id="bestimmung-von-grenzwerten-mit-potenzreihen">
 <h2>Bestimmung von Grenzwerten mit Potenzreihen<a class="headerlink" href="#bestimmung-von-grenzwerten-mit-potenzreihen" title="Link to this heading">#</a></h2>
 <p>Potenzreihen bieten eine alternative Methode zur Berechnung von
@@ -567,7 +582,8 @@ einfachsten ist es, ein Beispiel zu betrachten.</p>
 strebt, also</p>
 <div class="math notranslate nohighlight">
 \[\lim_{x \to 0}\frac{\sin(x)}{x}.\]</div>
-<p><span class="math notranslate nohighlight">\(x=0\)</span> darf in die Funktion nicht eingesetzt werden, da ansonsten durch 0 geteilt werden würde. Die Potenzreihe der Sinusfunktion lautet:</p>
+<p><span class="math notranslate nohighlight">\(x=0\)</span> darf in die Funktion nicht eingesetzt werden, da ansonsten durch 0 geteilt
+werden würde. Die Potenzreihe der Sinusfunktion lautet:</p>
 <div class="math notranslate nohighlight">
 \[\sin(x) = x - \frac{x^3}{3!} + \frac{x^5}{5!} - \frac{x^7}{7!} + \ldots\]</div>
 <p>und damit ist</p>

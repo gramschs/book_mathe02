@@ -49,13 +49,16 @@ dabei erhalten.
 
 Die Multiplikation und Division zweier Potenzreihen ist leider etwas komplizierter.
 
-Um zwei Potenzreihen zu multiplizieren, verwenden wir die Cauchy-Produkt-Formel. Damit die Formel nicht zu unübersichtlich wird, nehmen wir den Entwicklungspunkt $x_0=0$, aber natürlich gilt die Formel auch für andere Entwicklungspunkte.
+Um zwei Potenzreihen zu multiplizieren, verwenden wir die Cauchy-Produkt-Formel.
+Damit die Formel nicht zu unübersichtlich wird, nehmen wir den Entwicklungspunkt
+$x_0=0$, aber natürlich gilt die Formel auch für andere Entwicklungspunkte.
 
-$$\left(\sum_{k=0}^{\infty} a_k x^k \right) \cdot \left(\sum_{k=0}^{\infty} b_k x^k \right) = \left(\sum_{k=0}^{\infty} c_k x^k \right) $$
+$$\left(\sum_{k=0}^{\infty} a_k x^k \right) \cdot \left(\sum_{k=0}^{\infty} b_k x^k \right)
+= \left(\sum_{k=0}^{\infty} c_k x^k \right) $$
 
-mit 
+mit
 
-$$c_k = \sum_{l=0}^{k} a_l b_{k-l} 
+$$c_k = \sum_{l=0}^{k} a_l b_{k-l}
 = a_0 b_k + a_1 b_{k_1} + a_2 b_{k_2} + \ldots a_k b_0.$$
 
 Der Konvergenzradius muss neu überprüft werden.
@@ -70,7 +73,7 @@ gilt. Für die Multiplikation $B(x) \cdot C(x)$ gilt jedoch
 $$\left(\sum_{k=0}^{\infty} b_k x^k \right) \cdot \left(\sum_{k=0}^{\infty} c_k
 x^k \right) = \left(\sum_{k=0}^{\infty} d_k x^k \right) $$
 
-mit den Koeffizienten 
+mit den Koeffizienten
 
 $$d_k = \sum_{l=0}^{k} b_l c_{k-l} = b_0 c_k + b_1 c_{k_1} + b_2 c_{k_2} +
 \ldots b_k c_0.$$
@@ -84,6 +87,16 @@ $a_k = d_k$
 und berechnen daraus die gesuchten $c_k$. Das funktioniert allerdings nur, wenn
 wir nicht ins Unendliche gehen, sondern die Potenzreihe abbrechen. Der
 Konvergenzradius muss ebenfalls neu bestimmt werden.
+
+```{dropdown} Video "Multiplikation zweier Potenzreihen" von Joachim Gaukel
+<iframe width="560" height="315" src="https://www.youtube.com/embed/7hRJKp-QJw0?si=Xe-Q2HJHNfsHHCf2" title="YouTube video player" frameborder="0" allow="accelerometer;
+autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+```
+
+```{dropdown} Video "Division zweier Potenzreihen" von Joachim Gaukel
+<iframe width="560" height="315" src="https://www.youtube.com/embed/7m26r05BjbE?si=NKu4dvyqaqLnJPeG" title="YouTube video player" frameborder="0" allow="accelerometer;
+autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+```
 
 ## Bestimmung von Grenzwerten mit Potenzreihen
 
@@ -100,7 +113,8 @@ strebt, also
 
 $$\lim_{x \to 0}\frac{\sin(x)}{x}.$$
 
-$x=0$ darf in die Funktion nicht eingesetzt werden, da ansonsten durch 0 geteilt werden würde. Die Potenzreihe der Sinusfunktion lautet:
+$x=0$ darf in die Funktion nicht eingesetzt werden, da ansonsten durch 0 geteilt
+werden würde. Die Potenzreihe der Sinusfunktion lautet:
 
 $$\sin(x) = x - \frac{x^3}{3!} + \frac{x^5}{5!} - \frac{x^7}{7!} + \ldots$$
 
@@ -117,7 +131,6 @@ $$
 
 Nur der erste Term hat den Grenzwert 1, alle nachfolgenden Grenzwerte sind 0. Da
 alle Grenzwerte endlich sind, dürfen wir die Grenzwerte addieren bzw. subtrahieren
-und erhalten so den gesuchten Grenzwert 
+und erhalten so den gesuchten Grenzwert
 
 $$\lim_{x \to 0}\frac{\sin(x)}{x} = 1.$$
-
