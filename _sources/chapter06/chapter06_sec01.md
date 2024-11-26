@@ -10,7 +10,7 @@ werden. Beispiele sind periodische Signale, wie z.B. Rechteck-, Dreieck- oder
 Sinusfunktionen. Diese Signale werden verwendet, um elektrische, mechanische
 oder hydraulische Systeme zu steuern.
 
-## Lernziele 
+## Lernziele
 
 ```{admonition} Lernziele
 :class: goals
@@ -71,12 +71,12 @@ dieses Intervalls sollen die Funktionswerte 0 sein (übrigens, manchmal wird auc
 ein anderer Wert als 0 genommen). Mathematisch wird das folgendermaßen
 ausgedrückt:
 
-\begin{equation*} 
-f(t) = 
-\begin{cases} 
+\begin{equation*}
+f(t) =
+\begin{cases}
 c & \text{ für } -\frac{T}{2} \leq x \leq \frac{T}{2},\\
-0 & \text{ sonst.} 
-\end{cases} 
+0 & \text{ sonst.}
+\end{cases}
 \end{equation*}
 
 Der Funktionsgraph der Rechteckfunktion sieht folgendermaßen aus:
@@ -114,14 +114,14 @@ Beispiel einer Rechteckfunktion, die periodisch fortgesetzt wurde
 
 Diese neue Funktion ist nun eine periodische Funktion. Sie wird häufig in der
 Signalverarbeitung verwendet. Beispielsweise dient sie als Taktsignal für
-digitale Prozessoren und Controller. 
+digitale Prozessoren und Controller.
 
-### Dreiecksfunktion 
+### Dreiecksfunktion
 
 Die Dreiecksfunktion ist eine periodische Funktion, die ebenfalls in der
 Signalverarbeitung häufig vorkommt. Sie hat eine Periode $T$ und oszilliert
 zwischen zwei Werten $c_1$ und $c_2$, wobei der Anstieg von $c_1$ auf $c_2$
-linear ist und der Abfall von $c_2$ auf $c_1$ ebenfalls linear ist. 
+linear ist und der Abfall von $c_2$ auf $c_1$ ebenfalls linear ist.
 
 ```{figure} pics/plot_dreieck.png
 ---
@@ -136,7 +136,7 @@ Beispiel einer Dreiecksfunktion, die zwischen $0$ und $1$ oszilliert und die Per
 Die Sägezahnfunktion ist eine weitere periodische Funktion, die in der
 Signalverarbeitung häufig verwendet wird. Sie hat eine Periode $T$ und
 oszilliert zwischen $-1$ und $1$, wobei der Anstieg von $-1$ auf $1$ linear ist
-und der Abfall von $1$ auf $-1$ plötzlich stattfindet. 
+und der Abfall von $1$ auf $-1$ plötzlich stattfindet.
 
 ```{figure} pics/plot_saegezahn.png
 ---

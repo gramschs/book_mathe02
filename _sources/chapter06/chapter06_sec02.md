@@ -1,10 +1,10 @@
-# 6.2 Fourierreihen 
+# 6.2 Fourierreihen
 
 Periodische Vorgänge gibt es sowohl in der Natur als auch in der Technik. In der
 Technik gehören insbesondere Drehbewegungen dazu. Es ist nicht sinnvoll,
 periodische Funktionen durch Potenzreihen bzw. Taylorreihen zu approximieren.
 Stattdessen werden wir periodische Funktionen als Überlagerung von Sinus- und
-Kosinus-Funktionen approximieren, also sogenannte **Fourierreihen**. 
+Kosinus-Funktionen approximieren, also sogenannte **Fourierreihen**.
 
 Die Idee der Fourierreihe wird in dem folgenden Video erklärt.
 
@@ -39,7 +39,7 @@ $2\pi$. Und $\omega = 1$ ist die normale Sinus-/Kosinusfunktion.
 Außerdem können wir die Sinus-/Kosinusfunktionen mit doppelter, dreifacher,
 vierfacher ... Frequenz miteinander kombinieren, z.B. so:
 
-$$f(x) = 3\cdot\cos(\omega t) -17\cdot\sin(\omega t) -2\cdot\cos(2\omega t) +
+$$f(t) = 3\cdot\cos(\omega t) -17\cdot\sin(\omega t) -2\cdot\cos(2\omega t) +
 \frac{3}{8}\cdot\sin(2\omega t).$$
 
 Die Funktion $f$ hat die Periode $T = 2\pi$ und wird trigonometrisches Polynom
@@ -52,7 +52,7 @@ Ein trigonometrisches Polynom ist eine Funktion, die als Linearkombination von S
 $$f(x) = \frac{a_0}{2} + a_1 \cos(\omega t) + b_1 \sin(\omega t) + a_2\cos(2\omega t) + b_2\sin(2\omega t) + \ldots + a_n\cos(n\omega t) + b_n\sin(n\omega t).$$
 
 Hierbei sind $a_0$, $a_1$, $b_1$, $a_2$, $b_2$, ..., $a_n$, $b_n$ Konstanten, die bestimmt werden
-müssen, um die Funktion f(x) vollständig zu beschreiben. 
+müssen, um die Funktion f(x) vollständig zu beschreiben.
 ```
 
 Und warum nehmen wir $\frac{a_0}{2}$ und nicht einfach $a_0$? Das hat etwas mit
@@ -97,7 +97,7 @@ die periodische Funktion $f$. Die Dirichlet-Bedingungen lauten:
    Funktion $f$ stetig und monoton ist. Dabei darf es höchstens endlich viele
    Teilintervalle geben.
 2. Bei den Unstetigkeitsstellen existiert sowohl der linksseitige als auch der
-   rechtsseitige Grenzwert. 
+   rechtsseitige Grenzwert.
 
 Bei allen praktisch vorkommenen Beispielen im Maschinenbau ist dies aber der
 Fall. Wenn der Grad $n$ gegen unendlich geht, nennen wir die Reihe Fourierreihe.
