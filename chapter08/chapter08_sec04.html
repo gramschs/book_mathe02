@@ -501,9 +501,9 @@ Funktion <span class="math notranslate nohighlight">\(f\)</span> auf das Ergebni
 komplexer, da wir jetzt mehrere Eingaben haben. Angenommen, wir haben eine
 Funktion</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}g(r, \varphi) = 
-\begin{pmatrix} 
-r\cdot \sin(\varphi) \\ 
+\[\begin{split}g(r, \varphi) =
+\begin{pmatrix}
+r\cdot \sin(\varphi) \\
 r\cdot \cos(\varphi)
 \end{pmatrix}\end{split}\]</div>
 <p>und eine Funktion</p>
@@ -516,9 +516,9 @@ aussehen:</p>
 \left(r\cdot \cos(\varphi)\right)^2 \\ \left(r\cdot \sin(\varphi)\right)\cdot
 \left(r\cdot \cos(\varphi)\right) \\
 \left(r\cdot \sin(\varphi)\right)^2 - \left(r\cdot \cos(\varphi)\right)^2
-\end{pmatrix} = 
-\begin{pmatrix} 
-r^2 \\ 
+\end{pmatrix} =
+\begin{pmatrix}
+r^2 \\
 r^2 \cdot \sin(\varphi) \cos(\varphi) \\
 r^2 \cdot \left( \sin^2(\varphi) - \cos^2(\varphi)\right)
 \end{pmatrix}\end{split}\]</div>
@@ -550,24 +550,24 @@ Funktionen besteht, die jeweils von mehreren Variablen abhängen.</p>
 <p>Wir betrachten erneut das obige Beispiel und bilden zuerst die beiden
 Jacobi-Matrizen:</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}J_{g}(r, \varphi) = 
-\begin{pmatrix} 
-\sin(\varphi) &amp; r\cdot\cos(\varphi)\\ 
+\[\begin{split}J_{g}(r, \varphi) =
+\begin{pmatrix}
+\sin(\varphi) &amp; r\cdot\cos(\varphi)\\
 \cos(\varphi) &amp; -r\cdot\sin(\varphi)
 \end{pmatrix}\end{split}\]</div>
 <p>und</p>
 <div class="math notranslate nohighlight">
-\[\begin{split} J_{g}(x,y) = 
-\begin{pmatrix} 
-2x &amp; 2y \\ 
-y &amp; x \\ 
-2x &amp; -2y \\ 
+\[\begin{split} J_{f}(x,y) =
+\begin{pmatrix}
+2x &amp; 2y \\
+y &amp; x \\
+2x &amp; -2y \\
 \end{pmatrix}\end{split}\]</div>
 <p>Dann ist die Jacobi-Matrix der verketteten Funktion</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
-J_{f\circ}(r,\varphi) &amp;= J_{f}(g(r,\varphi)) \cdot J_{g}(r, \varphi) = \\
-&amp;= 
+J_{f\circ g}(r,\varphi) &amp;= J_{f}(g(r,\varphi)) \cdot J_{g}(r, \varphi) = \\
+&amp;=
 \begin{pmatrix}
 2r\cdot\sin(\varphi) &amp; 2r\cdot \cos(\varphi) \\
 r\cdot\cos(\varphi) &amp; r\cdot\sin(\varphi) \\
@@ -577,7 +577,7 @@ r\cdot\cos(\varphi) &amp; r\cdot\sin(\varphi) \\
 \sin(\varphi) &amp; r\cos(\varphi) \\
 \cos(\varphi) &amp; -r\cdot\sin(\varphi)
 \end{pmatrix} = \\
-&amp;= 
+&amp;=
 \begin{pmatrix}
 2r &amp; 0 \\
 2r\sin(\varphi)\cos(\varphi) &amp; r^2\left(\cos^2(\varphi)-\sin^2(\varphi) \right)\\
