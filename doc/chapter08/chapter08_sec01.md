@@ -31,7 +31,7 @@ angegeben werden. Damit ist gemeint, dass der Vektor $\vec{v}$ die Länge 1 hat.
 Als nächstes gehen wir von dem Punkt $\vec{x}$ ein kurzes Stückchen in Richtung
 $\vec{v}$. Da die Richtung die Länge 1 hat, führen wir die reelle Zahl $h$ ein
 und multiplizieren sie mit der Richtung. Das kurze Stückchen von $\vec{x}$ in
-Richtung $\vec{v}$ wird also durch 
+Richtung $\vec{v}$ wird also durch
 
 $$\vec{x} + h\cdot \vec{v}$$
 
@@ -47,7 +47,6 @@ $$\frac{f(\vec{x}+h\vec{v}) - f(\vec{x})}{h}.$$
 
 Der Grenzwert für $h \to 0$ ist die Richtungsableitung der Funktion $f$ in
 Richtung $v$. Wir verwenden für die Richtungsableitung das Symbol $D_{v}f$.
-
 
 ```{admonition} Was ist ... die Richtungsableitung?
 :class: note
@@ -72,7 +71,7 @@ Differenzierbarkeit hier weglassen. Glücklicherweise gehören Funktionen, deren
 partiellen Ableitungen alle stetig sind, zu den total differenzierbaren
 Funktionen. Daher beschränken wir uns auf diese Funktionen und halten fest:
 
-```{admonition} Wie wird die Richtungsableitung berechnet? 
+```{admonition} Wie wird die Richtungsableitung berechnet?
 :class: note
 Wenn alle partiellen Ableitung der Funktion $f$ stetig sind, kann die
 Richtungsableitung in  Richtung $v$ auch mit dem Gradienten $\nabla f$ berechnet
@@ -86,7 +85,6 @@ Im folgenden Video wird ausführlich ein Beispiel vorgerechnet.
 ```{dropdown} Video zu "Richtungsableitung berechnen" von Mathematrick
 <iframe width="560" height="315" src="https://www.youtube.com/embed/95KyHXzhRII" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 ```
-
 
 ## Rechenregeln für Gradienten
 
@@ -106,10 +104,10 @@ $$\nabla (c\cdot f(\vec{x})) = c \cdot \nabla f(\vec{x}).$$
 
 * Es gilt die Summenregel:
 
-$$\nabla \left(f(\vec{x} + g(\vec{x})\right) = \nabla f(\vec{x}) + \nabla
+$$\nabla \left(f(\vec{x}) + g(\vec{x})\right) = \nabla f(\vec{x}) + \nabla
 g(\vec{x}).$$
 
-* Es gilt die Produktregel: 
+* Es gilt die Produktregel:
   
   $$\nabla \left(f(\vec{x})\cdot g(\vec{x})\right) = \nabla f(\vec{x}) \cdot
   g(\vec{x}) + f(\vec{x})\cdot \nabla g(\vec{x}).$$
@@ -127,7 +125,7 @@ Zunächst folgen aber noch Videos, die die obigen Regeln erklären.
 
 ```{dropdown} Video zu "Summenregel Gradient" von Mathematische Methoden
 <iframe width="560" height="315" src="https://www.youtube.com/embed/OoO47lj7-BM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-``` 
+```
 
 ```{dropdown} Video zu "Faktorregel Gradient" von Mathematische Methoden
 <iframe width="560" height="315" src="https://www.youtube.com/embed/DiCAQfMMDk0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
