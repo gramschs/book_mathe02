@@ -119,7 +119,7 @@ import plotly.graph_objects as go
 # generate grid
 x = np.linspace(-2, 2, 101)
 y = np.linspace(-2, 2, 101)
-X, Y = np.meshgrid(x, y) 
+X, Y = np.meshgrid(x, y)
 
 # evaluate function
 Z = X**3 + Y**3 - X**2 + 2*Y**2 - 5*X + Y + 3
@@ -127,7 +127,7 @@ Z = X**3 + Y**3 - X**2 + 2*Y**2 - 5*X + Y + 3
 # plot
 fig = go.Figure()
 fig.add_trace(go.Surface(z=Z, x=x, y=y, colorscale='viridis'))
-fig.update_layout(title='f(x,y)=x^3 + y^3 - x^2 + 2y^2 - 5x + y + 3', 
+fig.update_layout(title='f(x,y)=x^3 + y^3 - x^2 + 2y^2 - 5x + y + 3',
 xaxis_title='x-Achse', yaxis_title='y-Achse')
 ```
 
@@ -138,7 +138,7 @@ gestalten, setzen wir jetzt tatsächlich die Konstante $c$ für die Variable $y$
 ein. Was übrig bleibt, ist eine Funktion, die nur noch der Variablen $x$
 abhängt. Diese Funktion nennen wir $g$:
 
-$$g(x) = x^3 + c - x^2 + 2c^2 - 5x + c + 3.$$
+$$g(x) = x^3 + c^3 - x^2 + 2c^2 - 5x + c + 3.$$
 
 Diese Funktion wird nun nach $x$ abgeleitet:
 
@@ -180,12 +180,12 @@ allen $x_i$, also allen Koordinatenachsen, gebildet wird, zeigt in die Richtung
 des steilsten Anstiegs. Diese Information über eine Funktion von mehreren
 Variablen ist so wichtig, dass der Vektor einen eigenen Namen hat: **Gradient**.
 
-```{admonition} Was ist ... der Gradient? 
+```{admonition} Was ist ... der Gradient?
 :class: note
 Wir betrachten eine Funktion $f$ von mehreren Variablen $x_1, x_2, \ldots, x_n$.
 Der Zeilenvektor mit allen 1. partiellen Ableitungen wird Gradient genannt. Es
 gibt sogar ein eigenes Formelzeichen für den Gradienten, das
-"Nabla"ausgesproichen wird und so aussieht: $\nabla$. 
+"Nabla"ausgesproichen wird und so aussieht: $\nabla$.
 
 Es gilt also
 
@@ -211,4 +211,3 @@ präsentiert.
 ```{dropdown} Video zu "Gradient" von Mathematische Methoden
 <iframe width="560" height="315" src="https://www.youtube.com/embed/627f_DgQJpY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 ```
-
