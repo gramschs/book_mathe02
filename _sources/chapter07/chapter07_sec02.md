@@ -15,4 +15,8 @@ Sie wissen, wann eine Funktion von mehreren unabhängigen Variablen **stetig** g
 Das folgende Video erklärt den Begriff der Stetigkeit für Funktionen von
 mehreren unabhängigen Variablen.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/0FoFSpOt5UY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+```{dropdown} Video Stetigkeit
+<iframe width="560" height="315" src="https://www.youtube.com/embed/0FoFSpOt5UY"
+title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; 
+clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+```
