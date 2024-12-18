@@ -151,7 +151,7 @@ $$\frac{\partial f(x,y)}{\partial x} = 3x^2 - 2x - 5.$$
 Jetzt betrachten wir die partielle Ableitung nach $y$ und setzen dafür anstatt
 der Variablen $x$ die Konstante $c$ ein. Diese Funktion nennen wir $h$:
 
-$$h(x) = c^3 + y^3 - c^2 + 2y^2 - 5c + y + 3.$$
+$$h(y) = c^3 + y^3 - c^2 + 2y^2 - 5c + y + 3.$$
 
 Diese Funktion nach $y$ abgeleitet ergibt
 
