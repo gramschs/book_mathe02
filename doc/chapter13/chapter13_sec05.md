@@ -425,7 +425,7 @@ $$x(t) = -\frac{1}{25}e^{-3t}\cdot (15t+8) + C\cdot e^{2t}, \quad C\in\mathbb{R}
 
 Spezielle Lösung für $x(0)=-5$:
 
-$$x(t) = -\frac{1}{25}e^{-3t}\cdot (15t+8) + \frac{17}{25}\cdot e^{2t}$$
+$$x(t) = -\frac{1}{25}e^{-3t}\cdot (15t+8) - \frac{117}{25}\cdot e^{2t}$$
 ```{dropdown} Lösungsweg
 Die DGL ist eine lineare inhomogene DGL mit $a_1(t)=1$ und $a_0(t)=-2$. Daher bestimmen wir zuerst die allgemeine Lösung der homogenen DGL
 
@@ -463,9 +463,9 @@ Für die spezielle Lösung soll
 
 $$x(0) = -\frac{1}{25}e^{0}\cdot (15\cdot 0+8) + C\cdot e^{0} \overset{!}{=} -5$$
 
-gelten. Die Gleichung wird nach $C$ aufgelöst und wir erhalten $C=\frac{17}{25}$. Also lautet die spezielle Lösung des Anfangwertproblems
+gelten. Die Gleichung wird nach $C$ aufgelöst und wir erhalten $C=-\frac{117}{25}$. Also lautet die spezielle Lösung des Anfangwertproblems
 
-$$x(t) = -\frac{1}{25}e^{-3t}\cdot (15t+8) + \frac{17}{25}\cdot e^{2t}.$$
+$$x(t) = -\frac{1}{25}e^{-3t}\cdot (15t+8) - \frac{117}{25}\cdot e^{2t}.$$
 ```
 ````
 
