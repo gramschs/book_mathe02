@@ -14,6 +14,7 @@ $$y'= -5y$$
 
 für $y(0)=5$.
 ```
+
 ````{admonition} Lösung
 :class: miniexercise, toggle
 Allgemeine Lösung:
@@ -41,7 +42,6 @@ Hinweis: Direkt integrieren hätte auch funktioniert.
 ```
 ````
 
-
 ```{admonition} Übung 13.2
 :class: miniexercise
 Lösen Sie das Anfangswertproblem
@@ -50,6 +50,7 @@ $$\dot{x} + 5x = -5t$$
 
 für $x(0)=5$.
 ```
+
 ````{admonition} Lösung
 :class: miniexercise, toggle
 Allgemeine Lösung:
@@ -110,6 +111,7 @@ $$y'-5y = \sin(-5x)$$
 
 für $y(0)=-1$.
 ```
+
 ````{admonition} Lösung
 :class: miniexercise, toggle
 Allgemeine Lösung:
@@ -170,6 +172,7 @@ $$2\dot{x} - 4x =e^{-t}$$
 
 für $x(0)=0$.
 ```
+
 ````{admonition} Lösung
 :class: miniexercise, toggle
 Allgemeine Lösung
@@ -230,7 +233,8 @@ $$y'-3y = x^2+2x+1$$
 
 für $y(0)=3$.
 ```
-````{admonition} Lösung 
+
+````{admonition} Lösung
 :class: miniexercise, toggle
 Allgemeine Lösung:
 
@@ -274,7 +278,7 @@ $$y(x) = \left(-\frac{1}{3}x^2 - \frac{8}{9}x - \frac{17}{27} \right) + C\cdot e
 
 Für die spezielle Lösung soll
 
-$$y(0) = \left(-\frac{1}{3}\cdot 0^2 - \frac{8}{9}\cdot 0 - \frac{17}{27} \right) + C\cdot e^{0} \overset{!}{=} -1$$
+$$y(0) = \left(-\frac{1}{3}\cdot 0^2 - \frac{8}{9}\cdot 0 - \frac{17}{27} \right) + C\cdot e^{0} \overset{!}{=} 3$$
 
 gelten. Die Gleichung wird nach $C$ aufgelöst und wir erhalten $C=\frac{98}{27}$. Also lautet die spezielle Lösung des Anfangwertproblems
 
@@ -290,7 +294,8 @@ $$\dot{x} + 4x = \sin(-2t)$$
 
 für $x(0)=-1$.
 ```
-````{admonition} Lösung 
+
+````{admonition} Lösung
 :class: miniexercise, toggle
 Allgemeine Lösung:
 
@@ -350,7 +355,8 @@ $$y'-3y = -e^{2x}$$
 
 für $y(0)=1$.
 ```
-````{admonition} Lösung 
+
+````{admonition} Lösung
 :class: miniexercise, toggle
 Allgemeine Lösung:
 
@@ -410,7 +416,8 @@ $$\dot{x} - 2x = (3t+1) \, e^{-3t}$$
 
 für $x(0)=-5$.
 ```
-````{admonition} Lösung 
+
+````{admonition} Lösung
 :class: miniexercise, toggle
 Allgemeine Lösung:
 
@@ -471,6 +478,7 @@ y_1' &= y_1 + y_2 &\\
 y_2' &= 4 y_1 - 2y_2 & 
 \end{align*} 
 ```
+
 ````{admonition} Lösung
 :class: miniexercise, toggle
 \begin{align*}
@@ -520,6 +528,7 @@ y_1' &= y_1  +y_2&\\
 y_2' &= 4y_1 +y_2 &
 \end{align*} 
 ```
+
 ````{admonition} Lösung
 :class: miniexercise, toggle
 \begin{align*}
