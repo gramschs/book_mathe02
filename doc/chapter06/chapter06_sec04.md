@@ -28,7 +28,7 @@ Funktionen** $f$ die folgende Fourierreihe:
 
 $$f(t) = \frac{a_0}{2} + \sum_{k=1}^{\infty} a_k \cos(k \omega t)$$
 
-mit den Fourierkoeffizienten 
+mit den Fourierkoeffizienten
 
 $$a_k = \frac{4}{T}\int_{0}^{T/2} f(t) \cos(k \omega t) \, dt.$$
 
@@ -37,7 +37,7 @@ fallen die $a_k$ weg. Es bleibt eine reine Sinusreihe übrig.
 
 $$f(t) = \sum_{k=1}^{\infty} b_k \sin(k \omega t)$$
 
-mit 
+mit
 
 $$b_k = \frac{4}{T} \int_{0}^{T/2} f(t) \sin(k \omega t) \, dt.$$
 
@@ -51,7 +51,7 @@ Wenn zwei Funktionen $f$ und $g$ die gleiche Periode $T$ haben, so hat die Summe
 der beiden Funktionen ebenfalls wieder die Periode $T$. Liegen nun für beide
 Funktionen Fourierreihen vor, so dürfen wir auch einfach die
 Fourierkoeffizienten addieren, um eine Approximation der Funktion $f+g$ zu
-erhalten. 
+erhalten.
 
 ## Ableitung
 
