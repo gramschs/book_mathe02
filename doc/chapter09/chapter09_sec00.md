@@ -1,4 +1,4 @@
-# 9. Linearisierung und Extremwerte
+# 9. Doppelintegral
 
 Themen:
 

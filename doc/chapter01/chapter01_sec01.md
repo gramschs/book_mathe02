@@ -1,287 +1,207 @@
----
-jupytext:
-  cell_metadata_filter: -all
-  formats: md:myst
-  main_language: python
-  text_representation:
-    extension: .md
-    format_name: myst
-    format_version: 0.13
-    jupytext_version: 1.14.7
----
+# 1.1 Stammfunktion und bestimmtes Integral
 
-# 1.1 Ableitungen
-
-Die Differentialrechnung ist ein zentrales Thema der Analysis. Mit Hilfe der
-Differentialrechnung wird untersucht, wie sich Funktionen verändern. In diesem
-Kapitel werden die dazu nötigen Begriffe eingeführt. Zunächst geht es um
-Veränderungen in einem Bereich (mittlere Änderungsrate, Differenzenquotient und
-Steigung einer Sekante) und dann um punktuelle Veränderungen (momentane
-Änderungsrate, Differentialquotienten, Steigung einer Tangente, Ableitung).
+In diesem Abschnitt führen wir zunächst Stammfunktionen und das bestimmte
+Integral ein, ohne die dazugehörigen Anwendungen und Herleitungen
+(Riemann-Integral oder Lesbegue-Integral) zu erläutern.
 
 ## Lernziele
 
 ```{admonition} Lernziele
 :class: goals
-* Sie wissen, was die **mittlere Änderungsrate** einer zeitabhängigen Größe ist
-  und können diese berechnen.
-* Sie können den **Differenzenquotienten** einer Funktion berechnen.
-* Sie können den Differenzenquotient als **Steigung der Sekante** geometrisch
-  interpretieren.
-* Sie wissen, was die **momentane Änderungsrate** einer zeitabhängigen Größe ist
-  und können diese berechnen.
-* Sie können den **Differentialquotienten** bzw. die **Ableitung** einer
-  Funktion berechnen.
-* Sie können den Differentialquotient/Ableitung als **Steigung der Tangente**
-  geometrisch interpretieren.
+* Sie wissen, was eine **Stammfunktion** ist.
+* Sie wissen, dass wenn es eine Stammfunktion gibt, es gleich unendlich viele
+  Stammfunktionen gibt, die sich durch eine **Integrationskonstante**
+  unterscheiden.
+* Sie können mit Hilfe der Stammfunktionen ein **bestimmtes Integral** der
+  Funktion $f$ in einem Intervall $[a,b]$ berechnen (Hauptsatz der Differential-
+  und Integralrechnung).
+* Sie wissen, wie das bestimmte Integral mathematisch abgekürzt wird, nämlich
+  $\int_{a}^{b} f(x) \, dx$, und können die einzelnen Bestandteile dieser
+  Notation bezeichnen:
+  * Integralsymbol $\int$,
+  * untere Integrationsgrenze $a$,
+  * obere Integrationsgrenze $b$,
+  * Integrand $f(x)$,
+  * Integrationsvariable $dx$.
+* Sie können das bestimmte Integral über $f$ von  $a$ nach $b$ als den
+  Flächeninhalt zwischen Graph $f(x)$ und x-Achse interpretieren. Flächeninhalte
+  oberhalb der x-Achse sind positiv, Flächeninhalte unterhalb der x-Achse werden
+  negativ gezählt. Daher nennt man diese Flächeninhalte **orientierte
+  Flächeninhalte**. 
 ```
 
-## Die mittlere Änderungsrate oder der Differenzenquotient
+## Stammfunktion
 
-2018 hat Italien ein neues System zur Geschwindigkeitsmessung in Betrieb
-genommen (siehe
-[https://www.verkehrsrundschau.de](https://www.verkehrsrundschau.de/nachrichten/transport-logistik/italien-neues-system-zur-geschwindigkeitsmessung-in-betrieb-2985039)).
-Das System funktioniert nach dem Prinzip
-[Abschnittskontrolle](https://de.wikipedia.org/wiki/Abschnittskontrolle), das
-wie folgt funktioniert. Entlang der Strecke befinden sich mehrere
-Kontrollpunkte. Wenn ein Auto den ersten Kontrollpunkt passiert, wird es
-fotografiert und sein Kennzeichen ermittelt. Wird das Auto dann beim nächsten
-Kontrollpunkt erneut per Kamera identifiziert, kann aus der Strecke zwischen den
-Kontrollpunkten und der verstrichenen Zeit zwischen den beiden Aufnahmen die
-Durchschnittsgeschwindigkeit berechnet werden. Ist die
-Durchschnittsgeschwindigkeit höher als die erlaubte Geschwindigkeit, wird
-automatisch ein Bußgeldverfahren eingeleitet.
-
-Ein deutscher Tourist ist mit seinem Pkw auf der Autobahn unterwegs. Nachdem er
-auf die Autobahn aufgefahren ist, protokolliert sein Fahrtenschreiber zweimal
-pro Minute die zurückgelegte Strecke. Die Höchstgeschwindigkeit auf
-italienischen Autobahnen ist 130 km/h. Wird er einen Bußgeldbescheid bekommen?
-
-```{code-cell} ipython3
-:tags: [remove-input]
-import numpy as np
-import plotly.express as px
-
-s_km = np.array([1.1, 
-    2.1, 3.1, 4.2, 5.2, 6.3, 
-    7.3, 8.4, 9.4, 10.5, 11.5, 
-    12.6, 13.6, 14.7, 15.7, 16.8, 
-    17.8, 18.9, 20.0, 21.0, 22.1, 
-    23.1, 24.2, 25.3, 26.4, 27.6, 
-    28.7, 29.8, 30.9, 32.0, 33.2, 
-    34.3, 35.4, 36.5, 37.7, 38.8, 
-    39.9, 41.1, 42.2, 43.3, 44.4, 
-    45.5, 46.6, 47.7, 48.8, 49.8, 
-    50.8, 51.8, 52.8, 53.8, 54.8, 
-    55.9, 57.0, 58.1, 59.2, 60.2, 
-    61.3, 62.4, 63.5, 64.6, 65.6])
-t = np.linspace(10, 40, len(s_km))
-fig = px.scatter(x = t, y = s_km,
-                 labels = {'x': 'Zeit [min]', 'y': 'Strecke seit Autobahnauffahrt [km]'},
-                 title='Protokoll des Fahrtenschreibers')
-fig.show()
-```
-
-```{admonition} Mini-Übung
-:class: miniexercise
-Wenn Sie mit dem Mauszeiger über die Punkte des Diagramms fahren, werden die
-Zeit und die Strecke, die seit der Autobahnauffahrt zurückgelegt wurde,
-eingeblendet.
-
-1. Berechnen Sie die Durchschnittsgeschwindigkeit im Zeitraum [10 min, 40 min]. 
-2. Berechnen Sie die Durchschnittsgeschwindigkeit im Zeitraum [15 min, 20 min]. 
-3. Berechnen Sie die Durchschnittsgeschwindigkeit im Zeitraum [20 min, 30 min]. 
-```
-
-```{admonition} Lösung
-:class: miniexercise, toggle
-1. Die Strecke zum Zeitpunkt t<sub>1</sub> = 10 min ist s<sub>1</sub> = 1.1 km. Zum Zeitpunkt t<sub>2</sub> = 40 min wurden s<sub>2</sub> = 65.6 km zurückgelegt. Damit ist die Durchschnittsgeschwindigkeit im Zeitraum [10 min, 40 min]
-
-$$\frac{65.6 \text{ km} - 1.1 \text{ km}}{40 \text{ min} - 10 \text{ min}} = 
-\frac{64.5 \text{ km}}{30 \text{ min}} = \frac{64.5 \text{ km}}{0.5 \text{ h}} = 129.0 \text{ km/h}.$$
-
-2. Die Strecke zum Zeitpunkt t<sub>1</sub> = 15 min ist s<sub>1</sub> = 11.5 km. Zum Zeitpunkt t<sub>2</sub> = 20 min wurden s<sub>2</sub> = 22.1 km zurückgelegt. Damit ist die Durchschnittsgeschwindigkeit im Zeitraum [15 min, 20 min]
-
-$$\frac{22.1 \text{ km} - 11.5 \text{ km}}{20 \text{ min} - 15 \text{ min}} = 
-\frac{10.6 \text{ km}}{5 \text{ min}} = \frac{10.6 \text{ km}}{1/12 \text{ h}} = 127.2 \text{ km/h}.$$
-
-3. Die Strecke zum Zeitpunkt t<sub>1</sub> = 20 min ist s<sub>1</sub> = 22.1 km. Zum Zeitpunkt t<sub>2</sub> = 30 min wurden s<sub>2</sub> = 44.4 km zurückgelegt. Damit ist die Durchschnittsgeschwindigkeit im Zeitraum [20 min, 30 min]
-
-$$\frac{44.4 \text{ km} - 22.1 \text{ km}}{30 \text{ min} - 20 \text{ min}} = 
-\frac{22.3 \text{ km}}{10 \text{ min}} = \frac{22.3 \text{ km}}{1/6 \text{ h}} = 133.8 \text{ km/h}.$$
-
-Je nachdem, wo das Auto die Kontrollpunkte passiert hat, droht ein Bußgeld.
-```
-
-Die obige Vorgehensweise zur Ermittlung der Durchschnittsgeschwindigkeit kann
-auf andere zeitabhängige Größen verallgemeinert werden. Ist auf der x-Achse die
-Zeit $t$ aufgetragen und auf der y-Achse die zeitabhängige Größe $f(t)$, so gibt
-der Quotient
-
-\begin{equation*}
-\frac{f(t_2) - f(t_1)}{t_2 - t_1}
-\end{equation*}
-
-die sogenannte **mittlere Änderungsrate** der zeitabhängigen Größe $f(t)$ an.
-
-```{admonition} Was ist ... die mittlere Änderungsrate?
+```{admonition} Was ist ... eine Stammfunktion?
 :class: note
-Die mittlere Änderungsrate einer zeitabhängigen Größe gibt an, wie sich die
-zeitabhängige Größe durchschnittlich zwischen zwei Zeitpunkten verändert. 
-Sie wird folgendermaßen berechnet:
-\begin{equation*} 
-\text{mittlere Änderungsrate} = \frac{f(t_2) - f(t_1)}{t_2 - t_1}.
-\end{equation*}
-Dabei stehen $t_1$ und $t_2$ für die beiden Zeitpunkte und $f(t_1)$ und $f(t_2)$
-jeweils für den Wert der zeitabhängigen Größe zu diesen Zeitpunkten.
+Angenommen, die Funktion $f$ ist stetig. Dann wird die Funktion $F$
+Stammfunktion von $f$ genannt, wenn ihre Ableitungsfunktion gleich $f$ ist, also
+wenn gilt $F'(x) =  f(x)$.
 ```
 
-Allgemeiner betrachtet, kann jeder funktionale Zusammenhang, bei dem auf der
-x-Achse die Ursache und auf der y-Achse die Wirkung dargestellt sind, auf diese
-Weise analysiert werden. Die abhängige Größe (Wirkung) bezeichnen wir mit $f$,
-die Ursache mit $x$. Betrachten wir zwei Messungen zur Ursache $x_1$ und zur
-Ursache $x_2$, dann wird der Quotient
+Beispiel: Wir betrachten die Funktion $f(x)=x$. Mit ein bisschen Probieren fällt
+auf, dass die Funktion $F(x)=\frac{1}{2}x^2$ abgeleitet genau $x$ ergibt. Also
+ist die Funktion $F$ eine Stammfunktion von $f$. Jetzt probieren wir die
+Funktion $\tilde{F}(x)=\frac{1}{2}x^2+1$ aus. Wenn wir diese Funktion ableiten,
+kommt
 
-\begin{equation*}
-\frac{f(x_2) - f(x_1)}{x_2 - x_1}
-\end{equation*}
+$$\tilde{F}'(x) = \left( \frac{1}{2}x^2 + 1 \right)'= x + 0 = x$$
 
-ganz allgemein **Differenzenquotient** genannt. Im Zähler steht eine Differenz,
-im Nennen steht eine Differenz, der Term ist also ein Quotient von Differenzen
-oder kurz ausgedrückt, ein Differenzenquotient. Er gibt an, wie sich
-durchschnittlich die Wirkung verändert, wenn sich deren Ursache verändert.
+heraus. Das ist aber auch gleich der Funktion $f$. Welches ist denn nun die
+richtige Stammfunktion?
 
-```{admonition} Was ist ... der Differenzenquotient?
+Beide Funktionen sind eine Stammfunktion. Wenn eine Funktion $f$ eine
+Stammfunktion hat, dann hat sie gleich unendlich viele Stammfunktionen, denn es
+muss nur eine reelle Zahl hinzuaddiert werden und schon hat man eine neue
+Stammfunktion.
+
+```{admonition} Wie viele Stammfunktionen gibt es?
 :class: note
-Für eine reellwertige Funktion $f$, bei der das Intervall $[x_1, x_2]$ zur
-Definitionsmenge gehört, bezeichnen wir den Term
-\begin{equation*} 
-\frac{f(x_2) - f(x_1)}{x_2 - x_1} 
-\end{equation*}
-als Differenzenquotient von $f$ im Intervall $[x_1, x_2]$.
+Wenn eine Funktion $f$ eine Stammfunktion hat, hat sie gleich unendlich viele
+Stammfunktionen. Die Stammfunktionen unterscheiden sich nur dadurch, dass eine
+reelle Zahl am Ende dazuaddiert wird. Diese Zahl wird **Integrationskonstante**
+genannt.
 ```
 
-## Der Differenzenquotient geometrisch interpretiert
+Begründung: Wenn $F$ die erste gefundene Stammfunktion ist, dann muss ihre 1.
+Ableitung gleich $f$ sein, also $F'(x) = f(x)$ gelten. Dann basteln wir eine
+neue Funktion $\tilde{F}(x) = F(x) + c$ mit $c\in\mathbb{R}$. Das muss dann aber
+auch eine Stammfunktion sein, denn
 
-Bisher haben wir zwei verschiedene Kontrollpunkte auf der Autobahn oder
-allgemein zwei verschiedene Ursachen $x_1$ und $x_2$ betrachtet. Betrachten wir
-die Punkte $(x_1, f(x_1))$ und $(x_2, f(x_2))$ rein geometrisch, also mit ihren
-Koordinaten $(x_1,y_1)$ und $(x_2,y_2)$, so lautet der Differenzenquotient
+$$\tilde{F}'(x) = \left(F(x)+c\right)' = F'(x) + 0 = f(x).$$
 
-\begin{equation*}
-\frac{f(x_2) - f(x_1)}{x_2 - x_1} = \frac{y_2 - y_1}{x_2 - x_1} = \frac{\Delta y}{\Delta x}.
-\end{equation*}
-
-Verbinden wir die beiden Punkte $(x_1,y_1)$ und $(x_2,y_2)$ durch eine Gerade,
-dann ist der Differenzenquotient die Steigung dieser Gerade. Diese spezielle
-Gerade, die zwei Punkte eines Funktionsgraphens miteinander verbindet, wird
-**Sekante** genannt. Der Differenzenquotient ist also die Steigung der Sekante.
-
-```{dropdown} Video zu "Mittlere Änderungsrate" von Mathematrick
-<iframe width="560" height="315" src="https://www.youtube.com/embed/sXxK-JATrc0?si=bdcHhSJOUHSl3fNg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+```{dropdown} Video: Stammfunktion und unbestimmtes Integral
+<iframe width="560" height="315" src="https://www.youtube.com/embed/m__ID4PHBIA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 ```
 
-## Die momentane Änderungsrate oder der Differentialquotient
+## Wichtige Stammfunktionen
 
-Die mittlere Änderungsrate gibt uns eine durchschnittliche Veränderung innerhalb
-eines Intervalls $[t_1, t_2]$. Aber was ist, wenn wir wissen möchten, wie sich
-eine zeitabhängige Größe genau in einem bestimmten Zeitpunkt ändert? Hier kommt
-die momentane Änderungsrate ins Spiel. Bei der Betrachtung der momentanen
-Änderungsrate konzentrieren wir uns auf ein Zeitintervall, das so klein wird,
-dass es fast einem einzelnen Punkt entspricht. In diesem Kontext nähert sich
-$t_2$ kontinuierlich $t_1$ an, bis sie praktisch identisch sind. Mathematisch
-ausgedrückt betrachten wir den Grenzwert $t_2 \to t_1$. Da die mittlere
-Änderungsrate für das Intervall $[t_1, t_2]$ definiert ist, ändert sie sich mit
-dem Intervall. Es entsteht eine Folge von mittleren Änderungsraten für immer
-kleiner werdende Intervalle $[t_1, t_2]$. Wenn diese Folge von mittleren
-Änderungsraten einen Grenzwert hat, nennen wir diesen Grenzwert **momentane
-Änderungsrate**.
+Zu Funktionen, die häufig im Maschinenbau vorkommen, sollten Sie die
+Stammfunktionen auswendig kennen.
 
-```{admonition} Was ist ... die momentane Änderungsrate?
+* $f(x) = a \Rightarrow F(x) = ax + c$
+* $f(x) = x^{n} \Rightarrow F(x) = \frac{1}{n+1} x^{n+1} + c$ ($n$ muss ungleich -1 sein)
+* $f(x) = x^{-1}=\frac{1}{x} \Rightarrow F(x) = |\ln(x)| + c$
+* $f(x) = e^{x} \Rightarrow F(x)=e^{x}+c$
+* $f(x) = \sin(x) \Rightarrow F(x)=-\cos(x)+c$
+* $f(x) = \cos(x) \Rightarrow F(x)=\sin(x)+c$
+* $f(x)=\frac{1}{1+x^2} \Rightarrow F(x) = \arctan(x) + c$
+
+```{dropdown} Video: wichtige Stammfunktionen
+<iframe width="560" height="315" src="https://www.youtube.com/embed/hKiAG99XmTE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+```
+
+## Bestimmtes Integral
+
+Stammfunktionen sind für viele technische Anwendungen nützlich, weil sie
+sozusagen die Umkehrung der Ableitung sind. Das Suchen einer Stammfunktion wird
+**Integration** genannt. Eine Anwendung der Stammfunktion ist die Berechnung des
+sogenannten bestimmten Integrals. Das **bestimmte Integral** ist wichtig für die
+Berechnung von Flächeninhalten, Längen von Kurven und Volumen von
+Rotationskörpern.
+
+Der sogenannte **Hauptsatz der Differential- und Integralrechnung** sagt aus,
+dass das bestimmte Integral mit Hilfe von Stammfunktionen folgendermaßen
+berechnet wird.
+
+```{admonition} Wie wird das bestimmte Integral berechnet?
 :class: note
-Die momentane Änderungsrate beschreibt die Änderung einer zeitabhängigen Größe für ein
-unendlich kleines Intervall. Mathematisch ausgedrückt, ist sie der Grenzwert der
-mittleren Änderungsrate:
-\begin{equation*} 
-\text{momentane Änderungsrate} = 
-\lim_{t_2 \to t_1} \frac{f(t_2) - f(t_1)}{t_2 - t_1},
-\end{equation*}
-sofern der Grenzwert existiert.
+Das bestimmte Integral eine Funktion $f$ in einem Intervall $[a,b]$ wird
+berechnet, indem zuerst eine Stammfunktion $F$ gebildet wird. Dann wird in die
+Stammfunktion $F$ zuerst $b$ eingesetzt und dann $a$. Aus beiden Werten wird
+dann die Differenz gebildet. Diese Zahl heißt bestimmtes Integral von $f$ im
+Intervall $[a,b]$.
+
+Mathematisch wird dazu folgende Schreibweise verwendet:
+
+$$\int_{a}^{b} f(x)\, dx = F(b) - F(a).$$
 ```
 
-Im Gegensatz zum Differenzenquotienten, der sich auf ein Zeitintervall $t_1,
-t_2]$ bezieht, bezieht sich der Differentialquotient auf einen einzelnen
-Zeitpunkt $t_1$.
-
-Betrachten wir das obige Beispiel des deutschen Touristen auf der italienischen
-Autobahn. Während die mittlere Änderungsrate uns die durchschnittliche
-Geschwindigkeit über ein bestimmtes Zeitintervall gibt, würde die momentane
-Änderungsrate uns die exakte Geschwindigkeit zu einem bestimmten Zeitpunkt, z.B.
-genau 20 Minuten nach der Autobahnauffahrt, anzeigen.
-
-Auch hier können wir den Begriff der momentanen Änderungsrate auf beliebige
-funktionale Zusammenhänge verallgemeinern. Aus dem Differenzenquotienten wird so
-der Differentialquotient.
-
-```{admonition} Was ist ... der Differentialquotient?
-:class: note
-Wenn das Intervall des Differenzenquotienten unendlich klein wird und der
-Grenzwert des Differenzenquotienten  
-\begin{equation*} 
-\lim_{x_2 \to x_1} \frac{f(x_2) - f(x_1)}{x_2 - x_1}
-\end{equation*}
-existiert, nennt man diesen Grenzwert Differentialquotient der Funktion $f$ an
-der Stelle $x_1$.
+```{dropdown} Video: bestimmtes Integral
+<iframe width="560" height="315" src="https://www.youtube.com/embed/XtWVTl4fMmY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 ```
 
-## Geometrische Interpretation des Differentialquotienten
+## Beispiel für bestimmtes Integral
 
-Während der Differenzenquotient die Steigung einer Sekante zwischen zwei Punkten
-eines Funktionsgraphen beschreibt, gibt der Differentialquotient die Steigung
-der Tangente an einem bestimmten Punkt des Graphen an. Die **Tangente** ist eine
-Gerade, die den Graphen nur an diesem einen Punkt berührt.
+Als nächstes soll das bestimmte Integral der Funktion $f(x)= 5x^2$ im Intervall
+$[-1,3]$ ausgerechnet werden. Als erstes wird eine Stammfunktion berechnet
+(geraten):
 
-Mathematisch ausgedrückt, wenn der Abstand $\Delta x$ zwischen zwei x-Werten $x$
-und $x + \Delta x$ gegen Null geht, nähert sich die Sekante einer Tangente an.
-Der Differentialquotient
+$$F(x) = \frac{5}{3}x^3.$$
 
-\begin{equation*}
-\lim_{\Delta x \to 0}\frac{f(x + \Delta x) - f(x)}{\Delta x}
-\end{equation*}
+Danach werden $a=-1$ und $b=3$ in die Stammfunktion eingesetzt und die Differenz
+berechnet:
 
-gibt dann die Steigung dieser Tangente am Punkt $(x, f(x)$ an. Die Steigung der
-Tangente der Funktion $f$ an der Stelle $x$ wird meist mit einem Strich
-abgekürzt, also
+* $F(-1)=\frac{5}{3}(-1)^3 = -\frac{5}{3}$
+* $F(3) = \frac{5}{3}(3)^3 = 45$
+* Differenz: $F(3) - F(-1) = 45 - \left(-\frac{5}{3}\right) = \frac{140}{3}$.
 
-\begin{equation*}
-f'(x) = \lim_{\Delta x \to 0}\frac{f(x + \Delta x) - f(x)}{\Delta x}.
-\end{equation*}
+Damit ist das bestimmte Integral der Funktion $f(x) = 5x^2$ im Intervall
+$[-1,3]$ die Zahl $\frac{140}{3}$.
 
-Man spricht das als "f Strich an der Stelle x ist ..." oder sagt "die Ableitung
-der Funktion f an der Stelle x ist ...".
+Es ist etwas umständlich, so viel Text in eine Rechnung zu packen. Deshalb ist
+folgende Schreibweise üblich:
 
-Geometrisch gesehen ist die Tangente die beste lineare Näherung der Funktion an
-einem Punkt. Sie gibt uns eine Vorstellung davon, wie sich die Funktion in der
-unmittelbaren Umgebung dieses Punktes verhält.
+$$\int_{-1}^{3} 5x^2 \, dx = \left[\frac{5}{3}x^3 \right]_{-1}^{3} = 45 -
+\left(-\frac{5}{3}\right) = \frac{140}{3}.$$
 
-Um noch einmal auf das Beispiel zurückzukommen: Betrachten Sie die
-Geschwindigkeit eines Autos auf der Autobahn. Während der Differenzenquotient
-uns die durchschnittliche Geschwindigkeit zwischen zwei Zeitpunkten gibt, würde
-der Differentialquotient uns die exakte Geschwindigkeit zu einem bestimmten
-Zeitpunkt anzeigen.
+Zuerst kommt die mathematische Schreibweise für das bestimme Integral mit
 
-```{dropdown} Video zu "Differentialquotient" von Mathematrick
-<iframe width="560" height="315" src="https://www.youtube.com/embed/_L6wmTzod_I?si=Fj3jbGIOcc3mC4wc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+$$\int_{-1}^{3}  5x^2 \, dx.$$
+
+Das geschwungene $\int$ wird **Integralsymbol** genannt. Der Anfang des
+Intervalls, hier also -1, wird **untere Integrationsgrenze** genannt. Das Ende
+des Intervalls, hier also 3, wird **obere Integrationsgrenze** genannt. Die
+Funktion, von der die Stammfunktion gesucht wird, hier also $f(x)=5x^2\, dx$,
+wird **Integrand** genannt. Da manchmal Funktionen auch Parameter enthalten,
+muss eindeutig geklärt werden, welches die Variable der Funktion ist. Das wird
+durch die **Integrationsvariable** spezifiziert, hier $dx$. Warum da ein "d"
+dabei steht, kommt in einem späteren Kapitel.
+
+In der Rechnung muss als erstes die Stammfunktion $F$ berechnet werden. Um klar
+zu machen, dass das jetzt die Stammfunktion ist, werden sehr große eckige
+Klammern verwendet, hier also $\left[\frac{5}{3}x^3\right]$. Für die
+Integrationsvariable $c$ wählen wir Null. In der anschließenden Differenzbildung
+würde sie ohnehin wegfallen. Zuletzt folgt noch das Einsetzen der
+Integrationsgrenzen in die Stammfunktion. Zuerst wird die obere
+Integrationsgrenze $b=3$ eingesetzt, hier also $F(3)=45$, und dann der Wert
+der Stammfunktion an der unteren Integrationsgrenze, hier also
+$F(-1)=-\frac{5}{3}$ subtrahiert.
+
+Im folgenden Video finden Sie weitere Beispiele.
+
+```{dropdown} Video: bestimmtes Interal - Beispiele
+<iframe width="560" height="315" src="https://www.youtube.com/embed/aEtIsjWr0dg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 ```
 
-```{dropdown} Video zu "Ableitung" von Mathematische Methoden
-<iframe width="560" height="315" src="https://www.youtube.com/embed/FW7Vd1VI3uw?si=Ij7j2mb5CIKNYUEH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+## Integrale als Fläche interpretiert
+
+Bisher ist das bestimmte Integral über $f$ von $a$ bis $b$ einfach eine Zahl,
+die als Differenz von der Stammfunktion $F$ an den Stellen $a$ und $b$ bestimmt
+wird, also $F(b)-F(a)$. Je nach Anwendung wird dieser Zahl eine ganz bestimmte
+Bedeutung gegeben. Als ersten und wichtigsten Fall betrachten wir das Integral
+in der Geometrie. Hier entspricht das Integral von $a$ bis $b$ über $f$ dem
+**orientierten Flächeninhalt** zwischen dem Funktionsgraphen $f(x)$ und der
+x-Achse. Aber was ist eigentlich der orientierte Flächeninhalt?  
+
+Wenn alle Funktionswerte $f(x)$ oberhalb der x-Achse liegen, dann ist $f(x)\geq
+0$ für alle $x$ im Intervall $[a,b]$. Dann ist der Flächeninhalt zwischen
+$f(x)$, der x-Achse und den Geraden $x=a$ und $x=b$ gleich dem Integral über $f$ , d.h.
+
+$$A = \int_{a}^{b} f(x)\, dx.$$
+
+Liegen aber alle Funktionswerte $f(x)$ unterhalb der x-Achse, so ist das
+Integral negativ. Aber eigentlich entspricht es auch der Fläche, nur sind
+Flächen natürlich immer positiv. Deswegen sagen wir, der Flächeninhalt ist
+orientiert. Liegt die Fläche oberhalb der x-Achse, so wird diese positiv
+gewertet. Liegt sie unterhalb der x-Achse, wird der orientierte Flächeninhalt
+mit einem Minus versehen, um klar zu machen, dass diese Fläche unterhalb der
+x-Achse liegt.
+
+In dem folgenden Video wird die Flächeninterpretation des Integrals nochmal
+erläutert und auch gezeigt, wie diese Interpretation bei punktsymmetrischen
+Funktionen ausgenutzt werden kann, sich selbst das Rechnen etwas zu erleichtern.
+
+```{dropdown} Video: bestimmtes Integral - Flächeninterpretation
+<iframe width="560" height="315" src="https://www.youtube.com/embed/6rJOt8mWY_I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 ```
-
-## Zusammenfassung und Ausblick
-
-In diesem Kapitel haben wir mit der Ableitung den zentralen Begriff der
-Differentialrechnung kennengelernt. Es ist jedoch mühsam, die Ableitung bzw. den
-Differentialquotienten als Grenzwert einer Folge von Differenzenquotienten zu
-berechnen. Daher werden wir uns im nächsten Kapitel mit Rechenregeln für
-Ableitungen beschäftigen, die die Grenzwertbildung vermeiden.

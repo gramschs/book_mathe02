@@ -1,4 +1,4 @@
-# 12. Einführung Differentialgleichungen 
+# 12. Lineare Differentialgleichungen
 
 Themen:
 

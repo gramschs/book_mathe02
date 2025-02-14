@@ -1,55 +1,175 @@
-# 5.3 Wichtige Potenzreihen
+# 5.3 Beispiele für Fourierreihen
 
-Es gibt einige wichtige Taylorreihen, die in den Ingenieurwissenschaften sehr
-häufig zur Approximation bestimmter Funktionen verwendet werden. Im Folgenden
-werden wir uns mit einigen dieser Taylorreihen beschäftigen.
+In diesem Kapitel untersuchen wir drei klassische Beispiele für Fourierreihen:
+die Rechteckschwingung, die Sägezahnschwingung und die Dreieckschwingung. Diese
+Funktionen treten häufig in der Signalverarbeitung und der Physik auf, etwa bei
+der Beschreibung von periodischen Signalen oder der Analyse von Schwingungen.
 
 ## Lernziele
 
 ```{admonition} Lernziele
 :class: goals
-Sie kennen die wichtigsten Potenz- bzw. Taylorreihen.
+* Sie können die Fourierreihe einer **Rechteckschwingung** berechnen.
+* Sie können die Fourierreihe einer **Sägezahnschwingung** berechnen.
+* Sie können die Fourierreihe einer **Dreieckschwingung** berechnen.
 ```
 
-## Die Exponential- und Logarithmusfunktion
+## Die Rechteckschwingung
 
-Die Taylorreihe für die Exponentialfunktion $f(x)=e^x$ am Entwicklungspunkt
-$x_0=0$ ist:
+Die Rechteckschwingung (manchmal auch Rechteckimpuls oder Rechtecksignal
+genannt) ist eine periodische Funktion, die zwischen zwei konstanten Werten
+wechselt. Als Beispiel für eine Rechteckschwingung betrachten wir die
+Rechteckfunktion
 
-$$e^x = 1 + x + \frac{x^2}{2!} + \frac{x^3}{3!} + \ldots = \sum_{k=0}^{\infty}
-\frac{x^k}{k!}.$$
+$$f(t) = \begin{cases} 1,  \quad &0 \leq t < \pi,\\
+-1, \quad &\pi \leq t < 2\pi, \end{cases}$$
 
-Der Konvergenzradius ist unendlich, d.h. die Approximation der
-Exponentialfunktion durch ihre Taylorreihe gilt für alle reellen Zahlen
-$x\in\mathbb{R}$.
+auf dem Intervall $[0, 2\pi]$ und setzen sie periodisch fort. Die Periode ist
+daher $T = 2\pi$. Das folgende Applet zeigt eine interaktive Visualisierung der
+Rechteckschwingung und der dazugehörigen Fourierreihe.
 
-Die Logarithmusfunktion $f(x)=\ln(x)$ ist nur für positive reelle Zahlen $x > 0$
-definiert. Daher können wir nicht den üblichen Entwicklungspunkt $x_0=0$ nehmen,
-sondern nehmen stattdessen $x_0=1$. Die Taylorreihe lautet dann
+```{admonition} Interaktives Applet "Fourierreihe Rechteckschwingung"
+:class: miniexercise
+Das folgende interaktive Applet [Fourierreihe
+Rechteckschwingung](https://www.hartundtrocken.de/my-product/interaktiv-fourier-reihe-der-rechtecksfunktion/)
+veranschaulicht die Rechteckschwingung sowie ihre Fourierreihe. Experimentieren
+Sie mit dem Schieberegler, um zu beobachten, wie sich die Fourierreihe durch
+Hinzufügen weiterer Glieder der Reihe der ursprünglichen Rechteckfunktion
+annähert.
+```
 
-$$\ln(x) = (x-1) - \frac{(x-1)^2}{2} + \frac{(x-1)^3}{3} - \ldots =
-\sum_{k=1}^{\infty}\frac{(-1)^{k+1}}{k}(x-1)^k.$$
+Nun berechnen wir die Fourierkoeffizienten der Rechteckschwingung. Die
+allgemeine Formel für den ersten Fourierkoeffizient $a_0$ lautet mit der Periode
+$T=2\pi$
 
-Die Taylorreihe der Logarithmusfunktion hat den Konvergenzradius 1, d.h. die
-Approximation ist nur im Konvergenzbereich $0 < x \leq 2$ gültig.
+$$a_0 = \frac{2}{T} \int_{-T/2}^{T/2} f(t) \, dt =
+\frac{1}{\pi}\int_{-\pi}^{\pi}f(t)\,dt.$$
 
-## Die Sinus- und Kosinusfunktion
+Die Rechteckfunktion ist für zwei Abschnitte definiert, daher teilen wir das
+Integral entsprechend in die beiden Intervalle $[-\pi,0]$ und $[0,\pi]$ auf. Im
+ersten Intervall $[-\pi, 0]$ ist die Rechteckschwingung konstant $f(t) = -1$, im
+zweiten Intervall $[0,\pi]$ ist die Rechteckschwingung konstant $f(t) = 1$.
+Somit können wir das Integral folgendermaßen in die Summe zweier Integrale
+aufteilen.
 
-Die Taylorreihe der Sinusfunktion $f(x)=\sin(x)$ am Entwicklungspunkt $x_0=0$
-lautet:
+\begin{align*}
+a_0 &= \frac{1}{\pi}\int_{-\pi}^{\pi}f(t)\,dt \\
+&= \frac{1}{\pi}\int_{-\pi}^{0}-1\,dt +\frac{1}{\pi}\int_{0}^{\pi}1\,dt\\
+&= \frac{1}{\pi}\Big[-t\Big]_{-\pi}^{0} + \frac{1}{\pi}\Big[t\Big]_{0}^{\pi}\\
+&= \frac{1}{\pi}\Big(-0-(+\pi)\Big) + \frac{1}{\pi}\Big(\pi-0\Big) = 0.
+\end{align*}
 
-$$\sin(x) = x - \frac{x^3}{3!} + \frac{x^5}{5!} - \ldots = \sum_{k=0}^{\infty}
-(-1)^k \frac{x^{2k+1}}{(2k+1)!}.$$
+Nun berechnen wir die Fourierkoeffizienten $a_n$ für $n \geq 1$. Dabei benötigen
+wir zuerst die Frequenz $\omega$. Da wir als Periode $T=2\pi$ gewählt haben,
+gilt
 
-Der Konvergenzradius ist unendlich, d.h. die Approximation der
-Sinusfunktion durch ihre Taylorreihe gilt für alle reellen Zahlen
-$x\in\mathbb{R}$.
+$$\omega = \frac{T}{2\pi} = \frac{2\pi}{2\pi}=1.$$
 
-Die Kosinusfunktion $f(x)=\cos(x)$ hat die Taylorreihe
+Setzen wir $T=2\pi$ und $\omega=1$ in die allgemeine Formel der
+Fourierkoeffizienten $a_n$ ein und verwenden wir wiederum die Aufteilung in die
+beiden Teilintervalle $[-\pi, 0]$ und $[0,\pi]$, dann gilt:
 
-$$\cos(x) = 1 - \frac{x^2}{2!} + \frac{x^4}{4!} - \ldots =
-\sum_{k=0}^{\infty} (-1)^k \frac{x^{2k}}{(2k)!}.$$
+\begin{align*}
+a_n &= \frac{2}{T} \int_{-T/2}^{T/2} f(t) \, \cos(n \, \omega \, t) \, dt\\
+&= \frac{1}{\pi}\int_{-\pi}^{\pi}f(t) \, \cos(n t) \, dt\\
+&= \frac{1}{\pi}\int_{-\pi}^{0} -1\, \cos(n t) \, dt +
+\frac{1}{\pi}\int_{0}^{\pi}1 \, \cos(n t) \, dt \\
+&= \frac{1}{\pi}\left[-\frac{1}{n} \sin(nt) \right]_{-\pi}^{0} +
+\frac{1}{\pi}\left[\frac{1}{n}\sin(nt)\right]_{0}^{\pi}.
+\end{align*}
 
-Der Konvergenzradius ist unendlich, d.h. die Approximation der
-Kosinusfunktion durch ihre Taylorreihe gilt für alle reellen Zahlen
-$x\in\mathbb{R}$.
+Die Zahl $n$ ist eine natürliche Zahl. Setzen wir $0$ oder Vielfache von $\pi$
+in die Sinusfunktion ein, ist das Ergebnis Null, also
+
+$$\sin(0) = \sin(n\cdot \pi) = 0.$$
+
+Damit sind insgesamt alle Fourierkoeffizienten $a_n = 0$. Im nächsten Kapitel
+werden wir lernen, wir dieses Ergebnis schneller hätten ermitteln können.
+
+Nun berechnen wir die Fourierkoeffizienten
+
+$$b_n = \frac{2}{T} \int_{-T/2}^{T/2} f(t) \, \sin(n \, \omega \, t) \, dt$$
+
+für $n \geq 1$. Wir verwenden erneut den Trick, das Integrationsintervall in
+zwei Intervalle aufzuteilen:
+
+\begin{align*}
+b_n &= \frac{1}{\pi}\int_{-\pi}^{\pi}f(t)\, \sin(nt)\, dt \\
+&=\frac{1}{\pi}\int_{-\pi}^{0}-1\sin(nt)\, dt +
+\frac{1}{\pi}\int_{0}^{\pi}1\sin(nt)\, dt\\
+&=\frac{1}{\pi}\left[\frac{1}{n}\cos(nt)\right]_{-\pi}^{0} +
+\frac{1}{\pi}\left[-\frac{1}{n}\cos(nt)\right]_{0}^{\pi} \\
+&= \frac{1}{n\cdot\pi}\Big[\cos(nt)\Big]_{-\pi}^{0} -
+\frac{1}{n\cdot\pi}\Big[\cos(nt)\Big]_{0}^{\pi} \\
+&= \frac{1}{n\cdot\pi}\Big(\cos(0) - \cos(-n\cdot\pi)\Big) -
+\frac{1}{n\cdot\pi} \Big(\cos(n\cdot\pi)-\cos(0)\Big).
+\end{align*}
+
+Die Kosinusfunktion ist eine gerade Funktion, also gilt
+
+$$\cos(-n\cdot\pi) = \cos(n\cdot\pi).$$
+
+Darüber hinaus gilt $\cos(0)=1$, so dass wir insgesamt
+
+$$b_n = \frac{2}{n\cdot\pi} - \frac{2}{n\cdot\pi}\cos(n\cdot\pi)$$
+
+erhalten.
+
+Der Funktionswert der Kosinusfunktion an den Stellen $t = n\cdot\pi$ springt
+zwischen $-1$ und $1$ hin und her. Ist $n$ ungerade, dann ist
+$\cos(n\cdot\pi)=-1$. Ist jedoch $n$ gerade, dann gilt $\cos(n\cdot\pi)=+1$.
+Daher gilt für die Fourierkoeffizienten
+
+$$b_n = \begin{cases} 0, \quad & n\text{ gerade}\\
+\dfrac{4}{n\cdot\pi}, \quad & n\text{ ungerade}.\end{cases}$$
+
+Jetzt können wir die Fourierreihe bilden:
+
+\begin{align*} f(t) &= \frac{a_0}{2} + \sum_{n=1}^{\infty} \left(a_n \cos(n
+\omega t) + b_n \sin(n \omega t) \right)\\
+&= \frac{4}{1\cdot\pi}\sin(t) + \frac{4}{3\cdot\pi}\sin(3t) +
+\frac{4}{5\cdot\pi}\sin(5t) + \ldots \end{align*}
+
+Es wäre schön, eine kompaktere Angabe für die Fourierreihe zu benutzen. Dazu
+benutzen wir den Trick, die ungeraden Zahlen als $2k-1$ darzustellen mit
+$k\in\mathbb{N}$. Dann lautet die Fourierreihe nämlich
+
+$$f(t) = \sum_{k=1}^{\infty}\frac{4}{k\cdot\pi}\sin(k t) =
+\frac{4}{\pi}\sum_{k=1}^{\infty}\frac{\sin(kt)}{k}.$$
+
+In dem folgenden Video wird das gleiche Beispiel vorgerechnet.
+
+```{dropdown} Video "Fourier-Reihe der Rechtecksfunktion" von Hart und Trocken
+<iframe width="560" height="315" src="https://www.youtube.com/embed/zy2SO_8tV9k?si=rbOAoHqzOhfEpzce" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay;
+clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+```
+
+Ein weiteres Beispiel für die Berechnung einer Fourierreihe einer
+Rechteckschwingung finden Sie in dem folgenden Video.
+
+```{dropdown} Video "Fourierreihe Rechtecksimpuls" von Sciencebarbie
+<iframe width="560" height="315" src="https://www.youtube.com/embed/dzkCRqKXZCs"
+title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+```
+
+## Die Sägezahnfunktion
+
+```{dropdown} Video "Fourierreihe Sägezahnfunktion" von Sciencebarbie
+<iframe width="560" height="315" src="https://www.youtube.com/embed/wGL_Cxorbac"
+title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+```
+
+## Die Dreiecksfunktion
+
+```{dropdown} Video "Fourierreihe Dreiecksimpuls" von Sciencebarbie
+<iframe width="560" height="315" src="https://www.youtube.com/embed/-I0YqzFRldA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+```
+
+## Zusammenfassung und Ausblick
+
+Mit den Fourierreihen der Rechteck-, Sägezahn- und Dreieckschwingung haben wir
+drei bekannte Beispiele für die Anwendung von Fourierreihen kennengelernt. Bei
+der Berechnung der Fourierkoeffizienten der Rechteckschwingung haben wir
+festgestellt, dass die Fourierkoeffizienten des Kosinusanteils Null sind. Das
+liegt daran, dass in diesem Beispiel die betrachtete Funktion ungerade war. Das
+werden wir im nächsten Kapitel näher untersuchen.

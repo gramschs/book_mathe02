@@ -1,174 +1,131 @@
-# 4.2 Konvergenzkriterien für Reihen
+# 4.2 Restglied von Taylorreihen
 
-In [Kapitel 3.1 Reihen](ref03_sec01) haben wir uns mit Reihen beschäftigt und
-die Eigenschaften konvergent und divergent eingeführt. In diesem Kapitel geht es
-darum rechnerisch zu bestimmen, ob eine Reihe konvergent oder divergent ist.
-Dazu lernen wir verschiedene Kriterien kennen.
+Taylorreihen und ihre Konvergenzeigenschaften sind für Ingenieure von großer
+Bedeutung, da sie bei der Lösung von Differentialgleichungen, der Optimierung
+von Funktionen und der numerischen Berechnung von Integralen verwendet werden.
+Taylorreihen bieten eine Möglichkeit, Funktionen durch einfachere, polynomiale
+Funktionen zu approximieren, die leichter zu handhaben sind. Die Kenntnis des
+Restglieds ermöglicht es Ingenieuren, die Genauigkeit der Approximation
+abzuschätzen und zu entscheiden, wie viele Terme der Taylorreihe für eine
+ausreichend genaue Lösung erforderlich sind.
 
 ## Lernziele
 
 ```{admonition} Lernziele
 :class: goals
-* Sie können das **Nullfolgen-Kriterium** anwenden, um zu überprüfen, ob es überhaupt möglich ist, dass die Reihe konvergiert.
-* Sie können mit den **Konvergenzkriterien** überprüfen, ob eine Reihe konvergiert, indem Sie die folgenden Kriterien anwenden können:
-    * **Quotientenkriterium** oder
-    * **Wurzelkriterium**.
-* Sie können den Fachbegriff **absolut konvergente Reihe** erklären.
+Sie können mit dem Restglied der Taylorreihe den Fehler abschätzen, der entsteht, wenn eine Funktion durch ein Taylorpolynom vom Grad n ersetzt wird.
 ```
 
-## Das Nullfolgen-Kriterium
+## Restglied der Taylorreihe
 
-Manchmal ist es einfacher zu beschreiben, was ein Gegenstand *nicht* ist. Eine
-notwendige (aber nicht hinreichende) Bedingung für die Konvergenz einer Reihe
-ist, dass die ursprüngliche Folge $(a_k)$ eine Nullfolge ist, d.h.
-$\lim_{k\to\infty} a_k = 0$. Wenn dieser Grenzwert nicht Null ist oder nicht
-existiert, divergiert die Reihe.
+Die Idee der Taylorreihe ist ja, eine komplizierte Funktion $f$ durch eine
+Potenzreihe zu darzustellen. Allerdings ist das Aufsummieren von unendlich
+vielen Summanden für die Taylorreihe auch nicht praktikabel. Stattdessen wird in
+der Praxis die Taylorreihe ab einem bestimmten Grad abgebrochen. Oder anders
+ausgedrückt, als Näherung für die Funktion $f$ in der Umgebung eines
+Entwicklungspunktes $x_0$ wird ein Taylorpolynom vom Grad $n$ genutzt. Aber wie
+groß ist eigentlich der Fehler, wenn statt der Funktion $f$ das Taylorpolynom
+$T_n$ genommen wird? Welcher Rest bleibt da? Eines ist schon einmal klar. Würden
+wir für das Taylorpolynom einen anderen Grad $m$ nehmen, so würde sich auch ein
+anderer Fehler ergeben. Der Rest ist also auch vom Grad des Taylorpolynoms
+abhängig. Wir fassen zusammen:
 
-Was heißt notwendig, aber nicht hinreichend??? Was ist das überhaupt für eine
-umständliche Formulierung?
-
-Die Formulierung, "etwas ist notwendig, aber nicht hinreichend" kommt in der
-Mathematik öfters vor. Damit ist gemeint, dass eine Bedingung erfüllt sein muss,
-damit etwas anderes passiert oder stimmt. Aber alleine reicht diese Bedingung
-nicht aus, um sicherzustellen, dass das andere tatsächlich passiert oder stimmt.
-
-Ein Beispiel aus dem Alltag: Angenommen, jemand möchte ein Auto fahren. Eine
-notwendige, aber nicht hinreichende Bedingung für das Fahren eines Autos ist,
-dass die Person einen gültigen Führerschein besitzt. Der Führerschein ist
-notwendig, weil er gesetzlich vorgeschrieben ist, um ein Auto fahren zu dürfen.
-Er ist jedoch nicht hinreichend, weil es noch weitere Faktoren gibt, die
-erforderlich sind, um tatsächlich Auto fahren zu können, wie zum Beispiel das
-Vorhandensein eines funktionierenden Autos oder für eine konkrete Autofahrt eine
-angemessene körperliche und geistige Verfassung.
-
-In diesem Beispiel ist der Führerschein eine notwendige Bedingung, weil man ohne
-ihn grundsätzlich nicht Auto fahren darf. Er ist jedoch nicht hinreichend, da
-das Vorliegen eines Führerscheins allein noch nicht garantiert, dass jemand
-tatsächlich ein Auto fahren kann oder darf.
-
-Zurück zum Nullfolgen-Kriterium. Die Bedingung, dass die Folge $(a_k)$ eine
-Nullfolge ist, ist notwendig, damit die dazugehörige Reihe konvergieren kann (=
-Besitz eines Führerscheins). Aber nur weil die Folge $(a_k)$ eine Nullfolge ist,
-heißt es noch lange nicht, dass die Reihe konvergiert, weil vielleicht andere
-Bedingungen nicht erfüllt sind (= Autofahrer hat Akohol getrunken). Es ist also
-nicht hinreichend.
-
-Zuerst wirkt diese Aussage nicht besonders bedeutend. Aber wir können trotzdem
-zwei bedeutsame Schlussfolgen daraus ziehen:
-
-```{admonition} Nullfolgen-Kriterium
+```{admonition} Was ist ... das Restglied der Taylorreihe?
 :class: note
-1. Wenn die Folge der Summanden $(a_k)$ *keine* Nullfolge ist, dann ist die
-dazugehörige Reihe auf jeden Fall divergent.
-2. Wenn eine Reihe konvergiert, dann muss die zugrundeliegende Folge $(a_k)$ der
-   Summanden eine Nullfolge sein.
+Wir nennen die Differenz zwischen der Funktion $f$ und dem dazugehörigen Taylorpolynom $T_n$ vom Grad $n$ das Restglied $R_n$. In Formel ausgedrückt ist das Restglied
+
+$$R_n(x) = f(x) - T_n(x).$$
 ```
 
-In dem folgenden Video wird die Konvergenz von Reihen nochmal erläutert und
-einige Beispiele für konvergente oder divergente Reihen gegeben.
+Jetzt haben wir dem Fehler zwar einen neuen Namen gegeben, Restglied, aber das
+hilft uns erstmal noch nicht weiter. Allerdings hat ein Mathematiker namens
+[Joseph-Louis Lagrange](https://de.wikipedia.org/wiki/Joseph-Louis_Lagrange)
+gezeigt, dass für das Restglied die folgende Formel gilt:
 
-```{dropdown} Video zu Reihenkonvergenz von Prof. Hoever
-<iframe width="560" height="315" src="https://www.youtube.com/embed/aGnAseEnfG0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+$$R_n(x) = f(x) - T_n(x) =
+\frac{f^{(n+1)}(\textcolor{red}{z})}{(n+1)!}\cdot(x-x_0)^{n+1},$$
+
+wobei der Punkt $z$ eine Zwischenstelle ist, die irgendwo zwischen $x$ und $x_0$
+liegt.
+
+Leider ist die Formel nicht ganz so einfach anzuwenden, denn die Zwischenstelle $z$ ist ja nicht bekannt. Wir wissen nur, dass $z$ irgendwo zwischen dem Entwicklungspunkt $x_0$ und $x$ liegt. Aber egal wo $z$ jetzt wirklich liegt, wir können einfach für alle Werte $z$ die $(n+1)$-te Ableitung
+
+$$f^{(n+1)}(z)$$
+
+zeichnen. Aus der Zeichnung können wir dann das Maximum $M$ von $f^{(n+1)}(z)$ für alle Punkte zwischen $x_0$ und $x$ ablesen oder anderweitig berechnen. Es gilt also
+
+$$f^{(n+1)}(z) \leq M.$$
+
+Und mit dieser Abschätzung kann jetzt endlich auch der Fehler abgeschätzt
+werden, wenn $T_n$ anstatt der Funktion $f$ verwendet werden soll. Da wir nicht
+wissen, ob $T_n$ die Funktion $f$ über- oder unterschätzt, wissen wir auch
+nicht, ob $R_n(x)$ negativ oder positiv ist. Daher nehmen wir einfach mal den
+Betrag von $R_n(x)$, da es ja auch nur um eine grobe Abschätzung des Fehlers
+geht.
+
+\begin{align*}
+\left|R_n(x) \right| &= \left| f(x) - T_n(x) \right| = \\
+    &= \left| \frac{f^{(n+1)}(z)}{(n+1)!}\cdot(x-x_0)^{n+1} \right| \leq\\
+    &\leq \frac{M}{(n+1)!} \cdot |x-x_0|^{n+1}.
+\end{align*}
+
+Fast fertig, jetzt muss noch ein Maximum von $|x - x_0|$ bestimmt werden. Wir
+nennen diese Zahl mal $d$ (wie Distanz). Dann kann der Fehler, der Betrag des
+Restglieds des Taylorpolynoms, abgeschätzt werden als
+
+$$\left|R_n(x) \right| \leq  \frac{M}{(n+1)!}\cdot d^{n+1}.$$
+
+Das folgende Video fasst die obigen Erklärungen zusammen.
+
+```{dropdown} Video zu "Taylor Restglied" von Prof. Hoever
+<iframe width="560" height="315" src="https://www.youtube.com/embed/oz1hejsyNlk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 ```
 
+## Beispiel
 
-## Das Quotienten-Kriterium und das Wurzel-Kriterium
+Probieren wir das an einem Beispiel aus. Die Funktion $f(x)=\sin(x)$ soll durch
+ein Taylorpolynom Grad 3 am Entwicklungspunkt $x_0=0$ approximiert werden. Im
+Abschnitt [Kochrezept Taylorpolynome](ref04_sec01_kochrezept) haben wir ja schon
+das Taylorpolynom $T_{3}$ berechnet als
 
-Das Quotienten-Kriterium ist ein nützliches Konvergenzkriterium für Reihen, bei
-denen die Summanden einen Bruch oder eine Potenz enthalten. Es kann uns helfen,
-schnell herauszufinden, ob eine solche Reihe konvergiert oder divergiert, ohne
-zuerst komplexere Techniken oder Kriterien anzuwenden.
+$$T_3(x) = x - \frac{1}{6}x^3.$$
 
-```{admonition} Quotienten-Kriterium
-:class: note
-Das Quotienten-Kriterium besagt, dass eine Reihe $\sum_{k=1}^{\infty} a_k$
-konvergiert, wenn der Grenzwert
+Die vierte Ableitung der Sinusfunktion ist wieder die Sinusfunktion selbst, also  $f^{(4)}(x) = \sin(x)$.
 
-$$r = \lim_{k\to\infty} \left| \frac{a_{k+1}}{a_k} \right|$$
+Das Restglied ist also
 
-existiert und kleiner als 1 ist. Gilt $r > 1$, so divergiert die Reihe. Gilt
-$r = 1$, so versagt das Kriterium und ein anderes Kriterium muss benutzt werden.
+$$R_3(x) = \frac{\sin(z)}{(3+1)!}\cdot x^{3+1} = \frac{\sin(z)}{24}\cdot x^4.$$
 
-Übrigens: Für $r < 1$ ist die Reihe sogar absolut konvergent.
+für eine Zwischenstelle $z$ zwischen $0$ und $x$. Wir wählen einen Winkel von
+$\alpha = 5^{\circ}$, was im Bogenmaß $\frac{\pi}{36}\approx 0.0873$ rad
+entspricht und untersuchen daher die Approximation an der Stelle $x = 0.0873$.
+Wenn wir die Sinusfunktion im Intervall $[0, 0.0873]$ zeichnen, so können wir
+ablesen, dass das Maximum gerade bei $x = 0.0873$ erreicht wird, also ist
+
+$$M = \sin(0.0873) \approx 0.0872.$$
+
+Der Term $x - 0$ kann durch $m = 0.0873$ abgeschätzt werden, durch den Punkt am
+rechten Intervallende, der am weitesten vom Entwicklungspunkt $x_0=0$ entfernt
+ist. Also gilt
+
+$$R_3(0.0873) \leq \frac{0.0872}{24}\cdot 0.0873^4 = 2.11 \cdot 10^{-7}.$$
+
+Dieser maximale Fehler ist in den meisten Fällen so klein, dass im Intervall
+$[-5^{\circ}, + 5^{\circ}]$ die Sinusfunktion auch durch
+
+$$\sin(x) \approx T_3(x) = x - \frac{1}{6}x^3.$$
+
+In vielen Fällen ist es sogar legitim, die Sinusfunktion nur durch das Taylorpolynom ersten Grades zu approximieren, also
+
+$$\sin(x) \approx T_1(x) = x.$$
+
+Diese Approximation nennt sich
+[Kleinwinkelnäherung](https://de.wikipedia.org/wiki/Kleinwinkelnäherung) und
+wird beispielsweise bei der Berechnung der Bewegungsgleichung des Fadenpendels
+benötigt.
+
+Ein weiteres Beispiel können Sie sich in dem folgenden Video ansehen.
+
+```{dropdown} Video zu "Taylorpolynom, Restglied" von Daniel Jung
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Rc_diK5l7iY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 ```
-
-Den Begriff **absolute Konvergenz** hatten wir bisher nicht. Absolute Konvergenz
-ist mehr als Konvergenz. Nicht nur die Reihe $(s_n)$ mit 
-
-$$s_n = \sum_{k=1}^{n} a_k$$
-
-konvergiert, sogar die Reihe, bei der die Summanden stets positiv sind, weil der
-Betrag gebildet wird, also
-
-$$s_n = \sum_{k=1}^{n} \left| a_k \right|$$
-
-konvergiert. Das wird dann absolute Konvergenz genannt.
-
-Ein Beispiel für die Anwendung des Quotienten-Kriteriums ist die folgende Reihe:
-
-$$\sum_{k=1}^{n}\frac{2^k}{k!}.$$
-
-Um das Quotienten-Kriterium anzuwenden, betrachten wir den Bruch der
-aufeinanderfolgenden Glieder:
-
-$$\left|\frac{a_{k+1}}{a_k}\right| =
-\frac{\frac{2^{k+1}}{(k+1)!}}{\frac{2^k}{k!}} =
-\frac{2^{k+1}k!}{2^k(k+1)!} = \frac{2}{k+1}.$$
-
-Da $r = \lim_{k \to \infty} \frac{2}{k+1} = 0 < 1$, konvergiert die Reihe
-$\sum_{k=1}^{\infty} \frac{2^k}{k!}$ nach dem Quotienten-Kriterium.
-
-Das Wurzel-Kriterium ist ein weiteres Konvergenzkriterium für Reihen, das
-besonders hilfreich ist, wenn die Summanden Potenzen oder Exponentialfunktionen
-enthalten. Es ermöglicht uns, schnell festzustellen, ob eine solche Reihe
-konvergiert oder divergiert, ohne zunächst komplexere Techniken oder Kriterien
-anwenden zu müssen.
-
-```{admonition} Wurzel-Kriterium
-:class: note
-Das Wurzel-Kriterium besagt, dass eine Reihe $\sum_{k=1}^{\infty} a_k$
-konvergiert, wenn der Grenzwert
-
-$$r = \lim_{k\to\infty} \sqrt[k]{|a_k|}$$
-
-existiert und kleiner als 1 ist. Gilt $r > 1$, so divergiert die Reihe. Gilt
-$r = 1$, so versagt das Kriterium und ein anderes Kriterium muss benutzt werden.
-
-Übrigens: Für $r < 1$ ist die Reihe sogar absolut konvergent, genau wie beim Quotienten-Kriterium.
-```
-
-Als Beispiel betrachten wir die Reihe $(s_n)$ mit
-
-$$s_n = \sum_{k=1}^{n} \left(-\frac{1}{4}\right) \cdot 4^{-k-2} \cdot 2^{k+4}.$$ 
-
-Wir wenden das Wurzel-Kriterium an: 
-
-\begin{align*} 
-r & = \lim_{k\rightarrow \infty}\sqrt[k]{\left|a_k\right|} = \\
-&  = \lim_{k\rightarrow \infty}\left(\frac{1}{4} \cdot 4^{-k-2} 2^{k+4}\right)^{\left(\frac{1}{k} \right)} = \\ 
-& = \lim_{k\rightarrow \infty} \left(4^{-k - 3} 2^{k + 4}\right)^{\left(\frac{1}{k}\right)} = \\
-& = \frac{1}{2} . 
- \end{align*} 
- Wegen $r = \frac{1}{2} <1$ ist die Reihe (absolut) konvergent. 
-
-```{dropdown} Video zu Wurzel- und Quotientenkriterium von Prof. Hoever
-<iframe width="560" height="315" src="https://www.youtube.com/embed/G1GSAFrd6mE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-```
-
-## Ausblick
-
-Tatsächlich gibt es noch einige Kriterien mehr, um die Konvergenz einer Reihe zu
-bestimmen. Die bekanntesten Konvergenzkriterien sind:
-
-* Grenzwertkriterium
-* Majorantenkriterium
-* Minorantenkriterium
-* Verdichtungskriterium
-* Leibniz-Kriterium
-
-Einen detaillierten Überblick zu weiteren Konvergenzkriterien findet man auf der
-Internetseite [Serlo →
-Konvergenzkriterien](https://de.wikibooks.org/wiki/Mathe_für_Nicht-Freaks:_Konvergenz_und_Divergenz_einer_Reihe_beweisen:_Konvergenzkriterien).
-
-
-​	

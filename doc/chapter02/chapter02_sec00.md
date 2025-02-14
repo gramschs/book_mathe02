@@ -1,7 +1,8 @@
-# 2. Integrale
+# 2. Anwendungen Integral
 
-In der Vorlesung Mathematik 1 wurde das Integral bereits eingeführt. Dieses
-Kapitel dient der Wiederholung der dort gelernten Inhalte.
+Eine natürliche Anwendung von Integralen in der Geometrie ist die Berechnung von
+Flächeninhalten. In diesem Kapitel werden wir weitere Anwendungen in der
+Geometrie betrachten.
 
 Themen:
 

@@ -1,82 +1,127 @@
-# 9.1 Tangentenfunktionen
+# 9.1 Idee von Doppelintegralen
 
-Für eindimensionale Funktionen haben wir die Linearisierung und die Annährung
-einer Funktion durch eine Tangente bereits kennengelernt. Am einfachsten lässt
-sich die Tangente einer eindimensionalen Funktion berechnen, indem wir das 1.
-Taylorpolynom im Entwicklungspunkt $x_0$ berechnen:
-
-$$f(x) \approx f(x_0) + f'(x_0)\cdot (x-x_0).$$
-
-Aus der Tangente wird für eine Funktion $f: \mathbb{R}^2 \rightarrow \mathbb{R}$
-eine **Tangentialebene**. Für Funktionen $f: \mathbb{R}^n \rightarrow
-\mathbb{R}$ mit $n \geq 3$ wird die Verallgemeinerung der Tangente dann
-**Tangentialhyperebene** genannt.
+Nachdem wir in den vorhergehenden Kapiteln Ableitungen von eindimensionalen
+Funktionen auf mehrdimensionale Funktionen verallgemeinert haben, werden wir in
+diesem Kapitel Integrale von Funktionen mit zwei Variablen betrachten, also von
+Funktionen $f:\mathbb{R}^2\to\mathbb{R}$. Dieses sogenannte Doppelintegral hat
+in der Technischen Mechanik viele Anwendungen und wird insbesondere bei
+Schwerpunktsberechnungen gebraucht.
 
 ## Lernziele
 
 ```{admonition} Lernziele
 :class: goals
-* Sie können die Tangentenfunktion einer Funktion $f: \mathbb{R}^n \rightarrow
-\mathbb{R}$ aufstellen und damit die Funktion $f$ linearisieren:
-
-$$T_{1,f}(\vec{x}) = f(\vec{x}_0) + \nabla f(\vec{x}_0) \cdot (\vec{x}-\vec{x}_0).$$
-* Sie wissen, dass für $n=2$ die Tangentenfunktion auch **Tangentialebene**
-  genannt wird. 
-* Sie wissen, dass für $n \geq 3$ die Tangentenfunktion auch
-  **Tangentialhyperebene** genannt wird.
+Sie können erklären, was ein **Doppelintegral** $\iint_{A} f(x,y)\, dA$ ist.
 ```
 
+## Grundkonzept
 
-## Was ist eine Tangentenfunktion?
+Bei eindimensionalen Funktionen entspricht das Integral $\int_{a}^{b} f(x)\, dx$
+dem Flächeninhalt der Fläche $A$ (siehe Abbildung).
 
-```{admonition} Was ist ... eine Tangentenfunktion?
-Um eine Tangentenfunktion zu bilden, brauchen wir erst einmal eine skalarwertige
-Funktion, also $f:\mathbb{R}^n \to \mathbb{R}$. Außerdem brauchen wir einen
-Entwicklungspunkt $\vec{x}_0$. Dann wird die folgende Funktion Tangentenfunktion
-zu $f$ genannt:
+```{figure} pics/part10_integral1D.svg
+---
+width: 300px
+name: fig_part10_integral1D
+---
+Integral entspricht dem Flächeninhalt
 
-$$T_{1,f}(\vec{x}) = f(\vec{x}_0) + \nabla f(\vec{x}_0) \cdot
-(\vec{x}-\vec{x}_0).$$
+([Quelle:](https://commons.wikimedia.org/w/index.php?curid=1039841) "Wikimedia", Autor: 4C - Eigenes Werk, based on JPG version, Lizenz: [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/))
 ```
 
-Wenn wir jetzt eine Funktion betrachten, die nur von zwei Variablen abhängt,
-dann können wir die Tangentenfunktion auch folgendermaßen darstellen:
+Dementsprechend beschreibt das Doppelintegral einer Funktion von zwei Variablen
+das Volumen $V$, das zwischen der Fläche $B$ (B wie Boden oder Bereich) und der
+Fläche $f(x,y)$ entsteht. Dabei stammen die Punkte $(x,y)$ aus $B$.
 
-\begin{align*}
-T_{1,f}(x,y) 
-&= f(x_0,y_0) + \nabla f(x_0,y_0) \cdot
-    \begin{pmatrix} x - x_0 \\ y - y_0 \end{pmatrix} = \\
-&= f(x_0,y_0) + \left( \frac{\partial f(x_0,y_0)}{\partial x}, 
-    \frac{\partial f(x_0,y_0)}{\partial y} \right) \cdot \begin{pmatrix} x - x_0 \\ y - y_0 \end{pmatrix} = \\
-&= f(x_0,y_0) + \frac{\partial f(x_0,y_0)}{\partial x}(x-x_0) + 
-    \frac{\partial f(x_0,y_0)}{\partial y}(y-y_0).
-\end{align*}
-
-Damit haben wir die Beschreibung einer Ebene. Daher wird die Tangentenfunktion
-für $n=2$ auch Tangentialebene genannt. Dieselbe Rechnung können wir auch für
-$n=3$ oder größer durchführen. Darauf verzichten wir aber hier.
-
-Das folgende Video fasst Tangentenfunktion noch einmal zusammen.
-
-```{dropdown} Video zu "Tangentenfunktion" von Mathematische Methoden
-<iframe width="560" height="315" src="https://www.youtube.com/embed/RFbjuIDKHG0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+```{figure} pics/part10_sketch_doubleintegral.svg
+---
+width: 600px
+name: fig_part10_sketch_doubleintegral
+---
+Integral entspricht dem Volumen
 ```
 
-## Beispiel zu Tangentialebene
+Doppelintegrale haben vielfältige Anwendungen in den Ingenieurwissenschaften.
+Sie dienen u.a. zur Berechnung von
 
-In dem folgenden Video wird ein Beispiel zur Berechnung der Tangentialebene
-vorgeführt. Dabei wird die Funktion $f:\mathbb{R}^2\to\mathbb{R}$ definiert als
+* Flächeninhalt,
+* Schwerpunkt einer Fläche und
+* Flächenmoment.
 
-$$f(x,y) = -x^2 - y^2.$$
+## Definition Doppelintegral
 
-Als Entwicklungspunkt wird der Punkt $(-1,-1)$ gewählt. Das Ergebnis ist die
-Tangentialebene
+Für die Berechnung des Volumens der Funktion $f(x,y)$ über einem Bereich $B$
+gehen wir so vor, wie im eindimensionalen Fall bei der Berechnung des
+Flächeninhaltes einer eindimensionalen Funktion. Wir zerlegen den Bereich $B$
+mit einem sogenannten **Gitter**, d.h. wir teilen den Bereich $B$ in viele
+kleine Teilbereiche ein, die wir mit $B_i$ durchnummerieren. Von jedem
+Teilbereich $B_i$ können wir die x- und y-Koordinate des Mittelpunkts bestimmen.
+Diese Koordinaten nennen wir $(x_i,y_i)$.
 
-$$T_{1,f} = 2 + 2x + 2y.$$ 
+Wenn die Teilbereiche rechteckig sind (das müssen sie nicht sein, wir könnten
+auch beispielsweise Kreise oder andere Muster nehmen), dann kann das Volumen der
+Säule $V_i$ (siehe Abbildung rote Säule) berechnet werden als
 
-Hier wird auf die detaillierte Berechnung der Tangentialebene verzichtet. Bitte
-schauen Sie sich stattdessen das Video an.
+$$V_i = f(x_i,y_i) \cdot \Delta x \cdot \Delta y.$$
 
-```{dropdown} Video zu "Beispiel Tangentenfunktion" von Mathematische Methoden
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Cms3lsrG0cM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+```{figure} pics/part10_sketch_volume.svg
+---
+width: 600px
+name: fig_part10_sketch_volume
+---
+Volumen als Summe einzelner Säulen, hier mit rechteckigem Gitter
+```
+
+Jetzt müssen wir noch alle Säulen aufaddieren, um eine Annäherung für das
+Volumen zwischen Boden und Deckel $f(x,y)$ zu bekommen, also
+
+$$V\approx f(x_1,y_1) \cdot \Delta y \cdot \Delta x + f(x_2,y_2) \cdot \Delta y
+\cdot \Delta x + \ldots f(x_N,y_N) \cdot \Delta y \cdot \Delta x.$$
+
+Dabei haben wir jetzt angenommen, dass alle Teilbereiche $B_i$ die gleiche Form
+haben und als Rechtecke mit den Seitenlängen $\Delta x$ und $\Delta y$
+beschrieben werden. Wir können das Summenzeichen verwenden:
+
+$$V\approx \sum_{i=1}^{N} f(x_i,y_i) \cdot \Delta y \cdot \Delta x .$$
+
+Wenn wir nun die Teilbereiche $B_i$ immer kleiner machen, so brauchen wir immer
+mehr Säulen, also $N\rightarrow\infty$. Falls der Grenzwert
+
+$$\lim_{N\rightarrow\infty} \sum_{i=1}^{N} f(x_i,y_i) \cdot \Delta y  \cdot
+\Delta x$$
+
+existiert, nennen wir ihn Integral von $f(x,y)$ über $B$ und schreiben das als
+sogenanntes **Doppelintegral**
+
+$$V = \iint_{B} f(x,y) \, dy \, dx.$$
+
+Bei den obigen Überlegungen sind wir davon ausgegangen, dass der Bereich $B$ in
+rechteckige Teilbereiche $B_i$ aufgeteilt wird. Das muss nicht so sein, wir
+hätten auch andere Aufteilungen wählen können. Daher ist die etwas allgemeiner
+formulierte Definition eines Doppelintegrals wie folgt:
+
+```{admonition} Was ist ... ein Doppelintegral?
+:class: note
+Doppelintegrale sind Integrale für zweidimensionale Funktionen
+$f:\mathbb{R}^2\to\mathbb{R}$ mit einer Definitionsmenge $A \subset
+\mathbb{R}^2$. Die Definitionsmenge $A$ wird in $N$ Teilgebiete zerlegt, die
+$A_i$ genannt werden. Der Flächeninhalt dieser Teilgebiete wird mit $\Delta A_i$
+bezeichnet. Wenn der Grenzwert
+
+$$\lim_{N\rightarrow\infty} \sum_{i=1}^{N} f(x_i,y_i) \cdot \Delta A_i$$
+
+existiert, wird er als Doppelintegral von $f$ über $A$ bezeichnet und mit
+
+$$\iint_{A} f(x,y)\, dA$$
+
+abgekürzt.
+```
+
+Im folgenden Video wird das Grundkonzept des Doppelintegrals erklärt. Im nachfolgenden Video wird die geometrische Interpretation des Doppelintegrals zur Berechnung eines Volumens präsentiert.
+
+```{dropdown} Video zu "Doppelintegral - Definition" von Mathematische Methoden
+<iframe width="560" height="315" src="https://www.youtube.com/embed/7VjP3jEGW24" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+```
+```{dropdown} Video zu "Doppelintegral - Volumeninterpretation" von Mathematische Methoden
+<iframe width="560" height="315" src="https://www.youtube.com/embed/FtoHJaUR6T8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 ```

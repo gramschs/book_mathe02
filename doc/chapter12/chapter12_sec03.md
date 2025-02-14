@@ -1,128 +1,92 @@
-# 12.3 Separable Differentialgleichungen
+# 12.3 Lösung inhomogene lineare DGL 1. Ordnung
 
-Eine besondere Klasse von Differentialgleichungen sind die separablen
-Differentialgleichungen. Dieses Kapitel bietet eine Einführung in die separablen
-Differentialgleichungen und zeigt, wie man sie löst.
+Nachdem im letzten Kapitel die Lösung einer homogenen linearen
+Differentialgleichung 1. Ordnung behandelt wurde, geht es nun um die Lösung
+inhomogenr linearer Differentialgleichungen 1. Ordnung.
 
-## Lernziele 
+## Lernziele
 
 ```{admonition} Lernziele
 :class: goals
-* Sie wissen, was eine **separable** Differentialgleichung ist.
-* Sie können das Lösungsverfahren **Trennung der Variablen** anwenden, um eine
-  separable Differentialgleichung zu lösen.
+* Sie können eine **inhomogene lineare Differentialgleichung 1. Ordnung** lösen.
+* Sie können das Lösungsverfahren **Variation der Konstanten** anwenden, um die
+  Lösung einer linearen Differentialgleichung zu bestimmen.
 ```
 
-## Was sind separable Differentialgleichungen?
+## Wie wird eine inhomogene lineare Differentialgleichung 1. Ordnung gelöst?
 
-Damit eine Differentialgleichung **separabel** ist, müssen zwei Bedigungen erfüllt sein.
+Nun betrachten wir eine inhomogene lineare Differentialgleichung 1. Ordnung,
+also
 
-1. Die Differentialgleichung muss von 1. Ordnung sein.
-2. Die rechte Seite (vorausgesetzt die 1. Ableitung der gesuchten Funktion steht
-   links) lässt sich als ein Produkt von zwei Funktionen so umformen, dass eine
-   Funktion nur von der Variablen $x$ abhängt und die andere Funktion nur von
-   Terme mit $y$ enthält, also
+$$a_1(x)y' + a_0(x) y = r(x).$$
 
-$$y' = f(x)\cdot g(y).$$
+Obwohl unser Ziel ist, die inhomogene Differentialgleichung zu lösen, lassen wir
+zunächst einmal die Störfunktion weg und berechnen die homogene Lösung
 
-## Beispiel für eine separable Differentialgleichung
+$$y_h(x)=C \cdot e^{-\int \frac{a_0(x)}{a_1(x)}\, dx}.$$
 
-Die Differentialgleichung
+Um auch kenntlich zu machen, dass diese die Lösung der homogenen
+Differentialgleichung ist, wird diese Lösung mit einem kleinen "h" markiert. Wie
+üblich enthält die homogene Lösung eine Integrationskonstante $C\in\mathbb{R}$.
+Der Trick, um die inhomogene Differentialgleichung zu lösen, beruht darauf, nun
+diese Integrationskonstante zu variieren. Wir ersetzen die Konstante $C$ durch
+eine Funktion $C(x)$ -- das nennt man **Variation der Konstanten**. Der
+Lösungsansatz für die inhomogene lineare Differentialgleichung1. Ordnung lautet
+also
 
-$$y'= 5\, y \, x$$
+$$y(x)=C(x) \cdot e^{-\int \frac{a_0(x)}{a_1(x)}\, dx}.$$
 
-ist eine separable Differentialgleichung. Sie ist von 1. Ordnung. Außerdem kann
-die rechte Seite in ein Produkt umgeschrieben werden, bei dem ein Faktor eine
-Funktion von $x$ ist, nämlich $f(x) = 5x$, und der andere Faktor nur von $y$
-selbst abhängt, nämlich $g(y)=y$, also
+Um die noch fehlende Funktion $C(x)$ zu bestimmen, leiten wir den Lösungsansatz
+einmal ab und setzen das Ergebnis in die Differentialgleichung ein. Dadurch
+entsteht eine neue Differentialgleichung für die unbekannte Funktion $C(x)$, die
+wir dann lösen.
 
-$$y' = 5x \cdot y.$$
+## Beispiel zur Lösung einer inhomogenen linearen DGL 1. Ordnung
 
+Gegeben ist die inhomogene lineare Differentialgleichung 1. Ordnung
 
-## Wie werden separable Differentialgleichungen gelöst?
+$$y'+3y=x^2.$$
 
-Eine separable Differentialgleichung
+Die homogene Lösung ist $y_h(x)=C\cdot e^{-3x}$. Wir variieren die Konstante und
+erhalten den Lösungsansatz
 
-$$y' = f(x)\cdot g(y)$$
+$$y(x)=C(x)\cdot e^{-3x}.$$
 
-lässt sich schrittweise wie folgt lösen:
+Als nächstes wird dieser Lösungsansatz abgeleitet
 
-1. Ersetzen Sie $y'$ durch den Differentialquotienen $\frac{dy}{dx}$.
-2. Trennen Sie die Variablen, d.h. bringen Sie alle Terme mit $y$ nach links und
-   alle Terme mit $x$ auf die rechte Seite der Gleichung.
-3. Integrieren Sie auf beiden Seiten unbestimmt, d.h. suchen Sie die
-   Stammfunktion.
-4. Lösen Sie nach $y$ auf, falls das möglich ist.
+$$\Rightarrow \quad y'(x)=C'(x)e^{-3x} + C(x)\cdot (-3) e^{-3x}$$
 
-## Beispiel für die Lösung einer separablen Differentialgleichung
+und in die ursprüngliche Differentialgleichung eingesetzt:
 
-Wir betrachten erneut die separable Differentialgleichung
+$$C'(x) \, e^{-3x} -3 C(x) \, e^{-3x} + 3C(x)\cdot e^{-3x} = x^2.$$
 
-$$y' = 5x \cdot y.$$
+Wir vereinfachen zuerst die Gleichung
 
-**Schritt 1:** Zuerst ersetzen wir die 1. Ableitung durch den Differentialoperator
+$$C'(x)\, e^{-3x} - 3 C(x) \, e^{-3x} + 3C(x)\cdot e^{-3x} = x^2$$
 
-$$\frac{dy}{dx} = 5x \cdot y.$$
+zu
 
-**Schritt 2:** Als nächstes trennen wir die Variablen:
+$$ C'(x)\, e^{-3x} = x^2 \quad \Rightarrow \quad C'(x)=x^2\cdot e^{3x}.$$
 
-$$\frac{1}{y} \, dy = 5x \, dx.$$
+Danach integrieren wir auf beiden Seiten unbestimmt nach $x$, indem wir zweimal
+die partielle Integrationsregel anwenden:
 
-**Schritt 3:** Dann integrieren wir die linke Seite nach $dy$ und die rechte Seite nach $dx$:
+\begin{multline*}
+C(x)= \left[x^2\cdot\frac{1}{3}e^{3x}\right] -\int 2x \frac{1}{3}e^{3x}\, dx = \\
+= \left[x^2\cdot\frac{1}{3}e^{3x}\right] - \left[2x\cdot\frac{1}{9}e^{3x}\right] + \int 2\cdot  \frac{1}{3}e^{3x} \, dx = \\
+= \frac{1}{27}e^{3x}(9x^2 - 6x + 2) + C_1
+\end{multline*}
 
-$$
-\int \frac{1}{y} \, dy = \int 5x \, dx \quad 
-\Rightarrow  \ln |y| + C_1 = \frac{5}{2} x^2 + C_2
-$$
+Nachdem wir nun die Funktion $C(x)$ bestimmt haben, setzen wir diese Funktion in
+den Lösungsansatz ein und haben damit die allgemeine Lösung der inhomogenen
+Differentialgleichung bestimmt:
 
-**Schritt 4:** Wir lösen nach $y$ auf. Zuerst sortieren wir die
-Integrationskonstante $C_1$ nach rechts und nennen die dadurch entstandene
-Differen $C_2 - C_1$ einfach nur $\tilde{C}$
+$$y(x)= C_1e^{-3x} + \frac{1}{3}x^2 - \frac{2}{9}x + \frac{2}{27}.$$
 
-$$\Rightarrow  \ln |y| = \frac{5}{2} x^2 + \tilde{C}.$$
-
-Nun verwenden wir den Trick, die linke und rechte Seite als Exponenten für die
-Exponentialfunktion zu nutzen:
-
-$$\Rightarrow e^{\ln(|y|)} = e^{\frac{5}{2} x^2 + \tilde{C}}.$$
-
-Da die Exponentialfunktion die Umkehrfunktion der Logarithmusfunktion ist, gilt
-nämlich $e^{\ln(|y|)} = y$ und wir sind durch diesen Trick den Logarithmus
-losgeworden:
-
-$$\Rightarrow |y(x)| = e^{\frac{5}{2} x^2 + \tilde{C}}.$$
-
-Um eine spezielle Lösung zu erhalten, muss aufgrund von Zusatzinformationen die
-Integrationskonstante $\tilde{C}$ bestimmt werden. Etwas leichter kann die
-Konstante bestimmt werden, wenn sie nicht im Exponent steht. Wir schreiben daher
-die allgemeine Lösung noch etwas um:
-
-$$|y(x)| = e^{\frac{5}{2} x^2 + \tilde{C}} = e^{\frac{5}{2} x^2} \cdot
-e^{\tilde{C}}.$$
-
-Die rechte Seite ist positiv. Wenn wir die Betragsstriche weglassen, erhalten
-wir die beiden Lösungen
-
-\begin{align*} 
-y_1(x) &= +e^{\tilde{C}} \cdot e^{\frac{5}{2} x^2}, \\
-y_2(x) &= -e^{\tilde{C}} \cdot e^{\frac{5}{2} x^2}. 
-\end{align*}
-
-Gleichzeitig ist auch $y_3(x)=0$ eine Lösung der Differentialgleichung. Daher
-müssten wir eigentlich drei Lösungen der Differentialgleichung notieren. Wenn
-wir aber eine neue Konstante $C \in \mathbb{R}$ einführen, die sozusagen
-$+e^{\tilde{C}}$ und $-e^{\tilde{C}}$ sowie die Null ersetzt, dann können wir
-auch vereinfacht als allgemeine Lösung der Differentialgleichung $y' = 5x \cdot
-y$ die Lösung
-
-$$y(x) = C e^{\frac{5}{2}x^2} \quad \text{ mit } C\in\mathbb{R}$$
-
-notieren.
-
-```{dropdown} Video zu "Lösung separable Differentialgleichung"
-<iframe src="https://frankfurt-university.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=bc52e263-cf13-4313-8f1f-ad53009d2b3c&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=false&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
+```{dropdown} Video zu "Differentialgleichung inhomogen lösen" von Mathematrick
+<iframe width="560" height="315" src="https://www.youtube.com/embed/AWdLkNZJZ70" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 ```
 
-```{dropdown} Video zu "Differentialgleichung lösen" von Mathematrick
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Sm0Go9IioJ4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+```{dropdown} Video zu "Inhomogene lineare DGL 1. Ordnung – Variation der Konstanten" von Sciencebarbie
+<iframe width="560" height="315" src="https://www.youtube.com/embed/DD8blQLaHDM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 ```

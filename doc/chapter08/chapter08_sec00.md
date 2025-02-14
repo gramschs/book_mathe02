@@ -1,4 +1,4 @@
-# 8. Richtungsableitungen und vektorwertige Funktionen
+# 8. Linearisierung und Extremwerte
 
 Themen:
 

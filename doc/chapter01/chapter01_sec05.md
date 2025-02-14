@@ -2,172 +2,179 @@
 
 ```{admonition} Übung 1.1
 :class: miniexercise
-Gehen Sie auf die Trainingsseite [Mathebattle: Ableitung ganzrationale Funktionen](https://mathebattle.de/edu_randomtasks/training_show/129) und lösen Sie solange die dortigen Ableitungsaufgaben, bis Sie drei hintereinander richtig gelöst haben.
+Integrieren Sie 
+
+$$\int_{-1}^{3} x\sqrt{x+1}\, dx$$
+
+einmal mittels partieller Integration und einmal mit der Substitutionsregel. 
+
+Tipp: partielle Integration: $u(x)=x$; Substitution: $x = z - 1$.
 ```
+
+````{admonition} Lösung
+:class: miniexercise, toggle
+
+$$\int_{-1}^{3} x\sqrt{x+1}\, dx = \frac{112}{15} \approx 7.4667.$$
+```{dropdown} Lösungsweg
+partielle Integration: $\quad \int_{a}^{b} u(x)v'(x)\, dx = \left[u(x)v(x)\right]_{a}^{b} - \int u'(x)v(x)\, dx$ 
+\begin{align*}
+u(x)=x & \quad \Rightarrow u'(x) = 1\\
+ v'(x)=\sqrt{x+1} & \quad \Rightarrow v(x)=\int v'(x)\, dx = \int \sqrt{x+1}\, dx = \frac{2}{3}(x+1)^{\frac{3}{2}} 
+\end{align*}
+Wir setzen in die partielle Integrationsregel ein:
+
+$$\int \underbrace{x}_{u(x)}\underbrace{\sqrt{x+1}}_{v'(x)}\, dx = \underbrace{x}_{u(x)}\cdot \underbrace
+{\frac{2}{3}(x+1)^{\frac{3}{2}}}_{v(x)} - \int \underbrace{1}_{u'(x)}\cdot\underbrace{\frac{2}{3}(x+1)^{\frac{3}{2}}}_{v(x)}\, dx =
+\frac{2}{3}x(x+1)^{\frac{3}{2}} - \frac{4}{15}(x+1)^{\frac{5}{2}}+C$$
+
+Substitution: $\quad z = x + 1 \quad \Rightarrow \frac{dz}{dx} = 1 \quad \Rightarrow dx = 1\, dz$ 
+
+Wir substituieren:
+
+\begin{multline*}
+\int x\sqrt{x+1}\, dx = \int (z-1)\sqrt{z}\cdot 1 \, dz = \int (z-1) z^{\frac{1}{2}}\, dz = \\
+= \int z^{\frac{3}{2}}\, dz - \int z^{\frac{1}{2}}\, dz = \frac{2}{5}z^{\frac{5}{2}} - \frac{2}{3}z^{\frac{3}{2}} + C 
+\end{multline*}
+
+Rücksubstitution:
+
+$$\int x\sqrt{x+1}\, dx = \frac{2}{5}(x+1)^{\frac{5}{2}} - \frac{2}{3}(x+1)^{\frac{3}{2}} + C$$
+
+Klammert man den Term $\frac{2}{3}(x+1)^{\frac{3}{2}}$ aus und fasst den Rest zusammen, stellt man fest, dass beide Ergebnisse gleich sind. 
+```
+````
 
 ```{admonition} Übung 1.2
 :class: miniexercise
-Gehen Sie auf die Trainingsseite [Mathebattle: Ableiten mit x im Nenner](https://mathebattle.de/edu_randomtasks/training_show/727) und lösen Sie solange die dortigen Ableitungsaufgaben, bis Sie drei hintereinander richtig gelöst haben.
+Berechnen Sie das Integral 
+
+$$\int_{-\pi}^{0} 2x \sin(2x) \, dx.$$
 ```
+
+````{admonition} Lösung
+:class: miniexercise, toggle
+$$\int_{-\pi}^{0} 2x \sin(2x) \, dx = -\pi.$$
+```{dropdown} Lösungsweg
+Hier ist die partielle Integration einmal anzuwenden und man erhält:
+\begin{align*} 
+\int_{-\pi}^{0}\underbrace{2x}_{u}\underbrace{\sin(2x)}_{v'}\, dx   
+    &= \left[2x \left(-\frac{1}{2}\cos(2x)\right) \right]_{-\pi}^{0} - \int_{-\pi}^{0} 2 \left( -\frac{1}{2} \, \cos(2x) \right) \, dx \\ 
+    &= \left[-x\cdot \cos(2x)\right]_{-\pi}^{0} + \int_{-\pi}^{0}\cos(2x)\, dx =\\
+    &= \left[-x\cos(2x)\right]_{-\pi}^{0} + \left[\frac{1}{2}\sin(2x) \right]_{-\pi}^{0} = \\
+    &= \left(0 - (\pi\cdot\cos(2\pi))\right) + 0 - \left( \frac{1}{2}\sin(-2\pi)\right) = \\ 
+    &= -\pi \ . 
+\end{align*} 
+ ```
+ ````
 
 ```{admonition} Übung 1.3
 :class: miniexercise
-Gehen Sie auf die Trainingsseite [Mathebattle: Ableiten mit Wurzel](https://mathebattle.de/edu_randomtasks/training_show/726) und lösen Sie solange die dortigen Ableitungsaufgaben, bis Sie drei hintereinander richtig gelöst haben.
+Berechnen Sie 
+
+$$\int_{0}^{\pi} \cos(x)\cdot x \, dx.$$
 ```
+
+````{admonition} Lösung
+:class: miniexercise, toggle
+$$\int_{0}^{\pi} \cos(x)\cdot x \, dx = -2.$$
+```{dropdown} Lösungsweg
+![solution01_03](solution01_03.png)
+```
+````
 
 ```{admonition} Übung 1.4
 :class: miniexercise
-Gehen Sie auf die Trainingsseite [Mathebattle: Kettenregel](https://mathebattle.de/edu_randomtasks/training_show/714) und lösen Sie solange die dortigen Ableitungsaufgaben, bis Sie drei hintereinander richtig gelöst haben.
+Berechnen Sie
+
+$$\int_{-\pi}^{\pi} x^2\cdot \cos(x)\, dx.$$
 ```
+
+````{admonition} Lösung
+:class: miniexercise, toggle
+$$\int_{-\pi}^{\pi} x^2\cdot \cos(x)\, dx = -4\pi.$$
+```{dropdown} Lösungsweg
+![solution01_04](solution01_04.png)
+```
+````
 
 ```{admonition} Übung 1.5
 :class: miniexercise
-Gehen Sie auf die Trainingsseite [Mathebattle: Produktregel](https://mathebattle.de/edu_randomtasks/training_show/131) und lösen Sie solange die dortigen Ableitungsaufgaben, bis Sie drei hintereinander richtig gelöst haben.
+Berechnen Sie
+
+$$\int_{-2\pi}^{2\pi} e^x \cdot \cos(x)\, dx.$$
 ```
+
+````{admonition} Lösung
+:class: miniexercise, toggle
+$$\int_{-2\pi}^{2\pi} e^x\cdot \cos(x)\, dx = -\frac{1}{2}e^{2\pi}-\frac{1}{2}e^{-2\pi}\approx 267.74.$$
+```{dropdown} Lösungsweg
+![solution01_05](solution01_05.png)
+```
+````
 
 ```{admonition} Übung 1.6
 :class: miniexercise
-Gehen Sie auf die Trainingsseite [Mathebattle: Ketten- und Produktregel](https://mathebattle.de/edu_randomtasks/training_show/724) und lösen Sie solange die dortigen Ableitungsaufgaben, bis Sie drei hintereinander richtig gelöst haben.
+Berechnen Sie
+
+$$\int_{1}^{e^2} x^2\cdot \ln(x) \, dx .$$
 ```
+
+````{admonition} Lösung
+:class: miniexercise, toggle
+$$\int_{1}^{e^2} x^2\cdot \ln(x) \, dx = \frac{5}{9}e^6 + \frac{1}{9} \approx 224.24.$$
+```{dropdown} Lösungsweg
+![solution01_06](solution01_06.png)
+```
+````
 
 ```{admonition} Übung 1.7
 :class: miniexercise
-Gehen Sie auf die Trainingsseite [Mathebattle: alles zusammen](https://mathebattle.de/edu_randomtasks/training_show/466) und lösen Sie solange die dortigen Ableitungsaufgaben, bis Sie drei hintereinander richtig gelöst haben.
+Berechnen Sie
+
+$$\int_{0}^{\frac{\pi}{2}} \cos(x)\cdot e^{\sin(x)}\, dx.\Rule{0 pt}{0 em}{1.5 em}$$
 ```
+
+````{admonition} Lösung
+:class: miniexercise, toggle
+$$\int_{0}^{\frac{\pi}{2}} \cos(x)\cdot e^{\sin(x)}\, dx = e - 1 \approx 1.7183\Rule{0 pt}{0 em}{1.5 em}$$
+```{dropdown} Lösungsweg
+![solution01_07](solution01_07.png)
+```
+````
 
 ```{admonition} Übung 1.8
 :class: miniexercise
-Gehen Sie auf die Trainingsseite [Mathebattle: Extrempunkte](https://mathebattle.de/edu_randomtasks/training_show/398) und lösen Sie solange die dortigen Ableitungsaufgaben, bis Sie drei hintereinander richtig gelöst haben.
+Berechnen Sie 
+
+$$\int_{2}^{3}\frac{1}{(1-x)^3}\, dx.$$
 ```
+
+````{admonition} Lösung
+:class: miniexercise, toggle
+$$\int_{2}^{3}\frac{1}{(1-x)^3}\, dx = -\frac{3}{8} = - 0.375$$
+```{dropdown} Lösungsweg
+![solution01_08](solution01_08.png)
+```
+````
 
 ```{admonition} Übung 1.9
 :class: miniexercise
-Ein Rechteckt hat seine obere Seite unter der Parabel $f(x) = 16 - x^2$ und
-seine untere Seite auf der x-Achse. Die beiden vertikalen Seiten des Rechtecks
-sind parallel zur y-Achse. Bestimmen Sie die Abmessungen des Rechtecks, so dass
-sein Flächeninhalt maximal ist.
+Berechnen Sie
 
-Fertigen Sie dazu eine Skizze an.
+$$\int_{0}^{1} 2x^7 \cdot e^{x^2}\, dx.$$
 ```
 
-```{admonition} Lösung
+````{admonition} Lösung
 :class: miniexercise, toggle
-Die Parabel $f(x) = -x^2 + 16$ ist symmetrisch zur y-Achse, daher ist auch das
-Rechteck symmetrisch zur y-Achse. Daher genügt es, nur die rechte Hälfte des
-Rechtecks zu betrachten und $x>0$ zu fordern.
-
-Die Hauptbedingung lautet
-
-$$A = x\cdot y.$$
-
-Die Nebenbedingung lautet
-
-$$y = -x^2 + 16.$$
-
-Daraus wird die Zielfunktion
-
-$$A(x) = x \cdot (-x^2 + 16),$$
-
-die maximiert werden soll. Wir vereinfachen die Zielfunktion und erhalten
-
-$$\Rightarrow A(x) = -x^3 + 16x.$$
-
-Wir bilden die 1. Ableitung:
-
-$$A'(x) = -3x^2+16.$$
-
-Notwendige Bedingung für Extremwerte ist, dass $A'(x)=0$ erfüllt ist. Daher lösen
-wir die Gleichung
-
-$$-3x^2+16 = 0$$ 
-
-und erhalten als Lösung $x_1 = \sqrt{\frac{16}{3}} = \frac{4}{3}\sqrt{3}$ und $x_2 =
--\sqrt{\frac{16}{3}}$. Die negative Stelle $x_2$ wird nicht weiter betrachtet,
-da wir nur die rechte Seite des Rechtecks betrachten und daher $x>0$
-vorausgesetzt haben. Als nächstes überprüfen wir mit der 2. Ableitung, ob ein
-Extremwert vorliegt (hinreichende Bedingung).
-
-$$A''(x) = -6x \quad \Rightarrow A''(x_1) = -6\cdot \frac{4}{3}\sqrt{3} =
--8\sqrt{3} < 0.$$
-
-Da die 2. Ableitung an der Stelle $x_1$ negativ ist, liegt ein Maximum vor. Für
-das entsprechende $y_1$ gilt dann
-
-$$y_2 = f(x_1) = 16 - x_1^2 = 16 - \left(  \sqrt{\frac{16}{3}}\right)^2 =
-\frac{32}{3}.$$
-
-Antwort: Somit ist die linke Seite des gesuchten kompletten Rechtecks an der
-Stelle $x = -\frac{4}{3}\sqrt{3}$ (was $x_2$ entspricht) und die rechte Seite
-an der Stelle $x = \frac{4}{3}\sqrt{3}$. Die obere Seite liegt bei $y = \frac{32}{3}$.
-Der Flächeninhalt des kompletten gesuchten Rechtecke ist
-
-$$A_{\text{gesamt}} = 2 \cdot  \frac{4}{3}\sqrt{3} \cdot \frac{32}{3} =
-\frac{256}{9}\sqrt{3}.$$
+$$\int_{0}^{1} 2x^7 \cdot e^{x^2}\, dx = -2e + 6 \approx 0.5634$$
+```{dropdown} Lösungsweg
+![solution01_09](solution01_09.png)
 ```
+````
 
-```{admonition} Übung 1.10
-:class: miniexercise
-Ein senkrechter Zylinder wird in eine Kugel mit dem Radius 1 m eingesetzt, so
-dass beide Mittelpunkte übereinstimmen. Bestimmen Sie Radius $r$, Höhe $h$ und
-Volumen $V$ des Zylinders, wenn der Zylinder das maximale Volumen haben soll.
+## Weitere Übungsaufgaben
 
-Fertigen Sie dazu eine Skizze des Querschnitts an.
-```
+ Für weitere Übungsaufgaben steht Ihnen der MATEX-Übungsaufgaben-Generator zur Verfügung. Wählen Sie anfangs Stufe 1 und steigern Sie sich auf Stufe 3.
 
-```{admonition} Lösung
-:class: miniexercise, toggle
-Die Hauptbedingung (Volumen des Zylinders) lautet
-
-$$V = \pi r^2 \cdot h.$$
-
-Die Nebenbedingung lautet (erkenntlich aus Skizze des Querschnitts)
-
-$$r^2 + \left(\frac{h}{2}\right)^2 = 1.$$
-
-Aufgelöst nach der Höhe $h$ lautet die Nebenbedingung
-
-$$h = 2\sqrt{1-r^2}.$$
-
-Eingesetzt in die Hauptbedingung erhalten wir die Zielfunktion
-
-$$V(r) = 2\pi r^2 \cdot \sqrt{1-r^2},$$
-
-die maximiert werden soll. Dazu berechnen wir die 1. Ableitung als
-
-$$V'(r) = \frac{4\pi r - 6\pi r^3}{\sqrt{1-r^2}}.$$
-
-Um die möglichen Extremwertstellen zu berechnen (notwendige Bedingung), setzen
-wir die 1. Ableitung gleich Null:
-
-$$V'(r) = 0  \quad \Rightarrow \frac{4\pi r - 6\pi r^3}{\sqrt{1-r^2}} = 0.$$
-
-Wir multiplizieren die Gleichung auf beiden Seiten mit $\sqrt{1-r^2}$ und
-klammern $r$ aus:
-
-$$\Rightarrow r\cdot \left(4\pi - 6 \pi r^2\right) = 0.$$
-
-Die erste Lösung dieser Gleichung $r_1 = 0$ verwerfen wir, denn ein Zylinder mit
-Radius 0 ist nicht existent. Aus $4\pi - 6 \pi r^2 = 0$ folgen die beiden
-Lösungen $r_2 = \sqrt{\frac{2}{3}}$ und $r_3 = -\sqrt{\frac{2}{3}}$. Die dritte
-Lösung verwerfen wir ebenfalls, da ein Zylinder keinen negativen Radius haben
-kann. Wir betrachten nur noch die Stelle $r_2 = \sqrt{\frac{2}{3}}$.
-
-Um zu überprüfen, ob die Stelle $r_2 = \sqrt{\frac{2}{3}} = \frac{1}{3}\sqrt{6}$
-einen Extremwert hat (hinreichende Bedingung), bilden wir die 2. Ableitung und
-erhalten nach einigen Umformungen:
-
-$$V''(r) = \frac{2\pi (6r^4 - 9r^2 + 2)}{(1-r^2)^{\frac{3}{2}}}.$$
-
-Setzen wir nun $r_2 = \frac{1}{3}\sqrt{6}$ in die 2. Ableitung ein, erhalten wir
-
-$$V''\left(\sqrt{\frac{2}{3}}\right) = -8\pi\sqrt{3} < 0.$$
-
-Somit hat die Zielfunktion $V(r)$ an der Stelle $r_2 = \frac{1}{3}\sqrt{6}$ ein
-Maximum. Die dazugehörige Höhe ist
-
-$$h_2 = 2 \sqrt{1- r_2^2} = \frac{2}{3}\sqrt{3}$$
-
-und das maximale Volumen
-
-$$V = \pi r_2^2 \cdot h_2 = \frac{4}{9}\sqrt{3}\pi.$$
-```
+* [Aufgaben partielle Integration](https://lx4.mint-kolleg.kit.edu/MATeX/generatorview.php?data=dmtSYUVJNWovTE04cjdDTjE2VUEvZz09)
+* [Aufgaben mit Substitution](https://lx4.mint-kolleg.kit.edu/MATeX/generatorview.php?data=ZHBLcm1YaUcxRE81SStKbWhwTW1Tdz09)

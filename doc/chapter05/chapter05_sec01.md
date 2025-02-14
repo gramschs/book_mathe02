@@ -1,112 +1,147 @@
-# 5.1 Berechnung Taylorreihe
+# 5.1 Periodische Funktionen
 
-Im Kapitel über Potenzreihen haben wir uns bereits mit der Frage beschäftigt, in
-welchem Intervall eine Potenzreihe eine gegebene Funktion gut approximiert. Was
-uns aber noch fehlt ist die Frage, wie wir zu solchen Potenzreihen kommen. Daher
-gibt es in diesem Kapitel eine Anleitung dazu.
+In diesem Kapitel werden wir uns mit periodischen Funktionen beschäftigen.
+Insbesondere im Maschinenbau finden sich zahlreiche Anwendungen von periodischen
+Funktionen, z.B. in der Technischen Mechanik oder in der Regelungstechnik. Viele
+mechanische Systeme, wie z.B. Federsysteme, Pendel oder rotierende Wellen,
+führen periodische Schwingungen aus. Auch in der Regelungstechnik werden
+periodische Steuergrößen erzeugt, die zur Regelung von Systemen verwendet
+werden. Beispiele sind periodische Signale, wie z.B. Rechteck-, Dreieck- oder
+Sinusfunktionen. Diese Signale werden verwendet, um elektrische, mechanische
+oder hydraulische Systeme zu steuern.
 
-## Lernziele 
+## Lernziele
 
 ```{admonition} Lernziele
 :class: goals
-* Sie kennen die Formel für ein **Taylorpolynom der Ordnung n** auswendig:
-
-$$T_n(x) =\sum_{k=0}^{n} \frac{f^{(k)}(x_0)}{k!} \cdot (x-x_0)^k.$$
-
-* Sie kennen die Formel für die **Taylorreihe** auswendig:
-
-$$T(x)=\sum_{k=0}^{\infty} \frac{f^{(k)}(x_0)}{k!} (x-x_0)^k.$$
-
+* Sie können erklären, was eine **periodische Funktion** ist.
+* Sie können Beispiele von periodischen Funktionen nennen wie
+    * Sinus- und Kosinusfunktion,
+    * Rechteckfunktion,
+    * Dreiecksfunktion und
+    * Sägezahnfunktion.
 ```
 
+## Periodische Funktionen - was ist das?
 
-## Taylorpolynom
+Bei einer periodischen Funktion wiederholen sich in regelmäßigen Abständen die Funktionswerte wieder. Der Abstand, nachdem sich die Funktionswerte beginnen zu wiederholen, heißt **Periodendauer**.
 
-Für Funktionen, die genügend oft differenzierbar sind, gibt es ein Kochrezept
-zur Berechnung der Koeffizienten der dazugehörigen Potenzreihe. Um dieses
-Kochrezept anzuwenden, beschäftigen wir uns zunächst mit dem sogenannten
-Taylorpolynom.
-
-```{admonition} Was ist ... ein Taylorpolynom?
+```{admonition} Was ist ... eine periodische Funktion?
 :class: note
-Ein **Taylorpolynom** zu einer Funktion $f$ kann nur gebildet werden, wenn die Funktion $f$ n-mal stetig differenzierbar ist. Wenn das aber der Fall ist, dann wird noch ein Entwicklungspunkt $x_0$ gewählt. Das Taylorpolynom $T_n$ zu $f$ vom Grad $n$ am Entwicklungspunkt $x_0$ ist dann:
+Eine Funktion heißt periodisch, wenn sich die Funktionswerte regelmäßig wiederholen. Als mathematische Formel ausgedrückt ist eine Funktion $f$ periodisch mit der Periode $p$, wenn gilt:
 
-\begin{align*}
-T_n(x) &=f(x_0) + \frac{f'(x_0)}{1!}(x-x_0)^1 + \frac{f''(x_0)}{2!}(x-x_0)^2 + \ldots \\
-       &=\sum_{k=0}^{n} \frac{f^{(k)}(x_0)}{k!} \cdot (x-x_0)^k.
-\end{align*}
+$$f(x+p) = f(x).$$
 
-Dabei steht $k!$ für die Fakultät der Zahl $k$.
 ```
 
-Hier gibt es ein Video, das die Fakultät $k!$ erklärt.
-
-```{dropdown} Video zu "Fakultät" von Mathematrick
-<iframe width="560" height="315" src="https://www.youtube.com/embed/nVdUcZmmU7w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-```
-(ref04_sec01_kochrezept)=
-## Kochrezept zur Berechnung von Taylorpolynomen
-
-1. Erst einmal folgende Frage beantworten: Bis zu welchem Polynomgrad $n$ soll
-   die Funktion $f(x)$ approximiert werden? $\rightarrow n$ aufschreiben
-2. Die ersten $n$ Ableitungen der Funktion $f$ bestimmen, also $f'(x), f''(x),
-   f'''(x), f^{(iv)}(x), \ldots$.
-3. Die Koeffizienten ausrechnen, indem nun der Entwicklungspunkt $x_0$ in die
-   Funktion $f$ und in die Ableitungen eingesetzt wird.
-4. Die Fakultäten ausrechnen.
-5. Alles in die Formel für das Taylorpolynom einsetzen.
-
-Probieren wir das an einem Beispiel aus. Die Funktion $f(x)=\sin(x)$ soll durch
-ein Taylorpolynom Grad 3 am Entwicklungspunkt $x_0=0$ approximiert werden.
-
-Schritt 1: Wir halten fest, der Grad ist 3 ($n=3$), d.h. wir brauchen die
-ersten drei Ableitungen.
-
-Schritt 2: Wir bilden die ersten drei Ableitungen: 
-
-\begin{align*} 
-f'(x)  &= \cos(x) \\
-f''(x) &= -\sin(x) \\
-f^{(3)}(x) &= -\cos(x) \end{align*}
-
-Schritt 3: Wir rechnen die Koeffizienten des Taylorpolynoms aus, indem wir $x_0
-= 0$ in die Funktion und die ersten drei Ableitungen einsetzen: 
-
-\begin{align*}
-f(0) &= \sin(0) = 0 \\
-f'(0) &= \cos(0) = 1 \\
-f''(0) &= - \sin(0) = 0 \\
-f^{(3)}(0) &= -\cos(0) = -1 \end{align*}
-
-Schritt 4: Die Fakultäten bis 3 werden ausgerechnet:
-
-$$0!=1, \quad 1!=1, \quad 2!=2, \quad 3!=6.$$
-
-Schritt 5: Wir setzen alles in die Formel für das Taylorpolynom ein:
-\begin{align*} T_3(x) &= f(x_0) + f'(x_0)\cdot (x-x_0) + \frac{f''(x_0)}{2}\cdot
-(x-x_0)^2 + \frac{f^{(3)}(x_0)}{6} \cdot (x-x_0)^3 = \\
-    &= \sin(0) + 1\cdot (x-0) + \frac{0}{2}\cdot (x-0)^2 + \frac{-1}{6}\cdot (x-0)^3 = \\
-    &= x - \frac{1}{6}x^3.
-\end{align*}
-
-Am besten das folgende Video gucken :-)
-
-```{dropdown} Video zu "Taylorpolynom berechnen" von Mathematrick
-<iframe width="560" height="315" src="https://www.youtube.com/embed/o95cOqnLekw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+```{dropdown} Video "Periodische Funktion" von lernflix
+<iframe width="560" height="315" src="https://www.youtube.com/embed/e3lpwsKp75Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 ```
 
-## Taylorreihe
+## Beispiele periodischer Funktionen
 
-Und was ist nun die Taylorreihe? Ganz einfach, ein Taylorpolynom, das bis
-Unendlich geht, sieht nur kompliziert aus, wenn man es formal aufschreibt.
+### Sinus- und Kosinusfunktion
 
-```{admonition} Was ist ... eine Taylorreihe?
-:class: note
-Zu einer Funktion $f$, die unendlich oft differenzierbar ist, kann die folgende Potenzreihe
+Sinus und Kosinus sind die beiden wichtigsten periodischen Funktionen. Sie werden auch dazu genutzt, um andere periodische Funktionen zu approximieren (Stichwort: Fourierreihe). Beide haben eine Periode von $2\pi$.
 
-$$T(x)=\sum_{k=0}^{\infty} \frac{f^{(k)}(x_0)}{k!} (x-x_0)^k$$
-
-gebildet werden. Diese Potenzreihe wird Taylorreihe zu $f$ am Entwicklungspunkt $x_
-0$ genannt.
+```{figure} pics/plot_sinus.png
+---
+width: 600px
+name: chap05_plot_sinus
+---
+Sinusfunktion mit einer Periode $p = 2\pi$
 ```
 
+Wir werden in den nächsten Kapiteln die Sinus- und Kosinusfunktionen
+modifizieren. Im folgenden Video werden die verschiedenen Möglichkeiten, die
+Sinusfunktion zu transformieren wiederholt. Für die Kosinusfunktion gelten die
+gleichen Transformationen analog.
+
+```{dropdown} Video "Sinusfunktion Transformation" von Daniel Jung
+<iframe width="560" height="315" src="https://www.youtube.com/embed/d_u7yYf30yA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+```
+
+### Rechteckfunktion
+
+Die Rechteckfunktion ist zunächst einmal keine periodische Funktion. Als erstes
+werden eine Periode $T$ und eine Konstante $c$ festgelegt. Dann wird die
+Rechteckfunktion definiert als die Funktion, deren Funktionswerte im Intervall
+$[-\frac{T}{2}, \frac{T}{2}]$ gleich der Konstante $c$ sind. Und außerhalb
+dieses Intervalls sollen die Funktionswerte 0 sein (übrigens, manchmal wird auch
+ein anderer Wert als 0 genommen). Mathematisch wird das folgendermaßen
+ausgedrückt:
+
+\begin{equation*}
+f(t) =
+\begin{cases}
+c & \text{ für } -\frac{T}{2} \leq x \leq \frac{T}{2},\\
+0 & \text{ sonst.}
+\end{cases}
+\end{equation*}
+
+Der Funktionsgraph der Rechteckfunktion sieht folgendermaßen aus:
+
+```{figure} pics/plot_rechteck.png
+---
+width: 600px
+name: chap05_plot_rechteck
+---
+Beispiel einer Rechteckfunktion: Periode $T = 1$ und $c = 1$
+```
+
+Jetzt wird die Periode von $0$ bis $T$ gelb markiert.
+
+```{figure} pics/plot_rechteck_period.png
+---
+width: 600px
+name: chap05_plot_rechteck_period
+---
+Beispiel einer Rechteckfunktion: das Periodenintervall $[0,T]$ ist gelb markiert
+```
+
+Als letztes wird der Funktionsgraph periodisch wiederholt. Damit ist gemeint,
+dass das gelb markierte Gebiet links und rechts immer wieder drangehängt wird.
+Dadruch entsteht eine neue Funktion, deren Funktionsgraph in der nächsten
+Abbildung zu sehen ist.
+
+```{figure} pics/plot_rechteck_periodisch.png
+---
+width: 600px
+name: chap05_plot_rechteck_periodisch
+---
+Beispiel einer Rechteckfunktion, die periodisch fortgesetzt wurde
+```
+
+Diese neue Funktion ist nun eine periodische Funktion. Sie wird häufig in der
+Signalverarbeitung verwendet. Beispielsweise dient sie als Taktsignal für
+digitale Prozessoren und Controller.
+
+### Dreiecksfunktion
+
+Die Dreiecksfunktion ist eine periodische Funktion, die ebenfalls in der
+Signalverarbeitung häufig vorkommt. Sie hat eine Periode $T$ und oszilliert
+zwischen zwei Werten $c_1$ und $c_2$, wobei der Anstieg von $c_1$ auf $c_2$
+linear ist und der Abfall von $c_2$ auf $c_1$ ebenfalls linear ist.
+
+```{figure} pics/plot_dreieck.png
+---
+width: 600px
+name: chap05_plot_dreieck
+---
+Beispiel einer Dreiecksfunktion, die zwischen $0$ und $1$ oszilliert und die Periode $T = 2$ hat
+```
+
+### Sägezahnfunktion
+
+Die Sägezahnfunktion ist eine weitere periodische Funktion, die in der
+Signalverarbeitung häufig verwendet wird. Sie hat eine Periode $T$ und
+oszilliert zwischen $-1$ und $1$, wobei der Anstieg von $-1$ auf $1$ linear ist
+und der Abfall von $1$ auf $-1$ plötzlich stattfindet.
+
+```{figure} pics/plot_saegezahn.png
+---
+width: 600px
+name: chap05_plot_saegezahn
+---
+Beispiel einer Sägezahnfunktion, die zwischen $-1$ und $1$ oszilliert und die Periode $T = 2$ hat
+```

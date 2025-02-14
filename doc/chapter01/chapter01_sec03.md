@@ -1,180 +1,95 @@
----
-jupytext:
-  cell_metadata_filter: -all
-  formats: md:myst
-  main_language: python
-  text_representation:
-    extension: .md
-    format_name: myst
-    format_version: 0.13
-    jupytext_version: 1.14.7
----
+# 1.3 Partielle Integration
 
-# 1.3 Extremwerte
+Wird ein Produkt abgeleitet, ist es etwas komplizierter. Es darf nicht einfach
+jeder Faktor für sich abgeleitet werden, sondern es gilt die Produktregel:
 
-Beschreibt eine Funktion einen technischen Prozess oder beispielsweise
-temperaturabhängige Materialkennwerte, so ist die Information sehr interessant,
-ob in einem bestimmten Intervall minimale oder maximale Werte angenommen werden.
-In diesem Kapitel beschäftigen wir uns daher damit, die Minima oder Maxima einer
-Funktion zu bestimmen.
+$$\left( u(x)\cdot v(x)\right)^{\prime} = u^{\prime}(x)\cdot v(x) +
+u(x)\cdot v^{\prime}(x).$$
+
+Da Integration die Umkehrung der Ableitung ist, dürfen Produkte auch nicht
+einfach so integriert werden. Dafür gibt es die Produktregel für Integrale, die
+offiziell **partielle Integration** heißt.
 
 ## Lernziele
 
 ```{admonition} Lernziele
 :class: goals
-* Sie wissen, was das Minimum oder Maximum einer Funktion ist.
-* Sie können Minima oder Maxima von 2x differenzierbaren Funktionen berechnen.
+Sie können ein Produkt von zwei Funktionen $u\cdot v$ mit der partiellen
+Integrationsregel im Intervall $[a,b]$ integrieren:
+
+$$\int_{a}^{b} u(x) \cdot
+v'(x) \, dx = \big[u(x)\cdot v(x)\big]_{a}^{b}
+- \int_{a}^{b} u'(x) \cdot v(x) \, dx.$$
 ```
 
-## Minimum und Maximum einer Funktion -- was ist das?
+## Integrieren von Produkten
 
-Die Funktion $f(x) = x^2 -6x + 11$ hat den folgenden Funktionsgraphen.
+Die partielle Integration kann durch folgende Formel ausgedrückt werden:
 
-```{figure} pics/chapter01_sec03_fig01.png
----
-width: 75%
-name: fig01_parabel
----
-Der kleinste Funktionswert (= Minimum) dieser Parabel $f(x) = x^2 -6x + 11$ ist
-2. Er befindet sich an der Stelle $x = 3$. Der dazugehörige Punkt $(3 | 2)$ ist
-ein Tiefpunkt.
+$$\int_{a}^{b} u(x) \cdot v'(x) \, dx = \big[u(x)\cdot v(x)\big]_{a}^{b}
+- \int_{a}^{b} u'(x) \cdot v(x) \, dx.$$
+
+Hierbei sind $u(x)$ und $v(x)$ zwei Funktionen, deren Produkt integriert werden
+soll, und $u'(x)$ und $v'(x)$ sind die Ableitungen von $u(x)$ und $v(x)$.
+
+## Beispiel für partielle Integration
+
+Ein Beispiel für die Anwendung der partiellen Integration ist die Berechnung des
+Integrals
+
+$$\int_{0}^{\pi} \sin(x)\cdot 2x \, dx.$$
+
+Als erstes müssen wir auswählen, welche Funktion $u$ sein soll und was $v$. Wir wählen
+
+$$u(x)=2x \quad \text{ und } \quad v'(x)=\sin(x).$$
+
+Dann werden in einer Nebenrechnung die Ableitung $u^{\prime}$ von $u$ und eine
+Stammfunktion $v$ von $v^{\prime}$ ausgerechnet:
+
+$$u^{\prime}(x) = 2 \quad \text{ und } \quad v(x)=-\cos(x).$$
+
+Das wird alles in die obige Formel eingesetzt:
+
+$$\int_{0}^{\pi} \sin(x)\cdot 2x \, dx = \big[2x \cdot \left(-\cos(x)\right)\big]_{0}^{\pi} -
+\int_{0}^{\pi} 2 \cdot (-\cos(x)) \, dx.$$
+
+Das bestimmte Integral $\big[2x \cdot \left(-\cos(x)\right)\big]_{0}^{\pi}$
+können wir jetzt zwar direkt ausrechnen, aber übrig bleibt noch das Integral
+$\int_{0}^{\pi} 2 \cdot (-\cos(x)) \, dx$, das noch weiter ausgerechnet werden
+muss.
+
+Aber das geht jetzt relativ leicht, denn von der Funktion $v(x)=-\cos(x)$ kennen wir ebenfalls eine Stammfunktion, nämlich $V(x)=-\sin(x)$. Daher ist $\int_{0}^{\pi} 2
+\cdot (-\cos(x)) \, dx = 2 \big[-\sin(x)\big]_{0}^{\pi}$ und insgesamt gilt dann:
+
+$$\int_{0}^{\pi} \sin(x)\cdot 2x \, dx = \big[2x \cdot
+\left(-\cos(x)\right)\big]_{0}^{\pi} - 2 \big[-\sin(x)\big]_{0}^{\pi}.$$
+
+Jetzt werden obere und untere Grenze eingesetzt und die Differenz gebildet. Das
+Ergebnis ist
+
+$$\int_{0}^{\pi} \sin(x)\cdot 2x \, dx = 2\pi.$$
+
+Achtung: Hätten wir eine andere Wahl getroffen, nämlich
+
+$$u(x)=\sin(x) \quad \text{ und } \quad v'(x)=2x,$$
+
+dann wäre die Suche nach der Stammfunktion von $v'$ zwar einfacher gelaufen (das
+wäre $v(x)=x^2$ gewesen), aber insgesamt wäre es zu kompliziert, denn wir hätten
+
+$$\int_{0}^{\pi} \sin(x)\cdot 2x \, dx = \big[\sin(x)\cdot x^2 \big]_{0}^{\pi} -
+\int_{0}^{\pi} \cos(x)\cdot x^2 \, dx.$$
+
+Das letzte Integral kann nicht gelöst werden.
+
+## Weiteres Lernmaterial
+
+Hier finden Sie noch zwei Videos, in denen die partielle Integration erklärt
+wird und an Beispielen vorgeführt wird.
+
+```{dropdown} Video "Partielle Integration: Rechenregel" von Mathematische Methoden
+<iframe width="560" height="315" src="https://www.youtube.com/embed/s-IDbDtRAbg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 ```
 
-Der kleinste Funktionswert $f(x)$, der vorkommt, ist 2. Es gilt also
-
-$$f(x) \geq 2 \quad \text{ für alle } x\in\mathbb{R}.$$
-
-Einen solchen kleinsten Wert nennen wir **Minimum**. Mathematisch wird das
-folgendermaßen notiert:
-
-$$\min_{x\in\mathbb{R}} f(x) = 2.$$
-
-Um zu verdeutlichen, dass in diesem Beispiel die 2 sogar für alle reellen Zahlen
-$x\in\mathbb{R}$ der kleinste Funktionswert ist, sagt man oft auch **globales
-Minimum**. Es könnte aber auch sein, dass dieser Funktionswert nur in einem
-bestimmten Bereich der kleinste Funktionswert ist. Dazu werden wir noch ein
-Beispiel betrachten. Wir halten noch fest, dass der Punkt $(3 | 2)$
-**Tiefpunkt** genannt wird.
-
-Als zweites Beispiel betrachten wir die Funktion $f(x) = \frac{1}{2}x^3 -3x^2 +
-\frac{9}{2}x+2$. Diese Funktion hat kein globales Minimum, denn es werden
-Funktionswerte bis $-\infty$ angenommen. Aber die Funktion hat das lokale
-Minimum 2 an der Stelle $x = 3$.
-
-```{figure} pics/chapter01_sec03_fig02.png
----
-width: 75%
-name: fig02_kubisches_polynom
----
-Der kleinste Funktionswert (= Minimum) der Funktion $f(x) = \frac{1}{2}x^3 -3x^2 +
-\frac{9}{2}x+2$ im Intervall $[2,4]$ ist 2. Da sich das Minimum nur auf dieses
-Intervall bezieht und nicht auf die ganze Definitionsmenge, ist es ein lokales
-Minimum. Es befindet sich an der Stelle $x = 3$. Der dazugehörige Punkt $(3 |
-2)$ ist ein lokaler Tiefpunkt.
+```{dropdown} Video "Partielle Integration: Beispiel" von Mathematische Methoden
+<iframe width="560" height="315" src="https://www.youtube.com/embed/LlGrOTQ9TlU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 ```
-
-```{admonition} Was ist ... ein Minimum einer Funktion?
-:class: note
-Wir betrachten eine reellwertige Funktion $f$ mit der Definitionsmenge
-$D\subseteq\mathbb{R}$, also $f: D \rightarrow \mathbb{R}$. Die Funktion $f$ hat
-an der Stelle $x_0$ ein **lokales Minimum**, wenn es ein Intervall $I = (a,b)$
-gibt, das $x_0$ enthält, und gleichzeitig die Bedingung
-
-$$f(x_0) \leq f(x)$$
-
-für alle  $x\in (a,b)$ erfüllt ist. Gilt sogar 
-
-$$f(x_0) \leq f(x)$$
-
-für alle $x\in D$, dann hat die Funktion $f$ an der Stelle $x_0$ ein
-**globales Minimum**.
-```
-
-Für das Maximum gilt eine analoge Definition, bei der nur das
-Ungleichheitszeichen anders ist.
-
-```{admonition} Was ist ... ein Maximum einer Funktion?
-:class: note
-Wir betrachten eine reellwertige Funktion $f$ mit der Definitionsmenge
-$D\subseteq\mathbb{R}$, also $f: D \rightarrow \mathbb{R}$. Die Funktion $f$ hat
-an der Stelle $x_0$ ein **lokales Maximum**, wenn es ein Intervall $I = (a,b)$
-gibt, das $x_0$ enthält, und gleichzeitig die Bedingung
-
-$$f(x_0) \geq f(x)$$
-
-für alle  $x\in (a,b)$ erfüllt ist. Gilt sogar 
-
-$$f(x_0) \geq f(x)$$
-
-für alle $x\in D$, dann hat die Funktion $f$ an der Stelle $x_0$ ein
-**globales Maximum**.
-```
-
-## Wie finden wir Hoch- und Tiefpunkte?
-
-Wir betrachten weiterhin das obige Beispiel, die Funktion $f(x) = \frac{1}{2}x^3
--3x^2 + \frac{9}{2}x+2$. Zeichen wir veschiedene Tangenten ein, so stellen wir
-fest, dass die Steigung der Tangente im lokalen Hochpunkt (1|4) und im lokalen
-Tiefpunkt (3|2) jeweils Null ist. Für die Stellen $x_{\text{HP}} = 1$ und
-$x_{\text{TP}} = 3$ gilt also
-
-$$f'(x_{\text{HP}}) = f'(1) = 0$$
-
-bzw.
-
-$$f'(x_{\text{TP}}) = f'(3) = 0.$$
-
-Tatsächlich gilt diese Aussage für alle differenzierbaren Funktionen. Wenn die
-differenzierbare Funktion $f$ an der Stelle $x_0$ ein Minimum oder ein Maximum
-hat, dann gilt
-
-$$f'(x_0) = 0.$$
-
-Die Umkehrung dieser Aussage ist allerdings nicht wahr. Wenn die 1. Ableitung
-einer differenzierbaren Funktion an der Stelle $x_0$ gleich Null ist, muss sie
-dort nicht ein Maximum oder ein Minimum haben.
-
-Die Funktion $f(x)=x^3$ hat die 1. Ableitung $f'(x)=3x^2$. An der Stelle $x_0=0$
-ist die 1. Ableitung Null, aber $f$ hat kein Minimum und kein Maximum, auch
-nicht an dieser Stelle. Der Punkt $(0,0)$ wird Sattelpunkt genannt.
-
-```{figure} pics/chapter01_sec03_fig03.svg
----
-width: 75%
-name: chapter01_sec03_fig03
----
-Die Funktion $f(x)=x^3$ hat an der Stelle $x_0 = 0$ kein Minimum und auch kein Maximum, obwohl die Steigung der Tangente an dieser Stelle Null ist, also $f'(x)=3x^2 \Rightarrow f'(0)=0$ gilt.
-```
-
-Diese Bedingung ist *notwendig*, damit überhaupt ein Maximum oder Minimum
-vorliegen kann. Leider reicht diese Bedingung noch nicht aus. Alle Nullstellen
-der 1. Ableitung sind *mögliche* Extrema, es könnten aber auch Sattelpunkte
-sein.
-
-Daher müssen wir noch zusätzliche Bedingungen überprüfen, bevor wir entscheiden
-können, ob ein Minimum oder Maximum vorliegt. Die möglichen Extremwerte müssen
-noch zusätzlich mit der 2. Ableitung geprüft werden:
-
-* Die Funktion $f$ hat an der Stelle $x_0$ ein **Maximum**, wenn
-  * die 1. Ableitung an dieser Stelle Null ist, d.h. $f'(x_0) = 0$ und
-  * die 2. Ableitung an dieser Stelle **negativ** ist, d.h. $f''(x_0) < 0$.
-* Die Funktion $f$ hat an der Stelle $x_0$ ein **Minimum**, wenn
-  * die 1. Ableitung an dieser Stelle Null ist, d.h. $f'(x_0) = 0$ und
-  * die 2. Ableitung an dieser Stelle **positiv** ist, d.h. $f''(x_0) > 0$.
-
-Diese beiden Bedingungen nennt man dann **hinreichende** Bedingungen.
-
-Achtung: Wenn allerdings die zweite Ableitung Null ist, also $f''(x_0) = 0$,
-kann man keine Entscheidung treffen und muss weitere Bedingungen überprüfen.
-Alternativ gibt es noch das sogenannte **Vorzeichenwechselkriterium**, das hier
-nicht weiter ausgeführt wird.
-
-## Zusammenfassung und Ausblick
-
-In diesem Kapitel haben wir uns mit den Begriffen Minimum und Maximum einer
-Funktion beschäftigt. Ist eine Funktion differenzierbar, so sind die Nullstellen
-der 1. Ableitung Kandidaten für Extrema. Ob tatsächlich ein Extremum (Minimum
-oder Maximum) vorliegt, muss einzeln geprüft werden. Für diese Prüfung gibt es
-mehrere Kriterien, in dieser Vorlesung verwenden wir den Test mit der 2.
-Ableitung. Im nächsten Kapitel beschäftigen wir uns mit Extrema mit
-Zusatzbedingung.
