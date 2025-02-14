@@ -59,6 +59,8 @@
     <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'chapter06/chapter06_sec03';</script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jsxgraph/1.3.5/jsxgraphcore.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js"></script>
@@ -458,9 +460,11 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#die-rechteckfunktion">Die Rechteckfunktion</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lernziele">Lernziele</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#die-rechteckschwingung">Die Rechteckschwingung</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#die-sagezahnfunktion">Die Sägezahnfunktion</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#die-dreiecksfunktion">Die Dreiecksfunktion</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zusammenfassung-und-ausblick">Zusammenfassung und Ausblick</a></li>
 </ul>
             </nav>
         </div>
@@ -474,18 +478,168 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="beispiele-fur-fourierreihen">
 <h1>6.3 Beispiele für Fourierreihen<a class="headerlink" href="#beispiele-fur-fourierreihen" title="Link to this heading">#</a></h1>
-<p>In diesem Kapitel werden drei bekannte Beispiele für Fourierreihen vorgerechnet.</p>
-<section id="die-rechteckfunktion">
-<h2>Die Rechteckfunktion<a class="headerlink" href="#die-rechteckfunktion" title="Link to this heading">#</a></h2>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/dzkCRqKXZCs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<p>In diesem Kapitel untersuchen wir drei klassische Beispiele für Fourierreihen:
+die Rechteckschwingung, die Sägezahnschwingung und die Dreieckschwingung. Diese
+Funktionen treten häufig in der Signalverarbeitung und der Physik auf, etwa bei
+der Beschreibung von periodischen Signalen oder der Analyse von Schwingungen.</p>
+<section id="lernziele">
+<h2>Lernziele<a class="headerlink" href="#lernziele" title="Link to this heading">#</a></h2>
+<div class="goals admonition">
+<p class="admonition-title">Lernziele</p>
+<ul class="simple">
+<li><p>Sie können die Fourierreihe einer <strong>Rechteckschwingung</strong> berechnen.</p></li>
+<li><p>Sie können die Fourierreihe einer <strong>Sägezahnschwingung</strong> berechnen.</p></li>
+<li><p>Sie können die Fourierreihe einer <strong>Dreieckschwingung</strong> berechnen.</p></li>
+</ul>
+</div>
 </section>
+<section id="die-rechteckschwingung">
+<h2>Die Rechteckschwingung<a class="headerlink" href="#die-rechteckschwingung" title="Link to this heading">#</a></h2>
+<p>Die Rechteckschwingung (manchmal auch Rechteckimpuls oder Rechtecksignal
+genannt) ist eine periodische Funktion, die zwischen zwei konstanten Werten
+wechselt. Als Beispiel für eine Rechteckschwingung betrachten wir die
+Rechteckfunktion</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}f(t) = \begin{cases} 1,  \quad &amp;0 \leq t &lt; \pi,\\
+-1, \quad &amp;\pi \leq t &lt; 2\pi, \end{cases}\end{split}\]</div>
+<p>auf dem Intervall <span class="math notranslate nohighlight">\([0, 2\pi]\)</span> und setzen sie periodisch fort. Die Periode ist
+daher <span class="math notranslate nohighlight">\(T = 2\pi\)</span>. Das folgende Applet zeigt eine interaktive Visualisierung der
+Rechteckschwingung und der dazugehörigen Fourierreihe.</p>
+<div class="miniexercise admonition">
+<p class="admonition-title">Interaktives Applet “Fourierreihe Rechteckschwingung”</p>
+<p>Das folgende interaktive Applet <a class="reference external" href="https://www.hartundtrocken.de/my-product/interaktiv-fourier-reihe-der-rechtecksfunktion/">Fourierreihe
+Rechteckschwingung</a>
+veranschaulicht die Rechteckschwingung sowie ihre Fourierreihe. Experimentieren
+Sie mit dem Schieberegler, um zu beobachten, wie sich die Fourierreihe durch
+Hinzufügen weiterer Glieder der Reihe der ursprünglichen Rechteckfunktion
+annähert.</p>
+</div>
+<p>Nun berechnen wir die Fourierkoeffizienten der Rechteckschwingung. Die
+allgemeine Formel für den ersten Fourierkoeffizient <span class="math notranslate nohighlight">\(a_0\)</span> lautet mit der Periode
+<span class="math notranslate nohighlight">\(T=2\pi\)</span></p>
+<div class="math notranslate nohighlight">
+\[a_0 = \frac{2}{T} \int_{-T/2}^{T/2} f(t) \, dt =
+\frac{1}{\pi}\int_{-\pi}^{\pi}f(t)\,dt.\]</div>
+<p>Die Rechteckfunktion ist für zwei Abschnitte definiert, daher teilen wir das
+Integral entsprechend in die beiden Intervalle <span class="math notranslate nohighlight">\([-\pi,0]\)</span> und <span class="math notranslate nohighlight">\([0,\pi]\)</span> auf. Im
+ersten Intervall <span class="math notranslate nohighlight">\([-\pi, 0]\)</span> ist die Rechteckschwingung konstant <span class="math notranslate nohighlight">\(f(t) = -1\)</span>, im
+zweiten Intervall <span class="math notranslate nohighlight">\([0,\pi]\)</span> ist die Rechteckschwingung konstant <span class="math notranslate nohighlight">\(f(t) = 1\)</span>.
+Somit können wir das Integral folgendermaßen in die Summe zweier Integrale
+aufteilen.</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+a_0 &amp;= \frac{1}{\pi}\int_{-\pi}^{\pi}f(t)\,dt \\
+&amp;= \frac{1}{\pi}\int_{-\pi}^{0}-1\,dt +\frac{1}{\pi}\int_{0}^{\pi}1\,dt\\
+&amp;= \frac{1}{\pi}\Big[-t\Big]_{-\pi}^{0} + \frac{1}{\pi}\Big[t\Big]_{0}^{\pi}\\
+&amp;= \frac{1}{\pi}\Big(-0-(+\pi)\Big) + \frac{1}{\pi}\Big(\pi-0\Big) = 0.
+\end{align*}\]</div>
+<p>Nun berechnen wir die Fourierkoeffizienten <span class="math notranslate nohighlight">\(a_n\)</span> für <span class="math notranslate nohighlight">\(n \geq 1\)</span>. Dabei benötigen
+wir zuerst die Frequenz <span class="math notranslate nohighlight">\(\omega\)</span>. Da wir als Periode <span class="math notranslate nohighlight">\(T=2\pi\)</span> gewählt haben,
+gilt</p>
+<div class="math notranslate nohighlight">
+\[\omega = \frac{T}{2\pi} = \frac{2\pi}{2\pi}=1.\]</div>
+<p>Setzen wir <span class="math notranslate nohighlight">\(T=2\pi\)</span> und <span class="math notranslate nohighlight">\(\omega=1\)</span> in die allgemeine Formel der
+Fourierkoeffizienten <span class="math notranslate nohighlight">\(a_n\)</span> ein und verwenden wir wiederum die Aufteilung in die
+beiden Teilintervalle <span class="math notranslate nohighlight">\([-\pi, 0]\)</span> und <span class="math notranslate nohighlight">\([0,\pi]\)</span>, dann gilt:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+a_n &amp;= \frac{2}{T} \int_{-T/2}^{T/2} f(t) \, \cos(n \, \omega \, t) \, dt\\
+&amp;= \frac{1}{\pi}\int_{-\pi}^{\pi}f(t) \, \cos(n t) \, dt\\
+&amp;= \frac{1}{\pi}\int_{-\pi}^{0} -1\, \cos(n t) \, dt +
+\frac{1}{\pi}\int_{0}^{\pi}1 \, \cos(n t) \, dt \\
+&amp;= \frac{1}{\pi}\left[-\frac{1}{n} \sin(nt) \right]_{-\pi}^{0} +
+\frac{1}{\pi}\left[\frac{1}{n}\sin(nt)\right]_{0}^{\pi}.
+\end{align*}\]</div>
+<p>Die Zahl <span class="math notranslate nohighlight">\(n\)</span> ist eine natürliche Zahl. Setzen wir <span class="math notranslate nohighlight">\(0\)</span> oder Vielfache von <span class="math notranslate nohighlight">\(\pi\)</span>
+in die Sinusfunktion ein, ist das Ergebnis Null, also</p>
+<div class="math notranslate nohighlight">
+\[\sin(0) = \sin(n\cdot \pi) = 0.\]</div>
+<p>Damit sind insgesamt alle Fourierkoeffizienten <span class="math notranslate nohighlight">\(a_n = 0\)</span>. Im nächsten Kapitel
+werden wir lernen, wir dieses Ergebnis schneller hätten ermitteln können.</p>
+<p>Nun berechnen wir die Fourierkoeffizienten</p>
+<div class="math notranslate nohighlight">
+\[b_n = \frac{2}{T} \int_{-T/2}^{T/2} f(t) \, \sin(n \, \omega \, t) \, dt\]</div>
+<p>für <span class="math notranslate nohighlight">\(n \geq 1\)</span>. Wir verwenden erneut den Trick, das Integrationsintervall in
+zwei Intervalle aufzuteilen:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+b_n &amp;= \frac{1}{\pi}\int_{-\pi}^{\pi}f(t)\, \sin(nt)\, dt \\
+&amp;=\frac{1}{\pi}\int_{-\pi}^{0}-1\sin(nt)\, dt +
+\frac{1}{\pi}\int_{0}^{\pi}1\sin(nt)\, dt\\
+&amp;=\frac{1}{\pi}\left[\frac{1}{n}\cos(nt)\right]_{-\pi}^{0} +
+\frac{1}{\pi}\left[-\frac{1}{n}\cos(nt)\right]_{0}^{\pi} \\
+&amp;= \frac{1}{n\cdot\pi}\Big[\cos(nt)\Big]_{-\pi}^{0} -
+\frac{1}{n\cdot\pi}\Big[\cos(nt)\Big]_{0}^{\pi} \\
+&amp;= \frac{1}{n\cdot\pi}\Big(\cos(0) - \cos(-n\cdot\pi)\Big) -
+\frac{1}{n\cdot\pi} \Big(\cos(n\cdot\pi)-\cos(0)\Big).
+\end{align*}\]</div>
+<p>Die Kosinusfunktion ist eine gerade Funktion, also gilt</p>
+<div class="math notranslate nohighlight">
+\[\cos(-n\cdot\pi) = \cos(n\cdot\pi).\]</div>
+<p>Darüber hinaus gilt <span class="math notranslate nohighlight">\(\cos(0)=1\)</span>, so dass wir insgesamt</p>
+<div class="math notranslate nohighlight">
+\[b_n = \frac{2}{n\cdot\pi} - \frac{2}{n\cdot\pi}\cos(n\cdot\pi)\]</div>
+<p>erhalten.</p>
+<p>Der Funktionswert der Kosinusfunktion an den Stellen <span class="math notranslate nohighlight">\(t = n\cdot\pi\)</span> springt
+zwischen <span class="math notranslate nohighlight">\(-1\)</span> und <span class="math notranslate nohighlight">\(1\)</span> hin und her. Ist <span class="math notranslate nohighlight">\(n\)</span> ungerade, dann ist
+<span class="math notranslate nohighlight">\(\cos(n\cdot\pi)=-1\)</span>. Ist jedoch <span class="math notranslate nohighlight">\(n\)</span> gerade, dann gilt <span class="math notranslate nohighlight">\(\cos(n\cdot\pi)=+1\)</span>.
+Daher gilt für die Fourierkoeffizienten</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}b_n = \begin{cases} 0, \quad &amp; n\text{ gerade}\\
+\dfrac{4}{n\cdot\pi}, \quad &amp; n\text{ ungerade}.\end{cases}\end{split}\]</div>
+<p>Jetzt können wir die Fourierreihe bilden:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*} f(t) &amp;= \frac{a_0}{2} + \sum_{n=1}^{\infty} \left(a_n \cos(n
+\omega t) + b_n \sin(n \omega t) \right)\\
+&amp;= \frac{4}{1\cdot\pi}\sin(t) + \frac{4}{3\cdot\pi}\sin(3t) +
+\frac{4}{5\cdot\pi}\sin(5t) + \ldots \end{align*}\]</div>
+<p>Es wäre schön, eine kompaktere Angabe für die Fourierreihe zu benutzen. Dazu
+benutzen wir den Trick, die ungeraden Zahlen als <span class="math notranslate nohighlight">\(2k-1\)</span> darzustellen mit
+<span class="math notranslate nohighlight">\(k\in\mathbb{N}\)</span>. Dann lautet die Fourierreihe nämlich</p>
+<div class="math notranslate nohighlight">
+\[f(t) = \sum_{k=1}^{\infty}\frac{4}{k\cdot\pi}\sin(k t) =
+\frac{4}{\pi}\sum_{k=1}^{\infty}\frac{\sin(kt)}{k}.\]</div>
+<p>In dem folgenden Video wird das gleiche Beispiel vorgerechnet.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Video “Fourier-Reihe der Rechtecksfunktion” von Hart und Trocken</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/zy2SO_8tV9k?si=rbOAoHqzOhfEpzce" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay;
+clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+</details><p>Ein weiteres Beispiel für die Berechnung einer Fourierreihe einer
+Rechteckschwingung finden Sie in dem folgenden Video.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Video “Fourierreihe Rechtecksimpuls” von Sciencebarbie</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/dzkCRqKXZCs"
+title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+</details></section>
 <section id="die-sagezahnfunktion">
 <h2>Die Sägezahnfunktion<a class="headerlink" href="#die-sagezahnfunktion" title="Link to this heading">#</a></h2>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/wGL_Cxorbac" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-</section>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Video “Fourierreihe Sägezahnfunktion” von Sciencebarbie</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/wGL_Cxorbac"
+title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+</details></section>
 <section id="die-dreiecksfunktion">
 <h2>Die Dreiecksfunktion<a class="headerlink" href="#die-dreiecksfunktion" title="Link to this heading">#</a></h2>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Video “Fourierreihe Dreiecksimpuls” von Sciencebarbie</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/-I0YqzFRldA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+</details></section>
+<section id="zusammenfassung-und-ausblick">
+<h2>Zusammenfassung und Ausblick<a class="headerlink" href="#zusammenfassung-und-ausblick" title="Link to this heading">#</a></h2>
+<p>Mit den Fourierreihen der Rechteck-, Sägezahn- und Dreieckschwingung haben wir
+drei bekannte Beispiele für die Anwendung von Fourierreihen kennengelernt. Bei
+der Berechnung der Fourierkoeffizienten der Rechteckschwingung haben wir
+festgestellt, dass die Fourierkoeffizienten des Kosinusanteils Null sind. Das
+liegt daran, dass in diesem Beispiel die betrachtete Funktion ungerade war. Das
+werden wir im nächsten Kapitel näher untersuchen.</p>
 </section>
 </section>
 
@@ -553,9 +707,11 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#die-rechteckfunktion">Die Rechteckfunktion</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lernziele">Lernziele</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#die-rechteckschwingung">Die Rechteckschwingung</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#die-sagezahnfunktion">Die Sägezahnfunktion</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#die-dreiecksfunktion">Die Dreiecksfunktion</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zusammenfassung-und-ausblick">Zusammenfassung und Ausblick</a></li>
 </ul>
   </nav></div>
 
