@@ -37,12 +37,12 @@
     ytick={-8, -6,...,8},
     grid = both
 ]
+\node at (-1.5, 4.25) {$f_{o}(x)=-x+1$};
+\node at (1.75, -5) {$f_{u}(x)=x^2-5$};
 \addplot[draw=itwm_blue_04, samples=300, thick, name path=f]{-x+1};
 \addplot[draw=itwm_blue_04, samples=300, thick, name path=g]{x^2-5};
 \node[fill, itwm_blue_04, circle,inner sep=-2] at (-3,4) {};
 \node[fill, itwm_blue_04, circle,inner sep=-2] at (2,-1) {};
-\node at (-1.5, 4.25) {$f_o(x)=-x+1$};
-\node at (1.75, -5) {$f_u(x)=x^2-5$};
 \addplot [pattern=north east lines, pattern color=gray] fill between [of = f and g, soft clip={domain=-3:2}];
 \end{axis}
 \end{tikzpicture}
