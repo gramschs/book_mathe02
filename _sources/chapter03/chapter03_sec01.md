@@ -13,9 +13,9 @@ aus der Mathematik 1 Vorlesung als Startpunkt nehmen.
 * Sie können den Fachbegriff **Reihe** erklären.
 * Sie wissen, was eine **konvergente** Reihe ist und wie der Grenzwert bezeichnet wird.
 * Sie wissen, was eine **divergente** Reihe ist. 
-* Sie kennen als Beispiel für Reihen die
-    * **geometrische Reihe** und
-    * **harmonische Reihe**.
+* Sie kennen als Beispiel für Reihen
+    * die **geometrische Reihe** und
+    * die **harmonische Reihe**.
 ```
 
 ## Was ist eine Partialsumme und was ist eine Reihe?
@@ -44,6 +44,7 @@ Jedes Folgenglied $(s_n)$ enthält Summen. Jede dieser Summen wird
 **Partialsumme** genannt. Die Folge aus Partialsummen wiord **Reihe** genannt.
 
 ```{admonition} Was ist ... eine Reihe?
+:class: note
 Eine Reihe ist eine Folge, die aus einer anderen Folge durch Summation gebildet wird. Etwas präziser formuliert starten wir mit einer Folge $(a_k)$ und bilden draus die Folge der Partialsummen nach dem Schema
 
 $$s_n = a_1 + a_2 + \ldots + a_n = \sum_{k=1}^{n} a_k.$$
