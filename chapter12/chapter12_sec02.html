@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>12.2 Anfangs- und Randwertproblem &#8212; Mathematik 2 Maschinenbau</title>
+    <title>12.2 Lösung homogene lineare DGL 1. Ordnung &#8212; Mathematik 2 Maschinenbau</title>
   
   
   
@@ -16,32 +16,35 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-
-  
-  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=87e54e7c" />
     <link rel="stylesheet" type="text/css" href="../_static/jsxgraph.css?v=a7b027cb" />
     <link rel="stylesheet" type="text/css" href="../_static/my_styles.css?v=9b976ced" />
   
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
-  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
     <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
     <script src="../_static/doctools.js?v=9a2dae69"></script>
@@ -54,7 +57,7 @@
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
@@ -66,10 +69,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="12.3 Separable Differentialgleichungen" href="chapter12_sec03.html" />
-    <link rel="prev" title="12.1 Grundbegriffe" href="chapter12_sec01.html" />
+    <link rel="next" title="12.3 Lösung inhomogene lineare DGL 1. Ordnung" href="chapter12_sec03.html" />
+    <link rel="prev" title="12.1 Lineare DGL 1. Ordnung" href="chapter12_sec01.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
   </head>
   
   
@@ -85,19 +89,8 @@
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-primary-sidebar-checkbox"/>
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-secondary-sidebar-checkbox"/>
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="../search.html"
       method="get">
@@ -105,7 +98,6 @@
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search this book..."
          aria-label="Search this book..."
          autocomplete="off"
@@ -113,8 +105,8 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -130,7 +122,8 @@
       
       
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -160,15 +153,11 @@
 </a></div>
         <div class="sidebar-primary-item">
 
- <script>
- document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script></div>
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
@@ -179,122 +168,114 @@
                 </a>
             </li>
         </ul>
-        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Differential- und Integralrechnung</span></p>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Fortsetzung Integralrechnung</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter01/chapter01_sec00.html">1. Differentialrechnung</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter01/chapter01_sec01.html">1.1 Ableitungen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter01/chapter01_sec02.html">1.2 Rechenregeln Ableitungen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter01/chapter01_sec03.html">1.3 Extremwerte</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter01/chapter01_sec04.html">1.4 Extremwerte mit Nebenbedingung</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter01/chapter01_sec00.html">1. Wiederholung Integrale</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter01/chapter01_sec01.html">1.1 Stammfunktion und bestimmtes Integral</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter01/chapter01_sec02.html">1.2 Eigenschaften von Integralen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter01/chapter01_sec03.html">1.3 Partielle Integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter01/chapter01_sec04.html">1.4 Integration durch Substitution</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter01/chapter01_sec05.html">Übungen</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter02/chapter02_sec00.html">2. Integrale</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter02/chapter02_sec01.html">2.1 Stammfunktion und bestimmtes Integral</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter02/chapter02_sec02.html">2.2 Eigenschaften von Integralen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter02/chapter02_sec03.html">2.3 Partielle Integration</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter02/chapter02_sec04.html">2.4 Integration durch Substitution</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter02/chapter02_sec00.html">2. Anwendungen Integral</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter02/chapter02_sec01.html">1.1 Integrieren ist Mitteln</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter02/chapter02_sec02.html">2.2 Fläche zwischen zwei Graphen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter02/chapter02_sec03.html">2.3 Bogenlänge</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter02/chapter02_sec04.html">2.4 Volumen von Rotationskörpern</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter02/chapter02_sec05.html">Übungen</a></li>
-</ul>
-</details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter03/chapter03_sec00.html">3. Anwendungen Integral</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec01.html">3.1 Integrieren ist Mitteln</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec02.html">3.2 Fläche zwischen zwei Graphen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec03.html">3.3 Bogenlänge</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec04.html">3.4 Volumen von Rotationskörpern</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec05.html">Übungen</a></li>
 </ul>
 </details></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Funktionenreihen</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter04/chapter04_sec00.html">4. Reihen und Potenzreihen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter04/chapter04_sec01.html">4.1 Reihen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter04/chapter04_sec02.html">4.2 Konvergenzkriterien für Reihen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter04/chapter04_sec03.html">4.3 Potenzreihen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter04/chapter04_sec04.html">4.4 Konvergenz von Potenzreihen</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter03/chapter03_sec00.html">3. Reihen und Potenzreihen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec01.html">3.1 Reihen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec02.html">3.2 Konvergenzkriterien für Reihen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec03.html">3.3 Potenzreihen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec04.html">3.4 Konvergenz von Potenzreihen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec05.html">Übungen</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter04/chapter04_sec00.html">4. Taylorreihen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter04/chapter04_sec01.html">4.1 Berechnung Taylorreihe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter04/chapter04_sec02.html">4.2 Restglied von Taylorreihen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter04/chapter04_sec03.html">4.3 Wichtige Potenzreihen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter04/chapter04_sec04.html">4.4 Rechnen mit Potenzreihen</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter04/chapter04_sec05.html">Übungen</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter05/chapter05_sec00.html">5. Taylorreihen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter05/chapter05_sec01.html">5.1 Berechnung Taylorreihe</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter05/chapter05_sec02.html">5.2 Restglied von Taylorreihen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter05/chapter05_sec03.html">5.3 Wichtige Potenzreihen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter05/chapter05_sec04.html">5.4 Rechnen mit Potenzreihen</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter05/chapter05_sec00.html">5. Fourierreihen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter05/chapter05_sec01.html">5.1 Periodische Funktionen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter05/chapter05_sec02.html">5.2 Fourierreihen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter05/chapter05_sec03.html">5.3 Beispiele für Fourierreihen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter05/chapter05_sec04.html">5.4 Rechenregeln Fourierreihen</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter05/chapter05_sec05.html">Übungen</a></li>
-</ul>
-</details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter06/chapter06_sec00.html">6. Fourierreihen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter06/chapter06_sec01.html">6.1 Periodische Funktionen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter06/chapter06_sec02.html">6.2 Fourierreihen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter06/chapter06_sec03.html">6.3 Beispiele für Fourierreihen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter06/chapter06_sec04.html">6.4 Rechenregeln Fourierreihen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter06/chapter06_sec05.html">Übungen</a></li>
 </ul>
 </details></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Höhere Differentialrechnung</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter07/chapter07_sec00.html">7. Funktionen von mehreren Variablen und partielle Ableitungen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter07/chapter07_sec01.html">7.1 Definition und Visualisierung</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter07/chapter07_sec02.html">7.2 Stetigkeit</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter07/chapter07_sec03.html">7.3 Partielle Ableitungen und Gradient</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter07/chapter07_sec04.html">7.4 Höhere partielle Ableitungen und Hesse-Matrix</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter06/chapter06_sec00.html">6. Funktionen von mehreren Variablen und partielle Ableitungen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter06/chapter06_sec01.html">6.1 Definition und Visualisierung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter06/chapter06_sec02.html">6.2 Stetigkeit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter06/chapter06_sec03.html">6.3 Partielle Ableitungen und Gradient</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter06/chapter06_sec04.html">6.4 Höhere partielle Ableitungen und Hesse-Matrix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter06/chapter06_sec05.html">Übungen</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter07/chapter07_sec00.html">7. Richtungsableitungen und vektorwertige Funktionen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter07/chapter07_sec01.html">7.1 Gradient und Richtungsableitung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter07/chapter07_sec02.html">7.2 Vektorwertige Funktionen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter07/chapter07_sec03.html">7.3 Jacobi-Matrix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter07/chapter07_sec04.html">7.4 Mehrdimensionale Kettenregel</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter07/chapter07_sec05.html">Übungen</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter08/chapter08_sec00.html">8. Richtungsableitungen und vektorwertige Funktionen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter08/chapter08_sec01.html">8.1 Gradient und Richtungsableitung</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter08/chapter08_sec02.html">8.2 Vektorwertige Funktionen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter08/chapter08_sec03.html">8.3 Jacobi-Matrix</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter08/chapter08_sec04.html">8.4 Mehrdimensionale Kettenregel</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter08/chapter08_sec00.html">8. Linearisierung und Extremwerte</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter08/chapter08_sec01.html">8.1 Tangentenfunktionen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter08/chapter08_sec02.html">8.2 Totales Differential</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter08/chapter08_sec03.html">8.3 Extremwerte</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter08/chapter08_sec04.html">8.4 Extremwertprobleme mit Nebenbedingung</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter08/chapter08_sec05.html">Übungen</a></li>
-</ul>
-</details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter09/chapter09_sec00.html">9. Linearisierung und Extremwerte</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter09/chapter09_sec01.html">9.1 Tangentenfunktionen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter09/chapter09_sec02.html">9.2 Totales Differential</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter09/chapter09_sec03.html">9.3 Extremwerte</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter09/chapter09_sec04.html">9.4 Extremwertprobleme mit Nebenbedingung</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter09/chapter09_sec05.html">Übungen</a></li>
 </ul>
 </details></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Höhere Integralrechnung</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter10/chapter10_sec00.html">10. Doppelintegral</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter10/chapter10_sec01.html">10.1 Idee von Doppelintegralen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter10/chapter10_sec02.html">10.2 Berechnung von Doppelintegralen in kartesischen Koordinaten</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter10/chapter10_sec03.html">10.3 Anwendung: Flächenberechnung</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter10/chapter10_sec04.html">10.4 Anwendung: Schwerpunktberechnung</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter10/chapter10_sec05.html">Übungen</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter09/chapter09_sec00.html">9. Doppelintegral</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter09/chapter09_sec01.html">9.1 Idee von Doppelintegralen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter09/chapter09_sec02.html">9.2 Berechnung von Doppelintegralen in kartesischen Koordinaten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter09/chapter09_sec03.html">9.3 Anwendung: Flächenberechnung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter09/chapter09_sec04.html">9.4 Anwendung: Schwerpunktberechnung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter09/chapter09_sec05.html">Übungen</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter11/chapter11_sec00.html">11. Doppelintegral in Polarkoordinaten und Dreifachintegral</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter11/chapter11_sec01.html">11.1 Polarkoordinaten</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter11/chapter11_sec02.html">11.2 Doppelintegral in Polarkoordinaten</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter11/chapter11_sec03.html">11.3 Dreifachintegral</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter11/chapter11_sec04.html">11.4 Anwendungen Dreifachintegral</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter11/chapter11_sec05.html">Übungen</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter10/chapter10_sec00.html">10. Doppelintegral in Polarkoordinaten und Dreifachintegral</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter10/chapter10_sec01.html">10.1 Polarkoordinaten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter10/chapter10_sec02.html">10.2 Doppelintegral in Polarkoordinaten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter10/chapter10_sec03.html">10.3 Dreifachintegral</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter10/chapter10_sec04.html">10.4 Anwendungen Dreifachintegral</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter10/chapter10_sec05.html">Übungen</a></li>
 </ul>
 </details></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Differentialgleichungen</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="chapter12_sec00.html">12. Einführung Differentialgleichungen</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="chapter12_sec01.html">12.1 Grundbegriffe</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">12.2 Anfangs- und Randwertproblem</a></li>
-<li class="toctree-l2"><a class="reference internal" href="chapter12_sec03.html">12.3 Separable Differentialgleichungen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="chapter12_sec04.html">12.4 Exakte Differentialgleichungen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="chapter12_sec05.html">Übungen</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter11/chapter11_sec00.html">11. Einführung Differentialgleichungen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter11/chapter11_sec01.html">11.1 Grundbegriffe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter11/chapter11_sec02.html">11.2 Anfangs- und Randwertproblem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter11/chapter11_sec03.html">11.3 Separable Differentialgleichungen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter11/chapter11_sec04.html">11.4 Exakte Differentialgleichungen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter11/chapter11_sec05.html">Übungen</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter13/chapter13_sec00.html">13. Lineare Differentialgleichungen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter13/chapter13_sec01.html">13.1 Lineare DGL 1. Ordnung</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter13/chapter13_sec02.html">13.2 Lösung homogene lineare DGL 1. Ordnung</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter13/chapter13_sec03.html">13.3 Lösung inhomogene lineare DGL 1. Ordnung</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter13/chapter13_sec04.html">13.4 Homogene Systeme aus zwei linearen DGL 1. Ordnung</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter13/chapter13_sec05.html">Übungen</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="chapter12_sec00.html">12. Lineare Differentialgleichungen</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="chapter12_sec01.html">12.1 Lineare DGL 1. Ordnung</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">12.2 Lösung homogene lineare DGL 1. Ordnung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter12_sec03.html">12.3 Lösung inhomogene lineare DGL 1. Ordnung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter12_sec04.html">12.4 Homogene Systeme aus zwei linearen DGL 1. Ordnung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter12_sec05.html">Übungen</a></li>
 </ul>
 </details></li>
 </ul>
@@ -305,9 +286,14 @@
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
   </div>
-  
-  <div id="rtd-footer-container"></div>
 
 
       </div>
@@ -419,24 +405,16 @@
 
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script>
+</button>
 <button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
 </button>
@@ -450,7 +428,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>12.2 Anfangs- und Randwertproblem</h1>
+    <h1>12.2 Lösung homogene lineare DGL 1. Ordnung</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -461,10 +439,8 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lernziele">Lernziele</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#die-allgemeine-losung-sind-unendlich-viele-funktionen">Die allgemeine Lösung sind unendlich viele Funktionen</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mit-zusatzbedingungen-wird-die-losung-speziell">Mit Zusatzbedingungen wird die Lösung speziell</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#anfangswerte-sind-die-haufigsten-zusatzbedingungen">Anfangswerte sind die häufigsten Zusatzbedingungen</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#randwertprobleme-sind-seltener-und-schwierig">Randwertprobleme sind seltener und schwierig</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wie-wird-eine-homogene-lineare-dgl-1-ordnung-gelost">Wie wird eine homogene lineare DGL 1. Ordnung gelöst?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#beispiele-zur-losung-einer-homogenen-linearen-dgl-1-ordnung">Beispiele zur Lösung einer homogenen linearen DGL 1. Ordnung</a></li>
 </ul>
             </nav>
         </div>
@@ -476,205 +452,83 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="anfangs-und-randwertproblem">
-<h1>12.2 Anfangs- und Randwertproblem<a class="headerlink" href="#anfangs-und-randwertproblem" title="Link to this heading">#</a></h1>
-<p>In diesem Abschnitt werden wir uns mit der Lösung einer Differentialgleichung
-beschäftigen. Wir werden den Unterschied zwischen der allgemeinen Lösung und
-einer speziellen Lösung der DGL betrachten und uns mit Anfangs- und
-Randwertproblemen beschäftigen.</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="losung-homogene-lineare-dgl-1-ordnung">
+<h1>12.2 Lösung homogene lineare DGL 1. Ordnung<a class="headerlink" href="#losung-homogene-lineare-dgl-1-ordnung" title="Link to this heading">#</a></h1>
+<p>Dieses Kapitel stellt ein Lösungsverfahren vor, um eine homogene lineare
+Differentialgleichung 1. Ordnung zu lösen.</p>
 <section id="lernziele">
 <h2>Lernziele<a class="headerlink" href="#lernziele" title="Link to this heading">#</a></h2>
 <div class="goals admonition">
-<p class="admonition-title">Lernziele</p>
-<ul class="simple">
-<li><p>Sie können den Unterschied zwischen der <strong>allgemeinen Lösung</strong> und einer <strong>speziellen Lösung</strong> einer Differentialgleichung erklären.</p></li>
-<li><p>Sie wissen, was ein <strong>Anfangswertproblem</strong> ist.</p></li>
-<li><p>Sie wissen, was ein <strong>Randwertproblem</strong> ist.</p></li>
-</ul>
+<p class="admonition-title">Lernziel</p>
+<p>Sie können eine <strong>homogene lineare Differentialgleichung 1. Ordnung</strong> lösen.</p>
 </div>
 </section>
-<section id="die-allgemeine-losung-sind-unendlich-viele-funktionen">
-<h2>Die allgemeine Lösung sind unendlich viele Funktionen<a class="headerlink" href="#die-allgemeine-losung-sind-unendlich-viele-funktionen" title="Link to this heading">#</a></h2>
-<p>Das Lösen von Differentialgleichungen ist ein eigenes Forschungsgebiet der
-Mathematik. Wie Sie bereits im vorherigen Abschnitt gesehen haben, gehört dazu
-die Integration, was ja an sich schon ein schwieriges Thema ist. Und nicht immer
-existiert überhaupt eine Funktion, die die Differentialgleichung erfüllt. Daher
-halten wir zunächst einmal fest:</p>
-<p>Eine Funktion, die eingesetzt in die Differentialgleichung dazu führt, dass die
-linke Seite der Gleichung gleich der rechten Seite ist, heißt <strong>Lösung der
-Differentialgleichung</strong>.</p>
-<p>Im vorherigen Kapitel haben wir bereits festgestellt, dass es auch unendlich
-viele Lösungen einer Differentialgleichung geben kann. Beispielsweise lösen alle
-Funktionen</p>
+<section id="wie-wird-eine-homogene-lineare-dgl-1-ordnung-gelost">
+<h2>Wie wird eine homogene lineare DGL 1. Ordnung gelöst?<a class="headerlink" href="#wie-wird-eine-homogene-lineare-dgl-1-ordnung-gelost" title="Link to this heading">#</a></h2>
+<p>Wir betrachten eine homogene lineare Differentialgleichung 1. Ordnung. Da die
+Differentialgleichung homogen sein soll, ist die Störfunktion gleich Null. Daher
+schreiben wir die Differentialgleichung in der Form</p>
 <div class="math notranslate nohighlight">
-\[y(x)=\sin(x)+C_1 x + C_2\]</div>
-<p>die Differentialgleichung <span class="math notranslate nohighlight">\(y''(x) = -\sin(x).\)</span> Die beiden Integrationskonstanten
-<span class="math notranslate nohighlight">\(C_1\)</span> und <span class="math notranslate nohighlight">\(C_2\)</span> entstehen dadurch, dass die höchste auftretende Ableitung die
-zweite Ableitung ist. Die DGL hat Ordnung 2 und wir müssen zweimal ingtegrieren,
-um zu einer Lösung zu gelangen. Und obwohl wir von <em>der</em> Lösung der DGL
-sprechen, meinen wir damit eigentlich unendlich viele Funktionen.</p>
-<div class="admonition-was-ist-die-allgemeine-losung-einer-differentialgleichung admonition">
-<p class="admonition-title">Was ist … die allgemeine Lösung einer Differentialgleichung?</p>
-<p>Enthält die Lösungsfunktion der Differentialgleichung noch Integrationskonstanten und ist damit eigentlich eine Schar von unendlich vielen Funktionen, so nennen wir diese Schar von Funktionen
-die <strong>allgemeine Lösung</strong> der Differentialgleichung.</p>
+\[a_1(x)y' + a_0(x)y = 0.\]</div>
+<p>Gegeben sind also zwei Funktionen <span class="math notranslate nohighlight">\(a_1\)</span> und <span class="math notranslate nohighlight">\(a_0\)</span>, die nur von der Variable <span class="math notranslate nohighlight">\(x\)</span>
+abhängen. Gesucht ist die Funktion <span class="math notranslate nohighlight">\(y\)</span>.</p>
+<p>Die homogene lineare Differentialgleichung 1. Ordnung kann auch als eine
+separable Differentialgleichung betrachtet werden. Dazu lösen wir die
+Differentialgleichung nach <span class="math notranslate nohighlight">\(y'\)</span> auf und erhalten</p>
+<div class="math notranslate nohighlight">
+\[y'= -\frac{a_0(x) y}{a_1(x)} \quad
+\Rightarrow \frac{dy}{dx} = -\frac{a_0(x)}{a_1(x)} \, y.\]</div>
+<p>Wir trennen die Veränderlichen:</p>
+<div class="math notranslate nohighlight">
+\[\frac{1}{y} \, dy = -\frac{a_0(x)}{a_1(x)} \, dx.\]</div>
+<p>Unbestimmte Integration der beiden Seiten liefert</p>
+<div class="math notranslate nohighlight">
+\[\ln |y| + c_1 = - \int \frac{a_0(x)}{a_1(x)} \, dx.\]</div>
+<p>Wir bringen <span class="math notranslate nohighlight">\(c_1\)</span> auf die rechte Seite der Gleichung und lösen nach <span class="math notranslate nohighlight">\(y\)</span> auf:</p>
+<div class="math notranslate nohighlight">
+\[|y(x)| = e^{-\int \frac{a_0(x)}{a_1(x)}\, dx - c_1}.\]</div>
+<p>Um die Betragsstriche weglassen zu dürfen, setzen wir <span class="math notranslate nohighlight">\(C = \pm e^{-c_1}\)</span>
+und erhalten als allgemeine Lösung der homogenen Differentialgleichung 1.
+Ordnung</p>
+<div class="math notranslate nohighlight">
+\[y(x) = C \, e^{-\int \frac{a_0(x)}{a_1(x)} \, dx}.\]</div>
+<div class="note admonition">
+<p class="admonition-title">Wie wird die homogene lineare DGL 1. Ordnung gelöst?</p>
+<p>Die allgemeine Lösung der homogenen linearen Differentialgleichung 1. Ordnung</p>
+<div class="math notranslate nohighlight">
+\[a_1(x)y' + a_0(x)y = 0\]</div>
+<p>wird durch die Trennung der Variablen berechnet und lautet</p>
+<div class="math notranslate nohighlight">
+\[y(x) = C \, e^{-\int \frac{a_0(x)}{a_1(x)} \, dx}.\]</div>
 </div>
+</section>
+<section id="beispiele-zur-losung-einer-homogenen-linearen-dgl-1-ordnung">
+<h2>Beispiele zur Lösung einer homogenen linearen DGL 1. Ordnung<a class="headerlink" href="#beispiele-zur-losung-einer-homogenen-linearen-dgl-1-ordnung" title="Link to this heading">#</a></h2>
+<p><strong>Beispiel 1:</strong> Gegeben ist die homogene lineare DGL 1. Ordnung</p>
+<div class="math notranslate nohighlight">
+\[y'+3y=0,\]</div>
+<p>also <span class="math notranslate nohighlight">\(a_1(x)=1\)</span> und <span class="math notranslate nohighlight">\(a_0(x)=3\)</span>. Damit ist die allgemeine Lösung der
+Differentialgleichung</p>
+<div class="math notranslate nohighlight">
+\[y(x)=C \cdot e^{-\int \frac{3}{1}\, dx} = C\cdot e^{-3x}.\]</div>
+<p><strong>Beispiel 2:</strong> Gegeben ist die homogene lineare DGL 1. Ordnung</p>
+<div class="math notranslate nohighlight">
+\[y'+xy=0,\]</div>
+<p>also <span class="math notranslate nohighlight">\(a_1(x)=1\)</span> und <span class="math notranslate nohighlight">\(a_0(x)=x\)</span>. Damit ist die allgemeine Lösung der
+Differentialgleichung</p>
+<div class="math notranslate nohighlight">
+\[y(x)=C \cdot e^{-\int \frac{x}{1} \, dx} = C\cdot e^{-\frac{1}{2}x^2}.\]</div>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
-<span class="sd-summary-text">Video zu “Allgemeiner Lösung einer DGL”</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<iframe src="https://frankfurt-university.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=b7d5b60a-2bd6-42a6-9f6a-b01800ebb264&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=false&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
+<span class="sd-summary-text">Video zu “DGL 1. Ordnung | Typ 1: linear-homogen” von Lernkompass</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/rrsyEAGZbw4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Video zu “Differentialgleichung lösen – DGL 1. Ordnung, homogen” von Mathematrick</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Sm0Go9IioJ4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </div>
 </details></section>
-<section id="mit-zusatzbedingungen-wird-die-losung-speziell">
-<h2>Mit Zusatzbedingungen wird die Lösung speziell<a class="headerlink" href="#mit-zusatzbedingungen-wird-die-losung-speziell" title="Link to this heading">#</a></h2>
-<p>Aus der allgemeinen Lösung wählen wir eine sogenannte <strong>spezielle Lösung</strong> aus,
-indem wir die Integrationskonstanten festlegen. In dem obigen Beispiel bekommen
-wir durch die Wahl von <span class="math notranslate nohighlight">\(C_1=2\)</span> und <span class="math notranslate nohighlight">\(C_2 = 3\)</span> die spezielle Lösung</p>
-<div class="math notranslate nohighlight">
-\[y(x)=\sin(x)+2x+3\]</div>
-<p>der DGL <span class="math notranslate nohighlight">\(y''(x)=-\sin(x)\)</span>.</p>
-<p>Normalerweise raten wir nicht einfach Integrationskonstanten, sondern legen
-diese durch zusätzliche Informationen, also weitere Zusatzbedingungen fest.</p>
-<p>Beispielsweise könnten wir fordern, dass unsere gewünschte spezielle Lösung
-durch die Punkte <span class="math notranslate nohighlight">\((0,0)\)</span> und <span class="math notranslate nohighlight">\((\pi,1)\)</span> gehen soll. Dann würde die spezielle
-Lösung mit <span class="math notranslate nohighlight">\(C_1=\frac{1}{\pi}\)</span> und <span class="math notranslate nohighlight">\(C_2=0\)</span> sowohl die DGL erfüllen als auch die
-Zusatzbedingungen, denn es gilt</p>
-<div class="amsmath math notranslate nohighlight">
-\[\begin{align*} 
-y(0) &amp;= \sin(0) + \frac{1}{\pi}\cdot 0 + 0 = 0,\\
-y(\pi) &amp;= \sin(\pi) + \frac{1}{\pi} \cdot \pi + 0 = 1. 
-\end{align*}\]</div>
-<p>Sicherheitshalber rechnen wir noch die 2. Ableitung der Funktion
-<span class="math notranslate nohighlight">\(y(x)=\sin(x)+\frac{1}{\pi}x\)</span> aus, aber das ist tatsächlich <span class="math notranslate nohighlight">\(y''(x)=-\sin(x)\)</span>,
-so dass die DGL auch erfüllt ist.</p>
-<div class="admonition-was-ist-eine-spezielle-losung-einer-dgl admonition">
-<p class="admonition-title">Was ist … eine spezielle Lösung einer DGL?</p>
-<p>Die <strong>spezielle Lösung</strong> einer DGL ist eine Funktion, die die Differentialgleichung erfüllt, aber keine Integrationskonstanten mehr enthält. Sie wird meist aus der allgemeinen Lösung berechnet, indem noch Zusatzbedingungen gestellt werden.</p>
-</div>
-</section>
-<section id="anfangswerte-sind-die-haufigsten-zusatzbedingungen">
-<h2>Anfangswerte sind die häufigsten Zusatzbedingungen<a class="headerlink" href="#anfangswerte-sind-die-haufigsten-zusatzbedingungen" title="Link to this heading">#</a></h2>
-<p>Die Zusatzbedingungen kommen normalerweise aus dem Anwendungskontext. Wir
-schauen uns ein Beispiel aus der Physik an. Lassen wir einen Körper in der Nähe
-der Erdoberfläche fallen, so wirkt die Schwerkraft auf ihn ein. Seine
-Beschleunigung <span class="math notranslate nohighlight">\(a\)</span> ist dann gleich der negativen Erdbeschleunigung, also <span class="math notranslate nohighlight">\(a = -
-g = - 9.81 \text{m}/\text{s}^2\)</span>.</p>
-<p>Wir wissen, dass die Beschleunigung <span class="math notranslate nohighlight">\(a(t)\)</span> die 1. Ableitung der
-Geschwindigkeit-Zeit-Funktion <span class="math notranslate nohighlight">\(v(t)\)</span> ist, die wiederum die 1. Ableitung der
-Weg-Zeit-Funktion <span class="math notranslate nohighlight">\(s(t)\)</span> ist. Damit ist die Beschleunigung die 2. Ableitung der
-Weg-Zeit-Funktion <span class="math notranslate nohighlight">\(s(t)\)</span>. Es gilt die Differentialgleichung</p>
-<div class="math notranslate nohighlight">
-\[\ddot{s}(t) = -g.\]</div>
-<p>Bemerkung: Da die Weg-Zeit-Funktion eine zeitliche Größe ist, benutzen wir hier
-die Schreibweise mit der unabhängigen Variable <span class="math notranslate nohighlight">\(t\)</span> und den zwei Punkten, um die
-2. Ableitung nach <span class="math notranslate nohighlight">\(t\)</span> zu formulieren. Mehr dazu finden Sie im Abschnitt
-<a class="reference internal" href="chapter12_sec01.html#sec-11-01-b"><span class="std std-ref">Es gibt viele Schreibweisen für DGL</span></a>.</p>
-<p>Wir integrieren die Differentialgleichung zunächst unbestimmt, um die
-Geschwindigkeit-Zeit-Funktion <span class="math notranslate nohighlight">\(v(t)=\dot{s}(t)\)</span> zu erhalten:</p>
-<div class="math notranslate nohighlight">
-\[ \int \ddot{s}(t)\, dt = \int -g \, dt \quad  \Rightarrow \quad
-v(t)=\dot{s}(t) = -gt + C_1.\]</div>
-<p>Dann integrieren wir ein zweites Mal unbestimmt, um die Weg-Zeit-Funktion <span class="math notranslate nohighlight">\(s(t)\)</span>
-zu bekommen:</p>
-<div class="math notranslate nohighlight">
-\[\int \dot{s}(t) \, dt = \int -gt + C_1 \, dt \quad \Rightarrow \quad s(t) =
--\frac{1}{2}gt^2 + C_1 t + C_2. \]</div>
-<p>Wie zu erwarten war, entstehen durch die zweimalige Integration zwei
-Integrationskonstanten. Wir brauchen Zusatzbedingungen, um aus der allgemeinen
-Lösung eine spezielle Lösung auszuwählen. Dazu betrachten wir den
-Anwendungskontext etwas näher.</p>
-<p>Die Zeitmessung beginnt, sobald der Körper anfängt zu fallen. Daher ist es
-besonders geschickt, die Zusatzinformationen zu Beginn des Prozesses <span class="math notranslate nohighlight">\(t=0\)</span> zu
-messen und daraus die beiden Integrationskonstanten zu bestimmen. Zu Beginn des
-freien Falls können wir die Höhe messen, aus der der Körper fällt. Wir
-bezeichnen die Anfangshöhe mit <span class="math notranslate nohighlight">\(s_0\)</span>. Es muss nicht sein, dass der Körper aus
-der Ruhe beginnt zu fallen. Die Anfangsgeschwindigkeit zum Zeitpunkt <span class="math notranslate nohighlight">\(t=0\)</span>
-bezeichnen wir mit <span class="math notranslate nohighlight">\(v_0\)</span>. Es gilt also</p>
-<div class="math notranslate nohighlight">
-\[s(0)=s_0 \quad \text{ und } \quad v(0)=v_0.\]</div>
-<p>Wenn wir nun die allgemeine Lösung <span class="math notranslate nohighlight">\(s(t) = -\frac{1}{2}gt^2 + C_1 t + C_2\)</span> zum
-Zeitpunkt <span class="math notranslate nohighlight">\(t=0\)</span> betrachten, so gilt</p>
-<div class="math notranslate nohighlight">
-\[s(0)=-\frac{1}{2}g\cdot0^2 + C_1\cdot 0 + C_2 = C_2.\]</div>
-<p>Daraus können wir sofort ablesen, dass die Integrationskonstante <span class="math notranslate nohighlight">\(C_2\)</span> der
-Anfangshöhe <span class="math notranslate nohighlight">\(s_0\)</span> entsprechen muss.</p>
-<p>Als nächstes betrachten wir die 1. Ableitung der allgemeinen Lösung zum
-Zeitpunkt <span class="math notranslate nohighlight">\(t=0\)</span>, also die Geschwindigkeit-Zeit-Funktion <span class="math notranslate nohighlight">\(v(t)\)</span></p>
-<div class="math notranslate nohighlight">
-\[\dot{s}(0)=-g\cdot 0 + C_1 = C_1.\]</div>
-<p>Damit erhalten wir die spezielle Lösung</p>
-<div class="math notranslate nohighlight">
-\[s(t)=\frac{1}{2}gt^2 + v_0 t + s_0\]</div>
-<p>passend zu den Anfangsbedingungen <span class="math notranslate nohighlight">\(s(0)=s_0\)</span> und <span class="math notranslate nohighlight">\(v(0)=v_0\)</span>.</p>
-<div class="admonition-was-ist-ein-anfangswertproblem admonition">
-<p class="admonition-title">Was ist … ein Anfangswertproblem?</p>
-<p>Sind zusätzlich zu einer Differentialgleichung noch weitere Bedingungen für die Funktion und ihre Ableitungen an einer <em>einzigen</em> Stelle gegeben, so nennen wir beides zusammen <strong>Anfangswertproblem</strong>.</p>
-<p>Hat die Differentialgleichung die Ordnung <span class="math notranslate nohighlight">\(n\)</span>, dann brauchen wir <span class="math notranslate nohighlight">\(n\)</span> Anfangsbedingungen, um aus der allgemeinen Lösung eine spezielle Lösung auszuwählen.</p>
-</div>
-</section>
-<section id="randwertprobleme-sind-seltener-und-schwierig">
-<h2>Randwertprobleme sind seltener und schwierig<a class="headerlink" href="#randwertprobleme-sind-seltener-und-schwierig" title="Link to this heading">#</a></h2>
-<p>Bei den Anfangswertproblemen werden alle Zusatzbedingungen an derselben Stelle
-gefordert. Sehr oft ist diese Stelle der Anfang eines zeitlichen Prozesses, aber
-das muss nicht sein. Wenn jedoch die Zusatzbedingungen an verschiedenen Stellen
-gestellt werden, dann sprechen wir von einem Randwertproblem.</p>
-<div class="admonition-was-ist-ein-randwertproblem admonition">
-<p class="admonition-title">Was ist … ein Randwertproblem?</p>
-<p>Sind zusätzlich zu einer Differentialgleichung noch weitere Bedingungen für die Funktion und ihre Ableitungen an <em>mehreren</em> Stellen gegeben, so nennen wir beides zusammen <strong>Randwertproblem</strong>.</p>
-<p>Für eine Differentialgleichung der Ordnung <span class="math notranslate nohighlight">\(n\)</span> brauchen wir <span class="math notranslate nohighlight">\(n\)</span> Randwerte, um aus der allgemeinen Lösung eine spezielle Lösung auszuwählen.</p>
-</div>
-<p>Wir betrachten als nächstes ein klassisches Beispiel eines Randwertproblems aus
-der Technischen Mechanik. Ein Balken wird auf zwei Stützen gelagert und
-gleichmäßig belastet. Für die Biegelinie <span class="math notranslate nohighlight">\(y(x)\)</span>, die die Auslenkung des Balkens
-an jeder Position <span class="math notranslate nohighlight">\(x\)</span> beschreibt, gilt die folgende Differentialgleichung:</p>
-<div class="math notranslate nohighlight">
-\[y'' = -\frac{M_b}{EI}.\]</div>
-<p>Die physikalischen Größen sind dabei das Biegemoment <span class="math notranslate nohighlight">\(M_b\)</span>, der
-Elastizitätsmodul <span class="math notranslate nohighlight">\(E\)</span> und das Flächenmoment <span class="math notranslate nohighlight">\(I\)</span> des Balkenquerschnitts. Wirkt
-eine konstante Streckenlast <span class="math notranslate nohighlight">\(q\)</span> auf den Balken, so ist das Biegemoment</p>
-<div class="math notranslate nohighlight">
-\[M_b(x) = \frac{1}{2}q(lx-x^2).\]</div>
-<p>abhängig von der Position <span class="math notranslate nohighlight">\(x\)</span> und die Differentialgleichung lautet</p>
-<div class="math notranslate nohighlight">
-\[y'' = - \frac{q}{2EI}(lx-x^2).\]</div>
-<p>Dabei sind wir davon ausgegangen, dass die linke Stütze die Position <span class="math notranslate nohighlight">\(x=0\)</span> und
-die rechte Stütze die Position <span class="math notranslate nohighlight">\(x=l\)</span> hat. An beiden Randpunkten ist die
-Auslenkung 0, also haben wir die zusätzlichen Randwerte</p>
-<div class="math notranslate nohighlight">
-\[y(0)=0 \quad \text{und} \quad y(l)=0\]</div>
-<p>als zusätzliche Bedingung. Als erstes bestimmen wir die allgemeine Lösung des
-Randwertproblems. Dazu integrieren wir zweimal unbestimmt und erhalten zwei
-Integrationskonstanten:</p>
-<div class="amsmath math notranslate nohighlight">
-\[\begin{align*} \int y''(x)\, dx = -\frac{q}{2EI} \int lx - x^2 \, dx \quad
-&amp;\Rightarrow \quad y'(x) = - \frac{q}{2EI}\left(\frac{1}{2}lx^2 - \frac{1}{3}x^3
-+ C_1\right) \\ \int y'(x) \, dx = - \frac{q}{2EI} \int \frac{1}{2}lx^2 -
-\frac{1}{3}x^3 + C_1 \, dx \quad &amp;\Rightarrow \quad y(x) = - \frac{q}{2EI}
-\left(\frac{1}{6}lx^3 -\frac{1}{12} x^4 + C_1x + C_2\right)  
-\end{align*}\]</div>
-<p>Um jetzt aus der allgemeinen Lösung mit den zwei Integrationskonstanten die
-spezielle Lösung zu berechnen, die das Randwertproblem löst, setzen wir die
-beiden Randwerte in die allgemeine Lösung ein:</p>
-<div class="amsmath math notranslate nohighlight">
-\[\begin{align*} y(0) &amp;= -\frac{q}{2EI} C_2, \\
-y(l) &amp;= -\frac{q}{2EI} \left(\frac{1}{6}l^4  - \frac{1}{12} l^4 + C_1\cdot l +
-C_2\right). \end{align*}\]</div>
-<p>Da die Durchbiegung an der linken und rechten Stütze jeweils 0 ist, setzen wir
-<span class="math notranslate nohighlight">\(y(0)=y(l)=0\)</span>. Wir können sofort auf beiden Seiten durch den Term
-<span class="math notranslate nohighlight">\(-\frac{q}{2EI}\)</span> teilen, da dieser aus physikalischen Gründen selbst ungleich 0
-sein muss. Damit erhalten wir sofort <span class="math notranslate nohighlight">\(y(0)=C_2=0\)</span>. Das setzen wir in die zweite
-Gleichung ein und erhalten</p>
-<div class="math notranslate nohighlight">
-\[y(l)=\frac{1}{6}l^4  - \frac{1}{12} l^4 + C_1\cdot l=0.\]</div>
-<p>Durch <span class="math notranslate nohighlight">\(l\)</span> geteilt und nach <span class="math notranslate nohighlight">\(C_1\)</span> aufgelöst erhalten wir <span class="math notranslate nohighlight">\(C_1 =
--\frac{1}{12}l^3\)</span>. Damit lautet die spezielle Lösung der Differentialgleichung
-für die Biegelinie</p>
-<div class="math notranslate nohighlight">
-\[y(x)=\frac{q}{24 EI}\left(x^4 -2lx^3 + l^3x\right).\]</div>
-<div class="seealso admonition">
-<p class="admonition-title">GeoGebra</p>
-<p><a class="reference external" href="https://www.geogebra.org/calculator/xuzuerpf?embed">https://www.geogebra.org/calculator/xuzuerpf?embed</a>”</p>
-</div>
-</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -713,7 +567,7 @@ für die Biegelinie</p>
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">12.1 Grundbegriffe</p>
+        <p class="prev-next-title">12.1 Lineare DGL 1. Ordnung</p>
       </div>
     </a>
     <a class="right-next"
@@ -721,7 +575,7 @@ für die Biegelinie</p>
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">12.3 Separable Differentialgleichungen</p>
+        <p class="prev-next-title">12.3 Lösung inhomogene lineare DGL 1. Ordnung</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -732,7 +586,8 @@ für die Biegelinie</p>
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
   <div class="sidebar-secondary-item">
@@ -742,10 +597,8 @@ für die Biegelinie</p>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lernziele">Lernziele</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#die-allgemeine-losung-sind-unendlich-viele-funktionen">Die allgemeine Lösung sind unendlich viele Funktionen</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mit-zusatzbedingungen-wird-die-losung-speziell">Mit Zusatzbedingungen wird die Lösung speziell</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#anfangswerte-sind-die-haufigsten-zusatzbedingungen">Anfangswerte sind die häufigsten Zusatzbedingungen</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#randwertprobleme-sind-seltener-und-schwierig">Randwertprobleme sind seltener und schwierig</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wie-wird-eine-homogene-lineare-dgl-1-ordnung-gelost">Wie wird eine homogene lineare DGL 1. Ordnung gelöst?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#beispiele-zur-losung-einer-homogenen-linearen-dgl-1-ordnung">Beispiele zur Lösung einer homogenen linearen DGL 1. Ordnung</a></li>
 </ul>
   </nav></div>
 
@@ -793,8 +646,8 @@ By Simone Gramsch
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
 
   <footer class="bd-footer">
   </footer>

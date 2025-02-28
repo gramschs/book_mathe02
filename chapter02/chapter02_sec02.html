@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>2.2 Eigenschaften von Integralen &#8212; Mathematik 2 Maschinenbau</title>
+    <title>2.2 Fläche zwischen zwei Graphen &#8212; Mathematik 2 Maschinenbau</title>
   
   
   
@@ -16,32 +16,35 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-
-  
-  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=87e54e7c" />
     <link rel="stylesheet" type="text/css" href="../_static/jsxgraph.css?v=a7b027cb" />
     <link rel="stylesheet" type="text/css" href="../_static/my_styles.css?v=9b976ced" />
   
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
-  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
     <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
     <script src="../_static/doctools.js?v=9a2dae69"></script>
@@ -54,7 +57,7 @@
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
@@ -66,10 +69,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="2.3 Partielle Integration" href="chapter02_sec03.html" />
-    <link rel="prev" title="2.1 Stammfunktion und bestimmtes Integral" href="chapter02_sec01.html" />
+    <link rel="next" title="2.3 Bogenlänge" href="chapter02_sec03.html" />
+    <link rel="prev" title="1.1 Integrieren ist Mitteln" href="chapter02_sec01.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
   </head>
   
   
@@ -85,19 +89,8 @@
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-primary-sidebar-checkbox"/>
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-secondary-sidebar-checkbox"/>
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="../search.html"
       method="get">
@@ -105,7 +98,6 @@
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search this book..."
          aria-label="Search this book..."
          autocomplete="off"
@@ -113,8 +105,8 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -130,7 +122,8 @@
       
       
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -160,15 +153,11 @@
 </a></div>
         <div class="sidebar-primary-item">
 
- <script>
- document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script></div>
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
@@ -179,122 +168,114 @@
                 </a>
             </li>
         </ul>
-        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Differential- und Integralrechnung</span></p>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Fortsetzung Integralrechnung</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter01/chapter01_sec00.html">1. Differentialrechnung</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter01/chapter01_sec01.html">1.1 Ableitungen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter01/chapter01_sec02.html">1.2 Rechenregeln Ableitungen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter01/chapter01_sec03.html">1.3 Extremwerte</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter01/chapter01_sec04.html">1.4 Extremwerte mit Nebenbedingung</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter01/chapter01_sec00.html">1. Wiederholung Integrale</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter01/chapter01_sec01.html">1.1 Stammfunktion und bestimmtes Integral</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter01/chapter01_sec02.html">1.2 Eigenschaften von Integralen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter01/chapter01_sec03.html">1.3 Partielle Integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter01/chapter01_sec04.html">1.4 Integration durch Substitution</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter01/chapter01_sec05.html">Übungen</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="chapter02_sec00.html">2. Integrale</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="chapter02_sec01.html">2.1 Stammfunktion und bestimmtes Integral</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">2.2 Eigenschaften von Integralen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="chapter02_sec03.html">2.3 Partielle Integration</a></li>
-<li class="toctree-l2"><a class="reference internal" href="chapter02_sec04.html">2.4 Integration durch Substitution</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="chapter02_sec00.html">2. Anwendungen Integral</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="chapter02_sec01.html">1.1 Integrieren ist Mitteln</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">2.2 Fläche zwischen zwei Graphen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter02_sec03.html">2.3 Bogenlänge</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter02_sec04.html">2.4 Volumen von Rotationskörpern</a></li>
 <li class="toctree-l2"><a class="reference internal" href="chapter02_sec05.html">Übungen</a></li>
-</ul>
-</details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter03/chapter03_sec00.html">3. Anwendungen Integral</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec01.html">3.1 Integrieren ist Mitteln</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec02.html">3.2 Fläche zwischen zwei Graphen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec03.html">3.3 Bogenlänge</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec04.html">3.4 Volumen von Rotationskörpern</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec05.html">Übungen</a></li>
 </ul>
 </details></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Funktionenreihen</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter04/chapter04_sec00.html">4. Reihen und Potenzreihen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter04/chapter04_sec01.html">4.1 Reihen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter04/chapter04_sec02.html">4.2 Konvergenzkriterien für Reihen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter04/chapter04_sec03.html">4.3 Potenzreihen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter04/chapter04_sec04.html">4.4 Konvergenz von Potenzreihen</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter03/chapter03_sec00.html">3. Reihen und Potenzreihen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec01.html">3.1 Reihen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec02.html">3.2 Konvergenzkriterien für Reihen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec03.html">3.3 Potenzreihen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec04.html">3.4 Konvergenz von Potenzreihen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec05.html">Übungen</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter04/chapter04_sec00.html">4. Taylorreihen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter04/chapter04_sec01.html">4.1 Berechnung Taylorreihe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter04/chapter04_sec02.html">4.2 Restglied von Taylorreihen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter04/chapter04_sec03.html">4.3 Wichtige Potenzreihen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter04/chapter04_sec04.html">4.4 Rechnen mit Potenzreihen</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter04/chapter04_sec05.html">Übungen</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter05/chapter05_sec00.html">5. Taylorreihen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter05/chapter05_sec01.html">5.1 Berechnung Taylorreihe</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter05/chapter05_sec02.html">5.2 Restglied von Taylorreihen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter05/chapter05_sec03.html">5.3 Wichtige Potenzreihen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter05/chapter05_sec04.html">5.4 Rechnen mit Potenzreihen</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter05/chapter05_sec00.html">5. Fourierreihen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter05/chapter05_sec01.html">5.1 Periodische Funktionen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter05/chapter05_sec02.html">5.2 Fourierreihen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter05/chapter05_sec03.html">5.3 Beispiele für Fourierreihen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter05/chapter05_sec04.html">5.4 Rechenregeln Fourierreihen</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter05/chapter05_sec05.html">Übungen</a></li>
-</ul>
-</details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter06/chapter06_sec00.html">6. Fourierreihen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter06/chapter06_sec01.html">6.1 Periodische Funktionen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter06/chapter06_sec02.html">6.2 Fourierreihen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter06/chapter06_sec03.html">6.3 Beispiele für Fourierreihen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter06/chapter06_sec04.html">6.4 Rechenregeln Fourierreihen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter06/chapter06_sec05.html">Übungen</a></li>
 </ul>
 </details></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Höhere Differentialrechnung</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter07/chapter07_sec00.html">7. Funktionen von mehreren Variablen und partielle Ableitungen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter07/chapter07_sec01.html">7.1 Definition und Visualisierung</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter07/chapter07_sec02.html">7.2 Stetigkeit</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter07/chapter07_sec03.html">7.3 Partielle Ableitungen und Gradient</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter07/chapter07_sec04.html">7.4 Höhere partielle Ableitungen und Hesse-Matrix</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter06/chapter06_sec00.html">6. Funktionen von mehreren Variablen und partielle Ableitungen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter06/chapter06_sec01.html">6.1 Definition und Visualisierung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter06/chapter06_sec02.html">6.2 Stetigkeit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter06/chapter06_sec03.html">6.3 Partielle Ableitungen und Gradient</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter06/chapter06_sec04.html">6.4 Höhere partielle Ableitungen und Hesse-Matrix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter06/chapter06_sec05.html">Übungen</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter07/chapter07_sec00.html">7. Richtungsableitungen und vektorwertige Funktionen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter07/chapter07_sec01.html">7.1 Gradient und Richtungsableitung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter07/chapter07_sec02.html">7.2 Vektorwertige Funktionen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter07/chapter07_sec03.html">7.3 Jacobi-Matrix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter07/chapter07_sec04.html">7.4 Mehrdimensionale Kettenregel</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter07/chapter07_sec05.html">Übungen</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter08/chapter08_sec00.html">8. Richtungsableitungen und vektorwertige Funktionen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter08/chapter08_sec01.html">8.1 Gradient und Richtungsableitung</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter08/chapter08_sec02.html">8.2 Vektorwertige Funktionen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter08/chapter08_sec03.html">8.3 Jacobi-Matrix</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter08/chapter08_sec04.html">8.4 Mehrdimensionale Kettenregel</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter08/chapter08_sec00.html">8. Linearisierung und Extremwerte</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter08/chapter08_sec01.html">8.1 Tangentenfunktionen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter08/chapter08_sec02.html">8.2 Totales Differential</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter08/chapter08_sec03.html">8.3 Extremwerte</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter08/chapter08_sec04.html">8.4 Extremwertprobleme mit Nebenbedingung</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter08/chapter08_sec05.html">Übungen</a></li>
-</ul>
-</details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter09/chapter09_sec00.html">9. Linearisierung und Extremwerte</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter09/chapter09_sec01.html">9.1 Tangentenfunktionen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter09/chapter09_sec02.html">9.2 Totales Differential</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter09/chapter09_sec03.html">9.3 Extremwerte</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter09/chapter09_sec04.html">9.4 Extremwertprobleme mit Nebenbedingung</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter09/chapter09_sec05.html">Übungen</a></li>
 </ul>
 </details></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Höhere Integralrechnung</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter10/chapter10_sec00.html">10. Doppelintegral</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter10/chapter10_sec01.html">10.1 Idee von Doppelintegralen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter10/chapter10_sec02.html">10.2 Berechnung von Doppelintegralen in kartesischen Koordinaten</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter10/chapter10_sec03.html">10.3 Anwendung: Flächenberechnung</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter10/chapter10_sec04.html">10.4 Anwendung: Schwerpunktberechnung</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter10/chapter10_sec05.html">Übungen</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter09/chapter09_sec00.html">9. Doppelintegral</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter09/chapter09_sec01.html">9.1 Idee von Doppelintegralen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter09/chapter09_sec02.html">9.2 Berechnung von Doppelintegralen in kartesischen Koordinaten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter09/chapter09_sec03.html">9.3 Anwendung: Flächenberechnung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter09/chapter09_sec04.html">9.4 Anwendung: Schwerpunktberechnung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter09/chapter09_sec05.html">Übungen</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter11/chapter11_sec00.html">11. Doppelintegral in Polarkoordinaten und Dreifachintegral</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter11/chapter11_sec01.html">11.1 Polarkoordinaten</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter11/chapter11_sec02.html">11.2 Doppelintegral in Polarkoordinaten</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter11/chapter11_sec03.html">11.3 Dreifachintegral</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter11/chapter11_sec04.html">11.4 Anwendungen Dreifachintegral</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter11/chapter11_sec05.html">Übungen</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter10/chapter10_sec00.html">10. Doppelintegral in Polarkoordinaten und Dreifachintegral</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter10/chapter10_sec01.html">10.1 Polarkoordinaten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter10/chapter10_sec02.html">10.2 Doppelintegral in Polarkoordinaten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter10/chapter10_sec03.html">10.3 Dreifachintegral</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter10/chapter10_sec04.html">10.4 Anwendungen Dreifachintegral</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter10/chapter10_sec05.html">Übungen</a></li>
 </ul>
 </details></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Differentialgleichungen</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter12/chapter12_sec00.html">12. Einführung Differentialgleichungen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter12/chapter12_sec01.html">12.1 Grundbegriffe</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter12/chapter12_sec02.html">12.2 Anfangs- und Randwertproblem</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter12/chapter12_sec03.html">12.3 Separable Differentialgleichungen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter12/chapter12_sec04.html">12.4 Exakte Differentialgleichungen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter12/chapter12_sec05.html">Übungen</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter11/chapter11_sec00.html">11. Einführung Differentialgleichungen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter11/chapter11_sec01.html">11.1 Grundbegriffe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter11/chapter11_sec02.html">11.2 Anfangs- und Randwertproblem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter11/chapter11_sec03.html">11.3 Separable Differentialgleichungen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter11/chapter11_sec04.html">11.4 Exakte Differentialgleichungen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter11/chapter11_sec05.html">Übungen</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter13/chapter13_sec00.html">13. Lineare Differentialgleichungen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter13/chapter13_sec01.html">13.1 Lineare DGL 1. Ordnung</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter13/chapter13_sec02.html">13.2 Lösung homogene lineare DGL 1. Ordnung</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter13/chapter13_sec03.html">13.3 Lösung inhomogene lineare DGL 1. Ordnung</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter13/chapter13_sec04.html">13.4 Homogene Systeme aus zwei linearen DGL 1. Ordnung</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter13/chapter13_sec05.html">Übungen</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter12/chapter12_sec00.html">12. Lineare Differentialgleichungen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter12/chapter12_sec01.html">12.1 Lineare DGL 1. Ordnung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter12/chapter12_sec02.html">12.2 Lösung homogene lineare DGL 1. Ordnung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter12/chapter12_sec03.html">12.3 Lösung inhomogene lineare DGL 1. Ordnung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter12/chapter12_sec04.html">12.4 Homogene Systeme aus zwei linearen DGL 1. Ordnung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter12/chapter12_sec05.html">Übungen</a></li>
 </ul>
 </details></li>
 </ul>
@@ -305,9 +286,14 @@
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
   </div>
-  
-  <div id="rtd-footer-container"></div>
 
 
       </div>
@@ -419,24 +405,16 @@
 
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script>
+</button>
 <button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
 </button>
@@ -450,7 +428,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>2.2 Eigenschaften von Integralen</h1>
+    <h1>2.2 Fläche zwischen zwei Graphen</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -461,8 +439,10 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lernziele">Lernziele</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#integrationsgrenzen">Integrationsgrenzen</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#linearitat-des-integrals">Linearität des Integrals</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#flacheninhalt-graph-oberhalb-der-x-achse">Flächeninhalt: Graph oberhalb der x-Achse</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#flacheninhalt-graph-unterhalb-der-x-achse">Flächeninhalt: Graph unterhalb der x-Achse</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#flacheninhalt-graph-oberhalb-und-unterhalb-der-x-achse">Flächeninhalt: Graph oberhalb und unterhalb der x-Achse</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#flache-zwischen-zwei-funktionsgraphen">Fläche zwischen zwei Funktionsgraphen</a></li>
 </ul>
             </nav>
         </div>
@@ -474,112 +454,219 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="eigenschaften-von-integralen">
-<h1>2.2 Eigenschaften von Integralen<a class="headerlink" href="#eigenschaften-von-integralen" title="Link to this heading">#</a></h1>
-<p>Kennt man die Eigenschaften von Integralen, so kann das so manche Rechnung
-erheblich vereinfachen. Im Folgenden werden die wichtigsten Eigenschaften von
-Integralen präsentiert.</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="flache-zwischen-zwei-graphen">
+<h1>2.2 Fläche zwischen zwei Graphen<a class="headerlink" href="#flache-zwischen-zwei-graphen" title="Link to this heading">#</a></h1>
+<p>Bisher haben wir das Integral benutzt, um den orientierten Flächeninhalt
+zwischen einer Funktion und der x-Achse zu bestimmen. In diesem Abschnitt
+erweitern wir diese Idee, um den Flächeninhalt zwischen zwei Funktionen zu
+bestimmen, genauer gesagt zwischen zwei Funktionsgraphen. Dazu beginnen wir aber
+zunächst mit der Vorgehensweise, wie Flächeninhalte zwischen einem
+Funktionsgraphen und der x-Achse berechnet werden.</p>
 <section id="lernziele">
 <h2>Lernziele<a class="headerlink" href="#lernziele" title="Link to this heading">#</a></h2>
 <div class="goals admonition">
 <p class="admonition-title">Lernziele</p>
 <ul class="simple">
-<li><p>Sie wissen, wie sich das Integral verändert, wenn die beiden Integrationsgrenzen
-miteinander vertauscht werden:</p></li>
+<li><p>Sie wissen, wie man mit dem bestimmten Integral <span class="math notranslate nohighlight">\(\int_{a}^{b} f(x)\, dx\)</span> den
+Flächeninhalt zwischen dem Funktionsgraphen <span class="math notranslate nohighlight">\(f(x)\)</span>, der x-Achse und den parallelen
+Geraden <span class="math notranslate nohighlight">\(x=a\)</span> und <span class="math notranslate nohighlight">\(x=b\)</span> berechnet, wenn</p>
+<ul>
+<li><p>der Graph oberhalb der x-Achse liegt,</p></li>
+<li><p>der Graph unterhalb der x-Achse liegt oder</p></li>
+<li><p>der Graph teils oberhalb und teils unterhalb der x-Achse liegt.</p></li>
 </ul>
-<div class="math notranslate nohighlight">
-\[\int_{a}^{b} f(x)\,dx = - \int_{b}^{a} f(x)\, dx.\]</div>
-<ul class="simple">
-<li><p>Sie wissen, dass das Integral Null ist, wenn die untere Integrationsgrenze
-gleich der oberen Integrationsgrenze ist:</p></li>
+</li>
+<li><p>Sie wissen, wie man den Flächeninhalt zwischen den beiden Funktionsgraphen <span class="math notranslate nohighlight">\(f(x)\)</span> und <span class="math notranslate nohighlight">\(g(x)\)</span>
+berechnet.</p></li>
 </ul>
-<div class="math notranslate nohighlight">
-\[\int_{a}^{a} f(x)\, dx = 0.\Rule{0 px}{0 em}{1.5 em}\]</div>
-<ul class="simple">
-<li><p>Sie wissen, dass ein Integral mit dem Punkt <span class="math notranslate nohighlight">\(c\)</span> in zwei Integrale aufgespalten
-werden kann:</p></li>
-</ul>
-<div class="math notranslate nohighlight">
-\[\int_{a}^{b} f(x) \,dx = \int_{a}^{c} f(x) \,dx + \int_{c}^{b} f(x) \,dx.
-\Rule{0 px}{0 em}{1.5 em}\]</div>
-<ul class="simple">
-<li><p>Sie kennen die <strong>Faktorregel</strong>:</p></li>
-</ul>
-<div class="math notranslate nohighlight">
-\[\int_{a}^{b} c\cdot f(x)\, dx = c\cdot
-\int_{a}^{b} f(x)\, dx.\]</div>
-<ul class="simple">
-<li><p>Sie kennen die <strong>Summenregel</strong>:</p></li>
-</ul>
-<div class="math notranslate nohighlight">
-\[\int_{a}^{b} f(x) \pm g(x) \, dx = \int_{a}^{b}f(x)\, dx \pm \int_{a}^{b}
-g(x)\, dx.\]</div>
 </div>
 </section>
-<section id="integrationsgrenzen">
-<h2>Integrationsgrenzen<a class="headerlink" href="#integrationsgrenzen" title="Link to this heading">#</a></h2>
-<p>Als erstes betrachten wir die Eigenschaften von Integralen, wenn der Integrand
-<span class="math notranslate nohighlight">\(f\)</span> gleich bleibt, aber die Integrationsgrenzen geändert werden.</p>
-<p>Werden die beiden Integrationsgrenzen vertauscht, so ändert sich das Vorzeichen
-des Integrals. Integrieren wir also die Funktion <span class="math notranslate nohighlight">\(f\)</span> von <span class="math notranslate nohighlight">\(b\)</span> nach <span class="math notranslate nohighlight">\(a\)</span> anstatt
-von <span class="math notranslate nohighlight">\(a\)</span> nach <span class="math notranslate nohighlight">\(b\)</span>, müssen wir dieses Integral nur mit <span class="math notranslate nohighlight">\(-1\)</span> multiplizieren, um das
-ursprüngliche Integral von <span class="math notranslate nohighlight">\(a\)</span> nach <span class="math notranslate nohighlight">\(b\)</span> zu erhalten. In Formeln sieht das so aus:</p>
+<section id="flacheninhalt-graph-oberhalb-der-x-achse">
+<h2>Flächeninhalt: Graph oberhalb der x-Achse<a class="headerlink" href="#flacheninhalt-graph-oberhalb-der-x-achse" title="Link to this heading">#</a></h2>
+<p>Das Integral wurde in der Mathematik 1 als der orientierte Flächeninhalt
+zwischen Funktionsgraph <span class="math notranslate nohighlight">\(f(x)\)</span> und x-Achse eingeführt. Liegen die Funktionswerte
+<span class="math notranslate nohighlight">\(f(x)\)</span> alle oberhalb der x-Achse wie in dem nachfolgendem Beispiel, so ist der
+orientierte Flächeninhalt gleich dem Flächeninhalt. Damit ist die gesuchte Fläche
+<span class="math notranslate nohighlight">\(A\)</span> also</p>
 <div class="math notranslate nohighlight">
-\[\int_{a}^{b} f(x)\,dx = - \int_{\textcolor{red}{b}}^{\textcolor{red}{a}}
-f(x)\, dx.\]</div>
-<p>Gar nicht erst rechnen müssen wir, wenn das Integral über <span class="math notranslate nohighlight">\(f\)</span> von <span class="math notranslate nohighlight">\(a\)</span> bis <span class="math notranslate nohighlight">\(a\)</span>
-geht. In anderen Worten betrachten wir jetzt ein Integral, bei dem die untere
-Integrationsgrenze und die obere Integrationsgrenze zusammenfallen. Wenn wir das
-Integral als orientierte Fläche zwischen dem Funktionsgraphen <span class="math notranslate nohighlight">\(f(x)\)</span> und der
-x-Achse interpretieren, heißt das, dass gar kein Rechteck mehr existiert.
-Anstatt eines Rechtecke liegt sozusagen nur noch ein unendlich dünner Strich an
-der Stelle <span class="math notranslate nohighlight">\(x=a\)</span> vor, weil es ja von <span class="math notranslate nohighlight">\(a\)</span> nach <span class="math notranslate nohighlight">\(a\)</span> geht. Ein Strich hat keinen
-Flächeninhalt, das Integral ist also Null. Als mathematische Formel notiert
-heißt das:</p>
+\[A = \int_{a}^{b} f(x) \, dx.\]</div>
+<p>Das bestimmte Integral lässt sich am einfachsten über eine Stammfunktion <span class="math notranslate nohighlight">\(F\)</span>
+berechnen. Mit dem Hauptsatz der Differential- und Integralrechnung gilt dann
+für den Flächeninhalt <span class="math notranslate nohighlight">\(A\)</span> einer Funktion <span class="math notranslate nohighlight">\(f\)</span> im Intervall <span class="math notranslate nohighlight">\([a,b]\)</span> die folgende
+Formel:</p>
 <div class="math notranslate nohighlight">
-\[\int_{\textcolor{red}{a}}^{\textcolor{red}{a}} f(x)\, dx = 0.\Rule{0 px}{0
-em}{1.5 em}\]</div>
-<p>Weiter geht es… wiederum hilft die Flächeninterpretation weiter. Diesmal
-erfinden wir einen neuen Punkt <span class="math notranslate nohighlight">\(c\)</span>. Dann kann die Fläche zwischen
-Funktionsgraph, x-Achse und den Grenzen a und b in zwei Flächen aufgeteilt
-werden. Die erste Fläche ist die Fläche zwischen Funktionsgraph und x-Achse von
-<span class="math notranslate nohighlight">\(a\)</span> nach <span class="math notranslate nohighlight">\(c\)</span>. Die zweite Fläche ist die Fläche zwischen Funktionsgraph und
-x-Achse von <span class="math notranslate nohighlight">\(c\)</span> nach <span class="math notranslate nohighlight">\(b\)</span>. Und beide Flächen zusammen müssen wieder die
-ursprüngliche Fläche ergeben. Also:</p>
+\[A = \int_{a}^{b} f(x) \, dx = F(b)- F(a).\]</div>
+<p>Beispiel: In der folgenden Abbildung ist der Funktionsgraph <span class="math notranslate nohighlight">\(f(x)\)</span> der Funktion
+<span class="math notranslate nohighlight">\(f(x)=x^2+1\)</span> zu sehen. Berechnet werden soll der rot gefärbte Flächeninhalt <span class="math notranslate nohighlight">\(A\)</span>
+zwischen <span class="math notranslate nohighlight">\(f(x)\)</span> und der x-Achse mit den Grenzen <span class="math notranslate nohighlight">\(x = -2\)</span> und <span class="math notranslate nohighlight">\(x = 3\)</span>.</p>
+<div id="chap03_sec02_fig01" class="jxgbox" style="width:75%; aspect-ratio:16/9; margin: 0 auto;"></div>
+<script type="text/javascript">
+    board = JXG.JSXGraph.initBoard('chap03_sec02_fig01', 
+        {boundingbox:[-5, 20, 5, -2], axis:true, showCopyright: false, showNavigation: false});
+    let graph = board.create('functiongraph', [function(x) {return x**2+1;}, -5, 5], {strokeWidth:2, strokeColor:'#000000'});
+    let area  = board.create('integral', [[-2.0, 3.0], graph],
+        {fillColor:'#f06666'});
+</script><br>
+<p>In dem Beispiel liegen alle Funktionswerte <span class="math notranslate nohighlight">\(f(x)\)</span> komplett oberhalb der x-Achse,
+d.h. alle Funktionswerte <span class="math notranslate nohighlight">\(f(x)\)</span> sind positiv. Um nun den Flächeninhalt zwischen
+<span class="math notranslate nohighlight">\(f(x)\)</span> und der x-Achse mit den Grenzen <span class="math notranslate nohighlight">\(x=-2\)</span> und <span class="math notranslate nohighlight">\(x=3\)</span> zu berechnen, wird also
+folgendermaßen gerechnet:</p>
 <div class="math notranslate nohighlight">
-\[\int_{a}^{b} f(x) \,dx = \int_{a}^{\textcolor{red}{c}} f(x) \,dx +
-\int_{\textcolor{red}{c}}^{b} f(x) \,dx. \Rule{0 px}{0 em}{1.5 em}\]</div>
-<p>Alle drei Eigenschaften werden nochmal in dem folgenden Video erläutert.</p>
+\[A = \int_{-2}^{3} f(x)\, dx = \int_{-2}^{3} x^2 + 1 \, dx =
+\big[\frac{1}{3}x^3+x\big]_{-2}^{3}=\frac{50}{3}\approx 16.6667.\]</div>
+<p>In dem folgenden Video wird die Vorgehensweise nochnmal ausführlich erklärt und
+ein weiteres Beispiel vorgerechnet.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
-<span class="sd-summary-text">Video: Eigenschaften/Rechenregeln des Integrals I</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/BKgcS2wgwu0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<span class="sd-summary-text">Video “Flächen oberhalb der x-Achse” von VisualX</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/L3m_jn9w1dU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </div>
 </details></section>
-<section id="linearitat-des-integrals">
-<h2>Linearität des Integrals<a class="headerlink" href="#linearitat-des-integrals" title="Link to this heading">#</a></h2>
-<p>Linearität des Integrals klingt kompliziert, ist es aber nicht. Gemeint sind
-damit die folgenden zwei Eigenschaften.</p>
-<p>Faktorregel: Wenn die Funktion <span class="math notranslate nohighlight">\(f\)</span> mit einer konstanten Zahl <span class="math notranslate nohighlight">\(c\)</span> multipliziert
-wird und dann integriert werden soll, dann können wir auch zuerst das Integral
-von <span class="math notranslate nohighlight">\(f\)</span> berechnen und danach das Ergebnis <span class="math notranslate nohighlight">\(c\)</span> multiplizieren. Oder anders
-ausgedrückt: wenn im Integranden ein konstanter Faktor ist, dann darf man diesen
-konstanten Faktor auch vor das Integral ziehen.</p>
+<section id="flacheninhalt-graph-unterhalb-der-x-achse">
+<h2>Flächeninhalt: Graph unterhalb der x-Achse<a class="headerlink" href="#flacheninhalt-graph-unterhalb-der-x-achse" title="Link to this heading">#</a></h2>
+<p>Als nächstes wird die Funktion <span class="math notranslate nohighlight">\(f\)</span> an der x-Achse gespiegelt. Die gespiegelte
+Funktion nennen wir <span class="math notranslate nohighlight">\(g\)</span>, also</p>
 <div class="math notranslate nohighlight">
-\[\int_{a}^{b} c\cdot f(x)\, dx = c\cdot
-\int_{a}^{b} f(x)\, dx.\]</div>
-<p>Summenregel: Soll die Summe oder die Differenz zweier Funktionen integriert
-werden, dürfen auch zuerst die beiden Einzelintegrale berechnet werden und
-danach Summe oder Differenz gebildet werden:</p>
+\[g(x)= -f(x) = -x^2-1.\]</div>
+<div id="chap03_sec02_fig02" class="jxgbox" style="width:75%; aspect-ratio:16/9; margin: 0 auto;"></div>
+<script type="text/javascript">
+    board2 = JXG.JSXGraph.initBoard('chap03_sec02_fig02', 
+        {boundingbox:[-5, 2, 5, -20], axis:true, showCopyright: false, showNavigation: false});
+    let graph2 = board2.create('functiongraph', [function(x) {return -x*x-1;}, -5, 5], {strokeWidth:2, strokeColor:'#000000'});
+    let area2  = board2.create('integral', [[-2.0, 3.0], graph2],
+        {fillColor:'#669cbe'});
+</script><br>
+<p>Wenn wir jetzt naiv den Flächeninhalt wiederum als das bestimmte Integral
+berechnen, erhalten wir</p>
 <div class="math notranslate nohighlight">
-\[\int_{a}^{b} f(x) \pm g(x) \, dx = \int_{a}^{b}f(x)\, dx \pm \int_{a}^{b}
-g(x)\, dx.\]</div>
-<p>In dem folgenden Video werden beide Eigenschaften erläutert und anhand eines
-Beispiels demonstriert.</p>
+\[\int_{-2}^{3} g(x)\, dx = \int_{-2}^{3} -x^2 - 1 \, dx =
+\big[-\frac{1}{3}x^3-x\big]_{-2}^{3}=-\frac{50}{3}\approx -16.6667.\]</div>
+<p>Negative Flächen gibt es nicht. Das Integral ist nicht der Flächeninhalt,
+sondern der <em>orientierte</em> Flächeninhalt des Funktionsgraphens <span class="math notranslate nohighlight">\(g(x)\)</span> mit der
+x-Achse und daher negativ. Andererseits wissen wir ja, dass die gesuchte Fläche
+zwischen <span class="math notranslate nohighlight">\(g(x)\)</span> und der x-Achse (hier blau gefärbt) genauso groß sein muss wie
+die der Flächeninhalt der Funktion <span class="math notranslate nohighlight">\(f(x)\)</span> mit der x-Achse in der ersten
+Abbildung (rot gefärbt), da wir die Funktion <span class="math notranslate nohighlight">\(f(x)\)</span> ja nur an der x-Achse
+gespiegelt haben. Also nehmen wir einfach den ursprünglichen Flächeninhalt. Oder
+anders ausgedrückt, wir spiegeln die Funktion <span class="math notranslate nohighlight">\(g\)</span> wieder, so dass die
+Funktionswerte der gespiegelten Funktion komplett oberhalb der x-Achse liegen.</p>
+<p>Die Formel zur Berechnung des Flächeninhaltes einer Funktion, die komplett
+unterhalb der x-Achse liegt, lautet:</p>
+<div class="math notranslate nohighlight">
+\[A = \textcolor{red}{-} \int_{a}^{b} f(x)\, dx = \textcolor{red}{-} \big(F(b)-F(a)\big).\]</div>
+<p>Weitere Erklärungen sowie ein weiteres Beispiel werden ausführlich in dem
+folgenden Video präsentiert.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
-<span class="sd-summary-text">Video: Eigenschaften/Rechenregeln des Integrals II</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/eMGWYY96Hno" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<span class="sd-summary-text">Video “Flächen unterhalb der x-Achse” von VisualX</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/_SA6iZNAKzw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+</details></section>
+<section id="flacheninhalt-graph-oberhalb-und-unterhalb-der-x-achse">
+<h2>Flächeninhalt: Graph oberhalb und unterhalb der x-Achse<a class="headerlink" href="#flacheninhalt-graph-oberhalb-und-unterhalb-der-x-achse" title="Link to this heading">#</a></h2>
+<p>Komplizierter wird es, wenn die Funktion oberhalb und unterhalb der x-Achse
+liegt wie beispielsweise bei der Funktion <span class="math notranslate nohighlight">\(f(x)=x^2-1\)</span>.</p>
+<div id="chap03_sec02_fig03" class="jxgbox" style="width:75%; aspect-ratio:16/9; margin: 0 auto;"></div>
+<script type="text/javascript">
+    board3 = JXG.JSXGraph.initBoard('chap03_sec02_fig03', 
+        {boundingbox:[-5, 20, 5, -2], axis:true, showCopyright: false, showNavigation: false});
+    let graph3 = board3.create('functiongraph', [function(x) {return x*x-1;}, -5, 5], {strokeWidth:2, strokeColor:'#000000'});
+    let area3a = board3.create('integral', [[-2.0, -1.0], graph3], {fillColor:'#f06666'});
+    let area3b = board3.create('integral', [[-1.0, 1.0],  graph3], {fillColor:'#669cbe'});
+    let area3c = board3.create('integral', [[1.0, 3.0],   graph3], {fillColor:'#f06666'});
+</script><br>
+<p>Würden wir jetzt einfach das bestimmte Integral im Intervall <span class="math notranslate nohighlight">\([-2,3]\)</span> berechnen, so erhielten wir</p>
+<div class="math notranslate nohighlight">
+\[\int_{-2}^{3} f(x)\, dx = \int_{-2}^{3} x^2-1\, dx = \frac{20}{3} \approx 6.6667.\]</div>
+<p>Das ist zuwenig! Bereits die Fläche zwischen <span class="math notranslate nohighlight">\(f(x)\)</span> und der x-Achse im Intervall
+<span class="math notranslate nohighlight">\([1,3]\)</span> alleine hat schon den Flächeninhalt <span class="math notranslate nohighlight">\(\frac{20}{3}\approx 6.6667\)</span>. Wir
+gehen jetzt etwas sorgfältiger vor und untersuchen, wo die Funktion oberhalb und
+wo sie unterhalb der x-Achse liegt. Die obige Abbildung hilft schon für eine
+erste Einschätzung, wo <span class="math notranslate nohighlight">\(f(x)\)</span> positiv ist und in welchem Intervall <span class="math notranslate nohighlight">\(f(x)\)</span>
+negativ ist. Der Vorzeichenwechsel erfolgt bei den Nullstellen.</p>
+<div class="math notranslate nohighlight">
+\[x^2-1 = 0 \quad \Rightarrow \quad x_1 = -1 \text{ und } x_2 = +1.\]</div>
+<p>Daher wird jetzt das Intervall <span class="math notranslate nohighlight">\([-2,3]\)</span> in drei Teilintervalle unterteilt:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(I_1 = [-2, -1]\)</span> (also von <span class="math notranslate nohighlight">\(a=-2\)</span> bis zur 1. Nullstelle)</p></li>
+<li><p><span class="math notranslate nohighlight">\(I_2 = [-1, +1]\)</span> (also von der 1. Nullstelle bis zur 2. Nullstelle)</p></li>
+<li><p><span class="math notranslate nohighlight">\(I_3 = [+1, +3]\)</span> (also von der 2. Nullstelle bis <span class="math notranslate nohighlight">\(b=3\)</span>)</p></li>
+</ul>
+<p>Das bestimmte Integral im 1. Teilintervall ist positiv, im 2. Teilintervall ist
+es negativ und im 3. Teilintervall wieder positiv:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\int_{-2}^{-1} f(x) \, dx = + \frac{4}{3} \approx 1.3333\)</span>,</p></li>
+<li><p><span class="math notranslate nohighlight">\(\int_{-1}^{1} f(x) \, dx = - \frac{4}{3} \approx - 1.3333\)</span>,</p></li>
+<li><p><span class="math notranslate nohighlight">\(\int_{1}^{3} f(x) \, dx = + \frac{20}{3} \approx 6.6667\)</span>.</p></li>
+</ul>
+<p>Da ein Integral über ein Intervall gleich der Summe der Integrale über die
+Teilintervalle ist, erhalten wir</p>
+<div class="math notranslate nohighlight">
+\[\int_{-2}^{3} f(x) \, dx = \frac{4}{3} - \frac{4}{3} + \frac{20}{3} = \frac{20}{3}.\]</div>
+<p>Die ersten beiden Integrale ergeben in Summe 0, da ist die Fläche verloren
+gegangen. Der mittlere Teil, wo das Integral einen negativ orientierten
+Flächeninhalt liefert, muss an der x-Achse gespiegelt werden bzw. der
+orientierte Flächeninhalt muss mit (-1) multipliziert werden. Der korrekte
+Flächeninhalt ist daher</p>
+<div class="math notranslate nohighlight">
+\[A = \frac{4}{3} \textcolor{red}{+} \frac{4}{3} + \frac{20}{3} = \frac{28}{3}.\]</div>
+<div class="note admonition">
+<p class="admonition-title">Kochrezept zur Berechnung des Flächeninhaltes zwischen einem Funktionsgraphen und der x-Achse</p>
+<p>Ist der Flächeninhalt <span class="math notranslate nohighlight">\(A\)</span> zwischen dem Funktionsgraphen <span class="math notranslate nohighlight">\(f(x)\)</span> und der x-Achse mit den Grenzen <span class="math notranslate nohighlight">\(x=a\)</span> und <span class="math notranslate nohighlight">\(x=b\)</span> gesucht, gehen Sie folgendermaßen vor:</p>
+<ol class="arabic simple">
+<li><p>Fertigen Sie eine Skizze der Funktion an, um zu ermitteln, wo <span class="math notranslate nohighlight">\(f(x)\)</span> oberhalb und wo unterhalb der x-Achse verläuft.</p></li>
+<li><p>Berechnen Sie die Nullstellen der Funktion <span class="math notranslate nohighlight">\(f\)</span>. Unterteilen Sie damit das Intervall <span class="math notranslate nohighlight">\([a,b]\)</span> in Teilintervalle <span class="math notranslate nohighlight">\(I_1, I_2, \ldots\)</span>, so dass die Funktion <span class="math notranslate nohighlight">\(f\)</span> in einem solchen Teilintervall komplett oberhalb oder komplett unterhalb der x-Achse liegt.</p></li>
+<li><p>Berechnen Sie dann in jedem Teilintervall das Integral einzeln. Wenn die Funktion in dem Intervall negativ ist, multiplizieren Sie anschließend den orientierten Flächeninhalt mit (-1). Das Ergebnis sind die (positiven!) Teilflächen <span class="math notranslate nohighlight">\(A_1, A_2, \ldots\)</span>.</p></li>
+<li><p>Addieren Sie zuletzt alle Teilflächen <span class="math notranslate nohighlight">\(A = A_1 + A_2 + \dots\)</span>. Das Gesamtergebnis ist der gesuchte Flächeninhalt <span class="math notranslate nohighlight">\(A\)</span>.</p></li>
+</ol>
+</div>
+<p>Das folgende Video fasst die Vorgehensweise zusammen.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Video “Flächen zwischen Graph und x-Achse” von VisualX</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/vdSWk1bCnMA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+</details></section>
+<section id="flache-zwischen-zwei-funktionsgraphen">
+<h2>Fläche zwischen zwei Funktionsgraphen<a class="headerlink" href="#flache-zwischen-zwei-funktionsgraphen" title="Link to this heading">#</a></h2>
+<p>Möchte man den Flächeninhalt berechnen, den zwei Funktionen <span class="math notranslate nohighlight">\(f\)</span> und <span class="math notranslate nohighlight">\(g\)</span>
+begrenzen, so könnte man zuerst den Flächeninhalt der ersten Funktion <span class="math notranslate nohighlight">\(f\)</span> mit
+der x-Achse berechnen und dann davon den zweiten Flächeninhalt des
+Funktionsgraphens <span class="math notranslate nohighlight">\(g(x)\)</span> mit der x-Achse abziehen. Dazu müsste man aber wissen,
+welche Funktion oberhalb der anderen Funktion liegt. Einfacher wird es, wenn die
+Differenzfunktion der beiden Funktionen gebildet wird. Die Vorgehensweise ist
+dann wie folgt.</p>
+<div class="note admonition">
+<p class="admonition-title">Kochrezept zur Berechnung des Flächeninhaltes zwischen zwei Funktionsgraphen</p>
+<p>Zur Berechnung des Flächeninhaltes zwischen zwei Funktionsgraphen, die wir
+<span class="math notranslate nohighlight">\(f(x)\)</span> und <span class="math notranslate nohighlight">\(g(x)\)</span> nennen, und den Grenzen <span class="math notranslate nohighlight">\(x=a\)</span> und <span class="math notranslate nohighlight">\(x=b\)</span> gehen wir
+folgendermaßen vor.</p>
+<ol class="arabic simple">
+<li><p>Berechnen Sie die Schnittpunkte <span class="math notranslate nohighlight">\(f(x)=g(x)\)</span>.</p></li>
+<li><p>Bilden Sie die Differenzfunktion <span class="math notranslate nohighlight">\(d(x)=f(x)-g(x)\)</span>.</p></li>
+<li><p>Integrieren Sie die die Differenzfunktion <span class="math notranslate nohighlight">\(d\)</span> in den Teilintervallen, d.h.
+von a bis zum 1. Schnittpunkt, vom 1. Schnittpunkt bis zum 2. Schnittpunkt,
+usw…</p></li>
+<li><p>Wenn der orientierte Flächeninhalt einer Teilfläche negativ ist,
+multiplizieren Sie mit -1, um den Flächeninhalt zu erhalten.</p></li>
+<li><p>Addieren Sie alle Flächeninhalte, um die Gesamtfläche zu erhalten.</p></li>
+</ol>
+</div>
+<p>Das folgende Video erläutert die Vorgehensweise und erklärt auch, warum die
+Integration über die Differenzfunktion den gleichen Flächeninhalt ergibt wie die
+gesuchte Fläche zwischen den beiden Funktionsgraphen.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Video “Flächen zwischen Graphen mit Differenzfunktion” von VisualX</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/OXQvPFGb9uk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+</details><p>Werden die Schnittpunkte nicht sorgfältig ermittelt und das Intervall, über das
+integriert wird, nicht sorgsam aufgeteilt, so passieren leicht Fehler, wie das
+folgende Video demonstriert.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Video “Flächen zwischen Graphen mit mehreren Schnittstellen” von VisualX</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/nFG5_-kS7fI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </div>
 </details></section>
 </section>
@@ -620,7 +707,7 @@ Beispiels demonstriert.</p>
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">2.1 Stammfunktion und bestimmtes Integral</p>
+        <p class="prev-next-title">1.1 Integrieren ist Mitteln</p>
       </div>
     </a>
     <a class="right-next"
@@ -628,7 +715,7 @@ Beispiels demonstriert.</p>
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">2.3 Partielle Integration</p>
+        <p class="prev-next-title">2.3 Bogenlänge</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -639,7 +726,8 @@ Beispiels demonstriert.</p>
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
   <div class="sidebar-secondary-item">
@@ -649,8 +737,10 @@ Beispiels demonstriert.</p>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lernziele">Lernziele</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#integrationsgrenzen">Integrationsgrenzen</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#linearitat-des-integrals">Linearität des Integrals</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#flacheninhalt-graph-oberhalb-der-x-achse">Flächeninhalt: Graph oberhalb der x-Achse</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#flacheninhalt-graph-unterhalb-der-x-achse">Flächeninhalt: Graph unterhalb der x-Achse</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#flacheninhalt-graph-oberhalb-und-unterhalb-der-x-achse">Flächeninhalt: Graph oberhalb und unterhalb der x-Achse</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#flache-zwischen-zwei-funktionsgraphen">Fläche zwischen zwei Funktionsgraphen</a></li>
 </ul>
   </nav></div>
 
@@ -698,8 +788,8 @@ By Simone Gramsch
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
 
   <footer class="bd-footer">
   </footer>

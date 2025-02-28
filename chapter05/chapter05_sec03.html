@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>5.3 Wichtige Potenzreihen &#8212; Mathematik 2 Maschinenbau</title>
+    <title>5.3 Beispiele für Fourierreihen &#8212; Mathematik 2 Maschinenbau</title>
   
   
   
@@ -16,32 +16,35 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-
-  
-  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=87e54e7c" />
     <link rel="stylesheet" type="text/css" href="../_static/jsxgraph.css?v=a7b027cb" />
     <link rel="stylesheet" type="text/css" href="../_static/my_styles.css?v=9b976ced" />
   
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
-  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
     <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
     <script src="../_static/doctools.js?v=9a2dae69"></script>
@@ -54,7 +57,7 @@
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
@@ -66,10 +69,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="5.4 Rechnen mit Potenzreihen" href="chapter05_sec04.html" />
-    <link rel="prev" title="5.2 Restglied von Taylorreihen" href="chapter05_sec02.html" />
+    <link rel="next" title="5.4 Rechenregeln Fourierreihen" href="chapter05_sec04.html" />
+    <link rel="prev" title="5.2 Fourierreihen" href="chapter05_sec02.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
   </head>
   
   
@@ -85,19 +89,8 @@
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-primary-sidebar-checkbox"/>
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-secondary-sidebar-checkbox"/>
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="../search.html"
       method="get">
@@ -105,7 +98,6 @@
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search this book..."
          aria-label="Search this book..."
          autocomplete="off"
@@ -113,8 +105,8 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -130,7 +122,8 @@
       
       
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -160,15 +153,11 @@
 </a></div>
         <div class="sidebar-primary-item">
 
- <script>
- document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script></div>
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
@@ -179,122 +168,114 @@
                 </a>
             </li>
         </ul>
-        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Differential- und Integralrechnung</span></p>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Fortsetzung Integralrechnung</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter01/chapter01_sec00.html">1. Differentialrechnung</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter01/chapter01_sec01.html">1.1 Ableitungen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter01/chapter01_sec02.html">1.2 Rechenregeln Ableitungen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter01/chapter01_sec03.html">1.3 Extremwerte</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter01/chapter01_sec04.html">1.4 Extremwerte mit Nebenbedingung</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter01/chapter01_sec00.html">1. Wiederholung Integrale</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter01/chapter01_sec01.html">1.1 Stammfunktion und bestimmtes Integral</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter01/chapter01_sec02.html">1.2 Eigenschaften von Integralen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter01/chapter01_sec03.html">1.3 Partielle Integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter01/chapter01_sec04.html">1.4 Integration durch Substitution</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter01/chapter01_sec05.html">Übungen</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter02/chapter02_sec00.html">2. Integrale</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter02/chapter02_sec01.html">2.1 Stammfunktion und bestimmtes Integral</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter02/chapter02_sec02.html">2.2 Eigenschaften von Integralen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter02/chapter02_sec03.html">2.3 Partielle Integration</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter02/chapter02_sec04.html">2.4 Integration durch Substitution</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter02/chapter02_sec00.html">2. Anwendungen Integral</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter02/chapter02_sec01.html">1.1 Integrieren ist Mitteln</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter02/chapter02_sec02.html">2.2 Fläche zwischen zwei Graphen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter02/chapter02_sec03.html">2.3 Bogenlänge</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter02/chapter02_sec04.html">2.4 Volumen von Rotationskörpern</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter02/chapter02_sec05.html">Übungen</a></li>
-</ul>
-</details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter03/chapter03_sec00.html">3. Anwendungen Integral</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec01.html">3.1 Integrieren ist Mitteln</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec02.html">3.2 Fläche zwischen zwei Graphen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec03.html">3.3 Bogenlänge</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec04.html">3.4 Volumen von Rotationskörpern</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec05.html">Übungen</a></li>
 </ul>
 </details></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Funktionenreihen</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter04/chapter04_sec00.html">4. Reihen und Potenzreihen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter04/chapter04_sec01.html">4.1 Reihen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter04/chapter04_sec02.html">4.2 Konvergenzkriterien für Reihen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter04/chapter04_sec03.html">4.3 Potenzreihen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter04/chapter04_sec04.html">4.4 Konvergenz von Potenzreihen</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter03/chapter03_sec00.html">3. Reihen und Potenzreihen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec01.html">3.1 Reihen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec02.html">3.2 Konvergenzkriterien für Reihen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec03.html">3.3 Potenzreihen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec04.html">3.4 Konvergenz von Potenzreihen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec05.html">Übungen</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter04/chapter04_sec00.html">4. Taylorreihen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter04/chapter04_sec01.html">4.1 Berechnung Taylorreihe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter04/chapter04_sec02.html">4.2 Restglied von Taylorreihen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter04/chapter04_sec03.html">4.3 Wichtige Potenzreihen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter04/chapter04_sec04.html">4.4 Rechnen mit Potenzreihen</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter04/chapter04_sec05.html">Übungen</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="chapter05_sec00.html">5. Taylorreihen</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="chapter05_sec01.html">5.1 Berechnung Taylorreihe</a></li>
-<li class="toctree-l2"><a class="reference internal" href="chapter05_sec02.html">5.2 Restglied von Taylorreihen</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">5.3 Wichtige Potenzreihen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="chapter05_sec04.html">5.4 Rechnen mit Potenzreihen</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="chapter05_sec00.html">5. Fourierreihen</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="chapter05_sec01.html">5.1 Periodische Funktionen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter05_sec02.html">5.2 Fourierreihen</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">5.3 Beispiele für Fourierreihen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter05_sec04.html">5.4 Rechenregeln Fourierreihen</a></li>
 <li class="toctree-l2"><a class="reference internal" href="chapter05_sec05.html">Übungen</a></li>
-</ul>
-</details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter06/chapter06_sec00.html">6. Fourierreihen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter06/chapter06_sec01.html">6.1 Periodische Funktionen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter06/chapter06_sec02.html">6.2 Fourierreihen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter06/chapter06_sec03.html">6.3 Beispiele für Fourierreihen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter06/chapter06_sec04.html">6.4 Rechenregeln Fourierreihen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter06/chapter06_sec05.html">Übungen</a></li>
 </ul>
 </details></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Höhere Differentialrechnung</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter07/chapter07_sec00.html">7. Funktionen von mehreren Variablen und partielle Ableitungen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter07/chapter07_sec01.html">7.1 Definition und Visualisierung</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter07/chapter07_sec02.html">7.2 Stetigkeit</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter07/chapter07_sec03.html">7.3 Partielle Ableitungen und Gradient</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter07/chapter07_sec04.html">7.4 Höhere partielle Ableitungen und Hesse-Matrix</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter06/chapter06_sec00.html">6. Funktionen von mehreren Variablen und partielle Ableitungen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter06/chapter06_sec01.html">6.1 Definition und Visualisierung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter06/chapter06_sec02.html">6.2 Stetigkeit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter06/chapter06_sec03.html">6.3 Partielle Ableitungen und Gradient</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter06/chapter06_sec04.html">6.4 Höhere partielle Ableitungen und Hesse-Matrix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter06/chapter06_sec05.html">Übungen</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter07/chapter07_sec00.html">7. Richtungsableitungen und vektorwertige Funktionen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter07/chapter07_sec01.html">7.1 Gradient und Richtungsableitung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter07/chapter07_sec02.html">7.2 Vektorwertige Funktionen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter07/chapter07_sec03.html">7.3 Jacobi-Matrix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter07/chapter07_sec04.html">7.4 Mehrdimensionale Kettenregel</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter07/chapter07_sec05.html">Übungen</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter08/chapter08_sec00.html">8. Richtungsableitungen und vektorwertige Funktionen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter08/chapter08_sec01.html">8.1 Gradient und Richtungsableitung</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter08/chapter08_sec02.html">8.2 Vektorwertige Funktionen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter08/chapter08_sec03.html">8.3 Jacobi-Matrix</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter08/chapter08_sec04.html">8.4 Mehrdimensionale Kettenregel</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter08/chapter08_sec00.html">8. Linearisierung und Extremwerte</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter08/chapter08_sec01.html">8.1 Tangentenfunktionen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter08/chapter08_sec02.html">8.2 Totales Differential</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter08/chapter08_sec03.html">8.3 Extremwerte</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter08/chapter08_sec04.html">8.4 Extremwertprobleme mit Nebenbedingung</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter08/chapter08_sec05.html">Übungen</a></li>
-</ul>
-</details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter09/chapter09_sec00.html">9. Linearisierung und Extremwerte</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter09/chapter09_sec01.html">9.1 Tangentenfunktionen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter09/chapter09_sec02.html">9.2 Totales Differential</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter09/chapter09_sec03.html">9.3 Extremwerte</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter09/chapter09_sec04.html">9.4 Extremwertprobleme mit Nebenbedingung</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter09/chapter09_sec05.html">Übungen</a></li>
 </ul>
 </details></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Höhere Integralrechnung</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter10/chapter10_sec00.html">10. Doppelintegral</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter10/chapter10_sec01.html">10.1 Idee von Doppelintegralen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter10/chapter10_sec02.html">10.2 Berechnung von Doppelintegralen in kartesischen Koordinaten</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter10/chapter10_sec03.html">10.3 Anwendung: Flächenberechnung</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter10/chapter10_sec04.html">10.4 Anwendung: Schwerpunktberechnung</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter10/chapter10_sec05.html">Übungen</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter09/chapter09_sec00.html">9. Doppelintegral</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter09/chapter09_sec01.html">9.1 Idee von Doppelintegralen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter09/chapter09_sec02.html">9.2 Berechnung von Doppelintegralen in kartesischen Koordinaten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter09/chapter09_sec03.html">9.3 Anwendung: Flächenberechnung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter09/chapter09_sec04.html">9.4 Anwendung: Schwerpunktberechnung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter09/chapter09_sec05.html">Übungen</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter11/chapter11_sec00.html">11. Doppelintegral in Polarkoordinaten und Dreifachintegral</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter11/chapter11_sec01.html">11.1 Polarkoordinaten</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter11/chapter11_sec02.html">11.2 Doppelintegral in Polarkoordinaten</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter11/chapter11_sec03.html">11.3 Dreifachintegral</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter11/chapter11_sec04.html">11.4 Anwendungen Dreifachintegral</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter11/chapter11_sec05.html">Übungen</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter10/chapter10_sec00.html">10. Doppelintegral in Polarkoordinaten und Dreifachintegral</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter10/chapter10_sec01.html">10.1 Polarkoordinaten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter10/chapter10_sec02.html">10.2 Doppelintegral in Polarkoordinaten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter10/chapter10_sec03.html">10.3 Dreifachintegral</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter10/chapter10_sec04.html">10.4 Anwendungen Dreifachintegral</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter10/chapter10_sec05.html">Übungen</a></li>
 </ul>
 </details></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Differentialgleichungen</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter12/chapter12_sec00.html">12. Einführung Differentialgleichungen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter12/chapter12_sec01.html">12.1 Grundbegriffe</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter12/chapter12_sec02.html">12.2 Anfangs- und Randwertproblem</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter12/chapter12_sec03.html">12.3 Separable Differentialgleichungen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter12/chapter12_sec04.html">12.4 Exakte Differentialgleichungen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter12/chapter12_sec05.html">Übungen</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter11/chapter11_sec00.html">11. Einführung Differentialgleichungen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter11/chapter11_sec01.html">11.1 Grundbegriffe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter11/chapter11_sec02.html">11.2 Anfangs- und Randwertproblem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter11/chapter11_sec03.html">11.3 Separable Differentialgleichungen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter11/chapter11_sec04.html">11.4 Exakte Differentialgleichungen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter11/chapter11_sec05.html">Übungen</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter13/chapter13_sec00.html">13. Lineare Differentialgleichungen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter13/chapter13_sec01.html">13.1 Lineare DGL 1. Ordnung</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter13/chapter13_sec02.html">13.2 Lösung homogene lineare DGL 1. Ordnung</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter13/chapter13_sec03.html">13.3 Lösung inhomogene lineare DGL 1. Ordnung</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter13/chapter13_sec04.html">13.4 Homogene Systeme aus zwei linearen DGL 1. Ordnung</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter13/chapter13_sec05.html">Übungen</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter12/chapter12_sec00.html">12. Lineare Differentialgleichungen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter12/chapter12_sec01.html">12.1 Lineare DGL 1. Ordnung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter12/chapter12_sec02.html">12.2 Lösung homogene lineare DGL 1. Ordnung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter12/chapter12_sec03.html">12.3 Lösung inhomogene lineare DGL 1. Ordnung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter12/chapter12_sec04.html">12.4 Homogene Systeme aus zwei linearen DGL 1. Ordnung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter12/chapter12_sec05.html">Übungen</a></li>
 </ul>
 </details></li>
 </ul>
@@ -305,9 +286,14 @@
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
   </div>
-  
-  <div id="rtd-footer-container"></div>
 
 
       </div>
@@ -419,24 +405,16 @@
 
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script>
+</button>
 <button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
 </button>
@@ -450,7 +428,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>5.3 Wichtige Potenzreihen</h1>
+    <h1>5.3 Beispiele für Fourierreihen</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -461,8 +439,10 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lernziele">Lernziele</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#die-exponential-und-logarithmusfunktion">Die Exponential- und Logarithmusfunktion</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#die-sinus-und-kosinusfunktion">Die Sinus- und Kosinusfunktion</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#die-rechteckschwingung">Die Rechteckschwingung</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#die-sagezahnfunktion">Die Sägezahnfunktion</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#die-dreiecksfunktion">Die Dreiecksfunktion</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zusammenfassung-und-ausblick">Zusammenfassung und Ausblick</a></li>
 </ul>
             </nav>
         </div>
@@ -474,54 +454,170 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="wichtige-potenzreihen">
-<h1>5.3 Wichtige Potenzreihen<a class="headerlink" href="#wichtige-potenzreihen" title="Link to this heading">#</a></h1>
-<p>Es gibt einige wichtige Taylorreihen, die in den Ingenieurwissenschaften sehr
-häufig zur Approximation bestimmter Funktionen verwendet werden. Im Folgenden
-werden wir uns mit einigen dieser Taylorreihen beschäftigen.</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="beispiele-fur-fourierreihen">
+<h1>5.3 Beispiele für Fourierreihen<a class="headerlink" href="#beispiele-fur-fourierreihen" title="Link to this heading">#</a></h1>
+<p>In diesem Kapitel untersuchen wir drei klassische Beispiele für Fourierreihen:
+die Rechteckschwingung, die Sägezahnschwingung und die Dreieckschwingung. Diese
+Funktionen treten häufig in der Signalverarbeitung und der Physik auf, etwa bei
+der Beschreibung von periodischen Signalen oder der Analyse von Schwingungen.</p>
 <section id="lernziele">
 <h2>Lernziele<a class="headerlink" href="#lernziele" title="Link to this heading">#</a></h2>
 <div class="goals admonition">
 <p class="admonition-title">Lernziele</p>
-<p>Sie kennen die wichtigsten Potenz- bzw. Taylorreihen.</p>
+<ul class="simple">
+<li><p>Sie können die Fourierreihe einer <strong>Rechteckschwingung</strong> berechnen.</p></li>
+<li><p>Sie können die Fourierreihe einer <strong>Sägezahnschwingung</strong> berechnen.</p></li>
+<li><p>Sie können die Fourierreihe einer <strong>Dreieckschwingung</strong> berechnen.</p></li>
+</ul>
 </div>
 </section>
-<section id="die-exponential-und-logarithmusfunktion">
-<h2>Die Exponential- und Logarithmusfunktion<a class="headerlink" href="#die-exponential-und-logarithmusfunktion" title="Link to this heading">#</a></h2>
-<p>Die Taylorreihe für die Exponentialfunktion <span class="math notranslate nohighlight">\(f(x)=e^x\)</span> am Entwicklungspunkt
-<span class="math notranslate nohighlight">\(x_0=0\)</span> ist:</p>
+<section id="die-rechteckschwingung">
+<h2>Die Rechteckschwingung<a class="headerlink" href="#die-rechteckschwingung" title="Link to this heading">#</a></h2>
+<p>Die Rechteckschwingung (manchmal auch Rechteckimpuls oder Rechtecksignal
+genannt) ist eine periodische Funktion, die zwischen zwei konstanten Werten
+wechselt. Als Beispiel für eine Rechteckschwingung betrachten wir die
+Rechteckfunktion</p>
 <div class="math notranslate nohighlight">
-\[e^x = 1 + x + \frac{x^2}{2!} + \frac{x^3}{3!} + \ldots = \sum_{k=0}^{\infty}
-\frac{x^k}{k!}.\]</div>
-<p>Der Konvergenzradius ist unendlich, d.h. die Approximation der
-Exponentialfunktion durch ihre Taylorreihe gilt für alle reellen Zahlen
-<span class="math notranslate nohighlight">\(x\in\mathbb{R}\)</span>.</p>
-<p>Die Logarithmusfunktion <span class="math notranslate nohighlight">\(f(x)=\ln(x)\)</span> ist nur für positive reelle Zahlen <span class="math notranslate nohighlight">\(x &gt; 0\)</span>
-definiert. Daher können wir nicht den üblichen Entwicklungspunkt <span class="math notranslate nohighlight">\(x_0=0\)</span> nehmen,
-sondern nehmen stattdessen <span class="math notranslate nohighlight">\(x_0=1\)</span>. Die Taylorreihe lautet dann</p>
+\[\begin{split}f(t) = \begin{cases} 1,  \quad &amp;0 \leq t &lt; \pi,\\
+-1, \quad &amp;\pi \leq t &lt; 2\pi, \end{cases}\end{split}\]</div>
+<p>auf dem Intervall <span class="math notranslate nohighlight">\([0, 2\pi]\)</span> und setzen sie periodisch fort. Die Periode ist
+daher <span class="math notranslate nohighlight">\(T = 2\pi\)</span>. Das folgende Applet zeigt eine interaktive Visualisierung der
+Rechteckschwingung und der dazugehörigen Fourierreihe.</p>
+<div class="miniexercise admonition">
+<p class="admonition-title">Interaktives Applet “Fourierreihe Rechteckschwingung”</p>
+<p>Das folgende interaktive Applet <a class="reference external" href="https://www.hartundtrocken.de/my-product/interaktiv-fourier-reihe-der-rechtecksfunktion/">Fourierreihe
+Rechteckschwingung</a>
+veranschaulicht die Rechteckschwingung sowie ihre Fourierreihe. Experimentieren
+Sie mit dem Schieberegler, um zu beobachten, wie sich die Fourierreihe durch
+Hinzufügen weiterer Glieder der Reihe der ursprünglichen Rechteckfunktion
+annähert.</p>
+</div>
+<p>Nun berechnen wir die Fourierkoeffizienten der Rechteckschwingung. Die
+allgemeine Formel für den ersten Fourierkoeffizient <span class="math notranslate nohighlight">\(a_0\)</span> lautet mit der Periode
+<span class="math notranslate nohighlight">\(T=2\pi\)</span></p>
 <div class="math notranslate nohighlight">
-\[\ln(x) = (x-1) - \frac{(x-1)^2}{2} + \frac{(x-1)^3}{3} - \ldots =
-\sum_{k=1}^{\infty}\frac{(-1)^{k+1}}{k}(x-1)^k.\]</div>
-<p>Die Taylorreihe der Logarithmusfunktion hat den Konvergenzradius 1, d.h. die
-Approximation ist nur im Konvergenzbereich <span class="math notranslate nohighlight">\(0 &lt; x \leq 2\)</span> gültig.</p>
-</section>
-<section id="die-sinus-und-kosinusfunktion">
-<h2>Die Sinus- und Kosinusfunktion<a class="headerlink" href="#die-sinus-und-kosinusfunktion" title="Link to this heading">#</a></h2>
-<p>Die Taylorreihe der Sinusfunktion <span class="math notranslate nohighlight">\(f(x)=\sin(x)\)</span> am Entwicklungspunkt <span class="math notranslate nohighlight">\(x_0=0\)</span>
-lautet:</p>
+\[a_0 = \frac{2}{T} \int_{-T/2}^{T/2} f(t) \, dt =
+\frac{1}{\pi}\int_{-\pi}^{\pi}f(t)\,dt.\]</div>
+<p>Die Rechteckfunktion ist für zwei Abschnitte definiert, daher teilen wir das
+Integral entsprechend in die beiden Intervalle <span class="math notranslate nohighlight">\([-\pi,0]\)</span> und <span class="math notranslate nohighlight">\([0,\pi]\)</span> auf. Im
+ersten Intervall <span class="math notranslate nohighlight">\([-\pi, 0]\)</span> ist die Rechteckschwingung konstant <span class="math notranslate nohighlight">\(f(t) = -1\)</span>, im
+zweiten Intervall <span class="math notranslate nohighlight">\([0,\pi]\)</span> ist die Rechteckschwingung konstant <span class="math notranslate nohighlight">\(f(t) = 1\)</span>.
+Somit können wir das Integral folgendermaßen in die Summe zweier Integrale
+aufteilen.</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+a_0 &amp;= \frac{1}{\pi}\int_{-\pi}^{\pi}f(t)\,dt \\
+&amp;= \frac{1}{\pi}\int_{-\pi}^{0}-1\,dt +\frac{1}{\pi}\int_{0}^{\pi}1\,dt\\
+&amp;= \frac{1}{\pi}\Big[-t\Big]_{-\pi}^{0} + \frac{1}{\pi}\Big[t\Big]_{0}^{\pi}\\
+&amp;= \frac{1}{\pi}\Big(-0-(+\pi)\Big) + \frac{1}{\pi}\Big(\pi-0\Big) = 0.
+\end{align*}\]</div>
+<p>Nun berechnen wir die Fourierkoeffizienten <span class="math notranslate nohighlight">\(a_n\)</span> für <span class="math notranslate nohighlight">\(n \geq 1\)</span>. Dabei benötigen
+wir zuerst die Frequenz <span class="math notranslate nohighlight">\(\omega\)</span>. Da wir als Periode <span class="math notranslate nohighlight">\(T=2\pi\)</span> gewählt haben,
+gilt</p>
 <div class="math notranslate nohighlight">
-\[\sin(x) = x - \frac{x^3}{3!} + \frac{x^5}{5!} - \ldots = \sum_{k=0}^{\infty}
-(-1)^k \frac{x^{2k+1}}{(2k+1)!}.\]</div>
-<p>Der Konvergenzradius ist unendlich, d.h. die Approximation der
-Sinusfunktion durch ihre Taylorreihe gilt für alle reellen Zahlen
-<span class="math notranslate nohighlight">\(x\in\mathbb{R}\)</span>.</p>
-<p>Die Kosinusfunktion <span class="math notranslate nohighlight">\(f(x)=\cos(x)\)</span> hat die Taylorreihe</p>
+\[\omega = \frac{T}{2\pi} = \frac{2\pi}{2\pi}=1.\]</div>
+<p>Setzen wir <span class="math notranslate nohighlight">\(T=2\pi\)</span> und <span class="math notranslate nohighlight">\(\omega=1\)</span> in die allgemeine Formel der
+Fourierkoeffizienten <span class="math notranslate nohighlight">\(a_n\)</span> ein und verwenden wir wiederum die Aufteilung in die
+beiden Teilintervalle <span class="math notranslate nohighlight">\([-\pi, 0]\)</span> und <span class="math notranslate nohighlight">\([0,\pi]\)</span>, dann gilt:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+a_n &amp;= \frac{2}{T} \int_{-T/2}^{T/2} f(t) \, \cos(n \, \omega \, t) \, dt\\
+&amp;= \frac{1}{\pi}\int_{-\pi}^{\pi}f(t) \, \cos(n t) \, dt\\
+&amp;= \frac{1}{\pi}\int_{-\pi}^{0} -1\, \cos(n t) \, dt +
+\frac{1}{\pi}\int_{0}^{\pi}1 \, \cos(n t) \, dt \\
+&amp;= \frac{1}{\pi}\left[-\frac{1}{n} \sin(nt) \right]_{-\pi}^{0} +
+\frac{1}{\pi}\left[\frac{1}{n}\sin(nt)\right]_{0}^{\pi}.
+\end{align*}\]</div>
+<p>Die Zahl <span class="math notranslate nohighlight">\(n\)</span> ist eine natürliche Zahl. Setzen wir <span class="math notranslate nohighlight">\(0\)</span> oder Vielfache von <span class="math notranslate nohighlight">\(\pi\)</span>
+in die Sinusfunktion ein, ist das Ergebnis Null, also</p>
 <div class="math notranslate nohighlight">
-\[\cos(x) = 1 - \frac{x^2}{2!} + \frac{x^4}{4!} - \ldots =
-\sum_{k=0}^{\infty} (-1)^k \frac{x^{2k}}{(2k)!}.\]</div>
-<p>Der Konvergenzradius ist unendlich, d.h. die Approximation der
-Kosinusfunktion durch ihre Taylorreihe gilt für alle reellen Zahlen
-<span class="math notranslate nohighlight">\(x\in\mathbb{R}\)</span>.</p>
+\[\sin(0) = \sin(n\cdot \pi) = 0.\]</div>
+<p>Damit sind insgesamt alle Fourierkoeffizienten <span class="math notranslate nohighlight">\(a_n = 0\)</span>. Im nächsten Kapitel
+werden wir lernen, wir dieses Ergebnis schneller hätten ermitteln können.</p>
+<p>Nun berechnen wir die Fourierkoeffizienten</p>
+<div class="math notranslate nohighlight">
+\[b_n = \frac{2}{T} \int_{-T/2}^{T/2} f(t) \, \sin(n \, \omega \, t) \, dt\]</div>
+<p>für <span class="math notranslate nohighlight">\(n \geq 1\)</span>. Wir verwenden erneut den Trick, das Integrationsintervall in
+zwei Intervalle aufzuteilen:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+b_n &amp;= \frac{1}{\pi}\int_{-\pi}^{\pi}f(t)\, \sin(nt)\, dt \\
+&amp;=\frac{1}{\pi}\int_{-\pi}^{0}-1\sin(nt)\, dt +
+\frac{1}{\pi}\int_{0}^{\pi}1\sin(nt)\, dt\\
+&amp;=\frac{1}{\pi}\left[\frac{1}{n}\cos(nt)\right]_{-\pi}^{0} +
+\frac{1}{\pi}\left[-\frac{1}{n}\cos(nt)\right]_{0}^{\pi} \\
+&amp;= \frac{1}{n\cdot\pi}\Big[\cos(nt)\Big]_{-\pi}^{0} -
+\frac{1}{n\cdot\pi}\Big[\cos(nt)\Big]_{0}^{\pi} \\
+&amp;= \frac{1}{n\cdot\pi}\Big(\cos(0) - \cos(-n\cdot\pi)\Big) -
+\frac{1}{n\cdot\pi} \Big(\cos(n\cdot\pi)-\cos(0)\Big).
+\end{align*}\]</div>
+<p>Die Kosinusfunktion ist eine gerade Funktion, also gilt</p>
+<div class="math notranslate nohighlight">
+\[\cos(-n\cdot\pi) = \cos(n\cdot\pi).\]</div>
+<p>Darüber hinaus gilt <span class="math notranslate nohighlight">\(\cos(0)=1\)</span>, so dass wir insgesamt</p>
+<div class="math notranslate nohighlight">
+\[b_n = \frac{2}{n\cdot\pi} - \frac{2}{n\cdot\pi}\cos(n\cdot\pi)\]</div>
+<p>erhalten.</p>
+<p>Der Funktionswert der Kosinusfunktion an den Stellen <span class="math notranslate nohighlight">\(t = n\cdot\pi\)</span> springt
+zwischen <span class="math notranslate nohighlight">\(-1\)</span> und <span class="math notranslate nohighlight">\(1\)</span> hin und her. Ist <span class="math notranslate nohighlight">\(n\)</span> ungerade, dann ist
+<span class="math notranslate nohighlight">\(\cos(n\cdot\pi)=-1\)</span>. Ist jedoch <span class="math notranslate nohighlight">\(n\)</span> gerade, dann gilt <span class="math notranslate nohighlight">\(\cos(n\cdot\pi)=+1\)</span>.
+Daher gilt für die Fourierkoeffizienten</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}b_n = \begin{cases} 0, \quad &amp; n\text{ gerade}\\
+\dfrac{4}{n\cdot\pi}, \quad &amp; n\text{ ungerade}.\end{cases}\end{split}\]</div>
+<p>Jetzt können wir die Fourierreihe bilden:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*} f(t) &amp;= \frac{a_0}{2} + \sum_{n=1}^{\infty} \left(a_n \cos(n
+\omega t) + b_n \sin(n \omega t) \right)\\
+&amp;= \frac{4}{1\cdot\pi}\sin(t) + \frac{4}{3\cdot\pi}\sin(3t) +
+\frac{4}{5\cdot\pi}\sin(5t) + \ldots \end{align*}\]</div>
+<p>Es wäre schön, eine kompaktere Angabe für die Fourierreihe zu benutzen. Dazu
+benutzen wir den Trick, die ungeraden Zahlen als <span class="math notranslate nohighlight">\(2k-1\)</span> darzustellen mit
+<span class="math notranslate nohighlight">\(k\in\mathbb{N}\)</span>. Dann lautet die Fourierreihe nämlich</p>
+<div class="math notranslate nohighlight">
+\[f(t) = \sum_{k=1}^{\infty}\frac{4}{k\cdot\pi}\sin(k t) =
+\frac{4}{\pi}\sum_{k=1}^{\infty}\frac{\sin(kt)}{k}.\]</div>
+<p>In dem folgenden Video wird das gleiche Beispiel vorgerechnet.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Video “Fourier-Reihe der Rechtecksfunktion” von Hart und Trocken</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/zy2SO_8tV9k?si=rbOAoHqzOhfEpzce" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay;
+clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+</details><p>Ein weiteres Beispiel für die Berechnung einer Fourierreihe einer
+Rechteckschwingung finden Sie in dem folgenden Video.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Video “Fourierreihe Rechtecksimpuls” von Sciencebarbie</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/dzkCRqKXZCs"
+title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+</details></section>
+<section id="die-sagezahnfunktion">
+<h2>Die Sägezahnfunktion<a class="headerlink" href="#die-sagezahnfunktion" title="Link to this heading">#</a></h2>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Video “Fourierreihe Sägezahnfunktion” von Sciencebarbie</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/wGL_Cxorbac"
+title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+</details></section>
+<section id="die-dreiecksfunktion">
+<h2>Die Dreiecksfunktion<a class="headerlink" href="#die-dreiecksfunktion" title="Link to this heading">#</a></h2>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Video “Fourierreihe Dreiecksimpuls” von Sciencebarbie</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/-I0YqzFRldA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+</details></section>
+<section id="zusammenfassung-und-ausblick">
+<h2>Zusammenfassung und Ausblick<a class="headerlink" href="#zusammenfassung-und-ausblick" title="Link to this heading">#</a></h2>
+<p>Mit den Fourierreihen der Rechteck-, Sägezahn- und Dreieckschwingung haben wir
+drei bekannte Beispiele für die Anwendung von Fourierreihen kennengelernt. Bei
+der Berechnung der Fourierkoeffizienten der Rechteckschwingung haben wir
+festgestellt, dass die Fourierkoeffizienten des Kosinusanteils Null sind. Das
+liegt daran, dass in diesem Beispiel die betrachtete Funktion ungerade war. Das
+werden wir im nächsten Kapitel näher untersuchen.</p>
 </section>
 </section>
 
@@ -561,7 +657,7 @@ Kosinusfunktion durch ihre Taylorreihe gilt für alle reellen Zahlen
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">5.2 Restglied von Taylorreihen</p>
+        <p class="prev-next-title">5.2 Fourierreihen</p>
       </div>
     </a>
     <a class="right-next"
@@ -569,7 +665,7 @@ Kosinusfunktion durch ihre Taylorreihe gilt für alle reellen Zahlen
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">5.4 Rechnen mit Potenzreihen</p>
+        <p class="prev-next-title">5.4 Rechenregeln Fourierreihen</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -580,7 +676,8 @@ Kosinusfunktion durch ihre Taylorreihe gilt für alle reellen Zahlen
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
   <div class="sidebar-secondary-item">
@@ -590,8 +687,10 @@ Kosinusfunktion durch ihre Taylorreihe gilt für alle reellen Zahlen
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lernziele">Lernziele</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#die-exponential-und-logarithmusfunktion">Die Exponential- und Logarithmusfunktion</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#die-sinus-und-kosinusfunktion">Die Sinus- und Kosinusfunktion</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#die-rechteckschwingung">Die Rechteckschwingung</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#die-sagezahnfunktion">Die Sägezahnfunktion</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#die-dreiecksfunktion">Die Dreiecksfunktion</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zusammenfassung-und-ausblick">Zusammenfassung und Ausblick</a></li>
 </ul>
   </nav></div>
 
@@ -639,8 +738,8 @@ By Simone Gramsch
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
 
   <footer class="bd-footer">
   </footer>

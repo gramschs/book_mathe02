@@ -1,152 +1,119 @@
-# 1.4 Extremwerte mit Nebenbedingung
+# 1.4 Integration durch Substitution
 
-Im letzten Abschnitt haben wir uns mit Extremwerten beschäftigt. An die
-Variablen selbst haben wir aber keinerlei Bedingungen gestellt. In der Praxis
-kommt es aber oft vor, dass Einschränkungen an die Variablen gestellt werden.
-Diese werden als eine zusätzliche Gleichung formuliert. In diesem Kapitel lernen
-wir zuerst, was Extremwerte mit Nebenbedingungen sind. Dann beschäftigen wir uns
-mit der »Eliminationsmethode« zur Lösung von Extremwertproblemen mit
-Nebenbedingungen.
+Auch verkettete Funktionen lassen sich nicht so einfach integrieren. Wenn $F$
+eine Stammfunktion der Funktion $f$ ist, dann gilt für die der verketten
+Funktion $F\circ g$ die Kettenregel:
+
+$$\big(F(g(x))\big)^{\prime} = F'(g(x)) \cdot g'(x) = f(g(x))\cdot g'(x).$$
+
+Die Umkehrung davon ist die Integration durch Substitution.
 
 ## Lernziele
 
 ```{admonition} Lernziele
 :class: goals
-* Sie wissen, was ein **Extremwertproblem mit Nebenbedingung** ist.
-* Sie können ein Extremwertproblem mit Nebenbedingung durch die
-  **Eliminationsmethode** lösen.
+Sie können die Substitutionsregel
+
+$$\int_{a}^{b} f(g(x))\cdot g^{\prime}(x) \, dx = \int_{g(a)}^{g(b)} f(z) \,
+dz$$
+
+anwenden.
 ```
 
-## Was sind Extremwertprobleme mit Nebenbedingung?
+## Substitutionsregel
 
-Eine Funktion zu maximieren oder zu minimieren ohne weitere Einschränkung ist in
-der Praxis oft unrealistisch. Natürlich würde jeder gerne reich sein und das
-Einkommen maximieren. Aber ist man auch bereit, die notwendigen Überstunden zu
-leisten oder für einen besser bezahlten Job umzuziehen?
+Die Idee der Substitutionsregel ist es, die Kettenregel sozusagen umzukehren.
+Wir gehen jetzt davon aus, dass die Funktion $f(g(x))\cdot g^{\prime}(x)$ auf
+dem Intervall $[a,b]$ integriert werden soll, also die rechte Seite der obigen
+Kettenregel. Dann ist das Ergebnis
 
-Wir betrachten ein Beispiel aus der Geometrie. Ein Draht der Länge l = 1 m soll
-zu einem Rechteck gebogen werden. Wie müssen die Seitenlängen $x$ und $y$
-gewählt werden, damit der Flächeninhalt des Rechtecks maximal ist?
+$$\int_{a}^{b} f(g(x))\cdot g^{\prime}(x) \, dx = \int_{g(a)}^{g(b)} f(z) \,
+dz.$$
 
-Als erstes übersetzen wir die Angaben der Textaufgabe in eine Funktion und eine
-Gleichung. Wir fangen mit der Gleichung an, die als **Nebenbedingung**
-bezeichnet wird. Die Länge des Drahtes ist vorgegeben und entspricht dem Umfang
-des Rechtecks. Es gilt also
+Das klappt übrigens nur, wenn die Funktion $g$ stetig differenzierbar ist. In
+den Ingenieurswissenschaften ist das aber meistens der Fall, so dass diese
+Einschränkung kein Problem darstellt. Problematisch ist dahingegen, dass
+meistens nur die verkette Funktion ohne den Term $g'(x)$ im Integral steht.
+Daher muss sehr oft der Integrand passend erweitert werden, um ihn erstmal auf
+die Form
 
-$$2\cdot x + 2 \cdot y = 1.$$
+$$f(g(x))\cdot g^{\prime}(x)$$
 
-Das Ziel ist ein maximaler Flächeninhalt. Wir bezeichnen den Flächeninhalt mit
-$A$. Er berechnet sich mit der Formel
+zu bringen.
 
-$$A = x \cdot y.$$
+## Beispiel für Integration durch Substitution
 
-Die Bedingung nennen wir **Hauptbedingung**. Aus der Nebenbedingung und
-Hauptbedingung basteln wir uns eine Funktion, die sogenannte **Zielfunktion**.
-Als erstes entscheiden wir uns für eine Variable (z.B. $x$). Dann lösen wir die
-Nebenbedingung nach der anderen Variablen auf (hier also $y$). Aus der
-Nebenbedingung $2\cdot x + 2 \cdot y = 1$ wird also:
+Wir wollen die Funktion $\sqrt{1+3x^2}\cdot x$ auf dem Intervall $[0,1]$
+integrieren, also
 
-$$y = \frac{1}{2} \left(1 - 2\cdot x\right) = -x + \frac{1}{2}.$$
+$$\int_{0}^{1} \sqrt{1+3x^2}\cdot x \, dx$$
 
-Dann setzen die nach $y$ aufgelöste Gleichung in die Formel für $A$ ein:
+ausrechnen.
 
-$$A(x) = x \cdot (-x+\frac{1}{2}).$$
+Da die Funktion $g(x)=1+3x^2$ in die Wurzelfunktion $f(x)=\sqrt{x}$ eingesetzt
+wird, liegt eine verkettete Funktion vor: $f(g(x)) = \sqrt{1+3x^2}$. Wir müssen
+als erstes den Integranden so umformen, dass noch mit der Ableitung
+$g'(x)=\left(1+3x^2\right)=6x$ multipliziert wird. Tatsächlich wird ja mit $x$
+multipliziert, aber dummerweise nicht mit $6x$. Also ergänzen wir noch die
+fehlende $6$ im Integranden und teilen aber wieder durch $6$, da wir ja den
+Integranden nicht verändern wollen. Zusammengefasst also
 
-Die Funktion $A$ wird Zielfunktion genannt, weil sie das Ziel (maximaler
-Flächeninhalt) beschreibt. Sie hängt nur noch von der Variablen $x$ ab, $y$ ist
-eliminiert worden.
+$$\int_{0}^{1} \sqrt{1+3x^2}\cdot x \, dx =
+\textcolor{red}{\frac{1}{6}}\int_{0}^{1} \sqrt{1+3x^2}\cdot \textcolor{red}{6}x \, dx.$$
 
-Würden wir jetzt ohne weitere Einschränkungen das Maximum dieser Funktion
-suchen, so müssten wir die Seitenlängen $x$ (und damit auch $y$) unendlich groß
-wählen. Ein Minimum liegt offensichtlich vor, wenn $x = 0$ (und damit auch $y =
-0$) ist. Aber das Minimum ist ja nicht gesucht. Erst durch die Nebenbedingung,
-dass die Länge des Drahtes 1 m ist, ist die Suche nach einem Maximum sinnvoll.
-Daher werden diese Art von Problemstellungen **Extremwertprobleme mit
-Nebenbedingung** genannt.
+Für das so umgeschriebene Integral dürfen wir die Substitutionsregel anwenden.
+Dazu müssen noch die untere und obere neuen Integrationsgrenzen ausgerechnet
+werden:
 
-## Eliminationsmethode
+* untere Grenze: $x = 0 \Rightarrow g(0) = 1+3\cdot 0^2 = 1$
+* obere Grenze: $x = 1 \Rightarrow g(1) = 1 + 3\cdot 1^2 = 4$
 
-Für die Lösung von Extremwertproblemen mit Nebenbedingungen gibt es mehrere
-Strategien. Im Folgenden betrachten wir die sogenannte **Eliminationsmethode**.
-Gehen Sie wie folgt vor, wenn Sie ein Extremwertproblem mit Nebenbedingungen
-lösen wollen.
+Wir erhalten also:
 
-1. Formulieren Sie die Nebenbedingung als Gleichung.
-2. Lösen Sie die Nebenbedingung nach einer Variable auf.
-3. Formulieren Sie die Zielfunktion (nutzen Sie dabei die nach einer Variablen
-   aufgelöste Nebenbedingung).
-4. Bestimmen Sie die Extremwerte der Zielfunktion.
-5. Beantworten Sie mit diesen Erkenntnissen die ursprüngliche Frage.
+$$\frac{1}{6} \int_{0}^{1} \sqrt{1+3x^2}\cdot 6x \, dx =
+\frac{1}{6} \int_{\textcolor{red}{1}}^{\textcolor{red}{4}} \sqrt{z} \, dz. $$
 
-Schritt 1, 2 und 3 haben wir für das Beispiel mit dem Draht schon durchgeführt.
-Aus der Nebenbedingung $2x + 2y = 1$ und der Formel für Flächeninhalte von
-Rechtecken $A = x\cdot y$ haben wir die Zielfunktion
+Die Wurzelfunktion zu integrieren ist aber nicht so schwer, also
 
-$$A(x) = x \cdot (-x+\frac{1}{2})$$
+$$ \frac{1}{6} \int_{1}^{4} \sqrt{z} \, dz = \frac{1}{6} \big[
+\frac{2}{3}z^{\frac{3}{2}} \big] = \frac{1}{9} \big( 4^{\frac{3}{2}} -
+1^{\frac{3}{2}}\big) = \frac{7}{9}.$$
 
-hergeleitet. Jetzt vereinfachen wir die Funktion noch, indem wir
-ausmultiplizieren:
+Somit haben wir das Ergebnis
 
-$$A(x) = x \cdot (-x+\frac{1}{2}) = -x^2 + \frac{1}{2}x.$$
+$$\int_{0}^{1} \sqrt{1+3x^2}\cdot x \, dx = \frac{7}{9}.$$
 
-Nun folgt Schritt 4, die Bestimmung der Extremwerte. Dazu bilden wir die 1.
-Ableitung der Zielfunktion:
+## Weiteres Lernmaterial
 
-$$A'(x) = -2 x + \frac{1}{2}.$$
+Integration durch Substitution ist nicht einfach. Daher folgen hier einige
+Videos zur Vertiefung.
 
-Für die Suche nach Kandidaten für Extremstellen setzen wir $A'(x) = 0$ und
-bestimmen die Nullstellen:
-
-\begin{align*}
--2x + \frac{1}{2} &= 0 \\
-\Rightarrow x &= \frac{1}{4}.\\
-\end{align*}
-
-Als nächstes überprüfen wir, ob $x = \frac{1}{4}$ wirklich ein Extremum ist,
-indem wir die 2. Ableitung bilden
-
-$$A''(x) = -2$$
-
-und dann die Stelle $x = \frac{1}{4}$ in die 2. Ableitung einsetzen:
-
-$$A''(\frac{1}{4}) = -2.$$
-
-Da die 2. Ableitung an der Stelle $x = \frac{1}{4}$ negativ ist, können wir
-schlussfolgern, dass $x = \frac{1}{4}$ eine Extremstelle ist und dass die
-Funktion $A$ an dieser Stelle ein Maximum hat.
-
-Damit haben wir die erste Seitenlänge $x$ gefunden. Jetzt fehlt noch Schritt 5,
-die Beantwortung der ursprünglichen Frage. Es war ja nach beiden Seitenlängen
-gefragt. Aus der Nebenbedingung
-
-$$2\cdot x + 2 \cdot y = 1$$
-
-erhalten wir afür $x = \frac{1}{4}$ sofort, dass $y=\frac{1}{4}$ gelten muss.
-
-Das vom Flächeninhalt her maximale Rechteckt mit einer Drahtlänge von 1 m
-entsteht, wenn der Draht zu einem Quadrat gebogen wird, bei dem jede Seite eine
-Länge von 0.25 m hat.
-
-In dem folgenden Video können Sie sich eine vergleichbare Aufgabenstellungen
-ansehen.
-
-```{dropdown} Video zu "Extremwertaufgaben" von Magda liebt Mathe
-<iframe width="560" height="315" src="https://www.youtube.com/embed/4D4hpF8w69Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+```{dropdown} Video "Integration durch Substition I" von Mathematische Methoden
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Bd7rrWT3fRA"
+title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
+encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 ```
 
-```{dropdown} Video zu "Extremwertaufgabe Beispiel" von Mathematrick
-<iframe width="560" height="315" src="https://www.youtube.com/embed/pXm_6ZxGVp8?si=vPA9Bg38JD7B4HEk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+```{dropdown} Video "Integration durch Substition II" von Mathematische Methoden
+<iframe width="560" height="315" src="https://www.youtube.com/embed/EJH2_GfoguI"
+title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
+encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 ```
 
-```{dropdown} Video zu "Extremwertaufgabe Quader maximales Volumen" von MAthematrick
-<iframe width="560" height="315" src="https://www.youtube.com/embed/i3z1sK4JqYA?si=9t3rOsZFQYouLbr6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+```{dropdown} Video "Integration durch Substition III" von Mathematische Methoden
+<iframe width="560" height="315" src="https://www.youtube.com/embed/FHgo5FEM2bs"
+title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
+encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 ```
 
-## Zusammenfassung und Ausblick
+```{dropdown} Video "Integration durch Substition IV" von Mathematische Methoden
+<iframe width="560" height="315" src="https://www.youtube.com/embed/fffJ6Y5OYNA"
+title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
+encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+```
 
-In diesem Kapitel haben Sie gelernt, was ein Extremwertproblem mit
-Nebenbedingung ist und wie man es löst. Tatsächlich verbirgt sich hinter der
-Zielfunktion ursprünglich eine Funktion, die von zwei Variablen abhängt. Wir
-werden auf das Thema Extremwertprobleme mit Nebenbedingungen noch einmal
-zurückkommen, wenn wir Extremwertberechnungen von mehrdimensionalen Funktionen
-behandeln.
+```{dropdown} Video "Integration durch Substition" von Mathematrick
+<iframe width="560" height="315" src="https://www.youtube.com/embed/0j55gTZVwy0"
+title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
+encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+```

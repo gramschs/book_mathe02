@@ -1,133 +1,145 @@
-# 8.4 Mehrdimensionale Kettenregel
+# 8.4 Extremwertprobleme mit Nebenbedingung
 
-Nachdem wir die Begriffe vektorwertige Funktion und Jacobi-Matrix kennengelernt
-haben, können wir nun das Thema Kettenregel für mehrdimensionale Funktionen
-angehen.
+Im letzten Abschnitt haben wir uns mit Extremwerten einer mehrdimensionalen
+Funktion beschäftigt. An die Variablen haben wir aber keinerlei Bedingungen
+gestellt. In der Praxis kommt es aber oft vor, dass Einschränkungen an die
+Variablen selbst gestellt werden. Diese werden oft als eine zusätzliche
+Gleichung formuliert. In diesem Kapitel lernen wir eine Lösungsmethoden kennen.
 
 ## Lernziele
 
-```{admonition} Lernziel
+```{admonition} Lernziele
 :class: goals
-Sie können die **mehrdimensionale Kettenregel** anwenden.
+* Sie wissen, was ein Extremwertproblem mit Nebenbedingung ist.
+* Sie wissen, was eine Zielfunktion ist.
+* Sie können ein Extremwertproblem mit Nebenbedingung durch die
+  Eliminationsmethode lösen.
 ```
 
-## Verkettung von Funktionen
+## Was sind Extremwertprobleme mit Nebenbedingung?
 
-Was genau passiert, wenn wir mehrdimensionale Funktionen verketten? Die
-"Verkettung" von eindimensionalen Funktionen haben wir bereits kennengelernt.
-Eine Funktion wird auf das Ergebnis einer anderen Funktion angewendet. Im Falle
-eindimensionaler Funktionen könnten wir zum Beispiel zwei Funktionen $g(x)=x^2$
-und $f(x)=\sin(x)$ betrachten und sie verkettet als
+Eine Funktion zu maximieren oder zu minimieren ohne weitere Einschränkung ist in
+der Praxis oft unrealistisch. Natürlich würde jeder gerne reich sein und das
+Einkommen maximieren. Aber ist man auch bereit, die notwendigen Überstunden zu
+leisten oder für einen besser bezahlten Job umzuziehen?
 
-$$(f\circ g)(x) = f(g(x)) = \sin(x^2)$$
+Wir betrachten ein Beispiel aus der Geometrie. Ein Draht der Länge l = 1 m soll
+zu einem Rechteck gebogen werden. Wie müssen die Seitenlängen $x$ und $y$
+gewählt werden, damit der Flächeninhalt des Rechtecks maximal ist?
 
-ausdrücken. Das bedeutet, dass wir zuerst die Funktion $g$ auf $x$ und dann die
-Funktion $f$ auf das Ergebnis $g(x)$ anwenden.
+Als erstes übersetzen wir die Angaben in eine Funktion und eine Gleichung. Das
+Ziel ist ein maximaler Flächeninhalt. Wir bezeichnen den Flächeninhalt mit $A$.
+Er berechnet sich mit der Formel
 
-Bei mehrdimensionalen Funktionen ist das Konzept ähnlich, aber es wird etwas
-komplexer, da wir jetzt mehrere Eingaben haben. Angenommen, wir haben eine
-Funktion
+$$A(x,y) = x \cdot y.$$
 
-$$g(r, \varphi) =
-\begin{pmatrix}
-r\cdot \sin(\varphi) \\
-r\cdot \cos(\varphi)
-\end{pmatrix}$$
+Die Funktion $A$ wird **Zielfunktion** genannt. Sie hängt von zwei Variablen ab.
+Würden wir jetzt ohne weitere Einschränkungen das Maximum dieser Funktion
+suchen, so müssten wir die Seitenlängen $x$ und $y$ unendlich groß wählen. Ein
+Minimum liegt offensichtich vor, wenn $x = 0$ und $y = 0$. Aber das Minimum ist
+ja nicht gesucht.
 
-und eine Funktion
+Erst durch die **Nebenbedingung**, dass die Länge des Drahtes 1 m ist, ist die
+Suche nach einem Maximum sinnvoll. Diese Nebenbedingung formulieren wir als
+Gleichung, indem wir den Umfang des Rechtecks gleich der Länge des Drahtes
+setzen:
 
-$$f(x,y) = \begin{pmatrix} x^2 + y^2 \\ x\cdot y \\ x^2 - y^2 \end{pmatrix}$$
+$$2\cdot x + 2 \cdot y = 1.$$
 
-und wir wollen sie verkettet darstellen. In diesem Fall würde die Verkettung so
-aussehen:
+Streng genommen haben wir damit den Definitionsbereich der Funktion $A$
+eingeschränkt. Das folgende Video erläutert nochmal, was ein Extremwertproblem
+mit Nebenbedingungen ist.
 
-$$(f\circ g)(r, \varphi) = \begin{pmatrix} \left(r\cdot \sin(\varphi)\right)^2 +
-\left(r\cdot \cos(\varphi)\right)^2 \\ \left(r\cdot \sin(\varphi)\right)\cdot
-\left(r\cdot \cos(\varphi)\right) \\
-\left(r\cdot \sin(\varphi)\right)^2 - \left(r\cdot \cos(\varphi)\right)^2
-\end{pmatrix} =
-\begin{pmatrix}
-r^2 \\
-r^2 \cdot \sin(\varphi) \cos(\varphi) \\
-r^2 \cdot \left( \sin^2(\varphi) - \cos^2(\varphi)\right)
-\end{pmatrix}$$
+```{dropdown} Video zu "Extrema mit Nebenbedingungen" von Mathematische Methoden
+<iframe width="560" height="315" src="https://www.youtube.com/embed/MMpljay-naE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+```
 
-Das bedeutet, dass wir zuerst die Funktion $g$ auf $r$ und $\varphi$ anwenden
-und dann die Funktion $f$ auf das Ergebnis, also auf $x = r\cdot \sin(\varphi)$
-und $y = r\cdot \cos(\varphi)$.
+## Eliminationsmethode
 
-## Mehrdimensionale Kettenregel
+Für die Lösung von Extremwertproblemen mit Nebenbedingungen gibt es mehrere
+Strategien. Im Folgenden betrachten wir die sogenannte **Eliminationsmethode**.
+Gehen Sie wie folgt vor, wenn Sie ein Extremwertproblem mit Nebenbedingungen
+lösen wollen.
 
-Zur Erinnerung, die eindimensionale Kettenregel lautet wie folgt: Die Ableitung
-der verketten Funktion $f(g(x))$ ist äußere Ableitung mal innere Ableitung, d.h.
+1. Formulieren Sie die Zielfunktion als Funktion von mehreren Variablen.
+2. Formulieren Sie die Nebenbedingung als Gleichung.
+3. Lösen Sie die Gleichung nach einer Variable auf.
+4. Setzen Sie die aufgelöste Gleichung in die Zielfunktion ein.
+5. Jetzt hängt die Zielfunktion von einer Variable weniger ab und die Gleichung
+   braucht nicht mehr berücksichtigt werden (sie ist ja indirekt jetzt in der
+   Zielfunktion enthalten0.
+6. Bestimmen Sie die Extremwerte ohne Nebenbedingung.
+7. Beantworten Sie mit diesen Erkenntnissen die ursprüngliche Frage.
 
-$$f(g(x))' = f'(g(x))\cdot g'(x).$$
+Schritt 1 und 2 haben wir für das Beispiel mit dem Draht schon durchgeführt.
+Also lösen wir jetzt die Gleichung $2\cdot x + 2 \cdot y = 1$ nach $y$ auf:
 
-In mehreren Dimensionen wird diese Regel durch die Verwendung von
-Jacobi-Matrizen erweitert. Die Jacobi-Matrix ist eine Matrix, die alle ersten
-partiellen Ableitungen einer mehrdimensionalen Funktion enthält.
+$$y = \frac{1}{2} \left(1 - 2\cdot x\right) = -x + \frac{1}{2}$$
 
-Die mehrdimensionale Kettenregel lautet dann: Wenn wir zwei Funktionen $f$ unf
-$g$ haben, die miteinander verkettet zu $f\circ g$ werden, dann ist die
-Jacobi-Matrix der verketteten Funktion   gleich dem Produkt der Jacobi-Matrix
-von $f$ nach $g$ und der Jacobi-Matrix von $g$ nach $\vec{x}$:
+und setzen die nach $y$ aufgelöste Gleichung in die Zielfunktion ein:
 
-$$J_{f\circ g}(\vec{x}) = J_{f}(g(\vec{x})) \cdot J_g(\vec{x}).$$
+$$\tilde{A}(x) = x \cdot (-x+\frac{1}{2}).$$
 
-Dabei ist $J_{f}$ die Jacobi-Matrix von $f$ ausgewertet an der Stelle
-$g(\vec{x})$ und $J_{g}$ die Jacobi-Matrix von $g$ ausgewertet an der Stelle
-$\vec{x}$.
+Um deutlich zu machen, dass diese neue Funktion nur noch von $x$ abhängt, haben
+wir ihr einen neuen Namen gegeben, nämlich $\tilde{A}$. Jetzt vereinfachen wir
+die Funktion noch, indem wir ausmultiplizieren:
 
-Diese Regel erlaubt es uns, die Ableitung einer verketteten Funktion zu
-berechnen, selbst wenn diese Funktion aus mehreren ineinander verschachtelten
-Funktionen besteht, die jeweils von mehreren Variablen abhängen.
+$$\tilde{A}(x) = x \cdot (-x+\frac{1}{2}) = -x^2 + \frac{1}{2}x.$$
 
-Wir betrachten erneut das obige Beispiel und bilden zuerst die beiden
-Jacobi-Matrizen:
+Als letztes folgt Schritt 6, die Bestimmung der Extremwerte. Dazu bilden wir die
+erste Ableitung
 
-$$J_{g}(r, \varphi) =
-\begin{pmatrix}
-\sin(\varphi) & r\cdot\cos(\varphi)\\
-\cos(\varphi) & -r\cdot\sin(\varphi)
-\end{pmatrix}$$
+$$\tilde{A}'(x) = -2 x + \frac{1}{2}.$$
 
-und
-
-$$ J_{f}(x,y) =
-\begin{pmatrix}
-2x & 2y \\
-y & x \\
-2x & -2y \\
-\end{pmatrix}$$
-
-Dann ist die Jacobi-Matrix der verketteten Funktion
+Für die Suche nach Kandidaten für Extremstellen setzen wir $\tilde{A}'(x) = 0$ und
+bestimmen die Nullstellen:
 
 \begin{align*}
-J_{f\circ g}(r,\varphi) &= J_{f}(g(r,\varphi)) \cdot J_{g}(r, \varphi) = \\
-&=
-\begin{pmatrix}
-2r\cdot\sin(\varphi) & 2r\cdot \cos(\varphi) \\
-r\cdot\cos(\varphi) & r\cdot\sin(\varphi) \\
-2r\cdot\sin(\varphi) & -2r\cdot\cos(\varphi) \\
-\end{pmatrix} \cdot
-\begin{pmatrix}
-\sin(\varphi) & r\cos(\varphi) \\
-\cos(\varphi) & -r\cdot\sin(\varphi)
-\end{pmatrix} = \\
-&=
-\begin{pmatrix}
-2r & 0 \\
-2r\sin(\varphi)\cos(\varphi) & r^2\left(\cos^2(\varphi)-\sin^2(\varphi) \right)\\
-2r\left(\sin^2(\varphi)-\cos^2(\varphi)\right) & 4r^2\sin(\varphi)\cos(\varphi) \\
-\end{pmatrix}
+-2x + \frac{1}{2} &= 0 \\
+\Rightarrow x &= \frac{1}{4}.\\
 \end{align*}
 
-Das gleiche Ergebnis erhalten wir, wenn wir direkt die Jacobi-Matrix der
-verketteten Funktion berechnen. Manchmal ist es einfacher, die Jacobi-Matrizen
-der inneren und äußeren Funktion auszurechnen und das Produkt zu bilden, und
-manchmal ist die direkte Berechnung der Jacobi-Matrix der verketteten Funktion
-einfacher.
+Als nächstes überprüfen wir, ob $x = \frac{1}{4}$ wirklich ein Extremum ist,
+indem wir die 2. Ableitung bilden
 
-```{dropdown} Video zu "Mehrdimensionale Kettenregel" von Prof. Hoever
-<iframe width="560" height="315" src="https://www.youtube.com/embed/LkWAGcGGDD8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+$$\tilde{A}''(x) = -2$$
+
+und dann den Punkt $x = \frac{1}{4}$ einsetzen:
+
+$$\tilde{A}''(\frac{1}{4}) = -2.$$
+
+Da die 2. Ableitung an der Stelle $x = \frac{1}{4}$ negativ ist, können wir
+schlussfolgern, dass $x = \frac{1}{4}$ eine Extremstelle ist und dass es sich
+dabei um ein Maximum (Hochpunkt) handelt.
+
+Damit haben wir die erste Seitenlänge $x$ gefunden. Jetzt fehlt noch Schritt 7,
+die Beantwortung der ursprünglichen Frage. Es war ja nach den beiden
+Seitenlängen gefragt. Aus der Nebenbedingung
+
+$$2\cdot x + 2 \cdot y = 1$$
+
+erhalten wir aber für $x = \frac{1}{4}$ sofort, dass $y=\frac{1}{4}$ gelten
+muss.
+
+Das vom Flächeninhalt her maximale Rechteckt mit einer Drahtlänge von 1 m
+entsteht, wenn der Draht zu einem Quadrat gebogen wird, bei dem jede Seite eine
+Länge von 0.25 m hat.
+
+Das folgende Video zeigt die Eliminationsmethode.
+
+```{dropdown} Video zu "Eliminationsmethode" von Mathematische Methoden
+<iframe width="560" height="315" src="https://www.youtube.com/embed/JOMh6OiGZbA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+```
+
+In dem folgenden Video werden mögliche Kandidaten für Extrema gesucht. Es wird
+allerdings nicht überprüft, ob die Kandidaten wirklich Extremwerte sind.
+
+```{dropdown} Video zu "Beispiel Eliminationsmethode" von Mathematische Methoden
+<iframe width="560" height="315" src="https://www.youtube.com/embed/4AFGmSQwpH4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+```
+
+Ein weiteres Beispiel wird in dem folgenden Video gezeigt.
+
+```{dropdown} Video zu "Extremwertaufgaben" von Magda liebt Mathe
+<iframe width="560" height="315" src="https://www.youtube.com/embed/4D4hpF8w69Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 ```

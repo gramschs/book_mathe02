@@ -1,134 +1,311 @@
-# 11.1 Polarkoordinaten
+# 11.1 Grundbegriffe
 
-Polarkoordinaten bieten eine alternative Möglichkeit, die Position von Punkten
-in der Ebene zu beschreiben. Die häufigste Beschreibung der Position von Punkten
-sind kartesische Koordinaten. Insbesondere bei technischen Systemen, bei denen
-Symmetrie oder Rotation wichtig sind, sind Polarkoordinaten jedoch eine bessere
-Möglichkeit, die Position der Punkte anzugeben.
-
+In diesem Abschnitt führen wir zunächst die grundlegenden Begriffe rund um das
+Thema Differentialgleichungen anhand eines einfachen Beispieles ein.
 
 ## Lernziele
 
 ```{admonition} Lernziele
 :class: goals
-* Sie wissen, was **Polarkoordinaten** sind.
-* Sie können kartesische Koordinaten in Polarkoordinaten umrechnen.
-* Sie können Polarkoordinaten in kartesische Koordinaten umrechnen.
+* Sie wissen, was eine **Differentialgleichung** ist.
+* Sie kennen verschiedene Schreibweisen zur Formulierung von Differentialgleichungen.
+* Sie können die **Ordnung einer Differentialgleichung** ablesen.
+* Sie können erklären, was eine **gewöhnliche Differentialgleichung** und was eine **partielle Differentialgleichung** ist.
+* Sie können unterscheiden, ob eine Differentialgleichung in der **expliziten Form** oder der **impliziten Form** formuliert wurde.
 ```
 
-## Kartesische Koordinaten
+## Eine Differentialgleichung ist auch nur eine Gleichung
 
-Das am häufigsten verwendete Koordinatensystem ist das **kartesische
-koordinatensystem**. Es ist nach dem Methematiker [René
-Descartes](https://de.wikipedia.org/wiki/René_Descartes) benannt, obwohl
-Descartes ein solches Koordinatensystem nie beschrieben hat. Das Hauptmerkmal
-von kartesischen Koordinatensytemen ist, dass die Koordinatenachsen senkrecht
-aufeinander stehen. Die folgende Abbildung zeigt ein zweidimensionales
-kartesisches Koordinatensystem mit dem Koordinatenursprung $(0,0)$ und einem
-Punkt an der Position $P(2\sqrt{3},2)$.
+Bisher haben wir Gleichungen kennengelernt, bei denen nach einer oder mehreren
+reellen Zahlen gesucht wurde. Die reellen Zahlen, die die Gleichung erfüllen,
+nennen wir Lösung der Gleichung. Damit ist gemeint, dass man die gefundene
+reelle Zahl, also die Lösung, in die Gleichung einsetzt und überprüft, ob linke
+und rechte Seite übereinstimmen.
 
-```{figure} pics/fig11_01.svg
----
-width: 75%
-name: fig11_01
----
-Kartesisches zweidimensionales Koordinatensystem
+Beispielsweise wird die Gleichung
+
+$$ x^2 - x - 6 = 0$$
+
+von zwei reellen Zahlen erfüllt, nämlich $x_1 = -2$ und $x_2=3$. Wir können
+beide Zahlen in die Gleichung einsetzen und erhalten $x_1^2 -x_1 - 6 = 4 + 2 - 6
+= 0$ und $x_2^2 - x_2 - 6 = 9 -3 - 6 = 0$. Damit sind beide Zahlen eine Lösung
+dieser Gleichung. Wie wir jedoch auf die Lösung der Gleichung kommen, durch
+Raten, ein systematisches Verfahren oder durch den Computer, ist ein eigenes
+mathematisches Thema. Auch ist nicht von vornherein klar, ob die Gleichung
+überhaupt lösbar ist und wie viele Lösungen es ggf. gibt.
+
+Gerade in den Ingenieurwissenschaften wird oft nicht eine Zahl gesucht, sondern
+eine Funktion! Und oft spielen Ableitungen dabei eine wichtige Rolle. Ein
+simples mathematisches Beispiel für eine Gleichung mit einer Funktion und einer
+Ableitung ist die folgende Gleichung:
+
+$$f''(x) = -f(x).$$
+
+Gesucht wird also eine Funktion, die zweimal abgeleitet die Funktion selbst
+wieder ergibt, nur mit umgekehrten Vorzeichen. Eine Funktion, die diese
+Gleichung löst, ist die Sinus-Funktion. Probieren wir es aus und bilden erst
+einmal die Ableitungen:
+
+$$f(x) = \sin(x) \quad \Rightarrow f'(x) = \cos(x) \quad \Rightarrow f''(x) =
+-\sin(x).$$
+
+Eingesetzt in die Gleichung erhalten wir also $-\sin(x) = -\sin(x)$. Damit
+erfüllt die Sinus-Funktion die Gleichung $f''(x) = -f(x).$
+
+```{admonition} Mini-Übung
+:class: miniexercise
+Welche der folgenden Funktionen ist erfüllt die Gleichung
+
+$$f''(x) = - f(x)?$$
+
+a) $f(x) = \cos(x)$ <br>
+b) $f(x) = e^x$ <br>
+c) $f(x) = \sin(x) + 3\cos(x)$ <br>
+
 ```
 
-## Polarkoordinaten
+```{admonition} Lösung
+:class: miniexercise, toggle
+a) ableiten: $f(x)=\cos(x) \quad \Rightarrow f'(x)=-\sin(x) \quad \Rightarrow f''(x)=-\cos(x)$ <br>
+eingesetzt: $-\cos(x) = -\cos(x)$ erfüllt die Gleichung
 
-Eine alternative Beschreibung ist, die Entfernung und den Winkel zum Punkt
-anzugeben. Die Entfernung des Punktes wird bezogen auf den Koordinatenursprung
-angegeben. Der Winkel wird gegen den Uhrzeigersinn von der positiven x-Achse aus
-gemessen.  Üblicherweise wird zuerst die Entfernung $r$ notiert und dann der
-Winkel $\varphi$, also
+b) ableiten: $f(x)=e^x \quad \Rightarrow f'(x)=e^x \quad \Rightarrow f''(x)=e^x$ <br>
+eingesetzt: $e^x \neq -e^x$ erfüllt die Gleichung nicht
 
-$$(r, \varphi).$$
-
-Diese Art von Koordinaten wird als **Polarkoordinaten** bezeichnet. 
-
-In dem Beispiel wird so aus dem Punkt $(2\sqrt{3},2)$ in kartesischen
-Koordinaten der Punkt $(4, 30^{\circ})$, wie wir gleich sehen, wenn wir die
-Umrechnung von kartesischen zu Polarkoordinaten behandeln.
-
-```{figure} pics/fig11_02.svg
----
-width: 75%
-name: fig11_02
----
-Zweidimensionales Polarkoordinatensystem
-```
-
-## Umrechnung von Polarkoordinaten in kartesische Koordinaten
-
-Die Umrechnung von Polarkoordinaten in kartesische Koordinaten erfolgt mit den
-Formeln:
-
+c) ableiten:
 \begin{align*}
-x &= r\cdot \cos(\varphi) \\ 
-y &= r\cdot \sin(\varphi)
+f(x) &=\sin(x)+3\cos(x) \\
+\Rightarrow \quad f''(x)&=\cos(x)-3\sin(x) \\
+\Rightarrow \quad f''(x)&=-\sin(x)-3\cos(x)
 \end{align*}
 
-Bei dem obigen Beispiel ist $r=4$ und $\varphi=30^{\circ}$. Mit den beiden
-Formeln zur Berechnung der kartesischen Koordinaten $x$ und $y$ erhalten wir
+eingesetzt: $-\sin(x)-3\cos(x) = -\left(\sin(x)+3\cos(x)\right)$ erfüllt die Gleichung
+```
 
+Wir übernehmen die Begriffe für Gleichungen reeller Zahlen nun für diese neue
+Art von Gleichungen, die sogenannten Differentialgleichungen.
+
+```{admonition} Was ist ... eine Differentialgleichung?
+:class: note
+Eine Gleichung, bei der eine Funktion gesucht wird und ihre Ableitungen in der Gleichung ebenfalls vorkommen, nennen wir **Differentialgleichung**. Oft kürzen wir das Wort Differentialgleichung mit DGL ab.
+```
+
+```{dropdown} Video zu "Gewöhnliche Differentialgleichung"
+<iframe src="https://frankfurt-university.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=2df731d3-5569-405e-b6ed-b0180090a481&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=false&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
+```
+
+(sec_11_01_b)=
+## Es gibt viele Schreibweisen für DGL
+
+So wie Gleichungen für Zahlen mit unterschiedlichen Variablen formuliert werden,
+werden auch bei Differentialgleichungen unterschiedliche Schreibweisen benutzt.
+Meistens werden die Bezeichnungen aus dem Anwendungskontext übernommen.
+
+Zunächst einmal können die Bezeichnungen für die Variablen der gesuchten
+Funktion variieren. In dem obigen Beispiel
+
+$$f''(x)=-f(x)$$
+
+wurde als Variablenname $x$ benutzt. Die Variablen der gesuchten Funktion werden
+als **unabhängige Variablen** bezeichnet. Die gesuchte Funktion wird auch als
+**abhängige Variable** bezeichnet, obwohl es sich um eine Funktion handelt.
+Sollte es sich jedoch um eine Funktion in Abhängigkeit einer zeitlichen Größe
+handeln, würde die DGL wohl eher als
+
+$$f''(t)=-f(t)$$
+
+formuliert werden. Bei zeitlichen Ableitungen wird in den
+Ingenieurwissenschaften auch eher ein Punkt über den Funktionsnamen gesetzt, um
+anzudeuten, dass eine zeitliche Größe betrachtet wird, also
+
+$$\ddot{f}(t)=-f(t).$$
+
+Auch würde wohl auch eher die gesuchte Funktion mit $x$ bezeichnet werden, also
+
+$$\ddot{x}(t)=-x(t).$$
+
+Oft finden wir auch die Schreibweise mit dem Differentialoperator und der
+Bezeichnung $y$ für die gesuchte Funktion, also
+
+$$\frac{d^2y}{dt^2}=-y(t).$$
+
+Und da die unabhängige Variable nicht so wichtig ist, weil es bei
+Differentialgleichungen um die unbekannte Funktion geht, wird sie manchmal
+weggelassen, also
+
+$$y''=-y.$$
+
+Alle Schreibweisen – so unterschiedlich sie auch wirken mögen – drücken dieselbe
+Frage aus: welche Funktion muss zweimal abgeleitet werden, damit sie das
+Negative von sich selbst ist?
+
+(sec_11_01_a)=
+## Die Ordnung entscheidet über die Anzahl der Integrationskonstanten
+
+Als wir verschiedene Funktionen daraufhin überprüft haben, ob sie die
+Differentialgleichung
+
+$$y''(x) = - y(x)$$
+
+erfüllen, haben wir schon festgestellt, dass es mehrere Funktionen geben kann,
+die passen. Wir schauen uns nun ein etwas einfacheres Beispiel an:
+
+$$y''(x) = -\sin(x).$$
+
+Auf der rechten Seite kommt die gesuchte Funktion $y(x)$ nicht mehr vor, sondern
+sie steht nur noch als 2. Ableitung auf der linken Seite der Gleichung. Ein
+einfacher Ansatz, um die DGL zu lösen ist, auf beiden Seiten unbestimmt zu
+integrieren. Wir erhalten
+
+$$\int y''(x)\, dx = \int -\sin(x)\, dx \quad \Rightarrow \quad y'(x) = \cos(x)
++ C_1.$$
+
+Die Integrationskonstante, die eigentlich auch auf der linken Seite entstanden
+wäre, haben wir dabei schon auf die rechte Seite gebracht. Nun haben wir eine
+DGL mit der 1. Ableitung der gesuchten Funktion. Wir integrieren einfach noch
+einmal unbestimmt auf beiden Seiten und bekommen
+
+$$\int y'(x)\, dx = \int \cos(x) + C_1 \, dx \quad \Rightarrow \quad y(x) =
+\sin(x) + C_1 x + C_2.$$
+
+Die gefundene Funktion $y(x)=\sin(x)+C_1 x + C_2$ ist nicht nur *eine* Funktion,
+sondern eine ganze Schar von Funktionen. Es können zwei verschiedene Parameter
+$C_1$ und $C_2$ gewählt werden. Mathematisch gesehen gibt es bei der Wahl der
+Parameter keine Einschränkungen; wir könnten jede reelle Zahl wählen. Daher gibt
+es unendlich viele Lösungen der Differentialgleichung.
+
+```{admonition} Mini-Übung
+:class: miniexercise
+Überprüfen Sie, ob die folgenden drei Variationen von $C_1$ und $C_2$ tatsächlich die DGL
+
+$$y''(x)=-\sin(x)$$
+
+erfüllen.
+
+a) $C_1 = 1$ und $C_2 = 0$, also $y_1(x) = \sin(x) + x$ <br>
+b) $C_1 = 0$ und $C_2 = 1$, also $y_2(x) = \sin(x) + 1$ <br>
+c) $C_1 = -2$ und $C_2 = 3$, also $y_3(x) = \sin(x) -2x + 3$<br>
+```
+
+````{admonition} Lösung
+:class: miniexercise, toggle
+Um zu überprüfen, ob die gegebenen Variationen die DGL $y''(x) = -\sin(x)$
+erfüllen, müssen wir die zweite Ableitung jeder Funktion berechnen und
+überprüfen, ob sie gleich $-\sin(x)$ ist.
+
+a) $y_1(x) = \sin(x) + x$
 \begin{align*}
-x &= 4 \cdot \cos(30^{\circ}) = 2\sqrt{3}, \\ 
-y &= 4 \cdot \sin(30^{\circ}) = 2.
+\Rightarrow \quad y_1'(x)  &= \cos(x) + 1 \\
+\Rightarrow \quad y_1''(x) &= -\sin(x)
 \end{align*}
 
-Zur Erinnerung folgt hier eine Einführung in Polarkoordinaten:
+Da $y_1''(x) = -\sin(x)$ gilt, erfüllt $y_1$ die DGL.
 
-```{dropdown} Video "Ebene Polarkoordinaten" von Daniel Jung
-<iframe width="560" height="315" src="https://www.youtube.com/embed/l8ZF4m0fPxM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+b) $y_2(x) = \sin(x) + 1$
+\begin{align*}
+\Rightarrow \quad y_2'(x) &= \cos(x) \\
+\Rightarrow \quad y_2''(x) &= -\sin(x)
+\end{align*}
+
+Da $y_2''(x) = -\sin(x)$ gilt, erfüllt $y_2$ ebenfalls die DGL.
+
+c) $y_3(x) = \sin(x) - 2x + 3$
+\begin{align*}
+\Rightarrow \quad y_3'(x)  &= \cos(x) - 2 \\
+\Rightarrow \quad y_3''(x) &= -\sin(x)
+\end{align*}
+
+Da $y_3''(x) = -\sin(x)$ gilt, erfüllt auch $y_3$ die DGL.
+
+Alle drei Funktionen erfüllen die Differentialgleichung $y''(x) = -\sin(x)$ und
+sind daher Lösungen der Differentialgleichung.
+````
+
+Durch dieses Beispiel haben wir zwei Sachen kennengelernt, die typisch für
+Differentialgleichungen sind:
+
+* Um die gesuchte Funktion einer Differentialgleichung zu finden, müssen wir
+  integrieren.
+* Je höher die Ableitung der gesuchten Funktion ist, desto öfter müssen wir
+  integrieren. Und je öfter wir integrieren müssen, desto mehr
+  Integrationskonstanten entstehen.
+
+Der Grad der höchsten Ableitung der gesuchten Funktion ist so wichtig, dass
+Differentialgleichungen danach eingeteilt werden. Wir halten daher folgende
+Definition fest.
+
+```{admonition} Was ist ... die Ordnung einer Differentialgleichung?
+:class: note
+Die höchste vorkommene Ableitung der gesuchten Funktion nennen wir **Ordnung** der Differentialgleichung.
 ```
 
-## Umrechnung von kartesischen Koordinaten in Polarkoordinaten
-
-Die umgekehrte Berechnung von kartesischen Koordinaten in Polarkoordinaten ist
-etwas schwieriger. Die Berechnung des Radius $r$ ist noch einfach, da ein
-rechtwinkliges Dreieck vorliegt und wir den Satz des Pythagoras anwenden können:
-
-$$r = \sqrt{x^2 + y^2}.$$
-
-Danach können wir entweder die Ankathete $x$ oder die Gegenkathete $y$ ausnutzen, um den Winkel $\varphi$ zu bestimmen. Im rechtwinkligen Dreieck gelten
-
-$$\cos(\varphi) =
-\frac{x}{r} \quad \text{ oder } \quad \sin(\varphi) = \frac{y}{r}.$$
-
-```{figure} pics/fig11_03.svg
----
-width: 75%
-name: fig11_03
----
-Die Umrechnung kartesische Koordinaten in Polarkoordinaten nutzt das rechtwinklige Dreieck aus.
+```{dropdown} Video zu "Ordnung einer gewöhnlichen Differentialgleichung"
+<iframe src="https://frankfurt-university.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=e9c4b3da-35c2-4320-babb-b0180090ad24&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=false&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
 ```
 
-Mit den Umkehrfunktionen der Sinus- und der Kosinusfunktion erhalten wir
+## Gewöhnlich betrachten wir gewöhnliche DGL
 
-$$\varphi = \arccos\left(\frac{x}{r}\right) \quad \text{ oder } \quad \varphi =
-\arcsin\left( \frac{y}{r}\right).$$
+Im Zusammenhang mit Differentialgleichungen werden häufig die beiden Adjektive
+gewöhnlich und partiell verwendet. Eines vorneweg, in diesem und in den nächsten
+Kapiteln werden wir nur gewöhnliche Differentialgleichungen betrachten.
 
-Wo ist jetzt das Problem? Lösen wir die Gleichung
+Die gesuchte Funktion der Differentialgleichung kann von einer unabhängigen
+Variable abhängen, also eindimensional sein, aber auch von mehreren unabhängigen
+Variablen abhängen, also mehrdimensional sein. Dementsprechend können normale
+Ableitungen in der Differentialgleichung auftreten, wie wir es in den oben
+stehenden Beispielen gesehen haben, oder partielle Ableitungen.
 
-$$\sin(\varphi) = \frac{1}{2},$$
+Eine Differentialgleichung, bei der nur Ableitungen nach einer Variable
+vorkommen, heißt **gewöhnliche Differentialgleichung**. Kommen in der
+Differentialgleichungen Ableitungen nach mehreren unabhängigen Variablen vor, so
+nennen wir diese Gleichung **partielle Differentialgleichung**. Hier sehen Sie
+ein Beispiel für eine partielle DGL, in der Ableitungen nach dem Ort $x$ und der
+Zeit $t$ vorkommen:
 
-so hat diese Gleichung innerhalb des Intervalls $[0, 360^{\circ}]$ zwei
-Lösungen, nämlich $30^{\circ}$ und $150^{\circ}$. Aber welcher Winkel ist der
-richtige Winkel? Da die x-Koordinate positiv ist und der Punkt $P(2\sqrt{2},2)$
-im 1. Quadranten liegt, ist der richtige Winkel $\varphi = 30^{\circ}$.
-Überprüfen Sie daher immer durch eine Zeichnung, welches der richtige Winkel ist.
+$$\frac{\partial u(x,t)}{\partial t} - a^2 \frac{\partial^2 u(x,t)}{\partial
+x^2} = 0.$$
 
-In dem folgenden Video wird gezeigt, wie eine Funktion mit Variablen in
-kartesischen Koordinaten in eine Funktion mit Variablen in Polarkoordinaten
-umgerechnet werden kann:
-
-```{dropdown} Video zu "Polarkoordinaten" von Prof. Hoever
-<iframe width="560" height="315" src="https://www.youtube.com/embed/MCRDcJKeR20" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+```{admonition} Was ist ... eine gewöhnliche Differentialgleichung?
+:class: note
+Eine Differentialgleichung, bei der die gesuchte Funktion nur von einer
+unabhängigen Variable abhängt, wird als **gewöhnliche Differentialgleichung**
+bezeichnet. Kommen in der Differentialgleichungen Ableitungen nach mehreren
+unabhängigen Variablen vor, so nennen wir diese Gleichung **partielle
+Differentialgleichung**.
 ```
 
-```{admonition} Weiteres Lernmaterial
-:class: seealso
-https://de.serlo.org/mathe/45643/polarkoordinaten
-https://studyflix.de/mathematik/polarkoordinaten-1476
+Die Beispiele, die wir bisher betrachtet haben, waren so formuliert, dass die
+höchste Ableitung auf der linken Seite stand und alle anderen Terme auf der
+rechten Seite der Gleichung. Das muss aber nicht so sein. Eine
+Differentialgleichung, die nach der höchsten Ableitung aufgelöst ist, nennen wir
+**explizite Differentialgleichung**. Ein Beispiel für eine explizite DGL ist
+
+$$y'' = -3y' + 2y.$$
+
+Ist hingegen die DGL *nicht* nach der höchsten Ableitung aufgelöst, so
+bezeichnen wir diese als **implizite Differentialgleichung**. Wir können das
+Beispiel umformen zu
+
+$$y'' + 3y' -  2y = 0.$$
+
+Es war einfach, die explizite Differentialgleichung in eine implizite
+Differentialgleichung umzuformen. Leider lässt sich nicht jede implizite
+Differentialgleichung in eine explizite DGL umformen.
+
+```{dropdown} Video zu "Explizite und implizite Differentialgleichungen"
+<iframe src="https://frankfurt-university.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=f685aee3-bac5-4459-839e-b01800ec5f8a&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=false&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
 ```
+
+## Zusammenfassung und Ausblick
+
+In diesem Kapitel haben wir die grundlegenden Konzepte von
+Differentialgleichungen behandelt. Da es sich um eine Einführung zum Thema
+handelt, haben wir uns zunächst damit beschäftigt, was eine
+Differentialgleichung ist und welche Schreibweisen es für
+Differentialgleichungen gibt. Obwohl in dieser Vorlesung nur gewöhnliche
+Differentialgleichungen thematisiert werden, sind wir auf den Unterschied
+zwischen gewöhnlichen und partiellen Differentialgleichungen eingegangen.
+Zusätzlich haben wir uns mit der Ordnung einer Differentialgleichung beschäftigt
+und wie sie die Anzahl der Integrationskonstanten beeinflusst. Im nächsten
+Kapitel wird es darum gehen, wie aus unendlich vielen Lösungen einer
+Differentialgleichung eine spezielle Lösung herausgesucht wird.

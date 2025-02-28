@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>1.3 Extremwerte &#8212; Mathematik 2 Maschinenbau</title>
+    <title>1.3 Partielle Integration &#8212; Mathematik 2 Maschinenbau</title>
   
   
   
@@ -16,32 +16,35 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-
-  
-  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=87e54e7c" />
     <link rel="stylesheet" type="text/css" href="../_static/jsxgraph.css?v=a7b027cb" />
     <link rel="stylesheet" type="text/css" href="../_static/my_styles.css?v=9b976ced" />
   
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
-  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
     <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
     <script src="../_static/doctools.js?v=9a2dae69"></script>
@@ -54,7 +57,7 @@
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
@@ -66,10 +69,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="1.4 Extremwerte mit Nebenbedingung" href="chapter01_sec04.html" />
-    <link rel="prev" title="1.2 Rechenregeln Ableitungen" href="chapter01_sec02.html" />
+    <link rel="next" title="1.4 Integration durch Substitution" href="chapter01_sec04.html" />
+    <link rel="prev" title="1.2 Eigenschaften von Integralen" href="chapter01_sec02.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
   </head>
   
   
@@ -85,19 +89,8 @@
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-primary-sidebar-checkbox"/>
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-secondary-sidebar-checkbox"/>
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="../search.html"
       method="get">
@@ -105,7 +98,6 @@
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search this book..."
          aria-label="Search this book..."
          autocomplete="off"
@@ -113,8 +105,8 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -130,7 +122,8 @@
       
       
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -160,15 +153,11 @@
 </a></div>
         <div class="sidebar-primary-item">
 
- <script>
- document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script></div>
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
@@ -179,122 +168,114 @@
                 </a>
             </li>
         </ul>
-        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Differential- und Integralrechnung</span></p>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Fortsetzung Integralrechnung</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="chapter01_sec00.html">1. Differentialrechnung</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="chapter01_sec01.html">1.1 Ableitungen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="chapter01_sec02.html">1.2 Rechenregeln Ableitungen</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">1.3 Extremwerte</a></li>
-<li class="toctree-l2"><a class="reference internal" href="chapter01_sec04.html">1.4 Extremwerte mit Nebenbedingung</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="chapter01_sec00.html">1. Wiederholung Integrale</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="chapter01_sec01.html">1.1 Stammfunktion und bestimmtes Integral</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter01_sec02.html">1.2 Eigenschaften von Integralen</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">1.3 Partielle Integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter01_sec04.html">1.4 Integration durch Substitution</a></li>
 <li class="toctree-l2"><a class="reference internal" href="chapter01_sec05.html">Übungen</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter02/chapter02_sec00.html">2. Integrale</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter02/chapter02_sec01.html">2.1 Stammfunktion und bestimmtes Integral</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter02/chapter02_sec02.html">2.2 Eigenschaften von Integralen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter02/chapter02_sec03.html">2.3 Partielle Integration</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter02/chapter02_sec04.html">2.4 Integration durch Substitution</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter02/chapter02_sec00.html">2. Anwendungen Integral</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter02/chapter02_sec01.html">1.1 Integrieren ist Mitteln</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter02/chapter02_sec02.html">2.2 Fläche zwischen zwei Graphen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter02/chapter02_sec03.html">2.3 Bogenlänge</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter02/chapter02_sec04.html">2.4 Volumen von Rotationskörpern</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter02/chapter02_sec05.html">Übungen</a></li>
-</ul>
-</details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter03/chapter03_sec00.html">3. Anwendungen Integral</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec01.html">3.1 Integrieren ist Mitteln</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec02.html">3.2 Fläche zwischen zwei Graphen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec03.html">3.3 Bogenlänge</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec04.html">3.4 Volumen von Rotationskörpern</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec05.html">Übungen</a></li>
 </ul>
 </details></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Funktionenreihen</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter04/chapter04_sec00.html">4. Reihen und Potenzreihen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter04/chapter04_sec01.html">4.1 Reihen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter04/chapter04_sec02.html">4.2 Konvergenzkriterien für Reihen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter04/chapter04_sec03.html">4.3 Potenzreihen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter04/chapter04_sec04.html">4.4 Konvergenz von Potenzreihen</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter03/chapter03_sec00.html">3. Reihen und Potenzreihen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec01.html">3.1 Reihen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec02.html">3.2 Konvergenzkriterien für Reihen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec03.html">3.3 Potenzreihen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec04.html">3.4 Konvergenz von Potenzreihen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec05.html">Übungen</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter04/chapter04_sec00.html">4. Taylorreihen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter04/chapter04_sec01.html">4.1 Berechnung Taylorreihe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter04/chapter04_sec02.html">4.2 Restglied von Taylorreihen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter04/chapter04_sec03.html">4.3 Wichtige Potenzreihen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter04/chapter04_sec04.html">4.4 Rechnen mit Potenzreihen</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter04/chapter04_sec05.html">Übungen</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter05/chapter05_sec00.html">5. Taylorreihen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter05/chapter05_sec01.html">5.1 Berechnung Taylorreihe</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter05/chapter05_sec02.html">5.2 Restglied von Taylorreihen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter05/chapter05_sec03.html">5.3 Wichtige Potenzreihen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter05/chapter05_sec04.html">5.4 Rechnen mit Potenzreihen</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter05/chapter05_sec00.html">5. Fourierreihen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter05/chapter05_sec01.html">5.1 Periodische Funktionen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter05/chapter05_sec02.html">5.2 Fourierreihen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter05/chapter05_sec03.html">5.3 Beispiele für Fourierreihen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter05/chapter05_sec04.html">5.4 Rechenregeln Fourierreihen</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter05/chapter05_sec05.html">Übungen</a></li>
-</ul>
-</details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter06/chapter06_sec00.html">6. Fourierreihen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter06/chapter06_sec01.html">6.1 Periodische Funktionen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter06/chapter06_sec02.html">6.2 Fourierreihen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter06/chapter06_sec03.html">6.3 Beispiele für Fourierreihen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter06/chapter06_sec04.html">6.4 Rechenregeln Fourierreihen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter06/chapter06_sec05.html">Übungen</a></li>
 </ul>
 </details></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Höhere Differentialrechnung</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter07/chapter07_sec00.html">7. Funktionen von mehreren Variablen und partielle Ableitungen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter07/chapter07_sec01.html">7.1 Definition und Visualisierung</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter07/chapter07_sec02.html">7.2 Stetigkeit</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter07/chapter07_sec03.html">7.3 Partielle Ableitungen und Gradient</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter07/chapter07_sec04.html">7.4 Höhere partielle Ableitungen und Hesse-Matrix</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter06/chapter06_sec00.html">6. Funktionen von mehreren Variablen und partielle Ableitungen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter06/chapter06_sec01.html">6.1 Definition und Visualisierung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter06/chapter06_sec02.html">6.2 Stetigkeit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter06/chapter06_sec03.html">6.3 Partielle Ableitungen und Gradient</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter06/chapter06_sec04.html">6.4 Höhere partielle Ableitungen und Hesse-Matrix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter06/chapter06_sec05.html">Übungen</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter07/chapter07_sec00.html">7. Richtungsableitungen und vektorwertige Funktionen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter07/chapter07_sec01.html">7.1 Gradient und Richtungsableitung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter07/chapter07_sec02.html">7.2 Vektorwertige Funktionen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter07/chapter07_sec03.html">7.3 Jacobi-Matrix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter07/chapter07_sec04.html">7.4 Mehrdimensionale Kettenregel</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter07/chapter07_sec05.html">Übungen</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter08/chapter08_sec00.html">8. Richtungsableitungen und vektorwertige Funktionen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter08/chapter08_sec01.html">8.1 Gradient und Richtungsableitung</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter08/chapter08_sec02.html">8.2 Vektorwertige Funktionen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter08/chapter08_sec03.html">8.3 Jacobi-Matrix</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter08/chapter08_sec04.html">8.4 Mehrdimensionale Kettenregel</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter08/chapter08_sec00.html">8. Linearisierung und Extremwerte</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter08/chapter08_sec01.html">8.1 Tangentenfunktionen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter08/chapter08_sec02.html">8.2 Totales Differential</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter08/chapter08_sec03.html">8.3 Extremwerte</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter08/chapter08_sec04.html">8.4 Extremwertprobleme mit Nebenbedingung</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter08/chapter08_sec05.html">Übungen</a></li>
-</ul>
-</details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter09/chapter09_sec00.html">9. Linearisierung und Extremwerte</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter09/chapter09_sec01.html">9.1 Tangentenfunktionen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter09/chapter09_sec02.html">9.2 Totales Differential</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter09/chapter09_sec03.html">9.3 Extremwerte</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter09/chapter09_sec04.html">9.4 Extremwertprobleme mit Nebenbedingung</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter09/chapter09_sec05.html">Übungen</a></li>
 </ul>
 </details></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Höhere Integralrechnung</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter10/chapter10_sec00.html">10. Doppelintegral</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter10/chapter10_sec01.html">10.1 Idee von Doppelintegralen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter10/chapter10_sec02.html">10.2 Berechnung von Doppelintegralen in kartesischen Koordinaten</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter10/chapter10_sec03.html">10.3 Anwendung: Flächenberechnung</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter10/chapter10_sec04.html">10.4 Anwendung: Schwerpunktberechnung</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter10/chapter10_sec05.html">Übungen</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter09/chapter09_sec00.html">9. Doppelintegral</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter09/chapter09_sec01.html">9.1 Idee von Doppelintegralen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter09/chapter09_sec02.html">9.2 Berechnung von Doppelintegralen in kartesischen Koordinaten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter09/chapter09_sec03.html">9.3 Anwendung: Flächenberechnung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter09/chapter09_sec04.html">9.4 Anwendung: Schwerpunktberechnung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter09/chapter09_sec05.html">Übungen</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter11/chapter11_sec00.html">11. Doppelintegral in Polarkoordinaten und Dreifachintegral</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter11/chapter11_sec01.html">11.1 Polarkoordinaten</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter11/chapter11_sec02.html">11.2 Doppelintegral in Polarkoordinaten</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter11/chapter11_sec03.html">11.3 Dreifachintegral</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter11/chapter11_sec04.html">11.4 Anwendungen Dreifachintegral</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter11/chapter11_sec05.html">Übungen</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter10/chapter10_sec00.html">10. Doppelintegral in Polarkoordinaten und Dreifachintegral</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter10/chapter10_sec01.html">10.1 Polarkoordinaten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter10/chapter10_sec02.html">10.2 Doppelintegral in Polarkoordinaten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter10/chapter10_sec03.html">10.3 Dreifachintegral</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter10/chapter10_sec04.html">10.4 Anwendungen Dreifachintegral</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter10/chapter10_sec05.html">Übungen</a></li>
 </ul>
 </details></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Differentialgleichungen</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter12/chapter12_sec00.html">12. Einführung Differentialgleichungen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter12/chapter12_sec01.html">12.1 Grundbegriffe</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter12/chapter12_sec02.html">12.2 Anfangs- und Randwertproblem</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter12/chapter12_sec03.html">12.3 Separable Differentialgleichungen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter12/chapter12_sec04.html">12.4 Exakte Differentialgleichungen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter12/chapter12_sec05.html">Übungen</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter11/chapter11_sec00.html">11. Einführung Differentialgleichungen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter11/chapter11_sec01.html">11.1 Grundbegriffe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter11/chapter11_sec02.html">11.2 Anfangs- und Randwertproblem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter11/chapter11_sec03.html">11.3 Separable Differentialgleichungen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter11/chapter11_sec04.html">11.4 Exakte Differentialgleichungen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter11/chapter11_sec05.html">Übungen</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter13/chapter13_sec00.html">13. Lineare Differentialgleichungen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter13/chapter13_sec01.html">13.1 Lineare DGL 1. Ordnung</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter13/chapter13_sec02.html">13.2 Lösung homogene lineare DGL 1. Ordnung</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter13/chapter13_sec03.html">13.3 Lösung inhomogene lineare DGL 1. Ordnung</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter13/chapter13_sec04.html">13.4 Homogene Systeme aus zwei linearen DGL 1. Ordnung</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter13/chapter13_sec05.html">Übungen</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter12/chapter12_sec00.html">12. Lineare Differentialgleichungen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter12/chapter12_sec01.html">12.1 Lineare DGL 1. Ordnung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter12/chapter12_sec02.html">12.2 Lösung homogene lineare DGL 1. Ordnung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter12/chapter12_sec03.html">12.3 Lösung inhomogene lineare DGL 1. Ordnung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter12/chapter12_sec04.html">12.4 Homogene Systeme aus zwei linearen DGL 1. Ordnung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter12/chapter12_sec05.html">Übungen</a></li>
 </ul>
 </details></li>
 </ul>
@@ -305,9 +286,14 @@
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
   </div>
-  
-  <div id="rtd-footer-container"></div>
 
 
       </div>
@@ -419,24 +405,16 @@
 
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script>
+</button>
 <button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
 </button>
@@ -450,7 +428,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>1.3 Extremwerte</h1>
+    <h1>1.3 Partielle Integration</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -461,9 +439,9 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lernziele">Lernziele</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#minimum-und-maximum-einer-funktion-was-ist-das">Minimum und Maximum einer Funktion – was ist das?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wie-finden-wir-hoch-und-tiefpunkte">Wie finden wir Hoch- und Tiefpunkte?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zusammenfassung-und-ausblick">Zusammenfassung und Ausblick</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#integrieren-von-produkten">Integrieren von Produkten</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#beispiel-fur-partielle-integration">Beispiel für partielle Integration</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#weiteres-lernmaterial">Weiteres Lernmaterial</a></li>
 </ul>
             </nav>
         </div>
@@ -475,158 +453,92 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="extremwerte">
-<h1>1.3 Extremwerte<a class="headerlink" href="#extremwerte" title="Link to this heading">#</a></h1>
-<p>Beschreibt eine Funktion einen technischen Prozess oder beispielsweise
-temperaturabhängige Materialkennwerte, so ist die Information sehr interessant,
-ob in einem bestimmten Intervall minimale oder maximale Werte angenommen werden.
-In diesem Kapitel beschäftigen wir uns daher damit, die Minima oder Maxima einer
-Funktion zu bestimmen.</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="partielle-integration">
+<h1>1.3 Partielle Integration<a class="headerlink" href="#partielle-integration" title="Link to this heading">#</a></h1>
+<p>Wird ein Produkt abgeleitet, ist es etwas komplizierter. Es darf nicht einfach
+jeder Faktor für sich abgeleitet werden, sondern es gilt die Produktregel:</p>
+<div class="math notranslate nohighlight">
+\[\left( u(x)\cdot v(x)\right)^{\prime} = u^{\prime}(x)\cdot v(x) +
+u(x)\cdot v^{\prime}(x).\]</div>
+<p>Da Integration die Umkehrung der Ableitung ist, dürfen Produkte auch nicht
+einfach so integriert werden. Dafür gibt es die Produktregel für Integrale, die
+offiziell <strong>partielle Integration</strong> heißt.</p>
 <section id="lernziele">
 <h2>Lernziele<a class="headerlink" href="#lernziele" title="Link to this heading">#</a></h2>
 <div class="goals admonition">
 <p class="admonition-title">Lernziele</p>
-<ul class="simple">
-<li><p>Sie wissen, was das Minimum oder Maximum einer Funktion ist.</p></li>
-<li><p>Sie können Minima oder Maxima von 2x differenzierbaren Funktionen berechnen.</p></li>
-</ul>
+<p>Sie können ein Produkt von zwei Funktionen <span class="math notranslate nohighlight">\(u\cdot v\)</span> mit der partiellen
+Integrationsregel im Intervall <span class="math notranslate nohighlight">\([a,b]\)</span> integrieren:</p>
+<div class="math notranslate nohighlight">
+\[\int_{a}^{b} u(x) \cdot
+v'(x) \, dx = \big[u(x)\cdot v(x)\big]_{a}^{b}
+- \int_{a}^{b} u'(x) \cdot v(x) \, dx.\]</div>
 </div>
 </section>
-<section id="minimum-und-maximum-einer-funktion-was-ist-das">
-<h2>Minimum und Maximum einer Funktion – was ist das?<a class="headerlink" href="#minimum-und-maximum-einer-funktion-was-ist-das" title="Link to this heading">#</a></h2>
-<p>Die Funktion <span class="math notranslate nohighlight">\(f(x) = x^2 -6x + 11\)</span> hat den folgenden Funktionsgraphen.</p>
-<figure class="align-default" id="fig01-parabel">
-<a class="reference internal image-reference" href="../_images/chapter01_sec03_fig01.png"><img alt="../_images/chapter01_sec03_fig01.png" src="../_images/chapter01_sec03_fig01.png" style="width: 75%;" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 1 </span><span class="caption-text">Der kleinste Funktionswert (= Minimum) dieser Parabel <span class="math notranslate nohighlight">\(f(x) = x^2 -6x + 11\)</span> ist
-2. Er befindet sich an der Stelle <span class="math notranslate nohighlight">\(x = 3\)</span>. Der dazugehörige Punkt <span class="math notranslate nohighlight">\((3 | 2)\)</span> ist
-ein Tiefpunkt.</span><a class="headerlink" href="#fig01-parabel" title="Link to this image">#</a></p>
-</figcaption>
-</figure>
-<p>Der kleinste Funktionswert <span class="math notranslate nohighlight">\(f(x)\)</span>, der vorkommt, ist 2. Es gilt also</p>
+<section id="integrieren-von-produkten">
+<h2>Integrieren von Produkten<a class="headerlink" href="#integrieren-von-produkten" title="Link to this heading">#</a></h2>
+<p>Die partielle Integration kann durch folgende Formel ausgedrückt werden:</p>
 <div class="math notranslate nohighlight">
-\[f(x) \geq 2 \quad \text{ für alle } x\in\mathbb{R}.\]</div>
-<p>Einen solchen kleinsten Wert nennen wir <strong>Minimum</strong>. Mathematisch wird das
-folgendermaßen notiert:</p>
+\[\int_{a}^{b} u(x) \cdot v'(x) \, dx = \big[u(x)\cdot v(x)\big]_{a}^{b}
+- \int_{a}^{b} u'(x) \cdot v(x) \, dx.\]</div>
+<p>Hierbei sind <span class="math notranslate nohighlight">\(u(x)\)</span> und <span class="math notranslate nohighlight">\(v(x)\)</span> zwei Funktionen, deren Produkt integriert werden
+soll, und <span class="math notranslate nohighlight">\(u'(x)\)</span> und <span class="math notranslate nohighlight">\(v'(x)\)</span> sind die Ableitungen von <span class="math notranslate nohighlight">\(u(x)\)</span> und <span class="math notranslate nohighlight">\(v(x)\)</span>.</p>
+</section>
+<section id="beispiel-fur-partielle-integration">
+<h2>Beispiel für partielle Integration<a class="headerlink" href="#beispiel-fur-partielle-integration" title="Link to this heading">#</a></h2>
+<p>Ein Beispiel für die Anwendung der partiellen Integration ist die Berechnung des
+Integrals</p>
 <div class="math notranslate nohighlight">
-\[\min_{x\in\mathbb{R}} f(x) = 2.\]</div>
-<p>Um zu verdeutlichen, dass in diesem Beispiel die 2 sogar für alle reellen Zahlen
-<span class="math notranslate nohighlight">\(x\in\mathbb{R}\)</span> der kleinste Funktionswert ist, sagt man oft auch <strong>globales
-Minimum</strong>. Es könnte aber auch sein, dass dieser Funktionswert nur in einem
-bestimmten Bereich der kleinste Funktionswert ist. Dazu werden wir noch ein
-Beispiel betrachten. Wir halten noch fest, dass der Punkt <span class="math notranslate nohighlight">\((3 | 2)\)</span>
-<strong>Tiefpunkt</strong> genannt wird.</p>
-<p>Als zweites Beispiel betrachten wir die Funktion <span class="math notranslate nohighlight">\(f(x) = \frac{1}{2}x^3 -3x^2 +
-\frac{9}{2}x+2\)</span>. Diese Funktion hat kein globales Minimum, denn es werden
-Funktionswerte bis <span class="math notranslate nohighlight">\(-\infty\)</span> angenommen. Aber die Funktion hat das lokale
-Minimum 2 an der Stelle <span class="math notranslate nohighlight">\(x = 3\)</span>.</p>
-<figure class="align-default" id="fig02-kubisches-polynom">
-<a class="reference internal image-reference" href="../_images/chapter01_sec03_fig02.png"><img alt="../_images/chapter01_sec03_fig02.png" src="../_images/chapter01_sec03_fig02.png" style="width: 75%;" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 2 </span><span class="caption-text">Der kleinste Funktionswert (= Minimum) der Funktion <span class="math notranslate nohighlight">\(f(x) = \frac{1}{2}x^3 -3x^2 +
-\frac{9}{2}x+2\)</span> im Intervall <span class="math notranslate nohighlight">\([2,4]\)</span> ist 2. Da sich das Minimum nur auf dieses
-Intervall bezieht und nicht auf die ganze Definitionsmenge, ist es ein lokales
-Minimum. Es befindet sich an der Stelle <span class="math notranslate nohighlight">\(x = 3\)</span>. Der dazugehörige Punkt <span class="math notranslate nohighlight">\((3 |
-2)\)</span> ist ein lokaler Tiefpunkt.</span><a class="headerlink" href="#fig02-kubisches-polynom" title="Link to this image">#</a></p>
-</figcaption>
-</figure>
-<div class="note admonition">
-<p class="admonition-title">Was ist … ein Minimum einer Funktion?</p>
-<p>Wir betrachten eine reellwertige Funktion <span class="math notranslate nohighlight">\(f\)</span> mit der Definitionsmenge
-<span class="math notranslate nohighlight">\(D\subseteq\mathbb{R}\)</span>, also <span class="math notranslate nohighlight">\(f: D \rightarrow \mathbb{R}\)</span>. Die Funktion <span class="math notranslate nohighlight">\(f\)</span> hat
-an der Stelle <span class="math notranslate nohighlight">\(x_0\)</span> ein <strong>lokales Minimum</strong>, wenn es ein Intervall <span class="math notranslate nohighlight">\(I = (a,b)\)</span>
-gibt, das <span class="math notranslate nohighlight">\(x_0\)</span> enthält, und gleichzeitig die Bedingung</p>
+\[\int_{0}^{\pi} \sin(x)\cdot 2x \, dx.\]</div>
+<p>Als erstes müssen wir auswählen, welche Funktion <span class="math notranslate nohighlight">\(u\)</span> sein soll und was <span class="math notranslate nohighlight">\(v\)</span>. Wir wählen</p>
 <div class="math notranslate nohighlight">
-\[f(x_0) \leq f(x)\]</div>
-<p>für alle  <span class="math notranslate nohighlight">\(x\in (a,b)\)</span> erfüllt ist. Gilt sogar</p>
+\[u(x)=2x \quad \text{ und } \quad v'(x)=\sin(x).\]</div>
+<p>Dann werden in einer Nebenrechnung die Ableitung <span class="math notranslate nohighlight">\(u^{\prime}\)</span> von <span class="math notranslate nohighlight">\(u\)</span> und eine
+Stammfunktion <span class="math notranslate nohighlight">\(v\)</span> von <span class="math notranslate nohighlight">\(v^{\prime}\)</span> ausgerechnet:</p>
 <div class="math notranslate nohighlight">
-\[f(x_0) \leq f(x)\]</div>
-<p>für alle <span class="math notranslate nohighlight">\(x\in D\)</span>, dann hat die Funktion <span class="math notranslate nohighlight">\(f\)</span> an der Stelle <span class="math notranslate nohighlight">\(x_0\)</span> ein
-<strong>globales Minimum</strong>.</p>
+\[u^{\prime}(x) = 2 \quad \text{ und } \quad v(x)=-\cos(x).\]</div>
+<p>Das wird alles in die obige Formel eingesetzt:</p>
+<div class="math notranslate nohighlight">
+\[\int_{0}^{\pi} \sin(x)\cdot 2x \, dx = \big[2x \cdot \left(-\cos(x)\right)\big]_{0}^{\pi} -
+\int_{0}^{\pi} 2 \cdot (-\cos(x)) \, dx.\]</div>
+<p>Das bestimmte Integral <span class="math notranslate nohighlight">\(\big[2x \cdot \left(-\cos(x)\right)\big]_{0}^{\pi}\)</span>
+können wir jetzt zwar direkt ausrechnen, aber übrig bleibt noch das Integral
+<span class="math notranslate nohighlight">\(\int_{0}^{\pi} 2 \cdot (-\cos(x)) \, dx\)</span>, das noch weiter ausgerechnet werden
+muss.</p>
+<p>Aber das geht jetzt relativ leicht, denn von der Funktion <span class="math notranslate nohighlight">\(v(x)=-\cos(x)\)</span> kennen wir ebenfalls eine Stammfunktion, nämlich <span class="math notranslate nohighlight">\(V(x)=-\sin(x)\)</span>. Daher ist <span class="math notranslate nohighlight">\(\int_{0}^{\pi} 2
+\cdot (-\cos(x)) \, dx = 2 \big[-\sin(x)\big]_{0}^{\pi}\)</span> und insgesamt gilt dann:</p>
+<div class="math notranslate nohighlight">
+\[\int_{0}^{\pi} \sin(x)\cdot 2x \, dx = \big[2x \cdot
+\left(-\cos(x)\right)\big]_{0}^{\pi} - 2 \big[-\sin(x)\big]_{0}^{\pi}.\]</div>
+<p>Jetzt werden obere und untere Grenze eingesetzt und die Differenz gebildet. Das
+Ergebnis ist</p>
+<div class="math notranslate nohighlight">
+\[\int_{0}^{\pi} \sin(x)\cdot 2x \, dx = 2\pi.\]</div>
+<p>Achtung: Hätten wir eine andere Wahl getroffen, nämlich</p>
+<div class="math notranslate nohighlight">
+\[u(x)=\sin(x) \quad \text{ und } \quad v'(x)=2x,\]</div>
+<p>dann wäre die Suche nach der Stammfunktion von <span class="math notranslate nohighlight">\(v'\)</span> zwar einfacher gelaufen (das
+wäre <span class="math notranslate nohighlight">\(v(x)=x^2\)</span> gewesen), aber insgesamt wäre es zu kompliziert, denn wir hätten</p>
+<div class="math notranslate nohighlight">
+\[\int_{0}^{\pi} \sin(x)\cdot 2x \, dx = \big[\sin(x)\cdot x^2 \big]_{0}^{\pi} -
+\int_{0}^{\pi} \cos(x)\cdot x^2 \, dx.\]</div>
+<p>Das letzte Integral kann nicht gelöst werden.</p>
+</section>
+<section id="weiteres-lernmaterial">
+<h2>Weiteres Lernmaterial<a class="headerlink" href="#weiteres-lernmaterial" title="Link to this heading">#</a></h2>
+<p>Hier finden Sie noch zwei Videos, in denen die partielle Integration erklärt
+wird und an Beispielen vorgeführt wird.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Video “Partielle Integration: Rechenregel” von Mathematische Methoden</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/s-IDbDtRAbg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </div>
-<p>Für das Maximum gilt eine analoge Definition, bei der nur das
-Ungleichheitszeichen anders ist.</p>
-<div class="note admonition">
-<p class="admonition-title">Was ist … ein Maximum einer Funktion?</p>
-<p>Wir betrachten eine reellwertige Funktion <span class="math notranslate nohighlight">\(f\)</span> mit der Definitionsmenge
-<span class="math notranslate nohighlight">\(D\subseteq\mathbb{R}\)</span>, also <span class="math notranslate nohighlight">\(f: D \rightarrow \mathbb{R}\)</span>. Die Funktion <span class="math notranslate nohighlight">\(f\)</span> hat
-an der Stelle <span class="math notranslate nohighlight">\(x_0\)</span> ein <strong>lokales Maximum</strong>, wenn es ein Intervall <span class="math notranslate nohighlight">\(I = (a,b)\)</span>
-gibt, das <span class="math notranslate nohighlight">\(x_0\)</span> enthält, und gleichzeitig die Bedingung</p>
-<div class="math notranslate nohighlight">
-\[f(x_0) \geq f(x)\]</div>
-<p>für alle  <span class="math notranslate nohighlight">\(x\in (a,b)\)</span> erfüllt ist. Gilt sogar</p>
-<div class="math notranslate nohighlight">
-\[f(x_0) \geq f(x)\]</div>
-<p>für alle <span class="math notranslate nohighlight">\(x\in D\)</span>, dann hat die Funktion <span class="math notranslate nohighlight">\(f\)</span> an der Stelle <span class="math notranslate nohighlight">\(x_0\)</span> ein
-<strong>globales Maximum</strong>.</p>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Video “Partielle Integration: Beispiel” von Mathematische Methoden</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/LlGrOTQ9TlU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </div>
-</section>
-<section id="wie-finden-wir-hoch-und-tiefpunkte">
-<h2>Wie finden wir Hoch- und Tiefpunkte?<a class="headerlink" href="#wie-finden-wir-hoch-und-tiefpunkte" title="Link to this heading">#</a></h2>
-<p>Wir betrachten weiterhin das obige Beispiel, die Funktion <span class="math notranslate nohighlight">\(f(x) = \frac{1}{2}x^3
--3x^2 + \frac{9}{2}x+2\)</span>. Zeichen wir veschiedene Tangenten ein, so stellen wir
-fest, dass die Steigung der Tangente im lokalen Hochpunkt (1|4) und im lokalen
-Tiefpunkt (3|2) jeweils Null ist. Für die Stellen <span class="math notranslate nohighlight">\(x_{\text{HP}} = 1\)</span> und
-<span class="math notranslate nohighlight">\(x_{\text{TP}} = 3\)</span> gilt also</p>
-<div class="math notranslate nohighlight">
-\[f'(x_{\text{HP}}) = f'(1) = 0\]</div>
-<p>bzw.</p>
-<div class="math notranslate nohighlight">
-\[f'(x_{\text{TP}}) = f'(3) = 0.\]</div>
-<p>Tatsächlich gilt diese Aussage für alle differenzierbaren Funktionen. Wenn die
-differenzierbare Funktion <span class="math notranslate nohighlight">\(f\)</span> an der Stelle <span class="math notranslate nohighlight">\(x_0\)</span> ein Minimum oder ein Maximum
-hat, dann gilt</p>
-<div class="math notranslate nohighlight">
-\[f'(x_0) = 0.\]</div>
-<p>Die Umkehrung dieser Aussage ist allerdings nicht wahr. Wenn die 1. Ableitung
-einer differenzierbaren Funktion an der Stelle <span class="math notranslate nohighlight">\(x_0\)</span> gleich Null ist, muss sie
-dort nicht ein Maximum oder ein Minimum haben.</p>
-<p>Die Funktion <span class="math notranslate nohighlight">\(f(x)=x^3\)</span> hat die 1. Ableitung <span class="math notranslate nohighlight">\(f'(x)=3x^2\)</span>. An der Stelle <span class="math notranslate nohighlight">\(x_0=0\)</span>
-ist die 1. Ableitung Null, aber <span class="math notranslate nohighlight">\(f\)</span> hat kein Minimum und kein Maximum, auch
-nicht an dieser Stelle. Der Punkt <span class="math notranslate nohighlight">\((0,0)\)</span> wird Sattelpunkt genannt.</p>
-<figure class="align-default" id="chapter01-sec03-fig03">
-<a class="reference internal image-reference" href="../_images/chapter01_sec03_fig03.svg"><img alt="../_images/chapter01_sec03_fig03.svg" src="../_images/chapter01_sec03_fig03.svg" width="75%" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 3 </span><span class="caption-text">Die Funktion <span class="math notranslate nohighlight">\(f(x)=x^3\)</span> hat an der Stelle <span class="math notranslate nohighlight">\(x_0 = 0\)</span> kein Minimum und auch kein Maximum, obwohl die Steigung der Tangente an dieser Stelle Null ist, also <span class="math notranslate nohighlight">\(f'(x)=3x^2 \Rightarrow f'(0)=0\)</span> gilt.</span><a class="headerlink" href="#chapter01-sec03-fig03" title="Link to this image">#</a></p>
-</figcaption>
-</figure>
-<p>Diese Bedingung ist <em>notwendig</em>, damit überhaupt ein Maximum oder Minimum
-vorliegen kann. Leider reicht diese Bedingung noch nicht aus. Alle Nullstellen
-der 1. Ableitung sind <em>mögliche</em> Extrema, es könnten aber auch Sattelpunkte
-sein.</p>
-<p>Daher müssen wir noch zusätzliche Bedingungen überprüfen, bevor wir entscheiden
-können, ob ein Minimum oder Maximum vorliegt. Die möglichen Extremwerte müssen
-noch zusätzlich mit der 2. Ableitung geprüft werden:</p>
-<ul class="simple">
-<li><p>Die Funktion <span class="math notranslate nohighlight">\(f\)</span> hat an der Stelle <span class="math notranslate nohighlight">\(x_0\)</span> ein <strong>Maximum</strong>, wenn</p>
-<ul>
-<li><p>die 1. Ableitung an dieser Stelle Null ist, d.h. <span class="math notranslate nohighlight">\(f'(x_0) = 0\)</span> und</p></li>
-<li><p>die 2. Ableitung an dieser Stelle <strong>negativ</strong> ist, d.h. <span class="math notranslate nohighlight">\(f''(x_0) &lt; 0\)</span>.</p></li>
-</ul>
-</li>
-<li><p>Die Funktion <span class="math notranslate nohighlight">\(f\)</span> hat an der Stelle <span class="math notranslate nohighlight">\(x_0\)</span> ein <strong>Minimum</strong>, wenn</p>
-<ul>
-<li><p>die 1. Ableitung an dieser Stelle Null ist, d.h. <span class="math notranslate nohighlight">\(f'(x_0) = 0\)</span> und</p></li>
-<li><p>die 2. Ableitung an dieser Stelle <strong>positiv</strong> ist, d.h. <span class="math notranslate nohighlight">\(f''(x_0) &gt; 0\)</span>.</p></li>
-</ul>
-</li>
-</ul>
-<p>Diese beiden Bedingungen nennt man dann <strong>hinreichende</strong> Bedingungen.</p>
-<p>Achtung: Wenn allerdings die zweite Ableitung Null ist, also <span class="math notranslate nohighlight">\(f''(x_0) = 0\)</span>,
-kann man keine Entscheidung treffen und muss weitere Bedingungen überprüfen.
-Alternativ gibt es noch das sogenannte <strong>Vorzeichenwechselkriterium</strong>, das hier
-nicht weiter ausgeführt wird.</p>
-</section>
-<section id="zusammenfassung-und-ausblick">
-<h2>Zusammenfassung und Ausblick<a class="headerlink" href="#zusammenfassung-und-ausblick" title="Link to this heading">#</a></h2>
-<p>In diesem Kapitel haben wir uns mit den Begriffen Minimum und Maximum einer
-Funktion beschäftigt. Ist eine Funktion differenzierbar, so sind die Nullstellen
-der 1. Ableitung Kandidaten für Extrema. Ob tatsächlich ein Extremum (Minimum
-oder Maximum) vorliegt, muss einzeln geprüft werden. Für diese Prüfung gibt es
-mehrere Kriterien, in dieser Vorlesung verwenden wir den Test mit der 2.
-Ableitung. Im nächsten Kapitel beschäftigen wir uns mit Extrema mit
-Zusatzbedingung.</p>
-</section>
+</details></section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -665,7 +577,7 @@ Zusatzbedingung.</p>
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">1.2 Rechenregeln Ableitungen</p>
+        <p class="prev-next-title">1.2 Eigenschaften von Integralen</p>
       </div>
     </a>
     <a class="right-next"
@@ -673,7 +585,7 @@ Zusatzbedingung.</p>
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">1.4 Extremwerte mit Nebenbedingung</p>
+        <p class="prev-next-title">1.4 Integration durch Substitution</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -684,7 +596,8 @@ Zusatzbedingung.</p>
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
   <div class="sidebar-secondary-item">
@@ -694,9 +607,9 @@ Zusatzbedingung.</p>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lernziele">Lernziele</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#minimum-und-maximum-einer-funktion-was-ist-das">Minimum und Maximum einer Funktion – was ist das?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wie-finden-wir-hoch-und-tiefpunkte">Wie finden wir Hoch- und Tiefpunkte?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zusammenfassung-und-ausblick">Zusammenfassung und Ausblick</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#integrieren-von-produkten">Integrieren von Produkten</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#beispiel-fur-partielle-integration">Beispiel für partielle Integration</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#weiteres-lernmaterial">Weiteres Lernmaterial</a></li>
 </ul>
   </nav></div>
 
@@ -744,8 +657,8 @@ By Simone Gramsch
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
 
   <footer class="bd-footer">
   </footer>

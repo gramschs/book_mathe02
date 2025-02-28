@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>10.1 Idee von Doppelintegralen &#8212; Mathematik 2 Maschinenbau</title>
+    <title>10.1 Polarkoordinaten &#8212; Mathematik 2 Maschinenbau</title>
   
   
   
@@ -16,32 +16,35 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-
-  
-  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=87e54e7c" />
     <link rel="stylesheet" type="text/css" href="../_static/jsxgraph.css?v=a7b027cb" />
     <link rel="stylesheet" type="text/css" href="../_static/my_styles.css?v=9b976ced" />
   
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
-  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
     <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
     <script src="../_static/doctools.js?v=9a2dae69"></script>
@@ -54,7 +57,7 @@
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
@@ -66,10 +69,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="10.2 Berechnung von Doppelintegralen in kartesischen Koordinaten" href="chapter10_sec02.html" />
-    <link rel="prev" title="10. Doppelintegral" href="chapter10_sec00.html" />
+    <link rel="next" title="10.2 Doppelintegral in Polarkoordinaten" href="chapter10_sec02.html" />
+    <link rel="prev" title="10. Doppelintegral in Polarkoordinaten und Dreifachintegral" href="chapter10_sec00.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
   </head>
   
   
@@ -85,19 +89,8 @@
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-primary-sidebar-checkbox"/>
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-secondary-sidebar-checkbox"/>
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="../search.html"
       method="get">
@@ -105,7 +98,6 @@
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search this book..."
          aria-label="Search this book..."
          autocomplete="off"
@@ -113,8 +105,8 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -130,7 +122,8 @@
       
       
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -160,15 +153,11 @@
 </a></div>
         <div class="sidebar-primary-item">
 
- <script>
- document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script></div>
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
@@ -179,122 +168,114 @@
                 </a>
             </li>
         </ul>
-        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Differential- und Integralrechnung</span></p>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Fortsetzung Integralrechnung</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter01/chapter01_sec00.html">1. Differentialrechnung</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter01/chapter01_sec01.html">1.1 Ableitungen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter01/chapter01_sec02.html">1.2 Rechenregeln Ableitungen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter01/chapter01_sec03.html">1.3 Extremwerte</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter01/chapter01_sec04.html">1.4 Extremwerte mit Nebenbedingung</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter01/chapter01_sec00.html">1. Wiederholung Integrale</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter01/chapter01_sec01.html">1.1 Stammfunktion und bestimmtes Integral</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter01/chapter01_sec02.html">1.2 Eigenschaften von Integralen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter01/chapter01_sec03.html">1.3 Partielle Integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter01/chapter01_sec04.html">1.4 Integration durch Substitution</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter01/chapter01_sec05.html">Übungen</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter02/chapter02_sec00.html">2. Integrale</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter02/chapter02_sec01.html">2.1 Stammfunktion und bestimmtes Integral</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter02/chapter02_sec02.html">2.2 Eigenschaften von Integralen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter02/chapter02_sec03.html">2.3 Partielle Integration</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter02/chapter02_sec04.html">2.4 Integration durch Substitution</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter02/chapter02_sec00.html">2. Anwendungen Integral</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter02/chapter02_sec01.html">1.1 Integrieren ist Mitteln</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter02/chapter02_sec02.html">2.2 Fläche zwischen zwei Graphen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter02/chapter02_sec03.html">2.3 Bogenlänge</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter02/chapter02_sec04.html">2.4 Volumen von Rotationskörpern</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter02/chapter02_sec05.html">Übungen</a></li>
-</ul>
-</details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter03/chapter03_sec00.html">3. Anwendungen Integral</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec01.html">3.1 Integrieren ist Mitteln</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec02.html">3.2 Fläche zwischen zwei Graphen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec03.html">3.3 Bogenlänge</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec04.html">3.4 Volumen von Rotationskörpern</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec05.html">Übungen</a></li>
 </ul>
 </details></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Funktionenreihen</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter04/chapter04_sec00.html">4. Reihen und Potenzreihen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter04/chapter04_sec01.html">4.1 Reihen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter04/chapter04_sec02.html">4.2 Konvergenzkriterien für Reihen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter04/chapter04_sec03.html">4.3 Potenzreihen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter04/chapter04_sec04.html">4.4 Konvergenz von Potenzreihen</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter03/chapter03_sec00.html">3. Reihen und Potenzreihen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec01.html">3.1 Reihen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec02.html">3.2 Konvergenzkriterien für Reihen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec03.html">3.3 Potenzreihen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec04.html">3.4 Konvergenz von Potenzreihen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec05.html">Übungen</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter04/chapter04_sec00.html">4. Taylorreihen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter04/chapter04_sec01.html">4.1 Berechnung Taylorreihe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter04/chapter04_sec02.html">4.2 Restglied von Taylorreihen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter04/chapter04_sec03.html">4.3 Wichtige Potenzreihen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter04/chapter04_sec04.html">4.4 Rechnen mit Potenzreihen</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter04/chapter04_sec05.html">Übungen</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter05/chapter05_sec00.html">5. Taylorreihen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter05/chapter05_sec01.html">5.1 Berechnung Taylorreihe</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter05/chapter05_sec02.html">5.2 Restglied von Taylorreihen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter05/chapter05_sec03.html">5.3 Wichtige Potenzreihen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter05/chapter05_sec04.html">5.4 Rechnen mit Potenzreihen</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter05/chapter05_sec00.html">5. Fourierreihen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter05/chapter05_sec01.html">5.1 Periodische Funktionen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter05/chapter05_sec02.html">5.2 Fourierreihen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter05/chapter05_sec03.html">5.3 Beispiele für Fourierreihen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter05/chapter05_sec04.html">5.4 Rechenregeln Fourierreihen</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter05/chapter05_sec05.html">Übungen</a></li>
-</ul>
-</details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter06/chapter06_sec00.html">6. Fourierreihen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter06/chapter06_sec01.html">6.1 Periodische Funktionen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter06/chapter06_sec02.html">6.2 Fourierreihen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter06/chapter06_sec03.html">6.3 Beispiele für Fourierreihen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter06/chapter06_sec04.html">6.4 Rechenregeln Fourierreihen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter06/chapter06_sec05.html">Übungen</a></li>
 </ul>
 </details></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Höhere Differentialrechnung</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter07/chapter07_sec00.html">7. Funktionen von mehreren Variablen und partielle Ableitungen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter07/chapter07_sec01.html">7.1 Definition und Visualisierung</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter07/chapter07_sec02.html">7.2 Stetigkeit</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter07/chapter07_sec03.html">7.3 Partielle Ableitungen und Gradient</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter07/chapter07_sec04.html">7.4 Höhere partielle Ableitungen und Hesse-Matrix</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter06/chapter06_sec00.html">6. Funktionen von mehreren Variablen und partielle Ableitungen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter06/chapter06_sec01.html">6.1 Definition und Visualisierung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter06/chapter06_sec02.html">6.2 Stetigkeit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter06/chapter06_sec03.html">6.3 Partielle Ableitungen und Gradient</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter06/chapter06_sec04.html">6.4 Höhere partielle Ableitungen und Hesse-Matrix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter06/chapter06_sec05.html">Übungen</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter07/chapter07_sec00.html">7. Richtungsableitungen und vektorwertige Funktionen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter07/chapter07_sec01.html">7.1 Gradient und Richtungsableitung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter07/chapter07_sec02.html">7.2 Vektorwertige Funktionen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter07/chapter07_sec03.html">7.3 Jacobi-Matrix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter07/chapter07_sec04.html">7.4 Mehrdimensionale Kettenregel</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter07/chapter07_sec05.html">Übungen</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter08/chapter08_sec00.html">8. Richtungsableitungen und vektorwertige Funktionen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter08/chapter08_sec01.html">8.1 Gradient und Richtungsableitung</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter08/chapter08_sec02.html">8.2 Vektorwertige Funktionen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter08/chapter08_sec03.html">8.3 Jacobi-Matrix</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter08/chapter08_sec04.html">8.4 Mehrdimensionale Kettenregel</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter08/chapter08_sec00.html">8. Linearisierung und Extremwerte</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter08/chapter08_sec01.html">8.1 Tangentenfunktionen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter08/chapter08_sec02.html">8.2 Totales Differential</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter08/chapter08_sec03.html">8.3 Extremwerte</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter08/chapter08_sec04.html">8.4 Extremwertprobleme mit Nebenbedingung</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter08/chapter08_sec05.html">Übungen</a></li>
-</ul>
-</details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter09/chapter09_sec00.html">9. Linearisierung und Extremwerte</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter09/chapter09_sec01.html">9.1 Tangentenfunktionen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter09/chapter09_sec02.html">9.2 Totales Differential</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter09/chapter09_sec03.html">9.3 Extremwerte</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter09/chapter09_sec04.html">9.4 Extremwertprobleme mit Nebenbedingung</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter09/chapter09_sec05.html">Übungen</a></li>
 </ul>
 </details></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Höhere Integralrechnung</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="chapter10_sec00.html">10. Doppelintegral</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">10.1 Idee von Doppelintegralen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="chapter10_sec02.html">10.2 Berechnung von Doppelintegralen in kartesischen Koordinaten</a></li>
-<li class="toctree-l2"><a class="reference internal" href="chapter10_sec03.html">10.3 Anwendung: Flächenberechnung</a></li>
-<li class="toctree-l2"><a class="reference internal" href="chapter10_sec04.html">10.4 Anwendung: Schwerpunktberechnung</a></li>
-<li class="toctree-l2"><a class="reference internal" href="chapter10_sec05.html">Übungen</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter09/chapter09_sec00.html">9. Doppelintegral</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter09/chapter09_sec01.html">9.1 Idee von Doppelintegralen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter09/chapter09_sec02.html">9.2 Berechnung von Doppelintegralen in kartesischen Koordinaten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter09/chapter09_sec03.html">9.3 Anwendung: Flächenberechnung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter09/chapter09_sec04.html">9.4 Anwendung: Schwerpunktberechnung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter09/chapter09_sec05.html">Übungen</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter11/chapter11_sec00.html">11. Doppelintegral in Polarkoordinaten und Dreifachintegral</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter11/chapter11_sec01.html">11.1 Polarkoordinaten</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter11/chapter11_sec02.html">11.2 Doppelintegral in Polarkoordinaten</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter11/chapter11_sec03.html">11.3 Dreifachintegral</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter11/chapter11_sec04.html">11.4 Anwendungen Dreifachintegral</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter11/chapter11_sec05.html">Übungen</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="chapter10_sec00.html">10. Doppelintegral in Polarkoordinaten und Dreifachintegral</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">10.1 Polarkoordinaten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter10_sec02.html">10.2 Doppelintegral in Polarkoordinaten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter10_sec03.html">10.3 Dreifachintegral</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter10_sec04.html">10.4 Anwendungen Dreifachintegral</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter10_sec05.html">Übungen</a></li>
 </ul>
 </details></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Differentialgleichungen</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter12/chapter12_sec00.html">12. Einführung Differentialgleichungen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter12/chapter12_sec01.html">12.1 Grundbegriffe</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter12/chapter12_sec02.html">12.2 Anfangs- und Randwertproblem</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter12/chapter12_sec03.html">12.3 Separable Differentialgleichungen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter12/chapter12_sec04.html">12.4 Exakte Differentialgleichungen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter12/chapter12_sec05.html">Übungen</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter11/chapter11_sec00.html">11. Einführung Differentialgleichungen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter11/chapter11_sec01.html">11.1 Grundbegriffe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter11/chapter11_sec02.html">11.2 Anfangs- und Randwertproblem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter11/chapter11_sec03.html">11.3 Separable Differentialgleichungen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter11/chapter11_sec04.html">11.4 Exakte Differentialgleichungen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter11/chapter11_sec05.html">Übungen</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter13/chapter13_sec00.html">13. Lineare Differentialgleichungen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter13/chapter13_sec01.html">13.1 Lineare DGL 1. Ordnung</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter13/chapter13_sec02.html">13.2 Lösung homogene lineare DGL 1. Ordnung</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter13/chapter13_sec03.html">13.3 Lösung inhomogene lineare DGL 1. Ordnung</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter13/chapter13_sec04.html">13.4 Homogene Systeme aus zwei linearen DGL 1. Ordnung</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter13/chapter13_sec05.html">Übungen</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter12/chapter12_sec00.html">12. Lineare Differentialgleichungen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter12/chapter12_sec01.html">12.1 Lineare DGL 1. Ordnung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter12/chapter12_sec02.html">12.2 Lösung homogene lineare DGL 1. Ordnung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter12/chapter12_sec03.html">12.3 Lösung inhomogene lineare DGL 1. Ordnung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter12/chapter12_sec04.html">12.4 Homogene Systeme aus zwei linearen DGL 1. Ordnung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter12/chapter12_sec05.html">Übungen</a></li>
 </ul>
 </details></li>
 </ul>
@@ -305,9 +286,14 @@
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
   </div>
-  
-  <div id="rtd-footer-container"></div>
 
 
       </div>
@@ -419,24 +405,16 @@
 
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script>
+</button>
 <button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
 </button>
@@ -450,7 +428,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>10.1 Idee von Doppelintegralen</h1>
+    <h1>10.1 Polarkoordinaten</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -461,8 +439,10 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lernziele">Lernziele</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#grundkonzept">Grundkonzept</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definition-doppelintegral">Definition Doppelintegral</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kartesische-koordinaten">Kartesische Koordinaten</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Polarkoordinaten</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#umrechnung-von-polarkoordinaten-in-kartesische-koordinaten">Umrechnung von Polarkoordinaten in kartesische Koordinaten</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#umrechnung-von-kartesischen-koordinaten-in-polarkoordinaten">Umrechnung von kartesischen Koordinaten in Polarkoordinaten</a></li>
 </ul>
             </nav>
         </div>
@@ -474,120 +454,127 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="idee-von-doppelintegralen">
-<h1>10.1 Idee von Doppelintegralen<a class="headerlink" href="#idee-von-doppelintegralen" title="Link to this heading">#</a></h1>
-<p>Nachdem wir in den vorhergehenden Kapiteln Ableitungen von eindimensionalen
-Funktionen auf mehrdimensionale Funktionen verallgemeinert haben, werden wir in
-diesem Kapitel Integrale von Funktionen mit zwei Variablen betrachten, also von
-Funktionen <span class="math notranslate nohighlight">\(f:\mathbb{R}^2\to\mathbb{R}\)</span>. Dieses sogenannte Doppelintegral hat
-in der Technischen Mechanik viele Anwendungen und wird insbesondere bei
-Schwerpunktsberechnungen gebraucht.</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="polarkoordinaten">
+<h1>10.1 Polarkoordinaten<a class="headerlink" href="#polarkoordinaten" title="Link to this heading">#</a></h1>
+<p>Polarkoordinaten bieten eine alternative Möglichkeit, die Position von Punkten
+in der Ebene zu beschreiben. Die häufigste Beschreibung der Position von Punkten
+sind kartesische Koordinaten. Insbesondere bei technischen Systemen, bei denen
+Symmetrie oder Rotation wichtig sind, sind Polarkoordinaten jedoch eine bessere
+Möglichkeit, die Position der Punkte anzugeben.</p>
 <section id="lernziele">
 <h2>Lernziele<a class="headerlink" href="#lernziele" title="Link to this heading">#</a></h2>
 <div class="goals admonition">
 <p class="admonition-title">Lernziele</p>
-<p>Sie können erklären, was ein <strong>Doppelintegral</strong> <span class="math notranslate nohighlight">\(\iint_{A} f(x,y)\, dA\)</span> ist.</p>
-</div>
-</section>
-<section id="grundkonzept">
-<h2>Grundkonzept<a class="headerlink" href="#grundkonzept" title="Link to this heading">#</a></h2>
-<p>Bei eindimensionalen Funktionen entspricht das Integral <span class="math notranslate nohighlight">\(\int_{a}^{b} f(x)\, dx\)</span>
-dem Flächeninhalt der Fläche <span class="math notranslate nohighlight">\(A\)</span> (siehe Abbildung).</p>
-<figure class="align-default" id="fig-part10-integral1d">
-<a class="reference internal image-reference" href="../_images/part10_integral1D.svg"><img alt="../_images/part10_integral1D.svg" src="../_images/part10_integral1D.svg" width="300px" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 20 </span><span class="caption-text">Integral entspricht dem Flächeninhalt</span><a class="headerlink" href="#fig-part10-integral1d" title="Link to this image">#</a></p>
-<div class="legend">
-<p>(<a class="reference external" href="https://commons.wikimedia.org/w/index.php?curid=1039841">Quelle:</a> “Wikimedia”, Autor: 4C - Eigenes Werk, based on JPG version, Lizenz: <a class="reference external" href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>)</p>
-</div>
-</figcaption>
-</figure>
-<p>Dementsprechend beschreibt das Doppelintegral einer Funktion von zwei Variablen
-das Volumen <span class="math notranslate nohighlight">\(V\)</span>, das zwischen der Fläche <span class="math notranslate nohighlight">\(B\)</span> (B wie Boden oder Bereich) und der
-Fläche <span class="math notranslate nohighlight">\(f(x,y)\)</span> entsteht. Dabei stammen die Punkte <span class="math notranslate nohighlight">\((x,y)\)</span> aus <span class="math notranslate nohighlight">\(B\)</span>.</p>
-<figure class="align-default" id="fig-part10-sketch-doubleintegral">
-<a class="reference internal image-reference" href="../_images/part10_sketch_doubleintegral.svg"><img alt="../_images/part10_sketch_doubleintegral.svg" src="../_images/part10_sketch_doubleintegral.svg" width="600px" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 21 </span><span class="caption-text">Integral entspricht dem Volumen</span><a class="headerlink" href="#fig-part10-sketch-doubleintegral" title="Link to this image">#</a></p>
-</figcaption>
-</figure>
-<p>Doppelintegrale haben vielfältige Anwendungen in den Ingenieurwissenschaften.
-Sie dienen u.a. zur Berechnung von</p>
 <ul class="simple">
-<li><p>Flächeninhalt,</p></li>
-<li><p>Schwerpunkt einer Fläche und</p></li>
-<li><p>Flächenmoment.</p></li>
+<li><p>Sie wissen, was <strong>Polarkoordinaten</strong> sind.</p></li>
+<li><p>Sie können kartesische Koordinaten in Polarkoordinaten umrechnen.</p></li>
+<li><p>Sie können Polarkoordinaten in kartesische Koordinaten umrechnen.</p></li>
 </ul>
+</div>
 </section>
-<section id="definition-doppelintegral">
-<h2>Definition Doppelintegral<a class="headerlink" href="#definition-doppelintegral" title="Link to this heading">#</a></h2>
-<p>Für die Berechnung des Volumens der Funktion <span class="math notranslate nohighlight">\(f(x,y)\)</span> über einem Bereich <span class="math notranslate nohighlight">\(B\)</span>
-gehen wir so vor, wie im eindimensionalen Fall bei der Berechnung des
-Flächeninhaltes einer eindimensionalen Funktion. Wir zerlegen den Bereich <span class="math notranslate nohighlight">\(B\)</span>
-mit einem sogenannten <strong>Gitter</strong>, d.h. wir teilen den Bereich <span class="math notranslate nohighlight">\(B\)</span> in viele
-kleine Teilbereiche ein, die wir mit <span class="math notranslate nohighlight">\(B_i\)</span> durchnummerieren. Von jedem
-Teilbereich <span class="math notranslate nohighlight">\(B_i\)</span> können wir die x- und y-Koordinate des Mittelpunkts bestimmen.
-Diese Koordinaten nennen wir <span class="math notranslate nohighlight">\((x_i,y_i)\)</span>.</p>
-<p>Wenn die Teilbereiche rechteckig sind (das müssen sie nicht sein, wir könnten
-auch beispielsweise Kreise oder andere Muster nehmen), dann kann das Volumen der
-Säule <span class="math notranslate nohighlight">\(V_i\)</span> (siehe Abbildung rote Säule) berechnet werden als</p>
-<div class="math notranslate nohighlight">
-\[V_i = f(x_i,y_i) \cdot \Delta x \cdot \Delta y.\]</div>
-<figure class="align-default" id="fig-part10-sketch-volume">
-<a class="reference internal image-reference" href="../_images/part10_sketch_volume.svg"><img alt="../_images/part10_sketch_volume.svg" src="../_images/part10_sketch_volume.svg" width="600px" /></a>
+<section id="kartesische-koordinaten">
+<h2>Kartesische Koordinaten<a class="headerlink" href="#kartesische-koordinaten" title="Link to this heading">#</a></h2>
+<p>Das am häufigsten verwendete Koordinatensystem ist das <strong>kartesische
+koordinatensystem</strong>. Es ist nach dem Methematiker <a class="reference external" href="https://de.wikipedia.org/wiki/Ren%C3%A9_Descartes">René
+Descartes</a> benannt, obwohl
+Descartes ein solches Koordinatensystem nie beschrieben hat. Das Hauptmerkmal
+von kartesischen Koordinatensytemen ist, dass die Koordinatenachsen senkrecht
+aufeinander stehen. Die folgende Abbildung zeigt ein zweidimensionales
+kartesisches Koordinatensystem mit dem Koordinatenursprung <span class="math notranslate nohighlight">\((0,0)\)</span> und einem
+Punkt an der Position <span class="math notranslate nohighlight">\(P(2\sqrt{3},2)\)</span>.</p>
+<figure class="align-default" id="fig11-01">
+<a class="reference internal image-reference" href="../_images/fig11_01.svg"><img alt="../_images/fig11_01.svg" src="../_images/fig11_01.svg" width="75%" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 22 </span><span class="caption-text">Volumen als Summe einzelner Säulen, hier mit rechteckigem Gitter</span><a class="headerlink" href="#fig-part10-sketch-volume" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 25 </span><span class="caption-text">Kartesisches zweidimensionales Koordinatensystem</span><a class="headerlink" href="#fig11-01" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
-<p>Jetzt müssen wir noch alle Säulen aufaddieren, um eine Annäherung für das
-Volumen zwischen Boden und Deckel <span class="math notranslate nohighlight">\(f(x,y)\)</span> zu bekommen, also</p>
+</section>
+<section id="id1">
+<h2>Polarkoordinaten<a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
+<p>Eine alternative Beschreibung ist, die Entfernung und den Winkel zum Punkt
+anzugeben. Die Entfernung des Punktes wird bezogen auf den Koordinatenursprung
+angegeben. Der Winkel wird gegen den Uhrzeigersinn von der positiven x-Achse aus
+gemessen.  Üblicherweise wird zuerst die Entfernung <span class="math notranslate nohighlight">\(r\)</span> notiert und dann der
+Winkel <span class="math notranslate nohighlight">\(\varphi\)</span>, also</p>
 <div class="math notranslate nohighlight">
-\[V\approx f(x_1,y_1) \cdot \Delta y \cdot \Delta x + f(x_2,y_2) \cdot \Delta y
-\cdot \Delta x + \ldots f(x_N,y_N) \cdot \Delta y \cdot \Delta x.\]</div>
-<p>Dabei haben wir jetzt angenommen, dass alle Teilbereiche <span class="math notranslate nohighlight">\(B_i\)</span> die gleiche Form
-haben und als Rechtecke mit den Seitenlängen <span class="math notranslate nohighlight">\(\Delta x\)</span> und <span class="math notranslate nohighlight">\(\Delta y\)</span>
-beschrieben werden. Wir können das Summenzeichen verwenden:</p>
-<div class="math notranslate nohighlight">
-\[V\approx \sum_{i=1}^{N} f(x_i,y_i) \cdot \Delta y \cdot \Delta x .\]</div>
-<p>Wenn wir nun die Teilbereiche <span class="math notranslate nohighlight">\(B_i\)</span> immer kleiner machen, so brauchen wir immer
-mehr Säulen, also <span class="math notranslate nohighlight">\(N\rightarrow\infty\)</span>. Falls der Grenzwert</p>
-<div class="math notranslate nohighlight">
-\[\lim_{N\rightarrow\infty} \sum_{i=1}^{N} f(x_i,y_i) \cdot \Delta y  \cdot
-\Delta x\]</div>
-<p>existiert, nennen wir ihn Integral von <span class="math notranslate nohighlight">\(f(x,y)\)</span> über <span class="math notranslate nohighlight">\(B\)</span> und schreiben das als
-sogenanntes <strong>Doppelintegral</strong></p>
-<div class="math notranslate nohighlight">
-\[V = \iint_{B} f(x,y) \, dy \, dx.\]</div>
-<p>Bei den obigen Überlegungen sind wir davon ausgegangen, dass der Bereich <span class="math notranslate nohighlight">\(B\)</span> in
-rechteckige Teilbereiche <span class="math notranslate nohighlight">\(B_i\)</span> aufgeteilt wird. Das muss nicht so sein, wir
-hätten auch andere Aufteilungen wählen können. Daher ist die etwas allgemeiner
-formulierte Definition eines Doppelintegrals wie folgt:</p>
-<div class="note admonition">
-<p class="admonition-title">Was ist … ein Doppelintegral?</p>
-<p>Doppelintegrale sind Integrale für zweidimensionale Funktionen
-<span class="math notranslate nohighlight">\(f:\mathbb{R}^2\to\mathbb{R}\)</span> mit einer Definitionsmenge <span class="math notranslate nohighlight">\(A \subset
-\mathbb{R}^2\)</span>. Die Definitionsmenge <span class="math notranslate nohighlight">\(A\)</span> wird in <span class="math notranslate nohighlight">\(N\)</span> Teilgebiete zerlegt, die
-<span class="math notranslate nohighlight">\(A_i\)</span> genannt werden. Der Flächeninhalt dieser Teilgebiete wird mit <span class="math notranslate nohighlight">\(\Delta A_i\)</span>
-bezeichnet. Wenn der Grenzwert</p>
-<div class="math notranslate nohighlight">
-\[\lim_{N\rightarrow\infty} \sum_{i=1}^{N} f(x_i,y_i) \cdot \Delta A_i\]</div>
-<p>existiert, wird er als Doppelintegral von <span class="math notranslate nohighlight">\(f\)</span> über <span class="math notranslate nohighlight">\(A\)</span> bezeichnet und mit</p>
-<div class="math notranslate nohighlight">
-\[\iint_{A} f(x,y)\, dA\]</div>
-<p>abgekürzt.</p>
-</div>
-<p>Im folgenden Video wird das Grundkonzept des Doppelintegrals erklärt. Im nachfolgenden Video wird die geometrische Interpretation des Doppelintegrals zur Berechnung eines Volumens präsentiert.</p>
+\[(r, \varphi).\]</div>
+<p>Diese Art von Koordinaten wird als <strong>Polarkoordinaten</strong> bezeichnet.</p>
+<p>In dem Beispiel wird so aus dem Punkt <span class="math notranslate nohighlight">\((2\sqrt{3},2)\)</span> in kartesischen
+Koordinaten der Punkt <span class="math notranslate nohighlight">\((4, 30^{\circ})\)</span>, wie wir gleich sehen, wenn wir die
+Umrechnung von kartesischen zu Polarkoordinaten behandeln.</p>
+<figure class="align-default" id="fig11-02">
+<a class="reference internal image-reference" href="../_images/fig11_02.svg"><img alt="../_images/fig11_02.svg" src="../_images/fig11_02.svg" width="75%" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 26 </span><span class="caption-text">Zweidimensionales Polarkoordinatensystem</span><a class="headerlink" href="#fig11-02" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="umrechnung-von-polarkoordinaten-in-kartesische-koordinaten">
+<h2>Umrechnung von Polarkoordinaten in kartesische Koordinaten<a class="headerlink" href="#umrechnung-von-polarkoordinaten-in-kartesische-koordinaten" title="Link to this heading">#</a></h2>
+<p>Die Umrechnung von Polarkoordinaten in kartesische Koordinaten erfolgt mit den
+Formeln:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+x &amp;= r\cdot \cos(\varphi) \\
+y &amp;= r\cdot \sin(\varphi)
+\end{align*}\]</div>
+<p>Bei dem obigen Beispiel ist <span class="math notranslate nohighlight">\(r=4\)</span> und <span class="math notranslate nohighlight">\(\varphi=30^{\circ}\)</span>. Mit den beiden
+Formeln zur Berechnung der kartesischen Koordinaten <span class="math notranslate nohighlight">\(x\)</span> und <span class="math notranslate nohighlight">\(y\)</span> erhalten wir</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+x &amp;= 4 \cdot \cos(30^{\circ}) = 2\sqrt{3}, \\
+y &amp;= 4 \cdot \sin(30^{\circ}) = 2.
+\end{align*}\]</div>
+<p>Zur Erinnerung folgt hier eine Einführung in Polarkoordinaten:</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
-<span class="sd-summary-text">Video zu “Doppelintegral - Definition” von Mathematische Methoden</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/7VjP3jEGW24" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-</div>
-</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
-<summary class="sd-summary-title sd-card-header">
-<span class="sd-summary-text">Video zu “Doppelintegral - Volumeninterpretation” von Mathematische Methoden</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/FtoHJaUR6T8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<span class="sd-summary-text">Video “Ebene Polarkoordinaten” von Daniel Jung</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/l8ZF4m0fPxM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </div>
 </details></section>
+<section id="umrechnung-von-kartesischen-koordinaten-in-polarkoordinaten">
+<h2>Umrechnung von kartesischen Koordinaten in Polarkoordinaten<a class="headerlink" href="#umrechnung-von-kartesischen-koordinaten-in-polarkoordinaten" title="Link to this heading">#</a></h2>
+<p>Die umgekehrte Berechnung von kartesischen Koordinaten in Polarkoordinaten ist
+etwas schwieriger. Die Berechnung des Radius <span class="math notranslate nohighlight">\(r\)</span> ist noch einfach, da ein
+rechtwinkliges Dreieck vorliegt und wir den Satz des Pythagoras anwenden können:</p>
+<div class="math notranslate nohighlight">
+\[r = \sqrt{x^2 + y^2}.\]</div>
+<p>Danach können wir entweder die Ankathete <span class="math notranslate nohighlight">\(x\)</span> oder die Gegenkathete <span class="math notranslate nohighlight">\(y\)</span> ausnutzen, um den Winkel <span class="math notranslate nohighlight">\(\varphi\)</span> zu bestimmen. Im rechtwinkligen Dreieck gelten</p>
+<div class="math notranslate nohighlight">
+\[\cos(\varphi) =
+\frac{x}{r} \quad \text{ oder } \quad \sin(\varphi) = \frac{y}{r}.\]</div>
+<figure class="align-default" id="fig11-03">
+<a class="reference internal image-reference" href="../_images/fig11_03.svg"><img alt="../_images/fig11_03.svg" src="../_images/fig11_03.svg" width="75%" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 27 </span><span class="caption-text">Die Umrechnung kartesische Koordinaten in Polarkoordinaten nutzt das rechtwinklige Dreieck aus.</span><a class="headerlink" href="#fig11-03" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Mit den Umkehrfunktionen der Sinus- und der Kosinusfunktion erhalten wir</p>
+<div class="math notranslate nohighlight">
+\[\varphi = \arccos\left(\frac{x}{r}\right) \quad \text{ oder } \quad \varphi =
+\arcsin\left( \frac{y}{r}\right).\]</div>
+<p>Wo ist jetzt das Problem? Lösen wir die Gleichung</p>
+<div class="math notranslate nohighlight">
+\[\sin(\varphi) = \frac{1}{2},\]</div>
+<p>so hat diese Gleichung innerhalb des Intervalls <span class="math notranslate nohighlight">\([0, 360^{\circ}]\)</span> zwei
+Lösungen, nämlich <span class="math notranslate nohighlight">\(30^{\circ}\)</span> und <span class="math notranslate nohighlight">\(150^{\circ}\)</span>. Aber welcher Winkel ist der
+richtige Winkel? Da die x-Koordinate positiv ist und der Punkt <span class="math notranslate nohighlight">\(P(2\sqrt{2},2)\)</span>
+im 1. Quadranten liegt, ist der richtige Winkel <span class="math notranslate nohighlight">\(\varphi = 30^{\circ}\)</span>.
+Überprüfen Sie daher immer durch eine Zeichnung, welches der richtige Winkel ist.</p>
+<p>In dem folgenden Video wird gezeigt, wie eine Funktion mit Variablen in
+kartesischen Koordinaten in eine Funktion mit Variablen in Polarkoordinaten
+umgerechnet werden kann:</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Video zu “Polarkoordinaten” von Prof. Hoever</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/MCRDcJKeR20" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+</details><div class="seealso admonition">
+<p class="admonition-title">Weiteres Lernmaterial</p>
+<p><a class="reference external" href="https://de.serlo.org/mathe/45643/polarkoordinaten">https://de.serlo.org/mathe/45643/polarkoordinaten</a>
+<a class="reference external" href="https://studyflix.de/mathematik/polarkoordinaten-1476">https://studyflix.de/mathematik/polarkoordinaten-1476</a></p>
+</div>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -626,7 +613,7 @@ bezeichnet. Wenn der Grenzwert</p>
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">10. Doppelintegral</p>
+        <p class="prev-next-title">10. Doppelintegral in Polarkoordinaten und Dreifachintegral</p>
       </div>
     </a>
     <a class="right-next"
@@ -634,7 +621,7 @@ bezeichnet. Wenn der Grenzwert</p>
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">10.2 Berechnung von Doppelintegralen in kartesischen Koordinaten</p>
+        <p class="prev-next-title">10.2 Doppelintegral in Polarkoordinaten</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -645,7 +632,8 @@ bezeichnet. Wenn der Grenzwert</p>
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
   <div class="sidebar-secondary-item">
@@ -655,8 +643,10 @@ bezeichnet. Wenn der Grenzwert</p>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lernziele">Lernziele</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#grundkonzept">Grundkonzept</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definition-doppelintegral">Definition Doppelintegral</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kartesische-koordinaten">Kartesische Koordinaten</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Polarkoordinaten</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#umrechnung-von-polarkoordinaten-in-kartesische-koordinaten">Umrechnung von Polarkoordinaten in kartesische Koordinaten</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#umrechnung-von-kartesischen-koordinaten-in-polarkoordinaten">Umrechnung von kartesischen Koordinaten in Polarkoordinaten</a></li>
 </ul>
   </nav></div>
 
@@ -704,8 +694,8 @@ By Simone Gramsch
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
 
   <footer class="bd-footer">
   </footer>

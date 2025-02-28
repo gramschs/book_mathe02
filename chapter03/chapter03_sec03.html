@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>3.3 Bogenlänge &#8212; Mathematik 2 Maschinenbau</title>
+    <title>3.3 Potenzreihen &#8212; Mathematik 2 Maschinenbau</title>
   
   
   
@@ -16,32 +16,35 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-
-  
-  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=87e54e7c" />
     <link rel="stylesheet" type="text/css" href="../_static/jsxgraph.css?v=a7b027cb" />
     <link rel="stylesheet" type="text/css" href="../_static/my_styles.css?v=9b976ced" />
   
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
-  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
     <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
     <script src="../_static/doctools.js?v=9a2dae69"></script>
@@ -54,7 +57,7 @@
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
@@ -66,10 +69,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="3.4 Volumen von Rotationskörpern" href="chapter03_sec04.html" />
-    <link rel="prev" title="3.2 Fläche zwischen zwei Graphen" href="chapter03_sec02.html" />
+    <link rel="next" title="3.4 Konvergenz von Potenzreihen" href="chapter03_sec04.html" />
+    <link rel="prev" title="3.2 Konvergenzkriterien für Reihen" href="chapter03_sec02.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
   </head>
   
   
@@ -85,19 +89,8 @@
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-primary-sidebar-checkbox"/>
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-secondary-sidebar-checkbox"/>
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="../search.html"
       method="get">
@@ -105,7 +98,6 @@
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search this book..."
          aria-label="Search this book..."
          autocomplete="off"
@@ -113,8 +105,8 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -130,7 +122,8 @@
       
       
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -160,15 +153,11 @@
 </a></div>
         <div class="sidebar-primary-item">
 
- <script>
- document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script></div>
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
@@ -179,122 +168,114 @@
                 </a>
             </li>
         </ul>
-        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Differential- und Integralrechnung</span></p>
-<ul class="current nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter01/chapter01_sec00.html">1. Differentialrechnung</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter01/chapter01_sec01.html">1.1 Ableitungen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter01/chapter01_sec02.html">1.2 Rechenregeln Ableitungen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter01/chapter01_sec03.html">1.3 Extremwerte</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter01/chapter01_sec04.html">1.4 Extremwerte mit Nebenbedingung</a></li>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Fortsetzung Integralrechnung</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter01/chapter01_sec00.html">1. Wiederholung Integrale</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter01/chapter01_sec01.html">1.1 Stammfunktion und bestimmtes Integral</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter01/chapter01_sec02.html">1.2 Eigenschaften von Integralen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter01/chapter01_sec03.html">1.3 Partielle Integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter01/chapter01_sec04.html">1.4 Integration durch Substitution</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter01/chapter01_sec05.html">Übungen</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter02/chapter02_sec00.html">2. Integrale</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter02/chapter02_sec01.html">2.1 Stammfunktion und bestimmtes Integral</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter02/chapter02_sec02.html">2.2 Eigenschaften von Integralen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter02/chapter02_sec03.html">2.3 Partielle Integration</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter02/chapter02_sec04.html">2.4 Integration durch Substitution</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter02/chapter02_sec00.html">2. Anwendungen Integral</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter02/chapter02_sec01.html">1.1 Integrieren ist Mitteln</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter02/chapter02_sec02.html">2.2 Fläche zwischen zwei Graphen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter02/chapter02_sec03.html">2.3 Bogenlänge</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter02/chapter02_sec04.html">2.4 Volumen von Rotationskörpern</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter02/chapter02_sec05.html">Übungen</a></li>
-</ul>
-</details></li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="chapter03_sec00.html">3. Anwendungen Integral</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="chapter03_sec01.html">3.1 Integrieren ist Mitteln</a></li>
-<li class="toctree-l2"><a class="reference internal" href="chapter03_sec02.html">3.2 Fläche zwischen zwei Graphen</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">3.3 Bogenlänge</a></li>
-<li class="toctree-l2"><a class="reference internal" href="chapter03_sec04.html">3.4 Volumen von Rotationskörpern</a></li>
-<li class="toctree-l2"><a class="reference internal" href="chapter03_sec05.html">Übungen</a></li>
 </ul>
 </details></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Funktionenreihen</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter04/chapter04_sec00.html">4. Reihen und Potenzreihen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter04/chapter04_sec01.html">4.1 Reihen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter04/chapter04_sec02.html">4.2 Konvergenzkriterien für Reihen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter04/chapter04_sec03.html">4.3 Potenzreihen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter04/chapter04_sec04.html">4.4 Konvergenz von Potenzreihen</a></li>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="chapter03_sec00.html">3. Reihen und Potenzreihen</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="chapter03_sec01.html">3.1 Reihen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter03_sec02.html">3.2 Konvergenzkriterien für Reihen</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">3.3 Potenzreihen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter03_sec04.html">3.4 Konvergenz von Potenzreihen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter03_sec05.html">Übungen</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter04/chapter04_sec00.html">4. Taylorreihen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter04/chapter04_sec01.html">4.1 Berechnung Taylorreihe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter04/chapter04_sec02.html">4.2 Restglied von Taylorreihen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter04/chapter04_sec03.html">4.3 Wichtige Potenzreihen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter04/chapter04_sec04.html">4.4 Rechnen mit Potenzreihen</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter04/chapter04_sec05.html">Übungen</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter05/chapter05_sec00.html">5. Taylorreihen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter05/chapter05_sec01.html">5.1 Berechnung Taylorreihe</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter05/chapter05_sec02.html">5.2 Restglied von Taylorreihen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter05/chapter05_sec03.html">5.3 Wichtige Potenzreihen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter05/chapter05_sec04.html">5.4 Rechnen mit Potenzreihen</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter05/chapter05_sec00.html">5. Fourierreihen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter05/chapter05_sec01.html">5.1 Periodische Funktionen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter05/chapter05_sec02.html">5.2 Fourierreihen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter05/chapter05_sec03.html">5.3 Beispiele für Fourierreihen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter05/chapter05_sec04.html">5.4 Rechenregeln Fourierreihen</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter05/chapter05_sec05.html">Übungen</a></li>
-</ul>
-</details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter06/chapter06_sec00.html">6. Fourierreihen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter06/chapter06_sec01.html">6.1 Periodische Funktionen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter06/chapter06_sec02.html">6.2 Fourierreihen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter06/chapter06_sec03.html">6.3 Beispiele für Fourierreihen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter06/chapter06_sec04.html">6.4 Rechenregeln Fourierreihen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter06/chapter06_sec05.html">Übungen</a></li>
 </ul>
 </details></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Höhere Differentialrechnung</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter07/chapter07_sec00.html">7. Funktionen von mehreren Variablen und partielle Ableitungen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter07/chapter07_sec01.html">7.1 Definition und Visualisierung</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter07/chapter07_sec02.html">7.2 Stetigkeit</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter07/chapter07_sec03.html">7.3 Partielle Ableitungen und Gradient</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter07/chapter07_sec04.html">7.4 Höhere partielle Ableitungen und Hesse-Matrix</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter06/chapter06_sec00.html">6. Funktionen von mehreren Variablen und partielle Ableitungen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter06/chapter06_sec01.html">6.1 Definition und Visualisierung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter06/chapter06_sec02.html">6.2 Stetigkeit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter06/chapter06_sec03.html">6.3 Partielle Ableitungen und Gradient</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter06/chapter06_sec04.html">6.4 Höhere partielle Ableitungen und Hesse-Matrix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter06/chapter06_sec05.html">Übungen</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter07/chapter07_sec00.html">7. Richtungsableitungen und vektorwertige Funktionen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter07/chapter07_sec01.html">7.1 Gradient und Richtungsableitung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter07/chapter07_sec02.html">7.2 Vektorwertige Funktionen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter07/chapter07_sec03.html">7.3 Jacobi-Matrix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter07/chapter07_sec04.html">7.4 Mehrdimensionale Kettenregel</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter07/chapter07_sec05.html">Übungen</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter08/chapter08_sec00.html">8. Richtungsableitungen und vektorwertige Funktionen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter08/chapter08_sec01.html">8.1 Gradient und Richtungsableitung</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter08/chapter08_sec02.html">8.2 Vektorwertige Funktionen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter08/chapter08_sec03.html">8.3 Jacobi-Matrix</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter08/chapter08_sec04.html">8.4 Mehrdimensionale Kettenregel</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter08/chapter08_sec00.html">8. Linearisierung und Extremwerte</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter08/chapter08_sec01.html">8.1 Tangentenfunktionen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter08/chapter08_sec02.html">8.2 Totales Differential</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter08/chapter08_sec03.html">8.3 Extremwerte</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter08/chapter08_sec04.html">8.4 Extremwertprobleme mit Nebenbedingung</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter08/chapter08_sec05.html">Übungen</a></li>
-</ul>
-</details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter09/chapter09_sec00.html">9. Linearisierung und Extremwerte</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter09/chapter09_sec01.html">9.1 Tangentenfunktionen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter09/chapter09_sec02.html">9.2 Totales Differential</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter09/chapter09_sec03.html">9.3 Extremwerte</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter09/chapter09_sec04.html">9.4 Extremwertprobleme mit Nebenbedingung</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter09/chapter09_sec05.html">Übungen</a></li>
 </ul>
 </details></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Höhere Integralrechnung</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter10/chapter10_sec00.html">10. Doppelintegral</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter10/chapter10_sec01.html">10.1 Idee von Doppelintegralen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter10/chapter10_sec02.html">10.2 Berechnung von Doppelintegralen in kartesischen Koordinaten</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter10/chapter10_sec03.html">10.3 Anwendung: Flächenberechnung</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter10/chapter10_sec04.html">10.4 Anwendung: Schwerpunktberechnung</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter10/chapter10_sec05.html">Übungen</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter09/chapter09_sec00.html">9. Doppelintegral</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter09/chapter09_sec01.html">9.1 Idee von Doppelintegralen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter09/chapter09_sec02.html">9.2 Berechnung von Doppelintegralen in kartesischen Koordinaten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter09/chapter09_sec03.html">9.3 Anwendung: Flächenberechnung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter09/chapter09_sec04.html">9.4 Anwendung: Schwerpunktberechnung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter09/chapter09_sec05.html">Übungen</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter11/chapter11_sec00.html">11. Doppelintegral in Polarkoordinaten und Dreifachintegral</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter11/chapter11_sec01.html">11.1 Polarkoordinaten</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter11/chapter11_sec02.html">11.2 Doppelintegral in Polarkoordinaten</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter11/chapter11_sec03.html">11.3 Dreifachintegral</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter11/chapter11_sec04.html">11.4 Anwendungen Dreifachintegral</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter11/chapter11_sec05.html">Übungen</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter10/chapter10_sec00.html">10. Doppelintegral in Polarkoordinaten und Dreifachintegral</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter10/chapter10_sec01.html">10.1 Polarkoordinaten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter10/chapter10_sec02.html">10.2 Doppelintegral in Polarkoordinaten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter10/chapter10_sec03.html">10.3 Dreifachintegral</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter10/chapter10_sec04.html">10.4 Anwendungen Dreifachintegral</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter10/chapter10_sec05.html">Übungen</a></li>
 </ul>
 </details></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Differentialgleichungen</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter12/chapter12_sec00.html">12. Einführung Differentialgleichungen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter12/chapter12_sec01.html">12.1 Grundbegriffe</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter12/chapter12_sec02.html">12.2 Anfangs- und Randwertproblem</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter12/chapter12_sec03.html">12.3 Separable Differentialgleichungen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter12/chapter12_sec04.html">12.4 Exakte Differentialgleichungen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter12/chapter12_sec05.html">Übungen</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter11/chapter11_sec00.html">11. Einführung Differentialgleichungen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter11/chapter11_sec01.html">11.1 Grundbegriffe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter11/chapter11_sec02.html">11.2 Anfangs- und Randwertproblem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter11/chapter11_sec03.html">11.3 Separable Differentialgleichungen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter11/chapter11_sec04.html">11.4 Exakte Differentialgleichungen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter11/chapter11_sec05.html">Übungen</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter13/chapter13_sec00.html">13. Lineare Differentialgleichungen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter13/chapter13_sec01.html">13.1 Lineare DGL 1. Ordnung</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter13/chapter13_sec02.html">13.2 Lösung homogene lineare DGL 1. Ordnung</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter13/chapter13_sec03.html">13.3 Lösung inhomogene lineare DGL 1. Ordnung</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter13/chapter13_sec04.html">13.4 Homogene Systeme aus zwei linearen DGL 1. Ordnung</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter13/chapter13_sec05.html">Übungen</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter12/chapter12_sec00.html">12. Lineare Differentialgleichungen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter12/chapter12_sec01.html">12.1 Lineare DGL 1. Ordnung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter12/chapter12_sec02.html">12.2 Lösung homogene lineare DGL 1. Ordnung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter12/chapter12_sec03.html">12.3 Lösung inhomogene lineare DGL 1. Ordnung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter12/chapter12_sec04.html">12.4 Homogene Systeme aus zwei linearen DGL 1. Ordnung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter12/chapter12_sec05.html">Übungen</a></li>
 </ul>
 </details></li>
 </ul>
@@ -305,9 +286,14 @@
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
   </div>
-  
-  <div id="rtd-footer-container"></div>
 
 
       </div>
@@ -419,24 +405,16 @@
 
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script>
+</button>
 <button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
 </button>
@@ -450,7 +428,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>3.3 Bogenlänge</h1>
+    <h1>3.3 Potenzreihen</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -461,10 +439,7 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lernziele">Lernziele</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lange-eines-funktionsgraphens">Länge eines Funktionsgraphens</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wie-wird-die-bogenlange-berechnet">Wie wird die Bogenlänge berechnet?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#beispiel-zur-berechnung-der-bogenlange">Beispiel zur Berechnung der Bogenlänge</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wie-kommt-man-auf-die-formel-zur-berechnung-der-bogenlange">Wie kommt man auf die Formel zur Berechnung der Bogenlänge?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#potenzreihen-sind-auch-nur-reihen-aber-reihen-von-potenzfunktionen">Potenzreihen sind auch nur Reihen, aber Reihen von Potenzfunktionen</a></li>
 </ul>
             </nav>
         </div>
@@ -476,113 +451,80 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="bogenlange">
-<h1>3.3 Bogenlänge<a class="headerlink" href="#bogenlange" title="Link to this heading">#</a></h1>
-<p>Nachdem wir bisher das Integral dazu genutzt haben, Flächen zu berechnen, wird
-das Integral in diesem Abschnitt dazu genutzt, Längen zu berechnen.</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="potenzreihen">
+<h1>3.3 Potenzreihen<a class="headerlink" href="#potenzreihen" title="Link to this heading">#</a></h1>
+<p>Polynome haben schöne Eigenschaften, vor allem sind sie einfach abzuleiten oder
+zu integrieren. In der Praxis ist es daher oft sinnvoll, “schwierige” Funktionen
+durch Polynome zu ersetzen, auch wenn man dafür Fehler macht.</p>
+<p>Diese Vorgehensweise wird <strong>Approximation</strong> genannt, zu deutsch Annäherung. Für
+Zahlen haben Sie dies schon kennengelernt. Wenn Sie beispielsweise den
+Flächeninhalt <span class="math notranslate nohighlight">\(A\)</span> eines Kreises mit Radius <span class="math notranslate nohighlight">\(r = 3 \,\text{m}\)</span> berechnen wollen,
+so gilt <span class="math notranslate nohighlight">\(A = \pi \cdot r^2 = 9\pi\)</span>. Da aber <span class="math notranslate nohighlight">\(\pi\)</span> unendlich viele
+Nachkommastellen hat, legen Sie fest, wie genau die Annäherung an den wahren
+Flächeninhalt sein soll, indem Sie die Anzahl der Nachkommastellen festlegen.
+Reichen Ihnen beispielsweise zwei Nachkommastellen, also <span class="math notranslate nohighlight">\(\pi \approx 3.14\)</span>, so
+erhalten Sie <span class="math notranslate nohighlight">\(A = 28.27 \,\text{m}^2\)</span>.</p>
+<p>In diesem Kapitel geht es um Potenzreihen und die Approximation von Funktionen durch Potenzreihen.</p>
 <section id="lernziele">
 <h2>Lernziele<a class="headerlink" href="#lernziele" title="Link to this heading">#</a></h2>
 <div class="goals admonition">
 <p class="admonition-title">Lernziele</p>
 <ul class="simple">
-<li><p>Sie wissen, was die <strong>Bogenlänge</strong> eines Funktionsgraphens ist.</p></li>
-<li><p>Sie können die Bogenlänge eines Funktionsgraphens <span class="math notranslate nohighlight">\(f(x)\)</span> einer stetig
-differenzierbaren Funktion <span class="math notranslate nohighlight">\(f\)</span> zwischen dem Startpunkt <span class="math notranslate nohighlight">\((a,f(a))\)</span> und dem
-Endpunkt <span class="math notranslate nohighlight">\((b,f(b))\)</span> mit der folgenden Formel berechnen:</p></li>
+<li><p>Sie können erklären, was eine <strong>Potenzreihe</strong> (im Gegensatz zu einer Reihe) ist.</p></li>
+<li><p>Sie können die <strong>spezielle Darstellungsform einer Potenzreihe</strong> auswendig aufschreiben:</p></li>
 </ul>
 <div class="math notranslate nohighlight">
-\[\text{Bogenlänge} = \int_{a}^{b} \sqrt{1+(f'(x))^2}\, dx.\]</div>
-</div>
-</section>
-<section id="lange-eines-funktionsgraphens">
-<h2>Länge eines Funktionsgraphens<a class="headerlink" href="#lange-eines-funktionsgraphens" title="Link to this heading">#</a></h2>
-<div class="note admonition">
-<p class="admonition-title">Was ist … die Bogenlänge?</p>
-<p>Die Bogenlänge eines Funktionsgraphens ist die Strecke, die man zwischen Start
-und Ziel zurücklegt. Start und Ziel sind dabei zwei Punkte, die beide auf dem
-Funktionsgraphen liegen.</p>
-</div>
-</section>
-<section id="wie-wird-die-bogenlange-berechnet">
-<h2>Wie wird die Bogenlänge berechnet?<a class="headerlink" href="#wie-wird-die-bogenlange-berechnet" title="Link to this heading">#</a></h2>
-<p>Solange wir nicht mit einem Kilometerzähler einen Funktionsgraphen abfahren,
-brauchen wir ein anderes Hilfsmittel, um die Streckenlänge zu berechnen. Für
-Funktionen, die stetig differenzierbar sind, gibt es eine passende Formel.
-Stetig differenzierbare Funktion heißt, dass die Funktion eine 1. Ableitung
-haben muss und diese Ableitung soll wiederum stetig sein. Die üblichen
-Funktionen in den Ingenieurwissenschaften erfüllen diese Bedingung, so dass Sie
-sich im Normalfall keine Gedanken um diese Bedingung machen müssen.</p>
-<div class="note admonition">
-<p class="admonition-title">Kochrezept zur Berechnung der Bogenlänge</p>
-<p>Wenn die Bogenlänge des Funktionsgraphens <span class="math notranslate nohighlight">\(f(x)\)</span> vom Startpunkt <span class="math notranslate nohighlight">\((a,f(a))\)</span> bis zum Endpunkt <span class="math notranslate nohighlight">\((b,f(b))\)</span> berechnet werden soll und die Funktion <span class="math notranslate nohighlight">\(f\)</span> stetig differenzierbar ist, gehen Sie folgenermaßen vor:</p>
-<ol class="arabic simple">
-<li><p>Berechnen Sie die 1. Ableitung <span class="math notranslate nohighlight">\(f'\)</span>.</p></li>
-<li><p>Quadrieren Sie die 1. Ableitung und versuchen Sie, den Term <span class="math notranslate nohighlight">\(\sqrt{1+\left(f'(x)\right)^2}\)</span> so weit wie möglich zu vereinfachen.</p></li>
-<li><p>Berechnen Sie dann das folgende Integral (oft müssen Sie dabei die Substitutionsregel benutzen):</p></li>
-</ol>
-<div class="math notranslate nohighlight">
-\[\text{Bogenlänge} = \int_{a}^{b} \sqrt{1+(f'(x))^2}\, dx.\]</div>
-</div>
-</section>
-<section id="beispiel-zur-berechnung-der-bogenlange">
-<h2>Beispiel zur Berechnung der Bogenlänge<a class="headerlink" href="#beispiel-zur-berechnung-der-bogenlange" title="Link to this heading">#</a></h2>
-<p>Als nächstes betrachten wir die Funktion <span class="math notranslate nohighlight">\(f(x)=x^{\frac{3}{2}}+1\)</span> für positive
-reelle Zahlen <span class="math notranslate nohighlight">\(x\geq 0\)</span>. Wir wählen als</p>
+\[p(x)=\sum_{k=0}^{\infty} a_k x^k\]</div>
 <ul class="simple">
-<li><p>Start <span class="math notranslate nohighlight">\(a=1 \Rightarrow f(1)=1^{\frac{3}{2}}+1 =2\)</span> und als</p></li>
-<li><p>Ziel <span class="math notranslate nohighlight">\(b=4 \Rightarrow f(4)=4^{\frac{3}{2}}+1 = 8+1 = 9\)</span>,</p></li>
+<li><p>Sie können die <strong>allgemeine Darstellungsform einer Potenzreihe</strong></p></li>
 </ul>
-<p>also den Start <span class="math notranslate nohighlight">\((1,2)\)</span> und das Ziel <span class="math notranslate nohighlight">\((4,9)\)</span>. Die Formel für die Bogenlänge
-beinhaltet den Term <span class="math notranslate nohighlight">\((f'(x))^{2}\)</span>, also das Quadrat der 1. Ableitung. Diesen
-Term berechnen wir vorab in einer Nebenrechnung. Zuerst wird die 1. Ableitung
-berechnet:</p>
 <div class="math notranslate nohighlight">
-\[f(x)=x^{\frac{3}{2}} + 1 \Rightarrow f'(x)= \frac{3}{2}x^{\frac{1}{2}} = \frac{3}{2}\sqrt{x}.\]</div>
-<p>Damit erhalten wir</p>
-<div class="math notranslate nohighlight">
-\[(f'(x))^{2} = \big( \frac{3}{2}\sqrt{x} \big)^{2} = \frac{9}{4}x.\]</div>
-<p>Der Term <span class="math notranslate nohighlight">\(\sqrt{1+\frac{9}{4}x}\)</span> lässt sich leider nicht weiter vereinfachen, so dass für die Berechnung des Integrals</p>
-<div class="math notranslate nohighlight">
-\[L = \int_{1}^{4} \sqrt{1 + \frac{9}{4}x}\, dx\]</div>
-<p>die Substitutionsregel benutzt werden muss. Wir setzen <span class="math notranslate nohighlight">\(z = 1 + \frac{9}{4}x\)</span>. Dann gilt</p>
-<div class="amsmath math notranslate nohighlight">
-\[\begin{align*}
-L &amp; = \int_{1}^{4} \sqrt{1 + \frac{9}{4}x}\, dx = \\
-  &amp; = \int \sqrt{z} \cdot \frac{4}{9} \, dz  = \frac{4}{9}\cdot\frac{2}{3} \left[ z^{\frac{3}{2}}\right] = \\
-  &amp; = \frac{8}{27} \left[\left(1+\frac{9}{4}x\right)^{\frac{3}{2}}\right]_{1}^{4} = \\
-  &amp; \approx 7.6337.
-\end{align*}\]</div>
-<p>In dem folgenden Video wird ein zweites Beispiel vorgeführt.</p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/xYr6zDAgIo8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+\[p(x)=\sum_{k=0}^{\infty} a_k (x-x_0)^k\]</div>
+<p>auswendig aufschreiben und erklären, was ein <strong>Entwicklungspunkt</strong> <span class="math notranslate nohighlight">\(x_0\)</span> ist.</p>
+</div>
 </section>
-<section id="wie-kommt-man-auf-die-formel-zur-berechnung-der-bogenlange">
-<h2>Wie kommt man auf die Formel zur Berechnung der Bogenlänge?<a class="headerlink" href="#wie-kommt-man-auf-die-formel-zur-berechnung-der-bogenlange" title="Link to this heading">#</a></h2>
-<p>Um zu erklären, wie die Formel zur Berechnung der Bogenlänge enstanden ist, betrachten wir das folgende Beispiel: <span class="math notranslate nohighlight">\(f(x)=x^3-4x^2+2x+5\)</span>. Der Start soll bei <span class="math notranslate nohighlight">\((1,4)\)</span> liegen, Endpunkt ist <span class="math notranslate nohighlight">\((4,13)\)</span>. Die einfachste Näherung der Bogenlänge ist die Luftlinie, also die die direkte Strecke zwischen Start und Ziel. Das lässt sich mit dem Satz des Pythagoras berechnen:</p>
+<section id="potenzreihen-sind-auch-nur-reihen-aber-reihen-von-potenzfunktionen">
+<h2>Potenzreihen sind auch nur Reihen, aber Reihen von Potenzfunktionen<a class="headerlink" href="#potenzreihen-sind-auch-nur-reihen-aber-reihen-von-potenzfunktionen" title="Link to this heading">#</a></h2>
+<p>Bisher haben wir Zahlenfolgen aufsummiert und die Folge der Partialsummen als
+Reihe bezeichnet. Nun summieren wir Potenzfunktionen auf. Zur Erinnerung,
+Potenzfunktionen (manchmal auch kurz als Potenz bezeichnet) sind die Funktionen</p>
 <div class="math notranslate nohighlight">
-\[L \approx \sqrt{\Delta x^2 + \Delta y^2} = \sqrt{(4-1)^2 + (13-4)^2} = \sqrt{9+81} = \sqrt{108}.\]</div>
-<p>Dies ist nur eine grobe Näherung an die echte Bogenlänge. Besser wird es mit zwei Zwischenstopps.</p>
+\[1, x^1, x^2, x^3, \ldots.\]</div>
+<p>Eine <strong>Potenzreihe</strong> ist eine Reihe vom Typ</p>
 <div class="math notranslate nohighlight">
-\[L \approx \sqrt{(\Delta x_1)^2 + (\Delta y_1)^2} + \sqrt{(\Delta x_2)^2 + (\Delta y_2)^2}  + \sqrt{(\Delta x_3)^2 + (\Delta y_3)^2} .\]</div>
-<p>Zwei Zwischenstopps ergeben drei Luftlinienstücke, deren Summe eine Schätzung für die echte Bogenlänge ist. Noch besser wird es, wenn es noch mehr Zwischenstopps gibt. Am einfachsten ist es, wenn wir immer den gleichen Abstand auf der x-Achse für die Zwischenstopps wählen, nämlich <span class="math notranslate nohighlight">\(\Delta x = \frac{b-a}{N}\)</span>. Dann sind es <span class="math notranslate nohighlight">\(N\)</span> Luftlinienstücke, die aufsummiert werden.</p>
+\[p(x)=a_0 + a_1x + a_2x^2 + a_3 x^3 + \ldots = \sum_{k=0}^{\infty}a_k x^k.\]</div>
+<p>Die reellen Zahlen <span class="math notranslate nohighlight">\(a_0, a_1, a_2, \ldots\)</span> nennt man <strong>Koeffizienten</strong> der Potenzreihe.</p>
+<p>Die Potenzfunktionen <span class="math notranslate nohighlight">\(x, x^2, x^3, \ldots\)</span> gehen alle durch den Punkt <span class="math notranslate nohighlight">\((0,0)\)</span>
+den Koordinatenursprung. Damit verbunden sind auch spezielle
+Symmetrieeigenschaften. Beispielsweise sind die Potenzfunktionen <span class="math notranslate nohighlight">\(x, x^3, x^5,
+x^7, \ldots\)</span> punktsymmetrisch zu <span class="math notranslate nohighlight">\((0,0)\)</span>. Und die Potenzfunktionen mit geraden
+Exponenten <span class="math notranslate nohighlight">\(x^2, x^4, x^6, \ldots\)</span> sind symmetrisch zur y-Achse. Wenn nicht den
+Koordinatenursprung so im Mittelpunkt stehen soll, sondern beispielsweise der
+Punkt <span class="math notranslate nohighlight">\((x_0,y_0)\)</span>, müssen wir die Potenzfunktionen leicht modifizieren. Durch
+Additionn von y_0 werden die Potenzfunktionen nach oben (wenn <span class="math notranslate nohighlight">\(y_0 &gt; 0\)</span>) oder
+unten (wenn <span class="math notranslate nohighlight">\(y_0 &lt; 0\)</span>) verschoben. In der Potenzreihe gibt es schon so einen
+Summanden, nämlich <span class="math notranslate nohighlight">\(a_0\)</span>. Also brauchen wir nur <span class="math notranslate nohighlight">\(a_0=y_0\)</span> setzen, damit nun die
+Symmetrie/Punktsymmetrie sich auf den Punkt <span class="math notranslate nohighlight">\((0, y_0)\)</span> bezieht.</p>
+<p>Als nächstes möchten wir aber die Potenzfunktionen noch so modifizieren, dass
+die Punktsymmetrie bzw. Symmetrie der Potenzfunktionen sich auf die x-Koordinate
+<span class="math notranslate nohighlight">\(x_0\)</span> bezieht. Dazu müssen wir von jedem <span class="math notranslate nohighlight">\(x\)</span> den Wert <span class="math notranslate nohighlight">\(x_0\)</span> abziehen und dann
+die Potenz bilden, also <span class="math notranslate nohighlight">\((x-x_0)^k\)</span> verwenden.</p>
+<div class="note admonition">
+<p class="admonition-title">Was ist … eine Potenzreihe?</p>
+<p>Eine <strong>Potenzreihe</strong> ist eine Reihe vom Typ</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
-L \approx L_1 + L_2 + \dots + L_N &amp;= \sqrt{(\Delta x)^2 + (\Delta y_1)^2} + \sqrt{(\Delta x)^2 + (\Delta y_2)^2} + \ldots + \sqrt{(\Delta x)^2 + (\Delta y_N)^2} \\
-&amp; = \sum_{i=1}^{N} \sqrt{(\Delta x)^2 + (\Delta y_i)^2}.
+p(x) &amp;= a_0 + a_1\cdot(x-x_0) + a_2\cdot(x-x_0)^2 + a_3\cdot(x-x_0)^3 + \ldots = \\
+     &amp;= \sum_{k=0}^{\infty} a_k \cdot (x-x_0)^k.
 \end{align*}\]</div>
-<p>Jetzt wird ein Trick angewandet. Der Term <span class="math notranslate nohighlight">\((\Delta x)^2\)</span> wird ausgeklammert:</p>
-<div class="math notranslate nohighlight">
-\[L \approx \sum_{i=1}^{N} \sqrt{\big(1+\frac{(\Delta y_i)^2}{(\Delta x)^2}\big)\cdot (\Delta x)^2}.\]</div>
-<p>Somit kann die Wurzel <span class="math notranslate nohighlight">\(\sqrt{(\Delta x)^2}\)</span> vereinfacht werden ud wir haben</p>
-<div class="math notranslate nohighlight">
-\[L \approx \sum_{i=1}^{N} \sqrt{\left(1+\left(\frac{\Delta y_i}{\Delta x}\right)^2\right)}\cdot\Delta x.\]</div>
-<p>Das war aber nicht der eigentliche Grund, warum wir den Trick mit dem Ausklammern angewendet haben. Der wahre Grund ist, dass nun der Term</p>
-<div class="math notranslate nohighlight">
-\[\frac{\Delta y_i}{\Delta x}\]</div>
-<p>unter der Wurzel steht (etwas präziser steht <span class="math notranslate nohighlight">\(\big(\frac{\Delta y_i}{\Delta x}\big)^2\)</span> unter der Wurzel). Und das ist ein Term, den wir bereits sehr gut kennen. Er wird Differenzenquotient genannt. Der Differenzenquotient beschreibt die Steigung der Sekante.</p>
-<p>Wenn wir jetzt mehr und mehr Zwischenstopps einfügen, passiert Folgendes. Aus der Summe wird ein Integral. Wenn die Funktion <span class="math notranslate nohighlight">\(f\)</span> differenzierbar ist und die 1. Ableitung stetig, konvergiert der Deifferenzenquotient gegen den Differentialquotienten <span class="math notranslate nohighlight">\(\frac{dy}{dz}\)</span>, also die 1. Ableitung. Und die Differenz <span class="math notranslate nohighlight">\(\Delta x\)</span> wird zum Differential <span class="math notranslate nohighlight">\(dx\)</span>. Im Grenzwert steht dann also Folgendes da:</p>
-<div class="math notranslate nohighlight">
-\[L = \lim_{N\to\infty} \sum_{i=1}^{N} \sqrt{1 + \left(\frac{\Delta y_i}{\Delta x}\right)^2} \Delta x = \int_{a}^{b} \sqrt{1+f'(x)}\, dx.\]</div>
-<p>Und so kann man die Formel zur Berechnung der Bogenlänge begründen.</p>
+<p>Die reellen Zahlen <span class="math notranslate nohighlight">\(a_0, a_1, a_2, \ldots\)</span> nennt man <strong>Koeffizienten</strong> der Potenzreihe. Der Punkt <span class="math notranslate nohighlight">\(x_0\)</span> wird <strong>Entwicklungspunkt</strong> genannt.</p>
+</div>
+<p>Dabei wird der spezielle Punkt <span class="math notranslate nohighlight">\(x_0\)</span> in der Industrie <strong>Arbeitspunkt</strong> genannt,
+in der Mathematik sagen wir aber Entwicklungspunkt oder Entwicklungsstelle. Der
+Wert <span class="math notranslate nohighlight">\(y_0 =  a_0\)</span> hat keinen besonderen Namen.</p>
+<p>Übrigens: Nur weil die Potenzfunktionen symmetrisch oder punktsymmetrisch zum
+Entwicklungspunkt sind, heißt das nicht, dass die Summe der Potenzfunktionen
+irgendeine Symmetrieeigenschaft besitzt.</p>
 </section>
 </section>
 
@@ -622,7 +564,7 @@ L \approx L_1 + L_2 + \dots + L_N &amp;= \sqrt{(\Delta x)^2 + (\Delta y_1)^2} + 
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">3.2 Fläche zwischen zwei Graphen</p>
+        <p class="prev-next-title">3.2 Konvergenzkriterien für Reihen</p>
       </div>
     </a>
     <a class="right-next"
@@ -630,7 +572,7 @@ L \approx L_1 + L_2 + \dots + L_N &amp;= \sqrt{(\Delta x)^2 + (\Delta y_1)^2} + 
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">3.4 Volumen von Rotationskörpern</p>
+        <p class="prev-next-title">3.4 Konvergenz von Potenzreihen</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -641,7 +583,8 @@ L \approx L_1 + L_2 + \dots + L_N &amp;= \sqrt{(\Delta x)^2 + (\Delta y_1)^2} + 
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
   <div class="sidebar-secondary-item">
@@ -651,10 +594,7 @@ L \approx L_1 + L_2 + \dots + L_N &amp;= \sqrt{(\Delta x)^2 + (\Delta y_1)^2} + 
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lernziele">Lernziele</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lange-eines-funktionsgraphens">Länge eines Funktionsgraphens</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wie-wird-die-bogenlange-berechnet">Wie wird die Bogenlänge berechnet?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#beispiel-zur-berechnung-der-bogenlange">Beispiel zur Berechnung der Bogenlänge</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wie-kommt-man-auf-die-formel-zur-berechnung-der-bogenlange">Wie kommt man auf die Formel zur Berechnung der Bogenlänge?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#potenzreihen-sind-auch-nur-reihen-aber-reihen-von-potenzfunktionen">Potenzreihen sind auch nur Reihen, aber Reihen von Potenzfunktionen</a></li>
 </ul>
   </nav></div>
 
@@ -702,8 +642,8 @@ By Simone Gramsch
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
 
   <footer class="bd-footer">
   </footer>

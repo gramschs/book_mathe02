@@ -16,32 +16,35 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-
-  
-  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=87e54e7c" />
     <link rel="stylesheet" type="text/css" href="../_static/jsxgraph.css?v=a7b027cb" />
     <link rel="stylesheet" type="text/css" href="../_static/my_styles.css?v=9b976ced" />
   
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
-  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
     <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
     <script src="../_static/doctools.js?v=9a2dae69"></script>
@@ -54,7 +57,7 @@
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
@@ -66,10 +69,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="5. Taylorreihen" href="../chapter05/chapter05_sec00.html" />
-    <link rel="prev" title="4.4 Konvergenz von Potenzreihen" href="chapter04_sec04.html" />
+    <link rel="next" title="5. Fourierreihen" href="../chapter05/chapter05_sec00.html" />
+    <link rel="prev" title="4.4 Rechnen mit Potenzreihen" href="chapter04_sec04.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
   </head>
   
   
@@ -85,19 +89,8 @@
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-primary-sidebar-checkbox"/>
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-secondary-sidebar-checkbox"/>
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="../search.html"
       method="get">
@@ -105,7 +98,6 @@
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search this book..."
          aria-label="Search this book..."
          autocomplete="off"
@@ -113,8 +105,8 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -130,7 +122,8 @@
       
       
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -160,15 +153,11 @@
 </a></div>
         <div class="sidebar-primary-item">
 
- <script>
- document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script></div>
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
@@ -179,122 +168,114 @@
                 </a>
             </li>
         </ul>
-        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Differential- und Integralrechnung</span></p>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Fortsetzung Integralrechnung</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter01/chapter01_sec00.html">1. Differentialrechnung</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter01/chapter01_sec01.html">1.1 Ableitungen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter01/chapter01_sec02.html">1.2 Rechenregeln Ableitungen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter01/chapter01_sec03.html">1.3 Extremwerte</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter01/chapter01_sec04.html">1.4 Extremwerte mit Nebenbedingung</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter01/chapter01_sec00.html">1. Wiederholung Integrale</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter01/chapter01_sec01.html">1.1 Stammfunktion und bestimmtes Integral</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter01/chapter01_sec02.html">1.2 Eigenschaften von Integralen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter01/chapter01_sec03.html">1.3 Partielle Integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter01/chapter01_sec04.html">1.4 Integration durch Substitution</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter01/chapter01_sec05.html">Übungen</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter02/chapter02_sec00.html">2. Integrale</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter02/chapter02_sec01.html">2.1 Stammfunktion und bestimmtes Integral</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter02/chapter02_sec02.html">2.2 Eigenschaften von Integralen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter02/chapter02_sec03.html">2.3 Partielle Integration</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter02/chapter02_sec04.html">2.4 Integration durch Substitution</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter02/chapter02_sec00.html">2. Anwendungen Integral</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter02/chapter02_sec01.html">1.1 Integrieren ist Mitteln</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter02/chapter02_sec02.html">2.2 Fläche zwischen zwei Graphen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter02/chapter02_sec03.html">2.3 Bogenlänge</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter02/chapter02_sec04.html">2.4 Volumen von Rotationskörpern</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter02/chapter02_sec05.html">Übungen</a></li>
-</ul>
-</details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter03/chapter03_sec00.html">3. Anwendungen Integral</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec01.html">3.1 Integrieren ist Mitteln</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec02.html">3.2 Fläche zwischen zwei Graphen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec03.html">3.3 Bogenlänge</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec04.html">3.4 Volumen von Rotationskörpern</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec05.html">Übungen</a></li>
 </ul>
 </details></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Funktionenreihen</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="chapter04_sec00.html">4. Reihen und Potenzreihen</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="chapter04_sec01.html">4.1 Reihen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="chapter04_sec02.html">4.2 Konvergenzkriterien für Reihen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="chapter04_sec03.html">4.3 Potenzreihen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="chapter04_sec04.html">4.4 Konvergenz von Potenzreihen</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter03/chapter03_sec00.html">3. Reihen und Potenzreihen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec01.html">3.1 Reihen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec02.html">3.2 Konvergenzkriterien für Reihen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec03.html">3.3 Potenzreihen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec04.html">3.4 Konvergenz von Potenzreihen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec05.html">Übungen</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="chapter04_sec00.html">4. Taylorreihen</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="chapter04_sec01.html">4.1 Berechnung Taylorreihe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter04_sec02.html">4.2 Restglied von Taylorreihen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter04_sec03.html">4.3 Wichtige Potenzreihen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter04_sec04.html">4.4 Rechnen mit Potenzreihen</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Übungen</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter05/chapter05_sec00.html">5. Taylorreihen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter05/chapter05_sec01.html">5.1 Berechnung Taylorreihe</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter05/chapter05_sec02.html">5.2 Restglied von Taylorreihen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter05/chapter05_sec03.html">5.3 Wichtige Potenzreihen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter05/chapter05_sec04.html">5.4 Rechnen mit Potenzreihen</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter05/chapter05_sec00.html">5. Fourierreihen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter05/chapter05_sec01.html">5.1 Periodische Funktionen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter05/chapter05_sec02.html">5.2 Fourierreihen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter05/chapter05_sec03.html">5.3 Beispiele für Fourierreihen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter05/chapter05_sec04.html">5.4 Rechenregeln Fourierreihen</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter05/chapter05_sec05.html">Übungen</a></li>
-</ul>
-</details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter06/chapter06_sec00.html">6. Fourierreihen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter06/chapter06_sec01.html">6.1 Periodische Funktionen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter06/chapter06_sec02.html">6.2 Fourierreihen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter06/chapter06_sec03.html">6.3 Beispiele für Fourierreihen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter06/chapter06_sec04.html">6.4 Rechenregeln Fourierreihen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter06/chapter06_sec05.html">Übungen</a></li>
 </ul>
 </details></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Höhere Differentialrechnung</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter07/chapter07_sec00.html">7. Funktionen von mehreren Variablen und partielle Ableitungen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter07/chapter07_sec01.html">7.1 Definition und Visualisierung</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter07/chapter07_sec02.html">7.2 Stetigkeit</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter07/chapter07_sec03.html">7.3 Partielle Ableitungen und Gradient</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter07/chapter07_sec04.html">7.4 Höhere partielle Ableitungen und Hesse-Matrix</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter06/chapter06_sec00.html">6. Funktionen von mehreren Variablen und partielle Ableitungen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter06/chapter06_sec01.html">6.1 Definition und Visualisierung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter06/chapter06_sec02.html">6.2 Stetigkeit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter06/chapter06_sec03.html">6.3 Partielle Ableitungen und Gradient</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter06/chapter06_sec04.html">6.4 Höhere partielle Ableitungen und Hesse-Matrix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter06/chapter06_sec05.html">Übungen</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter07/chapter07_sec00.html">7. Richtungsableitungen und vektorwertige Funktionen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter07/chapter07_sec01.html">7.1 Gradient und Richtungsableitung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter07/chapter07_sec02.html">7.2 Vektorwertige Funktionen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter07/chapter07_sec03.html">7.3 Jacobi-Matrix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter07/chapter07_sec04.html">7.4 Mehrdimensionale Kettenregel</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter07/chapter07_sec05.html">Übungen</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter08/chapter08_sec00.html">8. Richtungsableitungen und vektorwertige Funktionen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter08/chapter08_sec01.html">8.1 Gradient und Richtungsableitung</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter08/chapter08_sec02.html">8.2 Vektorwertige Funktionen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter08/chapter08_sec03.html">8.3 Jacobi-Matrix</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter08/chapter08_sec04.html">8.4 Mehrdimensionale Kettenregel</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter08/chapter08_sec00.html">8. Linearisierung und Extremwerte</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter08/chapter08_sec01.html">8.1 Tangentenfunktionen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter08/chapter08_sec02.html">8.2 Totales Differential</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter08/chapter08_sec03.html">8.3 Extremwerte</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter08/chapter08_sec04.html">8.4 Extremwertprobleme mit Nebenbedingung</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter08/chapter08_sec05.html">Übungen</a></li>
-</ul>
-</details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter09/chapter09_sec00.html">9. Linearisierung und Extremwerte</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter09/chapter09_sec01.html">9.1 Tangentenfunktionen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter09/chapter09_sec02.html">9.2 Totales Differential</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter09/chapter09_sec03.html">9.3 Extremwerte</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter09/chapter09_sec04.html">9.4 Extremwertprobleme mit Nebenbedingung</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter09/chapter09_sec05.html">Übungen</a></li>
 </ul>
 </details></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Höhere Integralrechnung</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter10/chapter10_sec00.html">10. Doppelintegral</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter10/chapter10_sec01.html">10.1 Idee von Doppelintegralen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter10/chapter10_sec02.html">10.2 Berechnung von Doppelintegralen in kartesischen Koordinaten</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter10/chapter10_sec03.html">10.3 Anwendung: Flächenberechnung</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter10/chapter10_sec04.html">10.4 Anwendung: Schwerpunktberechnung</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter10/chapter10_sec05.html">Übungen</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter09/chapter09_sec00.html">9. Doppelintegral</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter09/chapter09_sec01.html">9.1 Idee von Doppelintegralen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter09/chapter09_sec02.html">9.2 Berechnung von Doppelintegralen in kartesischen Koordinaten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter09/chapter09_sec03.html">9.3 Anwendung: Flächenberechnung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter09/chapter09_sec04.html">9.4 Anwendung: Schwerpunktberechnung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter09/chapter09_sec05.html">Übungen</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter11/chapter11_sec00.html">11. Doppelintegral in Polarkoordinaten und Dreifachintegral</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter11/chapter11_sec01.html">11.1 Polarkoordinaten</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter11/chapter11_sec02.html">11.2 Doppelintegral in Polarkoordinaten</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter11/chapter11_sec03.html">11.3 Dreifachintegral</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter11/chapter11_sec04.html">11.4 Anwendungen Dreifachintegral</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter11/chapter11_sec05.html">Übungen</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter10/chapter10_sec00.html">10. Doppelintegral in Polarkoordinaten und Dreifachintegral</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter10/chapter10_sec01.html">10.1 Polarkoordinaten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter10/chapter10_sec02.html">10.2 Doppelintegral in Polarkoordinaten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter10/chapter10_sec03.html">10.3 Dreifachintegral</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter10/chapter10_sec04.html">10.4 Anwendungen Dreifachintegral</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter10/chapter10_sec05.html">Übungen</a></li>
 </ul>
 </details></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Differentialgleichungen</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter12/chapter12_sec00.html">12. Einführung Differentialgleichungen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter12/chapter12_sec01.html">12.1 Grundbegriffe</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter12/chapter12_sec02.html">12.2 Anfangs- und Randwertproblem</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter12/chapter12_sec03.html">12.3 Separable Differentialgleichungen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter12/chapter12_sec04.html">12.4 Exakte Differentialgleichungen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter12/chapter12_sec05.html">Übungen</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter11/chapter11_sec00.html">11. Einführung Differentialgleichungen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter11/chapter11_sec01.html">11.1 Grundbegriffe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter11/chapter11_sec02.html">11.2 Anfangs- und Randwertproblem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter11/chapter11_sec03.html">11.3 Separable Differentialgleichungen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter11/chapter11_sec04.html">11.4 Exakte Differentialgleichungen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter11/chapter11_sec05.html">Übungen</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter13/chapter13_sec00.html">13. Lineare Differentialgleichungen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter13/chapter13_sec01.html">13.1 Lineare DGL 1. Ordnung</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter13/chapter13_sec02.html">13.2 Lösung homogene lineare DGL 1. Ordnung</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter13/chapter13_sec03.html">13.3 Lösung inhomogene lineare DGL 1. Ordnung</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter13/chapter13_sec04.html">13.4 Homogene Systeme aus zwei linearen DGL 1. Ordnung</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter13/chapter13_sec05.html">Übungen</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter12/chapter12_sec00.html">12. Lineare Differentialgleichungen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter12/chapter12_sec01.html">12.1 Lineare DGL 1. Ordnung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter12/chapter12_sec02.html">12.2 Lösung homogene lineare DGL 1. Ordnung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter12/chapter12_sec03.html">12.3 Lösung inhomogene lineare DGL 1. Ordnung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter12/chapter12_sec04.html">12.4 Homogene Systeme aus zwei linearen DGL 1. Ordnung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter12/chapter12_sec05.html">Übungen</a></li>
 </ul>
 </details></li>
 </ul>
@@ -305,9 +286,14 @@
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
   </div>
-  
-  <div id="rtd-footer-container"></div>
 
 
       </div>
@@ -419,24 +405,16 @@
 
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script>
+</button>
 <button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
 </button>
@@ -476,150 +454,325 @@ document.write(`
 <h1>Übungen<a class="headerlink" href="#ubungen" title="Link to this heading">#</a></h1>
 <div class="miniexercise admonition">
 <p class="admonition-title">Übung 4.1</p>
-<p>Untersuchen Sie die Reihe</p>
+<p>Berechnen Sie das Taylorpolynom der Ordnung 3</p>
 <div class="math notranslate nohighlight">
-\[ \sum_{n=1}^\infty -\frac{4\cdot3^{n+3}}{5^n}\]</div>
-<p>auf sowohl mit dem Quotienten- als auch dem Wurzelkriterium auf Konvergenz.</p>
+\[f(x) = \frac{1}{x+1}\]</div>
+<p>für die Entwicklungspunkte <span class="math notranslate nohighlight">\(x_0 = 0\)</span> und <span class="math notranslate nohighlight">\(x_0 = 1\)</span>.</p>
 </div>
 <div class="miniexercise toggle admonition">
 <p class="admonition-title">Lösung</p>
-<p>Die Reihe ist (absolut) konvergent.</p>
+<p>Das Taylorpolynom von <span class="math notranslate nohighlight">\(f\)</span> im Entwicklungspunkt <span class="math notranslate nohighlight">\(x_{0}=0\)</span> ist</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*} 
+    T_{3}(x) = 1-x+x^2-x^3 .
+ \end{equation*}\]</div>
+<p>Das Taylorpolynom von <span class="math notranslate nohighlight">\(f\)</span> im Entwicklungspunkt <span class="math notranslate nohighlight">\(x_{0}=1\)</span> ist</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*} 
+    T_{3}(x)=  \frac{1}{2}
+    -\frac{1}{4}\cdot(x-1)^{1}
+    +\frac{1}{8}\cdot(x-1)^{2}
+    -\frac{1}{16}\cdot(x-1)^{3}.
+ \end{equation*}\]</div>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Lösungsweg</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">Wir definieren <span class="math notranslate nohighlight">\(a_n := -\frac{4\cdot 3^{n+3}}{5^n}\)</span>.</p>
-<p class="sd-card-text">Wurzelkriterium:</p>
-<p class="sd-card-text">Zu bestimmen ist der Grenzwert (falls dieser existiert)</p>
+<p class="sd-card-text">Die ersten drei Ableitungen von <span class="math notranslate nohighlight">\(f(x) = \frac{1}{x+1}\)</span> lauten:</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*} 
-r &amp; = \lim_{n\rightarrow \infty}\sqrt[n]{\left|a_n\right|}
-    = \lim_{n\rightarrow \infty}{\left(\frac{4\cdot 3^{n+3}}{5^n}\right)}^{1/n}\\ 
-&amp; = \lim_{n\rightarrow \infty}\frac{3\cdot {108}^{1/n}}{5}
-    = \frac{3}{5}. 
-\end{align*}\]</div>
-<p class="sd-card-text">Wegen <span class="math notranslate nohighlight">\(r&lt;1\)</span> ist die Reihe (absolut) konvergent.</p>
-<p class="sd-card-text">Quotientenkriterium:</p>
-<p class="sd-card-text">Zu bestimmen ist der Grenzwert (falls dieser existiert)</p>
+ f^\prime(x)&amp;=-\frac{1}{{\left(x+1\right)}^2} \\ 
+ f^{\prime \prime}(x)&amp;=\frac{2}{{\left(x+1\right)}^3} \\ 
+ f^{(3)}(x)&amp;=-\frac{6}{{\left(x+1\right)}^4} 
+  \end{align*}\]</div>
+<p class="sd-card-text">Die allgemeine Darstellung eines Taylorpolynoms von <span class="math notranslate nohighlight">\(f\)</span> vom Grad 3 im Entwicklungspunkt <span class="math notranslate nohighlight">\(x_0\)</span> lautet</p>
 <div class="amsmath math notranslate nohighlight">
-\[\begin{align*} 
-r &amp; = \lim_{n\rightarrow \infty} \left|\frac{a_{n+1}}{a_n}\right|
-    =\lim_{n\rightarrow \infty}3^{n+4}\,\frac{1}{3^{n+3}}\,\frac{1}{5^{n+1}}\,5^n\\ 
-&amp; = \lim_{n\rightarrow \infty}\frac{3}{5}
-    =\frac{3}{5}. 
-\end{align*}\]</div>
-<p class="sd-card-text">Wegen <span class="math notranslate nohighlight">\(r&lt;1\)</span> ist die Reihe (absolut) konvergent.</p>
+\[\begin{equation*} 
+    T_{3}(x)\  =\  f(x_0)
+         +\frac{f^\prime(x_0)}{1!}(x-x_0)^{1}
+         +\frac{f^{\prime\prime}(x_0)}{2!}(x-x_0)^{2}
+         +\frac{f^{(3)}(x_0)}{3!}(x-x_0)^{3}.
+ \end{equation*}\]</div>
+<p class="sd-card-text">Es gilt für <span class="math notranslate nohighlight">\(x_0=0\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[f(0) = 1, \quad f'(0)=-1, \quad f''(0)= 2, \quad f^{(3)}(0)=-6.\]</div>
+<p class="sd-card-text">Das Taylorpolynom von <span class="math notranslate nohighlight">\(f\)</span> im Entwicklungspunkt <span class="math notranslate nohighlight">\(x_{0}=0\)</span> ist</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*} 
+    T_{3}(x)=  1
+   -1 \cdot(x-0)^{1}
+ + 1 \cdot(x-0)^{2}
+   -1 \cdot(x-0)^{3} = 1-x+x^2-x^3 .
+ \end{equation*}\]</div>
+<p class="sd-card-text">Es gilt für <span class="math notranslate nohighlight">\(x_0=1\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[f(1) = \frac{1}{2}, \quad f'(1)=-\frac{1}{4}, \quad f''(1)= \frac{1}{4}, \quad f^{(3)}(1)=-\frac{6}{16}.\]</div>
+<p class="sd-card-text">Das Taylorpolynom von <span class="math notranslate nohighlight">\(f\)</span> im Entwicklungspunkt <span class="math notranslate nohighlight">\(x_{0}=1\)</span> ist</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*} 
+    T_{3}(x)=  \frac{1}{2}
+    -\frac{1}{4}\cdot(x-1)^{1}
+    +\frac{1}{8}\cdot(x-1)^{2}
+    -\frac{1}{16}\cdot(x-1)^{3}.
+ \end{equation*}\]</div>
 </div>
 </details></div>
 <div class="miniexercise admonition">
 <p class="admonition-title">Übung 4.2</p>
-<p>Untersuchen Sie die Reihe</p>
+<p>Berechnen Sie das Taylorpolynom der Ordnung 3</p>
 <div class="math notranslate nohighlight">
-\[\sum_{n=1}^\infty 4\frac{6^n}{{11}^{n+4}}\]</div>
-<p>sowohl mit dem Quotienten- als auch dem Wurzelkriterium auf Konvergenz.</p>
+\[f(x) = \sqrt{x+1}\]</div>
+<p>für die Entwicklungspunkte <span class="math notranslate nohighlight">\(x_0 = 0\)</span> und <span class="math notranslate nohighlight">\(x_0 = 1\)</span>.</p>
 </div>
 <div class="miniexercise toggle admonition">
 <p class="admonition-title">Lösung</p>
-<p>Die Reihe ist (absolut) konvergent.</p>
+<p>Das Taylorpolynom von <span class="math notranslate nohighlight">\(f\)</span> im Entwicklungspunkt <span class="math notranslate nohighlight">\(x_{0}=0\)</span> ist</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*} 
+    T_{3}(x)
+    = 1 + \frac{1}{2}x -\frac{1}{8}x^2 +\frac{1}{16}x^3.
+ \end{equation*}\]</div>
+<p>Das Taylorpolynom von <span class="math notranslate nohighlight">\(f\)</span> im Entwicklungspunkt <span class="math notranslate nohighlight">\(x_{0}=1\)</span> ist</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*} 
+    T_{3}(x)=  \sqrt{2}
+    +\frac{\sqrt{2}}{4}\cdot(x-1)^{1}
+    -\frac{\sqrt{2}}{32}\cdot(x-1)^{2}
+    +\frac{\sqrt{2}}{128}\cdot(x-1)^{3}\ .
+ \end{equation*}\]</div>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Lösungsweg</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">Wir definieren <span class="math notranslate nohighlight">\(a_n := 4\frac{6^n}{{11}^{n+4}}\)</span>.</p>
-<p class="sd-card-text">Wurzelkriterium:
-Zu bestimmen ist der Grenzwert (falls dieser existiert)</p>
+<p class="sd-card-text">Die ersten drei Ableitungen von <span class="math notranslate nohighlight">\(f(x) = \sqrt{x+1}\)</span> lauten:</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*} 
-r &amp; = \lim_{n\rightarrow \infty}\sqrt[n]{\left|a_n\right|}
-    = \lim_{n\rightarrow \infty}{\left(4\frac{6^n}{{11}^{n+4}}\right)}^{1/n}\\ 
-&amp; = \lim_{n\rightarrow \infty}\frac{6\,{\left(\frac{4}{14641}\right)}^{1/n}}{11}
-    = \frac{6}{11}. 
-\end{align*}\]</div>
-<p class="sd-card-text">Wegen <span class="math notranslate nohighlight">\(r&lt;1\)</span> ist die Reihe (absolut) konvergent.</p>
-<p class="sd-card-text">Quotientenkriterium:
-Zu bestimmen ist der Grenzwert (falls dieser existiert)</p>
+ f^\prime(x)&amp;=\frac{1}{2\,\sqrt{x+1}} \\ 
+ f^{\prime \prime}(x)&amp;=-\frac{1}{4\,{\left(x+1\right)}^{3/2}} \\ 
+ f^{(3)}(x)&amp;=\frac{3}{8\,{\left(x+1\right)}^{5/2}} 
+  \end{align*}\]</div>
+<p class="sd-card-text">Die allgemeine Darstellung eines Taylorpolynoms von <span class="math notranslate nohighlight">\(f\)</span> vom Grad 3 im Entwicklungspunkt <span class="math notranslate nohighlight">\(x_0\)</span> lautet</p>
 <div class="amsmath math notranslate nohighlight">
-\[\begin{align*} 
-r &amp; = \lim_{n\rightarrow \infty} \left|\frac{a_{n+1}}{a_n}\right|
-    =\lim_{n\rightarrow \infty}\frac{6^{n+1}\,{11}^{n+4}\,\frac{1}{{11}^{n+5}}}{6^n}\\ 
-&amp; = \lim_{n\rightarrow \infty}\frac{6}{11}
-    =\frac{6}{11}. 
-\end{align*}\]</div>
-<p class="sd-card-text">Wegen <span class="math notranslate nohighlight">\(r&lt;1\)</span> ist die Reihe (absolut) konvergent.</p>
+\[\begin{equation*} 
+    T_{3}(x)\  =\  f(x_0) 
+         +\frac{f^\prime(x_0)}{1!}(x-x_0)^{1}
+         +\frac{f^{\prime\prime}(x_0)}{2!}(x-x_0)^{2}
+         +\frac{f^{(3)}(x_0)}{3!}(x-x_0)^{3}.
+ \end{equation*}\]</div>
+<p class="sd-card-text">Es gilt für <span class="math notranslate nohighlight">\(x_0=0\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[f(0) = 1, \quad f'(0)=\frac{1}{2}, \quad f''(0)=-\frac{1}{4}, \quad f^{(3)}(0)=\frac{3}{8}.\]</div>
+<p class="sd-card-text">Das Taylorpolynom von <span class="math notranslate nohighlight">\(f\)</span> im Entwicklungspunkt <span class="math notranslate nohighlight">\(x_{0}=0\)</span> ist</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*} 
+    T_{3}(x)=  1
+    +\frac{1}{2}\cdot(x-0)^{1}
+    -\frac{1}{8}\cdot(x-0)^{2}
+    +\frac{1}{16}\cdot(x-0)^{3}
+    = 1 + \frac{1}{2}x -\frac{1}{8}x^2 +\frac{1}{16}x^3.
+ \end{equation*}\]</div>
+<p class="sd-card-text">Es gilt für <span class="math notranslate nohighlight">\(x_0=1\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[f(1) = \sqrt{2}, \quad f'(1)=\frac{\sqrt{2}}{4}, \quad f''(1)=-\frac{\sqrt{2}}{16}, \quad f^{(3)}(1)=\frac{3\sqrt{2}}{64}.\]</div>
+<p class="sd-card-text">Das Taylorpolynom von <span class="math notranslate nohighlight">\(f\)</span> im Entwicklungspunkt <span class="math notranslate nohighlight">\(x_{0}=1\)</span> ist</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*} 
+    T_{3}(x)=  \sqrt{2}
+    +\frac{\sqrt{2}}{4}\cdot(x-1)^{1}
+    -\frac{\sqrt{2}}{32}\cdot(x-1)^{2}
+    +\frac{\sqrt{2}}{128}\cdot(x-1)^{3}\ .
+ \end{equation*}\]</div>
 </div>
 </details></div>
 <div class="miniexercise admonition">
 <p class="admonition-title">Übung 4.3</p>
-<p>Untersuchen Sie die Reihe</p>
+<p>Berechnen Sie das Taylorpolynom der Ordnung 3</p>
 <div class="math notranslate nohighlight">
-\[\sum_{n=1}^\infty \frac{\frac{1}{{\left(-8\right)}^{n+2}}\,{10}^{n+4}}{4}\]</div>
-<p>sowohl mit dem Quotienten- als auch dem Wurzelkriterium auf Konvergenz.</p>
+\[f(x) = \ln((1+x)^2)\]</div>
+<p>für den Entwicklungspunkt <span class="math notranslate nohighlight">\(x_0 = 0\)</span>.</p>
 </div>
 <div class="miniexercise toggle admonition">
 <p class="admonition-title">Lösung</p>
-<p>Die Reihe ist divergent.</p>
+<p>Das Taylorpolynom von <span class="math notranslate nohighlight">\(f\)</span> im Entwicklungspunkt <span class="math notranslate nohighlight">\(x_{0}=0\)</span> ist</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*} 
+    T_{3}(x) = 2x - x^{2} +\frac{2}{3}x^{3}.
+ \end{equation*}\]</div>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Lösungsweg</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">Die Summanden bilden keine Nullfolge, denn</p>
+<p class="sd-card-text">Die ersten drei Ableitungen von <span class="math notranslate nohighlight">\(f(x) = \ln((1+x)^2)\)</span> lauten:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+f'(x)  &amp;= \frac{2}{1+x}\\
+f''(x) &amp;= -\frac{2}{(1+x)^2} \\
+f^{(3)}(x) &amp;= \frac{4}{(1+x)^3}
+\end{align*}\]</div>
+<p class="sd-card-text">Die allgemeine Darstellung eines Taylorpolynoms von <span class="math notranslate nohighlight">\(f\)</span> vom Grad 3 im Entwicklungspunkt <span class="math notranslate nohighlight">\(x_0\)</span> lautet</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*} 
+    T_{3}(x)\  =\  f(x_0) 
+         +\frac{f^\prime(x_0)}{1!}(x-x_0)^{1}
+         +\frac{f^{\prime\prime}(x_0)}{2!}(x-x_0)^{2}
+         +\frac{f^{(3)}(x_0)}{3!}(x-x_0)^{3}.
+\end{equation*}\]</div>
+<p class="sd-card-text">Es gilt für <span class="math notranslate nohighlight">\(x_0=0\)</span>:</p>
 <div class="math notranslate nohighlight">
-\[\lim_{n\rightarrow \infty} \left| \frac{\frac{1}{{\left(-8\right)}^{n+2}}\,{10}^{n+4}}{4}\right| =\infty \,.\]</div>
-<p class="sd-card-text">Somit divergiert die Reihe. Die Anwendung des Wurzel- sowie des Quotientenkriteriums erübrigt sich.</p>
+\[f(0) = 0, \quad f'(0)=2, \quad f''(0)=-2, \quad f^{(3)}(0)=4.\]</div>
+<p class="sd-card-text">Das Taylorpolynom von <span class="math notranslate nohighlight">\(f\)</span> im Entwicklungspunkt <span class="math notranslate nohighlight">\(x_{0}=0\)</span> ist</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*} 
+    T_{3}(x)= 0
+    +2\cdot(x-0)^{1}
+    -(x-0)^{2}
+    +\frac{2}{3}\cdot(x-0)^{3}
+= 2x - x^{2} +\frac{2}{3}x^{3}.
+ \end{equation*}\]</div>
 </div>
 </details></div>
 <div class="miniexercise admonition">
 <p class="admonition-title">Übung 4.4</p>
-<p>Bestimmen Sie den Konvergenzradius <span class="math notranslate nohighlight">\(r\)</span> der Potenzreihe</p>
+<p>Berechnen Sie das Taylorpolynom der Ordnung 3</p>
 <div class="math notranslate nohighlight">
-\[\sum_{n=1}^{\infty}\frac{8^n}{n}\cdot(x-2)^n.\]</div>
-<p>Untersuchen Sie gegebenenfalls die Konvergenz im Randbereich und geben Sie den Konvergenzbereich an.</p>
+\[f(x) = \ln\left(\frac{1+x}{1-x} \right)\]</div>
+<p>für den Entwicklungspunkt <span class="math notranslate nohighlight">\(x_0 = 0\)</span>.</p>
 </div>
 <div class="miniexercise toggle admonition">
 <p class="admonition-title">Lösung</p>
-<p>Konvergenzradius <span class="math notranslate nohighlight">\(r=\frac{1}{8}\)</span> und Konvergenzbereich: <span class="math notranslate nohighlight">\([\frac{15}{8}; \frac{17}{8})\)</span>, d.h. <span class="math notranslate nohighlight">\(\frac{15}{8} \leq x &lt; \frac{17}{8}\)</span></p>
+<p>Das Taylorpolynom von <span class="math notranslate nohighlight">\(f\)</span> im Entwicklungspunkt <span class="math notranslate nohighlight">\(x_{0}=0\)</span> ist</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*} 
+    T_{3}(x) = 2x +\frac{2}{3}x^{3}.
+ \end{equation*}\]</div>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Lösungsweg</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">Tipp bzw. Quelle der Aufgabe:  <a class="reference external" href="https://www.youtube.com/watch?v=gn8jCoSJb24">YouTube MathemaTrick – Konvergenzradius bestimmen</a></p>
-<p class="sd-card-text">Wir definieren <span class="math notranslate nohighlight">\(a_n := \frac{8^n}{n}\)</span>. Nach der Formel von Cauchy-Hadamard (Wurzelkriterium) wird der Konvergenzradius <span class="math notranslate nohighlight">\(r\)</span> berechnet als</p>
-<div class="math notranslate nohighlight">
-\[r = \lim_{n\rightarrow \infty} \frac{1}{\sqrt[n]{\left|a_n\right|}}\]</div>
-<p class="sd-card-text">Wir rechnen zuerst in einer Nebenrechnung</p>
-<div class="math notranslate nohighlight">
-\[\sqrt[n]{|a_n|} = \sqrt[n]{\left|\frac{8^n}{n}\right|} = \sqrt[n]{\frac{8^n}{n}} = \frac{\sqrt[n]{8^n}}{\sqrt[n]{n}} = \frac{8}{\sqrt[n]{n}}. \]</div>
-<p class="sd-card-text">Eingesetzt in die Wurzel-Formel ist dies</p>
-<div class="math notranslate nohighlight">
-\[r = \lim_{n\rightarrow \infty} \frac{1}{\sqrt[n]{\left|a_n\right|}} = \lim_{n\to \infty} \frac{\sqrt[n]{n}}{8} = \lim_{n\to\infty}\frac{n^{\frac{1}{n}}}{8} = \frac{1}{8}.\]</div>
-<p class="sd-card-text">Die Potenzreihe konvergiert absolut im Intervall <span class="math notranslate nohighlight">\((\frac{15}{8}; \frac{17}{8})\)</span>. Das Konvergenzverhalten an den Randpunkten muss jedoch gesondert untersucht werden.</p>
-<p class="sd-card-text">Durch das Einsetzen einer der Randpunkte in die Potenzreihe reduziert sich diese auf eine Zahlenreihe. Die Konvergenzfrage lässt sich dann mit einem passenden Konvergenz- oder Divergenzkriterium für Reihen angehen.</p>
-<p class="sd-card-text">Setzt man den linken Randpunkt <span class="math notranslate nohighlight">\(x=\frac{15}{8}\)</span> ein, so erhält man:</p>
+<p class="sd-card-text">Die ersten drei Ableitungen von <span class="math notranslate nohighlight">\(f(x) = \ln\left(\frac{1+x}{1-x} \right)\)</span> lauten:</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
-\sum_{n=1}^{\infty} \frac{8^n}{n}\cdot\left(\frac{15}{8}-2\right)^n 
-&amp;= \sum_{n=1}^{\infty} \frac{8^n}{n}\cdot\left(-\frac{1}{8}\right)^n \\
-&amp;= \sum_{n=1}^{\infty} \frac{8^n}{n}\cdot \frac{(-1)^n}{8^n} \\
-&amp;= \sum_{n=1}^{\infty} \frac{(-1)^n}{n}. 
+f'(x)  &amp;= -\frac{2}{x^2-1}\\
+f''(x) &amp;= \frac{4x}{(x^2-1)^2} \\
+f^{(3)}(x) &amp;= -\frac{4(3x^2+1)}{(x^2-1)^3}
 \end{align*}\]</div>
-<p class="sd-card-text">Diese Reihe konvergiert (gegen <span class="math notranslate nohighlight">\(-\ln(2)\)</span>), der linke Randpunkt gehört zum Konvergenzbereich.</p>
-<p class="sd-card-text">Setzt man den rechten Randpunkt <span class="math notranslate nohighlight">\(x=\frac{17}{8}\)</span> ein, so erhält man:</p>
+<p class="sd-card-text">Die allgemeine Darstellung eines Taylorpolynoms von <span class="math notranslate nohighlight">\(f\)</span> vom Grad 3 im Entwicklungspunkt <span class="math notranslate nohighlight">\(x_0\)</span> lautet</p>
 <div class="amsmath math notranslate nohighlight">
-\[\begin{align*}
-\sum_{n=1}^\infty \frac{8^n}{n}\cdot\left(\frac{17}{8}-2\right)^n 
-&amp;= \sum_{n=1}^{\infty} \frac{8^n}{n}\cdot\left(\frac{1}{8}\right)^n \\
-&amp;= \sum_{n=1}^{\infty} \frac{8^n}{n}\cdot\frac{1^n}{8^n} \\
-&amp; = \sum_{n=1}^{\infty} \frac{1}{n}.
-\end{align*}\]</div>
-<p class="sd-card-text">Diese Reihe divergiert, der rechte Randpunkt gehört <em>nicht</em> zum Konvergenzbereich.</p>
-<p class="sd-card-text">Antwort: Konvergenzradius <span class="math notranslate nohighlight">\(r=\frac{1}{8}\)</span> und Konvergenzbereich: <span class="math notranslate nohighlight">\([\frac{15}{8}; \frac{17}{8})\)</span>, d.h. <span class="math notranslate nohighlight">\(\frac{15}{8} \leq x &lt; \frac{17}{8}\)</span></p>
+\[\begin{equation*} 
+    T_{3}(x)\  =\  f(x_0) 
+         +\frac{f^\prime(x_0)}{1!}(x-x_0)^{1}
+         +\frac{f^{\prime\prime}(x_0)}{2!}(x-x_0)^{2}
+         +\frac{f^{(3)}(x_0)}{3!}(x-x_0)^{3}.
+\end{equation*}\]</div>
+<p class="sd-card-text">Es gilt für <span class="math notranslate nohighlight">\(x_0=0\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[f(0) = 0, \quad f'(0)=2, \quad f''(0)=0, \quad f^{(3)}(0)=4.\]</div>
+<p class="sd-card-text">Das Taylorpolynom von <span class="math notranslate nohighlight">\(f\)</span> im Entwicklungspunkt <span class="math notranslate nohighlight">\(x_{0}=0\)</span> ist</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*} 
+    T_{3}(x)= 0
+    +2\cdot(x-0)^{1}
+    +0\cdot(x-0)^{2}
+    +\frac{4}{6}\cdot(x-0)^{3}
+= 2x +\frac{2}{3}x^{3}.
+ \end{equation*}\]</div>
+</div>
+</details></div>
+<div class="miniexercise admonition">
+<p class="admonition-title">Übung 4.5</p>
+<p>Berechnen Sie das Taylorpolynom der Ordnung 3</p>
+<div class="math notranslate nohighlight">
+\[f(x) = \sin(x^2)\]</div>
+<p>für den Entwicklungspunkt <span class="math notranslate nohighlight">\(x_0 = 0\)</span>.</p>
+</div>
+<div class="miniexercise toggle admonition">
+<p class="admonition-title">Lösung</p>
+<p>Das Taylorpolynom von <span class="math notranslate nohighlight">\(f\)</span> im Entwicklungspunkt <span class="math notranslate nohighlight">\(x_{0}=0\)</span> ist</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*} 
+ T_{3}(x) =  x^2.
+ \end{equation*}\]</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Lösungsweg</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Die ersten drei Ableitungen von <span class="math notranslate nohighlight">\(f(x) = \sin(x^2)\)</span> lauten:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*} 
+ f^\prime(x)&amp;=2\,x\,\cos\left(x^2\right) \\ 
+ f^{\prime \prime}(x)&amp;=2\,\cos\left(x^2\right)-4\,x^2\,\sin\left(x^2\right) \\ 
+ f^{(3)}(x)&amp;=-12\,x\,\sin\left(x^2\right)-8\,x^3\,\cos\left(x^2\right) 
+  \end{align*}\]</div>
+<p class="sd-card-text">Die allgemeine Darstellung eines Taylorpolynoms von <span class="math notranslate nohighlight">\(f\)</span> vom Grad 3 im Entwicklungspunkt <span class="math notranslate nohighlight">\(x_0\)</span> lautet</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*} 
+    T_{3}(x)\  =\  \frac{f(x_0)}{0!} 
+         +\frac{f^\prime(x_0)}{1!}(x-x_0)^{1}
+         +\frac{f^{\prime\prime}(x_0)}{2!}(x-x_0)^{2}
+         +\frac{f^{(3)}(x_0)}{3!}(x-x_0)^{3}.
+ \end{equation*}\]</div>
+<p class="sd-card-text">Es gilt für <span class="math notranslate nohighlight">\(x_0=0\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[f(0) = 0, \quad f'(0)=0, \quad f''(0)=2, \quad f^{(3)}(0)=0.\]</div>
+<p class="sd-card-text">Das Taylorpolynom von <span class="math notranslate nohighlight">\(f\)</span> im Entwicklungspunkt <span class="math notranslate nohighlight">\(x_{0}=0\)</span> ist</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*} 
+ T_{3}(x)=  0
+ + 0 \cdot(x-0)^{1}
+ + \frac{2}{2} \cdot(x-0)^{2}
+ + \frac{0}{6} \cdot(x-0)^{3}
+ = x^2.
+ \end{equation*}\]</div>
+</div>
+</details></div>
+<div class="miniexercise admonition">
+<p class="admonition-title">Übung 4.6</p>
+<p>Berechnen Sie das Taylorpolynom der Ordnung 3</p>
+<div class="math notranslate nohighlight">
+\[f(x)=x^3\,\left(\ln\left(x\right)-3\right)\]</div>
+<p>für den Entwicklungspunkt <span class="math notranslate nohighlight">\(x_0 = 3\)</span>.</p>
+</div>
+<div class="miniexercise toggle admonition">
+<p class="admonition-title">Lösung</p>
+<p>Das Taylorpolynom von <span class="math notranslate nohighlight">\(f\)</span> im Entwicklungspunkt <span class="math notranslate nohighlight">\(x_{0}=3\)</span> ist</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*} 
+    T_{3}(x)=  27\,\ln\left(3\right)-81
+    +(27\,\ln\left(3\right)-72)\cdot(x-3)^{1}
+    +(9\,\ln\left(3\right)-\frac{39}{2})\cdot(x-3)^{2}
+    +(\ln\left(3\right)-\frac{7}{6})\cdot(x-3)^{3}\ .
+\end{equation*}\]</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Lösungsweg</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Die ersten drei Ableitungen von <span class="math notranslate nohighlight">\(f(x)=x^3\,\left(\ln\left(x\right)-3\right)\)</span> lauten:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*} 
+ f^\prime(x)&amp;=3\,x^2\,\left(\ln\left(x\right)-3\right)+x^2 \\ 
+ f^{\prime \prime}(x)&amp;=5\,x+6\,x\,\left(\ln\left(x\right)-3\right) \\ 
+ f^{(3)}(x)&amp;=6\,\ln\left(x\right)-7 
+  \end{align*}\]</div>
+<p class="sd-card-text">Die allgemeine Darstellung eines Taylorpolynoms von <span class="math notranslate nohighlight">\(f\)</span> vom Grad 3 im Entwicklungspunkt <span class="math notranslate nohighlight">\(x_0\)</span> lautet</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*} 
+    T_{3}(x)\  =\  \frac{f(x_0)}{0!} 
+         +\frac{f^\prime(x_0)}{1!}(x-x_0)^{1}
+         +\frac{f^{\prime\prime}(x_0)}{2!}(x-x_0)^{2}
+         +\frac{f^{(3)}(x_0)}{3!}(x-x_0)^{3}.
+ \end{equation*}\]</div>
+<p class="sd-card-text">Es gilt für <span class="math notranslate nohighlight">\(x_0=3\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[f(3) = 27\ln(3)-81, \; f'(3)=27\ln(3)-72, \; f''(3)=18\ln(3)-39, \; f^{(3)}(3)=6\ln(3)-7.\]</div>
+<p class="sd-card-text">Das Taylorpolynom von <span class="math notranslate nohighlight">\(f\)</span> im Entwicklungspunkt <span class="math notranslate nohighlight">\(x_{0}=3\)</span> ist</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*} 
+    T_{3}(x)=  27\,\ln\left(3\right)-81
+    +(27\,\ln\left(3\right)-72)\cdot(x-3)^{1}
+    +(9\,\ln\left(3\right)-\frac{39}{2})\cdot(x-3)^{2}
+    +(\ln\left(3\right)-\frac{7}{6})\cdot(x-3)^{3}\ .
+\end{equation*}\]</div>
 </div>
 </details></div>
 <section id="weitere-ubungsaufgaben">
 <h2>Weitere Übungsaufgaben<a class="headerlink" href="#weitere-ubungsaufgaben" title="Link to this heading">#</a></h2>
-<p>Für weitere Übungsaufgaben steht Ihnen der MATEX-Übungsaufgaben-Generator zur
-Verfügung. Wählen Sie bei der Konvergenz von Reihen die Stufe “geometrische
-Reihe”. Bei der Konvergenz von Potenzreihen sollten Sie das Level “Mit der
-geometrischen Reihe verwandte Potenzreihen” wählen.</p>
+<p>Gerne können Sie sich mit dem MATEX-Aufgabengenerator weitere Übungsaufgaben generieren:</p>
 <ul class="simple">
-<li><p><a class="reference external" href="https://lx4.mint-kolleg.kit.edu/MATeX/generatorview.php?data=NUxMamNmMHpNU2FrUnp5R2FkVkpTdz09">Aufgaben Konvergenz von Reihen</a></p></li>
-<li><p><a class="reference external" href="https://lx4.mint-kolleg.kit.edu/MATeX/generatorview.php?data=aXYvV0xpZW0rSGJHUHgrQm1TZnlVdz09">Aufgaben Konvergenz von Potenzreihen</a></p></li>
+<li><p><a class="reference external" href="https://lx4.mint-kolleg.kit.edu/MATeX/generatorview.php?data=M2pQQmg2bW9rcWV2THpFY0lXeWo5Zz09">Übungsaufgaben Taylorpolynome Grad 1 bis Grad 4 einstellbar</a></p></li>
 </ul>
 </section>
 </section>
@@ -660,7 +813,7 @@ geometrischen Reihe verwandte Potenzreihen” wählen.</p>
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">4.4 Konvergenz von Potenzreihen</p>
+        <p class="prev-next-title">4.4 Rechnen mit Potenzreihen</p>
       </div>
     </a>
     <a class="right-next"
@@ -668,7 +821,7 @@ geometrischen Reihe verwandte Potenzreihen” wählen.</p>
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">5. Taylorreihen</p>
+        <p class="prev-next-title">5. Fourierreihen</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -679,7 +832,8 @@ geometrischen Reihe verwandte Potenzreihen” wählen.</p>
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
   <div class="sidebar-secondary-item">
@@ -736,8 +890,8 @@ By Simone Gramsch
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
 
   <footer class="bd-footer">
   </footer>

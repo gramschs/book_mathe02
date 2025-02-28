@@ -2,274 +2,160 @@
 
 ```{admonition} Übung 3.1
 :class: miniexercise
-Berechnen Sie den Mittelwert der Funktion $f(x)=\frac{1}{2}x^2 +1$ im Intervall $[0,2]$.
+Untersuchen Sie die Reihe 
+
+$$ \sum_{n=1}^\infty -\frac{4\cdot3^{n+3}}{5^n}$$
+
+auf sowohl mit dem Quotienten- als auch dem Wurzelkriterium auf Konvergenz.
 ```
 
 ````{admonition} Lösung
 :class: miniexercise, toggle
-$$m = \frac{1}{2-0}\int_{0}^{2}\frac{1}{2}x^2 +1 \, dx = \frac{5}{3} \approx 1.6666$$
+Die Reihe ist (absolut) konvergent. 
 ```{dropdown} Lösungsweg
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Y4cPEgR3LUg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+Wir definieren $a_n := -\frac{4\cdot 3^{n+3}}{5^n}$. 
+ 
+Wurzelkriterium: 
+
+Zu bestimmen ist der Grenzwert (falls dieser existiert)  
+\begin{align*} 
+r & = \lim_{n\rightarrow \infty}\sqrt[n]{\left|a_n\right|}
+    = \lim_{n\rightarrow \infty}{\left(\frac{4\cdot 3^{n+3}}{5^n}\right)}^{1/n}\\ 
+& = \lim_{n\rightarrow \infty}\frac{3\cdot {108}^{1/n}}{5}
+    = \frac{3}{5}. 
+\end{align*} 
+Wegen $r<1$ ist die Reihe (absolut) konvergent. 
+ 
+Quotientenkriterium: 
+
+Zu bestimmen ist der Grenzwert (falls dieser existiert) 
+\begin{align*} 
+r & = \lim_{n\rightarrow \infty} \left|\frac{a_{n+1}}{a_n}\right|
+    =\lim_{n\rightarrow \infty}3^{n+4}\,\frac{1}{3^{n+3}}\,\frac{1}{5^{n+1}}\,5^n\\ 
+& = \lim_{n\rightarrow \infty}\frac{3}{5}
+    =\frac{3}{5}. 
+\end{align*} 
+Wegen $r<1$ ist die Reihe (absolut) konvergent.  
+```
 ````
 
 ```{admonition} Übung 3.2
 :class: miniexercise
-Berechnen Sie den Mittelwert $\bar{f}$ der Funktion $f(x)=mx+n$ auf einem beliebigen Intervall $[a,b]$. Interpretieren Sie das Ergebnis geometrisch.
+Untersuchen Sie die Reihe 
+
+$$\sum_{n=1}^\infty 4\frac{6^n}{{11}^{n+4}}$$
+
+sowohl mit dem Quotienten- als auch dem Wurzelkriterium auf Konvergenz.
 ```
 
 ````{admonition} Lösung
 :class: miniexercise, toggle
-$$\bar{f} = \frac{1}{2}\left(f(a)+f(b)\right) $$ 
-Der Mittelwert der der linearen Funktion $f(x)=mx+n$ ist gerade das arithmetische Mittel der beiden Funktionswerte $f(a)$ und $f(b)$ an den Intervallgrenzen.
+Die Reihe ist (absolut) konvergent. 
 ```{dropdown} Lösungsweg
-Der Mittelwert einer Funktion $f$ im Intervall $[a,b]$ wird folgendermaßen berechnet:
+Wir definieren $a_n := 4\frac{6^n}{{11}^{n+4}}$. 
 
-$$\bar{f}(x) = \frac{1}{b-a}\int_{a}^{b} f(x) \, dx.$$
-
-Wir setzen die lineare Funktion $f(x)=mx+n$ in die Formel ein und erhalten:
-
-\begin{align*}
-\bar{f}(x) 
-&= \frac{1}{b-a}\int_{a}^{b} mx+n \, dx = \\
-&= \frac{1}{b-a} \left[\frac{1}{2}mx^2 + nx \right]_{a}^{b} = \\
-&= \frac{1}{b-a} \left( (\frac{1}{2}mb^2 + nb) - (\frac{1}{2}ma^2 + na) \right) = \\
-&= \frac{1}{b-a} \left( \frac{1}{2}\, m\, (b^2 - a^2) + n \, (b - a) \right) = \\
-&= \frac{1}{2} m (b+a) + n = \\
-&= \frac{1}{2} m b + \frac{1}{2} m a + \frac{1}{2}n + \frac{1}{2}n = \\
-&= \frac{1}{2} (mb+n) + \frac{1}{2} (ma+n) = \\
-&= \frac{1}{2} f(b) + \frac{1}{2} f(a).
-\end{align*}
-
-Der Mittelwert der linearen Funktion $f(x) = mx+n$ ist gleich dem arithmetischen Mittel der beiden Funktionswerte $f(a)$ und $f(b)$.
+Wurzelkriterium: 
+ Zu bestimmen ist der Grenzwert (falls dieser existiert)  
+\begin{align*} 
+r & = \lim_{n\rightarrow \infty}\sqrt[n]{\left|a_n\right|}
+    = \lim_{n\rightarrow \infty}{\left(4\frac{6^n}{{11}^{n+4}}\right)}^{1/n}\\ 
+& = \lim_{n\rightarrow \infty}\frac{6\,{\left(\frac{4}{14641}\right)}^{1/n}}{11}
+    = \frac{6}{11}. 
+\end{align*} 
+Wegen $r<1$ ist die Reihe (absolut) konvergent. 
+ 
+Quotientenkriterium: 
+Zu bestimmen ist der Grenzwert (falls dieser existiert) 
+\begin{align*} 
+r & = \lim_{n\rightarrow \infty} \left|\frac{a_{n+1}}{a_n}\right|
+    =\lim_{n\rightarrow \infty}\frac{6^{n+1}\,{11}^{n+4}\,\frac{1}{{11}^{n+5}}}{6^n}\\ 
+& = \lim_{n\rightarrow \infty}\frac{6}{11}
+    =\frac{6}{11}. 
+\end{align*} 
+Wegen $r<1$ ist die Reihe (absolut) konvergent.  
 ```
 ````
 
 ```{admonition} Übung 3.3
 :class: miniexercise
-Berechnen Sie den Flächeninhalt $A$, der zwischen dem Graphen der Funktion 
+Untersuchen Sie die Reihe 
 
-$$f(x)=x^2-x$$
+$$\sum_{n=1}^\infty \frac{\frac{1}{{\left(-8\right)}^{n+2}}\,{10}^{n+4}}{4}$$
 
-und der x-Achse eingeschlossen ist. Fertigen Sie zuerst eine Skizze an.
+sowohl mit dem Quotienten- als auch dem Wurzelkriterium auf Konvergenz.
 ```
 
 ````{admonition} Lösung
 :class: miniexercise, toggle
-$$A = \frac{1}{6}$$
+Die Reihe ist divergent.
 ```{dropdown} Lösungsweg
-![solution03_03](pics/solution03_03.png)
+Die Summanden bilden keine Nullfolge, denn 
+
+$$\lim_{n\rightarrow \infty} \left| \frac{\frac{1}{{\left(-8\right)}^{n+2}}\,{10}^{n+4}}{4}\right| =\infty \,.$$
+
+Somit divergiert die Reihe. Die Anwendung des Wurzel- sowie des Quotientenkriteriums erübrigt sich. 
 ```
 ````
 
 ```{admonition} Übung 3.4
 :class: miniexercise
-Berechnen Sie den Flächeninhalt $A$, der zwischen dem Graphen der Funktion 
+Bestimmen Sie den Konvergenzradius $r$ der Potenzreihe 
 
-$$f(x)=x(x-1)(x-3)$$
+$$\sum_{n=1}^{\infty}\frac{8^n}{n}\cdot(x-2)^n.$$
 
-und der x-Achse eingeschlossen ist. Fertigen Sie zuerst eine Skizze an.
+Untersuchen Sie gegebenenfalls die Konvergenz im Randbereich und geben Sie den Konvergenzbereich an.
 ```
 
 ````{admonition} Lösung
 :class: miniexercise, toggle
-$$A = \frac{37}{12}$$
+Konvergenzradius $r=\frac{1}{8}$ und Konvergenzbereich: $[\frac{15}{8}; \frac{17}{8})$, d.h. $\frac{15}{8} \leq x < \frac{17}{8}$
 ```{dropdown} Lösungsweg
-Skizze des Funktionsgraphens:
+Tipp bzw. Quelle der Aufgabe:  [YouTube MathemaTrick -- Konvergenzradius bestimmen](https://www.youtube.com/watch?v=gn8jCoSJb24) 
 
-![solution03_04_plot](pics/plot_exercise_03_04.png)
+Wir definieren $a_n := \frac{8^n}{n}$. Nach der Formel von Cauchy-Hadamard (Wurzelkriterium) wird der Konvergenzradius $r$ berechnet als
 
-* Nullstellen berechnen: $f(x) = x(x-1)(x-3) = 0$ lösen
-* Nullstellen: $x_1 = 0$, $x_2 = 1$ und $x_3 = 3$
-* Erster Flächeninhalt:
+$$r = \lim_{n\rightarrow \infty} \frac{1}{\sqrt[n]{\left|a_n\right|}}$$
 
-$$A_1 = \int_{0}^{1} x^3 - 4x^2 + 3x \, dx = \frac{5}{12}$$
+Wir rechnen zuerst in einer Nebenrechnung
 
-* Zweiter Flächeninhalt (negativ orientiert):
+$$\sqrt[n]{|a_n|} = \sqrt[n]{\left|\frac{8^n}{n}\right|} = \sqrt[n]{\frac{8^n}{n}} = \frac{\sqrt[n]{8^n}}{\sqrt[n]{n}} = \frac{8}{\sqrt[n]{n}}. $$
 
-$$A_2 = \int_{1}^{3} x^3 - 4x^2 + 3x \, dx = -\frac{8}{3}$$
+Eingesetzt in die Wurzel-Formel ist dies
 
-* Gesamtflächeninhalt: $A = A_1 + (-1)\cdot A_2 = \frac{37}{12}$
+$$r = \lim_{n\rightarrow \infty} \frac{1}{\sqrt[n]{\left|a_n\right|}} = \lim_{n\to \infty} \frac{\sqrt[n]{n}}{8} = \lim_{n\to\infty}\frac{n^{\frac{1}{n}}}{8} = \frac{1}{8}.$$
+
+Die Potenzreihe konvergiert absolut im Intervall $(\frac{15}{8}; \frac{17}{8})$. Das Konvergenzverhalten an den Randpunkten muss jedoch gesondert untersucht werden. 
+
+Durch das Einsetzen einer der Randpunkte in die Potenzreihe reduziert sich diese auf eine Zahlenreihe. Die Konvergenzfrage lässt sich dann mit einem passenden Konvergenz- oder Divergenzkriterium für Reihen angehen. 
+
+Setzt man den linken Randpunkt $x=\frac{15}{8}$ ein, so erhält man: 
+\begin{align*}
+\sum_{n=1}^{\infty} \frac{8^n}{n}\cdot\left(\frac{15}{8}-2\right)^n 
+&= \sum_{n=1}^{\infty} \frac{8^n}{n}\cdot\left(-\frac{1}{8}\right)^n \\
+&= \sum_{n=1}^{\infty} \frac{8^n}{n}\cdot \frac{(-1)^n}{8^n} \\
+&= \sum_{n=1}^{\infty} \frac{(-1)^n}{n}. 
+\end{align*}
+Diese Reihe konvergiert (gegen $-\ln(2)$), der linke Randpunkt gehört zum Konvergenzbereich.
+
+Setzt man den rechten Randpunkt $x=\frac{17}{8}$ ein, so erhält man: 
+\begin{align*}
+\sum_{n=1}^\infty \frac{8^n}{n}\cdot\left(\frac{17}{8}-2\right)^n 
+&= \sum_{n=1}^{\infty} \frac{8^n}{n}\cdot\left(\frac{1}{8}\right)^n \\
+&= \sum_{n=1}^{\infty} \frac{8^n}{n}\cdot\frac{1^n}{8^n} \\
+& = \sum_{n=1}^{\infty} \frac{1}{n}.
+\end{align*}
+Diese Reihe divergiert, der rechte Randpunkt gehört *nicht* zum Konvergenzbereich.
+
+Antwort: Konvergenzradius $r=\frac{1}{8}$ und Konvergenzbereich: $[\frac{15}{8}; \frac{17}{8})$, d.h. $\frac{15}{8} \leq x < \frac{17}{8}$ 
 ```
 ````
 
-```{admonition} Übung 3.5
-:class: miniexercise
-Berechnen Sie den Flächeninhalt $A$, der zwischen den beiden Graphen der Funktionen 
+## Weitere Übungsaufgaben
 
-$$f(x)=-\frac{1}{4}x^2+16 \quad \text{ und } \quad g(x)=-3x$$
+Für weitere Übungsaufgaben steht Ihnen der MATEX-Übungsaufgaben-Generator zur
+Verfügung. Wählen Sie bei der Konvergenz von Reihen die Stufe "geometrische
+Reihe". Bei der Konvergenz von Potenzreihen sollten Sie das Level "Mit der
+geometrischen Reihe verwandte Potenzreihen" wählen.
 
-eingeschlossen ist. Fertigen Sie zuerst eine Skizze an.
-```
-
-````{admonition} Lösung
-:class: miniexercise, toggle
-$$A = \frac{1000}{3}=333.33$$
-```{dropdown} Lösungsweg
-Skizze der beiden Funktionsgraphen:
-
-![solution03_05_plot](pics/plot_exercise_03_05.png)
-
-* Schnittpunkte berechnen: $f(x) = g(x)$ lösen
-* Schnittpunkte: $x_1 = -4$ und $x_2 = 16$
-* Flächeninhalt:
-
-$$A = \int_{-4}^{16} \left(\frac{1}{4}x^2 + 16\right) - \left(-3x \right)  \, dx = \frac{1000}{3}$$
-```
-````
-
-```{admonition} Übung 3.6
-:class: miniexercise
-Berechnen Sie den Flächeninhalt $A$, der zwischen den beiden Graphen der Funktionen 
-
-$$f(x)=-x^2+2x+\frac{1}{2} \quad \text{ und } \quad g(x)=x+2$$
-
-und den parallelen Geraden $x=-2$ und $x=\frac{5}{2}$ eingeschlossen ist. Fertigen Sie zuerst eine Skizze an.
-```
-
-````{admonition} Lösung
-:class: miniexercise, toggle
-$$A = \frac{27}{2}= 13.5$$
-```{dropdown} Lösungsweg
-Skizze der beiden Funktionsgraphen:
-
-![solution03_06_plot](pics/plot_exercise_03_06.png)
-
-* $g$ ist oberhalb von $f$
-* Flächeninhalt:
-
-$$A = \int_{-2}^{5/2} \left( x+2 \right) - \left(-x^2+2x+\frac{1}{2} \right)  \, dx = \frac{27}{2}$$
-
-```
-````
-
-```{admonition} Übung 3.7
-:class: miniexercise
-Berechnen Sie den Flächeninhalt $A$, der zwischen den beiden Graphen der Funktionen 
-
-$$f(x)=-3x^2+x-1 \quad \text{ und } \quad g(x)=4\cdot (x-\frac{1}{4})^2-\frac{5}{4}$$
-
-eingeschlossen ist. Fertigen Sie zuerst eine Skizze an.
-```
-
-````{admonition} Lösung
-:class: miniexercise, toggle
-$$A = \frac{9}{98}\approx 0.091837$$
-```{dropdown} Lösungsweg
-Skizze der beiden Funktionsgraphen:
-
-![solution03_07_plot](pics/plot_exercise_03_07.png)
-
-* Schnittpunkte berechnen: $f(x) = g(x)$ lösen
-* Schnittpunkte: $x_1 = 0$ und $x_2 = \frac{3}{7}$
-* Flächeninhalt:
-
-$$A = \int_{0}^{3/7} \left(-3x^2+x-1\right) - \left(4\cdot (x-\frac{1}{4})^2-\frac{5}{4} \right)  \, dx = \frac{9}{98}$$
-
-```
-````
-
-```{admonition} Übung 3.8
-:class: miniexercise
-Berechnen Sie den Flächeninhalt $A$, der zwischen den beiden Graphen der Funktionen 
-
-$$f(x)=2\sin(x) \quad \text{ und } \quad g(x)=-\frac{4\sqrt{2}}{3\pi}x + \frac{4\sqrt{2}}{3}$$
-
-eingeschlossen ist. Fertigen Sie zuerst eine Skizze an. Benutzen Sie einen Taschenrechner.
-```
-
-````{admonition} Lösung
-:class: miniexercise, toggle
-$$A = 4+2\sqrt{2} - \frac{3\pi}{2\sqrt{2}}\approx 3.49626$$
-```{dropdown} Lösungsweg
-Skizze der beiden Funktionsgraphen:
-
-![solution03_08_plot](pics/plot_exercise_03_08.png)
-
-* Schnittpunkte berechnen: $f(x) = g(x)$ lösen
-* Schnittpunkte: $x_1 = \frac{\pi}{4}$,  $x_2 = \pi$ und $x_3 = \frac{7\pi}{4}$
-* Erster Flächeninhalt:
-
-$$A_1 = \int_{\pi/4}^{\pi} \left( 2\sin(x)\right) - \left(-\frac{4\sqrt{2}}{3\pi}x + \frac{4\sqrt{2}}{3} \right)  \, dx = -\frac{3}{4\sqrt{2}}\pi + 2 + \sqrt{2}$$
-
-* Zweiter Flächeninhalt:
-
-$$A_2 = \int_{\pi}^{\frac{7\pi}{4}} \left(-\frac{4\sqrt{2}}{3\pi}x + \frac{4\sqrt{2}}{3} \right) -
-\left(2\sin(x) \right) \, dx = -\frac{3}{4\sqrt{2}}\pi + 2 + \sqrt{2}$$
-
-* Gesamter Flächeninhalt:
-
-$$A = A_1 + A_2 = \frac{1}{4}\left(-3\sqrt{2}\pi + 16 + 8\sqrt{2} \right) \approx 3.49626$$
-
-```
-````
-
-```{admonition} Übung 3.9
-:class: miniexercise
-Berechnen Sie die Bogenlänge $L$ der Funktion $f(x)=x$ im Intervall $[0,1]$.
-```
-
-````{admonition} Lösung
-:class: miniexercise, toggle
-$$L = \sqrt{2} \approx 1.4142$$
-```{dropdown} Lösungsweg
-* Ableitung: $f'(x)=1$
-* Bogenlänge: 
-
-$$L = \int_{0}^{1} \sqrt{1+(1)^2}\, dx = \int_{0}^{1} \sqrt{2}\, dx = \sqrt{2}$$
-
-```
-````
-
-```{admonition} Übung 3.10
-:class: miniexercise
-Berechnen Sie die Bogenlänge $L$ der Funktion $f(x)=x^{\frac{3}{2}}$ im Intervall $[0,1]$.
-```
-
-````{admonition} Lösung
-:class: miniexercise, toggle
-$$L \approx 1.4397$$
-```{dropdown} Lösungsweg
-* Ableitung: $f'(x) = \frac{3}{2} x^{\frac{1}{2}}$
-* Bogenlänge:
-
-$$L = \int_{0}^{1} \sqrt{1+(\frac{3}{2} x^{\frac{1}{2}})^2}\, dx = 
-\int_{0}^{1} \sqrt{1+\frac{9}{4} x}\, dx  $$
-
-* Substitution: $z = 1 + \frac{9}{4} x$, d.h. $dx = \frac{4}{9} dz$
-* Daraus folgt:
-
-$$L = \int_{0}^{1} \sqrt{1+\frac{9}{4} x}\, dx = \left[\frac{8}{27}\left(\frac{9x}{4}+1\right)^{3/2} \right]_{0}^{1} = \frac{1}{27}(13\sqrt{13}-8) \approx 1.4397.
-$$
-
-```
-````
-
-```{admonition} Übung 3.11
-:class: miniexercise
-Berechnen Sie das Volumen $V$ des Rotationskörpers, das entsteht, wenn die Funktion $f(x)=-x^2+4$ im Intervall $[-2,2]$ um die x-Achse gedreht wird.
-```
-
-````{admonition} Lösung
-:class: miniexercise, toggle
-
-$$V = 2\pi\cdot \frac{256}{15}\approx 107.23$$
-```{dropdown} Lösungsweg
-![solution03_11p](pics/solution03_11plot.png)
-![solution03_11](pics/solution03_11.png)
-```
-````
-
-```{admonition} Übung 3.12
-:class: miniexercise
-Berechnen Sie das Volumen $V$ des Rotationskörpers, das entsteht, wenn die Funktion $f(x)=\sin(x)+1$ im Intervall $[0,\frac{3\pi}{2}]$ um die x-Achse gedreht wird.
-```
-
-````{admonition} Lösung
-:class: miniexercise, toggle
-
-$$V = \pi\left((\frac{3\pi}{2}-0+\frac{3\pi}{4})-(0-2+0)\right)\approx 28.4898$$
-```{dropdown} Lösungsweg
-![solution03_12p](pics/solution03_12plot.png)
-![solution03_12](pics/solution03_12.png)
-```
-````
+* [Aufgaben Konvergenz von Reihen](https://lx4.mint-kolleg.kit.edu/MATeX/generatorview.php?data=NUxMamNmMHpNU2FrUnp5R2FkVkpTdz09)
+* [Aufgaben Konvergenz von Potenzreihen](https://lx4.mint-kolleg.kit.edu/MATeX/generatorview.php?data=aXYvV0xpZW0rSGJHUHgrQm1TZnlVdz09)

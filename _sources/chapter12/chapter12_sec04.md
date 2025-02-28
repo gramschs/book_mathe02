@@ -1,166 +1,192 @@
-# 12.4 Exakte Differentialgleichungen
+# 12.4 Homogene Systeme aus zwei linearen DGL 1. Ordnung
 
-In diesem Kapitel werden wir uns mit exakten Differentialgleichungen
-beschäftigen. 
+In Natur und Technik wird häufig nicht nur eine Differentialgleichung benötigt,
+um einen Prozess zu beschreiben, sondern viele Differentialgleichungen. Dabei
+kann es sein, dass die gesuchten Funktionen in mehreren Differentialgleichungen
+vorkommen. Es entsteht ein System von Differentialgleichungen. Wir beschränken
+uns in diesem Kapitel auf den einfachsten Fall, der auftreten kann.
 
 ## Lernziele
 
 ```{admonition} Lernziele
 :class: goals
-* Sie können anhand des Exaktheitskriterium überprüfen, ob eine
-  Differentialgleichung 1. Ordnung der Form
-  
-  $$p(x, y) + q(x, y) \cdot y' = 0$$ 
-
-  exakt ist.
-* Sie können eine exakte Differentialgleichung lösen.
+* Sie können erklären, was ein **System von Differentialgleichungen** ist.
+* Sie können ein **System von linearen Differentialgleichungen 2. Ordnung** lösen.
 ```
 
-## Was ist eine exakte Differentialgleichung?
+## Was ist ein System von Differentialgleichungen?
 
-Bei den exakten Differentialgleichungen handelt es sich um
-Differentialgleichungen 1. Ordnung. Wenn die Differentialgleichung in die Form 
+Sind mehrere Differentialgleichungen nicht unabhängig voneinander, sondern
+treten die gesuchten Funktionen oder die Störfunktionen in mehreren
+Differentialgleichungen gleichzeitig auf, so sprechen wir von einem **System von
+Differentialgleichungen**. Wir betrachten in dieser Vorlesung nur Systeme von
+zwei Differentialgleichungen, bei denen beide Differentialgleichungen homogen,
+linear und von 1. Ordnung sind. Zusätzlich fordern wir, dass die Koeffizienten
+konstant sind.
 
-$$p(x, y) + q(x, y) \cdot y' = 0$$
+Ein System von Differentialgleichungen
+\begin{align*}
+y_1' &= a_{11}y_1 + a_{12}y_2 \\
+y_2' &= a_{21}y_1 + a_{22}y_2
+\end{align*}
+heißt homogenes System von Differentialgleichungen 1. Ordnung mit konstanten
+Koeffizienten.
 
-gebracht werden kann und wenn zusätzlich die sogenannte **Exaktheitsbedingung**
+Es werden also zwei Funktionen $y_1$ und $y_2$ gesucht, die jeweils in der
+anderen Differentialgleichung ebenfalls auftauchen. Um dem System jetzt auch
+eine Ordnung zuzuweisen, summieren wir über die Ordnungen der einzelnen
+Differentialgleichungen. Daher hat das System aus den beiden
+Differentialgleichungen 1. Ordnung insgesamt die Ordnung 2.
 
-$$\frac{\partial p(x, y)}{\partial
-y} = \frac{\partial q(x, y)}{\partial x}$$
+## Wie wird ein System 2. Ordnung gelöst?
 
-erfüllt ist, dann wird die Differentialgleichung **exakt** genannt.
+Zur Lösung von Systemen von linearen Differentialgleichungen kombinieren wir die
+Lösung einzelner Differentialgleichungen mit der Lösung von linearen
+Gleichungssystemen. Da wir uns auf konstante Koeffizienten beschränken, können
+wir die Koeffizienten in eine Matrix schreiben.
 
-## Beispiel einer exakten Differentialgleichung
+$$A =
+\begin{pmatrix}
+a_{11} & a_{12} \\
+a_{21} & a_{22}
+\end{pmatrix}.$$
 
-Die Differentialgleichung
+Dadurch können wir das System von Differentialgleichungen als
+Matrix-Vektor-Multiplikation darstellen:
 
-$$(y - x) + (y+x)\cdot y' = 0$$
+$$\begin{pmatrix}
+a_{11} & a_{12} \\
+a_{21} & a_{22} \end{pmatrix} \cdot
+\begin{pmatrix} y_1 \\ y_2 \end{pmatrix} =
+\begin{pmatrix} y_{1}'\\ y_{2}' \end{pmatrix}.$$
 
-ist von 1. Ordnung und lässt sich mit
+Bei den homogenen lineare Differentialgleichungen zeigte sich, dass diese durch
+eine Exponentialfunktion gelöst werden können. Als Lösungsansatz wählen wir
+daher
+
+$$y_1 = C_1 \, e^{\lambda x} \quad \text{ und }
+\quad y_2 = C_2 \, e^{\lambda x}.$$
+
+Dabei haben wir drei unbekannte Konstanten, nämlich $C_1$, $C_2$ und $\lambda$.
+Die beiden Konstanten $C_1$ und $C_2$ werden unsere Integrationskonstanten
+werden. Da wir ein System 2. Ordnung haben, brauchen wir zwei
+Integrationskonstanten. Aber $\lambda$ muss noch bestimmt werden. Wir machen
+weiter und bilden die erste Ableitung der beiden Ansatzfunktionen
+
+$$y_1'= C_1 \, \lambda e^{\lambda x} \quad \text{ und }
+\quad y_2' = C_2 \, \lambda e^{\lambda x}.$$
+
+Setzen wir nun beide Ansatzfunktionen in das System von Differentialgleichungen
+ein, so erhalten wir
 
 \begin{align*}
-p(x, y) &= y - x\\
-q(x, y) &= y + x
+C_1 \, \lambda e^{\lambda x} &= a_{11} C_1 \, e^{\lambda x} + a_{12} C_2 \, e^{\lambda x} \\
+C_2 \, \lambda e^{\lambda x} &= a_{21} C_1 \, e^{\lambda x} + a_{22} C_2 \, e^{\lambda x}
 \end{align*}
 
-in der oben beschriebenen Form schreiben. Als nächstes wird überprüft, ob die
-Exaktheitsbedingung erfüllt ist.
+Wir teilen durch $e^{\lambda x}$ und erhalten
 
 \begin{align*}
-\frac{\partial p(x, y)}{\partial y} &= \frac{\partial}{\partial y}(y - x) = 1, \\
-\frac{\partial q(x, y)}{\partial x} &= \frac{\partial}{\partial x}(y + x) = 1. 
+C_1 \, \lambda  &= a_{11} C_1 + a_{12} C_2 \\
+C_2 \, \lambda  &= a_{21} C_1 + a_{22} C_2
 \end{align*}
 
-Beide partielle Ableitungen sind gleich und daher ist die Differentialgleichung
-exakt.
+Bringen wir die Terme $C_1 \, \lambda$ und $C_2 \, \lambda$ jeweils aud die rechte Seite und schreiben das Gleichungssystem in Matrixform, so erhalten wir
 
-## Wie werden exakte Differentialgleichugnen gelöst?
+$$
+\begin{pmatrix}
+a_{11} - \lambda & a_{21} \\
+a_{21} & a_{22} - \lambda
+\end{pmatrix} \cdot
+\begin{pmatrix} C_1 \\ C_2 \end{pmatrix} =
+\begin{pmatrix} 0 \\ 0 \end{pmatrix}. $$
 
-Liegt eine exakte Differentialgleichung vor, so wird die Differentialgleichung
-oft etwas informell mit dem Differentialquotienten $y'=\frac{dy}{dx}$
-folgendermaßen notiert:
+Wenn die Determinante dieses linearen Gleichungssystems ungleich Null ist, dann
+kommen nur $C_1 = C_2 = 0$ als Lösung infrage. Damit wären aber auch $y_1$ und
+$y_2$ die Nullfunktionen. Das System von Differentialgleichungen hat nur
+Funktionen als Lösung, die nicht die Nullfunktion sind, wenn die Determinante
+dieses Gleichungssystems Null ist.
 
-$$p(x, y) + q(x, y) \frac{dy}{dx} = 0 \quad 
-\Rightarrow \quad p(x,y) \, dx + q(t, x) \, dy = 0. $$
+Wir setzen also
 
-Das erinnert an das totale Differential. Für die Lösungsidee starten wir mit
-einer Funktion $F$, die von zwei Variablen abhängt, nämlich $x_1$ und $x_2$, und
-für die gilt:
+$$\det \begin{pmatrix}
+a_{11} - \lambda & a_{12} \\
+a_{21} & a_{22} - \lambda
+\end{pmatrix} \overset{!}{=} 0$$
 
-$$F(x_1, x_2) = \tilde{c}.$$
+an und bestimmen $\lambda$ so, dass die Determinante Null ist. Diese Gleichung
+wird übrigens **charakteristische Gleichung** genannt und wird folgendermaßen notiert:
 
-Dabei ist $\tilde{c}\in\mathbb{R}$ eine reelle Konstante. 
+$$(a_{11}-\lambda) \cdot (a_{22}-\lambda) - a_{21} \, a_{12} = 0.$$
 
-Nun soll die erste Variable $x_1$ gleich $x$ sein, also $x_1 = x$. Die zweite
-Variable soll der Funktionswert $y(x)$ sein, also $x_2=y(x)$. Damit ist $F$ eine
-Funktion, die eigentlich nur von $x$ abhängt. Einmal direkt und einmal indirekt
-als verkettete Funktion. Die erste Ableitung nach $x$ muss mit der
-mehrdimensionalen Kettenregel berechnet werden:
+Es gibt drei mögliche Lösungen, die sogenannten Eigenwerte der
+charakteristischen Gleichung:
 
-$$F'(x, y(x)) = \left(\frac{\partial F}{\partial x}, \, \frac{\partial F}{\partial y}\right) \cdot 
-\begin{pmatrix} 1 \\ y' \end{pmatrix} 
-= \frac{\partial F}{\partial x} + \frac{\partial F}{\partial y} y'.$$
+* 2 Nullstellen, d.h. $\lambda_1 \neq \lambda_2$ reell
+* 1 Nullstelle, d.h. $\lambda_1 = \lambda_2$ reell
+* 0 Nullstellen, d.h. $\lambda_1 \neq \lambda_2$ komplex, weil für die komplexen Zahlen eine quadratische Gleichung immer zwei Lösungen hat
 
-Wird die rechte Seite der Gleichung $F(x_1, x_2) = \tilde{c}$ abgeleitet, ist dies Null.
-Damit gilt für die erste Ableitung der Funktion $F(x,y)$
+Je nachdem, welcher dieser dieser Fälle eintritt, lauten die Lösungen wie folgt.
 
-$$\frac{\partial F}{\partial x} + \frac{\partial F}{\partial y} y' = 0.$$
+**1. Fall: 2 Nullstellen**
 
-Das ist genau die Form der exakten Differentialgleichung mit
+Es gilt also $\lambda_1 \neq \lambda_2$ reell.
+
+1. Lösungsfunktion: $y_1(x)=C_1\cdot e^{\lambda_1 x} + C_2\cdot e^{\lambda_2 x}$
+
+2. Lösungsfunktion: erhalten wir, indem wir die $y_1$ in die 1. DGL einsetzen und dann nach $y_2$ auflösen:
+
+$$y_2(x)=\frac{1}{a_{12}}(y_1' - a_{11} y_1) $$
+
+**2. Fall: 1 Nullstelle**
+
+Es gilt also $\lambda_1 = \lambda_2 = \alpha$ reell.
+
+1. Lösungsfunktion: $y_1(x)=(C_1+C_2 x) \cdot e^{\alpha x} $
+
+2. Lösungsfunktion:
+
+$$y_2(x)=\frac{1}{a_{12}}(y_1' - a_{11} y_1) $$
+
+**3. Fall: 0 Nullstellen**
+
+Es gilt also $\lambda_1 \neq \lambda_2$ komplex, die komplexen Nullstellen können geschrieben werden als $\lambda_{1/2}=\alpha \pm \omega i$.
+
+1. Lösungsfunktion: $y_1(x)=e^{\alpha x}\left(C_1\sin(\omega x) + C_2 \cos(\omega x)\right) $
+
+2. Lösungsfunktion:
+
+$$y_2(x)=\frac{1}{a_{12}}(y_1' - a_{11} y_1) $$
+
+## Beispiel zur Lösung eines Systems 2. Ordnung
+
+Wir betrachten das homogene System 2. Ordnung
 
 \begin{align*}
-p(x,y) &= \frac{\partial F(x,y)}{\partial x} \\
-q(x,y) &= \frac{\partial F(x,y)}{\partial y}
+y_1' &= -8y_1 - 2y_2 \\
+y_2' &= 15y_1 + 5y_2
 \end{align*}
 
-Aber wir kommen wir nun auf $F(x,y)$?
+mit der Koeffizientenmatrix
 
-Wir integrieren die erste Funktion $p(x,y)$ nach $dx$. Die dabei entstehende
-Integrationskonstante kann noch von $y$ abhängen. Wird nämlich partiell nach $x$
-abgeleitet, so werden Terme mit $y$ nämlich Null. Deshalb schreiben wir dafür
-$C(y)$ und erhalten
+$$A = \begin{pmatrix} -8 & -2 \\ 15 & 5 \end{pmatrix}.$$
 
-$$F(x,y) = \int p(x,t) \, dx + C(y).$$
+Die Nullstellen der charakteristischen Gleichung
 
-Jetzt leiten wir diese Funktion partiell nach $y$ ab. Dabei erhalten wir zum
-einen die partielle Ableitung des Integrals $\int p(x,t) \, dx$, zum anderen die
-Ableitung $C'(y)$. Das Ergebnis muss $q(x,y)$ sein. Aus dieser Gleichung wird
-dann $C(y)$ durch Integration nach $y$ bestimmt. Sobald $F(x,y)$ eindeutig
-bestimmt ist, wird dann 
+$$\det (A-\lambda I) = 0$$
 
-$$F(x,y) = \tilde{c}$$
+sind $\lambda_1 = -5$ und $\lambda_2 = 2$.
 
-gesetzt und nach $y$ aufgelöst.
+Damit ist die erste Lösungsfunktion
 
-## Beispiel zur Lösung einer exakten Differentialgleichung
+$$y_1(x) = C_1 \, e^{-5x} + C_2 \, e^{2x}.$$
 
-Wir betrachten erneut die exakte Differentialgleichung
+Wir berechnen schon einmal die erste Ableitung davon, da wir $y_1'$ für die
+Berechnung von $y_2$ brauchen:
 
-$$(y - x) + (y+x)\cdot y' = 0.$$
+$$y_1'(x) = -5 C_1 e^{-5x} + 2 C_2 e^{2x}.$$
 
-Wir haben oben die Exaktheitsbedingung schon nachgerechnet und können daher
-direkt den Ansatz
+Die zweite Lösungsfunktion ist damit
 
-$$F(x,y) = \tilde{c}$$
-
-mit 
-
-$$\frac{\partial F(x,y)}{\partial x} = y - x$$
-
-verwenden. Durch Integration nach $x$ erhalten wir
-
-$$F(x,y) = \int p(x,y) \, dx + C(y) = \int (y-x)\, dx + C(y) 
-= yx -\frac{1}{2}x^2 + C(y).$$
-
-Partiell ableiten nach $y$ und gleichsetzen mit $q(x,y)=y+x$ liefert
-
-$$x+C'(y) = y+x.$$
-
-Damit erhalten wir 
-
-$$C'(y)=y \quad \Rightarrow C(y) = \int y\, dy = \frac{1}{2}y^2 + c_1.$$
-
-Damit ist
-
-$$F(x,y) = yx -\frac{1}{2}x^2 + \frac{1}{2}y^2  + c_1 = \tilde{c}.$$
-
-Wir setzen $C= \tilde{c} - c_1$ und lösen nach $y$ auf:
-
-\begin{align*}
-yx -\frac{1}{2}x^2 + \frac{1}{2}y^2  = c \qquad &| \cdot 2 \\
-2yx - x^2 + y^2 = 2c \qquad &| +2x^2 \\
-y^2 + 2xy + x^2 = 2c + 2x^2 \qquad & \\
-(y+x)^2 = 2c + 2x^2 \qquad & | \sqrt{} \\
-y + x = \pm \sqrt{2c + 2x^2} \qquad & | -x \\
-y(x) = \pm \sqrt{2c + 2x^2} - x \\
-\end{align*}
-
-Die allgemeine Lösung der Differentialgleichung $(y - x) + (y+x)\cdot y' = 0$
-ist
-
-$$y(x) = \pm \sqrt{2c + 2x^2} - x.$$
-
-
-```{dropdown} Video zu "Exakte Differentialgleichung" von Lernkompass
-<iframe width="560" height="315" src="https://www.youtube.com/embed/PGiwJ57E1nc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-```
+$$y_2(x) = \frac{1}{-2} (y_1' - (-8)\cdot y_1) = (\frac{5}{2}C_1+8) e^{-5x} +
+(8-C_2) e^{2x}.$$

@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>8.4 Mehrdimensionale Kettenregel &#8212; Mathematik 2 Maschinenbau</title>
+    <title>8.4 Extremwertprobleme mit Nebenbedingung &#8212; Mathematik 2 Maschinenbau</title>
   
   
   
@@ -16,32 +16,35 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-
-  
-  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=87e54e7c" />
     <link rel="stylesheet" type="text/css" href="../_static/jsxgraph.css?v=a7b027cb" />
     <link rel="stylesheet" type="text/css" href="../_static/my_styles.css?v=9b976ced" />
   
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
-  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
     <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
     <script src="../_static/doctools.js?v=9a2dae69"></script>
@@ -54,7 +57,7 @@
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
@@ -67,9 +70,10 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Übungen" href="chapter08_sec05.html" />
-    <link rel="prev" title="8.3 Jacobi-Matrix" href="chapter08_sec03.html" />
+    <link rel="prev" title="8.3 Extremwerte" href="chapter08_sec03.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
   </head>
   
   
@@ -85,19 +89,8 @@
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-primary-sidebar-checkbox"/>
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-secondary-sidebar-checkbox"/>
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="../search.html"
       method="get">
@@ -105,7 +98,6 @@
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search this book..."
          aria-label="Search this book..."
          autocomplete="off"
@@ -113,8 +105,8 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -130,7 +122,8 @@
       
       
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -160,15 +153,11 @@
 </a></div>
         <div class="sidebar-primary-item">
 
- <script>
- document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script></div>
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
@@ -179,122 +168,114 @@
                 </a>
             </li>
         </ul>
-        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Differential- und Integralrechnung</span></p>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Fortsetzung Integralrechnung</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter01/chapter01_sec00.html">1. Differentialrechnung</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter01/chapter01_sec01.html">1.1 Ableitungen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter01/chapter01_sec02.html">1.2 Rechenregeln Ableitungen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter01/chapter01_sec03.html">1.3 Extremwerte</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter01/chapter01_sec04.html">1.4 Extremwerte mit Nebenbedingung</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter01/chapter01_sec00.html">1. Wiederholung Integrale</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter01/chapter01_sec01.html">1.1 Stammfunktion und bestimmtes Integral</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter01/chapter01_sec02.html">1.2 Eigenschaften von Integralen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter01/chapter01_sec03.html">1.3 Partielle Integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter01/chapter01_sec04.html">1.4 Integration durch Substitution</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter01/chapter01_sec05.html">Übungen</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter02/chapter02_sec00.html">2. Integrale</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter02/chapter02_sec01.html">2.1 Stammfunktion und bestimmtes Integral</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter02/chapter02_sec02.html">2.2 Eigenschaften von Integralen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter02/chapter02_sec03.html">2.3 Partielle Integration</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter02/chapter02_sec04.html">2.4 Integration durch Substitution</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter02/chapter02_sec00.html">2. Anwendungen Integral</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter02/chapter02_sec01.html">1.1 Integrieren ist Mitteln</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter02/chapter02_sec02.html">2.2 Fläche zwischen zwei Graphen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter02/chapter02_sec03.html">2.3 Bogenlänge</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter02/chapter02_sec04.html">2.4 Volumen von Rotationskörpern</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter02/chapter02_sec05.html">Übungen</a></li>
-</ul>
-</details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter03/chapter03_sec00.html">3. Anwendungen Integral</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec01.html">3.1 Integrieren ist Mitteln</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec02.html">3.2 Fläche zwischen zwei Graphen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec03.html">3.3 Bogenlänge</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec04.html">3.4 Volumen von Rotationskörpern</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec05.html">Übungen</a></li>
 </ul>
 </details></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Funktionenreihen</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter04/chapter04_sec00.html">4. Reihen und Potenzreihen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter04/chapter04_sec01.html">4.1 Reihen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter04/chapter04_sec02.html">4.2 Konvergenzkriterien für Reihen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter04/chapter04_sec03.html">4.3 Potenzreihen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter04/chapter04_sec04.html">4.4 Konvergenz von Potenzreihen</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter03/chapter03_sec00.html">3. Reihen und Potenzreihen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec01.html">3.1 Reihen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec02.html">3.2 Konvergenzkriterien für Reihen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec03.html">3.3 Potenzreihen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec04.html">3.4 Konvergenz von Potenzreihen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec05.html">Übungen</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter04/chapter04_sec00.html">4. Taylorreihen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter04/chapter04_sec01.html">4.1 Berechnung Taylorreihe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter04/chapter04_sec02.html">4.2 Restglied von Taylorreihen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter04/chapter04_sec03.html">4.3 Wichtige Potenzreihen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter04/chapter04_sec04.html">4.4 Rechnen mit Potenzreihen</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter04/chapter04_sec05.html">Übungen</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter05/chapter05_sec00.html">5. Taylorreihen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter05/chapter05_sec01.html">5.1 Berechnung Taylorreihe</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter05/chapter05_sec02.html">5.2 Restglied von Taylorreihen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter05/chapter05_sec03.html">5.3 Wichtige Potenzreihen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter05/chapter05_sec04.html">5.4 Rechnen mit Potenzreihen</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter05/chapter05_sec00.html">5. Fourierreihen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter05/chapter05_sec01.html">5.1 Periodische Funktionen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter05/chapter05_sec02.html">5.2 Fourierreihen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter05/chapter05_sec03.html">5.3 Beispiele für Fourierreihen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter05/chapter05_sec04.html">5.4 Rechenregeln Fourierreihen</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter05/chapter05_sec05.html">Übungen</a></li>
-</ul>
-</details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter06/chapter06_sec00.html">6. Fourierreihen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter06/chapter06_sec01.html">6.1 Periodische Funktionen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter06/chapter06_sec02.html">6.2 Fourierreihen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter06/chapter06_sec03.html">6.3 Beispiele für Fourierreihen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter06/chapter06_sec04.html">6.4 Rechenregeln Fourierreihen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter06/chapter06_sec05.html">Übungen</a></li>
 </ul>
 </details></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Höhere Differentialrechnung</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter07/chapter07_sec00.html">7. Funktionen von mehreren Variablen und partielle Ableitungen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter07/chapter07_sec01.html">7.1 Definition und Visualisierung</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter07/chapter07_sec02.html">7.2 Stetigkeit</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter07/chapter07_sec03.html">7.3 Partielle Ableitungen und Gradient</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter07/chapter07_sec04.html">7.4 Höhere partielle Ableitungen und Hesse-Matrix</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter06/chapter06_sec00.html">6. Funktionen von mehreren Variablen und partielle Ableitungen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter06/chapter06_sec01.html">6.1 Definition und Visualisierung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter06/chapter06_sec02.html">6.2 Stetigkeit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter06/chapter06_sec03.html">6.3 Partielle Ableitungen und Gradient</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter06/chapter06_sec04.html">6.4 Höhere partielle Ableitungen und Hesse-Matrix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter06/chapter06_sec05.html">Übungen</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter07/chapter07_sec00.html">7. Richtungsableitungen und vektorwertige Funktionen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter07/chapter07_sec01.html">7.1 Gradient und Richtungsableitung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter07/chapter07_sec02.html">7.2 Vektorwertige Funktionen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter07/chapter07_sec03.html">7.3 Jacobi-Matrix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter07/chapter07_sec04.html">7.4 Mehrdimensionale Kettenregel</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter07/chapter07_sec05.html">Übungen</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="chapter08_sec00.html">8. Richtungsableitungen und vektorwertige Funktionen</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="chapter08_sec01.html">8.1 Gradient und Richtungsableitung</a></li>
-<li class="toctree-l2"><a class="reference internal" href="chapter08_sec02.html">8.2 Vektorwertige Funktionen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="chapter08_sec03.html">8.3 Jacobi-Matrix</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">8.4 Mehrdimensionale Kettenregel</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="chapter08_sec00.html">8. Linearisierung und Extremwerte</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="chapter08_sec01.html">8.1 Tangentenfunktionen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter08_sec02.html">8.2 Totales Differential</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter08_sec03.html">8.3 Extremwerte</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">8.4 Extremwertprobleme mit Nebenbedingung</a></li>
 <li class="toctree-l2"><a class="reference internal" href="chapter08_sec05.html">Übungen</a></li>
-</ul>
-</details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter09/chapter09_sec00.html">9. Linearisierung und Extremwerte</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter09/chapter09_sec01.html">9.1 Tangentenfunktionen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter09/chapter09_sec02.html">9.2 Totales Differential</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter09/chapter09_sec03.html">9.3 Extremwerte</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter09/chapter09_sec04.html">9.4 Extremwertprobleme mit Nebenbedingung</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter09/chapter09_sec05.html">Übungen</a></li>
 </ul>
 </details></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Höhere Integralrechnung</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter10/chapter10_sec00.html">10. Doppelintegral</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter10/chapter10_sec01.html">10.1 Idee von Doppelintegralen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter10/chapter10_sec02.html">10.2 Berechnung von Doppelintegralen in kartesischen Koordinaten</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter10/chapter10_sec03.html">10.3 Anwendung: Flächenberechnung</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter10/chapter10_sec04.html">10.4 Anwendung: Schwerpunktberechnung</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter10/chapter10_sec05.html">Übungen</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter09/chapter09_sec00.html">9. Doppelintegral</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter09/chapter09_sec01.html">9.1 Idee von Doppelintegralen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter09/chapter09_sec02.html">9.2 Berechnung von Doppelintegralen in kartesischen Koordinaten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter09/chapter09_sec03.html">9.3 Anwendung: Flächenberechnung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter09/chapter09_sec04.html">9.4 Anwendung: Schwerpunktberechnung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter09/chapter09_sec05.html">Übungen</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter11/chapter11_sec00.html">11. Doppelintegral in Polarkoordinaten und Dreifachintegral</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter11/chapter11_sec01.html">11.1 Polarkoordinaten</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter11/chapter11_sec02.html">11.2 Doppelintegral in Polarkoordinaten</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter11/chapter11_sec03.html">11.3 Dreifachintegral</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter11/chapter11_sec04.html">11.4 Anwendungen Dreifachintegral</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter11/chapter11_sec05.html">Übungen</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter10/chapter10_sec00.html">10. Doppelintegral in Polarkoordinaten und Dreifachintegral</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter10/chapter10_sec01.html">10.1 Polarkoordinaten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter10/chapter10_sec02.html">10.2 Doppelintegral in Polarkoordinaten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter10/chapter10_sec03.html">10.3 Dreifachintegral</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter10/chapter10_sec04.html">10.4 Anwendungen Dreifachintegral</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter10/chapter10_sec05.html">Übungen</a></li>
 </ul>
 </details></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Differentialgleichungen</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter12/chapter12_sec00.html">12. Einführung Differentialgleichungen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter12/chapter12_sec01.html">12.1 Grundbegriffe</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter12/chapter12_sec02.html">12.2 Anfangs- und Randwertproblem</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter12/chapter12_sec03.html">12.3 Separable Differentialgleichungen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter12/chapter12_sec04.html">12.4 Exakte Differentialgleichungen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter12/chapter12_sec05.html">Übungen</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter11/chapter11_sec00.html">11. Einführung Differentialgleichungen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter11/chapter11_sec01.html">11.1 Grundbegriffe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter11/chapter11_sec02.html">11.2 Anfangs- und Randwertproblem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter11/chapter11_sec03.html">11.3 Separable Differentialgleichungen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter11/chapter11_sec04.html">11.4 Exakte Differentialgleichungen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter11/chapter11_sec05.html">Übungen</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter13/chapter13_sec00.html">13. Lineare Differentialgleichungen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter13/chapter13_sec01.html">13.1 Lineare DGL 1. Ordnung</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter13/chapter13_sec02.html">13.2 Lösung homogene lineare DGL 1. Ordnung</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter13/chapter13_sec03.html">13.3 Lösung inhomogene lineare DGL 1. Ordnung</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter13/chapter13_sec04.html">13.4 Homogene Systeme aus zwei linearen DGL 1. Ordnung</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter13/chapter13_sec05.html">Übungen</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter12/chapter12_sec00.html">12. Lineare Differentialgleichungen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter12/chapter12_sec01.html">12.1 Lineare DGL 1. Ordnung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter12/chapter12_sec02.html">12.2 Lösung homogene lineare DGL 1. Ordnung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter12/chapter12_sec03.html">12.3 Lösung inhomogene lineare DGL 1. Ordnung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter12/chapter12_sec04.html">12.4 Homogene Systeme aus zwei linearen DGL 1. Ordnung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter12/chapter12_sec05.html">Übungen</a></li>
 </ul>
 </details></li>
 </ul>
@@ -305,9 +286,14 @@
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
   </div>
-  
-  <div id="rtd-footer-container"></div>
 
 
       </div>
@@ -419,24 +405,16 @@
 
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script>
+</button>
 <button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
 </button>
@@ -450,7 +428,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>8.4 Mehrdimensionale Kettenregel</h1>
+    <h1>8.4 Extremwertprobleme mit Nebenbedingung</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -461,8 +439,8 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lernziele">Lernziele</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#verkettung-von-funktionen">Verkettung von Funktionen</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Mehrdimensionale Kettenregel</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#was-sind-extremwertprobleme-mit-nebenbedingung">Was sind Extremwertprobleme mit Nebenbedingung?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#eliminationsmethode">Eliminationsmethode</a></li>
 </ul>
             </nav>
         </div>
@@ -474,125 +452,137 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="mehrdimensionale-kettenregel">
-<h1>8.4 Mehrdimensionale Kettenregel<a class="headerlink" href="#mehrdimensionale-kettenregel" title="Link to this heading">#</a></h1>
-<p>Nachdem wir die Begriffe vektorwertige Funktion und Jacobi-Matrix kennengelernt
-haben, können wir nun das Thema Kettenregel für mehrdimensionale Funktionen
-angehen.</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="extremwertprobleme-mit-nebenbedingung">
+<h1>8.4 Extremwertprobleme mit Nebenbedingung<a class="headerlink" href="#extremwertprobleme-mit-nebenbedingung" title="Link to this heading">#</a></h1>
+<p>Im letzten Abschnitt haben wir uns mit Extremwerten einer mehrdimensionalen
+Funktion beschäftigt. An die Variablen haben wir aber keinerlei Bedingungen
+gestellt. In der Praxis kommt es aber oft vor, dass Einschränkungen an die
+Variablen selbst gestellt werden. Diese werden oft als eine zusätzliche
+Gleichung formuliert. In diesem Kapitel lernen wir eine Lösungsmethoden kennen.</p>
 <section id="lernziele">
 <h2>Lernziele<a class="headerlink" href="#lernziele" title="Link to this heading">#</a></h2>
 <div class="goals admonition">
-<p class="admonition-title">Lernziel</p>
-<p>Sie können die <strong>mehrdimensionale Kettenregel</strong> anwenden.</p>
+<p class="admonition-title">Lernziele</p>
+<ul class="simple">
+<li><p>Sie wissen, was ein Extremwertproblem mit Nebenbedingung ist.</p></li>
+<li><p>Sie wissen, was eine Zielfunktion ist.</p></li>
+<li><p>Sie können ein Extremwertproblem mit Nebenbedingung durch die
+Eliminationsmethode lösen.</p></li>
+</ul>
 </div>
 </section>
-<section id="verkettung-von-funktionen">
-<h2>Verkettung von Funktionen<a class="headerlink" href="#verkettung-von-funktionen" title="Link to this heading">#</a></h2>
-<p>Was genau passiert, wenn wir mehrdimensionale Funktionen verketten? Die
-“Verkettung” von eindimensionalen Funktionen haben wir bereits kennengelernt.
-Eine Funktion wird auf das Ergebnis einer anderen Funktion angewendet. Im Falle
-eindimensionaler Funktionen könnten wir zum Beispiel zwei Funktionen <span class="math notranslate nohighlight">\(g(x)=x^2\)</span>
-und <span class="math notranslate nohighlight">\(f(x)=\sin(x)\)</span> betrachten und sie verkettet als</p>
+<section id="was-sind-extremwertprobleme-mit-nebenbedingung">
+<h2>Was sind Extremwertprobleme mit Nebenbedingung?<a class="headerlink" href="#was-sind-extremwertprobleme-mit-nebenbedingung" title="Link to this heading">#</a></h2>
+<p>Eine Funktion zu maximieren oder zu minimieren ohne weitere Einschränkung ist in
+der Praxis oft unrealistisch. Natürlich würde jeder gerne reich sein und das
+Einkommen maximieren. Aber ist man auch bereit, die notwendigen Überstunden zu
+leisten oder für einen besser bezahlten Job umzuziehen?</p>
+<p>Wir betrachten ein Beispiel aus der Geometrie. Ein Draht der Länge l = 1 m soll
+zu einem Rechteck gebogen werden. Wie müssen die Seitenlängen <span class="math notranslate nohighlight">\(x\)</span> und <span class="math notranslate nohighlight">\(y\)</span>
+gewählt werden, damit der Flächeninhalt des Rechtecks maximal ist?</p>
+<p>Als erstes übersetzen wir die Angaben in eine Funktion und eine Gleichung. Das
+Ziel ist ein maximaler Flächeninhalt. Wir bezeichnen den Flächeninhalt mit <span class="math notranslate nohighlight">\(A\)</span>.
+Er berechnet sich mit der Formel</p>
 <div class="math notranslate nohighlight">
-\[(f\circ g)(x) = f(g(x)) = \sin(x^2)\]</div>
-<p>ausdrücken. Das bedeutet, dass wir zuerst die Funktion <span class="math notranslate nohighlight">\(g\)</span> auf <span class="math notranslate nohighlight">\(x\)</span> und dann die
-Funktion <span class="math notranslate nohighlight">\(f\)</span> auf das Ergebnis <span class="math notranslate nohighlight">\(g(x)\)</span> anwenden.</p>
-<p>Bei mehrdimensionalen Funktionen ist das Konzept ähnlich, aber es wird etwas
-komplexer, da wir jetzt mehrere Eingaben haben. Angenommen, wir haben eine
-Funktion</p>
+\[A(x,y) = x \cdot y.\]</div>
+<p>Die Funktion <span class="math notranslate nohighlight">\(A\)</span> wird <strong>Zielfunktion</strong> genannt. Sie hängt von zwei Variablen ab.
+Würden wir jetzt ohne weitere Einschränkungen das Maximum dieser Funktion
+suchen, so müssten wir die Seitenlängen <span class="math notranslate nohighlight">\(x\)</span> und <span class="math notranslate nohighlight">\(y\)</span> unendlich groß wählen. Ein
+Minimum liegt offensichtich vor, wenn <span class="math notranslate nohighlight">\(x = 0\)</span> und <span class="math notranslate nohighlight">\(y = 0\)</span>. Aber das Minimum ist
+ja nicht gesucht.</p>
+<p>Erst durch die <strong>Nebenbedingung</strong>, dass die Länge des Drahtes 1 m ist, ist die
+Suche nach einem Maximum sinnvoll. Diese Nebenbedingung formulieren wir als
+Gleichung, indem wir den Umfang des Rechtecks gleich der Länge des Drahtes
+setzen:</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}g(r, \varphi) =
-\begin{pmatrix}
-r\cdot \sin(\varphi) \\
-r\cdot \cos(\varphi)
-\end{pmatrix}\end{split}\]</div>
-<p>und eine Funktion</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}f(x,y) = \begin{pmatrix} x^2 + y^2 \\ x\cdot y \\ x^2 - y^2 \end{pmatrix}\end{split}\]</div>
-<p>und wir wollen sie verkettet darstellen. In diesem Fall würde die Verkettung so
-aussehen:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}(f\circ g)(r, \varphi) = \begin{pmatrix} \left(r\cdot \sin(\varphi)\right)^2 +
-\left(r\cdot \cos(\varphi)\right)^2 \\ \left(r\cdot \sin(\varphi)\right)\cdot
-\left(r\cdot \cos(\varphi)\right) \\
-\left(r\cdot \sin(\varphi)\right)^2 - \left(r\cdot \cos(\varphi)\right)^2
-\end{pmatrix} =
-\begin{pmatrix}
-r^2 \\
-r^2 \cdot \sin(\varphi) \cos(\varphi) \\
-r^2 \cdot \left( \sin^2(\varphi) - \cos^2(\varphi)\right)
-\end{pmatrix}\end{split}\]</div>
-<p>Das bedeutet, dass wir zuerst die Funktion <span class="math notranslate nohighlight">\(g\)</span> auf <span class="math notranslate nohighlight">\(r\)</span> und <span class="math notranslate nohighlight">\(\varphi\)</span> anwenden
-und dann die Funktion <span class="math notranslate nohighlight">\(f\)</span> auf das Ergebnis, also auf <span class="math notranslate nohighlight">\(x = r\cdot \sin(\varphi)\)</span>
-und <span class="math notranslate nohighlight">\(y = r\cdot \cos(\varphi)\)</span>.</p>
-</section>
-<section id="id1">
-<h2>Mehrdimensionale Kettenregel<a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
-<p>Zur Erinnerung, die eindimensionale Kettenregel lautet wie folgt: Die Ableitung
-der verketten Funktion <span class="math notranslate nohighlight">\(f(g(x))\)</span> ist äußere Ableitung mal innere Ableitung, d.h.</p>
-<div class="math notranslate nohighlight">
-\[f(g(x))' = f'(g(x))\cdot g'(x).\]</div>
-<p>In mehreren Dimensionen wird diese Regel durch die Verwendung von
-Jacobi-Matrizen erweitert. Die Jacobi-Matrix ist eine Matrix, die alle ersten
-partiellen Ableitungen einer mehrdimensionalen Funktion enthält.</p>
-<p>Die mehrdimensionale Kettenregel lautet dann: Wenn wir zwei Funktionen <span class="math notranslate nohighlight">\(f\)</span> unf
-<span class="math notranslate nohighlight">\(g\)</span> haben, die miteinander verkettet zu <span class="math notranslate nohighlight">\(f\circ g\)</span> werden, dann ist die
-Jacobi-Matrix der verketteten Funktion   gleich dem Produkt der Jacobi-Matrix
-von <span class="math notranslate nohighlight">\(f\)</span> nach <span class="math notranslate nohighlight">\(g\)</span> und der Jacobi-Matrix von <span class="math notranslate nohighlight">\(g\)</span> nach <span class="math notranslate nohighlight">\(\vec{x}\)</span>:</p>
-<div class="math notranslate nohighlight">
-\[J_{f\circ g}(\vec{x}) = J_{f}(g(\vec{x})) \cdot J_g(\vec{x}).\]</div>
-<p>Dabei ist <span class="math notranslate nohighlight">\(J_{f}\)</span> die Jacobi-Matrix von <span class="math notranslate nohighlight">\(f\)</span> ausgewertet an der Stelle
-<span class="math notranslate nohighlight">\(g(\vec{x})\)</span> und <span class="math notranslate nohighlight">\(J_{g}\)</span> die Jacobi-Matrix von <span class="math notranslate nohighlight">\(g\)</span> ausgewertet an der Stelle
-<span class="math notranslate nohighlight">\(\vec{x}\)</span>.</p>
-<p>Diese Regel erlaubt es uns, die Ableitung einer verketteten Funktion zu
-berechnen, selbst wenn diese Funktion aus mehreren ineinander verschachtelten
-Funktionen besteht, die jeweils von mehreren Variablen abhängen.</p>
-<p>Wir betrachten erneut das obige Beispiel und bilden zuerst die beiden
-Jacobi-Matrizen:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}J_{g}(r, \varphi) =
-\begin{pmatrix}
-\sin(\varphi) &amp; r\cdot\cos(\varphi)\\
-\cos(\varphi) &amp; -r\cdot\sin(\varphi)
-\end{pmatrix}\end{split}\]</div>
-<p>und</p>
-<div class="math notranslate nohighlight">
-\[\begin{split} J_{f}(x,y) =
-\begin{pmatrix}
-2x &amp; 2y \\
-y &amp; x \\
-2x &amp; -2y \\
-\end{pmatrix}\end{split}\]</div>
-<p>Dann ist die Jacobi-Matrix der verketteten Funktion</p>
-<div class="amsmath math notranslate nohighlight">
-\[\begin{align*}
-J_{f\circ g}(r,\varphi) &amp;= J_{f}(g(r,\varphi)) \cdot J_{g}(r, \varphi) = \\
-&amp;=
-\begin{pmatrix}
-2r\cdot\sin(\varphi) &amp; 2r\cdot \cos(\varphi) \\
-r\cdot\cos(\varphi) &amp; r\cdot\sin(\varphi) \\
-2r\cdot\sin(\varphi) &amp; -2r\cdot\cos(\varphi) \\
-\end{pmatrix} \cdot
-\begin{pmatrix}
-\sin(\varphi) &amp; r\cos(\varphi) \\
-\cos(\varphi) &amp; -r\cdot\sin(\varphi)
-\end{pmatrix} = \\
-&amp;=
-\begin{pmatrix}
-2r &amp; 0 \\
-2r\sin(\varphi)\cos(\varphi) &amp; r^2\left(\cos^2(\varphi)-\sin^2(\varphi) \right)\\
-2r\left(\sin^2(\varphi)-\cos^2(\varphi)\right) &amp; 4r^2\sin(\varphi)\cos(\varphi) \\
-\end{pmatrix}
-\end{align*}\]</div>
-<p>Das gleiche Ergebnis erhalten wir, wenn wir direkt die Jacobi-Matrix der
-verketteten Funktion berechnen. Manchmal ist es einfacher, die Jacobi-Matrizen
-der inneren und äußeren Funktion auszurechnen und das Produkt zu bilden, und
-manchmal ist die direkte Berechnung der Jacobi-Matrix der verketteten Funktion
-einfacher.</p>
+\[2\cdot x + 2 \cdot y = 1.\]</div>
+<p>Streng genommen haben wir damit den Definitionsbereich der Funktion <span class="math notranslate nohighlight">\(A\)</span>
+eingeschränkt. Das folgende Video erläutert nochmal, was ein Extremwertproblem
+mit Nebenbedingungen ist.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
-<span class="sd-summary-text">Video zu “Mehrdimensionale Kettenregel” von Prof. Hoever</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/LkWAGcGGDD8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<span class="sd-summary-text">Video zu “Extrema mit Nebenbedingungen” von Mathematische Methoden</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/MMpljay-naE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+</details></section>
+<section id="eliminationsmethode">
+<h2>Eliminationsmethode<a class="headerlink" href="#eliminationsmethode" title="Link to this heading">#</a></h2>
+<p>Für die Lösung von Extremwertproblemen mit Nebenbedingungen gibt es mehrere
+Strategien. Im Folgenden betrachten wir die sogenannte <strong>Eliminationsmethode</strong>.
+Gehen Sie wie folgt vor, wenn Sie ein Extremwertproblem mit Nebenbedingungen
+lösen wollen.</p>
+<ol class="arabic simple">
+<li><p>Formulieren Sie die Zielfunktion als Funktion von mehreren Variablen.</p></li>
+<li><p>Formulieren Sie die Nebenbedingung als Gleichung.</p></li>
+<li><p>Lösen Sie die Gleichung nach einer Variable auf.</p></li>
+<li><p>Setzen Sie die aufgelöste Gleichung in die Zielfunktion ein.</p></li>
+<li><p>Jetzt hängt die Zielfunktion von einer Variable weniger ab und die Gleichung
+braucht nicht mehr berücksichtigt werden (sie ist ja indirekt jetzt in der
+Zielfunktion enthalten0.</p></li>
+<li><p>Bestimmen Sie die Extremwerte ohne Nebenbedingung.</p></li>
+<li><p>Beantworten Sie mit diesen Erkenntnissen die ursprüngliche Frage.</p></li>
+</ol>
+<p>Schritt 1 und 2 haben wir für das Beispiel mit dem Draht schon durchgeführt.
+Also lösen wir jetzt die Gleichung <span class="math notranslate nohighlight">\(2\cdot x + 2 \cdot y = 1\)</span> nach <span class="math notranslate nohighlight">\(y\)</span> auf:</p>
+<div class="math notranslate nohighlight">
+\[y = \frac{1}{2} \left(1 - 2\cdot x\right) = -x + \frac{1}{2}\]</div>
+<p>und setzen die nach <span class="math notranslate nohighlight">\(y\)</span> aufgelöste Gleichung in die Zielfunktion ein:</p>
+<div class="math notranslate nohighlight">
+\[\tilde{A}(x) = x \cdot (-x+\frac{1}{2}).\]</div>
+<p>Um deutlich zu machen, dass diese neue Funktion nur noch von <span class="math notranslate nohighlight">\(x\)</span> abhängt, haben
+wir ihr einen neuen Namen gegeben, nämlich <span class="math notranslate nohighlight">\(\tilde{A}\)</span>. Jetzt vereinfachen wir
+die Funktion noch, indem wir ausmultiplizieren:</p>
+<div class="math notranslate nohighlight">
+\[\tilde{A}(x) = x \cdot (-x+\frac{1}{2}) = -x^2 + \frac{1}{2}x.\]</div>
+<p>Als letztes folgt Schritt 6, die Bestimmung der Extremwerte. Dazu bilden wir die
+erste Ableitung</p>
+<div class="math notranslate nohighlight">
+\[\tilde{A}'(x) = -2 x + \frac{1}{2}.\]</div>
+<p>Für die Suche nach Kandidaten für Extremstellen setzen wir <span class="math notranslate nohighlight">\(\tilde{A}'(x) = 0\)</span> und
+bestimmen die Nullstellen:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+-2x + \frac{1}{2} &amp;= 0 \\
+\Rightarrow x &amp;= \frac{1}{4}.\\
+\end{align*}\]</div>
+<p>Als nächstes überprüfen wir, ob <span class="math notranslate nohighlight">\(x = \frac{1}{4}\)</span> wirklich ein Extremum ist,
+indem wir die 2. Ableitung bilden</p>
+<div class="math notranslate nohighlight">
+\[\tilde{A}''(x) = -2\]</div>
+<p>und dann den Punkt <span class="math notranslate nohighlight">\(x = \frac{1}{4}\)</span> einsetzen:</p>
+<div class="math notranslate nohighlight">
+\[\tilde{A}''(\frac{1}{4}) = -2.\]</div>
+<p>Da die 2. Ableitung an der Stelle <span class="math notranslate nohighlight">\(x = \frac{1}{4}\)</span> negativ ist, können wir
+schlussfolgern, dass <span class="math notranslate nohighlight">\(x = \frac{1}{4}\)</span> eine Extremstelle ist und dass es sich
+dabei um ein Maximum (Hochpunkt) handelt.</p>
+<p>Damit haben wir die erste Seitenlänge <span class="math notranslate nohighlight">\(x\)</span> gefunden. Jetzt fehlt noch Schritt 7,
+die Beantwortung der ursprünglichen Frage. Es war ja nach den beiden
+Seitenlängen gefragt. Aus der Nebenbedingung</p>
+<div class="math notranslate nohighlight">
+\[2\cdot x + 2 \cdot y = 1\]</div>
+<p>erhalten wir aber für <span class="math notranslate nohighlight">\(x = \frac{1}{4}\)</span> sofort, dass <span class="math notranslate nohighlight">\(y=\frac{1}{4}\)</span> gelten
+muss.</p>
+<p>Das vom Flächeninhalt her maximale Rechteckt mit einer Drahtlänge von 1 m
+entsteht, wenn der Draht zu einem Quadrat gebogen wird, bei dem jede Seite eine
+Länge von 0.25 m hat.</p>
+<p>Das folgende Video zeigt die Eliminationsmethode.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Video zu “Eliminationsmethode” von Mathematische Methoden</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/JOMh6OiGZbA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+</details><p>In dem folgenden Video werden mögliche Kandidaten für Extrema gesucht. Es wird
+allerdings nicht überprüft, ob die Kandidaten wirklich Extremwerte sind.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Video zu “Beispiel Eliminationsmethode” von Mathematische Methoden</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/4AFGmSQwpH4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+</details><p>Ein weiteres Beispiel wird in dem folgenden Video gezeigt.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Video zu “Extremwertaufgaben” von Magda liebt Mathe</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/4D4hpF8w69Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </div>
 </details></section>
 </section>
@@ -633,7 +623,7 @@ einfacher.</p>
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">8.3 Jacobi-Matrix</p>
+        <p class="prev-next-title">8.3 Extremwerte</p>
       </div>
     </a>
     <a class="right-next"
@@ -652,7 +642,8 @@ einfacher.</p>
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
   <div class="sidebar-secondary-item">
@@ -662,8 +653,8 @@ einfacher.</p>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lernziele">Lernziele</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#verkettung-von-funktionen">Verkettung von Funktionen</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Mehrdimensionale Kettenregel</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#was-sind-extremwertprobleme-mit-nebenbedingung">Was sind Extremwertprobleme mit Nebenbedingung?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#eliminationsmethode">Eliminationsmethode</a></li>
 </ul>
   </nav></div>
 
@@ -711,8 +702,8 @@ By Simone Gramsch
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
 
   <footer class="bd-footer">
   </footer>

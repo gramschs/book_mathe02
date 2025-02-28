@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>5.1 Berechnung Taylorreihe &#8212; Mathematik 2 Maschinenbau</title>
+    <title>5.1 Periodische Funktionen &#8212; Mathematik 2 Maschinenbau</title>
   
   
   
@@ -16,32 +16,35 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-
-  
-  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=87e54e7c" />
     <link rel="stylesheet" type="text/css" href="../_static/jsxgraph.css?v=a7b027cb" />
     <link rel="stylesheet" type="text/css" href="../_static/my_styles.css?v=9b976ced" />
   
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
-  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
     <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
     <script src="../_static/doctools.js?v=9a2dae69"></script>
@@ -54,7 +57,7 @@
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
@@ -66,10 +69,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="5.2 Restglied von Taylorreihen" href="chapter05_sec02.html" />
-    <link rel="prev" title="5. Taylorreihen" href="chapter05_sec00.html" />
+    <link rel="next" title="5.2 Fourierreihen" href="chapter05_sec02.html" />
+    <link rel="prev" title="5. Fourierreihen" href="chapter05_sec00.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
   </head>
   
   
@@ -85,19 +89,8 @@
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-primary-sidebar-checkbox"/>
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-secondary-sidebar-checkbox"/>
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="../search.html"
       method="get">
@@ -105,7 +98,6 @@
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search this book..."
          aria-label="Search this book..."
          autocomplete="off"
@@ -113,8 +105,8 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -130,7 +122,8 @@
       
       
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -160,15 +153,11 @@
 </a></div>
         <div class="sidebar-primary-item">
 
- <script>
- document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script></div>
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
@@ -179,122 +168,114 @@
                 </a>
             </li>
         </ul>
-        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Differential- und Integralrechnung</span></p>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Fortsetzung Integralrechnung</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter01/chapter01_sec00.html">1. Differentialrechnung</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter01/chapter01_sec01.html">1.1 Ableitungen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter01/chapter01_sec02.html">1.2 Rechenregeln Ableitungen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter01/chapter01_sec03.html">1.3 Extremwerte</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter01/chapter01_sec04.html">1.4 Extremwerte mit Nebenbedingung</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter01/chapter01_sec00.html">1. Wiederholung Integrale</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter01/chapter01_sec01.html">1.1 Stammfunktion und bestimmtes Integral</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter01/chapter01_sec02.html">1.2 Eigenschaften von Integralen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter01/chapter01_sec03.html">1.3 Partielle Integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter01/chapter01_sec04.html">1.4 Integration durch Substitution</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter01/chapter01_sec05.html">Übungen</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter02/chapter02_sec00.html">2. Integrale</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter02/chapter02_sec01.html">2.1 Stammfunktion und bestimmtes Integral</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter02/chapter02_sec02.html">2.2 Eigenschaften von Integralen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter02/chapter02_sec03.html">2.3 Partielle Integration</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter02/chapter02_sec04.html">2.4 Integration durch Substitution</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter02/chapter02_sec00.html">2. Anwendungen Integral</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter02/chapter02_sec01.html">1.1 Integrieren ist Mitteln</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter02/chapter02_sec02.html">2.2 Fläche zwischen zwei Graphen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter02/chapter02_sec03.html">2.3 Bogenlänge</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter02/chapter02_sec04.html">2.4 Volumen von Rotationskörpern</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter02/chapter02_sec05.html">Übungen</a></li>
-</ul>
-</details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter03/chapter03_sec00.html">3. Anwendungen Integral</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec01.html">3.1 Integrieren ist Mitteln</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec02.html">3.2 Fläche zwischen zwei Graphen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec03.html">3.3 Bogenlänge</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec04.html">3.4 Volumen von Rotationskörpern</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec05.html">Übungen</a></li>
 </ul>
 </details></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Funktionenreihen</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter04/chapter04_sec00.html">4. Reihen und Potenzreihen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter04/chapter04_sec01.html">4.1 Reihen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter04/chapter04_sec02.html">4.2 Konvergenzkriterien für Reihen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter04/chapter04_sec03.html">4.3 Potenzreihen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter04/chapter04_sec04.html">4.4 Konvergenz von Potenzreihen</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter03/chapter03_sec00.html">3. Reihen und Potenzreihen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec01.html">3.1 Reihen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec02.html">3.2 Konvergenzkriterien für Reihen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec03.html">3.3 Potenzreihen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec04.html">3.4 Konvergenz von Potenzreihen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter03/chapter03_sec05.html">Übungen</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter04/chapter04_sec00.html">4. Taylorreihen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter04/chapter04_sec01.html">4.1 Berechnung Taylorreihe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter04/chapter04_sec02.html">4.2 Restglied von Taylorreihen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter04/chapter04_sec03.html">4.3 Wichtige Potenzreihen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter04/chapter04_sec04.html">4.4 Rechnen mit Potenzreihen</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter04/chapter04_sec05.html">Übungen</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="chapter05_sec00.html">5. Taylorreihen</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">5.1 Berechnung Taylorreihe</a></li>
-<li class="toctree-l2"><a class="reference internal" href="chapter05_sec02.html">5.2 Restglied von Taylorreihen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="chapter05_sec03.html">5.3 Wichtige Potenzreihen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="chapter05_sec04.html">5.4 Rechnen mit Potenzreihen</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="chapter05_sec00.html">5. Fourierreihen</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">5.1 Periodische Funktionen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter05_sec02.html">5.2 Fourierreihen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter05_sec03.html">5.3 Beispiele für Fourierreihen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter05_sec04.html">5.4 Rechenregeln Fourierreihen</a></li>
 <li class="toctree-l2"><a class="reference internal" href="chapter05_sec05.html">Übungen</a></li>
-</ul>
-</details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter06/chapter06_sec00.html">6. Fourierreihen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter06/chapter06_sec01.html">6.1 Periodische Funktionen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter06/chapter06_sec02.html">6.2 Fourierreihen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter06/chapter06_sec03.html">6.3 Beispiele für Fourierreihen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter06/chapter06_sec04.html">6.4 Rechenregeln Fourierreihen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter06/chapter06_sec05.html">Übungen</a></li>
 </ul>
 </details></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Höhere Differentialrechnung</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter07/chapter07_sec00.html">7. Funktionen von mehreren Variablen und partielle Ableitungen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter07/chapter07_sec01.html">7.1 Definition und Visualisierung</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter07/chapter07_sec02.html">7.2 Stetigkeit</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter07/chapter07_sec03.html">7.3 Partielle Ableitungen und Gradient</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter07/chapter07_sec04.html">7.4 Höhere partielle Ableitungen und Hesse-Matrix</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter06/chapter06_sec00.html">6. Funktionen von mehreren Variablen und partielle Ableitungen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter06/chapter06_sec01.html">6.1 Definition und Visualisierung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter06/chapter06_sec02.html">6.2 Stetigkeit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter06/chapter06_sec03.html">6.3 Partielle Ableitungen und Gradient</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter06/chapter06_sec04.html">6.4 Höhere partielle Ableitungen und Hesse-Matrix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter06/chapter06_sec05.html">Übungen</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter07/chapter07_sec00.html">7. Richtungsableitungen und vektorwertige Funktionen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter07/chapter07_sec01.html">7.1 Gradient und Richtungsableitung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter07/chapter07_sec02.html">7.2 Vektorwertige Funktionen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter07/chapter07_sec03.html">7.3 Jacobi-Matrix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter07/chapter07_sec04.html">7.4 Mehrdimensionale Kettenregel</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter07/chapter07_sec05.html">Übungen</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter08/chapter08_sec00.html">8. Richtungsableitungen und vektorwertige Funktionen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter08/chapter08_sec01.html">8.1 Gradient und Richtungsableitung</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter08/chapter08_sec02.html">8.2 Vektorwertige Funktionen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter08/chapter08_sec03.html">8.3 Jacobi-Matrix</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter08/chapter08_sec04.html">8.4 Mehrdimensionale Kettenregel</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter08/chapter08_sec00.html">8. Linearisierung und Extremwerte</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter08/chapter08_sec01.html">8.1 Tangentenfunktionen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter08/chapter08_sec02.html">8.2 Totales Differential</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter08/chapter08_sec03.html">8.3 Extremwerte</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter08/chapter08_sec04.html">8.4 Extremwertprobleme mit Nebenbedingung</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter08/chapter08_sec05.html">Übungen</a></li>
-</ul>
-</details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter09/chapter09_sec00.html">9. Linearisierung und Extremwerte</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter09/chapter09_sec01.html">9.1 Tangentenfunktionen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter09/chapter09_sec02.html">9.2 Totales Differential</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter09/chapter09_sec03.html">9.3 Extremwerte</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter09/chapter09_sec04.html">9.4 Extremwertprobleme mit Nebenbedingung</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter09/chapter09_sec05.html">Übungen</a></li>
 </ul>
 </details></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Höhere Integralrechnung</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter10/chapter10_sec00.html">10. Doppelintegral</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter10/chapter10_sec01.html">10.1 Idee von Doppelintegralen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter10/chapter10_sec02.html">10.2 Berechnung von Doppelintegralen in kartesischen Koordinaten</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter10/chapter10_sec03.html">10.3 Anwendung: Flächenberechnung</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter10/chapter10_sec04.html">10.4 Anwendung: Schwerpunktberechnung</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter10/chapter10_sec05.html">Übungen</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter09/chapter09_sec00.html">9. Doppelintegral</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter09/chapter09_sec01.html">9.1 Idee von Doppelintegralen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter09/chapter09_sec02.html">9.2 Berechnung von Doppelintegralen in kartesischen Koordinaten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter09/chapter09_sec03.html">9.3 Anwendung: Flächenberechnung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter09/chapter09_sec04.html">9.4 Anwendung: Schwerpunktberechnung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter09/chapter09_sec05.html">Übungen</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter11/chapter11_sec00.html">11. Doppelintegral in Polarkoordinaten und Dreifachintegral</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter11/chapter11_sec01.html">11.1 Polarkoordinaten</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter11/chapter11_sec02.html">11.2 Doppelintegral in Polarkoordinaten</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter11/chapter11_sec03.html">11.3 Dreifachintegral</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter11/chapter11_sec04.html">11.4 Anwendungen Dreifachintegral</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter11/chapter11_sec05.html">Übungen</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter10/chapter10_sec00.html">10. Doppelintegral in Polarkoordinaten und Dreifachintegral</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter10/chapter10_sec01.html">10.1 Polarkoordinaten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter10/chapter10_sec02.html">10.2 Doppelintegral in Polarkoordinaten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter10/chapter10_sec03.html">10.3 Dreifachintegral</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter10/chapter10_sec04.html">10.4 Anwendungen Dreifachintegral</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter10/chapter10_sec05.html">Übungen</a></li>
 </ul>
 </details></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Differentialgleichungen</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter12/chapter12_sec00.html">12. Einführung Differentialgleichungen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter12/chapter12_sec01.html">12.1 Grundbegriffe</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter12/chapter12_sec02.html">12.2 Anfangs- und Randwertproblem</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter12/chapter12_sec03.html">12.3 Separable Differentialgleichungen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter12/chapter12_sec04.html">12.4 Exakte Differentialgleichungen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter12/chapter12_sec05.html">Übungen</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter11/chapter11_sec00.html">11. Einführung Differentialgleichungen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter11/chapter11_sec01.html">11.1 Grundbegriffe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter11/chapter11_sec02.html">11.2 Anfangs- und Randwertproblem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter11/chapter11_sec03.html">11.3 Separable Differentialgleichungen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter11/chapter11_sec04.html">11.4 Exakte Differentialgleichungen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter11/chapter11_sec05.html">Übungen</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter13/chapter13_sec00.html">13. Lineare Differentialgleichungen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter13/chapter13_sec01.html">13.1 Lineare DGL 1. Ordnung</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter13/chapter13_sec02.html">13.2 Lösung homogene lineare DGL 1. Ordnung</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter13/chapter13_sec03.html">13.3 Lösung inhomogene lineare DGL 1. Ordnung</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter13/chapter13_sec04.html">13.4 Homogene Systeme aus zwei linearen DGL 1. Ordnung</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter13/chapter13_sec05.html">Übungen</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapter12/chapter12_sec00.html">12. Lineare Differentialgleichungen</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter12/chapter12_sec01.html">12.1 Lineare DGL 1. Ordnung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter12/chapter12_sec02.html">12.2 Lösung homogene lineare DGL 1. Ordnung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter12/chapter12_sec03.html">12.3 Lösung inhomogene lineare DGL 1. Ordnung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter12/chapter12_sec04.html">12.4 Homogene Systeme aus zwei linearen DGL 1. Ordnung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter12/chapter12_sec05.html">Übungen</a></li>
 </ul>
 </details></li>
 </ul>
@@ -305,9 +286,14 @@
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
   </div>
-  
-  <div id="rtd-footer-container"></div>
 
 
       </div>
@@ -419,24 +405,16 @@
 
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script>
+</button>
 <button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
 </button>
@@ -450,7 +428,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>5.1 Berechnung Taylorreihe</h1>
+    <h1>5.1 Periodische Funktionen</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -461,9 +439,14 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lernziele">Lernziele</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#taylorpolynom">Taylorpolynom</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kochrezept-zur-berechnung-von-taylorpolynomen">Kochrezept zur Berechnung von Taylorpolynomen</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#taylorreihe">Taylorreihe</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#periodische-funktionen-was-ist-das">Periodische Funktionen - was ist das?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#beispiele-periodischer-funktionen">Beispiele periodischer Funktionen</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sinus-und-kosinusfunktion">Sinus- und Kosinusfunktion</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rechteckfunktion">Rechteckfunktion</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dreiecksfunktion">Dreiecksfunktion</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sagezahnfunktion">Sägezahnfunktion</a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -475,110 +458,141 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="berechnung-taylorreihe">
-<h1>5.1 Berechnung Taylorreihe<a class="headerlink" href="#berechnung-taylorreihe" title="Link to this heading">#</a></h1>
-<p>Im Kapitel über Potenzreihen haben wir uns bereits mit der Frage beschäftigt, in
-welchem Intervall eine Potenzreihe eine gegebene Funktion gut approximiert. Was
-uns aber noch fehlt ist die Frage, wie wir zu solchen Potenzreihen kommen. Daher
-gibt es in diesem Kapitel eine Anleitung dazu.</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="periodische-funktionen">
+<h1>5.1 Periodische Funktionen<a class="headerlink" href="#periodische-funktionen" title="Link to this heading">#</a></h1>
+<p>In diesem Kapitel werden wir uns mit periodischen Funktionen beschäftigen.
+Insbesondere im Maschinenbau finden sich zahlreiche Anwendungen von periodischen
+Funktionen, z.B. in der Technischen Mechanik oder in der Regelungstechnik. Viele
+mechanische Systeme, wie z.B. Federsysteme, Pendel oder rotierende Wellen,
+führen periodische Schwingungen aus. Auch in der Regelungstechnik werden
+periodische Steuergrößen erzeugt, die zur Regelung von Systemen verwendet
+werden. Beispiele sind periodische Signale, wie z.B. Rechteck-, Dreieck- oder
+Sinusfunktionen. Diese Signale werden verwendet, um elektrische, mechanische
+oder hydraulische Systeme zu steuern.</p>
 <section id="lernziele">
 <h2>Lernziele<a class="headerlink" href="#lernziele" title="Link to this heading">#</a></h2>
 <div class="goals admonition">
 <p class="admonition-title">Lernziele</p>
 <ul class="simple">
-<li><p>Sie kennen die Formel für ein <strong>Taylorpolynom der Ordnung n</strong> auswendig:</p></li>
+<li><p>Sie können erklären, was eine <strong>periodische Funktion</strong> ist.</p></li>
+<li><p>Sie können Beispiele von periodischen Funktionen nennen wie</p>
+<ul>
+<li><p>Sinus- und Kosinusfunktion,</p></li>
+<li><p>Rechteckfunktion,</p></li>
+<li><p>Dreiecksfunktion und</p></li>
+<li><p>Sägezahnfunktion.</p></li>
 </ul>
-<div class="math notranslate nohighlight">
-\[T_n(x) =\sum_{k=0}^{n} \frac{f^{(k)}(x_0)}{k!} \cdot (x-x_0)^k.\]</div>
-<ul class="simple">
-<li><p>Sie kennen die Formel für die <strong>Taylorreihe</strong> auswendig:</p></li>
+</li>
 </ul>
-<div class="math notranslate nohighlight">
-\[T(x)=\sum_{k=0}^{\infty} \frac{f^{(k)}(x_0)}{k!} (x-x_0)^k.\]</div>
 </div>
 </section>
-<section id="taylorpolynom">
-<h2>Taylorpolynom<a class="headerlink" href="#taylorpolynom" title="Link to this heading">#</a></h2>
-<p>Für Funktionen, die genügend oft differenzierbar sind, gibt es ein Kochrezept
-zur Berechnung der Koeffizienten der dazugehörigen Potenzreihe. Um dieses
-Kochrezept anzuwenden, beschäftigen wir uns zunächst mit dem sogenannten
-Taylorpolynom.</p>
+<section id="periodische-funktionen-was-ist-das">
+<h2>Periodische Funktionen - was ist das?<a class="headerlink" href="#periodische-funktionen-was-ist-das" title="Link to this heading">#</a></h2>
+<p>Bei einer periodischen Funktion wiederholen sich in regelmäßigen Abständen die Funktionswerte wieder. Der Abstand, nachdem sich die Funktionswerte beginnen zu wiederholen, heißt <strong>Periodendauer</strong>.</p>
 <div class="note admonition">
-<p class="admonition-title">Was ist … ein Taylorpolynom?</p>
-<p>Ein <strong>Taylorpolynom</strong> zu einer Funktion <span class="math notranslate nohighlight">\(f\)</span> kann nur gebildet werden, wenn die Funktion <span class="math notranslate nohighlight">\(f\)</span> n-mal stetig differenzierbar ist. Wenn das aber der Fall ist, dann wird noch ein Entwicklungspunkt <span class="math notranslate nohighlight">\(x_0\)</span> gewählt. Das Taylorpolynom <span class="math notranslate nohighlight">\(T_n\)</span> zu <span class="math notranslate nohighlight">\(f\)</span> vom Grad <span class="math notranslate nohighlight">\(n\)</span> am Entwicklungspunkt <span class="math notranslate nohighlight">\(x_0\)</span> ist dann:</p>
-<div class="amsmath math notranslate nohighlight">
-\[\begin{align*}
-T_n(x) &amp;=f(x_0) + \frac{f'(x_0)}{1!}(x-x_0)^1 + \frac{f''(x_0)}{2!}(x-x_0)^2 + \ldots \\
-       &amp;=\sum_{k=0}^{n} \frac{f^{(k)}(x_0)}{k!} \cdot (x-x_0)^k.
-\end{align*}\]</div>
-<p>Dabei steht <span class="math notranslate nohighlight">\(k!\)</span> für die Fakultät der Zahl <span class="math notranslate nohighlight">\(k\)</span>.</p>
+<p class="admonition-title">Was ist … eine periodische Funktion?</p>
+<p>Eine Funktion heißt periodisch, wenn sich die Funktionswerte regelmäßig wiederholen. Als mathematische Formel ausgedrückt ist eine Funktion <span class="math notranslate nohighlight">\(f\)</span> periodisch mit der Periode <span class="math notranslate nohighlight">\(p\)</span>, wenn gilt:</p>
+<div class="math notranslate nohighlight">
+\[f(x+p) = f(x).\]</div>
 </div>
-<p>Hier gibt es ein Video, das die Fakultät <span class="math notranslate nohighlight">\(k!\)</span> erklärt.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
-<span class="sd-summary-text">Video zu “Fakultät” von Mathematrick</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/nVdUcZmmU7w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<span class="sd-summary-text">Video “Periodische Funktion” von lernflix</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/e3lpwsKp75Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </div>
 </details></section>
-<section id="kochrezept-zur-berechnung-von-taylorpolynomen">
-<span id="ref04-sec01-kochrezept"></span><h2>Kochrezept zur Berechnung von Taylorpolynomen<a class="headerlink" href="#kochrezept-zur-berechnung-von-taylorpolynomen" title="Link to this heading">#</a></h2>
-<ol class="arabic simple">
-<li><p>Erst einmal folgende Frage beantworten: Bis zu welchem Polynomgrad <span class="math notranslate nohighlight">\(n\)</span> soll
-die Funktion <span class="math notranslate nohighlight">\(f(x)\)</span> approximiert werden? <span class="math notranslate nohighlight">\(\rightarrow n\)</span> aufschreiben</p></li>
-<li><p>Die ersten <span class="math notranslate nohighlight">\(n\)</span> Ableitungen der Funktion <span class="math notranslate nohighlight">\(f\)</span> bestimmen, also <span class="math notranslate nohighlight">\(f'(x), f''(x),
-f'''(x), f^{(iv)}(x), \ldots\)</span>.</p></li>
-<li><p>Die Koeffizienten ausrechnen, indem nun der Entwicklungspunkt <span class="math notranslate nohighlight">\(x_0\)</span> in die
-Funktion <span class="math notranslate nohighlight">\(f\)</span> und in die Ableitungen eingesetzt wird.</p></li>
-<li><p>Die Fakultäten ausrechnen.</p></li>
-<li><p>Alles in die Formel für das Taylorpolynom einsetzen.</p></li>
-</ol>
-<p>Probieren wir das an einem Beispiel aus. Die Funktion <span class="math notranslate nohighlight">\(f(x)=\sin(x)\)</span> soll durch
-ein Taylorpolynom Grad 3 am Entwicklungspunkt <span class="math notranslate nohighlight">\(x_0=0\)</span> approximiert werden.</p>
-<p>Schritt 1: Wir halten fest, der Grad ist 3 (<span class="math notranslate nohighlight">\(n=3\)</span>), d.h. wir brauchen die
-ersten drei Ableitungen.</p>
-<p>Schritt 2: Wir bilden die ersten drei Ableitungen:</p>
-<div class="amsmath math notranslate nohighlight">
-\[\begin{align*} 
-f'(x)  &amp;= \cos(x) \\
-f''(x) &amp;= -\sin(x) \\
-f^{(3)}(x) &amp;= -\cos(x) \end{align*}\]</div>
-<p>Schritt 3: Wir rechnen die Koeffizienten des Taylorpolynoms aus, indem wir <span class="math notranslate nohighlight">\(x_0
-= 0\)</span> in die Funktion und die ersten drei Ableitungen einsetzen:</p>
-<div class="amsmath math notranslate nohighlight">
-\[\begin{align*}
-f(0) &amp;= \sin(0) = 0 \\
-f'(0) &amp;= \cos(0) = 1 \\
-f''(0) &amp;= - \sin(0) = 0 \\
-f^{(3)}(0) &amp;= -\cos(0) = -1 \end{align*}\]</div>
-<p>Schritt 4: Die Fakultäten bis 3 werden ausgerechnet:</p>
-<div class="math notranslate nohighlight">
-\[0!=1, \quad 1!=1, \quad 2!=2, \quad 3!=6.\]</div>
-<p>Schritt 5: Wir setzen alles in die Formel für das Taylorpolynom ein:</p>
-<div class="amsmath math notranslate nohighlight">
-\[\begin{align*} T_3(x) &amp;= f(x_0) + f'(x_0)\cdot (x-x_0) + \frac{f''(x_0)}{2}\cdot
-(x-x_0)^2 + \frac{f^{(3)}(x_0)}{6} \cdot (x-x_0)^3 = \\
-    &amp;= \sin(0) + 1\cdot (x-0) + \frac{0}{2}\cdot (x-0)^2 + \frac{-1}{6}\cdot (x-0)^3 = \\
-    &amp;= x - \frac{1}{6}x^3.
-\end{align*}\]</div>
-<p>Am besten das folgende Video gucken :-)</p>
+<section id="beispiele-periodischer-funktionen">
+<h2>Beispiele periodischer Funktionen<a class="headerlink" href="#beispiele-periodischer-funktionen" title="Link to this heading">#</a></h2>
+<section id="sinus-und-kosinusfunktion">
+<h3>Sinus- und Kosinusfunktion<a class="headerlink" href="#sinus-und-kosinusfunktion" title="Link to this heading">#</a></h3>
+<p>Sinus und Kosinus sind die beiden wichtigsten periodischen Funktionen. Sie werden auch dazu genutzt, um andere periodische Funktionen zu approximieren (Stichwort: Fourierreihe). Beide haben eine Periode von <span class="math notranslate nohighlight">\(2\pi\)</span>.</p>
+<figure class="align-default" id="chap05-plot-sinus">
+<a class="reference internal image-reference" href="../_images/plot_sinus.png"><img alt="../_images/plot_sinus.png" src="../_images/plot_sinus.png" style="width: 600px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 2 </span><span class="caption-text">Sinusfunktion mit einer Periode <span class="math notranslate nohighlight">\(p = 2\pi\)</span></span><a class="headerlink" href="#chap05-plot-sinus" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Wir werden in den nächsten Kapiteln die Sinus- und Kosinusfunktionen
+modifizieren. Im folgenden Video werden die verschiedenen Möglichkeiten, die
+Sinusfunktion zu transformieren wiederholt. Für die Kosinusfunktion gelten die
+gleichen Transformationen analog.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
-<span class="sd-summary-text">Video zu “Taylorpolynom berechnen” von Mathematrick</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/o95cOqnLekw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<span class="sd-summary-text">Video “Sinusfunktion Transformation” von Daniel Jung</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/d_u7yYf30yA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </div>
 </details></section>
-<section id="taylorreihe">
-<h2>Taylorreihe<a class="headerlink" href="#taylorreihe" title="Link to this heading">#</a></h2>
-<p>Und was ist nun die Taylorreihe? Ganz einfach, ein Taylorpolynom, das bis
-Unendlich geht, sieht nur kompliziert aus, wenn man es formal aufschreibt.</p>
-<div class="note admonition">
-<p class="admonition-title">Was ist … eine Taylorreihe?</p>
-<p>Zu einer Funktion <span class="math notranslate nohighlight">\(f\)</span>, die unendlich oft differenzierbar ist, kann die folgende Potenzreihe</p>
-<div class="math notranslate nohighlight">
-\[T(x)=\sum_{k=0}^{\infty} \frac{f^{(k)}(x_0)}{k!} (x-x_0)^k\]</div>
-<p>gebildet werden. Diese Potenzreihe wird Taylorreihe zu <span class="math notranslate nohighlight">\(f\)</span> am Entwicklungspunkt <span class="math notranslate nohighlight">\(x_
-0\)</span> genannt.</p>
-</div>
+<section id="rechteckfunktion">
+<h3>Rechteckfunktion<a class="headerlink" href="#rechteckfunktion" title="Link to this heading">#</a></h3>
+<p>Die Rechteckfunktion ist zunächst einmal keine periodische Funktion. Als erstes
+werden eine Periode <span class="math notranslate nohighlight">\(T\)</span> und eine Konstante <span class="math notranslate nohighlight">\(c\)</span> festgelegt. Dann wird die
+Rechteckfunktion definiert als die Funktion, deren Funktionswerte im Intervall
+<span class="math notranslate nohighlight">\([-\frac{T}{2}, \frac{T}{2}]\)</span> gleich der Konstante <span class="math notranslate nohighlight">\(c\)</span> sind. Und außerhalb
+dieses Intervalls sollen die Funktionswerte 0 sein (übrigens, manchmal wird auch
+ein anderer Wert als 0 genommen). Mathematisch wird das folgendermaßen
+ausgedrückt:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+f(t) =
+\begin{cases}
+c &amp; \text{ für } -\frac{T}{2} \leq x \leq \frac{T}{2},\\
+0 &amp; \text{ sonst.}
+\end{cases}
+\end{equation*}\]</div>
+<p>Der Funktionsgraph der Rechteckfunktion sieht folgendermaßen aus:</p>
+<figure class="align-default" id="chap05-plot-rechteck">
+<a class="reference internal image-reference" href="../_images/plot_rechteck.png"><img alt="../_images/plot_rechteck.png" src="../_images/plot_rechteck.png" style="width: 600px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 3 </span><span class="caption-text">Beispiel einer Rechteckfunktion: Periode <span class="math notranslate nohighlight">\(T = 1\)</span> und <span class="math notranslate nohighlight">\(c = 1\)</span></span><a class="headerlink" href="#chap05-plot-rechteck" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Jetzt wird die Periode von <span class="math notranslate nohighlight">\(0\)</span> bis <span class="math notranslate nohighlight">\(T\)</span> gelb markiert.</p>
+<figure class="align-default" id="chap05-plot-rechteck-period">
+<a class="reference internal image-reference" href="../_images/plot_rechteck_period.png"><img alt="../_images/plot_rechteck_period.png" src="../_images/plot_rechteck_period.png" style="width: 600px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 4 </span><span class="caption-text">Beispiel einer Rechteckfunktion: das Periodenintervall <span class="math notranslate nohighlight">\([0,T]\)</span> ist gelb markiert</span><a class="headerlink" href="#chap05-plot-rechteck-period" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Als letztes wird der Funktionsgraph periodisch wiederholt. Damit ist gemeint,
+dass das gelb markierte Gebiet links und rechts immer wieder drangehängt wird.
+Dadruch entsteht eine neue Funktion, deren Funktionsgraph in der nächsten
+Abbildung zu sehen ist.</p>
+<figure class="align-default" id="chap05-plot-rechteck-periodisch">
+<a class="reference internal image-reference" href="../_images/plot_rechteck_periodisch.png"><img alt="../_images/plot_rechteck_periodisch.png" src="../_images/plot_rechteck_periodisch.png" style="width: 600px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 5 </span><span class="caption-text">Beispiel einer Rechteckfunktion, die periodisch fortgesetzt wurde</span><a class="headerlink" href="#chap05-plot-rechteck-periodisch" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Diese neue Funktion ist nun eine periodische Funktion. Sie wird häufig in der
+Signalverarbeitung verwendet. Beispielsweise dient sie als Taktsignal für
+digitale Prozessoren und Controller.</p>
+</section>
+<section id="dreiecksfunktion">
+<h3>Dreiecksfunktion<a class="headerlink" href="#dreiecksfunktion" title="Link to this heading">#</a></h3>
+<p>Die Dreiecksfunktion ist eine periodische Funktion, die ebenfalls in der
+Signalverarbeitung häufig vorkommt. Sie hat eine Periode <span class="math notranslate nohighlight">\(T\)</span> und oszilliert
+zwischen zwei Werten <span class="math notranslate nohighlight">\(c_1\)</span> und <span class="math notranslate nohighlight">\(c_2\)</span>, wobei der Anstieg von <span class="math notranslate nohighlight">\(c_1\)</span> auf <span class="math notranslate nohighlight">\(c_2\)</span>
+linear ist und der Abfall von <span class="math notranslate nohighlight">\(c_2\)</span> auf <span class="math notranslate nohighlight">\(c_1\)</span> ebenfalls linear ist.</p>
+<figure class="align-default" id="chap05-plot-dreieck">
+<a class="reference internal image-reference" href="../_images/plot_dreieck.png"><img alt="../_images/plot_dreieck.png" src="../_images/plot_dreieck.png" style="width: 600px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 6 </span><span class="caption-text">Beispiel einer Dreiecksfunktion, die zwischen <span class="math notranslate nohighlight">\(0\)</span> und <span class="math notranslate nohighlight">\(1\)</span> oszilliert und die Periode <span class="math notranslate nohighlight">\(T = 2\)</span> hat</span><a class="headerlink" href="#chap05-plot-dreieck" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="sagezahnfunktion">
+<h3>Sägezahnfunktion<a class="headerlink" href="#sagezahnfunktion" title="Link to this heading">#</a></h3>
+<p>Die Sägezahnfunktion ist eine weitere periodische Funktion, die in der
+Signalverarbeitung häufig verwendet wird. Sie hat eine Periode <span class="math notranslate nohighlight">\(T\)</span> und
+oszilliert zwischen <span class="math notranslate nohighlight">\(-1\)</span> und <span class="math notranslate nohighlight">\(1\)</span>, wobei der Anstieg von <span class="math notranslate nohighlight">\(-1\)</span> auf <span class="math notranslate nohighlight">\(1\)</span> linear ist
+und der Abfall von <span class="math notranslate nohighlight">\(1\)</span> auf <span class="math notranslate nohighlight">\(-1\)</span> plötzlich stattfindet.</p>
+<figure class="align-default" id="chap05-plot-saegezahn">
+<a class="reference internal image-reference" href="../_images/plot_saegezahn.png"><img alt="../_images/plot_saegezahn.png" src="../_images/plot_saegezahn.png" style="width: 600px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 7 </span><span class="caption-text">Beispiel einer Sägezahnfunktion, die zwischen <span class="math notranslate nohighlight">\(-1\)</span> und <span class="math notranslate nohighlight">\(1\)</span> oszilliert und die Periode <span class="math notranslate nohighlight">\(T = 2\)</span> hat</span><a class="headerlink" href="#chap05-plot-saegezahn" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
 </section>
 </section>
 
@@ -618,7 +632,7 @@ Unendlich geht, sieht nur kompliziert aus, wenn man es formal aufschreibt.</p>
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">5. Taylorreihen</p>
+        <p class="prev-next-title">5. Fourierreihen</p>
       </div>
     </a>
     <a class="right-next"
@@ -626,7 +640,7 @@ Unendlich geht, sieht nur kompliziert aus, wenn man es formal aufschreibt.</p>
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">5.2 Restglied von Taylorreihen</p>
+        <p class="prev-next-title">5.2 Fourierreihen</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -637,7 +651,8 @@ Unendlich geht, sieht nur kompliziert aus, wenn man es formal aufschreibt.</p>
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
   <div class="sidebar-secondary-item">
@@ -647,9 +662,14 @@ Unendlich geht, sieht nur kompliziert aus, wenn man es formal aufschreibt.</p>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lernziele">Lernziele</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#taylorpolynom">Taylorpolynom</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kochrezept-zur-berechnung-von-taylorpolynomen">Kochrezept zur Berechnung von Taylorpolynomen</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#taylorreihe">Taylorreihe</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#periodische-funktionen-was-ist-das">Periodische Funktionen - was ist das?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#beispiele-periodischer-funktionen">Beispiele periodischer Funktionen</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sinus-und-kosinusfunktion">Sinus- und Kosinusfunktion</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rechteckfunktion">Rechteckfunktion</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dreiecksfunktion">Dreiecksfunktion</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sagezahnfunktion">Sägezahnfunktion</a></li>
+</ul>
+</li>
 </ul>
   </nav></div>
 
@@ -697,8 +717,8 @@ By Simone Gramsch
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
 
   <footer class="bd-footer">
   </footer>

@@ -1,147 +1,173 @@
-# 6.1 Periodische Funktionen
+---
+jupytext:
+  cell_metadata_filter: -all
+  formats: md:myst
+  main_language: python
+  text_representation:
+    extension: .md
+    format_name: myst
+    format_version: 0.13
+    jupytext_version: 1.14.7
+---
 
-In diesem Kapitel werden wir uns mit periodischen Funktionen beschäftigen.
-Insbesondere im Maschinenbau finden sich zahlreiche Anwendungen von periodischen
-Funktionen, z.B. in der Technischen Mechanik oder in der Regelungstechnik. Viele
-mechanische Systeme, wie z.B. Federsysteme, Pendel oder rotierende Wellen,
-führen periodische Schwingungen aus. Auch in der Regelungstechnik werden
-periodische Steuergrößen erzeugt, die zur Regelung von Systemen verwendet
-werden. Beispiele sind periodische Signale, wie z.B. Rechteck-, Dreieck- oder
-Sinusfunktionen. Diese Signale werden verwendet, um elektrische, mechanische
-oder hydraulische Systeme zu steuern.
+# 6.1 Definition und Visualisierung
+
+Bisher haben wir nur Funktionen kennengelernt, bei denen eine reelle Zahl in die
+Funktionsvorschrift eingesetzt wurde und eine reelle Zahl herauskam. Die
+mathematische Schreibweise dafür ist $f:\mathbb{R}\rightarrow\mathbb{R}$.
+
+Allerdings ist die Welt nicht so eindimensional. Die folgende Abbildung zeigt
+beispielsweise die durchschnittliche Solarstrahlung in Deutschland. Dies ist
+mathematisch gesehen eine Funktion von mehereren Variablen, nämlich Längen- und
+Breitengrad, also $f:\mathbb{R}^2\rightarrow\mathbb{R}$.
+
+```{figure} pics/chapter07_fig01_solar_map.png
+---
+width: 50%
+name: chapter07_fig01_solar_map
+---
+Solarstrahlung in Deutschland
+
+([Quelle:](https://commons.wikimedia.org/wiki/File:SolarGIS-Solar-map-Germany-de.png) "Solar Radiation Map: Globalstrahlung Deutschland, SolarGIS 2011", Autor: SolarGIS Lizenz: [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/))
+```
+
+In diesem Kapitel werden wir uns Funktionen von mehreren unabhängigen Variablen
+genauer ansehen und insbesondere erarbeiten, wie solche Funktionen visualisiert
+werden können.
 
 ## Lernziele
 
 ```{admonition} Lernziele
 :class: goals
-* Sie können erklären, was eine **periodische Funktion** ist.
-* Sie können Beispiele von periodischen Funktionen nennen wie
-    * Sinus- und Kosinusfunktion,
-    * Rechteckfunktion,
-    * Dreiecksfunktion und
-    * Sägezahnfunktion.
+* Sie können erklären, was eine **Funktion von mehreren unabhängigen Variablen** ist. 
+* Sie können eine Funktion von zwei unabhängigen Variablen als Fläche im Raum zeichnen.
+* Sie können die **Höhenlinien** einer Funktion von zwei unabhängigen Variablen interpretieren und zeichnen.
 ```
 
-## Periodische Funktionen - was ist das?
+## Wiederholung: Begrifflichkeiten bei Funktionen
 
-Bei einer periodischen Funktion wiederholen sich in regelmäßigen Abständen die Funktionswerte wieder. Der Abstand, nachdem sich die Funktionswerte beginnen zu wiederholen, heißt **Periodendauer**.
+Eine Funktion stellt eine Beziehung zwischen zwei Mengen her. Bei den bisher
+eingeführten Funktionen wird ein Element aus der sogenannten Definitionsmenge
+genommen und diesem genau ein Element aus der sogenannten Wertemenge zugeordnet.
+Wenn es darum geht, nun die Regeln dieser Beziehung genauer zu beschreiben, wird
+häufig eine Funktionsgleichung aufgestellt. Aber auch Tabellen oder grafische
+Abbildungen können dazu benutzt werden, um die Beziehung präzise zu beschreiben.
 
-```{admonition} Was ist ... eine periodische Funktion?
+Als Beispiel einer Funktion betrachten wir die Parabel. Als Definitionsmenge
+wählen wir alle reelle Zahlen, also alle Zahlen $x\in\mathbb{R}$. Als
+Funktionsvorschrift legen wir nun fest, dass jedem $x$ sein eigenes Quadrat
+zugeordnet wird, also in mathematischer Schreibweise
+
+$$x\mapsto x^2.$$
+
+Üblicherweise wird die Funktionsvorschrift als $f(x)=x^2$ angegeben. Die
+grafische Darstellung sieht folgendermaßen aus:
+
+```{figure} pics/chapter07_plot_parabel.svg
+---
+width: 75%
+name: chapter07_plot_parabel
+---
+Grafische Darstellung der Funktion $f(x)=x^2$
+```
+
+Anhand der grafischen Darstellung wird schnell deutlich, dass zwar die
+Definitionsmenge alle reellen Zahlen umfasst, die Wertemenge jedoch nur die
+nichtnegativen reellen Zahlen enthält.
+
+## Funktionen von mehreren unabhängigen Variablen
+
+Nun betrachten wir ein Beispiel einer "2:1-Beziehung". Auch hier benötigen wir,
+um die Funktion zu beschreiben, eine Definitionsmenge, eine Wertemenge und eine
+eindeutige Zuordnungsregel. Der flapsige Ausdruck "2:1-Beziehung" bedeutet, dass
+zwei Elementen der Definitionsmenge ein Element der Wertemenge zugeordnet werden
+soll. Die Elemente der Definitionsmenge werden auch **unabhängige Variablen**
+genannt, das Element der Wertemenge wird **abhängige Variable** genannt.
+
+Wir nennen die beiden unabhängigen Variablen $x$ und $y$ und legen fest, dass
+beides reelle Zahlen sind. Diesmal sollen beide Zahlen quadriert werden und aus
+den Quadraten dann die Summe gebildet werden. Mathematisch könnte das als
+
+$$(x,y)\mapsto x^2 + y^2$$
+
+oder als
+
+$$f(x,y) = x^2 + y^2$$
+
+notiert werden. Die abhängige Variable $z = f(x,y)$ ist 0 oder positiv, so dass
+die Wertemenge gleich $\mathbb{R}^{+}$ ist.
+
+Wenn die Funktion mehrere unabhängige Variablen hat, nennt man die Funktion auch
+**multivariate Funktion**.
+
+```{dropdown} Video zu "multivariate Funktionen" von Mathematische Methoden
+<iframe width="560" height="315" src="https://www.youtube.com/embed/gV5zjtVHIWE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+```
+
+Fassen wir zusammen.
+
+```{admonition} Was ist ... eine Funktion mit mehreren unabhängigen Variablen?
 :class: note
-Eine Funktion heißt periodisch, wenn sich die Funktionswerte regelmäßig wiederholen. Als mathematische Formel ausgedrückt ist eine Funktion $f$ periodisch mit der Periode $p$, wenn gilt:
-
-$$f(x+p) = f(x).$$
-
+Eine Funktion ist eine eindeutige Regel, die jedem Vektor aus mehreren
+unabhängigen Variablen (aus der Definitionsmenge) genau eine reelle Zahl (aus
+der Wertemenge) zuordnet.
 ```
 
-```{dropdown} Video "Periodische Funktion" von lernflix
-<iframe width="560" height="315" src="https://www.youtube.com/embed/e3lpwsKp75Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+## Darstellungen von Funktionen mit mehreren unabhängigen Variablen
+
+Um das obige Beispiel Funktion zu visualisieren, werden jetzt alle mögliche
+Kombinationen aus $x$ und $y$ gebildet, d.h. die unabhängigen Variablen kommen
+aus der xy-Ebene. Zur Darstellung der abhängigen Variable brauchen wir also noch
+eine dritte Dimension, die Höhe. Die Funktion $f(x,y) =  x^2 + y^2$, ein
+sogenannter Paraboloid, sieht dann folgendermaßen aus (Hinweis: die Grafik ist interaktiv!):
+
+```{code-cell}
+:tags: [remove-input]
+import numpy as np
+import plotly.graph_objects as go
+
+# generate grid
+r = np.linspace(0, 5, 101)
+phi = np.linspace(0, 2*np.pi, 101)
+grid_r, grid_phi = np.meshgrid(r, phi) 
+x = grid_r * np.cos(grid_phi)
+y = grid_r * np.sin(grid_phi)
+
+# evaluate function
+z = 0.5 * (x**2 + y**2) 
+
+# plot
+fig = go.Figure()
+fig.add_trace(go.Surface(z=z, x=x, y=y, colorscale='viridis'))
+fig.update_layout(title='Paraboloid f(x,y)=x^2 + y^2', 
+xaxis_title='x-Achse', yaxis_title='y-Achse')
 ```
 
-## Beispiele periodischer Funktionen
+Zusätzlich zur Höhe wurde die Paraboloid-Fläche noch gemäß der Funktionswerte
+$f(x,y)$ eingefärbt. Leider ist es gar nicht so einfach, Funktionen von mehreren
+Variablen zu zeichnen. Eine Funktion von zwei Variablen kann man noch ganz gut
+zeichnen, bei drei und gar mehr unabhängigen Variablen klappt es mit Zeichnungen
+nicht mehr.
 
-### Sinus- und Kosinusfunktion
-
-Sinus und Kosinus sind die beiden wichtigsten periodischen Funktionen. Sie werden auch dazu genutzt, um andere periodische Funktionen zu approximieren (Stichwort: Fourierreihe). Beide haben eine Periode von $2\pi$.
-
-```{figure} pics/plot_sinus.png
----
-width: 600px
-name: chap05_plot_sinus
----
-Sinusfunktion mit einer Periode $p = 2\pi$
+```{dropdown} Video "Multivariate Funktionen: Graph" von Mathematische Methoden
+<iframe width="560" height="315" src="https://www.youtube.com/embed/oJdN_Ics6qs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 ```
 
-Wir werden in den nächsten Kapiteln die Sinus- und Kosinusfunktionen
-modifizieren. Im folgenden Video werden die verschiedenen Möglichkeiten, die
-Sinusfunktion zu transformieren wiederholt. Für die Kosinusfunktion gelten die
-gleichen Transformationen analog.
+## Höhenlinien
 
-```{dropdown} Video "Sinusfunktion Transformation" von Daniel Jung
-<iframe width="560" height="315" src="https://www.youtube.com/embed/d_u7yYf30yA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+Eine reduzierte Darstellung einer Funktion von zwei unabhängigen Variablen ist
+der sogenannte **Contourplot**, der **Konturlinien** visualisiert. Konturlinien
+sind auch aus dem Erdkundeunterricht bekannt, wo sie normalerweise
+**Höhenlinien** genannt werden.
+
+```{admonition} Was sind ... Höhenlinien?
+:class: note
+Höhenlinien sind Linien in einer zweidimensionalen Ebene, die diejenigen Punkte $(x,y)$
+verbinden, die den gleichen Funktionswert $f(x,y)=c$ haben.  
 ```
 
-### Rechteckfunktion
+Das folgende Video erklärt den Contourplot.
 
-Die Rechteckfunktion ist zunächst einmal keine periodische Funktion. Als erstes
-werden eine Periode $T$ und eine Konstante $c$ festgelegt. Dann wird die
-Rechteckfunktion definiert als die Funktion, deren Funktionswerte im Intervall
-$[-\frac{T}{2}, \frac{T}{2}]$ gleich der Konstante $c$ sind. Und außerhalb
-dieses Intervalls sollen die Funktionswerte 0 sein (übrigens, manchmal wird auch
-ein anderer Wert als 0 genommen). Mathematisch wird das folgendermaßen
-ausgedrückt:
-
-\begin{equation*}
-f(t) =
-\begin{cases}
-c & \text{ für } -\frac{T}{2} \leq x \leq \frac{T}{2},\\
-0 & \text{ sonst.}
-\end{cases}
-\end{equation*}
-
-Der Funktionsgraph der Rechteckfunktion sieht folgendermaßen aus:
-
-```{figure} pics/plot_rechteck.png
----
-width: 600px
-name: chap05_plot_rechteck
----
-Beispiel einer Rechteckfunktion: Periode $T = 1$ und $c = 1$
-```
-
-Jetzt wird die Periode von $0$ bis $T$ gelb markiert.
-
-```{figure} pics/plot_rechteck_period.png
----
-width: 600px
-name: chap05_plot_rechteck_period
----
-Beispiel einer Rechteckfunktion: das Periodenintervall $[0,T]$ ist gelb markiert
-```
-
-Als letztes wird der Funktionsgraph periodisch wiederholt. Damit ist gemeint,
-dass das gelb markierte Gebiet links und rechts immer wieder drangehängt wird.
-Dadruch entsteht eine neue Funktion, deren Funktionsgraph in der nächsten
-Abbildung zu sehen ist.
-
-```{figure} pics/plot_rechteck_periodisch.png
----
-width: 600px
-name: chap05_plot_rechteck_periodisch
----
-Beispiel einer Rechteckfunktion, die periodisch fortgesetzt wurde
-```
-
-Diese neue Funktion ist nun eine periodische Funktion. Sie wird häufig in der
-Signalverarbeitung verwendet. Beispielsweise dient sie als Taktsignal für
-digitale Prozessoren und Controller.
-
-### Dreiecksfunktion
-
-Die Dreiecksfunktion ist eine periodische Funktion, die ebenfalls in der
-Signalverarbeitung häufig vorkommt. Sie hat eine Periode $T$ und oszilliert
-zwischen zwei Werten $c_1$ und $c_2$, wobei der Anstieg von $c_1$ auf $c_2$
-linear ist und der Abfall von $c_2$ auf $c_1$ ebenfalls linear ist.
-
-```{figure} pics/plot_dreieck.png
----
-width: 600px
-name: chap05_plot_dreieck
----
-Beispiel einer Dreiecksfunktion, die zwischen $0$ und $1$ oszilliert und die Periode $T = 2$ hat
-```
-
-### Sägezahnfunktion
-
-Die Sägezahnfunktion ist eine weitere periodische Funktion, die in der
-Signalverarbeitung häufig verwendet wird. Sie hat eine Periode $T$ und
-oszilliert zwischen $-1$ und $1$, wobei der Anstieg von $-1$ auf $1$ linear ist
-und der Abfall von $1$ auf $-1$ plötzlich stattfindet.
-
-```{figure} pics/plot_saegezahn.png
----
-width: 600px
-name: chap05_plot_saegezahn
----
-Beispiel einer Sägezahnfunktion, die zwischen $-1$ und $1$ oszilliert und die Periode $T = 2$ hat
+```{dropdown} Video "Contourplot" von Mathematische Methoden
+<iframe width="560" height="315" src="https://www.youtube.com/embed/t4N7n_u8TYk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 ```

@@ -2,206 +2,359 @@
 
 ```{admonition} Übung 8.1
 :class: miniexercise
-Berechnen Sie den Gradient $\nabla f$ der folgenden Funktionen:
+Bestimmen Sie die Gleichung der Tangentialebene bzw. die Linearisierung für die Funktion
 
-a) $f(x,y) = e^{-(x^2+y^2)}$
+$$f:\mathbb{R}^2 \mapsto \mathbb{R}, \; f(x,y)=\frac{x^2+y^2}{1+x^2+y^2}$$
 
-b) $f(x,y,z) = \frac{1+x+y+z}{1+x^2+y^2+z^2}$ 
-
-c) $f(x_1,x_2) = x_1^4 -5x_2^2 - 10x_1x_2$
-
-d) $f(x_1,x_2,x_3) = 2x_1^2 -4x_1x_2 + x_2^3\cdot \sin(x_3)$  
+am Punkt $(1,2)$.
 ```
+
 ````{admonition} Lösung
 :class: miniexercise, toggle
-a)
-\begin{align*} 
-f(x,y) &= e^{-(x^2+y^2)} \\
-\Rightarrow \quad \nabla f(x,y) &= \left(-2xe^{-x^2-y^2}, -2y e^{-x^2-y^2} \right)
-\end{align*}
 
-b)
+$$T_{f,1}(x,y)=\frac{5}{6}+\frac{1}{18}\cdot (x-1)+\frac{1}{9}\cdot (y-2)$$
 
-\begin{align*}
-f(x,y,z) &= \frac{1+x+y+z}{1+x^2+y^2+z^2}  \\
-\nabla f(x,y,z) &= \Big( \frac{-x^2-2x(y+z+1)+y^2+z^2+1}{(x^2+y^2+z^2+1)^2}, ...\\
-&\frac{1+x^2-y^2+z^2 - 2y(1+x+z)}{(1 + x^2+y^2+z^2)^2},  \frac{1+x^2+y^2-z^2 - 2z(1+x+y)}{(1 + x^2+y^2+z^2)^2}\Big)
-\end{align*}
-
-c)
-\begin{align*}
-f(x_1,x_2) &= x_1^4 -5x_2^2 - 10x_1x_2 \\
-\Rightarrow \quad \nabla f(x_1,x_2) &= \left( 4x_1^3-10x_2, -10(x_1+x_2) \right) 
-\end{align*}
-
-d)
-\begin{align*}
-f(x_1,x_2,x_3) &= 2x_1^2 -4x_1x_2 + x_2^3\cdot \sin(x_3) \\
-\Rightarrow \quad \nabla f(x_1,x_2,x_3) &= \left(4(x_1-x_2), 3x_2^2\sin(x_3)-4x_1, x_2^3\cos(x_3)\right)
-\end{align*}
 ```{dropdown} Lösungsweg
-a) $f(x,y) = e^{-(x^2+y^2)}$ <br>
-Wir berechnen zunächst die partiellen Ableitungen:
+Das Taylorpolynom vom Grad 1 einer Funktion $f(x,y)$ bei $(x_0,y_0)$ hat die allgemeinen Form 
+
+$$T_{f,1}(x,y)
+ = f(x_0,y_0)+\frac{\partial f(x_0,y_0)}{\partial x}\cdot(x-x_0)+\frac{\partial f(x_0,y_0)}{\partial y}\cdot(y-y_0).$$
+
+Der Funktionswert in Punkt $(1,2)$ ist $f(1,2) = \frac{5}{6}$. 
+ 
+Die partiellen Ableitungen von $f$ lauten : 
+ 
 \begin{align*}
-\frac{\partial f}{\partial x} &= -2xe^{-x^2-y^2} \\
-\frac{\partial f}{\partial y} &= -2y e^{-x^2-y^2}  
+\frac{\partial f(x,y)}{\partial x} &=
+\frac{2x}{x^2+y^2+1} - \frac{2x \left(x^2+y^2\right)}{\left(x^2+y^2+1\right)^2} \\
+\qquad \Rightarrow & \frac{\partial f(1,2)}{\partial x} = \frac{1}{18}\\
+\frac{\partial f(x,y)}{\partial y} &=
+\frac{2y}{x^2+y^2+1}-\frac{2y\left(x^2+y^2\right)}{\left(x^2+y^2+1\right)^2} \\
+\qquad \Rightarrow & \frac{\partial f(1,2)}{\partial y} = \frac{1}{9}\\
 \end{align*}
-Damit ist der Gradient von f:
 
-$$\nabla f(x,y) = \left(-2xe^{-x^2-y^2}, -2y e^{-x^2-y^2} \right)$$
+Damit erhält man das Taylorpolynom von $f$ bei $(x_0,y_0)=(1,2)$ als 
 
-b) $f(x,y,z) = \frac{1+x+y+z}{1+x^2+y^2+z^2}$ <br>
-Wir berechnen zunächst die partiellen Ableitungen: 
-\begin{align*}
-\frac{\partial f}{\partial x} &=  \frac{-x^2-2x(y+z+1)+y^2+z^2+1}{(x^2+y^2+z^2+1)^2}\\
-\frac{\partial f}{\partial y} &=  \frac{1+x^2-y^2+z^2 - 2y(1+x+z)}{(1 + x^2+y^2+z^2)^2} \\  
-\frac{\partial f}{\partial z} &=  \frac{1+x^2+y^2-z^2 - 2z(1+x+y)}{(1 + x^2+y^2+z^2)^2}\\  
-\end{align*}
-Damit ist der Gradient von f:
-\begin{multline*}\nabla f(x,y,z) = \Big( \frac{-x^2-2x(y+z+1)+y^2+z^2+1}{(x^2+y^2+z^2+1)^2}, ...\\
-\frac{1+x^2-y^2+z^2 - 2y(1+x+z)}{(1 + x^2+y^2+z^2)^2},  \frac{1+x^2+y^2-z^2 - 2z(1+x+y)}{(1 + x^2+y^2+z^2)^2}\Big)
-\end{multline*}
-c) $f(x_1,x_2) = x_1^4 -5x_2^2 - 10x_1x_2$ <br>
-Wir berechnen zunächst die partiellen Ableitungen:
-\begin{align*}
-\frac{\partial f}{\partial x_1} &= 4x_1^3-10x_2 \\
-\frac{\partial f}{\partial x_2} &= -10(x_1+x_2)  
-\end{align*}
-Damit ist der Gradient von f:
-
-$$\nabla f(x_1,x_2) = \left( 4x_1^3-10x_2, -10(x_1+x_2) \right)$$
-
-d) $f(x_1,x_2,x_3) = 2x_1^2 -4x_1x_2 + x_2^3\cdot \sin(x_3)$ <br>
-Wir berechnen zunächst die partiellen Ableitungen: 
-\begin{align*}
-\frac{\partial f}{\partial x} &= 4(x_1-x_2) \\
-\frac{\partial f}{\partial y} &= 3x_2^2\sin(x_3)-4x_1 \\  
-\frac{\partial f}{\partial z} &= x_2^3\cos(x_3) \\  
-\end{align*}
-Damit ist der Gradient von f:
-
-$$\nabla f(x_1,x_2,x_3) = \left(4(x_1-x_2), 3x_2^2\sin(x_3)-4x_1, x_2^3\cos(x_3)\right)$$
+\begin{align*} 
+T_{f,1}(x,y)
+& = f(1,2)+\frac{\partial f}{\partial x}(1,2)\cdot(x-1)+\frac{\partial f}{\partial y}(1,2)\cdot(y-2)\\
+& = \frac{5}{6}+\frac{1}{18}\cdot (x-1)+\frac{1}{9}\cdot (y-2)\ . 
+\end{align*} 
 ```
 ````
 
 ```{admonition} Übung 8.2
 :class: miniexercise
-Berechnen Sie die Jacobi-Matrix $J(f)$ zu folgenden Funktionen.
+Bestimmen Sie die Gleichung der Tangentialebene bzw. die Linearisierung für die Funktion
 
-a) 
+$$f:\mathbb{R}^2 \mapsto \mathbb{R}, \; f(x,y)=\sqrt{x^2 + y^2}$$
 
-$$f(x,y) = \begin{pmatrix} x^2 + y^2 \\ x^2 - y^2 \end{pmatrix}$$
-
-b)
-
-$$f(x,y) = \begin{pmatrix} 3x^3y^2 \\ \sin(x) \end{pmatrix}$$
+am Punkt $(1,0)$.
 ```
+
 ````{admonition} Lösung
 :class: miniexercise, toggle
-a)
-
-$$J(f) = \begin{pmatrix} 2x & 2y \\ 2x & -2y \end{pmatrix}$$
-
-b)
-
-$$J(f) = \begin{pmatrix}9x^2y^2 & 6x^3y \\ \cos(x) & 0 \end{pmatrix}$$
+$$T_{1,f}(x,y) = x$$
 ```{dropdown} Lösungsweg
-a)
+Das Taylorpolynom vom Grad 1 einer Funktion $f(x,y)$ bei $(x_0,y_0)$ hat die allgemeinen Form 
 
-$$f(x,y) = \begin{pmatrix} x^2 + y^2 \\ x^2 - y^2 \end{pmatrix}$$
+$$T_{f,1}(x,y)
+ = f(x_0,y_0)+\frac{\partial f(x_0,y_0)}{\partial x}\cdot(x-x_0)+\frac{\partial f(x_0,y_0)}{\partial y}\cdot(y-y_0).$$
 
-\begin{align*}
-\frac{\partial f_1}{\partial x} &= 2x\\
-\frac{\partial f_1}{\partial y} &= 2y\\
-\frac{\partial f_2}{\partial x} &= 2x\\
-\frac{\partial f_2}{\partial y} &= -2y 
-\end{align*}
-Damit lautet die Jacobi-Matrix
-
-$$J(f) = \begin{pmatrix} 2x & 2y \\ 2x & -2y \end{pmatrix}$$
-
-b) 
-
-$$f(x,y) = \begin{pmatrix} 3x^3y^2 \\ \sin(x) \end{pmatrix}$$
+Der Funktionswert im Punkt $(1,0)$ ist $f(1,0) = 1$. 
+ 
+Die partiellen Ableitungen von $f$ lauten:
 
 \begin{align*}
-\frac{\partial f_1}{\partial x} &= 9x^2y^2\\
-\frac{\partial f_1}{\partial y} &= 6x^3y\\
-\frac{\partial f_2}{\partial x} &= \cos(x)\\
-\frac{\partial f_2}{\partial y} &= 0 
+\frac{\partial f(x,y)}{\partial x} &= \frac{x}{\sqrt{x^2+y^2}}, \\
+\frac{\partial f(x,y)}{\partial y} &= \frac{y}{\sqrt{x^2+y^2}}.
 \end{align*}
 
-Damit lautet die Jacobi-Matrix
+Am Entwicklungspunkt $(x_0,y_0)=(1,0)$ sind die partiellen Ableitungen
 
-$$J(f) = \begin{pmatrix}9x^2y^2 & 6x^3y \\ \cos(x) & 0 \end{pmatrix}$$
+\begin{align*}
+\frac{\partial f(1,0)}{\partial x} &= 1, \\
+\frac{\partial f(1,0)}{\partial y} &= 0.
+\end{align*}
+
+Damit ist das Taylorpolynom  1. Grades von $f$ am Entwicklungspunkt $(x_0,y_0)=(1,0)$ 
+
+$$T_{f,1}(x,y) = 1 + 1\cdot(x-1) + 0\cdot (y-y_0) = x.$$
 ```
 ````
 
 ```{admonition} Übung 8.3
 :class: miniexercise
-Bestimmen Sie die Jacobi-Matrix der verketteten Funktion $h = f \circ g$ mit der mehrdimensionalen Kettenregel:
+Bestimmen Sie alle Extremwerte der Funktion $f:\mathbb{R}^2 \rightarrow\mathbb{R}$ gegeben durch  
 
-a) $h:\mathbb{R}^2\mapsto\mathbb{R}$ mit $h(x,y) = f(g(x,y))$, wobei
-\begin{align*}
-f:\mathbb{R}^3\mapsto\mathbb{R},   \quad & f(x,y,z) = x^2 y^2 z^2,\\
-g:\mathbb{R}^2\mapsto\mathbb{R}^3, \quad & g(x,y) = \begin{pmatrix} x \\ y \\ x y \end{pmatrix} 
-\end{align*}
+$$f(x,y)=x^3+y^3 - x - y$$
 
-b) $h:\mathbb{R}^3\mapsto\mathbb{R}^3$ mit $h(x,y,z)=f(g(x,y,z))$, wobei
-\begin{align*}
-f:\mathbb{R}^3\mapsto\mathbb{R}^3, \quad & f(x,y,z) = \begin{pmatrix} -y \\ -z \\ -x \end{pmatrix}\\
-g:\mathbb{R}^3\mapsto\mathbb{R}^3, \quad & g(x,y,z) = \begin{pmatrix} x y \\ y z \\ z x \end{pmatrix}
-\end{align*}
+und untersuchen Sie, ob in diesen Punkten lokale Minima bzw. Maxima vorliegen. 
 ```
+
 ````{admonition} Lösung
 :class: miniexercise, toggle
-a)
-
-$$J(h)(x,y) = \left(2x^3 y^4 + 2x^3y^4, \; 2x^4 y^3 + 2x^4 y^3\right) = 
-\left(4x^3 y^4, \; 4x^4 y^3 \right)$$
-
-b)
-
-$$J(h)(x,y,z) = \begin{pmatrix} 0 & -z & -y\\ -z & 0 & -x \\ -y & -x & 0 \end{pmatrix}$$
-
+* $(\sqrt{\frac{1}{3}}, \sqrt{\frac{1}{3}})$ Minimum
+* $(\sqrt{\frac{1}{3}}, - \sqrt{\frac{1}{3}})$ kein Extremum 
+* $(-\sqrt{\frac{1}{3}}, \sqrt{\frac{1}{3}})$ kein Extremum
+* $(-\sqrt{\frac{1}{3}}, -\sqrt{\frac{1}{3}})$ Maximum
 ```{dropdown} Lösungsweg
-a) $h:\mathbb{R}^2\mapsto\mathbb{R}$ mit $h(x,y) = f(g(x,y))$, wobei
-\begin{align*}
-f:\mathbb{R}^3\mapsto\mathbb{R},   \quad & f(x,y,z) = x^2 y^2 z^2,\\
-g:\mathbb{R}^2\mapsto\mathbb{R}^3, \quad & g(x,y) = \begin{pmatrix} x \\ y \\ x y \end{pmatrix} 
+Die ersten partiellen Ableitungen lauten:
+\begin{align*} 
+\frac{\partial f(x,y)}{\partial x} &= 3 x^2-1, \\ 
+\frac{\partial f(x,y)}{\partial y} & =3 y^2-1. \\
 \end{align*}
-Wir berechnen zuerst die Jacobi-Matrix von $f$ und $g$:
+ 
+Um die stationären Punkte, also die möglichen Kandidaten zu finden, ist das folgende Gleichungssystem zu lösen: 
+ 
+$$
+\begin{cases} 
+\frac{\partial f(x,y)}{\partial x} = 3 x^2 - 1 = 0 \\ 
+\frac{\partial f(x,y)}{\partial y} = 3 y^2 - 1 = 0. 
+\end{cases} 
+$$
 
-$$J(f) = \left(2x y^2 z^2,\; 2x^2 y z^2,\; 2x^2 y^2 z\right) 
-\quad \text{ und } \quad
-J(g) = \begin{pmatrix} 1 & 0 \\ 0 & 1 \\ y & x\end{pmatrix}$$
+Dieses Gleichungssystem hat 4 Lösungen, nämlich 
 
-Mit der mehrdimensionalen Kettenregel erhalten wir
-\begin{multline*}
-J(h) = J(f) \cdot J(g) = \left(2x y^2 z^2, \; 2x^2 y z^2,\; 2x^2 y^2 z\right) \cdot 
-\begin{pmatrix} 1 & 0 \\ 0 & 1 \\ y & x\end{pmatrix} = \\
-\left(2x y^2 z^2 + 2x^2 y^3 z, \; 2x^2 y z^2 + 2x^3 y^2 z \right) 
-\end{multline*} 
-Als nächstes ersetzen wir noch $z$ durch $x y$ (siehe Definition von $h$) und erhalten
+1. $(x_{1},y_{1})=(-\frac{\sqrt{3}}{3},-\frac{\sqrt{3}}{3})$, 
+2. $(x_{2},y_{2})=(\frac{\sqrt{3}}{3},-\frac{\sqrt{3}}{3})$, 
+3. $(x_{3},y_{3})=(-\frac{\sqrt{3}}{3},\frac{\sqrt{3}}{3})$ und 
+4. $(x_{4},y_{4})=(\frac{\sqrt{3}}{3},\frac{\sqrt{3}}{3})$,  
 
-$$J(h)(x,y) = \left(2x^3 y^4 + 2x^3 y^4, \; 2x^4 y^3 + 2x^4 y^3\right) = 
-\left(4x^3 y^4, \; 4x^4 y^3 \right).$$
-
-b) $h:\mathbb{R}^3\mapsto\mathbb{R}^3$ mit $h(x,y,z)=f(g(x,y,z))$, wobei
+die die stationären Punkte darstellen.
+ 
+Um den Typ der stationären Punkte zu bestimmen, werden die zweiten partiellen Ableitungen berechnet:
 \begin{align*}
-f:\mathbb{R}^3\mapsto\mathbb{R}^3, \quad & f(x,y,z) = \begin{pmatrix} -y \\ -z \\ -x \end{pmatrix}\\
-g:\mathbb{R}^3\mapsto\mathbb{R}^3, \quad & g(x,y,z) = \begin{pmatrix} x y \\ y z \\ z x \end{pmatrix}
+\frac{\partial^2 f(x,y)}{\partial x \partial x} &= 6x, \\ 
+\frac{\partial^2 f(x,y)}{\partial y \partial x} &= 0, \\
+\frac{\partial^2 f(x,y)}{\partial y \partial y} &= 6y, \\ 
+\frac{\partial^2 f(x,y)}{\partial x \partial y} &= 0.
 \end{align*}
-Wir berechnen zuerst die Jacobi-Matrix von $f$ und $g$:
 
-$$J(f) = \begin{pmatrix} 0 & -1 & 0 \\ 0 & 0 & -1 \\ -1 & 0 & 0 \end{pmatrix} 
-\quad \text{ und } \quad
-J(g) = \begin{pmatrix} y & x & 0 \\ 0 & z & y \\ z & 0 & x \end{pmatrix}$$
+Die Hesse-Matrix besteht aus den zweiten partiellen Ableitungen
 
-Mit der mehrdimensionalen Kettenregel erhalten wir
+$$
+\mathbf{H}(x,y)= 
+\left( \begin{array}{cc} 
+\frac{\partial^2 f(x,y)}{\partial x \partial x} & \frac{\partial^2 f(x,y)}{\partial x \partial y} \\ 
+\frac{\partial^2 f(x,y)}{\partial y \partial x} & \frac{\partial^2 f(x,y)}{\partial y \partial y}
+\end{array} \right) 
+= \left( \begin{array}{cc} 
+6x & 0 \\ 
+0  & 6y
+\end{array} \right). 
+$$
 
-$$J(h)(x,y,z) = J(f)\cdot J(g) = 
-\begin{pmatrix} 0 & -1 & 0 \\ 0 & 0 & -1 \\ -1 & 0 & 0 \end{pmatrix} \cdot \begin{pmatrix} y & x & 0 \\ 0 & z & y \\ z & 0 & x \end{pmatrix} =
-\begin{pmatrix} 0 & -z & -y \\ -z & 0 & -x \\ -y & -x & 0 \end{pmatrix}$$
+Die Determinante der Hesse-Matrix ist
+
+$$\det(\mathbf{H}(x,y)) = 6x \cdot 6y - 0 \cdot 0 = 36 xy.$$
+
+Nun wird für jeden stationären Punkt überprüft, ob tatsächlich ein Extremum vorliegt.
+
+1. $(x_{1},y_{1})=(-\frac{\sqrt{3}}{3},-\frac{\sqrt{3}}{3})$:
+
+Die Determinante der Hesse-Matrix für diesen Punkt ist
+
+$$\det\left(\mathbf{H}\left(-\frac{\sqrt{3}}{3},-\frac{\sqrt{3}}{3}\right)\right) = 
+36\cdot \left(-\frac{\sqrt{3}}{3}\right) \cdot \left(-\frac{\sqrt{3}}{3}\right) = 12 > 0.$$
+
+Damit ist der Punkt $(x_{1},y_{1})=(-\frac{\sqrt{3}}{3},-\frac{\sqrt{3}}{3})$ ein Extremum. Da das Vorzeichen von $\frac{\partial^2 f(-\frac{\sqrt{3}}{3},-\frac{\sqrt{3}}{3})}{\partial x \partial x}$ negativ ist, ist die Hesse-Matrix negativ definit und dieser Punkt ist ein Maximum (Hochpunkt).
+
+2. $(x_{2},y_{2})=(\frac{\sqrt{3}}{3},-\frac{\sqrt{3}}{3})$
+
+Die Determinante der Hesse-Matrix für diesen Punkt ist
+
+$$\det\left(\mathbf{H}\left(\frac{\sqrt{3}}{3},-\frac{\sqrt{3}}{3}\right)\right) =
+36 \cdot \frac{\sqrt{3}}{3} \cdot \left(-\frac{\sqrt{3}}{3}\right) = -12 < 0.$$
+
+Damit ist die Hesse-Matrix für diesen Punkt indefinit und der Punkt $(x_{2},y_{2})$ ist kein Extremum.
+
+3. $(x_{3},y_{3})=(-\frac{\sqrt{3}}{3},\frac{\sqrt{3}}{3})$ 
+
+Die Determinante der Hesse-Matrix für diesen Punkt ist
+
+$$\det\left(\mathbf{H}\left(-\frac{\sqrt{3}}{3},\frac{\sqrt{3}}{3}\right)\right) =
+36 \cdot \left(-\frac{\sqrt{3}}{3}\right) \cdot \frac{\sqrt{3}}{3} = -12 < 0.$$
+
+Damit ist die Hesse-Matrix für diesen Punkt indefinit und der Punkt $(x_{3},y_{3})$ ist kein Extremum.
+
+4. $(x_{4},y_{4})=(\frac{\sqrt{3}}{3},\frac{\sqrt{3}}{3})$
+
+Die Determinante der Hesse-Matrix für diesen Punkt ist
+
+$$\det\left(\mathbf{H}\left(\frac{\sqrt{3}}{3},\frac{\sqrt{3}}{3}\right)\right) =
+36 \cdot \frac{\sqrt{3}}{3} \cdot \frac{\sqrt{3}}{3} = 12 > 0.$$
+
+Damit ist der Punkt $(x_{4},y_{4})=(\frac{\sqrt{3}}{3},\frac{\sqrt{3}}{3})$ ein Extremum. Da das Vorzeichen von $\frac{\partial^2 f(\frac{\sqrt{3}}{3},\frac{\sqrt{3}}{3})}{\partial x \partial x}$ positiv ist, ist die Hesse-Matrix positiv definit und dieser Punkt ist ein Minimum (Tiefpunkt).
 ```
 ````
+
+```{admonition} Übung 8.4
+:class: miniexercise
+Bestimmen Sie alle Extremwerte der Funktion $f:\mathbb{R}^2 \rightarrow\mathbb{R}$ gegeben durch  
+
+$$f(x,y) = -x^3-\frac{3x^2}{2}+6x-2y^3-9y^2+24y+3$$
+
+und untersuchen Sie, ob in diesen Punkten lokale Minima bzw. Maxima vorliegen. 
+```
+
+````{admonition} Lösung
+:class: miniexercise, toggle
+* $(1,1)$ Maximum
+* $(-2,1)$ kein Extremum 
+* $(1,-4)$ kein Extremum 
+* $(-2,-4)$ Minimum
+```{dropdown} Lösungsweg
+Die ersten partiellen Ableitungen lauten:
+\begin{align*} 
+\frac{\partial f(x,y)}{\partial x} &= -3 x^2 -3x + 6, \\ 
+\frac{\partial f(x,y)}{\partial y} &= -6 y^2 - 18y + 24. 
+\end{align*}
+
+Um die stationären Punkte zu finden, ist das folgende Gleichungssystem zu lösen: 
+
+$$ 
+\begin{cases} 
+\frac{\partial f(x,y)}{\partial x} = -3x^2-3x+6=0 \\ 
+\frac{\partial f(x,y)}{\partial y} =-6y^2-18y+24=0. 
+\end{cases} 
+$$
+
+Dieses Gleichungssystem hat 4 Lösungen, nämlich
+ 
+1. $(x_{1},y_{1})=(1,1)$, 
+2. $(x_{2},y_{2})=(-2,1)$, 
+3. $(x_{3},y_{3})=(1,-4)$ und 
+4. $(x_{4},y_{4})=(-2,-4)$,  
+
+die die stationären Punkte darstellen.
+ 
+Um den Typ der stationären Punkte zu bestimmen, werden die zweiten partiellen Ableitungen berechnet:
+
+\begin{align*}
+\frac{\partial^2 f(x,y)}{\partial x \partial x} &= -6x-3, \\ 
+\frac{\partial^2 f(x,y)}{\partial y \partial x} &= 0, \\
+\frac{\partial^2 f(x,y)}{\partial y \partial y} &= -12y-18, \\ 
+\frac{\partial^2 f(x,y)}{\partial x \partial y} &= 0. 
+\end{align*}
+ 
+Die Hesse-Matrix besteht aus den zweiten Ableitungen
+ 
+ $$
+\mathbf{H}(x,y)= 
+\left( \begin{array}{cc} 
+\frac{\partial^2 f(x,y)}{\partial x \partial x} & \frac{\partial^2 f(x,y)}{\partial x \partial y} \\ 
+\frac{\partial^2 f(x,y)}{\partial y \partial x} & \frac{\partial^2 f(x,y)}{\partial y \partial y}
+\end{array} \right) 
+= \left( \begin{array}{cc} 
+-6x-3 & 0 \\ 
+0     & -12y-18
+\end{array} \right). 
+$$
+
+Die Determinante der Hesse-Matrix ist
+
+$$\det(\mathbf{H}(x,y)) = (-6x-3) \cdot (-12y-18) - 0 \cdot 0 = 72xy + 108x +36y + 54.$$
+
+Nun wird für jeden stationären Punkt überprüft, ob tatsächlich ein Extremum vorliegt.
+
+1. $(x_{1},y_{1})=(1,1)$
+
+Die Determinante der Hesse-Matrix für diesen Punkt ist
+
+$$\det(\mathbf{H}(1,1)) = 270 > 0.$$
+
+Damit ist der Punkt $(x_{1},y_{1})=(1,1)$ ein Extremum. Da das Vorzeichen von $\frac{\partial^2 f(1,1)}{\partial x \partial x} = -9$ negativ ist, ist die Hesse-Matrix negativ definit und dieser Punkt ist ein Maximum (Hochpunkt).
+
+2. $(x_{2},y_{2})=(-2,1)$
+
+Die Determinante der Hesse-Matrix für diesen Punkt ist
+
+$$\det(\mathbf{H}(-2,1)) = -270 < 0.$$
+
+Damit ist die Hesse-Matrix für diesen Punkt indefinit und der Punkt $(x_{2},y_{2})$ ist kein Extremum.
+
+3. $(x_{3},y_{3})=(1,-4)$
+
+Die Determinante der Hesse-Matrix für diesen Punkt ist
+
+$$\det(\mathbf{H}(1,-4)) = -270 < 0.$$
+
+Damit ist die Hesse-Matrix für diesen Punkt indefinit und der Punkt $(x_{3},y_{3})$ ist kein Extremum.
+
+4. $(x_{4},y_{4})=(-2,-4)$
+
+Die Determinante der Hesse-Matrix für diesen Punkt ist
+
+$$\det(\mathbf{H}(-2,-4)) = 270 > 0.$$
+
+Damit ist der Punkt $(x_{4},y_{4})=(-2,-4)$ ein Extremum. Da das Vorzeichen von $\frac{\partial^2 f(-2,-4)}{\partial x \partial x} = -6\cdot(-2)-3=9$ positiv ist, ist die Hesse-Matrix positiv definit und dieser Punkt ist ein Minimum (Tiefpunkt).
+```
+````
+
+```{admonition} Übung 8.5
+:class: miniexercise
+Die Querschnittsfläche eines Tunnels kann als Rechteck beschrieben werden, auf
+dem sich ein Halbkreis befindet. Wie müssen die geometrischen Abmessungen
+gewählt werden, wenn der Umfang minimal sein soll und der Flächeninhalt 50 m²
+betragen soll. 
+```
+
+````{admonition} Lösung
+:class: miniexercise, toggle
+Seitenlänge des Rechtecks: $x = 7.48 \text{m}$ (Boden) und $y = 3.75 \text{m}$ (Höhe des Rechtecks ohne Halbkreis)
+```{dropdown} Lösungsweg
+Der Umfang $U$ der Tunnel-Querschnittsfläche ist
+
+$$U(x,y) = x + 2y + \frac{\pi}{2} x = (1 + \frac{\pi}{2})x + 2y.$$
+
+Da der Umfang minimiert werden soll, ist dies unsere Zielfunktion, die von den beiden Seitenlängen des Rechtecks $x$ und $y$ abhängt. Dabei haben wir $x$ als Boden des Tunnels gewählt.
+
+Die Nebenbedingung ist, dass die Querschnittsfläche 50 m² beträgt. Als Gleichung formuliert gilt dann
+
+$$A = xy + \frac{\pi}{8}x^2 = 50.$$
+
+Wir verwenden das Eliminationsverfahren und lösen die Nebenbedingung nach $y$ auf:
+
+$$\Rightarrow y = \frac{50 - \frac{\pi}{8}x^2}{x}, \quad x\neq 0.$$
+
+In die Zielfunktion eingesetzt erhalten wir
+
+\begin{align*}
+\tilde{U}(x) &= (1+\frac{\pi}{2})x + \frac{100}{x} - \frac{\pi}{4}x = \\
+&= (1+\frac{\pi}{4})x + \frac{100}{x}.
+\end{align*}
+
+Die 1. Ableitung ist
+
+$$\tilde{U}'(x) = (1+\frac{\pi}{2}) - \frac{100}{x^2}.$$
+
+Wir setzen die 1. Ableitung gleich Null, um Kandidaten für Extrema zu bestimmen,
+
+$$(1+\frac{\pi}{2}) - \frac{100}{x^2} = 0$$
+
+und lösen die Gleichung. Das Ergebnis ist 
+
+$$x_{1,2} = \pm \sqrt{\frac{100}{1+\frac{\pi}{4}}} \approx \pm 7.48.$$
+
+Es kommt nur die positive Nullstelle infrage, da es keine negativen Längen gibt. Von diesem Kandidaten müssen wir aber erst noch zeigen, dass es sich um ein Extremum handelt. Wir bilden die 2. Ableitung
+
+$$\tilde{U}''(x) = \frac{200}{x^3}.$$
+
+Die mögliche Extremstelle $x_1 = 7.48$ eingesetzt ergibt 
+
+$$\tilde{U}''\left(\sqrt{\frac{100}{1+\frac{\pi}{4}}}\right) \approx 0.48.$$
+
+Da die 2. Ableitung ungleich Null ist, ist $x_1$ tatsächlich ein Extremum. Das Vorzeichen der 2. Ableitung ist positiv, damit ist $x_1$ ein Minimum (Tiefpunkt).
+
+Der Tunnel hat also minimalen Umfang bei einer Querschnittsfläche von 50 m², wenn die Seitenlänge x = 7.48 m (Boden) und die Seitenlänge y = 3.75 m gewählt werden.
+```
+````
+
+Tipp: weitere Übungsaufgaben zu Extremwertproblemen ohne Nebenbedingungen bietet
+der MATEX-Aufgabengenerator
+
+> [MATEX 05 Mehrdimensionale Analysis: Extremwertaufgaben (ohne
+> Nebenbedingungen)](https://lx4.mint-kolleg.kit.edu/MATeX/generatorview.php?data=NGVJb2NoT3FLU0ZIOFkzOGxOVC91dz09)
+
+Wählen Sie Stufe 3.

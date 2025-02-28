@@ -1,4 +1,4 @@
-# 7. Funktionen von mehreren Variablen und partielle Ableitungen
+# 7. Richtungsableitungen und vektorwertige Funktionen
 
 Themen:
 
