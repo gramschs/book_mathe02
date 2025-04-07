@@ -34,7 +34,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=87e54e7c" />
     <link rel="stylesheet" type="text/css" href="../_static/jsxgraph.css?v=a7b027cb" />
@@ -497,12 +497,17 @@ gezeigt, dass für das Restglied die folgende Formel gilt:</p>
 \frac{f^{(n+1)}(\textcolor{red}{z})}{(n+1)!}\cdot(x-x_0)^{n+1},\]</div>
 <p>wobei der Punkt <span class="math notranslate nohighlight">\(z\)</span> eine Zwischenstelle ist, die irgendwo zwischen <span class="math notranslate nohighlight">\(x\)</span> und <span class="math notranslate nohighlight">\(x_0\)</span>
 liegt.</p>
-<p>Leider ist die Formel nicht ganz so einfach anzuwenden, denn die Zwischenstelle <span class="math notranslate nohighlight">\(z\)</span> ist ja nicht bekannt. Wir wissen nur, dass <span class="math notranslate nohighlight">\(z\)</span> irgendwo zwischen dem Entwicklungspunkt <span class="math notranslate nohighlight">\(x_0\)</span> und <span class="math notranslate nohighlight">\(x\)</span> liegt. Aber egal wo <span class="math notranslate nohighlight">\(z\)</span> jetzt wirklich liegt, wir können einfach für alle Werte <span class="math notranslate nohighlight">\(z\)</span> die <span class="math notranslate nohighlight">\((n+1)\)</span>-te Ableitung</p>
+<p>Leider ist die Formel nicht ganz so einfach anzuwenden, denn die Zwischenstelle
+<span class="math notranslate nohighlight">\(z\)</span> ist ja nicht bekannt. Wir wissen nur, dass <span class="math notranslate nohighlight">\(z\)</span> irgendwo zwischen dem
+Entwicklungspunkt <span class="math notranslate nohighlight">\(x_0\)</span> und <span class="math notranslate nohighlight">\(x\)</span> liegt. Aber egal wo <span class="math notranslate nohighlight">\(z\)</span> jetzt wirklich liegt,
+wir können einfach für alle Werte <span class="math notranslate nohighlight">\(z\)</span> die <span class="math notranslate nohighlight">\((n+1)\)</span>-te Ableitung</p>
 <div class="math notranslate nohighlight">
 \[f^{(n+1)}(z)\]</div>
-<p>zeichnen. Aus der Zeichnung können wir dann das Maximum <span class="math notranslate nohighlight">\(M\)</span> von <span class="math notranslate nohighlight">\(f^{(n+1)}(z)\)</span> für alle Punkte zwischen <span class="math notranslate nohighlight">\(x_0\)</span> und <span class="math notranslate nohighlight">\(x\)</span> ablesen oder anderweitig berechnen. Es gilt also</p>
+<p>zeichnen. Aus der Zeichnung können wir dann das Maximum <span class="math notranslate nohighlight">\(M\)</span> von dem Betrag
+<span class="math notranslate nohighlight">\(|f^{(n+1)}(z)|\)</span> für alle Punkte zwischen <span class="math notranslate nohighlight">\(x_0\)</span> und <span class="math notranslate nohighlight">\(x\)</span> ablesen oder anderweitig
+berechnen. Es gilt also</p>
 <div class="math notranslate nohighlight">
-\[f^{(n+1)}(z) \leq M.\]</div>
+\[|f^{(n+1)}(z)| \leq M.\]</div>
 <p>Und mit dieser Abschätzung kann jetzt endlich auch der Fehler abgeschätzt
 werden, wenn <span class="math notranslate nohighlight">\(T_n\)</span> anstatt der Funktion <span class="math notranslate nohighlight">\(f\)</span> verwendet werden soll. Da wir nicht
 wissen, ob <span class="math notranslate nohighlight">\(T_n\)</span> die Funktion <span class="math notranslate nohighlight">\(f\)</span> über- oder unterschätzt, wissen wir auch
