@@ -48,13 +48,18 @@ $$R_n(x) = f(x) - T_n(x) =
 wobei der Punkt $z$ eine Zwischenstelle ist, die irgendwo zwischen $x$ und $x_0$
 liegt.
 
-Leider ist die Formel nicht ganz so einfach anzuwenden, denn die Zwischenstelle $z$ ist ja nicht bekannt. Wir wissen nur, dass $z$ irgendwo zwischen dem Entwicklungspunkt $x_0$ und $x$ liegt. Aber egal wo $z$ jetzt wirklich liegt, wir können einfach für alle Werte $z$ die $(n+1)$-te Ableitung
+Leider ist die Formel nicht ganz so einfach anzuwenden, denn die Zwischenstelle
+$z$ ist ja nicht bekannt. Wir wissen nur, dass $z$ irgendwo zwischen dem
+Entwicklungspunkt $x_0$ und $x$ liegt. Aber egal wo $z$ jetzt wirklich liegt,
+wir können einfach für alle Werte $z$ die $(n+1)$-te Ableitung
 
 $$f^{(n+1)}(z)$$
 
-zeichnen. Aus der Zeichnung können wir dann das Maximum $M$ von $f^{(n+1)}(z)$ für alle Punkte zwischen $x_0$ und $x$ ablesen oder anderweitig berechnen. Es gilt also
+zeichnen. Aus der Zeichnung können wir dann das Maximum $M$ von dem Betrag
+$|f^{(n+1)}(z)|$ für alle Punkte zwischen $x_0$ und $x$ ablesen oder anderweitig
+berechnen. Es gilt also
 
-$$f^{(n+1)}(z) \leq M.$$
+$$|f^{(n+1)}(z)| \leq M.$$
 
 Und mit dieser Abschätzung kann jetzt endlich auch der Fehler abgeschätzt
 werden, wenn $T_n$ anstatt der Funktion $f$ verwendet werden soll. Da wir nicht
