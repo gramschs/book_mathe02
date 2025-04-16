@@ -54,7 +54,7 @@ Bedingungen nicht erfüllt sind (= Autofahrer hat Akohol getrunken). Es ist also
 nicht hinreichend.
 
 Zuerst wirkt diese Aussage nicht besonders bedeutend. Aber wir können trotzdem
-zwei bedeutsame Schlussfolgen daraus ziehen:
+zwei bedeutsame Schlussfolgerungen daraus ziehen:
 
 ```{admonition} Nullfolgen-Kriterium
 :class: note
@@ -71,7 +71,7 @@ einige Beispiele für konvergente oder divergente Reihen gegeben.
 <iframe width="560" height="315" src="https://www.youtube.com/embed/aGnAseEnfG0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 ```
 
-## Das Quotienten-Kriterium und das Wurzel-Kriterium
+## Das Quotienten-Kriterium
 
 Das Quotienten-Kriterium ist ein nützliches Konvergenzkriterium für Reihen, bei
 denen die Summanden einen Bruch oder eine Potenz enthalten. Es kann uns helfen,
@@ -117,6 +117,8 @@ $$\left|\frac{a_{k+1}}{a_k}\right| =
 Da $r = \lim_{k \to \infty} \frac{2}{k+1} = 0 < 1$, konvergiert die Reihe
 $\sum_{k=1}^{\infty} \frac{2^k}{k!}$ nach dem Quotienten-Kriterium.
 
+## Das Wurzel-Kriterium
+
 Das Wurzel-Kriterium ist ein weiteres Konvergenzkriterium für Reihen, das
 besonders hilfreich ist, wenn die Summanden Potenzen oder Exponentialfunktionen
 enthalten. Es ermöglicht uns, schnell festzustellen, ob eine solche Reihe
@@ -133,7 +135,8 @@ $$r = \lim_{k\to\infty} \sqrt[k]{|a_k|}$$
 existiert und kleiner als 1 ist. Gilt $r > 1$, so divergiert die Reihe. Gilt
 $r = 1$, so versagt das Kriterium und ein anderes Kriterium muss benutzt werden.
 
-Übrigens: Für $r < 1$ ist die Reihe sogar absolut konvergent, genau wie beim Quotienten-Kriterium.
+Übrigens: Für $r < 1$ ist die Reihe sogar absolut konvergent, genau wie beim
+Quotienten-Kriterium.
 ```
 
 Als Beispiel betrachten wir die Reihe $(s_n)$ mit
@@ -154,10 +157,12 @@ r & = \lim_{k\rightarrow \infty}\sqrt[k]{\left|a_k\right|} = \\
 <iframe width="560" height="315" src="https://www.youtube.com/embed/G1GSAFrd6mE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 ```
 
-## Ausblick
+## Zusammenfassung und Ausblick
 
-Tatsächlich gibt es noch einige Kriterien mehr, um die Konvergenz einer Reihe zu
-bestimmen. Die bekanntesten Konvergenzkriterien sind:
+In diesem Kapitel haben wir zwei Kriterien zur Bestimmung der Konvergenz
+kennengelernt: Quotienten- und Wurzelkriterium. Tatsächlich gibt es noch einige
+Kriterien mehr, um die Konvergenz einer Reihe zu bestimmen. Die bekanntesten
+Konvergenzkriterien sind:
 
 * Grenzwertkriterium
 * Majorantenkriterium

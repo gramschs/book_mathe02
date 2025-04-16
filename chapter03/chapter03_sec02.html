@@ -440,8 +440,9 @@
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lernziele">Lernziele</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#das-nullfolgen-kriterium">Das Nullfolgen-Kriterium</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#das-quotienten-kriterium-und-das-wurzel-kriterium">Das Quotienten-Kriterium und das Wurzel-Kriterium</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ausblick">Ausblick</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#das-quotienten-kriterium">Das Quotienten-Kriterium</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#das-wurzel-kriterium">Das Wurzel-Kriterium</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zusammenfassung-und-ausblick">Zusammenfassung und Ausblick</a></li>
 </ul>
             </nav>
         </div>
@@ -507,7 +508,7 @@ heißt es noch lange nicht, dass die Reihe konvergiert, weil vielleicht andere
 Bedingungen nicht erfüllt sind (= Autofahrer hat Akohol getrunken). Es ist also
 nicht hinreichend.</p>
 <p>Zuerst wirkt diese Aussage nicht besonders bedeutend. Aber wir können trotzdem
-zwei bedeutsame Schlussfolgen daraus ziehen:</p>
+zwei bedeutsame Schlussfolgerungen daraus ziehen:</p>
 <div class="note admonition">
 <p class="admonition-title">Nullfolgen-Kriterium</p>
 <ol class="arabic simple">
@@ -525,8 +526,8 @@ einige Beispiele für konvergente oder divergente Reihen gegeben.</p>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/aGnAseEnfG0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </div>
 </details></section>
-<section id="das-quotienten-kriterium-und-das-wurzel-kriterium">
-<h2>Das Quotienten-Kriterium und das Wurzel-Kriterium<a class="headerlink" href="#das-quotienten-kriterium-und-das-wurzel-kriterium" title="Link to this heading">#</a></h2>
+<section id="das-quotienten-kriterium">
+<h2>Das Quotienten-Kriterium<a class="headerlink" href="#das-quotienten-kriterium" title="Link to this heading">#</a></h2>
 <p>Das Quotienten-Kriterium ist ein nützliches Konvergenzkriterium für Reihen, bei
 denen die Summanden einen Bruch oder eine Potenz enthalten. Es kann uns helfen,
 schnell herauszufinden, ob eine solche Reihe konvergiert oder divergiert, ohne
@@ -561,6 +562,9 @@ aufeinanderfolgenden Glieder:</p>
 \frac{2^{k+1}k!}{2^k(k+1)!} = \frac{2}{k+1}.\]</div>
 <p>Da <span class="math notranslate nohighlight">\(r = \lim_{k \to \infty} \frac{2}{k+1} = 0 &lt; 1\)</span>, konvergiert die Reihe
 <span class="math notranslate nohighlight">\(\sum_{k=1}^{\infty} \frac{2^k}{k!}\)</span> nach dem Quotienten-Kriterium.</p>
+</section>
+<section id="das-wurzel-kriterium">
+<h2>Das Wurzel-Kriterium<a class="headerlink" href="#das-wurzel-kriterium" title="Link to this heading">#</a></h2>
 <p>Das Wurzel-Kriterium ist ein weiteres Konvergenzkriterium für Reihen, das
 besonders hilfreich ist, wenn die Summanden Potenzen oder Exponentialfunktionen
 enthalten. Es ermöglicht uns, schnell festzustellen, ob eine solche Reihe
@@ -574,7 +578,8 @@ konvergiert, wenn der Grenzwert</p>
 \[r = \lim_{k\to\infty} \sqrt[k]{|a_k|}\]</div>
 <p>existiert und kleiner als 1 ist. Gilt <span class="math notranslate nohighlight">\(r &gt; 1\)</span>, so divergiert die Reihe. Gilt
 <span class="math notranslate nohighlight">\(r = 1\)</span>, so versagt das Kriterium und ein anderes Kriterium muss benutzt werden.</p>
-<p>Übrigens: Für <span class="math notranslate nohighlight">\(r &lt; 1\)</span> ist die Reihe sogar absolut konvergent, genau wie beim Quotienten-Kriterium.</p>
+<p>Übrigens: Für <span class="math notranslate nohighlight">\(r &lt; 1\)</span> ist die Reihe sogar absolut konvergent, genau wie beim
+Quotienten-Kriterium.</p>
 </div>
 <p>Als Beispiel betrachten wir die Reihe <span class="math notranslate nohighlight">\((s_n)\)</span> mit</p>
 <div class="math notranslate nohighlight">
@@ -594,10 +599,12 @@ r &amp; = \lim_{k\rightarrow \infty}\sqrt[k]{\left|a_k\right|} = \\
 <iframe width="560" height="315" src="https://www.youtube.com/embed/G1GSAFrd6mE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </div>
 </details></section>
-<section id="ausblick">
-<h2>Ausblick<a class="headerlink" href="#ausblick" title="Link to this heading">#</a></h2>
-<p>Tatsächlich gibt es noch einige Kriterien mehr, um die Konvergenz einer Reihe zu
-bestimmen. Die bekanntesten Konvergenzkriterien sind:</p>
+<section id="zusammenfassung-und-ausblick">
+<h2>Zusammenfassung und Ausblick<a class="headerlink" href="#zusammenfassung-und-ausblick" title="Link to this heading">#</a></h2>
+<p>In diesem Kapitel haben wir zwei Kriterien zur Bestimmung der Konvergenz
+kennengelernt: Quotienten- und Wurzelkriterium. Tatsächlich gibt es noch einige
+Kriterien mehr, um die Konvergenz einer Reihe zu bestimmen. Die bekanntesten
+Konvergenzkriterien sind:</p>
 <ul class="simple">
 <li><p>Grenzwertkriterium</p></li>
 <li><p>Majorantenkriterium</p></li>
@@ -678,8 +685,9 @@ Konvergenzkriterien</a>.</p>
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lernziele">Lernziele</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#das-nullfolgen-kriterium">Das Nullfolgen-Kriterium</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#das-quotienten-kriterium-und-das-wurzel-kriterium">Das Quotienten-Kriterium und das Wurzel-Kriterium</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ausblick">Ausblick</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#das-quotienten-kriterium">Das Quotienten-Kriterium</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#das-wurzel-kriterium">Das Wurzel-Kriterium</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zusammenfassung-und-ausblick">Zusammenfassung und Ausblick</a></li>
 </ul>
   </nav></div>
 

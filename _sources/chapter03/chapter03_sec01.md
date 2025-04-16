@@ -41,7 +41,7 @@ s_n &= a_1 + a_2 + \ldots + a_n =  \frac{1}{2} + \frac{1}{4} + \dots +
 \left(\frac{1}{2}\right)^{n} \end{align*}
 
 Jedes Folgenglied $(s_n)$ enthält Summen. Jede dieser Summen wird
-**Partialsumme** genannt. Die Folge aus Partialsummen wiord **Reihe** genannt.
+**Partialsumme** genannt. Die Folge aus Partialsummen wird **Reihe** genannt.
 
 ```{admonition} Was ist ... eine Reihe?
 :class: note
@@ -89,11 +89,15 @@ Eine Reihe wird divergent genannt, wenn die Folge der Partialsummen divergiert, 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/1vQ67chDVbU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 ```
 
-## Die geometrische Reihe
+## Bekannte Reihen
 
 Manche Reihen sind wichtiger als andere und haben daher einen eigenen Namen. Die
 geometrische Reihe gehört zu diesen wichtigen Reihen. Sie heißt geometrische
-Reihe, weil sie aus der geometrischen Folge gebildet wird.
+Reihe, weil sie aus der geometrischen Folge gebildet wird. Ebenfalls wichtig ist
+die harmonische Reihe. Wir werden beide Reihen in den folgenden Abschnitten
+betrachten.
+
+### Die geometrische Reihe
 
 Zur Erinnerung: eine Folge heißt geometrische Folge, wenn der Quotient zweier
 benachbarter Folgenglieder eine konstante Zahl ist. Wird also $a_2$ durch $a_1$
@@ -155,7 +159,7 @@ Für $|q|\geq 1$ divergiert die geometrische Reihe.
 <iframe width="560" height="315" src="https://www.youtube.com/embed/2TCDiK7GpNM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 ```
 
-## Die harmonische Reihe
+### Die harmonische Reihe
 
 Jetzt haben wir uns das Beispiel einer konvergenten Reihe angesehen
 (zumindestens, wenn $|q|<1$), jetzt kommt eine berühmte divergente Reihe, die
@@ -173,3 +177,12 @@ Sie ist divergent.
 ```{dropdown} Video zu harmonische Reihe
 <iframe width="560" height="315" src="https://www.youtube.com/embed/n2ELwRkgKhc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 ```
+
+## Zusammenfassung und Ausblick
+
+In diesem Kapitel haben wir Reihen betrachtet, die aus Zahlenfolgen generiert
+werden. Bei Reihen stellt sich immer die Frage, ob die Reihe konvergiert oder
+divergiert. Für die sehr bekannte geometrische Reihe haben wir ein Kriterium
+angegeben, wann diese Reihe konvergiert. Die harmonische Reihe divergiert. Im
+nächsten Kapitel werden wir uns mit Konvergenzkriterien beschäftigen, um für
+beliebige Reihen das Konvergenzverhalten bestimmen zu können.
