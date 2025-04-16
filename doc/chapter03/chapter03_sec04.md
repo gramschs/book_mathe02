@@ -5,10 +5,15 @@
 ```{admonition} Lernziele
 :class: goals
 * Sie können erklären, was der **Konvergenzbereich** einer Potenzreihe ist.
-* Sie können den Konvergenzbereich einer Potenzreihe geometrisch interpretieren und anhand des **Konvergenzradius** entscheiden, ob eine Potenzreihe konvergiert oder divergiert oder berechnen, was in den **Randpunkten** passiert.
-* Sie kennen zwei Formeln auswendig, um den Konvergenzradius $r$ einer Potenzreihe zu berechnen, nämlich
+* Sie können den Konvergenzbereich einer Potenzreihe geometrisch interpretieren
+  und anhand des **Konvergenzradius** entscheiden, ob eine Potenzreihe
+  konvergiert oder divergiert oder berechnen, was in den **Randpunkten**
+  passiert.
+* Sie kennen zwei Formeln auswendig, um den Konvergenzradius $r$ einer
+  Potenzreihe zu berechnen, nämlich
 
-$$r = \lim_{k\to\infty}\left| \frac{a_k}{a_{k+1}}\right| \quad \text{ und } \quad r = \lim_{k\to\infty}\frac{1}{\sqrt[k]{|a_k|}},$$
+$$r = \lim_{k\to\infty}\left| \frac{a_k}{a_{k+1}}\right| \quad \text{ und } 
+\quad r = \lim_{k\to\infty}\frac{1}{\sqrt[k]{|a_k|}},$$
 
 und können diese auch anwenden. 
 ```
@@ -60,7 +65,9 @@ dann ist nicht die 0 in der Mitte des Konvergenzbereichs, sondern $x_0$. Der
 Konvergenzbereich ist dann $(-r + x_0, +r + x_0)$.
 
 ```{dropdown} Video "Konvergenzradius" von Prof. Hoever
-<iframe width="560" height="315" src="https://www.youtube.com/embed/69PgueE9CI0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/69PgueE9CI0"
+title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
+encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 ```
 
 ## Formeln zur Berechnung des Konvergenzradius
@@ -73,9 +80,23 @@ Die beiden folgenden Videos zeigen, wie die beiden Formeln
 zur Berechnung des Konvergenzradius funktionieren.
 
 ```{dropdown} Video "Wurzel-Formel bei Konvergenzradius" von Prof. Hoever
-<iframe width="560" height="315" src="https://www.youtube.com/embed/yO2mP5aToMU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/yO2mP5aToMU"
+title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
+encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 ```
 
 ```{dropdown} Video "Quotienten-Formel bei Konvergenzradius" von Prof. Hoever
-<iframe width="560" height="315" src="https://www.youtube.com/embed/ConZiKDKA9Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ConZiKDKA9Q"
+title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
+encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 ```
+
+## Zusammenfassung und Ausblick
+
+In diesem Kapitel haben wir gelernt, was der Konvergenzradius ist und welche
+Bedeutung er für Potenzreihen hat. Berechnet wird der Konvergenzradius
+beispielsweise über das Quotienten- oder Wurzelkriterium. Was wir bisher nicht
+gelernt haben ist, wie wir auf die Koeffizienten der Potenzreihe kommen. Für
+Funktionen, die beliebig oft differenzierbar sind, gibt es dazu ein Verfahren,
+das der Mathematiker Brook Taylor entwickelt hat. Das Taylor-Verfahren bzw. die
+Taylorreihen werden wir im nächsten Kapitel kennenlernen.
