@@ -20,16 +20,16 @@ Berechnen Sie den Mittelwert $\bar{f}$ der Funktion $f(x)=mx+n$ auf einem belieb
 ````{admonition} Lösung
 :class: miniexercise, toggle
 $$\bar{f} = \frac{1}{2}\left(f(a)+f(b)\right) $$ 
-Der Mittelwert der der linearen Funktion $f(x)=mx+n$ ist gerade das arithmetische Mittel der beiden Funktionswerte $f(a)$ und $f(b)$ an den Intervallgrenzen.
+Der Mittelwert der linearen Funktion $f(x)=mx+n$ ist gerade das arithmetische Mittel der beiden Funktionswerte $f(a)$ und $f(b)$ an den Intervallgrenzen.
 ```{dropdown} Lösungsweg
 Der Mittelwert einer Funktion $f$ im Intervall $[a,b]$ wird folgendermaßen berechnet:
 
-$$\bar{f}(x) = \frac{1}{b-a}\int_{a}^{b} f(x) \, dx.$$
+$$\bar{f} = \frac{1}{b-a}\int_{a}^{b} f(x) \, dx.$$
 
 Wir setzen die lineare Funktion $f(x)=mx+n$ in die Formel ein und erhalten:
 
 \begin{align*}
-\bar{f}(x) 
+\bar{f}
 &= \frac{1}{b-a}\int_{a}^{b} mx+n \, dx = \\
 &= \frac{1}{b-a} \left[\frac{1}{2}mx^2 + nx \right]_{a}^{b} = \\
 &= \frac{1}{b-a} \left( (\frac{1}{2}mb^2 + nb) - (\frac{1}{2}ma^2 + na) \right) = \\
