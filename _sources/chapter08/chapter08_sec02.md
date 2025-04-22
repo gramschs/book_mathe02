@@ -42,7 +42,7 @@ Differential genannt. Das Differential beschreibt den linearen Anteil der
 
 ## Was ist das totale Differential?
 
-Da sich die Tangentenfunktion von eindimensionalen Funktionen aud mehrdimensionale Funktionen übertragen lässt, kann auch das Differential auf mehrdimensionale Funktionen übertragen werden. Es wird dann totales Differential genannt.
+Da sich die Tangentenfunktion von eindimensionalen Funktionen auf mehrdimensionale Funktionen übertragen lässt, kann auch das Differential auf mehrdimensionale Funktionen übertragen werden. Es wird dann totales Differential genannt.
 
 ```{admonition} Was ist ... das totale Differential?
 :class: note

@@ -91,7 +91,7 @@ C_1 \, \lambda  &= a_{11} C_1 + a_{12} C_2 \\
 C_2 \, \lambda  &= a_{21} C_1 + a_{22} C_2
 \end{align*}
 
-Bringen wir die Terme $C_1 \, \lambda$ und $C_2 \, \lambda$ jeweils aud die rechte Seite und schreiben das Gleichungssystem in Matrixform, so erhalten wir
+Bringen wir die Terme $C_1 \, \lambda$ und $C_2 \, \lambda$ jeweils auf die rechte Seite und schreiben das Gleichungssystem in Matrixform, so erhalten wir
 
 $$
 \begin{pmatrix}
