@@ -162,10 +162,10 @@ Für $|q|\geq 1$ divergiert die geometrische Reihe.
 ### Die harmonische Reihe
 
 Jetzt haben wir uns das Beispiel einer konvergenten Reihe angesehen
-(zumindestens, wenn $|q|<1$), jetzt kommt eine berühmte divergente Reihe, die
+(zumindest, wenn $|q|<1$), jetzt kommt eine berühmte divergente Reihe, die
 harmonische Reihe.
 
-```{admonition} Was ist ... die hamonische Reihe?
+```{admonition} Was ist ... die harmonische Reihe?
 :class: note
 Die harmonische Reihe wird aus der Summe der harmonischen Folge $a_k = \frac{1}{k}$ gebildet:
 

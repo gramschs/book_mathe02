@@ -46,18 +46,18 @@ $$p(x)=a_0 + a_1x + a_2x^2 + a_3 x^3 + \ldots = \sum_{k=0}^{\infty}a_k x^k.$$
 Die reellen Zahlen $a_0, a_1, a_2, \ldots$ nennt man **Koeffizienten** der Potenzreihe.
 
 Die Potenzfunktionen $x, x^2, x^3, \ldots$ gehen alle durch den Punkt $(0,0)$,
-den den Koordinatenursprung. Damit verbunden sind auch spezielle
+den Koordinatenursprung. Damit verbunden sind auch spezielle
 Symmetrieeigenschaften. Beispielsweise sind die Potenzfunktionen $x, x^3, x^5,
 x^7, \ldots$ punktsymmetrisch zu $(0,0)$. Und die Potenzfunktionen mit geraden
 Exponenten $x^2, x^4, x^6, \ldots$ sind symmetrisch zur y-Achse. Wenn nicht den
 Koordinatenursprung so im Mittelpunkt stehen soll, sondern beispielsweise der
 Punkt $(x_0,y_0)$, müssen wir die Potenzfunktionen leicht modifizieren. Durch
 Addition von $y_0$ werden die Potenzfunktionen nach oben verschoben (wenn $y_0 >
-0$) oder unten verschoben (wenn $y_0 < 0$). In der Potenzreihe gibt es schon so
-einen Summanden, nämlich $a_0$. Also brauchen wir nur $a_0=y_0$ setzen, damit
-nun die Symmetrie/Punktsymmetrie sich auf den Punkt $(0, y_0)$ bezieht.
+0$) oder nach unten verschoben (wenn $y_0 < 0$). In der Potenzreihe gibt es
+schon so einen Summanden, nämlich $a_0$. Also brauchen wir nur $a_0=y_0$ setzen,
+damit nun die Symmetrie/Punktsymmetrie sich auf den Punkt $(0, y_0)$ bezieht.
 
-Als nächstes möchten wir aber die Potenzfunktionen noch so modifizieren, dass
+Als Nächstes möchten wir aber die Potenzfunktionen noch so modifizieren, dass
 die Punktsymmetrie bzw. Symmetrie der Potenzfunktionen sich auf die x-Koordinate
 $x_0$ bezieht. Dazu müssen wir von jedem $x$ den Wert $x_0$ abziehen und dann
 die Potenz bilden, also $(x-x_0)^k$ verwenden.
