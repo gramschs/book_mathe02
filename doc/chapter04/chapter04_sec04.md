@@ -59,7 +59,7 @@ $$\left(\sum_{k=0}^{\infty} a_k x^k \right) \cdot \left(\sum_{k=0}^{\infty} b_k 
 mit
 
 $$c_k = \sum_{l=0}^{k} a_l b_{k-l}
-= a_0 b_k + a_1 b_{k_1} + a_2 b_{k_2} + \ldots a_k b_0.$$
+= a_0 b_k + a_1 b_{k-1} + a_2 b_{k-2} + \ldots + a_k b_0.$$
 
 Der Konvergenzradius muss neu überprüft werden.
 
@@ -75,8 +75,8 @@ x^k \right) = \left(\sum_{k=0}^{\infty} d_k x^k \right) $$
 
 mit den Koeffizienten
 
-$$d_k = \sum_{l=0}^{k} b_l c_{k-l} = b_0 c_k + b_1 c_{k_1} + b_2 c_{k_2} +
-\ldots b_k c_0.$$
+$$d_k = \sum_{l=0}^{k} b_l c_{k-l} = b_0 c_k + b_1 c_{k-1} + b_2 c_{k-2} +
+\ldots + b_k c_0.$$
 
 Damit das Produkt $B(x) \cdot C(x)$ gleich der Potenzreihe $A(x)$ ist, muss
 jeder Koeffizient $d_k$ mit $a_k$ übereinstimmen. Wir vergleichen also die
@@ -102,14 +102,14 @@ autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-s
 
 Potenzreihen bieten eine alternative Methode zur Berechnung von
 Funktionsgrenzwerten im Vergleich zum Verfahren von Bernoulli-de l'Hospital.
-Beim Verfahren von Bernoulli-de l'Hospital werden Zähler und Nennen getrennt
+Beim Verfahren von Bernoulli-de l'Hospital werden Zähler und Nenner getrennt
 voneinander abgeleitet, bis der Funktionsgrenzwert bestimmt werden kann.
-Gegebenfalls ist es jedoch möglich, eine Funktion als Potenzreihe darzustellen,
+Gegebenenfalls ist es jedoch möglich, eine Funktion als Potenzreihe darzustellen,
 dann die Division durchzuführen und daraus den Grenzwert direkt zu bilden. Am
 einfachsten ist es, ein Beispiel zu betrachten.
 
 Berechnen Sie den Grenzwert der Funktion $f(x) = \sin(x)/x$, wenn $x$ gegen 0
-strebt, also
+geht, also
 
 $$\lim_{x \to 0}\frac{\sin(x)}{x}.$$
 
@@ -120,7 +120,7 @@ $$\sin(x) = x - \frac{x^3}{3!} + \frac{x^5}{5!} - \frac{x^7}{7!} + \ldots$$
 
 und damit ist
 
-$$\frac{\sin(x)}{x} = 1 - \frac{x^2}{3!} + \frac{x^4}{5!} - \frac{x^6}{7!} + \ldots .$$
+$$\frac{\sin(x)}{x} = 1 - \frac{x^2}{3!} + \frac{x^4}{5!} - \frac{x^6}{7!}+\ldots.$$
 
 Für jeden einzelnen Term können wir jetzt aber den Grenzwert berechnen, also
 

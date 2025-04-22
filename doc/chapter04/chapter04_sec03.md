@@ -2,7 +2,7 @@
 
 Es gibt einige wichtige Taylorreihen, die in den Ingenieurwissenschaften sehr
 häufig zur Approximation bestimmter Funktionen verwendet werden. Im Folgenden
-werden wir uns mit einigen dieser Taylorreihen beschäftigen.
+stellen wir einige dieser Taylorreihen vor.
 
 ## Lernziele
 
@@ -30,8 +30,8 @@ sondern nehmen stattdessen $x_0=1$. Die Taylorreihe lautet dann
 $$\ln(x) = (x-1) - \frac{(x-1)^2}{2} + \frac{(x-1)^3}{3} - \ldots =
 \sum_{k=1}^{\infty}\frac{(-1)^{k+1}}{k}(x-1)^k.$$
 
-Die Taylorreihe der Logarithmusfunktion hat den Konvergenzradius 1, d.h. die
-Approximation ist nur im Konvergenzbereich $0 < x \leq 2$ gültig.
+Die Taylorreihe der Logarithmusfunktion hat den Konvergenzradius 1, die
+Approximation ist im Konvergenzbereich $0 < x \leq 2$ gültig.
 
 ## Die Sinus- und Kosinusfunktion
 
