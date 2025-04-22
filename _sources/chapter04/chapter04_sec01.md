@@ -2,8 +2,8 @@
 
 Im Kapitel über Potenzreihen haben wir uns bereits mit der Frage beschäftigt, in
 welchem Intervall eine Potenzreihe eine gegebene Funktion gut approximiert. Was
-uns aber noch fehlt ist die Frage, wie wir zu solchen Potenzreihen kommen. Daher
-gibt es in diesem Kapitel eine Anleitung dazu.
+uns aber noch fehlt, ist die Frage, wie wir zu solchen Potenzreihen kommen. Daher
+bietet dieses Kapitel eine Anleitung dazu.
 
 ## Lernziele
 
@@ -28,10 +28,13 @@ Taylorpolynom.
 
 ```{admonition} Was ist ... ein Taylorpolynom?
 :class: note
-Ein **Taylorpolynom** zu einer Funktion $f$ kann nur gebildet werden, wenn die Funktion $f$ n-mal stetig differenzierbar ist. Wenn das aber der Fall ist, dann wird noch ein Entwicklungspunkt $x_0$ gewählt. Das Taylorpolynom $T_n$ zu $f$ vom Grad $n$ am Entwicklungspunkt $x_0$ ist dann:
+Ein **Taylorpolynom** zu einer Funktion $f$ kann nur gebildet werden, wenn die
+Funktion $f$ n-mal stetig differenzierbar ist. Wenn das aber der Fall ist, dann
+wird ein Entwicklungspunkt $x_0$ gewählt. Das Taylorpolynom $T_n$ zu $f$ vom
+Grad $n$ am Entwicklungspunkt $x_0$ ist dann:
 
 \begin{align*}
-T_n(x) &=f(x_0) + \frac{f'(x_0)}{1!}(x-x_0)^1 + \frac{f''(x_0)}{2!}(x-x_0)^2 + \ldots \\
+T_n(x) &=f(x_0) + \frac{f'(x_0)}{1!}(x-x_0)^1 + \frac{f''(x_0)}{2!}(x-x_0)^2 +\ldots\\
        &=\sum_{k=0}^{n} \frac{f^{(k)}(x_0)}{k!} \cdot (x-x_0)^k.
 \end{align*}
 
@@ -57,7 +60,7 @@ Hier gibt es ein Video, das die Fakultät $k!$ erklärt.
 4. Die Fakultäten ausrechnen.
 5. Alles in die Formel für das Taylorpolynom einsetzen.
 
-Probieren wir das an einem Beispiel aus. Die Funktion $f(x)=\sin(x)$ soll durch
+Wir veranschaulichen dies an einem Beispiel. Die Funktion $f(x)=\sin(x)$ soll durch
 ein Taylorpolynom Grad 3 am Entwicklungspunkt $x_0=0$ approximiert werden.
 
 Schritt 1: Wir halten fest, der Grad ist 3 ($n=3$), d.h. wir brauchen die

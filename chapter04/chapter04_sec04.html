@@ -34,7 +34,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=87e54e7c" />
     <link rel="stylesheet" type="text/css" href="../_static/jsxgraph.css?v=a7b027cb" />
@@ -513,7 +513,7 @@ Damit die Formel nicht zu unübersichtlich wird, nehmen wir den Entwicklungspunk
 <p>mit</p>
 <div class="math notranslate nohighlight">
 \[c_k = \sum_{l=0}^{k} a_l b_{k-l}
-= a_0 b_k + a_1 b_{k_1} + a_2 b_{k_2} + \ldots a_k b_0.\]</div>
+= a_0 b_k + a_1 b_{k-1} + a_2 b_{k-2} + \ldots + a_k b_0.\]</div>
 <p>Der Konvergenzradius muss neu überprüft werden.</p>
 <p>Wenn die Potenzreihe <span class="math notranslate nohighlight">\(A(x)\)</span> durch die Potenzreihe <span class="math notranslate nohighlight">\(B(x)\)</span> geteilt werden soll,
 dann muss eine neue Potenzreihe <span class="math notranslate nohighlight">\(C(x)\)</span> gefunden werden, so dass</p>
@@ -525,8 +525,8 @@ dann muss eine neue Potenzreihe <span class="math notranslate nohighlight">\(C(x
 x^k \right) = \left(\sum_{k=0}^{\infty} d_k x^k \right) \]</div>
 <p>mit den Koeffizienten</p>
 <div class="math notranslate nohighlight">
-\[d_k = \sum_{l=0}^{k} b_l c_{k-l} = b_0 c_k + b_1 c_{k_1} + b_2 c_{k_2} +
-\ldots b_k c_0.\]</div>
+\[d_k = \sum_{l=0}^{k} b_l c_{k-l} = b_0 c_k + b_1 c_{k-1} + b_2 c_{k-2} +
+\ldots + b_k c_0.\]</div>
 <p>Damit das Produkt <span class="math notranslate nohighlight">\(B(x) \cdot C(x)\)</span> gleich der Potenzreihe <span class="math notranslate nohighlight">\(A(x)\)</span> ist, muss
 jeder Koeffizient <span class="math notranslate nohighlight">\(d_k\)</span> mit <span class="math notranslate nohighlight">\(a_k\)</span> übereinstimmen. Wir vergleichen also die
 Koeffizienten</p>
@@ -551,13 +551,13 @@ autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-s
 <h2>Bestimmung von Grenzwerten mit Potenzreihen<a class="headerlink" href="#bestimmung-von-grenzwerten-mit-potenzreihen" title="Link to this heading">#</a></h2>
 <p>Potenzreihen bieten eine alternative Methode zur Berechnung von
 Funktionsgrenzwerten im Vergleich zum Verfahren von Bernoulli-de l’Hospital.
-Beim Verfahren von Bernoulli-de l’Hospital werden Zähler und Nennen getrennt
+Beim Verfahren von Bernoulli-de l’Hospital werden Zähler und Nenner getrennt
 voneinander abgeleitet, bis der Funktionsgrenzwert bestimmt werden kann.
-Gegebenfalls ist es jedoch möglich, eine Funktion als Potenzreihe darzustellen,
+Gegebenenfalls ist es jedoch möglich, eine Funktion als Potenzreihe darzustellen,
 dann die Division durchzuführen und daraus den Grenzwert direkt zu bilden. Am
 einfachsten ist es, ein Beispiel zu betrachten.</p>
 <p>Berechnen Sie den Grenzwert der Funktion <span class="math notranslate nohighlight">\(f(x) = \sin(x)/x\)</span>, wenn <span class="math notranslate nohighlight">\(x\)</span> gegen 0
-strebt, also</p>
+geht, also</p>
 <div class="math notranslate nohighlight">
 \[\lim_{x \to 0}\frac{\sin(x)}{x}.\]</div>
 <p><span class="math notranslate nohighlight">\(x=0\)</span> darf in die Funktion nicht eingesetzt werden, da ansonsten durch 0 geteilt
@@ -566,7 +566,7 @@ werden würde. Die Potenzreihe der Sinusfunktion lautet:</p>
 \[\sin(x) = x - \frac{x^3}{3!} + \frac{x^5}{5!} - \frac{x^7}{7!} + \ldots\]</div>
 <p>und damit ist</p>
 <div class="math notranslate nohighlight">
-\[\frac{\sin(x)}{x} = 1 - \frac{x^2}{3!} + \frac{x^4}{5!} - \frac{x^6}{7!} + \ldots .\]</div>
+\[\frac{\sin(x)}{x} = 1 - \frac{x^2}{3!} + \frac{x^4}{5!} - \frac{x^6}{7!}+\ldots.\]</div>
 <p>Für jeden einzelnen Term können wir jetzt aber den Grenzwert berechnen, also</p>
 <div class="math notranslate nohighlight">
 \[

@@ -34,7 +34,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=87e54e7c" />
     <link rel="stylesheet" type="text/css" href="../_static/jsxgraph.css?v=a7b027cb" />
@@ -457,8 +457,8 @@
 <h1>4.1 Berechnung Taylorreihe<a class="headerlink" href="#berechnung-taylorreihe" title="Link to this heading">#</a></h1>
 <p>Im Kapitel über Potenzreihen haben wir uns bereits mit der Frage beschäftigt, in
 welchem Intervall eine Potenzreihe eine gegebene Funktion gut approximiert. Was
-uns aber noch fehlt ist die Frage, wie wir zu solchen Potenzreihen kommen. Daher
-gibt es in diesem Kapitel eine Anleitung dazu.</p>
+uns aber noch fehlt, ist die Frage, wie wir zu solchen Potenzreihen kommen. Daher
+bietet dieses Kapitel eine Anleitung dazu.</p>
 <section id="lernziele">
 <h2>Lernziele<a class="headerlink" href="#lernziele" title="Link to this heading">#</a></h2>
 <div class="goals admonition">
@@ -483,10 +483,13 @@ Kochrezept anzuwenden, beschäftigen wir uns zunächst mit dem sogenannten
 Taylorpolynom.</p>
 <div class="note admonition">
 <p class="admonition-title">Was ist … ein Taylorpolynom?</p>
-<p>Ein <strong>Taylorpolynom</strong> zu einer Funktion <span class="math notranslate nohighlight">\(f\)</span> kann nur gebildet werden, wenn die Funktion <span class="math notranslate nohighlight">\(f\)</span> n-mal stetig differenzierbar ist. Wenn das aber der Fall ist, dann wird noch ein Entwicklungspunkt <span class="math notranslate nohighlight">\(x_0\)</span> gewählt. Das Taylorpolynom <span class="math notranslate nohighlight">\(T_n\)</span> zu <span class="math notranslate nohighlight">\(f\)</span> vom Grad <span class="math notranslate nohighlight">\(n\)</span> am Entwicklungspunkt <span class="math notranslate nohighlight">\(x_0\)</span> ist dann:</p>
+<p>Ein <strong>Taylorpolynom</strong> zu einer Funktion <span class="math notranslate nohighlight">\(f\)</span> kann nur gebildet werden, wenn die
+Funktion <span class="math notranslate nohighlight">\(f\)</span> n-mal stetig differenzierbar ist. Wenn das aber der Fall ist, dann
+wird ein Entwicklungspunkt <span class="math notranslate nohighlight">\(x_0\)</span> gewählt. Das Taylorpolynom <span class="math notranslate nohighlight">\(T_n\)</span> zu <span class="math notranslate nohighlight">\(f\)</span> vom
+Grad <span class="math notranslate nohighlight">\(n\)</span> am Entwicklungspunkt <span class="math notranslate nohighlight">\(x_0\)</span> ist dann:</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
-T_n(x) &amp;=f(x_0) + \frac{f'(x_0)}{1!}(x-x_0)^1 + \frac{f''(x_0)}{2!}(x-x_0)^2 + \ldots \\
+T_n(x) &amp;=f(x_0) + \frac{f'(x_0)}{1!}(x-x_0)^1 + \frac{f''(x_0)}{2!}(x-x_0)^2 +\ldots\\
        &amp;=\sum_{k=0}^{n} \frac{f^{(k)}(x_0)}{k!} \cdot (x-x_0)^k.
 \end{align*}\]</div>
 <p>Dabei steht <span class="math notranslate nohighlight">\(k!\)</span> für die Fakultät der Zahl <span class="math notranslate nohighlight">\(k\)</span>.</p>
@@ -510,7 +513,7 @@ Funktion <span class="math notranslate nohighlight">\(f\)</span> und in die Able
 <li><p>Die Fakultäten ausrechnen.</p></li>
 <li><p>Alles in die Formel für das Taylorpolynom einsetzen.</p></li>
 </ol>
-<p>Probieren wir das an einem Beispiel aus. Die Funktion <span class="math notranslate nohighlight">\(f(x)=\sin(x)\)</span> soll durch
+<p>Wir veranschaulichen dies an einem Beispiel. Die Funktion <span class="math notranslate nohighlight">\(f(x)=\sin(x)\)</span> soll durch
 ein Taylorpolynom Grad 3 am Entwicklungspunkt <span class="math notranslate nohighlight">\(x_0=0\)</span> approximiert werden.</p>
 <p>Schritt 1: Wir halten fest, der Grad ist 3 (<span class="math notranslate nohighlight">\(n=3\)</span>), d.h. wir brauchen die
 ersten drei Ableitungen.</p>

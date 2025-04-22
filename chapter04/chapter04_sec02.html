@@ -34,7 +34,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=87e54e7c" />
     <link rel="stylesheet" type="text/css" href="../_static/jsxgraph.css?v=a7b027cb" />
@@ -466,15 +466,16 @@ ausreichend genaue Lösung erforderlich sind.</p>
 <h2>Lernziele<a class="headerlink" href="#lernziele" title="Link to this heading">#</a></h2>
 <div class="goals admonition">
 <p class="admonition-title">Lernziele</p>
-<p>Sie können mit dem Restglied der Taylorreihe den Fehler abschätzen, der entsteht, wenn eine Funktion durch ein Taylorpolynom vom Grad n ersetzt wird.</p>
+<p>Sie können mit dem Restglied der Taylorreihe den Fehler abschätzen, der
+entsteht, wenn eine Funktion durch ein Taylorpolynom vom Grad n ersetzt wird.</p>
 </div>
 </section>
 <section id="restglied-der-taylorreihe">
 <h2>Restglied der Taylorreihe<a class="headerlink" href="#restglied-der-taylorreihe" title="Link to this heading">#</a></h2>
-<p>Die Idee der Taylorreihe ist ja, eine komplizierte Funktion <span class="math notranslate nohighlight">\(f\)</span> durch eine
-Potenzreihe zu darzustellen. Allerdings ist das Aufsummieren von unendlich
-vielen Summanden für die Taylorreihe auch nicht praktikabel. Stattdessen wird in
-der Praxis die Taylorreihe ab einem bestimmten Grad abgebrochen. Oder anders
+<p>Die Idee der Taylorreihe ist, eine komplizierte Funktion <span class="math notranslate nohighlight">\(f\)</span> durch eine
+Potenzreihe darzustellen. Allerdings ist das Aufsummieren von unendlich vielen
+Summanden für die Taylorreihe auch nicht praktikabel. Stattdessen wird in der
+Praxis die Taylorreihe ab einem bestimmten Grad abgebrochen. Oder anders
 ausgedrückt, als Näherung für die Funktion <span class="math notranslate nohighlight">\(f\)</span> in der Umgebung eines
 Entwicklungspunktes <span class="math notranslate nohighlight">\(x_0\)</span> wird ein Taylorpolynom vom Grad <span class="math notranslate nohighlight">\(n\)</span> genutzt. Aber wie
 groß ist eigentlich der Fehler, wenn statt der Funktion <span class="math notranslate nohighlight">\(f\)</span> das Taylorpolynom
@@ -484,12 +485,14 @@ anderer Fehler ergeben. Der Rest ist also auch vom Grad des Taylorpolynoms
 abhängig. Wir fassen zusammen:</p>
 <div class="note admonition">
 <p class="admonition-title">Was ist … das Restglied der Taylorreihe?</p>
-<p>Wir nennen die Differenz zwischen der Funktion <span class="math notranslate nohighlight">\(f\)</span> und dem dazugehörigen Taylorpolynom <span class="math notranslate nohighlight">\(T_n\)</span> vom Grad <span class="math notranslate nohighlight">\(n\)</span> das Restglied <span class="math notranslate nohighlight">\(R_n\)</span>. In Formel ausgedrückt ist das Restglied</p>
+<p>Wir nennen die Differenz zwischen der Funktion <span class="math notranslate nohighlight">\(f\)</span> und dem dazugehörigen
+Taylorpolynom <span class="math notranslate nohighlight">\(T_n\)</span> vom Grad <span class="math notranslate nohighlight">\(n\)</span> das Restglied <span class="math notranslate nohighlight">\(R_n\)</span>. Als Formel ausgedrückt ist
+das Restglied</p>
 <div class="math notranslate nohighlight">
 \[R_n(x) = f(x) - T_n(x).\]</div>
 </div>
 <p>Jetzt haben wir dem Fehler zwar einen neuen Namen gegeben, Restglied, aber das
-hilft uns erstmal noch nicht weiter. Allerdings hat ein Mathematiker namens
+hilft uns zunächst nicht weiter. Allerdings hat ein Mathematiker namens
 <a class="reference external" href="https://de.wikipedia.org/wiki/Joseph-Louis_Lagrange">Joseph-Louis Lagrange</a>
 gezeigt, dass für das Restglied die folgende Formel gilt:</p>
 <div class="math notranslate nohighlight">
@@ -520,8 +523,8 @@ geht.</p>
     &amp;= \left| \frac{f^{(n+1)}(z)}{(n+1)!}\cdot(x-x_0)^{n+1} \right| \leq\\
     &amp;\leq \frac{M}{(n+1)!} \cdot |x-x_0|^{n+1}.
 \end{align*}\]</div>
-<p>Fast fertig, jetzt muss noch ein Maximum von <span class="math notranslate nohighlight">\(|x - x_0|\)</span> bestimmt werden. Wir
-nennen diese Zahl mal <span class="math notranslate nohighlight">\(d\)</span> (wie Distanz). Dann kann der Fehler, der Betrag des
+<p>Abschließend muss noch ein Maximum von <span class="math notranslate nohighlight">\(|x - x_0|\)</span> bestimmt werden. Wir
+nennen diese Zahl <span class="math notranslate nohighlight">\(d\)</span> (wie Distanz). Dann kann der Fehler, der Betrag des
 Restglieds des Taylorpolynoms, abgeschätzt werden als</p>
 <div class="math notranslate nohighlight">
 \[\left|R_n(x) \right| \leq  \frac{M}{(n+1)!}\cdot d^{n+1}.\]</div>
@@ -540,12 +543,13 @@ Abschnitt <a class="reference internal" href="chapter04_sec01.html#ref04-sec01-k
 das Taylorpolynom <span class="math notranslate nohighlight">\(T_{3}\)</span> berechnet als</p>
 <div class="math notranslate nohighlight">
 \[T_3(x) = x - \frac{1}{6}x^3.\]</div>
-<p>Die vierte Ableitung der Sinusfunktion ist wieder die Sinusfunktion selbst, also  <span class="math notranslate nohighlight">\(f^{(4)}(x) = \sin(x)\)</span>.</p>
+<p>Die vierte Ableitung der Sinusfunktion ist wieder die Sinusfunktion selbst, also
+<span class="math notranslate nohighlight">\(f^{(4)}(x) = \sin(x)\)</span>.</p>
 <p>Das Restglied ist also</p>
 <div class="math notranslate nohighlight">
 \[R_3(x) = \frac{\sin(z)}{(3+1)!}\cdot x^{3+1} = \frac{\sin(z)}{24}\cdot x^4.\]</div>
 <p>für eine Zwischenstelle <span class="math notranslate nohighlight">\(z\)</span> zwischen <span class="math notranslate nohighlight">\(0\)</span> und <span class="math notranslate nohighlight">\(x\)</span>. Wir wählen einen Winkel von
-<span class="math notranslate nohighlight">\(\alpha = 5^{\circ}\)</span>, was im Bogenmaß <span class="math notranslate nohighlight">\(\frac{\pi}{36}\approx 0.0873\)</span> rad
+<span class="math notranslate nohighlight">\(\alpha = 5^{\circ}\)</span>, was im Bogenmaß <span class="math notranslate nohighlight">\(\frac{\pi}{36}\approx 0.0873 \text{rad}\)</span>
 entspricht und untersuchen daher die Approximation an der Stelle <span class="math notranslate nohighlight">\(x = 0.0873\)</span>.
 Wenn wir die Sinusfunktion im Intervall <span class="math notranslate nohighlight">\([0, 0.0873]\)</span> zeichnen, so können wir
 ablesen, dass das Maximum gerade bei <span class="math notranslate nohighlight">\(x = 0.0873\)</span> erreicht wird, also ist</p>
@@ -555,12 +559,13 @@ ablesen, dass das Maximum gerade bei <span class="math notranslate nohighlight">
 rechten Intervallende, der am weitesten vom Entwicklungspunkt <span class="math notranslate nohighlight">\(x_0=0\)</span> entfernt
 ist. Also gilt</p>
 <div class="math notranslate nohighlight">
-\[R_3(0.0873) \leq \frac{0.0872}{24}\cdot 0.0873^4 = 2.11 \cdot 10^{-7}.\]</div>
+\[R_3(0.0873) \leq \frac{0.0872}{24}\cdot 0.0873^4 \approx 2.11 \cdot 10^{-7}.\]</div>
 <p>Dieser maximale Fehler ist in den meisten Fällen so klein, dass im Intervall
 <span class="math notranslate nohighlight">\([-5^{\circ}, + 5^{\circ}]\)</span> die Sinusfunktion auch durch</p>
 <div class="math notranslate nohighlight">
-\[\sin(x) \approx T_3(x) = x - \frac{1}{6}x^3.\]</div>
-<p>In vielen Fällen ist es sogar legitim, die Sinusfunktion nur durch das Taylorpolynom ersten Grades zu approximieren, also</p>
+\[\sin(x) \approx T_3(x) = x - \frac{1}{6}x^3\]</div>
+<p>ersetzt werdenn kann. In vielen Fällen ist es sogar legitim, die Sinusfunktion
+nur durch das Taylorpolynom ersten Grades zu approximieren, also</p>
 <div class="math notranslate nohighlight">
 \[\sin(x) \approx T_1(x) = x.\]</div>
 <p>Diese Approximation nennt sich
