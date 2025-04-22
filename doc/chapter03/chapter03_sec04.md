@@ -56,7 +56,7 @@ passiert, wenn $x = -r$ ist oder $x = +r$ gilt, ist nicht klar. Diese
 sogenannten Randpunkte des Konvergenzbereichs müssen gesondert untersucht
 werden.
 
-Betrachten wir nicht eine spezielle Potenzreihe sondern eine allgemeine
+Betrachten wir nicht eine spezielle Potenzreihe, sondern eine allgemeine
 Potenzreihe
 
 $$p(x) = \sum_{k=0}^{\infty} a_k (x - x_0)^k,$$
