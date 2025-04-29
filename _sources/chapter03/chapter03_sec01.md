@@ -2,7 +2,7 @@
 
 Reihen sind sehr spezielle Folgen. Falls Sie Ihr Wissen über Folgen auffrischen
 wollen, können Sie die Internetseite [Folgen, Grenzwerte und
-Stetigkeit](https://gramschs.github.io/book_mathe01/chapter09/chapter09_sec00.html)
+Stetigkeit](https://gramschs.github.io/book_mathe01/chapter09/sec00.html)
 aus der Mathematik 1 Vorlesung als Startpunkt nehmen.
 
 ## Lernziele
