@@ -53,8 +53,8 @@ Sinusfunktion mit einer Periode $p = 2\pi$
 ```
 
 Wir werden in den nächsten Kapiteln die Sinus- und Kosinusfunktionen
-modifizieren. Im folgenden Video werden die verschiedenen Möglichkeiten, die
-Sinusfunktion zu transformieren wiederholt. Für die Kosinusfunktion gelten die
+modifizieren. Im folgenden Video werden verschiedene Möglichkeiten vorgestellt,
+um die Sinusfunktion zu transformieren. Für die Kosinusfunktion gelten die
 gleichen Transformationen analog.
 
 ```{dropdown} Video "Sinusfunktion Transformation" von Daniel Jung
@@ -100,8 +100,8 @@ Beispiel einer Rechteckfunktion: das Periodenintervall $[0,T]$ ist gelb markiert
 ```
 
 Als letztes wird der Funktionsgraph periodisch wiederholt. Damit ist gemeint,
-dass das gelb markierte Gebiet links und rechts immer wieder drangehängt wird.
-Dadruch entsteht eine neue Funktion, deren Funktionsgraph in der nächsten
+dass das gelb markierte Gebiet links und rechts immer wieder angefügt wird.
+Dadurch entsteht eine neue Funktion, deren Funktionsgraph in der nächsten
 Abbildung zu sehen ist.
 
 ```{figure} pics/plot_rechteck_periodisch.png
@@ -121,7 +121,7 @@ digitale Prozessoren und Controller.
 Die Dreiecksfunktion ist eine periodische Funktion, die ebenfalls in der
 Signalverarbeitung häufig vorkommt. Sie hat eine Periode $T$ und oszilliert
 zwischen zwei Werten $c_1$ und $c_2$, wobei der Anstieg von $c_1$ auf $c_2$
-linear ist und der Abfall von $c_2$ auf $c_1$ ebenfalls linear ist.
+und der Abfall von $c_2$ auf $c_1$ jeweils linear ist.
 
 ```{figure} pics/plot_dreieck.png
 ---
@@ -135,8 +135,8 @@ Beispiel einer Dreiecksfunktion, die zwischen $0$ und $1$ oszilliert und die Per
 
 Die Sägezahnfunktion ist eine weitere periodische Funktion, die in der
 Signalverarbeitung häufig verwendet wird. Sie hat eine Periode $T$ und
-oszilliert zwischen $-1$ und $1$, wobei der Anstieg von $-1$ auf $1$ linear ist
-und der Abfall von $1$ auf $-1$ plötzlich stattfindet.
+oszilliert zwischen $-1$ und $1$, mit einem linearen Anstieg von von $-1$ auf
+$1$ und einem plötzlichen Abfall von $1$ auf $-1$.
 
 ```{figure} pics/plot_saegezahn.png
 ---
@@ -145,3 +145,12 @@ name: chap05_plot_saegezahn
 ---
 Beispiel einer Sägezahnfunktion, die zwischen $-1$ und $1$ oszilliert und die Periode $T = 2$ hat
 ```
+
+## Zusammenfassung und Ausblick
+
+In diesem Kapitel haben wir gelernt, was periodische Funktionen sind. Wir haben
+zentrale Beispiele wie Sinus-, Kosinus-, Rechteck-, Dreieck- und
+Sägezahnfunktionen kennengelernt und gesehen, wie sie definiert sind und
+grafisch dargestellt werden. Im nächsten Kapitel werden wir uns mit der
+Annäherung von periodischen Funktionen durch die sogenannten Fourierreihen
+beschäftigen.
