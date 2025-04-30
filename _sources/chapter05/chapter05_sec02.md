@@ -1,10 +1,10 @@
 # 5.2 Fourierreihen
 
 Periodische Vorgänge gibt es sowohl in der Natur als auch in der Technik. In der
-Technik gehören insbesondere Drehbewegungen dazu. Es ist nicht sinnvoll,
-periodische Funktionen durch Potenzreihen bzw. Taylorreihen zu approximieren.
-Stattdessen werden wir periodische Funktionen als Überlagerung von Sinus- und
-Kosinus-Funktionen approximieren, also sogenannte **Fourierreihen**.
+Technik gehören insbesondere Drehbewegungen dazu. Für periodische Funktionen
+sind Potenz- oder Taylorreihen ungeeignet, da sie die Periodizität nicht
+abbilden. Stattdessen werden wir periodische Funktionen als Überlagerung von
+Sinus- und Kosinus-Funktionen approximieren, als sogenannte **Fourierreihen**.
 
 Die Idee der Fourierreihe wird in dem folgenden Video erklärt.
 
@@ -23,18 +23,20 @@ Die Idee der Fourierreihe wird in dem folgenden Video erklärt.
 
 ## Trigonometrische Polynome
 
-Bevor uns dem Thema Fourierreihe widmen, klären wir erst einmal den Begriff
-**trigonometrisches Polynom**. Wir haben ja bereits im letzten Kapitel die
-beiden wichtigsten periodischen Funktionen kennengelernt: Sinus- und
-Kosinusfunktion. Beide haben die Periode $2\pi$. Als erstes wollen wir Sinus
-und Kosinus so umschreiben, dass sie nicht die Periode $2\pi$ haben, sondern
-eine beliebige Periode, die als $T$ abgekürzt wird. Das klappt mit dem folgenden
-Trick. Wir nehmen nicht $\sin(x)$, sondern $\sin(\omega \cdot t)$ mit
+Bevor wir uns dem Thema Fourierreihe widmen, klären wir erst einmal den Begriff
+**trigonometrisches Polynom**. Wir haben bereits im letzten Kapitel die beiden
+wichtigsten periodischen Funktionen kennengelernt: Sinus- und Kosinusfunktion.
+Beide haben die Periode $2\pi$. Als Erstes wollen wir die Sinus- und
+Kosinusfunktion so umschreiben, dass sie nicht die feste Periode $2\pi$ haben,
+sondern eine *beliebige Periode* $T$. Dies erreichen wir, indem wir das Argument
+der Funktion durch $\omega\cdot t$ ersetzen, wobei
 
-$$\omega = \frac{2\pi}{T}.$$
+$$\omega = \frac{2\pi}{T}$$
 
-Wenn jetzt für $t$ die Periode $T$ eingesetzt wird, ist das das Gleiche wie
-$2\pi$. Und $\omega = 1$ ist die normale Sinus-/Kosinusfunktion.
+die sogenannte **Kreisfrequenz** ist. Damit erhält die Funktion
+$\sin(\omega\cdot t)$ die gewünschte Periode $T$, denn für $t=T$ ergibt sich
+$\omega t = 2\pi$, also ein vollständiger Umlauf. Im Spezialfall $T = 2\pi$ ist
+$\omega = 1$, so dass man zur gewohnten Sinus- und Kosinusfunktion zurückkehrt.
 
 Außerdem können wir die Sinus-/Kosinusfunktionen mit doppelter, dreifacher,
 vierfacher ... Frequenz miteinander kombinieren, z.B. so:
@@ -55,9 +57,9 @@ Hierbei sind $a_0$, $a_1$, $b_1$, $a_2$, $b_2$, ..., $a_n$, $b_n$ Konstanten, di
 müssen, um die Funktion f(x) vollständig zu beschreiben.
 ```
 
-Und warum nehmen wir $\frac{a_0}{2}$ und nicht einfach $a_0$? Das hat etwas mit
-komplexen trigonometrischen Polynomen zu tun, die wir in dieser Vorlesung aber
-nicht mehr behandeln. Dennoch halten wir uns an dieser Stelle an die übliche
+Und warum nehmen wir $\frac{a_0}{2}$ und nicht einfach $a_0$? Diese Darstellung
+kommt von den komplexen trigonometrischen Polynomen, die wir in dieser Vorlesung
+aber nicht behandeln. Dennoch halten wir uns an dieser Stelle an die übliche
 Schreibweise.
 
 ```{dropdown} Video "Vorbereitung Fourierreihe Sinus/Kosinus" von Daniel Jung
@@ -68,10 +70,8 @@ Schreibweise.
 
 Die Koeffizienten $a_k$ und $b_k$, also die Vorfaktoren vor den Sinus- und den
 Kosinusfunktionen im trigonometrischen Polynom heißen **Fourierkoeffizienten**.
-Wenn wir einfach irgendwelche Zaheln dafür wählen, ergibt sich dadurch eine
-Funktion. Wenn wir aber den umgelehrten Weg gehen wollen, dass die Funktion $f$
-durch das trigonometrische Polynom angenähert werden soll, dann müssen wir die
-Fourierkoeffizienten nach der folgenden Formel berechnen.
+Wenn die Funktion $f$ durch das trigonometrische Polynom angenähert werden soll,
+dann müssen wir die Fourierkoeffizienten nach der folgenden Formel berechnen.
 
 ```{admonition} Wie werden die Fourierkoeffizienten berechnet?
 :class: note
@@ -93,14 +93,15 @@ ist es nicht ganz so einfach. Nur wenn die sogenannten **Dirichlet-Bedingungen**
 erfüllt sind, konvergiert das trigonometrische Polynom für $n \to \infty$ gegen
 die periodische Funktion $f$. Die Dirichlet-Bedingungen lauten:
 
-1. Das Periodenintervall lässt sich in Teilintervall unterteilen, in denen die
+1. Das Periodenintervall lässt sich in Teilintervalle unterteilen, in denen die
    Funktion $f$ stetig und monoton ist. Dabei darf es höchstens endlich viele
    Teilintervalle geben.
 2. Bei den Unstetigkeitsstellen existiert sowohl der linksseitige als auch der
    rechtsseitige Grenzwert.
 
-Bei allen praktisch vorkommenen Beispielen im Maschinenbau ist dies aber der
-Fall. Wenn der Grad $n$ gegen unendlich geht, nennen wir die Reihe Fourierreihe.
+Bei allen praktisch vorkommenden Beispielen im Maschinenbau ist dies aber der
+Fall. Wenn der Grad $n$ gegen unendlich geht, sprechen wir von einer
+Fourierreihe.
 
 ```{admonition} Was ist ... die Fourierreihe?
 :class: note
@@ -113,3 +114,13 @@ $$f(t) = \frac{a_0}{2} + \sum_{k=1}^{\infty} \left(a_k \cos(k \omega t) + b_k
 
 Diese Funktionenreihe nennt man **Fourierreihe**.
 ```
+
+## Zusammenfassung und Ausblick
+
+In diesem Kapitel haben wir gelernt, dass periodische Funktionen mithilfe von
+Fourierreihen dargestellt werden können, also als Summe von Sinus- und
+Kosinusfunktionen mit unterschiedlicher Frequenz. Dazu berechnen wir sogenannte
+Fourierkoeffizienten, die bestimmen, wie stark jede Schwingung zur
+Gesamtfunktion beiträgt. Unter bestimmten Bedingungen (Dirichlet-Kriterien)
+konvergiert diese Summenformel gegen die ursprüngliche Funktion. Im nächsten
+Kapitel werden wir bekannte Beispiele zu Fourierreihen durcharbeiten.

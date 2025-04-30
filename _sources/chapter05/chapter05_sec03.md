@@ -63,7 +63,7 @@ Nun berechnen wir die Fourierkoeffizienten $a_n$ für $n \geq 1$. Dabei benötig
 wir zuerst die Frequenz $\omega$. Da wir als Periode $T=2\pi$ gewählt haben,
 gilt
 
-$$\omega = \frac{T}{2\pi} = \frac{2\pi}{2\pi}=1.$$
+$$\omega = \frac{2\pi}{T} = \frac{2\pi}{2\pi}=1.$$
 
 Setzen wir $T=2\pi$ und $\omega=1$ in die allgemeine Formel der
 Fourierkoeffizienten $a_n$ ein und verwenden wir wiederum die Aufteilung in die
@@ -84,7 +84,7 @@ in die Sinusfunktion ein, ist das Ergebnis Null, also
 $$\sin(0) = \sin(n\cdot \pi) = 0.$$
 
 Damit sind insgesamt alle Fourierkoeffizienten $a_n = 0$. Im nächsten Kapitel
-werden wir lernen, wir dieses Ergebnis schneller hätten ermitteln können.
+werden wir lernen, wie wir dieses Ergebnis schneller hätten ermitteln können.
 
 Nun berechnen wir die Fourierkoeffizienten
 
@@ -134,8 +134,8 @@ Es wäre schön, eine kompaktere Angabe für die Fourierreihe zu benutzen. Dazu
 benutzen wir den Trick, die ungeraden Zahlen als $2k-1$ darzustellen mit
 $k\in\mathbb{N}$. Dann lautet die Fourierreihe nämlich
 
-$$f(t) = \sum_{k=1}^{\infty}\frac{4}{k\cdot\pi}\sin(k t) =
-\frac{4}{\pi}\sum_{k=1}^{\infty}\frac{\sin(kt)}{k}.$$
+$$f(t) = \sum_{k=1}^{\infty}\frac{4}{(2k-1)\cdot\pi}\sin((2k-1) t) =
+\frac{4}{\pi}\sum_{k=1}^{\infty}\frac{\sin((2k-1)t)}{2k-1}.$$
 
 In dem folgenden Video wird das gleiche Beispiel vorgerechnet.
 
@@ -154,12 +154,21 @@ title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; cli
 
 ## Die Sägezahnfunktion
 
+Die Berechnungen der Fourierreihe der Sägezahnfunktion sind ähnlich lang wie das
+obige Beispiel. Daher verzichten wir hier auf die textliche Erklärung. Bitte
+schauen Sie sich das folgende Video an, wo die Fourierreihe detailliert
+vorgerechnet wird.
+
 ```{dropdown} Video "Fourierreihe Sägezahnfunktion" von Sciencebarbie
 <iframe width="560" height="315" src="https://www.youtube.com/embed/wGL_Cxorbac"
 title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 ```
 
 ## Die Dreiecksfunktion
+
+Auch hier verzichten wir auf die textliche Erklärung. Bitte schauen Sie sich das
+folgende Video an, wo die Fourierreihe der Dreiecksfunktion ausführlich
+erläutert wird.
 
 ```{dropdown} Video "Fourierreihe Dreiecksimpuls" von Sciencebarbie
 <iframe width="560" height="315" src="https://www.youtube.com/embed/-I0YqzFRldA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
@@ -170,6 +179,6 @@ title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; cli
 Mit den Fourierreihen der Rechteck-, Sägezahn- und Dreieckschwingung haben wir
 drei bekannte Beispiele für die Anwendung von Fourierreihen kennengelernt. Bei
 der Berechnung der Fourierkoeffizienten der Rechteckschwingung haben wir
-festgestellt, dass die Fourierkoeffizienten des Kosinusanteils Null sind. Das
+festgestellt, dass alle Fourierkoeffizienten des Kosinusanteils Null sind. Das
 liegt daran, dass in diesem Beispiel die betrachtete Funktion ungerade war. Das
 werden wir im nächsten Kapitel näher untersuchen.

@@ -34,7 +34,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=87e54e7c" />
     <link rel="stylesheet" type="text/css" href="../_static/jsxgraph.css?v=a7b027cb" />
@@ -442,6 +442,7 @@
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#trigonometrische-polynome">Trigonometrische Polynome</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wie-findet-man-zu-einer-funktion-das-trigonometrische-polynom">Wie findet man zu einer Funktion das trigonometrische Polynom?</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fourierreihe">Fourierreihe</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zusammenfassung-und-ausblick">Zusammenfassung und Ausblick</a></li>
 </ul>
             </nav>
         </div>
@@ -456,10 +457,10 @@
   <section class="tex2jax_ignore mathjax_ignore" id="fourierreihen">
 <h1>5.2 Fourierreihen<a class="headerlink" href="#fourierreihen" title="Link to this heading">#</a></h1>
 <p>Periodische Vorgänge gibt es sowohl in der Natur als auch in der Technik. In der
-Technik gehören insbesondere Drehbewegungen dazu. Es ist nicht sinnvoll,
-periodische Funktionen durch Potenzreihen bzw. Taylorreihen zu approximieren.
-Stattdessen werden wir periodische Funktionen als Überlagerung von Sinus- und
-Kosinus-Funktionen approximieren, also sogenannte <strong>Fourierreihen</strong>.</p>
+Technik gehören insbesondere Drehbewegungen dazu. Für periodische Funktionen
+sind Potenz- oder Taylorreihen ungeeignet, da sie die Periodizität nicht
+abbilden. Stattdessen werden wir periodische Funktionen als Überlagerung von
+Sinus- und Kosinus-Funktionen approximieren, als sogenannte <strong>Fourierreihen</strong>.</p>
 <p>Die Idee der Fourierreihe wird in dem folgenden Video erklärt.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
@@ -479,17 +480,19 @@ Kosinus-Funktionen approximieren, also sogenannte <strong>Fourierreihen</strong>
 </section>
 <section id="trigonometrische-polynome">
 <h2>Trigonometrische Polynome<a class="headerlink" href="#trigonometrische-polynome" title="Link to this heading">#</a></h2>
-<p>Bevor uns dem Thema Fourierreihe widmen, klären wir erst einmal den Begriff
-<strong>trigonometrisches Polynom</strong>. Wir haben ja bereits im letzten Kapitel die
-beiden wichtigsten periodischen Funktionen kennengelernt: Sinus- und
-Kosinusfunktion. Beide haben die Periode <span class="math notranslate nohighlight">\(2\pi\)</span>. Als erstes wollen wir Sinus
-und Kosinus so umschreiben, dass sie nicht die Periode <span class="math notranslate nohighlight">\(2\pi\)</span> haben, sondern
-eine beliebige Periode, die als <span class="math notranslate nohighlight">\(T\)</span> abgekürzt wird. Das klappt mit dem folgenden
-Trick. Wir nehmen nicht <span class="math notranslate nohighlight">\(\sin(x)\)</span>, sondern <span class="math notranslate nohighlight">\(\sin(\omega \cdot t)\)</span> mit</p>
+<p>Bevor wir uns dem Thema Fourierreihe widmen, klären wir erst einmal den Begriff
+<strong>trigonometrisches Polynom</strong>. Wir haben bereits im letzten Kapitel die beiden
+wichtigsten periodischen Funktionen kennengelernt: Sinus- und Kosinusfunktion.
+Beide haben die Periode <span class="math notranslate nohighlight">\(2\pi\)</span>. Als Erstes wollen wir die Sinus- und
+Kosinusfunktion so umschreiben, dass sie nicht die feste Periode <span class="math notranslate nohighlight">\(2\pi\)</span> haben,
+sondern eine <em>beliebige Periode</em> <span class="math notranslate nohighlight">\(T\)</span>. Dies erreichen wir, indem wir das Argument
+der Funktion durch <span class="math notranslate nohighlight">\(\omega\cdot t\)</span> ersetzen, wobei</p>
 <div class="math notranslate nohighlight">
-\[\omega = \frac{2\pi}{T}.\]</div>
-<p>Wenn jetzt für <span class="math notranslate nohighlight">\(t\)</span> die Periode <span class="math notranslate nohighlight">\(T\)</span> eingesetzt wird, ist das das Gleiche wie
-<span class="math notranslate nohighlight">\(2\pi\)</span>. Und <span class="math notranslate nohighlight">\(\omega = 1\)</span> ist die normale Sinus-/Kosinusfunktion.</p>
+\[\omega = \frac{2\pi}{T}\]</div>
+<p>die sogenannte <strong>Kreisfrequenz</strong> ist. Damit erhält die Funktion
+<span class="math notranslate nohighlight">\(\sin(\omega\cdot t)\)</span> die gewünschte Periode <span class="math notranslate nohighlight">\(T\)</span>, denn für <span class="math notranslate nohighlight">\(t=T\)</span> ergibt sich
+<span class="math notranslate nohighlight">\(\omega t = 2\pi\)</span>, also ein vollständiger Umlauf. Im Spezialfall <span class="math notranslate nohighlight">\(T = 2\pi\)</span> ist
+<span class="math notranslate nohighlight">\(\omega = 1\)</span>, so dass man zur gewohnten Sinus- und Kosinusfunktion zurückkehrt.</p>
 <p>Außerdem können wir die Sinus-/Kosinusfunktionen mit doppelter, dreifacher,
 vierfacher … Frequenz miteinander kombinieren, z.B. so:</p>
 <div class="math notranslate nohighlight">
@@ -505,9 +508,9 @@ genannt.</p>
 <p>Hierbei sind <span class="math notranslate nohighlight">\(a_0\)</span>, <span class="math notranslate nohighlight">\(a_1\)</span>, <span class="math notranslate nohighlight">\(b_1\)</span>, <span class="math notranslate nohighlight">\(a_2\)</span>, <span class="math notranslate nohighlight">\(b_2\)</span>, …, <span class="math notranslate nohighlight">\(a_n\)</span>, <span class="math notranslate nohighlight">\(b_n\)</span> Konstanten, die bestimmt werden
 müssen, um die Funktion f(x) vollständig zu beschreiben.</p>
 </div>
-<p>Und warum nehmen wir <span class="math notranslate nohighlight">\(\frac{a_0}{2}\)</span> und nicht einfach <span class="math notranslate nohighlight">\(a_0\)</span>? Das hat etwas mit
-komplexen trigonometrischen Polynomen zu tun, die wir in dieser Vorlesung aber
-nicht mehr behandeln. Dennoch halten wir uns an dieser Stelle an die übliche
+<p>Und warum nehmen wir <span class="math notranslate nohighlight">\(\frac{a_0}{2}\)</span> und nicht einfach <span class="math notranslate nohighlight">\(a_0\)</span>? Diese Darstellung
+kommt von den komplexen trigonometrischen Polynomen, die wir in dieser Vorlesung
+aber nicht behandeln. Dennoch halten wir uns an dieser Stelle an die übliche
 Schreibweise.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
@@ -519,10 +522,8 @@ Schreibweise.</p>
 <h2>Wie findet man zu einer Funktion das trigonometrische Polynom?<a class="headerlink" href="#wie-findet-man-zu-einer-funktion-das-trigonometrische-polynom" title="Link to this heading">#</a></h2>
 <p>Die Koeffizienten <span class="math notranslate nohighlight">\(a_k\)</span> und <span class="math notranslate nohighlight">\(b_k\)</span>, also die Vorfaktoren vor den Sinus- und den
 Kosinusfunktionen im trigonometrischen Polynom heißen <strong>Fourierkoeffizienten</strong>.
-Wenn wir einfach irgendwelche Zaheln dafür wählen, ergibt sich dadurch eine
-Funktion. Wenn wir aber den umgelehrten Weg gehen wollen, dass die Funktion <span class="math notranslate nohighlight">\(f\)</span>
-durch das trigonometrische Polynom angenähert werden soll, dann müssen wir die
-Fourierkoeffizienten nach der folgenden Formel berechnen.</p>
+Wenn die Funktion <span class="math notranslate nohighlight">\(f\)</span> durch das trigonometrische Polynom angenähert werden soll,
+dann müssen wir die Fourierkoeffizienten nach der folgenden Formel berechnen.</p>
 <div class="note admonition">
 <p class="admonition-title">Wie werden die Fourierkoeffizienten berechnet?</p>
 <p>Wir starten mit einer gegebenen Funktion <span class="math notranslate nohighlight">\(f\)</span>, die die Periode <span class="math notranslate nohighlight">\(T\)</span> und die
@@ -543,14 +544,15 @@ ist es nicht ganz so einfach. Nur wenn die sogenannten <strong>Dirichlet-Bedingu
 erfüllt sind, konvergiert das trigonometrische Polynom für <span class="math notranslate nohighlight">\(n \to \infty\)</span> gegen
 die periodische Funktion <span class="math notranslate nohighlight">\(f\)</span>. Die Dirichlet-Bedingungen lauten:</p>
 <ol class="arabic simple">
-<li><p>Das Periodenintervall lässt sich in Teilintervall unterteilen, in denen die
+<li><p>Das Periodenintervall lässt sich in Teilintervalle unterteilen, in denen die
 Funktion <span class="math notranslate nohighlight">\(f\)</span> stetig und monoton ist. Dabei darf es höchstens endlich viele
 Teilintervalle geben.</p></li>
 <li><p>Bei den Unstetigkeitsstellen existiert sowohl der linksseitige als auch der
 rechtsseitige Grenzwert.</p></li>
 </ol>
-<p>Bei allen praktisch vorkommenen Beispielen im Maschinenbau ist dies aber der
-Fall. Wenn der Grad <span class="math notranslate nohighlight">\(n\)</span> gegen unendlich geht, nennen wir die Reihe Fourierreihe.</p>
+<p>Bei allen praktisch vorkommenden Beispielen im Maschinenbau ist dies aber der
+Fall. Wenn der Grad <span class="math notranslate nohighlight">\(n\)</span> gegen unendlich geht, sprechen wir von einer
+Fourierreihe.</p>
 <div class="note admonition">
 <p class="admonition-title">Was ist … die Fourierreihe?</p>
 <p>Die meisten Funktionen <span class="math notranslate nohighlight">\(f\)</span> mit der Periode <span class="math notranslate nohighlight">\(T\)</span> und der Kreisfrequenz <span class="math notranslate nohighlight">\(\omega\)</span>
@@ -561,6 +563,16 @@ mit den Fourierkoeffizienten <span class="math notranslate nohighlight">\(a_k\)<
 \sin(k \omega t) \right).\]</div>
 <p>Diese Funktionenreihe nennt man <strong>Fourierreihe</strong>.</p>
 </div>
+</section>
+<section id="zusammenfassung-und-ausblick">
+<h2>Zusammenfassung und Ausblick<a class="headerlink" href="#zusammenfassung-und-ausblick" title="Link to this heading">#</a></h2>
+<p>In diesem Kapitel haben wir gelernt, dass periodische Funktionen mithilfe von
+Fourierreihen dargestellt werden können, also als Summe von Sinus- und
+Kosinusfunktionen mit unterschiedlicher Frequenz. Dazu berechnen wir sogenannte
+Fourierkoeffizienten, die bestimmen, wie stark jede Schwingung zur
+Gesamtfunktion beiträgt. Unter bestimmten Bedingungen (Dirichlet-Kriterien)
+konvergiert diese Summenformel gegen die ursprüngliche Funktion. Im nächsten
+Kapitel werden wir bekannte Beispiele zu Fourierreihen durcharbeiten.</p>
 </section>
 </section>
 
@@ -633,6 +645,7 @@ mit den Fourierkoeffizienten <span class="math notranslate nohighlight">\(a_k\)<
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#trigonometrische-polynome">Trigonometrische Polynome</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wie-findet-man-zu-einer-funktion-das-trigonometrische-polynom">Wie findet man zu einer Funktion das trigonometrische Polynom?</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fourierreihe">Fourierreihe</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zusammenfassung-und-ausblick">Zusammenfassung und Ausblick</a></li>
 </ul>
   </nav></div>
 

@@ -34,7 +34,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=87e54e7c" />
     <link rel="stylesheet" type="text/css" href="../_static/jsxgraph.css?v=a7b027cb" />
@@ -442,6 +442,7 @@
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gerade-und-ungerade-funktionen">Gerade und ungerade Funktionen</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#addition">Addition</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ableitung">Ableitung</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zusammenfassung-und-ausblick">Zusammenfassung und Ausblick</a></li>
 </ul>
             </nav>
         </div>
@@ -455,7 +456,10 @@
                   
   <section class="tex2jax_ignore mathjax_ignore" id="rechenregeln-fourierreihen">
 <h1>5.4 Rechenregeln Fourierreihen<a class="headerlink" href="#rechenregeln-fourierreihen" title="Link to this heading">#</a></h1>
-<p>Zuletzt betrachten wir noch einige Eigenschaften von Fourierreihen.</p>
+<p>Viele praktische Funktionen haben Symmetrien, die sich bei der
+Fourierentwicklung ausnutzen lassen. Daher beschäftigen wir uns in diesem
+Kapitel mit Fourierreihen von geraden und ungeraden Funktionen. Abschließend
+betrachten wir einige wichtige Rechenregeln für Fourierreihen.</p>
 <section id="lernziele">
 <h2>Lernziele<a class="headerlink" href="#lernziele" title="Link to this heading">#</a></h2>
 <div class="goals admonition">
@@ -473,20 +477,21 @@ Fourierkoeffizienten vereinfacht.</p></li>
 <p>Wenn die Funktion <span class="math notranslate nohighlight">\(f\)</span>, zu der eine Fourierreihe gesucht ist, bestimmte
 Symmetrieeigenschaften hat, kann sich dadurch die Berechnung der
 Fourierkoeffizienten vereinfachen.</p>
-<p>Ist die Funktion <span class="math notranslate nohighlight">\(f\)</span> gerade, gilt also <span class="math notranslate nohighlight">\(f(t) = f(-t)\)</span>, dann fallen alle Terme
-mit der Sinusfunktion weg (die ja ungerade ist). Also gilt automatisch <span class="math notranslate nohighlight">\(b_k =
-0\)</span>. Außerdem ist dann auch das Produkt <span class="math notranslate nohighlight">\(f(t)\cdot \cos(k \omega t)\)</span> eine gerade
-Funktion, da die Kosinusfunktion ebenfalls gerade ist. Wir brauchen nicht von
-<span class="math notranslate nohighlight">\(-T/2\)</span> bis <span class="math notranslate nohighlight">\(T/2\)</span> integrieren, sondern können auch nur von <span class="math notranslate nohighlight">\(0\)</span> bis <span class="math notranslate nohighlight">\(T/2\)</span>
-integrieren und das Ergebnis verdoppeln. Damit erhalten wir für <strong>gerade
-Funktionen</strong> <span class="math notranslate nohighlight">\(f\)</span> die folgende Fourierreihe:</p>
+<p>Ist die Funktion <span class="math notranslate nohighlight">\(f\)</span> <strong>gerade</strong>, gilt also <span class="math notranslate nohighlight">\(f(t) = f(-t)\)</span>, dann fallen alle
+Terme mit der Sinusfunktion weg (die ja ungerade ist). Also gilt automatisch
+<span class="math notranslate nohighlight">\(b_k = 0\)</span>. Außerdem ist dann auch das Produkt <span class="math notranslate nohighlight">\(f(t)\cdot \cos(k \omega t)\)</span> eine
+gerade Funktion, da die Kosinusfunktion ebenfalls gerade ist. Wir brauchen nicht
+von <span class="math notranslate nohighlight">\(-T/2\)</span> bis <span class="math notranslate nohighlight">\(T/2\)</span> integrieren, sondern können auch nur von <span class="math notranslate nohighlight">\(0\)</span> bis <span class="math notranslate nohighlight">\(T/2\)</span>
+integrieren und das Ergebnis verdoppeln. Damit erhalten wir für gerade
+Funktionen <span class="math notranslate nohighlight">\(f\)</span> die folgende Fourierreihe:</p>
 <div class="math notranslate nohighlight">
 \[f(t) = \frac{a_0}{2} + \sum_{k=1}^{\infty} a_k \cos(k \omega t)\]</div>
 <p>mit den Fourierkoeffizienten</p>
 <div class="math notranslate nohighlight">
 \[a_k = \frac{4}{T}\int_{0}^{T/2} f(t) \cos(k \omega t) \, dt.\]</div>
-<p>Für <strong>ungerade Funktionen</strong> <span class="math notranslate nohighlight">\(f\)</span>, also solche für die <span class="math notranslate nohighlight">\(f(t) = -f(-t)\)</span> gilt,
-fallen die <span class="math notranslate nohighlight">\(a_k\)</span> weg. Es bleibt eine reine Sinusreihe übrig.</p>
+<p>Für <strong>ungerade</strong> Funktionen <span class="math notranslate nohighlight">\(f\)</span>, also solche für die <span class="math notranslate nohighlight">\(f(t) = -f(-t)\)</span> gilt,
+entfallen alle Kosinus-Koeffizienten <span class="math notranslate nohighlight">\(a_k\)</span>. Es bleibt eine reine Sinusreihe
+übrig.</p>
 <div class="math notranslate nohighlight">
 \[f(t) = \sum_{k=1}^{\infty} b_k \sin(k \omega t)\]</div>
 <p>mit</p>
@@ -494,7 +499,7 @@ fallen die <span class="math notranslate nohighlight">\(a_k\)</span> weg. Es ble
 \[b_k = \frac{4}{T} \int_{0}^{T/2} f(t) \sin(k \omega t) \, dt.\]</div>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
-<span class="sd-summary-text">Vide “Fourierreihe: gerade/ungerade” von Daniel Jung</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<span class="sd-summary-text">Video “Fourierreihe: gerade/ungerade” von Daniel Jung</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/7Uig_X9Lg3s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </div>
 </details></section>
@@ -502,17 +507,17 @@ fallen die <span class="math notranslate nohighlight">\(a_k\)</span> weg. Es ble
 <h2>Addition<a class="headerlink" href="#addition" title="Link to this heading">#</a></h2>
 <p>Wenn zwei Funktionen <span class="math notranslate nohighlight">\(f\)</span> und <span class="math notranslate nohighlight">\(g\)</span> die gleiche Periode <span class="math notranslate nohighlight">\(T\)</span> haben, so hat die Summe
 der beiden Funktionen ebenfalls wieder die Periode <span class="math notranslate nohighlight">\(T\)</span>. Liegen nun für beide
-Funktionen Fourierreihen vor, so dürfen wir auch einfach die
-Fourierkoeffizienten addieren, um eine Approximation der Funktion <span class="math notranslate nohighlight">\(f+g\)</span> zu
-erhalten.</p>
+Funktionen Fourierreihen vor, können wir die Fourierkoeffizienten addieren, um
+eine Approximation der Funktion <span class="math notranslate nohighlight">\(f+g\)</span> zu erhalten.</p>
 </section>
 <section id="ableitung">
 <h2>Ableitung<a class="headerlink" href="#ableitung" title="Link to this heading">#</a></h2>
-<p>Wenn eine Funktion <span class="math notranslate nohighlight">\(f\)</span> durch eine Fourierreihe dargestellt wird, also</p>
+<p>Wenn eine Funktion <span class="math notranslate nohighlight">\(f\)</span> durch eine Fourierreihe dargestellt werden kann, also</p>
 <div class="math notranslate nohighlight">
 \[f(t) = \frac{a_0}{2} + \sum_{k=1}^{\infty} \left(a_k \cos(k \omega t) + b_k
 \sin(k \omega t) \right)\]</div>
-<p>gilt, dann ist ihre Ableitung wieder eine Fourierreihe.</p>
+<p>gilt, dann ist ihre Ableitung wieder eine Fourierreihe, sofern die ursprüngliche
+Funktion differenzierbar ist:</p>
 <div class="math notranslate nohighlight">
 \[f'(t) = \sum_{k=1}^{\infty} \left(\alpha_k \cos(k \omega t) + \beta_k
 \sin(k \omega t) \right).\]</div>
@@ -524,6 +529,14 @@ erhalten.</p>
 \beta_k  &amp;= -a_k \cdot k \cdot \omega
 \end{align*}\]</div>
 <p>berechnet werden.</p>
+</section>
+<section id="zusammenfassung-und-ausblick">
+<h2>Zusammenfassung und Ausblick<a class="headerlink" href="#zusammenfassung-und-ausblick" title="Link to this heading">#</a></h2>
+<p>In diesem Kapitel haben wir gelernt, dass sich Fourierreihen bei geraden oder
+ungeraden Funktionen vereinfachen. Außerdem haben wir gesehen, dass sich
+Fourierreihen einfach addieren und ableiten lassen. Im nächsten Kapitel
+verlassen wir das Themengebiet Funktionenreihen (Potenz-, Taylor- und
+Fourierreihen) und wenden uns der mehrdimensionalen Differentialrechnung zu.</p>
 </section>
 </section>
 
@@ -596,6 +609,7 @@ erhalten.</p>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gerade-und-ungerade-funktionen">Gerade und ungerade Funktionen</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#addition">Addition</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ableitung">Ableitung</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zusammenfassung-und-ausblick">Zusammenfassung und Ausblick</a></li>
 </ul>
   </nav></div>
 
