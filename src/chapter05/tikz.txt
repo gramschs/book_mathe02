@@ -1,0 +1,50 @@
+\documentclass{article}
+\usepackage{pgfplots}
+\usepackage{amsmath}
+\pgfplotsset{compat=1.18}
+
+\begin{document}
+
+\begin{center}
+\begin{tikzpicture}
+  \begin{axis}[
+    axis lines=middle,
+    xlabel={$t$},
+    ylabel={$f(t)$},
+    samples=200,
+    domain=0:6.5,
+    width=15cm,
+    height=8cm,
+    grid=both,
+    legend style={at={(0.5,-0.25)}, anchor=north, columns=2},
+    xtick={0,1.57,3.14,4.71,6.28},
+    xticklabels={$0$, $\frac{\pi}{2}$, $\pi$, $\frac{3\pi}{2}$, $2\pi$},
+    ytick={-3,-2,...,3},
+    title={Trigonometrisches Polynom und seine Komponenten}
+  ]
+
+    % Einzelkomponenten
+    \addplot[red, dashed, thick] {cos(deg(x))};
+    \addlegendentry{$\cos(\omega t)$}
+
+    \addplot[orange, dashed, thick] {-1.5*sin(deg(x))};
+    \addlegendentry{$-1{,}5\cdot \sin(\omega t)$}
+
+    \addplot[teal, dashed, thick] {-0.7*cos(2*deg(x))};
+    \addlegendentry{$-0{,}7\cdot \cos(2\omega t)$}
+
+    \addplot[green!60!black, dashed, thick] {0.5*sin(2*deg(x))};
+    \addlegendentry{$0{,}5\cdot \sin(2\omega t)$}
+
+    \addplot[black!50!gray, thick] {1}; % a_0/2 = 1
+    \addlegendentry{$\frac{a_0}{2} = 1$}
+
+    % Gesamtsumme
+    \addplot[blue, very thick] {1 + cos(deg(x)) - 1.5*sin(deg(x)) - 0.7*cos(2*deg(x)) + 0.5*sin(2*deg(x))};
+    \addlegendentry{Gesamtfunktion $f(t)$}
+
+  \end{axis}
+\end{tikzpicture}
+\end{center}
+
+\end{document}

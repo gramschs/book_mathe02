@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Fourierreihe interaktiv</title>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <style>
+    .controls {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 20px;
+    }
+    .controls label {
+      display: flex;
+      flex-direction: column;
+      font-size: 0.9em;
+    }
+  </style>
+</head>
+<body>
+
+<h2>Fourierreihe: Komponenten & Koeffizienten interaktiv</h2>
+<div>
+  Grad <em>n</em>: <input type="range" id="slider" min="0" max="5" value="0" oninput="updatePlot()" />
+  <span id="nLabel">0</span>
+</div>
+
+<div class="controls" id="coeffInputs"></div>
+
+<div id="plot" style="width: 95%; height: 600px;"></div>
+
+<script>
+const t = [];
+const N = 500;
+for (let i = 0; i < N; i++) {
+  t.push(i * 2 * Math.PI / (N - 1));
+}
+
+let a = [2, 1, -0.7, 0.3, 0.1, -0.05];
+let b = [0, -1.5, 0.5, 0.2, -0.1, 0.05];
+const omega = 1;
+
+function createInputs(n) {
+  const container = document.getElementById('coeffInputs');
+  container.innerHTML = '';
+
+  for (let k = 0; k <= n; k++) {
+    const labelA = document.createElement('label');
+    labelA.textContent = `a${k}`;
+    const inputA = document.createElement('input');
+    inputA.type = 'number';
+    inputA.step = '0.1';
+    inputA.value = a[k] ?? 0;
+    inputA.oninput = () => { a[k] = parseFloat(inputA.value); updatePlot(); };
+    labelA.appendChild(inputA);
+    container.appendChild(labelA);
+
+    if (k > 0) {
+      const labelB = document.createElement('label');
+      labelB.textContent = `b${k}`;
+      const inputB = document.createElement('input');
+      inputB.type = 'number';
+      inputB.step = '0.1';
+      inputB.value = b[k] ?? 0;
+      inputB.oninput = () => { b[k] = parseFloat(inputB.value); updatePlot(); };
+      labelB.appendChild(inputB);
+      container.appendChild(labelB);
+    }
+  }
+}
+
+function computeComponents(n) {
+  const traces = [];
+  const y0 = t.map(() => a[0] / 2);
+  traces.push({ x: t, y: y0, name: 'a₀/2', line: { color: 'gray', dash: 'dot' } });
+
+  for (let k = 1; k <= n; k++) {
+    const cosY = t.map(ti => a[k] * Math.cos(k * omega * ti));
+    const sinY = t.map(ti => b[k] * Math.sin(k * omega * ti));
+
+    traces.push({ x: t, y: cosY, name: `a${k}·cos(${k}ωt)`, line: { dash: 'dash', color: `hsl(${k*50}, 70%, 50%)` } });
+    traces.push({ x: t, y: sinY, name: `b${k}·sin(${k}ωt)`, line: { dash: 'dot', color: `hsl(${k*50+25}, 70%, 50%)` } });
+  }
+
+  const ySum = new Array(t.length).fill(a[0] / 2);
+  for (let k = 1; k <= n; k++) {
+    for (let i = 0; i < t.length; i++) {
+      ySum[i] += a[k] * Math.cos(k * omega * t[i]) + b[k] * Math.sin(k * omega * t[i]);
+    }
+  }
+
+  traces.push({ x: t, y: ySum, name: 'Gesamtsumme f(t)', line: { color: 'blue', width: 3 } });
+  return traces;
+}
+
+function updatePlot() {
+  const slider = document.getElementById("slider");
+  const n = parseInt(slider.value);
+  document.getElementById("nLabel").textContent = n;
+  createInputs(n);
+
+  const traces = computeComponents(n);
+  Plotly.react('plot', traces, {
+    title: `Trigonometrisches Polynom bis Grad n = ${n}`,
+    xaxis: { title: 't', tickvals: [0, Math.PI, 2 * Math.PI], ticktext: ['0', 'π', '2π'] },
+    yaxis: { title: 'f(t)' },
+    legend: { orientation: 'h', x: 0, y: -0.2 }
+  });
+}
+
+updatePlot();
+</script>
+
+</body>
+</html>
+
+
