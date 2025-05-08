@@ -34,7 +34,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=87e54e7c" />
     <link rel="stylesheet" type="text/css" href="../_static/jsxgraph.css?v=a7b027cb" />
@@ -218,7 +218,7 @@
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="chapter06_sec00.html">6. Funktionen von mehreren Variablen und partielle Ableitungen</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="chapter06_sec01.html">6.1 Definition und Visualisierung</a></li>
-<li class="toctree-l2"><a class="reference internal" href="chapter06_sec02.html">6.2 Stetigkeit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter06_sec02.html">6.2 Stetigkeit von Funktionen mehrerer Variablen</a></li>
 <li class="toctree-l2"><a class="reference internal" href="chapter06_sec03.html">6.3 Partielle Ableitungen und Gradient</a></li>
 <li class="toctree-l2"><a class="reference internal" href="chapter06_sec04.html">6.4 Höhere partielle Ableitungen und Hesse-Matrix</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Übungen</a></li>
@@ -444,122 +444,391 @@
 <h1>Übungen<a class="headerlink" href="#ubungen" title="Link to this heading">#</a></h1>
 <div class="miniexercise admonition">
 <p class="admonition-title">Übung 6.1</p>
-<p>Berechnen Sie die ersten partiellen Ableitungen nach den Variablen.
-a) <span class="math notranslate nohighlight">\(f(x,y)=e^{x}\cdot e^{y}\)</span> <br>
+<p>Berechnen Sie die ersten partiellen Ableitungen.</p>
+<p>a) <span class="math notranslate nohighlight">\(f(x,y)=e^{x}\cdot e^{y}\)</span> <br>
 b) <span class="math notranslate nohighlight">\(f(x,y)=e^{xy}\)</span> <br>
 c) <span class="math notranslate nohighlight">\(f(x,y)=\sin(x)\cos(y)\)</span> <br>
 d) <span class="math notranslate nohighlight">\(f(x_1,x_2,x_3) = \frac{1}{2x_1^2+\sqrt{x_2^2+x_3^2}}\)</span> <br></p>
 </div>
 <div class="miniexercise toggle admonition">
 <p class="admonition-title">Lösung</p>
-<p>a) <span class="math notranslate nohighlight">\(f(x,y)=e^{x}\cdot e^{y}\)</span></p>
+<p>a) <span class="math notranslate nohighlight">\(f(x,y)=e^{x}\cdot e^{y} = e^{x+y}\)</span></p>
 <div class="math notranslate nohighlight">
-\[\frac{\partial f}{\partial x}=e^x\cdot e^y \quad \text{ und } \quad \frac{\partial f}{\partial y}=e^x\cdot e^y\]</div>
+\[\frac{\partial f}{\partial x}=e^{x+y} \quad \text{ und } \quad \frac{\partial f}{\partial y}=e^{x+y}\]</div>
+<hr style="height:3px;border-width:0;color:gray;background-color:gray">
 <p>b) <span class="math notranslate nohighlight">\(f(x,y)=e^{xy}\)</span></p>
 <div class="math notranslate nohighlight">
-\[\frac{\partial f}{\partial x}=ye^{xy} \quad \text{ und } \quad \frac{\partial f}{\partial y}=xe^{xy}\]</div>
+\[\frac{\partial f}{\partial x}=y \cdot e^{xy} \quad \text{ und } \quad \frac{\partial f}{\partial y}=x \cdot e^{xy}\]</div>
+<hr style="height:3px;border-width:0;color:gray;background-color:gray">
 <p>c) <span class="math notranslate nohighlight">\(f(x,y)=\sin(x)\cos(y)\)</span></p>
 <div class="math notranslate nohighlight">
-\[\frac{\partial f}{\partial x}=\cos(x)\cos(y) \quad \text{ und } \quad \frac{\partial f}{\partial y}=\sin(x)\left(-\sin(y)\right)\]</div>
+\[\frac{\partial f}{\partial x}=\cos(x)\cos(y) \quad \text{ und } \quad \frac{\partial f}{\partial y}=-\sin(x)\sin(y)\]</div>
+<hr style="height:3px;border-width:0;color:gray;background-color:gray">
 <p>d) <span class="math notranslate nohighlight">\(f(x_1,x_2,x_3) = \frac{1}{2x_1^2+\sqrt{x_2^2+x_3^2}}\)</span></p>
+<p>Wir wenden die Kettenregel an:</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
-\frac{\partial f}{\partial x_1}&amp;=-\frac{1}{(2x_1^2+\sqrt{x_2^2+x_3^2})^2}\cdot 4x_1 \\
-\frac{\partial f}{\partial x_2}&amp;=-\frac{1}{(2x_1^2+\sqrt{x_2^2+x_3^2})^2}\cdot \frac{x_2}{\sqrt{x_2^2+x_3^2}}\\
-\frac{\partial f}{\partial x_3}&amp;=-\frac{1}{(2x_1^2+\sqrt{x_2^2+x_3^2})^2}\cdot \frac{x_3}{\sqrt{x_2^2+x_3^2}}
+\frac{\partial f}{\partial x_1} &amp;= -\frac{1}{(2x_1^2+\sqrt{x_2^2+x_3^2})^2} \cdot 4x_1 \\
+&amp;= -\frac{4x_1}{(2x_1^2+\sqrt{x_2^2+x_3^2})^2}
+\end{align*}\]</div>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+\frac{\partial f}{\partial x_2} &amp;= -\frac{1}{(2x_1^2+\sqrt{x_2^2+x_3^2})^2} \cdot \frac{x_2}{\sqrt{x_2^2+x_3^2}} \\
+&amp;= -\frac{x_2}{(2x_1^2+\sqrt{x_2^2+x_3^2})^2 \cdot \sqrt{x_2^2+x_3^2}}
+\end{align*}\]</div>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+\frac{\partial f}{\partial x_3} &amp;= -\frac{1}{(2x_1^2+\sqrt{x_2^2+x_3^2})^2} \cdot \frac{x_3}{\sqrt{x_2^2+x_3^2}} \\
+&amp;= -\frac{x_3}{(2x_1^2+\sqrt{x_2^2+x_3^2})^2 \cdot \sqrt{x_2^2+x_3^2}}
 \end{align*}\]</div>
 </div>
 <div class="miniexercise admonition">
 <p class="admonition-title">Übung 6.2</p>
-<p>Berechnen Sie die zweiten partiellen Ableitungen nach den Variablen. Verifizieren Sie, dass das Ergebnis unabhängig von der Reihenfolge der Differentiationsschritte ist.</p>
+<p>Berechnen Sie die zweiten partiellen Ableitungen. Verifizieren Sie jeweils
+explizit, dass das Ergebnis unabhängig von der Reihenfolge der
+Differentiationsschritte ist (Satz von Schwarz).</p>
 <p>a) <span class="math notranslate nohighlight">\(f(x,y)=x^3+y^3 + x^2y^2+xy+1\)</span> <br>
 b) <span class="math notranslate nohighlight">\(f(x,y,z)=\frac{1}{\sqrt{x^2+y^2+z^2}}\)</span></p>
 </div>
 <div class="miniexercise toggle admonition">
 <p class="admonition-title">Lösung</p>
 <p>a) <span class="math notranslate nohighlight">\(f(x,y)=x^3+y^3 + x^2y^2+xy+1\)</span></p>
-<p>1. partielle Ableitungen:</p>
+<p><strong>Schritt 1:</strong> Berechnung der ersten partiellen Ableitungen:</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
 \frac{\partial f}{\partial x} &amp;= 3x^2+2xy^2+y \\
 \frac{\partial f}{\partial y} &amp;= 3y^2+2x^2y+x 
 \end{align*}\]</div>
-<p>2. partielle Ableitungen:</p>
+<p><strong>Schritt 2:</strong> Berechnung der zweiten partiellen Ableitungen:</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
-\frac{\partial^2 f}{\partial x \partial x} &amp;= 6x + 2y^2 \\
-\frac{\partial^2 f}{\partial x \partial y} &amp;= \frac{\partial^2 f}{\partial y \partial x} = 4xy + 1 \\
-\frac{\partial^2 f}{\partial y \partial y} &amp;= 6y + 2x^2 
+\frac{\partial^2 f}{\partial x^2} &amp;= \frac{\partial}{\partial x}\left(\frac{\partial f}{\partial x}\right) = \frac{\partial}{\partial x}(3x^2+2xy^2+y) = 6x + 2y^2 \\
+\frac{\partial^2 f}{\partial x \partial y} &amp;= \frac{\partial}{\partial y}\left(\frac{\partial f}{\partial x}\right) = \frac{\partial}{\partial y}(3x^2+2xy^2+y) = 4xy + 1 \\
+\frac{\partial^2 f}{\partial y \partial x} &amp;= \frac{\partial}{\partial x}\left(\frac{\partial f}{\partial y}\right) = \frac{\partial}{\partial x}(3y^2+2x^2y+x) = 4xy + 1 \\
+\frac{\partial^2 f}{\partial y^2} &amp;= \frac{\partial}{\partial y}\left(\frac{\partial f}{\partial y}\right) = \frac{\partial}{\partial y}(3y^2+2x^2y+x) = 6y + 2x^2
 \end{align*}\]</div>
+<p><strong>Verifikation des Satzes von Schwarz:</strong>
+Da <span class="math notranslate nohighlight">\(\frac{\partial^2 f}{\partial x \partial y} = \frac{\partial^2 f}{\partial y \partial x} = 4xy + 1\)</span>, ist der Satz von Schwarz bestätigt.</p>
+<hr style="height:3px;border-width:0;color:gray;background-color:gray">
 <p>b) <span class="math notranslate nohighlight">\(f(x,y,z)=\frac{1}{\sqrt{x^2+y^2+z^2}}\)</span></p>
-<p>1. partielle Ableitungen:</p>
+<p><strong>Schritt 1:</strong> Berechnung der ersten partiellen Ableitungen:</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
-\frac{\partial f}{\partial x} &amp;= -\frac{x}{\left(\sqrt{x^2+y^2+z^2}\right)^3} \\
-\frac{\partial f}{\partial y} &amp;= -\frac{y}{\left(\sqrt{x^2+y^2+z^2}\right)^3} \\
-\frac{\partial f}{\partial z} &amp;= -\frac{z}{\left(\sqrt{x^2+y^2+z^2}\right)^3} \\
+\frac{\partial f}{\partial x} &amp;= -\frac{1}{(\sqrt{x^2+y^2+z^2})^2} \cdot \frac{\partial}{\partial x}(\sqrt{x^2+y^2+z^2}) \\
+&amp;= -\frac{1}{x^2+y^2+z^2} \cdot \frac{1}{2}(x^2+y^2+z^2)^{-1/2} \cdot 2x \\
+&amp;= -\frac{1}{x^2+y^2+z^2} \cdot \frac{x}{\sqrt{x^2+y^2+z^2}} \\
+&amp;= -\frac{x}{(x^2+y^2+z^2)^{3/2}}
 \end{align*}\]</div>
-<p>2. partielle Ableitungen:</p>
+<p>Analog berechnen wir:</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
-\frac{\partial^2 f}{\partial x \partial x} &amp;= -\frac{1}{\left(\sqrt{x^2+y^2+z^2}\right)^3}+3\frac{x^2}{\left(\sqrt{x^2+y^2+z^2}\right)^5}\\ 
-\frac{\partial^2 f}{\partial y \partial y} &amp;= -\frac{1}{\left(\sqrt{x^2+y^2+z^2}\right)^3}+3\frac{y^2}{\left(\sqrt{x^2+y^2+z^2}\right)^5}\\ 
-\frac{\partial^2 f}{\partial z \partial z} &amp;= -\frac{1}{\left(\sqrt{x^2+y^2+z^2}\right)^3}+3\frac{z^2}{\left(\sqrt{x^2+y^2+z^2}\right)^5}
+\frac{\partial f}{\partial y} &amp;= -\frac{y}{(x^2+y^2+z^2)^{3/2}} \\
+\frac{\partial f}{\partial z} &amp;= -\frac{z}{(x^2+y^2+z^2)^{3/2}}
 \end{align*}\]</div>
+<p><strong>Schritt 2:</strong> Berechnung der zweiten partiellen Ableitungen:</p>
+<p>Für die reinen zweiten Ableitungen:</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
-\frac{\partial^2 f}{\partial y \partial x} &amp;= \frac{\partial^2 f}{\partial x \partial y} = \frac{3xy}{\left(\sqrt{x^2+y^2+z^2}\right)^5}\\ 
-\frac{\partial^2 f}{\partial z \partial x} &amp;= \frac{\partial^2 f}{\partial x \partial z} = \frac{3xz}{\left(\sqrt{x^2+y^2+z^2}\right)^5}\\ 
-\frac{\partial^2 f}{\partial z \partial y} &amp;= \frac{\partial^2 f}{\partial y \partial z} = \frac{3yz}{\left(\sqrt{x^2+y^2+z^2}\right)^5}
+\frac{\partial^2 f}{\partial x^2} &amp;= \frac{\partial}{\partial x}\left(-\frac{x}{(x^2+y^2+z^2)^{3/2}}\right) \\
+&amp;= -\frac{\partial}{\partial x}\left(\frac{x}{(x^2+y^2+z^2)^{3/2}}\right) \\
+&amp;= -\left[\frac{1}{(x^2+y^2+z^2)^{3/2}} + x \cdot \frac{\partial}{\partial x}\left(\frac{1}{(x^2+y^2+z^2)^{3/2}}\right)\right] \\
+&amp;= -\left[\frac{1}{(x^2+y^2+z^2)^{3/2}} + x \cdot \left(-\frac{3}{2}\right)(x^2+y^2+z^2)^{-5/2} \cdot 2x\right] \\
+&amp;= -\frac{1}{(x^2+y^2+z^2)^{3/2}} + \frac{3x^2}{(x^2+y^2+z^2)^{5/2}} \\
+&amp;= \frac{-1 \cdot (x^2+y^2+z^2) + 3x^2}{(x^2+y^2+z^2)^{5/2}} \\
+&amp;= \frac{-x^2-y^2-z^2 + 3x^2}{(x^2+y^2+z^2)^{5/2}} \\
+&amp;= \frac{2x^2-y^2-z^2}{(x^2+y^2+z^2)^{5/2}}
 \end{align*}\]</div>
+<p>Durch analoges Vorgehen erhalten wir:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+\frac{\partial^2 f}{\partial y^2} &amp;= \frac{2y^2-x^2-z^2}{(x^2+y^2+z^2)^{5/2}} \\
+\frac{\partial^2 f}{\partial z^2} &amp;= \frac{2z^2-x^2-y^2}{(x^2+y^2+z^2)^{5/2}}
+\end{align*}\]</div>
+<p>Für die gemischten Ableitungen:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+\frac{\partial^2 f}{\partial x \partial y} &amp;= \frac{\partial}{\partial x}\left(-\frac{y}{(x^2+y^2+z^2)^{3/2}}\right) \\
+&amp;= -\frac{\partial}{\partial x}\left(\frac{y}{(x^2+y^2+z^2)^{3/2}}\right) \\
+&amp;= -y \cdot \frac{\partial}{\partial x}\left(\frac{1}{(x^2+y^2+z^2)^{3/2}}\right) \\
+&amp;= -y \cdot \left(-\frac{3}{2}\right)(x^2+y^2+z^2)^{-5/2} \cdot 2x \\
+&amp;= \frac{3xy}{(x^2+y^2+z^2)^{5/2}}
+\end{align*}\]</div>
+<p>Und für die umgekehrte Reihenfolge:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+\frac{\partial^2 f}{\partial y \partial x} &amp;= \frac{\partial}{\partial y}\left(-\frac{x}{(x^2+y^2+z^2)^{3/2}}\right) \\
+&amp;= -\frac{\partial}{\partial y}\left(\frac{x}{(x^2+y^2+z^2)^{3/2}}\right) \\
+&amp;= -x \cdot \frac{\partial}{\partial y}\left(\frac{1}{(x^2+y^2+z^2)^{3/2}}\right) \\
+&amp;= -x \cdot \left(-\frac{3}{2}\right)(x^2+y^2+z^2)^{-5/2} \cdot 2y \\
+&amp;= \frac{3xy}{(x^2+y^2+z^2)^{5/2}}
+\end{align*}\]</div>
+<p>Die übrigen gemischten Ableitungen ergeben:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+\frac{\partial^2 f}{\partial x \partial z} = \frac{\partial^2 f}{\partial z \partial x} &amp;= \frac{3xz}{(x^2+y^2+z^2)^{5/2}} \\
+\frac{\partial^2 f}{\partial y \partial z} = \frac{\partial^2 f}{\partial z \partial y} &amp;= \frac{3yz}{(x^2+y^2+z^2)^{5/2}}
+\end{align*}\]</div>
+<p><strong>Verifikation des Satzes von Schwarz:</strong>
+Wir können beobachten, dass:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+\frac{\partial^2 f}{\partial x \partial y} &amp;= \frac{\partial^2 f}{\partial y \partial x} = \frac{3xy}{(x^2+y^2+z^2)^{5/2}} \\
+\frac{\partial^2 f}{\partial x \partial z} &amp;= \frac{\partial^2 f}{\partial z \partial x} = \frac{3xz}{(x^2+y^2+z^2)^{5/2}} \\
+\frac{\partial^2 f}{\partial y \partial z} &amp;= \frac{\partial^2 f}{\partial z \partial y} = \frac{3yz}{(x^2+y^2+z^2)^{5/2}}
+\end{align*}\]</div>
+<p>Damit ist der Satz von Schwarz für alle gemischten Ableitungen bestätigt, da die partiellen Ableitungen zweiter Ordnung unabhängig von der Reihenfolge der Differentiation sind.</p>
 </div>
 <div class="miniexercise admonition">
 <p class="admonition-title">Übung 6.3</p>
-<p>Berechnen Sie die dritten partiellen Ableitungen. Nutzen Sie aus, dass das Ergebnis unabhängig von der Reihenfolge der Differentiationsschritte ist:</p>
+<p>Berechnen Sie die dritten partiellen Ableitungen. Nutzen Sie aus, dass das
+Ergebnis unabhängig von der Reihenfolge der Differentiationsschritte ist
+(warum?):</p>
 <div class="math notranslate nohighlight">
 \[f(x,y,z)=x^2y^2z^2+x^3+y^3+z^3.\]</div>
-<p>Hinweis: wie viele partielle Ableitungen 3. Ordnung gibt es bei drei Variablen? Wie viele muss man explizit ausrechnen?</p>
+<p>Hinweis: wie viele partielle Ableitungen 3. Ordnung gibt es bei drei Variablen?
+Wie viele muss man explizit ausrechnen?</p>
 </div>
 <div class="miniexercise toggle admonition">
 <p class="admonition-title">Lösung</p>
-<p>Es gibt insgesamt 27 Ableitungen 3. Ordnung, aber es genügen 10 explizite Ableitungen: xxx, yxx, zxx, yyy, xyy, zyy, zzz, xzz, yzz, xyz.</p>
-<p>1. partielle Ableitungen:</p>
+<p>Der Satz von Schwarz besagt, dass bei stetigen gemischten partiellen Ableitungen
+die Reihenfolge der Differentiation keine Rolle spielt. Unsere Funktion
+<span class="math notranslate nohighlight">\(f(x,y,z)=x^2y^2z^2+x^3+y^3+z^3\)</span> ist beliebig oft stetig differenzierbar, daher
+gilt der Satz für alle Ableitungen.</p>
+<p>Bei drei Variablen <span class="math notranslate nohighlight">\(x\)</span>, <span class="math notranslate nohighlight">\(y\)</span> und <span class="math notranslate nohighlight">\(z\)</span> gibt es theoretisch <span class="math notranslate nohighlight">\(3^3 = 27\)</span> mögliche
+Kombinationen für die dritten Ableitungen. Aufgrund des Satzes von Schwarz sind
+jedoch viele dieser Kombinationen gleichwertig. Es genau 10 Möglichkeiten:</p>
+<ol class="arabic simple">
+<li><p><span class="math notranslate nohighlight">\((3,0,0)\)</span>: dreimal nach <span class="math notranslate nohighlight">\(x\)</span> ableiten</p></li>
+<li><p><span class="math notranslate nohighlight">\((2,1,0)\)</span>: zweimal nach <span class="math notranslate nohighlight">\(x\)</span>, einmal nach <span class="math notranslate nohighlight">\(y\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\((2,0,1)\)</span>: zweimal nach <span class="math notranslate nohighlight">\(x\)</span>, einmal nach <span class="math notranslate nohighlight">\(z\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\((1,2,0)\)</span>: einmal nach <span class="math notranslate nohighlight">\(x\)</span>, zweimal nach <span class="math notranslate nohighlight">\(y\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\((1,1,1)\)</span>: je einmal nach <span class="math notranslate nohighlight">\(x\)</span>, <span class="math notranslate nohighlight">\(y\)</span> und <span class="math notranslate nohighlight">\(z\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\((1,0,2)\)</span>: einmal nach <span class="math notranslate nohighlight">\(x\)</span>, zweimal nach <span class="math notranslate nohighlight">\(z\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\((0,3,0)\)</span>: dreimal nach <span class="math notranslate nohighlight">\(y\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\((0,2,1)\)</span>: zweimal nach <span class="math notranslate nohighlight">\(y\)</span>, einmal nach <span class="math notranslate nohighlight">\(z\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\((0,1,2)\)</span>: einmal nach <span class="math notranslate nohighlight">\(y\)</span>, zweimal nach <span class="math notranslate nohighlight">\(z\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\((0,0,3)\)</span>: dreimal nach <span class="math notranslate nohighlight">\(z\)</span></p></li>
+</ol>
+<p><strong>Schritt 1:</strong> Berechnung der ersten partiellen Ableitungen:</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
 \frac{\partial f}{\partial x} &amp;= 2xy^2z^2 + 3x^2 \\
 \frac{\partial f}{\partial y} &amp;= 2x^2yz^2 + 3y^2 \\
 \frac{\partial f}{\partial z} &amp;= 2x^2y^2z + 3z^2 \\
 \end{align*}\]</div>
-<p>Zwischenrechnung 2. partielle Ableitungen:</p>
+<p><strong>Schritt 2:</strong> Berechnung der zweiten partiellen Ableitungen:</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
-\frac{\partial^2 f}{\partial x \partial x} &amp;= 2y^2z^2 + 6x \\ 
-\frac{\partial^2 f}{\partial y \partial y} &amp;= 2x^2z^2 + 6y \\ 
-\frac{\partial^2 f}{\partial z \partial z} &amp;= 2x^2y^2 + 6z \\ 
+\frac{\partial^2 f}{\partial x^2} &amp;= 2y^2z^2 + 6x \\
+\frac{\partial^2 f}{\partial x \partial y} &amp;= 4xyz^2 \\
+\frac{\partial^2 f}{\partial x \partial z} &amp;= 4xy^2z \\
+\frac{\partial^2 f}{\partial y^2} &amp;= 2x^2z^2 + 6y \\
+\frac{\partial^2 f}{\partial y \partial z} &amp;= 4x^2yz \\
+\frac{\partial^2 f}{\partial z^2} &amp;= 2x^2y^2 + 6z \\
 \end{align*}\]</div>
-<p>3. partielle Ableitungen:</p>
+<p><strong>Schritt 3:</strong> Berechnung der 10 unterschiedlichen dritten partiellen Ableitungen:</p>
+<ol class="arabic simple">
+<li><p>Dreimal nach <span class="math notranslate nohighlight">\(x\)</span> ableiten:</p></li>
+</ol>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
-\frac{\partial^3f}{\partial x \partial x \partial x} &amp;= 6 \\ 
-\frac{\partial^3f}{\partial y \partial x \partial x} &amp;= 4yz^2 \\
-\frac{\partial^3f}{\partial z \partial x \partial x} &amp;= 4y^2z 
+\frac{\partial^3 f}{\partial x^3} &amp;= \frac{\partial}{\partial x}\left(\frac{\partial^2 f}{\partial x^2}\right) = \frac{\partial}{\partial x}(2y^2z^2 + 6x) = 6
+\end{align*}\]</div>
+<ol class="arabic simple" start="2">
+<li><p>Zweimal nach <span class="math notranslate nohighlight">\(x\)</span>, einmal nach <span class="math notranslate nohighlight">\(y\)</span>:</p></li>
+</ol>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+\frac{\partial^3 f}{\partial y \partial x^2} &amp;= \frac{\partial}{\partial y}\left(\frac{\partial^2 f}{\partial x^2}\right) = \frac{\partial}{\partial y}(2y^2z^2 + 6x) = 4yz^2
+\end{align*}\]</div>
+<ol class="arabic simple" start="3">
+<li><p>Zweimal nach <span class="math notranslate nohighlight">\(x\)</span>, einmal nach <span class="math notranslate nohighlight">\(z\)</span>:</p></li>
+</ol>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+\frac{\partial^3 f}{\partial z \partial x^2} &amp;= \frac{\partial}{\partial z}\left(\frac{\partial^2 f}{\partial x^2}\right) = \frac{\partial}{\partial z}(2y^2z^2 + 6x) = 4y^2z
+\end{align*}\]</div>
+<ol class="arabic simple" start="4">
+<li><p>Einmal nach <span class="math notranslate nohighlight">\(x\)</span>, zweimal nach <span class="math notranslate nohighlight">\(y\)</span>:</p></li>
+</ol>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+\frac{\partial^3 f}{\partial y^2 \partial x} &amp;= \frac{\partial}{\partial y}\left(\frac{\partial^2 f}{\partial x \partial y}\right) = \frac{\partial}{\partial y}(4xyz^2) = 4xz^2
+\end{align*}\]</div>
+<ol class="arabic simple" start="5">
+<li><p>Je einmal nach <span class="math notranslate nohighlight">\(x\)</span>, <span class="math notranslate nohighlight">\(y\)</span> und <span class="math notranslate nohighlight">\(z\)</span>:</p></li>
+</ol>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+\frac{\partial^3 f}{\partial z \partial y \partial x} &amp;= \frac{\partial}{\partial z}\left(\frac{\partial^2 f}{\partial x \partial y}\right) = \frac{\partial}{\partial z}(4xyz^2) = 8xyz
+\end{align*}\]</div>
+<ol class="arabic simple" start="6">
+<li><p>Einmal nach <span class="math notranslate nohighlight">\(x\)</span>, zweimal nach <span class="math notranslate nohighlight">\(z\)</span>:</p></li>
+</ol>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+\frac{\partial^3 f}{\partial z^2 \partial x} &amp;= \frac{\partial}{\partial z}\left(\frac{\partial^2 f}{\partial x \partial z}\right) = \frac{\partial}{\partial z}(4xy^2z) = 4xy^2
+\end{align*}\]</div>
+<ol class="arabic simple" start="7">
+<li><p>Dreimal nach <span class="math notranslate nohighlight">\(y\)</span> ableiten:</p></li>
+</ol>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+\frac{\partial^3 f}{\partial y^3} &amp;= \frac{\partial}{\partial y}\left(\frac{\partial^2 f}{\partial y^2}\right) = \frac{\partial}{\partial y}(2x^2z^2 + 6y) = 6
+\end{align*}\]</div>
+<ol class="arabic simple" start="8">
+<li><p>Zweimal nach <span class="math notranslate nohighlight">\(y\)</span>, einmal nach <span class="math notranslate nohighlight">\(z\)</span>:</p></li>
+</ol>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+\frac{\partial^3 f}{\partial z \partial y^2} &amp;= \frac{\partial}{\partial z}\left(\frac{\partial^2 f}{\partial y^2}\right) = \frac{\partial}{\partial z}(2x^2z^2 + 6y) = 4x^2z
+\end{align*}\]</div>
+<ol class="arabic simple" start="9">
+<li><p>Einmal nach <span class="math notranslate nohighlight">\(y\)</span>, zweimal nach <span class="math notranslate nohighlight">\(z\)</span>:</p></li>
+</ol>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+\frac{\partial^3 f}{\partial z^2 \partial y} &amp;= \frac{\partial}{\partial z}\left(\frac{\partial^2 f}{\partial y \partial z}\right) = \frac{\partial}{\partial z}(4x^2yz) = 4x^2y
+\end{align*}\]</div>
+<ol class="arabic simple" start="10">
+<li><p>Dreimal nach <span class="math notranslate nohighlight">\(z\)</span> ableiten:</p></li>
+</ol>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+\frac{\partial^3 f}{\partial z^3} &amp;= \frac{\partial}{\partial z}\left(\frac{\partial^2 f}{\partial z^2}\right) = \frac{\partial}{\partial z}(2x^2y^2 + 6z) = 6
+\end{align*}\]</div>
+<p><strong>Zusammenfassung der 10 verschiedenen Werte:</strong></p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+\frac{\partial^3 f}{\partial x^3} &amp;= 6 \\
+\frac{\partial^3 f}{\partial y \partial x^2} &amp;= 4yz^2 \\
+\frac{\partial^3 f}{\partial z \partial x^2} &amp;= 4y^2z \\
+\frac{\partial^3 f}{\partial y^2 \partial x} &amp;= 4xz^2 \\
+\frac{\partial^3 f}{\partial z \partial y \partial x} &amp;= 8xyz \\
+\frac{\partial^3 f}{\partial z^2 \partial x} &amp;= 4xy^2 \\
+\frac{\partial^3 f}{\partial y^3} &amp;= 6 \\
+\frac{\partial^3 f}{\partial z \partial y^2} &amp;= 4x^2z \\
+\frac{\partial^3 f}{\partial z^2 \partial y} &amp;= 4x^2y \\
+\frac{\partial^3 f}{\partial z^3} &amp;= 6
+\end{align*}\]</div>
+<p>Gemäß dem Satz von Schwarz haben wir damit alle 27 möglichen partiellen
+Ableitungen dritter Ordnung berechnet, die auf diese 10 verschiedenen Werte
+zurückgeführt werden können.</p>
+</div>
+<div class="miniexercise admonition">
+<p class="admonition-title">Übung 6.4</p>
+<p>Berechnen Sie die Hesse-Matrix für die folgenden Funktionen:</p>
+<p>a) <span class="math notranslate nohighlight">\(f(x,y) = x^2y + xy^2 - 3x^2 + 2y^2\)</span> <br>
+b) <span class="math notranslate nohighlight">\(f(x,y,z) = x^2 + y^2 + z^2 - 2xy - 2xz + 3yz\)</span> <br>
+c) <span class="math notranslate nohighlight">\(f(x,y) = \sin(xy) + x^2 - y^2\)</span> <br></p>
+</div>
+<div class="miniexercise toggle admonition">
+<p class="admonition-title">Lösung</p>
+<p>a) <span class="math notranslate nohighlight">\(f(x,y) = x^2y + xy^2 - 3x^2 + 2y^2\)</span></p>
+<p><strong>Schritt 1:</strong> Berechnung der ersten partiellen Ableitungen:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+\frac{\partial f}{\partial x} &amp;= 2xy + y^2 - 6x \\
+\frac{\partial f}{\partial y} &amp;= x^2 + 2xy + 4y
+\end{align*}\]</div>
+<p><strong>Schritt 2:</strong> Berechnung der zweiten partiellen Ableitungen:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+\frac{\partial^2 f}{\partial x^2} &amp;= 2y - 6 \\
+\frac{\partial^2 f}{\partial x \partial y} &amp;= 2x + 2y \\
+\frac{\partial^2 f}{\partial y \partial x} &amp;= 2x + 2y \\
+\frac{\partial^2 f}{\partial y^2} &amp;= 2x + 4
+\end{align*}\]</div>
+<p><strong>Schritt 3:</strong> Aufstellung der Hesse-Matrix:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}H_f(x,y) = 
+\begin{pmatrix}
+2y - 6 &amp; 2x + 2y \\
+2x + 2y &amp; 2x + 4
+\end{pmatrix}\end{split}\]</div>
+<hr style="height:3px;border-width:0;color:gray;background-color:gray">
+<p>b) <span class="math notranslate nohighlight">\(f(x,y,z) = x^2 + y^2 + z^2 - 2xy - 2xz + 3yz\)</span></p>
+<p><strong>Schritt 1:</strong> Berechnung der ersten partiellen Ableitungen:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+\frac{\partial f}{\partial x} &amp;= 2x - 2y - 2z \\
+\frac{\partial f}{\partial y} &amp;= 2y - 2x + 3z \\
+\frac{\partial f}{\partial z} &amp;= 2z - 2x + 3y
+\end{align*}\]</div>
+<p><strong>Schritt 2:</strong> Berechnung der zweiten partiellen Ableitungen:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+\frac{\partial^2 f}{\partial x^2} &amp;= 2 \\
+\frac{\partial^2 f}{\partial x \partial y} &amp;= -2 \\
+\frac{\partial^2 f}{\partial x \partial z} &amp;= -2 \\
+\frac{\partial^2 f}{\partial y \partial x} &amp;= -2 \\
+\frac{\partial^2 f}{\partial y^2} &amp;= 2 \\
+\frac{\partial^2 f}{\partial y \partial z} &amp;= 3 \\
+\frac{\partial^2 f}{\partial z \partial x} &amp;= -2 \\
+\frac{\partial^2 f}{\partial z \partial y} &amp;= 3 \\
+\frac{\partial^2 f}{\partial z^2} &amp;= 2
+\end{align*}\]</div>
+<p><strong>Schritt 3:</strong> Aufstellung der Hesse-Matrix:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}H_f(x,y,z) = 
+\begin{pmatrix}
+2 &amp; -2 &amp; -2 \\
+-2 &amp; 2 &amp; 3 \\
+-2 &amp; 3 &amp; 2
+\end{pmatrix}\end{split}\]</div>
+<p>Beachten Sie, dass diese Hesse-Matrix konstant ist, d.h. sie hängt nicht von den Werten von <span class="math notranslate nohighlight">\(x\)</span>, <span class="math notranslate nohighlight">\(y\)</span> und <span class="math notranslate nohighlight">\(z\)</span> ab.</p>
+<hr style="height:3px;border-width:0;color:gray;background-color:gray">
+<p>c) <span class="math notranslate nohighlight">\(f(x,y) = \sin(xy) + x^2 - y^2\)</span></p>
+<p><strong>Schritt 1:</strong> Berechnung der ersten partiellen Ableitungen:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+\frac{\partial f}{\partial x} &amp;= y\cos(xy) + 2x \\
+\frac{\partial f}{\partial y} &amp;= x\cos(xy) - 2y
+\end{align*}\]</div>
+<p><strong>Schritt 2:</strong> Berechnung der zweiten partiellen Ableitungen:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+\frac{\partial^2 f}{\partial x^2} &amp;= \frac{\partial}{\partial x}(y\cos(xy) + 2x) \\
+&amp;= \frac{\partial}{\partial x}(y\cos(xy)) + \frac{\partial}{\partial x}(2x) \\
+&amp;= y \cdot \frac{\partial}{\partial x}(\cos(xy)) + 2 \\
+&amp;= y \cdot (-\sin(xy)) \cdot \frac{\partial}{\partial x}(xy) + 2 \\
+&amp;= y \cdot (-\sin(xy)) \cdot y + 2 \\
+&amp;= -y^2\sin(xy) + 2
 \end{align*}\]</div>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
-\frac{\partial^3f}{\partial y \partial y \partial y} &amp;= 6 \\  
-\frac{\partial^3f}{\partial x \partial y \partial y} &amp;= 4xz^2 \\
-\frac{\partial^3f}{\partial z \partial y \partial y} &amp;= 4x^2z 
+\frac{\partial^2 f}{\partial x \partial y} &amp;= \frac{\partial}{\partial y}(y\cos(xy) + 2x) \\
+&amp;= \frac{\partial}{\partial y}(y\cos(xy)) + \frac{\partial}{\partial y}(2x) \\
+&amp;= \cos(xy) + y \cdot \frac{\partial}{\partial y}(\cos(xy)) + 0 \\
+&amp;= \cos(xy) + y \cdot (-\sin(xy)) \cdot \frac{\partial}{\partial y}(xy) \\
+&amp;= \cos(xy) + y \cdot (-\sin(xy)) \cdot x \\
+&amp;= \cos(xy) - xy\sin(xy)
 \end{align*}\]</div>
 <div class="amsmath math notranslate nohighlight">
-\[\begin{align*}  
-\frac{\partial^3f}{\partial z \partial z \partial z} &amp;= 6 \\  
-\frac{\partial^3f}{\partial x \partial z \partial z} &amp;= 4xy^2 \\   
-\frac{\partial^3f}{\partial y \partial z \partial z} &amp;= 4x^2y 
+\[\begin{align*}
+\frac{\partial^2 f}{\partial y \partial x} &amp;= \frac{\partial}{\partial x}(x\cos(xy) - 2y) \\
+&amp;= \frac{\partial}{\partial x}(x\cos(xy)) + \frac{\partial}{\partial x}(-2y) \\
+&amp;= \cos(xy) + x \cdot \frac{\partial}{\partial x}(\cos(xy)) + 0 \\
+&amp;= \cos(xy) + x \cdot (-\sin(xy)) \cdot \frac{\partial}{\partial x}(xy) \\
+&amp;= \cos(xy) + x \cdot (-\sin(xy)) \cdot y \\
+&amp;= \cos(xy) - xy\sin(xy)
 \end{align*}\]</div>
 <div class="amsmath math notranslate nohighlight">
-\[\begin{equation*}
-\frac{\partial^3f}{\partial z \partial y \partial x} = 8xyz             
-\end{equation*}\]</div>
+\[\begin{align*}
+\frac{\partial^2 f}{\partial y^2} &amp;= \frac{\partial}{\partial y}(x\cos(xy) - 2y) \\
+&amp;= \frac{\partial}{\partial y}(x\cos(xy)) + \frac{\partial}{\partial y}(-2y) \\
+&amp;= x \cdot \frac{\partial}{\partial y}(\cos(xy)) - 2 \\
+&amp;= x \cdot (-\sin(xy)) \cdot \frac{\partial}{\partial y}(xy) - 2 \\
+&amp;= x \cdot (-\sin(xy)) \cdot x - 2 \\
+&amp;= -x^2\sin(xy) - 2
+\end{align*}\]</div>
+<p><strong>Schritt 3:</strong> Aufstellung der Hesse-Matrix:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}H_f(x,y) = 
+\begin{pmatrix}
+-y^2\sin(xy) + 2 &amp; \cos(xy) - xy\sin(xy) \\
+\cos(xy) - xy\sin(xy) &amp; -x^2\sin(xy) - 2
+\end{pmatrix}\end{split}\]</div>
 </div>
 </section>
 
