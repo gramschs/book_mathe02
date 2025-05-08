@@ -168,7 +168,7 @@ Somit ist die 1. partielle Ableitung der Funktion $f$ nach $y$
 
 $$\frac{\partial f(x,y)}{\partial y} = 3y^2 + 4y + 1.$$
 
-```{dropdown} Video zu "Partielle Ableitung einfach erklärt" von Mathematrick
+```{dropdown} Video "Partielle Ableitung einfach erklärt" von Mathematrick
 <iframe width="560" height="315" src="https://www.youtube.com/embed/N0Y9E0wdLKk"
 title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
 encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
@@ -447,11 +447,11 @@ fig.show()
 Der Gradient sowie ein weiteres Beispiel werden in den folgenden Videos
 präsentiert.
 
-```{dropdown} Video zu "Gradient" von Mathematrick
+```{dropdown} Video "Gradient" von Mathematrick
 <iframe width="560" height="315" src="https://www.youtube.com/embed/BbOUhSRh57I?si=750hDMUywwy1p2YZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 ```
 
-```{dropdown} Video zu "Gradient" von Mathematische Methoden
+```{dropdown} Video "Gradient" von Mathematische Methoden
 <iframe width="560" height="315" src="https://www.youtube.com/embed/627f_DgQJpY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 ```
 

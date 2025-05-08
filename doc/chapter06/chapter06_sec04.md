@@ -85,7 +85,7 @@ $$f(x_1, x_2, \ldots, x_n) = \ldots .$$
 Die partielle Ableitung nach $x_i$ wird dann als $\frac{\partial f}{\partial
 x_i}$ geschrieben, und höhere partielle Ableitungen folgen demselben Schema.
 
-```{dropdown} Video zu "Höhere partielle Ableitungen" von Mathematische Methoden
+```{dropdown} Video "Höhere partielle Ableitungen" von Mathematische Methoden
 <iframe width="560" height="315" src="https://www.youtube.com/embed/2FDtjWmMjc8"
 title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
 encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
@@ -233,13 +233,13 @@ title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; cli
 encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 ```
 
-```{dropdown} Video zu "Hesse-Matrix" von Mathematrick
+```{dropdown} Video "Hesse-Matrix" von Mathematrick
 <iframe width="560" height="315" src="https://www.youtube.com/embed/vFlpLRPcqp8?si=3Gi_k9gPf7lZktp6"
 title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
 encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 ```
 
-```{dropdown} Video zu "Hesse-Matrix" von Mathematische Methoden
+```{dropdown} Video "Hesse-Matrix" von Mathematische Methoden
 <iframe width="560" height="315" src="https://www.youtube.com/embed/4Vy4HDLU7nU"
 title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
 encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>

@@ -120,8 +120,10 @@ annehmen, sodass die Wertemenge gleich $\mathbb{R}_{0}^{+} = \{z \in \mathbb{R}
 
 Das folgende Video erklärt multivariate Funktionen.
 
-```{dropdown} Video zu "multivariate Funktionen" von Mathematische Methoden
-<iframe width="560" height="315" src="https://www.youtube.com/embed/gV5zjtVHIWE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+```{dropdown} Video "multivariate Funktionen" von Mathematische Methoden
+<iframe width="560" height="315" src="https://www.youtube.com/embed/gV5zjtVHIWE"
+title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
+encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 ```
 
 ## Darstellungen von Funktionen mit mehreren unabhängigen Variablen
@@ -173,7 +175,9 @@ alternative verschiedene Techniken, um multivariate Funktionen zu visualisieren,
 wie wir gleich sehen werden.
 
 ```{dropdown} Video "Multivariate Funktionen: Graph" von Mathematische Methoden
-<iframe width="560" height="315" src="https://www.youtube.com/embed/oJdN_Ics6qs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/oJdN_Ics6qs"
+title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
+encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 ```
 
 ### Höhenlinien
@@ -230,7 +234,9 @@ das wir in der 3D-Darstellung gesehen haben.
 Das folgende Video erklärt den Contourplot.
 
 ```{dropdown} Video "Contourplot" von Mathematische Methoden
-<iframe width="560" height="315" src="https://www.youtube.com/embed/t4N7n_u8TYk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/t4N7n_u8TYk"
+title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
+encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 ```
 
 ## Zusammenfassung und Ausblick
