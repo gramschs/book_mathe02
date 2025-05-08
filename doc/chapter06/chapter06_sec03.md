@@ -12,33 +12,36 @@ jupytext:
 
 # 6.3 Partielle Ableitungen und Gradient
 
-Ableitungen kennen Sie schon, was genau meint jetzt wiederum der Fachbegriff
-partiell? Partiell heißt ja auf deutsch teilweise, vielleicht ist Ihnen der
-Begriff von einer partiellen Sonnenfinsternis geläufig. Bei Funktionen von
-mehreren unabhängigen Variablen ist der Ableitungsbegriff komplizierter als bei
-Funktionen von nur einer Variable. Auf die Ableitung einer Funktion von mehreren
-Variablen werden wir in einem späteren Kapitel zurückkommen. Zuerst beschäftigen
-wir uns mit partiellen Ableitungen 1. Ordnung.
+In den vorherigen Kapiteln haben wir Funktionen mehrerer Variablen kennengelernt
+und den Begriff der Stetigkeit auf solche Funktionen erweitert. Nun befassen wir
+uns mit der Frage, wie das Konzept der Ableitung auf Funktionen mehrerer
+Variablen übertragen werden kann. Bei Funktionen einer Variablen gibt die
+Ableitung die Änderungsrate oder Steigung an einer bestimmten Stelle an. Bei
+Funktionen mehrerer Variablen müssen wir berücksichtigen, dass die Änderungsrate
+von der Richtung abhängt, in der wir uns bewegen. Hier kommt der Begriff der
+partiellen Ableitung ins Spiel.
 
 ## Lernziele
 
 ```{admonition} Lernziele
 :class: goals
-* Sie wissen, was eine **partielle Ableitung** einer Funktion von mehreren
-Variablen ist und können sie auch berechnen.
-* Sie wissen, wie der **Gradient** einer Funktion von mehreren Variablen
-  berechnet wird.
+* Sie können den Begriff der **partiellen Ableitung** einer Funktion mehrerer
+  Variablen erklären und verstehen seine geometrische Bedeutung.
+* Sie können partielle Ableitungen von Funktionen mehrerer Variablen berechnen.
+* Sie verstehen die Bedeutung des **Gradienten** als Richtung des steilsten
+  Anstiegs.
+* Sie können den Gradienten einer Funktion mehrerer Variablen berechnen und
+  interpretieren.
 ```
 
 ## Partielle Ableitungen
 
-Um den Begriff der partiellen Ableitung einzuführen, betrachten wir erstmal nur
-"2:1"-Funktionen, also Funktionen $f:\mathbb{R}^2 \rightarrow \mathbb{R}$.
 Stellen Sie sich vor, wir betrachten eine hügelige Landschaft, die durch eine
-Funktion $f(x, y)$ repräsentiert wird, wobei $x$ und $y$ die Koordinaten auf der
-horizontalen Ebene sind und $f(x,y)$ die Höhe an der Position $(x,y)$ angibt.
-Nun möchten wir wissen, wie sich die Höhe ändert, wenn wir uns in Richtung der
-x-Achse bewegen, während wir die y-Koordinate konstant halten.
+Funktion $f: \mathbb{R}^2 \rightarrow \mathbb{R}$ repräsentiert wird, wobei $x$
+und $y$ die Koordinaten auf der horizontalen Ebene sind und $f(x,y)$ die Höhe an
+der Position $(x,y)$ angibt. Nun möchten wir wissen, wie sich die Höhe ändert,
+wenn wir uns in Richtung der x-Achse bewegen, während wir die y-Koordinate
+konstant halten.
 
 Die partielle Ableitung von $f$ nach $x$ gibt uns genau diese Information. Sie
 zeigt uns die Steigung der Funktion in x-Richtung an jedem Punkt $(x,y)$ auf der
@@ -96,11 +99,15 @@ auch schon die "normale" Ableitung als Grenzwert des Differentialquotienten in
 Richtung der Koordinatenachsen.
 
 ```{dropdown} Video "Motivation partielle Ableitung" von Mathematische Methoden
-<iframe width="560" height="315" src="https://www.youtube.com/embed/4ppZE30P2Yw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/4ppZE30P2Yw"
+title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
+encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 ```
 
 ```{dropdown} Video "Partielle Ableitung Definition" von Mathematische Methoden
-<iframe width="560" height="315" src="https://www.youtube.com/embed/KqpLPQvboPY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/KqpLPQvboPY"
+title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
+encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 ```
 
 ## Beispiel für das partielle Ableiten
@@ -155,14 +162,16 @@ $$h(y) = c^3 + y^3 - c^2 + 2y^2 - 5c + y + 3.$$
 
 Diese Funktion nach $y$ abgeleitet ergibt
 
-$$h'(x) = 0 + 3y^2 - 0 + 4y - 0 + 1 + 0.$$
+$$h'(y) = 0 + 3y^2 - 0 + 4y - 0 + 1 + 0.$$
 
 Somit ist die 1. partielle Ableitung der Funktion $f$ nach $y$
 
 $$\frac{\partial f(x,y)}{\partial y} = 3y^2 + 4y + 1.$$
 
 ```{dropdown} Video zu "Partielle Ableitung einfach erklärt" von Mathematrick
-<iframe width="560" height="315" src="https://www.youtube.com/embed/N0Y9E0wdLKk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/N0Y9E0wdLKk"
+title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
+encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 ```
 
 ## Gradient
@@ -172,7 +181,7 @@ Beispiel mit der Hügellandschaft zurück. Mit Hilfe der partiellen Ableitung na
 $x$ kann die Steigung in x-Richtung bestimmt werden, mit der partiellen
 Ableitung nach $y$ die Steigung in die $y$-Richtung. Fassen wir beide Steigungen
 in einem Vektor zusammen, zeigt der Vektor in die Richtung des steilsten
-Anstiegs und seine Länge entspricht der Steigung in diese Richtung.
+Anstiegs und seine Länge entspricht dem Betrag der Steigung in diese Richtung.
 
 Bei Funktionen von mehreren unabhängigen Variablen $x_1$, $x_2$ bis $x_n$ gilt
 diese Erkenntnis ebenfalls. Der Vektor, der aus den partiellen Ableitungen nach
@@ -194,12 +203,246 @@ $$\nabla f(x_1, x_2, \ldots, x_n) = \left(\frac{\partial f(x_1,
 \ldots, \frac{\partial f(x_1, \ldots,x_n)}{\partial x_n},\right).$$
 ```
 
-Für die Funktion $f(x,y) = x^3 + y^3 - x^2 + 2y^2 - 5x + y + 3$ haben wir die 1.
-partiellen Ableitungen ja bereits bestimmt. Wir müssen die partiellen
-Ableitungen nur noch als Zeilenvektor aufschreiben, um den Gradienten der
-Funktion zu bestimmen:
+Für die Funktion $f(x,y) = x^3 + y^3 - x^2 + 2y^2 - 5x + y + 3$ haben wir die
+partiellen Ableitungen bereits berechnet.
+
+$$\frac{\partial f}{\partial x}(x,y) = 3x^2 - 2x - 5$$
+$$\frac{\partial f}{\partial y}(x,y) = 3y^2 + 4y + 1$$
+
+Wir müssen die partiellen Ableitungen nur noch als Zeilenvektor aufschreiben, um
+den Gradienten der Funktion zu bestimmen:
 
 $$\nabla f(x,y) = \left(3x^2 - 2x - 5, 3y^2 + 4y + 1\right).$$
+
+Zur Veranschaulichung berechnen wir den Gradienten an einigen spezifischen Punkten:
+
+1. Am Punkt $(0,0)$:
+
+  $$\nabla f(0,0) = (3 \cdot 0^2 - 2 \cdot 0 - 5,  3 \cdot 0^2 + 4 \cdot 0 + 1) = (-5, 1)$$
+  
+2. Am Punkt $(1,1)$:
+
+  $$\nabla f(1,1) = (3 \cdot 1^2 - 2 \cdot 1 - 5, 3 \cdot 1^2 + 4 \cdot 1 + 1) =  (-4, 8)$$
+  
+3. Am Punkt $(2,-1)$:
+
+  $$\nabla f(2,-1) = (3 \cdot 2^2 - 2 \cdot 2 - 5, 3 \cdot (-1)^2 + 4 \cdot (-1) + 1) = (3,0)$$
+
+Der Gradient an einem bestimmten Punkt zeigt stets in die Richtung des steilsten
+Anstiegs der Funktion an diesem Punkt. Der Betrag des Gradienten gibt die Stärke
+(Steigung) dieses Anstiegs an. So ist beispielsweise am Punkt $(1,1)$ die
+Steigung in Richtung des Gradienten
+
+$$\|\nabla f(1,1)\| = \sqrt{(-4)^2 + 8^2} = \sqrt{16 + 64} = \sqrt{80} \approx
+8.94.$$
+
+```{code-cell}
+:tags: [remove-input]
+import numpy as np
+import plotly.graph_objects as go
+
+# Definiere die Funktion und ihre partiellen Ableitungen
+def f(x, y):
+    return x**3 + y**3 - x**2 + 2*y**2 - 5*x + y + 3
+
+def df_dx(x, y):
+    return 3*x**2 - 2*x - 5
+
+def df_dy(x, y):
+    return 3*y**2 + 4*y + 1
+
+# Erstelle die Gitter für die Visualisierung
+x = np.linspace(-2, 2, 40)
+y = np.linspace(-2, 2, 40)
+X, Y = np.meshgrid(x, y)
+Z = f(X, Y)
+
+# Berechne den Gradienten an jedem Punkt
+DX = df_dx(X, Y)
+DY = df_dy(X, Y)
+
+# Berechne den Betrag des Gradienten für die Farbkodierung
+magnitude = np.sqrt(DX**2 + DY**2)
+
+# Normalisiere die Gradientenvektoren für eine bessere Darstellung
+# Verwende einen Skalierungsfaktor für die Pfeillänge
+scale_factor = 0.2
+norm = np.sqrt(DX**2 + DY**2)
+norm[norm == 0] = 1  # Vermeide Division durch Null
+DX_norm = DX / norm * scale_factor
+DY_norm = DY / norm * scale_factor
+
+# Dünne die Gitterpunkte aus, um die Darstellung übersichtlicher zu gestalten
+skip = 2
+X_sparse = X[::skip, ::skip]
+Y_sparse = Y[::skip, ::skip]
+DX_sparse = DX_norm[::skip, ::skip]
+DY_sparse = DY_norm[::skip, ::skip]
+magnitude_sparse = magnitude[::skip, ::skip]
+
+# Erstelle die Figur mit einem einzelnen Plot
+fig = go.Figure()
+
+# Füge den Konturplot hinzu
+fig.add_trace(
+    go.Contour(
+        z=Z,
+        x=x,
+        y=y,
+        colorscale='viridis',
+        showscale=True,
+        contours=dict(
+            start=-10,
+            end=10,
+            size=1,
+            showlabels=True,
+            labelfont=dict(
+                size=10,
+                color='white'
+            )
+        ),
+        colorbar=dict(
+            title='f(x,y)',
+            titleside='right'
+        )
+    )
+)
+
+# Füge unsichtbare Marker für die Punkte hinzu, an denen die Gradientenvektoren gezeichnet werden
+fig.add_trace(
+    go.Scatter(
+        x=X_sparse.flatten(),
+        y=Y_sparse.flatten(),
+        mode='markers',
+        marker=dict(
+            size=1,
+            color='rgba(0,0,0,0)'
+        ),
+        showlegend=False
+    )
+)
+
+# Füge Pfeile als Anmerkungen hinzu, um den Gradienten zu visualisieren
+annotations = []
+for i in range(X_sparse.shape[0]):
+    for j in range(X_sparse.shape[1]):
+        x_pos = X_sparse[i, j]
+        y_pos = Y_sparse[i, j]
+        dx = DX_sparse[i, j]
+        dy = DY_sparse[i, j]
+        #
+        # Berechne die Farbe basierend auf dem Betrag des Gradienten
+        # Wir verwenden eine Farbskala von Gelb bis Rot
+        mag = magnitude_sparse[i, j]
+        max_mag = 20  # Maximale erwartete Größe für die Farbskalierung
+        #
+        # Je stärker der Gradient, desto intensiver die Farbe
+        intensity = min(mag / max_mag, 1.0)
+        arrow_color = f'rgba(255, {int(255*(1-intensity))}, 0, 0.8)'
+        #
+        # Erstelle den Pfeil
+        annotations.append(dict(
+            x=x_pos,
+            y=y_pos,
+            ax=x_pos + dx,
+            ay=y_pos + dy,
+            xref="x",
+            yref="y",
+            axref="x",
+            ayref="y",
+            showarrow=True,
+            arrowhead=2,
+            arrowsize=1,
+            arrowwidth=1.5,
+            arrowcolor=arrow_color
+        ))
+
+# Füge die Pfeile zur Figur hinzu
+fig.update_layout(annotations=annotations)
+
+# Gestalte das Layout
+fig.update_layout(
+    title=dict(
+        text='Visualisierung des Gradienten\nf(x,y) = x³ + y³ - x² + 2y² - 5x + y + 3',
+        x=0.5,
+        xanchor='center'
+    ),
+    xaxis=dict(
+        title='x-Achse',
+        zeroline=True,
+        zerolinewidth=1,
+        zerolinecolor='black',
+        showgrid=True,
+        gridwidth=0.5,
+        gridcolor='lightgray',
+        range=[-2, 2]
+    ),
+    yaxis=dict(
+        title='y-Achse',
+        zeroline=True,
+        zerolinewidth=1,
+        zerolinecolor='black',
+        showgrid=True,
+        gridwidth=0.5,
+        gridcolor='lightgray',
+        scaleanchor="x",  # Sorgt für gleiches Seitenverhältnis
+        scaleratio=1,
+        range=[-2, 2]
+    ),
+    height=600,
+    width=600,
+    plot_bgcolor='rgba(240, 240, 240, 0.5)',
+    margin=dict(l=50, r=50, t=100, b=50),
+    hovermode='closest'
+)
+
+# Füge eine Legende für die Stärke des Gradienten hinzu
+legend_annotations = [
+    dict(
+        x=0.85,
+        y=0.95,
+        xref="paper",
+        yref="paper",
+        text="<b>Gradientenstärke:</b>",
+        showarrow=False,
+        font=dict(size=12)
+    ),
+    dict(
+        x=0.85,
+        y=0.90,
+        xref="paper",
+        yref="paper",
+        text="Stark",
+        showarrow=False,
+        font=dict(color="rgb(255, 0, 0)", size=12)
+    ),
+    dict(
+        x=0.85,
+        y=0.85,
+        xref="paper",
+        yref="paper",
+        text="Mittel",
+        showarrow=False,
+        font=dict(color="rgb(255, 128, 0)", size=12)
+    ),
+    dict(
+        x=0.85,
+        y=0.80,
+        xref="paper",
+        yref="paper",
+        text="Schwach",
+        showarrow=False,
+        font=dict(color="rgb(255, 255, 0)", size=12)
+    )
+]
+
+# Füge die Legende-Anmerkungen hinzu
+for annotation in legend_annotations:
+    fig.add_annotation(annotation)
+
+# Zeige die Figur an
+fig.show()
+```
 
 Der Gradient sowie ein weiteres Beispiel werden in den folgenden Videos
 präsentiert.
@@ -211,3 +454,12 @@ präsentiert.
 ```{dropdown} Video zu "Gradient" von Mathematische Methoden
 <iframe width="560" height="315" src="https://www.youtube.com/embed/627f_DgQJpY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 ```
+
+## Zusammenfassung und Ausblick
+
+In diesem Kapitel haben wir das Konzept der partiellen Ableitung eingeführt, das
+die Änderungsrate einer Funktion mehrerer Variablen in Richtung der
+Koordinatenachsen beschreibt. Durch Zusammenfassung der partiellen Ableitungen
+erhalten wir den Gradienten, der in Richtung des steilsten Anstiegs zeigt und
+senkrecht auf den Höhenlinien steht. Im nächsten Kapitel wereden wir höhere
+partielle Ableitungen behandeln.

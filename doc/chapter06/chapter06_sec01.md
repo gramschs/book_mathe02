@@ -18,13 +18,13 @@ mathematische Schreibweise dafür ist $f:\mathbb{R}\rightarrow\mathbb{R}$.
 
 Allerdings ist die Welt nicht so eindimensional. Die folgende Abbildung zeigt
 beispielsweise die durchschnittliche Solarstrahlung in Deutschland. Dies ist
-mathematisch gesehen eine Funktion von mehereren Variablen, nämlich Längen- und
+mathematisch gesehen eine Funktion von mehreren Variablen, nämlich Längen- und
 Breitengrad, also $f:\mathbb{R}^2\rightarrow\mathbb{R}$.
 
-```{figure} pics/chapter07_fig01_solar_map.png
+```{figure} pics/chapter06_fig01_solar_map.png
 ---
 width: 50%
-name: chapter07_fig01_solar_map
+name: chapter06_fig01_solar_map
 ---
 Solarstrahlung in Deutschland
 
@@ -33,15 +33,19 @@ Solarstrahlung in Deutschland
 
 In diesem Kapitel werden wir uns Funktionen von mehreren unabhängigen Variablen
 genauer ansehen und insbesondere erarbeiten, wie solche Funktionen visualisiert
-werden können.
+werden können. Diese Art von Funktionen begegnet Ingenieuren im Maschinenbau
+täglich, zum Beispiel bei der Analyse von Temperaturverteilungen in Bauteilen.
 
 ## Lernziele
 
 ```{admonition} Lernziele
 :class: goals
-* Sie können erklären, was eine **Funktion von mehreren unabhängigen Variablen** ist. 
-* Sie können eine Funktion von zwei unabhängigen Variablen als Fläche im Raum zeichnen.
-* Sie können die **Höhenlinien** einer Funktion von zwei unabhängigen Variablen interpretieren und zeichnen.
+* Sie können erklären, was eine **Funktion von mehreren unabhängigen Variablen**
+  ist. 
+* Sie können eine Funktion von zwei unabhängigen Variablen als Fläche im Raum
+  zeichnen.
+* Sie können die **Höhenlinien** einer Funktion von zwei unabhängigen Variablen
+  interpretieren und zeichnen.
 ```
 
 ## Wiederholung: Begrifflichkeiten bei Funktionen
@@ -63,10 +67,10 @@ $$x\mapsto x^2.$$
 Üblicherweise wird die Funktionsvorschrift als $f(x)=x^2$ angegeben. Die
 grafische Darstellung sieht folgendermaßen aus:
 
-```{figure} pics/chapter07_plot_parabel.svg
+```{figure} pics/chapter06_plot_parabel.svg
 ---
 width: 75%
-name: chapter07_plot_parabel
+name: chapter06_plot_parabel
 ---
 Grafische Darstellung der Funktion $f(x)=x^2$
 ```
@@ -77,49 +81,66 @@ nichtnegativen reellen Zahlen enthält.
 
 ## Funktionen von mehreren unabhängigen Variablen
 
-Nun betrachten wir ein Beispiel einer "2:1-Beziehung". Auch hier benötigen wir,
-um die Funktion zu beschreiben, eine Definitionsmenge, eine Wertemenge und eine
-eindeutige Zuordnungsregel. Der flapsige Ausdruck "2:1-Beziehung" bedeutet, dass
-zwei Elementen der Definitionsmenge ein Element der Wertemenge zugeordnet werden
-soll. Die Elemente der Definitionsmenge werden auch **unabhängige Variablen**
-genannt, das Element der Wertemenge wird **abhängige Variable** genannt.
+Nun betrachten wir ein Beispiel einer Funktion mit mehreren Eingabegrößen. Auch
+hier benötigen wir, um die Funktion zu beschreiben, eine Definitionsmenge, eine
+Wertemenge und eine eindeutige Zuordnungsregel. Während wir bisher Funktionen
+mit einer einzelnen Eingabegröße betrachtet haben, sollen nun mehrere Elemente
+der Definitionsmenge gemeinsam einem Element der Wertemenge zugeordnet werden.
+Die Elemente der Definitionsmenge werden auch **unabhängige Variablen** genannt,
+das Element der Wertemenge wird **abhängige Variable** genannt.
 
-Wir nennen die beiden unabhängigen Variablen $x$ und $y$ und legen fest, dass
-beides reelle Zahlen sind. Diesmal sollen beide Zahlen quadriert werden und aus
-den Quadraten dann die Summe gebildet werden. Mathematisch könnte das als
+Ein typisches Beispiel aus dem Maschinenbau ist die Temperaturverteilung in
+einem Bauteil. Die Temperatur $T$ an einem bestimmten Punkt hängt von den
+Raumkoordinaten $(x, y, z)$ ab, also $T = f(x, y, z)$. Dies ist eine Funktion
+mit drei unabhängigen Variablen, die einem Punkt im Raum einen Temperaturwert
+zuordnet.
 
-$$(x,y)\mapsto x^2 + y^2$$
+Für den einfacheren Fall mit zwei unabhängigen Variablen nennen wir diese $x$
+und $y$ und legen fest, dass beides reelle Zahlen sind. Wir definieren nun eine
+Funktion, die jedem Wertepaar $(x,y)$ einen Funktionswert zuordnet.
 
-oder als
+```{admonition} Was ist ... eine multivariate Funktion?
+:class: note
+Eine multivariate Funktion $f: \mathbb{R}^n \rightarrow \mathbb{R}$ ist eine
+Vorschrift, die jedem Punkt $(x_1, x_2, \ldots, x_n) \in \mathbb{R}^n$ aus der
+Definitionsmenge genau einen Wert $f(x_1, x_2, \ldots, x_n) \in \mathbb{R}$ aus
+der Wertemenge zuordnet.
+```
 
-$$f(x,y) = x^2 + y^2$$
+Als konkretes Beispiel betrachten wir die Funktion, die jedem Punkt $(x,y)$ die
+Summe der Quadrate zuordnet. Diese lässt sich in der mathematischen Notation auf
+zwei äquivalente Arten darstellen:
 
-notiert werden. Die abhängige Variable $z = f(x,y)$ ist 0 oder positiv, so dass
-die Wertemenge gleich $\mathbb{R}^{+}$ ist.
+1. als Abbildungsvorschrift: $(x,y) \mapsto x^2 + y^2$ oder
+2. als Funktionsgleichung: $f(x,y) = x^2 + y^2$.
 
-Wenn die Funktion mehrere unabhängige Variablen hat, nennt man die Funktion auch
-**multivariate Funktion**.
+Die abhängige Variable $z = f(x,y)$ kann nur Werte größer oder gleich Null
+annehmen, sodass die Wertemenge gleich $\mathbb{R}_{0}^{+} = \{z \in \mathbb{R}
+\mid z \geq 0\}$ ist.
+
+Das folgende Video erklärt multivariate Funktionen.
 
 ```{dropdown} Video zu "multivariate Funktionen" von Mathematische Methoden
 <iframe width="560" height="315" src="https://www.youtube.com/embed/gV5zjtVHIWE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 ```
 
-Fassen wir zusammen.
-
-```{admonition} Was ist ... eine Funktion mit mehreren unabhängigen Variablen?
-:class: note
-Eine Funktion ist eine eindeutige Regel, die jedem Vektor aus mehreren
-unabhängigen Variablen (aus der Definitionsmenge) genau eine reelle Zahl (aus
-der Wertemenge) zuordnet.
-```
-
 ## Darstellungen von Funktionen mit mehreren unabhängigen Variablen
 
-Um das obige Beispiel Funktion zu visualisieren, werden jetzt alle mögliche
-Kombinationen aus $x$ und $y$ gebildet, d.h. die unabhängigen Variablen kommen
-aus der xy-Ebene. Zur Darstellung der abhängigen Variable brauchen wir also noch
-eine dritte Dimension, die Höhe. Die Funktion $f(x,y) =  x^2 + y^2$, ein
-sogenannter Paraboloid, sieht dann folgendermaßen aus (Hinweis: die Grafik ist interaktiv!):
+Für die Darstellung von multivariaten Funktionen gibt es verschiedene
+Möglichkeiten. Hier betrachten wir zwei Alternativen zur Darstellung von
+Funktionen $f:\mathbb{R}^2 \rightarrow \mathbb{R}$, nämlich die 3D-Darstellung
+als Fläche im Raum und Höhenlinien.
+
+### 3D-Darstellung als Fläche im Raum
+
+Um das obige Beispiel der Funktion $f(x,y) = x^2 + y^2$ zu visualisieren,
+betrachten wir alle möglichen Kombinationen aus $x$ und $y$, d.h., die
+unabhängigen Variablen kommen aus der $xy$-Ebene. Zur Darstellung der abhängigen
+Variable $z = f(x,y)$ benötigen wir eine dritte Dimension, die Höhe.
+
+Die Funktion $f(x,y) = x^2 + y^2$ beschreibt einen sogenannten Paraboloid, der
+folgendermaßen aussieht (Hinweis: Die Grafik ist interaktiv und kann durch
+Klicken und Ziehen gedreht werden):
 
 ```{code-cell}
 :tags: [remove-input]
@@ -143,31 +164,80 @@ fig.update_layout(title='Paraboloid f(x,y)=x^2 + y^2',
 xaxis_title='x-Achse', yaxis_title='y-Achse')
 ```
 
-Zusätzlich zur Höhe wurde die Paraboloid-Fläche noch gemäß der Funktionswerte
-$f(x,y)$ eingefärbt. Leider ist es gar nicht so einfach, Funktionen von mehreren
-Variablen zu zeichnen. Eine Funktion von zwei Variablen kann man noch ganz gut
-zeichnen, bei drei und gar mehr unabhängigen Variablen klappt es mit Zeichnungen
-nicht mehr.
+Zusätzlich zur Höhe wurde die Paraboloid-Fläche gemäß der Funktionswerte
+$f(x,y)$ eingefärbt. Die Farbskala rechts gibt an, welche Farbe welchem
+Funktionswert entspricht. Die Visualisierung von Funktionen mit mehr als zwei
+unabhängigen Variablen stellt eine Herausforderung dar, da wir nur drei
+räumliche Dimensionen zur grafischen Darstellung nutzen können. Es gibt jedoch
+alternative verschiedene Techniken, um multivariate Funktionen zu visualisieren,
+wie wir gleich sehen werden.
 
 ```{dropdown} Video "Multivariate Funktionen: Graph" von Mathematische Methoden
 <iframe width="560" height="315" src="https://www.youtube.com/embed/oJdN_Ics6qs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 ```
 
-## Höhenlinien
+### Höhenlinien
 
-Eine reduzierte Darstellung einer Funktion von zwei unabhängigen Variablen ist
-der sogenannte **Contourplot**, der **Konturlinien** visualisiert. Konturlinien
+Eine alternative Darstellung einer Funktion von zwei unabhängigen Variablen ist
+der sogenannte **Contourplot** oder das **Konturliniendiagramm**. Konturlinien
 sind auch aus dem Erdkundeunterricht bekannt, wo sie normalerweise
 **Höhenlinien** genannt werden.
 
 ```{admonition} Was sind ... Höhenlinien?
 :class: note
-Höhenlinien sind Linien in einer zweidimensionalen Ebene, die diejenigen Punkte $(x,y)$
-verbinden, die den gleichen Funktionswert $f(x,y)=c$ haben.  
+Höhenlinien sind Linien in einer zweidimensionalen Ebene, die diejenigen Punkte
+$(x,y)$ verbinden, die den gleichen Funktionswert $f(x,y)=c$ haben, wobei $c$
+eine Konstante ist.
 ```
+
+Höhenlinien bieten eine zweidimensionale Darstellung einer dreidimensionalen
+Fläche. Liegen Höhenlinien eng beieinander, so ist die Steigung der Fläche in
+diesem Bereich steil; liegen sie weit auseinander, ist die Steigung flach.
+
+Das folgende Beispiel zeigt die Höhenlinien der zuvor dargestellten Funktion
+$f(x,y) = x^2 + y^2$:
+
+```{code-cell}
+:tags: [remove-input]
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Erzeuge x-y-Gitter
+x = np.linspace(-5, 5, 100)
+y = np.linspace(-5, 5, 100)
+X, Y = np.meshgrid(x, y)
+
+# Berechne Funktionswerte
+Z = X**2 + Y**2
+
+# Erstelle Contourplot
+plt.figure(figsize=(8, 6))
+contour = plt.contour(X, Y, Z, levels=np.linspace(0, 25, 11), cmap='viridis')
+plt.colorbar(contour, label='f(x,y) = x² + y²')
+plt.title('Höhenlinien der Funktion f(x,y) = x² + y²')
+plt.xlabel('x-Achse')
+plt.ylabel('y-Achse')
+plt.grid(True)
+plt.axis('equal')
+plt.show()
+```
+
+Die kreisförmigen Höhenlinien in dieser Darstellung zeigen, dass die Funktion
+$f(x,y) = x^2 + y^2$ für alle Punkte $(x,y)$ mit gleichem Abstand vom Ursprung
+denselben Wert annimmt. Dies entspricht dem rotationssymmetrischen Paraboloid,
+das wir in der 3D-Darstellung gesehen haben.
 
 Das folgende Video erklärt den Contourplot.
 
 ```{dropdown} Video "Contourplot" von Mathematische Methoden
 <iframe width="560" height="315" src="https://www.youtube.com/embed/t4N7n_u8TYk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 ```
+
+## Zusammenfassung und Ausblick
+
+In diesem Kapitel haben wir Funktionen mit mehreren unabhängigen Variablen
+kennengelernt. Wir haben gesehen, wie sich solche Funktionen mathematisch
+beschreiben lassen und wie sie visualisiert werden können, entweder als Fläche
+im dreidimensionalen Raum oder mithilfe von Höhenlinien in der Ebene. Im
+nächsten Kapitel werden wir uns mit der Stetigkeit von Funktionen mehrerer
+Variablen beschäftigen.
