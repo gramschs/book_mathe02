@@ -41,7 +41,7 @@ täglich, zum Beispiel bei der Analyse von Temperaturverteilungen in Bauteilen.
 ```{admonition} Lernziele
 :class: goals
 * Sie können erklären, was eine **Funktion von mehreren unabhängigen Variablen**
-  ist. 
+  bzw. eine **mehrdimensionale Funktion** ist. 
 * Sie können eine Funktion von zwei unabhängigen Variablen als Fläche im Raum
   zeichnen.
 * Sie können die **Höhenlinien** einer Funktion von zwei unabhängigen Variablen
@@ -57,7 +57,7 @@ Wenn es darum geht, nun die Regeln dieser Beziehung genauer zu beschreiben, wird
 häufig eine Funktionsgleichung aufgestellt. Aber auch Tabellen oder grafische
 Abbildungen können dazu benutzt werden, um die Beziehung präzise zu beschreiben.
 
-Als Beispiel einer Funktion betrachten wir die Parabel. Als Definitionsmenge
+Als Beispiel einer Funktion betrachten wir eine Parabel. Als Definitionsmenge
 wählen wir alle reelle Zahlen, also alle Zahlen $x\in\mathbb{R}$. Als
 Funktionsvorschrift legen wir nun fest, dass jedem $x$ sein eigenes Quadrat
 zugeordnet wird, also in mathematischer Schreibweise
@@ -99,9 +99,9 @@ Für den einfacheren Fall mit zwei unabhängigen Variablen nennen wir diese $x$
 und $y$ und legen fest, dass beides reelle Zahlen sind. Wir definieren nun eine
 Funktion, die jedem Wertepaar $(x,y)$ einen Funktionswert zuordnet.
 
-```{admonition} Was ist ... eine multivariate Funktion?
+```{admonition} Was ist ... eine mehrdimensionale Funktion?
 :class: note
-Eine multivariate Funktion $f: \mathbb{R}^n \rightarrow \mathbb{R}$ ist eine
+Eine mehrdimensionale Funktion $f: \mathbb{R}^n \rightarrow \mathbb{R}$ ist eine
 Vorschrift, die jedem Punkt $(x_1, x_2, \ldots, x_n) \in \mathbb{R}^n$ aus der
 Definitionsmenge genau einen Wert $f(x_1, x_2, \ldots, x_n) \in \mathbb{R}$ aus
 der Wertemenge zuordnet.
@@ -118,7 +118,8 @@ Die abhängige Variable $z = f(x,y)$ kann nur Werte größer oder gleich Null
 annehmen, sodass die Wertemenge gleich $\mathbb{R}_{0}^{+} = \{z \in \mathbb{R}
 \mid z \geq 0\}$ ist.
 
-Das folgende Video erklärt multivariate Funktionen.
+Das folgende Video erklärt mehrdimensionale Funktionen, wobei hier für
+mehrdimensional der Fachbegriff *multivariat* genutzt wird.
 
 ```{dropdown} Video "multivariate Funktionen" von Mathematische Methoden
 <iframe width="560" height="315" src="https://www.youtube.com/embed/gV5zjtVHIWE"
@@ -128,7 +129,7 @@ encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></ifr
 
 ## Darstellungen von Funktionen mit mehreren unabhängigen Variablen
 
-Für die Darstellung von multivariaten Funktionen gibt es verschiedene
+Für die Darstellung von mehrdimensionalen Funktionen gibt es verschiedene
 Möglichkeiten. Hier betrachten wir zwei Alternativen zur Darstellung von
 Funktionen $f:\mathbb{R}^2 \rightarrow \mathbb{R}$, nämlich die 3D-Darstellung
 als Fläche im Raum und Höhenlinien.
@@ -140,7 +141,7 @@ betrachten wir alle möglichen Kombinationen aus $x$ und $y$, d.h., die
 unabhängigen Variablen kommen aus der $xy$-Ebene. Zur Darstellung der abhängigen
 Variable $z = f(x,y)$ benötigen wir eine dritte Dimension, die Höhe.
 
-Die Funktion $f(x,y) = x^2 + y^2$ beschreibt einen sogenannten Paraboloid, der
+Die Funktion $f(x,y) = x^2 + y^2$ beschreibt einen sogenannten Paraboloid, das
 folgendermaßen aussieht (Hinweis: Die Grafik ist interaktiv und kann durch
 Klicken und Ziehen gedreht werden):
 
@@ -162,7 +163,7 @@ z = 0.5 * (x**2 + y**2)
 # plot
 fig = go.Figure()
 fig.add_trace(go.Surface(z=z, x=x, y=y, colorscale='viridis'))
-fig.update_layout(title='Paraboloid f(x,y)=x^2 + y^2', 
+fig.update_layout(title='Paraboloid f(x,y) = x² + y²', 
 xaxis_title='x-Achse', yaxis_title='y-Achse')
 ```
 
@@ -171,8 +172,8 @@ $f(x,y)$ eingefärbt. Die Farbskala rechts gibt an, welche Farbe welchem
 Funktionswert entspricht. Die Visualisierung von Funktionen mit mehr als zwei
 unabhängigen Variablen stellt eine Herausforderung dar, da wir nur drei
 räumliche Dimensionen zur grafischen Darstellung nutzen können. Es gibt jedoch
-alternative verschiedene Techniken, um multivariate Funktionen zu visualisieren,
-wie wir gleich sehen werden.
+alternative verschiedene Techniken, um mehrdimensionale Funktionen zu
+visualisieren, wie wir gleich sehen werden.
 
 ```{dropdown} Video "Multivariate Funktionen: Graph" von Mathematische Methoden
 <iframe width="560" height="315" src="https://www.youtube.com/embed/oJdN_Ics6qs"
@@ -199,31 +200,70 @@ Fläche. Liegen Höhenlinien eng beieinander, so ist die Steigung der Fläche in
 diesem Bereich steil; liegen sie weit auseinander, ist die Steigung flach.
 
 Das folgende Beispiel zeigt die Höhenlinien der zuvor dargestellten Funktion
-$f(x,y) = x^2 + y^2$:
+$f(x,y) = x^2 + y^2$, wobei die Definitionsmenge auf einen Kreis mit Radius $r =
+5$ zur besseren Visualisierung beschränkt ist:
 
 ```{code-cell}
 :tags: [remove-input]
 import numpy as np
-import matplotlib.pyplot as plt
+import plotly.graph_objects as go
 
-# Erzeuge x-y-Gitter
-x = np.linspace(-5, 5, 100)
-y = np.linspace(-5, 5, 100)
+# Erzeuge ein regelmäßiges Gitter
+grid_size = 200
+x = np.linspace(-5, 5, grid_size)
+y = np.linspace(-5, 5, grid_size)
 X, Y = np.meshgrid(x, y)
 
-# Berechne Funktionswerte
-Z = X**2 + Y**2
+# Berechne Abstand vom Ursprung für jeden Punkt
+R = np.sqrt(X**2 + Y**2)
 
-# Erstelle Contourplot
-plt.figure(figsize=(8, 6))
-contour = plt.contour(X, Y, Z, levels=np.linspace(0, 25, 11), cmap='viridis')
-plt.colorbar(contour, label='f(x,y) = x² + y²')
-plt.title('Höhenlinien der Funktion f(x,y) = x² + y²')
-plt.xlabel('x-Achse')
-plt.ylabel('y-Achse')
-plt.grid(True)
-plt.axis('equal')
-plt.show()
+# Berechne Funktionswerte und setze Werte außerhalb des Kreises auf None
+Z = X**2 + Y**2
+Z = np.where(R <= 5, Z, None)  # Setze Werte außerhalb des Kreises auf None
+
+# Erstelle Contourplot mit Plotly
+fig = go.Figure()
+
+# Füge Konturlinien hinzu
+fig.add_trace(
+    go.Contour(
+        x=x,
+        y=y,
+        z=Z,
+        contours=dict(
+            start=0,
+            end=25,
+            size=2.5,  # Entspricht 11 Levels zwischen 0 und 25
+            showlabels=True
+        ),
+        colorscale='viridis',
+        colorbar=dict(title='f(x,y) = x² + y²'),
+        hoverinfo='x+y+z',  # Zeige x, y und z-Werte beim Hovern
+        line=dict(width=0.5, color='black')  # Dünne schwarze Linien für Konturen
+    )
+)
+
+# Layout anpassen
+fig.update_layout(
+    title='Höhenlinien der Funktion f(x,y) = x² + y²',
+    xaxis_title='x-Achse',
+    yaxis_title='y-Achse',
+    width=800,
+    height=600,
+    xaxis=dict(
+        scaleanchor="y",
+        scaleratio=1,
+        showgrid=True
+    ),
+    yaxis=dict(
+        showgrid=True
+    ),
+    # Entferne Hintergrundfarbe für Punkte außerhalb des Kreises
+    plot_bgcolor='white'
+)
+
+# Zeige den Plot an
+fig.show()
 ```
 
 Die kreisförmigen Höhenlinien in dieser Darstellung zeigen, dass die Funktion
