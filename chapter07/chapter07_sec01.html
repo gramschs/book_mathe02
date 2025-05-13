@@ -442,6 +442,7 @@
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#richtungsableitung">Richtungsableitung</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#manchmal-kann-die-richtungsableitung-auch-mit-dem-gradienten-berechnet-werden">Manchmal kann die Richtungsableitung auch mit dem Gradienten berechnet werden</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rechenregeln-fur-gradienten">Rechenregeln für Gradienten</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zusammenfassung-und-ausblick">Zusammenfassung und Ausblick</a></li>
 </ul>
             </nav>
         </div>
@@ -466,9 +467,9 @@ nachgeholt.</p>
 <ul class="simple">
 <li><p>Sie wissen, was die <strong>Richtungsableitung</strong> einer Funktion von mehreren
 Variablen ist.</p></li>
-<li><p>Sie wissen, wann sie die Richtungsableitung auch mit Hilfe des Gradienten
+<li><p>Sie wissen, wann Sie die Richtungsableitung auch mit Hilfe des Gradienten
 berechnen dürfen und kennen für diesen Fall auch die Berechnungsformel.</p></li>
-<li><p>Sie kennen die Rechenregeln für Gradienten.</p></li>
+<li><p>Sie kennen die <strong>Rechenregeln für Gradienten</strong>.</p></li>
 </ul>
 </div>
 </section>
@@ -483,61 +484,85 @@ einen festen Punkt <span class="math notranslate nohighlight">\(\vec{x} = (x_1, 
 für den wir die Richtungsableitung bilden wollen. Die Richtung bezeichnen wir
 als <span class="math notranslate nohighlight">\(\vec{v}\)</span>. Wie bei Richtungen üblich, soll die Richtung schon normiert
 angegeben werden. Damit ist gemeint, dass der Vektor <span class="math notranslate nohighlight">\(\vec{v}\)</span> die Länge 1 hat.</p>
-<p>Als nächstes gehen wir von dem Punkt <span class="math notranslate nohighlight">\(\vec{x}\)</span> ein kurzes Stückchen in Richtung
+<p>Als nächstes gehen wir von dem Punkt <span class="math notranslate nohighlight">\(\vec{x}\)</span> ein kleines Stück in Richtung
 <span class="math notranslate nohighlight">\(\vec{v}\)</span>. Da die Richtung die Länge 1 hat, führen wir die reelle Zahl <span class="math notranslate nohighlight">\(h\)</span> ein
-und multiplizieren sie mit der Richtung. Das kurze Stückchen von <span class="math notranslate nohighlight">\(\vec{x}\)</span> in
+und multiplizieren sie mit der Richtung. Das kurze Stück von <span class="math notranslate nohighlight">\(\vec{x}\)</span> in
 Richtung <span class="math notranslate nohighlight">\(\vec{v}\)</span> wird also durch</p>
 <div class="math notranslate nohighlight">
 \[\vec{x} + h\cdot \vec{v}\]</div>
 <p>beschrieben und hat automatisch die Länge <span class="math notranslate nohighlight">\(h\)</span>.</p>
 <p>Nun wird der Differenzenquotient gebildet. Im Zähler steht die Differenz
-zwischem dem Funktionswert an der Stelle <span class="math notranslate nohighlight">\(\vec{x} + h\cdot \vec{v}\)</span> und dem
-Funktionswert am Punkt <span class="math notranslate nohighlight">\(\vec{x}\)</span>. Im Nenner die Differenz zwischen den beiden
-Punkten selbst, also <span class="math notranslate nohighlight">\(\vec{x} - \left(\vec{x}+h\vec{v} \right)\)</span>. Damit lautet
-der Differenzenquotient</p>
+zwischen dem Funktionswert an der Stelle <span class="math notranslate nohighlight">\(\vec{x} + h\cdot \vec{v}\)</span> und dem
+Funktionswert am Punkt <span class="math notranslate nohighlight">\(\vec{x}\)</span>. Im Nenner steht der Abstand zwischen den
+beiden Punkten, was der Länge <span class="math notranslate nohighlight">\(h\)</span> entspricht. Damit lautet der
+Differenzenquotient</p>
 <div class="math notranslate nohighlight">
 \[\frac{f(\vec{x}+h\vec{v}) - f(\vec{x})}{h}.\]</div>
 <p>Der Grenzwert für <span class="math notranslate nohighlight">\(h \to 0\)</span> ist die Richtungsableitung der Funktion <span class="math notranslate nohighlight">\(f\)</span> in
-Richtung <span class="math notranslate nohighlight">\(v\)</span>. Wir verwenden für die Richtungsableitung das Symbol <span class="math notranslate nohighlight">\(D_{v}f\)</span>.</p>
+Richtung <span class="math notranslate nohighlight">\(\vec{v}\)</span>. Wir verwenden für die Richtungsableitung das Symbol
+<span class="math notranslate nohighlight">\(D_{\vec{v}}f\)</span>.</p>
 <div class="note admonition">
 <p class="admonition-title">Was ist … die Richtungsableitung?</p>
 <p>Die Richtungsableitung der Funktion <span class="math notranslate nohighlight">\(f\)</span>, die von mehreren Variablen abhängt, in
 die Richtung <span class="math notranslate nohighlight">\(v\)</span> ist der Grenzwert</p>
 <div class="math notranslate nohighlight">
-\[D_{v}f = \lim_{h\to 0} \frac{f(\vec{x}+h\cdot \vec{v}) - f(\vec{x})}{h}.\]</div>
+\[D_{\vec{v}}f = \lim_{h\to 0} \frac{f(\vec{x}+h\cdot \vec{v}) - f(\vec{x})}{h}.\]</div>
 <p>Das gilt allerdings nur dann, wenn die Richtungsableitung überhaupt existiert.</p>
 </div>
-<p>Wenn wir als Richtung die Koordinatenachsen wählen, landen wir wieder bei den
-partiellen Ableitungen.</p>
+<p>Wenn wir als Richtung <span class="math notranslate nohighlight">\(\vec{v}\)</span> einen der Einheitsvektoren entlang der
+Koordinatenachsen wählen, erhalten wir genau die partiellen Ableitungen.
+Betrachten wir beispielsweise in einem zweidimensionalen Raum den Einheitsvektor
+in x-Richtung <span class="math notranslate nohighlight">\(\vec{e}_1 = (1,0)\)</span>, dann gilt:</p>
+<div class="math notranslate nohighlight">
+\[D_{\vec{e}_1}f(x,y) = \lim_{h\to 0} \frac{f(x+h,y) - f(x,y)}{h} =
+\frac{\partial f}{\partial x}(x,y).\]</div>
+<p>Entsprechend erhalten wir für den Einheitsvektor in y-Richtung <span class="math notranslate nohighlight">\(\vec{e}_2 =
+(0,1)\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[D_{\vec{e}_2}f(x,y) = \lim_{h\to 0} \frac{f(x,y+h) - f(x,y)}{h} =
+\frac{\partial f}{\partial y}(x,y).\]</div>
+<p>Allgemein gilt im <span class="math notranslate nohighlight">\(n\)</span>-dimensionalen Raum für den <span class="math notranslate nohighlight">\(i\)</span>-ten Einheitsvektor
+<span class="math notranslate nohighlight">\(\vec{e}_i\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[D_{\vec{e}_i}f(\vec{x}) = \frac{\partial f}{\partial x_i}(\vec{x}).\]</div>
+<p>Dieser Zusammenhang verdeutlicht, dass die partiellen Ableitungen tatsächlich
+Richtungsableitungen in Richtung der Koordinatenachsen sind. Die
+Richtungsableitung erweitert dieses Konzept auf beliebige Richtungen und ist
+somit eine Verallgemeinerung der partiellen Ableitung.</p>
 </section>
 <section id="manchmal-kann-die-richtungsableitung-auch-mit-dem-gradienten-berechnet-werden">
 <h2>Manchmal kann die Richtungsableitung auch mit dem Gradienten berechnet werden<a class="headerlink" href="#manchmal-kann-die-richtungsableitung-auch-mit-dem-gradienten-berechnet-werden" title="Link to this heading">#</a></h2>
-<p>Die Grenzwertbildung ist aufwendig. Schön wäre es, ein Formel für die Berechnung
-der Richtungsableitung zu haben. Die gibt es auch, aber nur, wenn die Funktion
-total differenzierbar ist. Diese Art der Differenzierbarkeit ist neu und
-tatsächlich werden wir die korrekte mathematische Definition der totalen
-Differenzierbarkeit hier weglassen. Glücklicherweise gehören Funktionen, deren
-partiellen Ableitungen alle stetig sind, zu den total differenzierbaren
-Funktionen. Daher beschränken wir uns auf diese Funktionen und halten fest:</p>
+<p>Die Grenzwertbildung ist aufwendig. Schön wäre es, eine Formel für die
+Berechnung der Richtungsableitung zu haben. Die gibt es auch, aber nur, wenn die
+Funktion total differenzierbar ist. Diese Art der Differenzierbarkeit ist neu
+und tatsächlich werden wir die korrekte mathematische Definition der totalen
+Differenzierbarkeit in dieser Vorlesung nicht einführen. Bei Interesse kann die
+Definition der totalen Differenzierbarkeit bei <a class="reference external" href="https://de.wikipedia.org/wiki/Totale_Differenzierbarkeit">Wikipedia → totale
+Differenzierbarkeit</a>
+nachgelesen werden.</p>
+<p>Glücklicherweise gehören Funktionen, deren partiellen Ableitungen alle stetig
+sind, zu den total differenzierbaren Funktionen. Daher beschränken wir uns auf
+diese Funktionen und halten fest:</p>
 <div class="note admonition">
 <p class="admonition-title">Wie wird die Richtungsableitung berechnet?</p>
 <p>Wenn alle partiellen Ableitung der Funktion <span class="math notranslate nohighlight">\(f\)</span> stetig sind, kann die
-Richtungsableitung in  Richtung <span class="math notranslate nohighlight">\(v\)</span> auch mit dem Gradienten <span class="math notranslate nohighlight">\(\nabla f\)</span> berechnet
-werden. Dann gilt:</p>
+Richtungsableitung in  Richtung <span class="math notranslate nohighlight">\(\vec{v}\)</span> auch mit dem Gradienten <span class="math notranslate nohighlight">\(\nabla f\)</span>
+berechnet werden. Dann gilt:</p>
 <div class="math notranslate nohighlight">
-\[D_{v}f(\vec{x}) = \nabla f(\vec{x}) \cdot \vec{v}.\]</div>
+\[D_{\vec{v}}f(\vec{x}) = \nabla f(\vec{x}) \cdot \vec{v}.\]</div>
 </div>
 <p>Im folgenden Video wird ausführlich ein Beispiel vorgerechnet.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Video zu “Richtungsableitung berechnen” von Mathematrick</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/95KyHXzhRII" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/95KyHXzhRII"
+title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </div>
 </details></section>
 <section id="rechenregeln-fur-gradienten">
 <h2>Rechenregeln für Gradienten<a class="headerlink" href="#rechenregeln-fur-gradienten" title="Link to this heading">#</a></h2>
 <p>Wie Sie sehen, hat der Gradient eine große Bedeutung für das Ableiten
-mehrdimensionaler Funktionen. Es wäre auch hier gut, sich das Berechnen des
+mehrdimensionaler Funktionen. Es wäre auch hier gut, die Berechnung des
 Gradienten zu vereinfachen und ggf. neue Gradienten aus schon bekannten
 Gradienten zusammenzubauen. Im Folgenden sind die Rechenregeln für Gradienten
 angegeben.</p>
@@ -571,28 +596,74 @@ f(\vec{x})\cdot g(\vec{x}) - f(\vec{x})\cdot \nabla g(\vec{x})}{g^2(\vec{x})}.
 \]</div>
 <p>Auch eine Kettenregel gibt es, doch dafür müssen wir erst einmal vektorwertige
 Funktionen betrachten.</p>
-<p>Zunächst folgen aber noch Videos, die die obigen Regeln erklären.</p>
+<p>Oft ist es in der Praxis einfacher, nicht die obigen Rechenregeln für Gradienten
+anzuwenden, sondern direkt die Addition/Subtraktion/Multiplikation/Division
+auszuführen und danach den Gradienten auszurechnen. Im folgenden Beispiel werden
+beide Varianten am <strong>Beispiel der Produktregel</strong> vorgeführt.</p>
+<p>Betrachten wir die Funktionen <span class="math notranslate nohighlight">\(f(x,y) = x^2 + y^2\)</span> und <span class="math notranslate nohighlight">\(g(x,y) = xy\)</span>.</p>
+<p>Die Gradienten dieser Funktionen sind:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+\nabla f(x,y) &amp;= (2x, 2y)\\
+\nabla g(x,y) &amp;= (y, x).
+\end{align*}\]</div>
+<p>Für das Produkt <span class="math notranslate nohighlight">\(h(x,y) = f(x,y) \cdot g(x,y) = (x^2 + y^2) \cdot xy\)</span> erhalten
+wir nach der Produktregel:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+\nabla h(x,y) &amp;= g(x,y) \cdot \nabla f(x,y) + f(x,y) \cdot \nabla g(x,y)\\
+&amp;= xy \cdot (2x, 2y) + (x^2 + y^2) \cdot (y, x)\\
+&amp;= (2x^2y, 2xy^2) + ((x^2 + y^2)y, (x^2 + y^2)x)\\
+&amp;= (2x^2y + (x^2 + y^2)y, 2xy^2 + (x^2 + y^2)x)\\
+&amp;= (2x^2y + x^2y + y^3, 2xy^2 + x^3 + xy^2)\\
+&amp;= (x^2y(2 + 1) + y^3, xy^2(2 + 1) + x^3)\\
+&amp;= (3x^2y + y^3, 3xy^2 + x^3).\\
+\end{align*}\]</div>
+<p>Zur Überprüfung können wir <span class="math notranslate nohighlight">\(h(x,y)\)</span> direkt ausmultiplizieren</p>
+<div class="math notranslate nohighlight">
+\[h(x,y) = (x^2 + y^2) \cdot xy = x^3y + xy^3\]</div>
+<p>und dann partiell differenzieren</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+&amp;\frac{\partial h}{\partial x} = 3x^2y + y^3, \\
+&amp;\frac{\partial h}{\partial y} = x^3 + 3xy^2. \\
+\end{align*}\]</div>
+<p>Dies ergibt den Gradienten <span class="math notranslate nohighlight">\(\nabla h(x,y) = (3x^2y + y^3, x^3 + 3xy^2)\)</span>, was mit
+dem ersten Ergebnis übereinstimmt.</p>
+<p>In den folgenden Videos können Sie sich die Rechenregeln für Gradienten ansehen.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Video zu “Summenregel Gradient” von Mathematische Methoden</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/OoO47lj7-BM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/OoO47lj7-BM"
+title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </div>
 </details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Video zu “Faktorregel Gradient” von Mathematische Methoden</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/DiCAQfMMDk0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/DiCAQfMMDk0"
+title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </div>
 </details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Video zu “Produktregel Gradient” von Mathematische Methoden</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/dUyMIwbYuy8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/dUyMIwbYuy8"
+title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </div>
 </details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Video zu “Quotientenregel Gradient” von Mathematische Methoden</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/GlFNR8QTa10" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/GlFNR8QTa10"
+title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </div>
 </details></section>
+<section id="zusammenfassung-und-ausblick">
+<h2>Zusammenfassung und Ausblick<a class="headerlink" href="#zusammenfassung-und-ausblick" title="Link to this heading">#</a></h2>
+<p>In diesem Kapitel haben wir die Richtungsableitung gelernt. Für Funktionen,
+deren partielle Ableitungen stetig sind, kann die Richtungsableitung mit Hilfe
+des Gradienten berechnet werden. Abgerundet haben dieses Kapitel Rechenregeln
+für Gradienten. Offensichtlich fehlt eine Kettenregel. Dazu benötigen wir
+vektorwertige Funktionen, die wir im nächsten Kapitel lernen.</p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -664,6 +735,7 @@ Funktionen betrachten.</p>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#richtungsableitung">Richtungsableitung</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#manchmal-kann-die-richtungsableitung-auch-mit-dem-gradienten-berechnet-werden">Manchmal kann die Richtungsableitung auch mit dem Gradienten berechnet werden</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rechenregeln-fur-gradienten">Rechenregeln für Gradienten</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zusammenfassung-und-ausblick">Zusammenfassung und Ausblick</a></li>
 </ul>
   </nav></div>
 
