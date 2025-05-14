@@ -67,16 +67,17 @@ In mehreren Dimensionen wird diese Regel durch die Verwendung von
 Jacobi-Matrizen erweitert. Die Jacobi-Matrix ist eine Matrix, die alle ersten
 partiellen Ableitungen einer mehrdimensionalen Funktion enthält.
 
-Die mehrdimensionale Kettenregel lautet dann: Wenn wir zwei Funktionen $f$ unf
+Die mehrdimensionale Kettenregel lautet dann: Wenn wir zwei Funktionen $f$ und
 $g$ haben, die miteinander verkettet zu $f\circ g$ werden, dann ist die
 Jacobi-Matrix der verketteten Funktion   gleich dem Produkt der Jacobi-Matrix
 von $f$ nach $g$ und der Jacobi-Matrix von $g$ nach $\vec{x}$:
 
-$$J_{f\circ g}(\vec{x}) = J_{f}(g(\vec{x})) \cdot J_g(\vec{x}).$$
+$$\mathbf{J}_{f\circ g}(\vec{x}) =
+\mathbf{J}_{f}(g(\vec{x})) \cdot \mathbf{J}_g(\vec{x}).$$
 
-Dabei ist $J_{f}$ die Jacobi-Matrix von $f$ ausgewertet an der Stelle
-$g(\vec{x})$ und $J_{g}$ die Jacobi-Matrix von $g$ ausgewertet an der Stelle
-$\vec{x}$.
+Dabei ist $\mathbf{J}_{f}$ die Jacobi-Matrix von $f$ ausgewertet an der Stelle
+$g(\vec{x})$ und $\mathbf{J}_{g}$ die Jacobi-Matrix von $g$ ausgewertet an der
+Stelle $\vec{x}$.
 
 Diese Regel erlaubt es uns, die Ableitung einer verketteten Funktion zu
 berechnen, selbst wenn diese Funktion aus mehreren ineinander verschachtelten
@@ -85,7 +86,7 @@ Funktionen besteht, die jeweils von mehreren Variablen abhängen.
 Wir betrachten erneut das obige Beispiel und bilden zuerst die beiden
 Jacobi-Matrizen:
 
-$$J_{g}(r, \varphi) =
+$$\mathbf{J}_{g}(r, \varphi) =
 \begin{pmatrix}
 \sin(\varphi) & r\cdot\cos(\varphi)\\
 \cos(\varphi) & -r\cdot\sin(\varphi)
@@ -93,7 +94,7 @@ $$J_{g}(r, \varphi) =
 
 und
 
-$$ J_{f}(x,y) =
+$$\mathbf{J}_{f}(x,y) =
 \begin{pmatrix}
 2x & 2y \\
 y & x \\
@@ -103,7 +104,7 @@ y & x \\
 Dann ist die Jacobi-Matrix der verketteten Funktion
 
 \begin{align*}
-J_{f\circ g}(r,\varphi) &= J_{f}(g(r,\varphi)) \cdot J_{g}(r, \varphi) = \\
+\mathbf{J}_{f\circ g}(r,\varphi) &= \mathbf{J}_{f}(g(r,\varphi)) \cdot \mathbf{J}_{g}(r, \varphi) = \\
 &=
 \begin{pmatrix}
 2r\cdot\sin(\varphi) & 2r\cdot \cos(\varphi) \\
@@ -129,5 +130,6 @@ manchmal ist die direkte Berechnung der Jacobi-Matrix der verketteten Funktion
 einfacher.
 
 ```{dropdown} Video zu "Mehrdimensionale Kettenregel" von Prof. Hoever
-<iframe width="560" height="315" src="https://www.youtube.com/embed/LkWAGcGGDD8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/LkWAGcGGDD8"
+title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 ```

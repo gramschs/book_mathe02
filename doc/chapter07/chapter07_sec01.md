@@ -100,14 +100,14 @@ diese Funktionen und halten fest:
 
 ```{admonition} Wie wird die Richtungsableitung berechnet?
 :class: note
-Wenn alle partiellen Ableitung der Funktion $f$ stetig sind, kann die
+Wenn alle partiellen Ableitungen der Funktion $f$ stetig sind, kann die
 Richtungsableitung in  Richtung $\vec{v}$ auch mit dem Gradienten $\nabla f$
 berechnet werden. Dann gilt:
 
 $$D_{\vec{v}}f(\vec{x}) = \nabla f(\vec{x}) \cdot \vec{v}.$$
 ```
 
-Im folgenden Video wird ausführlich ein Beispiel vorgerechnet.
+Im folgendem Video wird ausführlich ein Beispiel vorgerechnet.
 
 ```{dropdown} Video zu "Richtungsableitung berechnen" von Mathematrick
 <iframe width="560" height="315" src="https://www.youtube.com/embed/95KyHXzhRII"
@@ -216,6 +216,6 @@ title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; cli
 
 In diesem Kapitel haben wir die Richtungsableitung gelernt. Für Funktionen,
 deren partielle Ableitungen stetig sind, kann die Richtungsableitung mit Hilfe
-des Gradienten berechnet werden. Abgerundet haben dieses Kapitel Rechenregeln
-für Gradienten. Offensichtlich fehlt eine Kettenregel. Dazu benötigen wir
-vektorwertige Funktionen, die wir im nächsten Kapitel lernen.
+des Gradienten berechnet werden. Abgerundet wurde dieses Kapitel durch
+Rechenregeln für Gradienten. Offensichtlich fehlt eine Kettenregel. Dazu
+benötigen wir vektorwertige Funktionen, die wir im nächsten Kapitel lernen.
