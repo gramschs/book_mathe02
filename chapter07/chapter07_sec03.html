@@ -441,6 +441,7 @@
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lernziele">Lernziele</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#jacobi-matrix-einer-vektorwertigen-funktion">Jacobi-Matrix einer vektorwertigen Funktion</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#beispiel-einer-jacobi-matrix">Beispiel einer Jacobi-Matrix</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zusammenfassung-und-ausblick">Zusammenfassung und Ausblick</a></li>
 </ul>
             </nav>
         </div>
@@ -465,9 +466,11 @@
 <section id="jacobi-matrix-einer-vektorwertigen-funktion">
 <h2>Jacobi-Matrix einer vektorwertigen Funktion<a class="headerlink" href="#jacobi-matrix-einer-vektorwertigen-funktion" title="Link to this heading">#</a></h2>
 <p>Die Jacobi-Matrix einer vektorwertigen Funktion von mehreren Variablen ist eine
-Matrix, die genau wie der Gradient alle partiellen Ableitungen einsammelt. Da
-aber die Funktionswerte der Matrix selbst Vektoren sind, entsteht eine Matrix.</p>
-<p>Kochrezept zur Berechnung der Jacobi-Matrix:</p>
+Matrix, die analog zum Gradienten alle partiellen Ableitungen erfasst. Da bei
+einer vektorwertigen Funktion die Funktionswerte selbst Vektoren sind, entsteht
+bei der Zusammenstellung der partiellen Ableitungen eine Matrix anstelle eines
+Vektors.</p>
+<p>Anleitung zur Berechnung der Jacobi-Matrix:</p>
 <ul class="simple">
 <li><p>Interpretiere die vektorwertige Funktion zeilenweise als skalarwertige
 Funktion.</p></li>
@@ -479,45 +482,55 @@ Funktion.</p></li>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Video zu “Jacobi-Matrix” von Mathematische Methoden</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/FqaCPP8OZWU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/FqaCPP8OZWU"
+title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </div>
 </details></section>
 <section id="beispiel-einer-jacobi-matrix">
 <h2>Beispiel einer Jacobi-Matrix<a class="headerlink" href="#beispiel-einer-jacobi-matrix" title="Link to this heading">#</a></h2>
 <p>Wir schauen uns an dem folgenden Beispiel an, wie die Jacobi-Matrix der
-vektorwertigen Funktion</p>
+vektorwertigen Funktion <span class="math notranslate nohighlight">\(f:\mathbb{R}^3\longrightarrow\mathbb{R}^2\)</span> mit</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}f:\mathbb{R}^3\longrightarrow\mathbb{R}^2 \quad \text{mit} \quad
-f(x,y,z)=\begin{pmatrix} x^2 + y^3 + \sin(z) \\ z^2\end{pmatrix}\end{split}\]</div>
+\[\begin{split}f(x,y,z)=\begin{pmatrix} x^2 + y^3 + \sin(z) \\ z^2\end{pmatrix}\end{split}\]</div>
 <p>berechnet wird.</p>
-<p>Schritt 1: Die erste Zeile enthält die Funktion <span class="math notranslate nohighlight">\(f_1(x,y,z)=x^2 + y^3 + \sin(z)\)</span> mit dem
-Gradienten</p>
+<p><strong>1. Gradient:</strong> Die erste Zeile enthält die Funktion <span class="math notranslate nohighlight">\(f_1(x,y,z)=x^2 + y^3 +
+\sin(z)\)</span> mit dem Gradienten</p>
 <div class="math notranslate nohighlight">
 \[\nabla f_1(x,y,z) = \left(2x , 3y^2, \cos(z)\right).\]</div>
-<p>Schritt 2: Die zweite Zeile enthält die Funktion <span class="math notranslate nohighlight">\(f_2(x,y,z)=z^2\)</span> mit dem Gradienten</p>
+<p><strong>2. Gradient:</strong> Die zweite Zeile enthält die Funktion <span class="math notranslate nohighlight">\(f_2(x,y,z)=z^2\)</span> mit dem
+Gradienten</p>
 <div class="math notranslate nohighlight">
 \[\nabla f_2(x,y,z) = \left(0, 0, 2z\right).\]</div>
-<p>Schritt 3: Aus beiden Zeilen wird dann die Matrix zusammengesetzt, die Jacobi-Matrix
-lautet also</p>
+<p><strong>Jacobi-Matrix:</strong> Aus beiden Zeilen/Gradienten wird dann die Jacobi-Matrix
+zusammengesetzt und lautet</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}J(f)(x,y,z)=
+\[\begin{split}\mathbf{J}_{f}(x,y,z)=
 \begin{pmatrix}
-2x &amp; 3x^2 &amp; \cos(z)\\
+2x &amp; 3y^2 &amp; \cos(z)\\
 0 &amp; 0 &amp; 2z
 \end{pmatrix}.
 \end{split}\]</div>
-<p>Weitere Beispiele finden Sie in den folgenden Videos.</p>
+<p>Sie hat die Dimension <span class="math notranslate nohighlight">\(2\times 3\)</span>. Weitere Beispiele finden Sie in den folgenden
+Videos.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Video zu “Jacobi-Matrix Beispiel 1” von Mathematische Methoden</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/LiFyUo6snK8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/LiFyUo6snK8"
+title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </div>
 </details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Video zu “Jacobi-Matrix aufstellen” von Mathematrick</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/kMizXsfSK2o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/kMizXsfSK2o"
+title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </div>
 </details></section>
+<section id="zusammenfassung-und-ausblick">
+<h2>Zusammenfassung und Ausblick<a class="headerlink" href="#zusammenfassung-und-ausblick" title="Link to this heading">#</a></h2>
+<p>In diesem Kapitel haben wir die Jacobi-Matrix als Verallgemeinerung des
+Gradienten für vektorwertige Funktionen kennengelernt. Im nächsten Kapitel
+werden wir sie für die Kettenregel verwenden.</p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -588,6 +601,7 @@ lautet also</p>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lernziele">Lernziele</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#jacobi-matrix-einer-vektorwertigen-funktion">Jacobi-Matrix einer vektorwertigen Funktion</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#beispiel-einer-jacobi-matrix">Beispiel einer Jacobi-Matrix</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zusammenfassung-und-ausblick">Zusammenfassung und Ausblick</a></li>
 </ul>
   </nav></div>
 

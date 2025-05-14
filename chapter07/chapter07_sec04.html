@@ -513,29 +513,30 @@ der verketten Funktion <span class="math notranslate nohighlight">\(f(g(x))\)</s
 <p>In mehreren Dimensionen wird diese Regel durch die Verwendung von
 Jacobi-Matrizen erweitert. Die Jacobi-Matrix ist eine Matrix, die alle ersten
 partiellen Ableitungen einer mehrdimensionalen Funktion enthält.</p>
-<p>Die mehrdimensionale Kettenregel lautet dann: Wenn wir zwei Funktionen <span class="math notranslate nohighlight">\(f\)</span> unf
+<p>Die mehrdimensionale Kettenregel lautet dann: Wenn wir zwei Funktionen <span class="math notranslate nohighlight">\(f\)</span> und
 <span class="math notranslate nohighlight">\(g\)</span> haben, die miteinander verkettet zu <span class="math notranslate nohighlight">\(f\circ g\)</span> werden, dann ist die
 Jacobi-Matrix der verketteten Funktion   gleich dem Produkt der Jacobi-Matrix
 von <span class="math notranslate nohighlight">\(f\)</span> nach <span class="math notranslate nohighlight">\(g\)</span> und der Jacobi-Matrix von <span class="math notranslate nohighlight">\(g\)</span> nach <span class="math notranslate nohighlight">\(\vec{x}\)</span>:</p>
 <div class="math notranslate nohighlight">
-\[J_{f\circ g}(\vec{x}) = J_{f}(g(\vec{x})) \cdot J_g(\vec{x}).\]</div>
-<p>Dabei ist <span class="math notranslate nohighlight">\(J_{f}\)</span> die Jacobi-Matrix von <span class="math notranslate nohighlight">\(f\)</span> ausgewertet an der Stelle
-<span class="math notranslate nohighlight">\(g(\vec{x})\)</span> und <span class="math notranslate nohighlight">\(J_{g}\)</span> die Jacobi-Matrix von <span class="math notranslate nohighlight">\(g\)</span> ausgewertet an der Stelle
-<span class="math notranslate nohighlight">\(\vec{x}\)</span>.</p>
+\[\mathbf{J}_{f\circ g}(\vec{x}) =
+\mathbf{J}_{f}(g(\vec{x})) \cdot \mathbf{J}_g(\vec{x}).\]</div>
+<p>Dabei ist <span class="math notranslate nohighlight">\(\mathbf{J}_{f}\)</span> die Jacobi-Matrix von <span class="math notranslate nohighlight">\(f\)</span> ausgewertet an der Stelle
+<span class="math notranslate nohighlight">\(g(\vec{x})\)</span> und <span class="math notranslate nohighlight">\(\mathbf{J}_{g}\)</span> die Jacobi-Matrix von <span class="math notranslate nohighlight">\(g\)</span> ausgewertet an der
+Stelle <span class="math notranslate nohighlight">\(\vec{x}\)</span>.</p>
 <p>Diese Regel erlaubt es uns, die Ableitung einer verketteten Funktion zu
 berechnen, selbst wenn diese Funktion aus mehreren ineinander verschachtelten
 Funktionen besteht, die jeweils von mehreren Variablen abhängen.</p>
 <p>Wir betrachten erneut das obige Beispiel und bilden zuerst die beiden
 Jacobi-Matrizen:</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}J_{g}(r, \varphi) =
+\[\begin{split}\mathbf{J}_{g}(r, \varphi) =
 \begin{pmatrix}
 \sin(\varphi) &amp; r\cdot\cos(\varphi)\\
 \cos(\varphi) &amp; -r\cdot\sin(\varphi)
 \end{pmatrix}\end{split}\]</div>
 <p>und</p>
 <div class="math notranslate nohighlight">
-\[\begin{split} J_{f}(x,y) =
+\[\begin{split}\mathbf{J}_{f}(x,y) =
 \begin{pmatrix}
 2x &amp; 2y \\
 y &amp; x \\
@@ -544,7 +545,7 @@ y &amp; x \\
 <p>Dann ist die Jacobi-Matrix der verketteten Funktion</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
-J_{f\circ g}(r,\varphi) &amp;= J_{f}(g(r,\varphi)) \cdot J_{g}(r, \varphi) = \\
+\mathbf{J}_{f\circ g}(r,\varphi) &amp;= \mathbf{J}_{f}(g(r,\varphi)) \cdot \mathbf{J}_{g}(r, \varphi) = \\
 &amp;=
 \begin{pmatrix}
 2r\cdot\sin(\varphi) &amp; 2r\cdot \cos(\varphi) \\
@@ -570,7 +571,8 @@ einfacher.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Video zu “Mehrdimensionale Kettenregel” von Prof. Hoever</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/LkWAGcGGDD8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/LkWAGcGGDD8"
+title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </div>
 </details></section>
 </section>

@@ -14,21 +14,23 @@ aber der Funktionswert war bisher immer eine reelle Zahl, also ein Skalar. Daher
 nennt man solche Funktionen **skalarwertig**. So wie wir beim Definitionsgebiet
 von einem eindimensionalen Definitionsgebiet $x\in \mathbb{R}$ der reellen
 Zahlen zu Definitionsgebieten mit mehreren unabhängigen Variablen, also Vektoren
-$\vec{x}\in\mathbb{R}$ übergegangen sind, können wir das mit den Funktionswerten
-auch machen. Sind die Funktionswerte einer Funktion Vektoren, so nennen wir die
-Funktion **vektorwertig**.
+$\vec{x}\in\mathbb{R}^n$ übergegangen sind, können wir das mit den
+Funktionswerten auch machen. Sind die Funktionswerte einer Funktion Vektoren, so
+nennen wir die Funktion **vektorwertig**.
 
 ```{admonition} Was ist ... eine vektorwertige Funktion?
 :class: note
 Eine vektorwertige Funktion ist eine Funktion, die Vektoren als Wertemenge bzw.
-Funktionswerte hat.
+Funktionswerte hat. Jedem Punkt $\vec{x}\in\mathbb{R}^m$ wird eindeutig ein
+Vektor $\mathbb{R}^n$ zugeordnet, in mathematischer Notation
+
+$$f:\mathbb{R}^m \rightarrow \mathbb{R}^n.$$ Übrigens, in der Physik wird eine
+vektorwertige Funktion auch oft **Vektorfeld** genannt.
 ```
 
-Übrigens, in der Physik wird eine vektorwertige Funktion auch oft **Vektorfeld**
-genannt.
-
 ```{dropdown} Video zu "Vektorwertige Funktionen" von Mathematische Methoden
-<iframe width="560" height="315" src="https://www.youtube.com/embed/KUSljbPOK78" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/KUSljbPOK78"
+title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 ```
 
 ## Beispiel Windgeschwindigkeiten

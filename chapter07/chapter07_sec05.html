@@ -528,7 +528,7 @@ Wir berechnen zunächst die partiellen Ableitungen:</p>
 </details></div>
 <div class="miniexercise admonition">
 <p class="admonition-title">Übung 7.2</p>
-<p>Berechnen Sie die Jacobi-Matrix <span class="math notranslate nohighlight">\(J(f)\)</span> zu folgenden Funktionen.</p>
+<p>Berechnen Sie die Jacobi-Matrix <span class="math notranslate nohighlight">\(\mathbf{J}\)</span> zu folgenden Funktionen.</p>
 <p>a)</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}f(x,y) = \begin{pmatrix} x^2 + y^2 \\ x^2 - y^2 \end{pmatrix}\end{split}\]</div>
@@ -540,10 +540,10 @@ Wir berechnen zunächst die partiellen Ableitungen:</p>
 <p class="admonition-title">Lösung</p>
 <p>a)</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}J(f) = \begin{pmatrix} 2x &amp; 2y \\ 2x &amp; -2y \end{pmatrix}\end{split}\]</div>
+\[\begin{split}\mathbf{J}_{f}(x,y) = \begin{pmatrix} 2x &amp; 2y \\ 2x &amp; -2y \end{pmatrix}\end{split}\]</div>
 <p>b)</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}J(f) = \begin{pmatrix}9x^2y^2 &amp; 6x^3y \\ \cos(x) &amp; 0 \end{pmatrix}\end{split}\]</div>
+\[\begin{split}\mathbf{J}_{f}(x,y) = \begin{pmatrix}9x^2y^2 &amp; 6x^3y \\ \cos(x) &amp; 0 \end{pmatrix}\end{split}\]</div>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Lösungsweg</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
@@ -559,7 +559,7 @@ Wir berechnen zunächst die partiellen Ableitungen:</p>
 \end{align*}\]</div>
 <p class="sd-card-text">Damit lautet die Jacobi-Matrix</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}J(f) = \begin{pmatrix} 2x &amp; 2y \\ 2x &amp; -2y \end{pmatrix}\end{split}\]</div>
+\[\begin{split}\mathbf{J}_{f}(x,y) = \begin{pmatrix} 2x &amp; 2y \\ 2x &amp; -2y \end{pmatrix}\end{split}\]</div>
 <p class="sd-card-text">b)</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}f(x,y) = \begin{pmatrix} 3x^3y^2 \\ \sin(x) \end{pmatrix}\end{split}\]</div>
@@ -572,7 +572,7 @@ Wir berechnen zunächst die partiellen Ableitungen:</p>
 \end{align*}\]</div>
 <p class="sd-card-text">Damit lautet die Jacobi-Matrix</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}J(f) = \begin{pmatrix}9x^2y^2 &amp; 6x^3y \\ \cos(x) &amp; 0 \end{pmatrix}\end{split}\]</div>
+\[\begin{split}\mathbf{J}_{f}(x,y) = \begin{pmatrix}9x^2y^2 &amp; 6x^3y \\ \cos(x) &amp; 0 \end{pmatrix}\end{split}\]</div>
 </div>
 </details></div>
 <div class="miniexercise admonition">
@@ -595,11 +595,11 @@ g:\mathbb{R}^3\mapsto\mathbb{R}^3, \quad &amp; g(x,y,z) = \begin{pmatrix} x y \\
 <p class="admonition-title">Lösung</p>
 <p>a)</p>
 <div class="math notranslate nohighlight">
-\[J(h)(x,y) = \left(2x^3 y^4 + 2x^3y^4, \; 2x^4 y^3 + 2x^4 y^3\right) = 
+\[\mathbf{J}_{h}(x,y) = \left(2x^3 y^4 + 2x^3y^4, \; 2x^4 y^3 + 2x^4 y^3\right) = 
 \left(4x^3 y^4, \; 4x^4 y^3 \right)\]</div>
 <p>b)</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}J(h)(x,y,z) = \begin{pmatrix} 0 &amp; -z &amp; -y\\ -z &amp; 0 &amp; -x \\ -y &amp; -x &amp; 0 \end{pmatrix}\end{split}\]</div>
+\[\begin{split}\mathbf{J}_{h}(x,y,z) = \begin{pmatrix} 0 &amp; -z &amp; -y\\ -z &amp; 0 &amp; -x \\ -y &amp; -x &amp; 0 \end{pmatrix}\end{split}\]</div>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Lösungsweg</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
@@ -609,21 +609,23 @@ g:\mathbb{R}^3\mapsto\mathbb{R}^3, \quad &amp; g(x,y,z) = \begin{pmatrix} x y \\
 f:\mathbb{R}^3\mapsto\mathbb{R},   \quad &amp; f(x,y,z) = x^2 y^2 z^2,\\
 g:\mathbb{R}^2\mapsto\mathbb{R}^3, \quad &amp; g(x,y) = \begin{pmatrix} x \\ y \\ x y \end{pmatrix} 
 \end{align*}\]</div>
-<p class="sd-card-text">Wir berechnen zuerst die Jacobi-Matrix von <span class="math notranslate nohighlight">\(f\)</span> und <span class="math notranslate nohighlight">\(g\)</span>:</p>
+<p class="sd-card-text">Wir berechnen zuerst die Jacobi-Matrizen von <span class="math notranslate nohighlight">\(f\)</span> und <span class="math notranslate nohighlight">\(g\)</span>:</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}J(f) = \left(2x y^2 z^2,\; 2x^2 y z^2,\; 2x^2 y^2 z\right) 
+\[\begin{split}\mathbf{J}_{f} = \left(2x y^2 z^2,\; 2x^2 y z^2,\; 2x^2 y^2 z\right) 
 \quad \text{ und } \quad
-J(g) = \begin{pmatrix} 1 &amp; 0 \\ 0 &amp; 1 \\ y &amp; x\end{pmatrix}\end{split}\]</div>
+\mathbf{J}_{g} = \begin{pmatrix} 1 &amp; 0 \\ 0 &amp; 1 \\ y &amp; x\end{pmatrix}\end{split}\]</div>
+<p class="sd-card-text">Da <span class="math notranslate nohighlight">\(f\)</span> eine skalarwertige Funktion ist, stimmt die Jacobi-Matrix <span class="math notranslate nohighlight">\(\mathbf{J}_{f}\)</span> mit dem Gradienten <span class="math notranslate nohighlight">\(\nabla f\)</span> überein.</p>
 <p class="sd-card-text">Mit der mehrdimensionalen Kettenregel erhalten wir</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{multline*}
-J(h) = J(f) \cdot J(g) = \left(2x y^2 z^2, \; 2x^2 y z^2,\; 2x^2 y^2 z\right) \cdot 
+\mathbf{J}_{h} = \mathbf{J}_{f} \cdot \mathbf{J}_{g} =
+\left(2x y^2 z^2, \; 2x^2 y z^2,\; 2x^2 y^2 z\right) \cdot 
 \begin{pmatrix} 1 &amp; 0 \\ 0 &amp; 1 \\ y &amp; x\end{pmatrix} = \\
 \left(2x y^2 z^2 + 2x^2 y^3 z, \; 2x^2 y z^2 + 2x^3 y^2 z \right) 
 \end{multline*}\]</div>
 <p class="sd-card-text">Als nächstes ersetzen wir noch <span class="math notranslate nohighlight">\(z\)</span> durch <span class="math notranslate nohighlight">\(x y\)</span> (siehe Definition von <span class="math notranslate nohighlight">\(h\)</span>) und erhalten</p>
 <div class="math notranslate nohighlight">
-\[J(h)(x,y) = \left(2x^3 y^4 + 2x^3 y^4, \; 2x^4 y^3 + 2x^4 y^3\right) = 
+\[\mathbf{J}_{h}(x,y) = \left(2x^3 y^4 + 2x^3 y^4, \; 2x^4 y^3 + 2x^4 y^3\right) = 
 \left(4x^3 y^4, \; 4x^4 y^3 \right).\]</div>
 <p class="sd-card-text">b) <span class="math notranslate nohighlight">\(h:\mathbb{R}^3\mapsto\mathbb{R}^3\)</span> mit <span class="math notranslate nohighlight">\(h(x,y,z)=f(g(x,y,z))\)</span>, wobei</p>
 <div class="amsmath math notranslate nohighlight">
@@ -633,12 +635,12 @@ g:\mathbb{R}^3\mapsto\mathbb{R}^3, \quad &amp; g(x,y,z) = \begin{pmatrix} x y \\
 \end{align*}\]</div>
 <p class="sd-card-text">Wir berechnen zuerst die Jacobi-Matrix von <span class="math notranslate nohighlight">\(f\)</span> und <span class="math notranslate nohighlight">\(g\)</span>:</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}J(f) = \begin{pmatrix} 0 &amp; -1 &amp; 0 \\ 0 &amp; 0 &amp; -1 \\ -1 &amp; 0 &amp; 0 \end{pmatrix} 
+\[\begin{split}\mathbf{J}_{f} = \begin{pmatrix} 0 &amp; -1 &amp; 0 \\ 0 &amp; 0 &amp; -1 \\ -1 &amp; 0 &amp; 0 \end{pmatrix} 
 \quad \text{ und } \quad
-J(g) = \begin{pmatrix} y &amp; x &amp; 0 \\ 0 &amp; z &amp; y \\ z &amp; 0 &amp; x \end{pmatrix}\end{split}\]</div>
+\mathbf{J}_{g} = \begin{pmatrix} y &amp; x &amp; 0 \\ 0 &amp; z &amp; y \\ z &amp; 0 &amp; x \end{pmatrix}\end{split}\]</div>
 <p class="sd-card-text">Mit der mehrdimensionalen Kettenregel erhalten wir</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}J(h)(x,y,z) = J(f)\cdot J(g) = 
+\[\begin{split}\mathbf{J}_{h}(x,y,z) = \mathbf{J}_{f}\cdot \mathbf{J}_{g} = 
 \begin{pmatrix} 0 &amp; -1 &amp; 0 \\ 0 &amp; 0 &amp; -1 \\ -1 &amp; 0 &amp; 0 \end{pmatrix} \cdot \begin{pmatrix} y &amp; x &amp; 0 \\ 0 &amp; z &amp; y \\ z &amp; 0 &amp; x \end{pmatrix} =
 \begin{pmatrix} 0 &amp; -z &amp; -y \\ -z &amp; 0 &amp; -x \\ -y &amp; -x &amp; 0 \end{pmatrix}\end{split}\]</div>
 </div>
