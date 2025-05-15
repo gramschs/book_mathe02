@@ -133,3 +133,9 @@ einfacher.
 <iframe width="560" height="315" src="https://www.youtube.com/embed/LkWAGcGGDD8"
 title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 ```
+
+## Zusammenfassung und Ausblick
+
+Nach diesem Ausflug zur mehrdimensionalen Kettenregel werden wir uns im nächsten
+Kapitel mit der Linearisierung und Berechnung von Extremwerten mehrdimensionaler
+Funktionen beschäftigen.
