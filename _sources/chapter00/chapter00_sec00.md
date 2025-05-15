@@ -1,6 +1,0 @@
-# Wiederholung Differentialrechnung
-
-Themen:
-
-```{tableofcontents}
-```
