@@ -19,16 +19,16 @@ Funktionsgraphen und der x-Achse berechnet werden.
     * der Graph teils oberhalb und teils unterhalb der x-Achse liegt. 
 
 * Sie wissen, wie man den Flächeninhalt zwischen den beiden Funktionsgraphen $f(x)$ und $g(x)$
-  berechnet. 
+  berechnet.
 ```
 
 ## Flächeninhalt: Graph oberhalb der x-Achse
 
 Das Integral wurde in der Mathematik 1 als der orientierte Flächeninhalt
 zwischen Funktionsgraph $f(x)$ und x-Achse eingeführt. Liegen die Funktionswerte
-$f(x)$ alle oberhalb der x-Achse wie in dem nachfolgendem Beispiel, so ist der
-orientierte Flächeninhalt gleich dem Flächeninhalt. Damit ist die gesuchte Fläche 
-$A$ also
+$f(x)$ alle oberhalb der x-Achse wie in dem nachfolgenden Beispiel, so ist der
+orientierte Flächeninhalt gleich dem Flächeninhalt. Damit ist die gesuchte
+Fläche $A$ also
 
 $$A = \int_{a}^{b} f(x) \, dx.$$
 
@@ -43,9 +43,10 @@ Beispiel: In der folgenden Abbildung ist der Funktionsgraph $f(x)$ der Funktion
 $f(x)=x^2+1$ zu sehen. Berechnet werden soll der rot gefärbte Flächeninhalt $A$
 zwischen $f(x)$ und der x-Achse mit den Grenzen $x = -2$ und $x = 3$.
 
+<!-- markdownlint-disable MD033 -->
 <div id="chap03_sec02_fig01" class="jxgbox" style="width:75%; aspect-ratio:16/9; margin: 0 auto;"></div>
 <script type="text/javascript">
-    board = JXG.JSXGraph.initBoard('chap03_sec02_fig01', 
+    board = JXG.JSXGraph.initBoard('chap03_sec02_fig01',
         {boundingbox:[-5, 20, 5, -2], axis:true, showCopyright: false, showNavigation: false});
     let graph = board.create('functiongraph', [function(x) {return x**2+1;}, -5, 5], {strokeWidth:2, strokeColor:'#000000'});
     let area  = board.create('integral', [[-2.0, 3.0], graph],
@@ -60,11 +61,13 @@ folgendermaßen gerechnet:
 $$A = \int_{-2}^{3} f(x)\, dx = \int_{-2}^{3} x^2 + 1 \, dx =
 \big[\frac{1}{3}x^3+x\big]_{-2}^{3}=\frac{50}{3}\approx 16.6667.$$
 
-In dem folgenden Video wird die Vorgehensweise nochnmal ausführlich erklärt und
+In dem folgenden Video wird die Vorgehensweise nochmal ausführlich erklärt und
 ein weiteres Beispiel vorgerechnet.
 
 ```{dropdown} Video "Flächen oberhalb der x-Achse" von VisualX
-<iframe width="560" height="315" src="https://www.youtube.com/embed/L3m_jn9w1dU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/L3m_jn9w1dU"
+title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
+encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 ```
 
 ## Flächeninhalt: Graph unterhalb der x-Achse
@@ -108,7 +111,9 @@ Weitere Erklärungen sowie ein weiteres Beispiel werden ausführlich in dem
 folgenden Video präsentiert.
 
 ```{dropdown} Video "Flächen unterhalb der x-Achse" von VisualX
-<iframe width="560" height="315" src="https://www.youtube.com/embed/_SA6iZNAKzw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/_SA6iZNAKzw"
+title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
+encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 ```
 
 ## Flächeninhalt: Graph oberhalb und unterhalb der x-Achse
@@ -126,9 +131,10 @@ liegt wie beispielsweise bei der Funktion $f(x)=x^2-1$.
     let area3c = board3.create('integral', [[1.0, 3.0],   graph3], {fillColor:'#f06666'});
 </script><br>
 
-Würden wir jetzt einfach das bestimmte Integral im Intervall $[-2,3]$ berechnen, so erhielten wir
+Würden wir jetzt einfach das bestimmte Integral im Intervall $[-2,3]$ berechnen,
+so erhielten wir
 
-$$\int_{-2}^{3} f(x)\, dx = \int_{-2}^{3} x^2-1\, dx = \frac{20}{3} \approx 6.6667.$$ 
+$$\int_{-2}^{3} f(x)\, dx = \int_{-2}^{3} x^2-1\, dx = \frac{20}{3} \approx 6.6667.$$
 
 Das ist zuwenig! Bereits die Fläche zwischen $f(x)$ und der x-Achse im Intervall
 $[1,3]$ alleine hat schon den Flächeninhalt $\frac{20}{3}\approx 6.6667$. Wir
@@ -143,7 +149,7 @@ Daher wird jetzt das Intervall $[-2,3]$ in drei Teilintervalle unterteilt:
 
 * $I_1 = [-2, -1]$ (also von $a=-2$ bis zur 1. Nullstelle)
 * $I_2 = [-1, +1]$ (also von der 1. Nullstelle bis zur 2. Nullstelle)
-* $I_3 = [+1, +3]$ (also von der 2. Nullstelle bis $b=3$) 
+* $I_3 = [+1, +3]$ (also von der 2. Nullstelle bis $b=3$)
 
 Das bestimmte Integral im 1. Teilintervall ist positiv, im 2. Teilintervall ist
 es negativ und im 3. Teilintervall wieder positiv:
@@ -167,18 +173,29 @@ $$A = \frac{4}{3} \textcolor{red}{+} \frac{4}{3} + \frac{20}{3} = \frac{28}{3}.$
 
 ```{admonition} Kochrezept zur Berechnung des Flächeninhaltes zwischen einem Funktionsgraphen und der x-Achse
 :class: note
-Ist der Flächeninhalt $A$ zwischen dem Funktionsgraphen $f(x)$ und der x-Achse mit den Grenzen $x=a$ und $x=b$ gesucht, gehen Sie folgendermaßen vor:
+Ist der Flächeninhalt $A$ zwischen dem Funktionsgraphen $f(x)$ und der x-Achse
+mit den Grenzen $x=a$ und $x=b$ gesucht, gehen Sie folgendermaßen vor:
 
-1. Fertigen Sie eine Skizze der Funktion an, um zu ermitteln, wo $f(x)$ oberhalb und wo unterhalb der x-Achse verläuft.
-2. Berechnen Sie die Nullstellen der Funktion $f$. Unterteilen Sie damit das Intervall $[a,b]$ in Teilintervalle $I_1, I_2, \ldots$, so dass die Funktion $f$ in einem solchen Teilintervall komplett oberhalb oder komplett unterhalb der x-Achse liegt.
-3. Berechnen Sie dann in jedem Teilintervall das Integral einzeln. Wenn die Funktion in dem Intervall negativ ist, multiplizieren Sie anschließend den orientierten Flächeninhalt mit (-1). Das Ergebnis sind die (positiven!) Teilflächen $A_1, A_2, \ldots$.
-4. Addieren Sie zuletzt alle Teilflächen $A = A_1 + A_2 + \dots$. Das Gesamtergebnis ist der gesuchte Flächeninhalt $A$.
+1. Fertigen Sie eine Skizze der Funktion an, um zu ermitteln, wo $f(x)$ oberhalb
+   und wo unterhalb der x-Achse verläuft.
+2. Berechnen Sie die Nullstellen der Funktion $f$. Unterteilen Sie damit das
+   Intervall $[a,b]$ in Teilintervalle $I_1, I_2, \ldots$, so dass die Funktion
+   $f$ in einem solchen Teilintervall komplett oberhalb oder komplett unterhalb
+   der x-Achse liegt.
+3. Berechnen Sie dann in jedem Teilintervall das Integral einzeln. Wenn die
+   Funktion in dem Intervall negativ ist, multiplizieren Sie anschließend den
+   orientierten Flächeninhalt mit (-1). Das Ergebnis sind die (positiven!)
+   Teilflächen $A_1, A_2, \ldots$.
+4. Addieren Sie zuletzt alle Teilflächen $A = A_1 + A_2 + \dots$. Das
+   Gesamtergebnis ist der gesuchte Flächeninhalt $A$.
 ```
 
 Das folgende Video fasst die Vorgehensweise zusammen.
 
 ```{dropdown} Video "Flächen zwischen Graph und x-Achse" von VisualX
-<iframe width="560" height="315" src="https://www.youtube.com/embed/vdSWk1bCnMA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/vdSWk1bCnMA"
+title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
+encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 ```
 
 ## Fläche zwischen zwei Funktionsgraphen
@@ -212,7 +229,9 @@ Integration über die Differenzfunktion den gleichen Flächeninhalt ergibt wie d
 gesuchte Fläche zwischen den beiden Funktionsgraphen.
 
 ```{dropdown} Video "Flächen zwischen Graphen mit Differenzfunktion" von VisualX
-<iframe width="560" height="315" src="https://www.youtube.com/embed/OXQvPFGb9uk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/OXQvPFGb9uk"
+title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
+encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 ```
 
 Werden die Schnittpunkte nicht sorgfältig ermittelt und das Intervall, über das
@@ -220,5 +239,13 @@ integriert wird, nicht sorgsam aufgeteilt, so passieren leicht Fehler, wie das
 folgende Video demonstriert.
 
 ```{dropdown} Video "Flächen zwischen Graphen mit mehreren Schnittstellen" von VisualX
-<iframe width="560" height="315" src="https://www.youtube.com/embed/nFG5_-kS7fI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/nFG5_-kS7fI"
+title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
+encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 ```
+
+## Zusammenfassung und Ausblick
+
+In diesem Kapitel haben wir das Integral dazu genutzt, Flächeninhalte zu
+berechnen. Im nächsten Kapitel wenden wir das Integral auf eine neue Aufgabe an:
+die Berechnung der Länge von Funktionsgraphen.

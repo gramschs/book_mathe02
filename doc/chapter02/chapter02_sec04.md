@@ -39,7 +39,9 @@ $$V = \pi \int_a^b f(x)^2 \, dx$$
 berechnet.
 
 ```{dropdown} Video "Rotationskörper (x-Achse)" von Mathematrick
-<iframe width="560" height="315" src="https://www.youtube.com/embed/mk7PZfAmB1g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/mk7PZfAmB1g"
+title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
+encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 ```
 
 ## Rotation um y-Achse
@@ -64,5 +66,12 @@ wobei $c = f(a)$ und $d = f(b)$ die Grenzen der Integration sind und $f^{-1}(y)$
 Umkehrfunktion von $f(x)$ ist.
 
 ```{dropdown} Video "Rotationskörper (y-Achse)" von Mathematrick
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Jv1DrugW1nk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Jv1DrugW1nk"
+title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
+encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 ```
+
+## Zusammenfassung und Ausblick
+
+Es gibt noch viele Anwendungsmöglichkeiten für Integrale. Dennoch beenden wir
+vorerst dieses Thema und wechseln in den nächsten Kapiteln zu Funktionsreihen.
