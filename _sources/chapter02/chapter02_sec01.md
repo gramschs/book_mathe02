@@ -13,10 +13,9 @@
 Ein Auto fährt in der Stadt mit 50 km/h und muss leicht abbremsen. Dabei werden
 folgende Geschwindigkeiten gemessen:
 
-<span style="font-weight:normal">Zeit in s</span> | <span style="font-weight:normal">1</span>   | <span style="font-weight:normal">2</span>    | <span style="font-weight:normal">3</span> | <span style="font-weight:normal">4</span> | <span style="font-weight:normal">5</span> | <span style="font-weight:normal">6</span> |
-| --- | :---: | :---: | :---: | :---: | :---: | :---: |
-|Geschwindigkeit in km/h |  50.0    | 48.9  | 45.7 | 41.8 | 40.0 | 45.0 |
-|  |
+| Zeit in s             | 1    | 2    | 3    | 4    | 5    | 6    |
+|-----------------------|:----:|:----:|:----:|:----:|:----:|:----:|
+| Geschwindigkeit in km/h | 50.0 | 48.9 | 45.7 | 41.8 | 40.0 | 45.0 |
 
 Wenn jetzt danach gefragt wird, mit welcher Durchschnittsgeschwindigkeit das
 Auto in diesen sechs Sekunden unterwegs war, bilden wir den Mittelwert. Dazu
@@ -32,7 +31,8 @@ Tabelle. Auf der x-Achse sind die Zeitpunkte, auf der y-Achse die
 Geschwindigkeiten. Die schwarze Gerade repräsentiert den Mittelwert als
 konstante Funktion.
 
-<div id="chap03_sec01_fig01" class="jxgbox" style="width:75%; aspect-ratio:16/9; margin: 0 auto;""></div>
+<!-- markdownlint-disable MD033 -->
+<div id="chap03_sec01_fig01" class="jxgbox" style="width:75%; aspect-ratio:16/9; margin: 0 auto"></div>
 <script type="text/javascript">
     board = JXG.JSXGraph.initBoard('chap03_sec01_fig01',
         {boundingbox:[-1, 53, 8, 32], axis:false, showCopyright: false});
@@ -54,7 +54,7 @@ bezeichnen die Anzahl der Messungen mit $N$ und die einzelnen Messungen mit
 $y_1, y_2, \ldots, y_N$. Für den Mittelwert führen wir die Abkürzung $\bar{y}$
 ein. Dann wird der Mittelwert nach der Formel
 
-$$\bar{y} = \frac{1}{N}\big(y_1 + y_2 + \ldots + y_n \big)$$
+$$\bar{y} = \frac{1}{N}\big(y_1 + y_2 + \ldots + y_N \big)$$
 
 berechnet. Um die Pünktchen in der Formel zu sparen, verwenden wir das
 Summensymbol $\Sigma$:
@@ -65,11 +65,13 @@ Zusammenfassend halten wir folgende Definition eines Mittelwertes fest.
 
 ```{admonition} Was ist ... der Mittelwert?
 :class: note
-Der Mittelwert einer Liste von Zahlen ist die Summe der Zahlen geteilt durch ihre Anzahl. Berechnet wird der Mittelwert mit der Formel
+Der Mittelwert einer Liste von Zahlen ist die Summe der Zahlen geteilt durch
+ihre Anzahl. Berechnet wird der Mittelwert mit der Formel
 
 $$\bar{y} = \frac{1}{N} \sum_{i=1}^{N} y_i.$$
 
-Dabei ist $\bar{y}$ die Bezeichnung für den Mittelwert, $N$ die Anzahl der Zahlen und $y_i$ sind die einzelnen Zahlen.
+Dabei ist $\bar{y}$ die Bezeichnung für den Mittelwert, $N$ die Anzahl der
+Zahlen und $y_i$ sind die einzelnen Zahlen.
 ```
 
 ## Mehr ist besser  
@@ -120,7 +122,7 @@ wäre der Mittelwert der Grenzwert
 
 $$\bar{y} = \lim_{N\to\infty} \frac{1}{N} \sum_{i=1}^{N} y_i.$$
 
-Das setzt aber voraus, dass wir kontinuerlich die Geschwindigkeit messen. Oder
+Das setzt aber voraus, dass wir kontinuierlich die Geschwindigkeit messen. Oder
 anders ausgedrückt, das setzt voraus, dass wir die Geschwindigkeit als eine
 Funktion darstellen können, als ein sogenanntes Zeit-Geschwindigkeitsdiagramm.
 Für den perfekten Mittelwert müssen wir also den Mittelwert der Funktion
@@ -170,16 +172,18 @@ $$m = \frac{1}{b-a} \lim_{N\to\infty} \sum_{i=1}^{N-1} f(x_i)\cdot
 
 Das Intervall $b-a$ wird also in $(N-1)$ kleine Stückchen unterteilt. Jedes
 Stückchen ist dabei gleich groß und könnte mit $\Delta x$ bezeichnet werden. In
-der folgenden Grafik zeigen wir das anhand unserer 11 Messwerte. Wir lassen die
-letzte Messung weg und erhalten $\Delta x = 0.5 s$. Der Startzeitpunkt ist $a =
-1 s$ und der Endzeitpunkt ist $b = 6 s$.
+der folgenden Grafik zeigen wir das anhand unserer 11 Messwerte. Da wir elf
+Messwerte im Abstand von 0.5 Sekunden haben, ergibt sich eine Schrittweite von
+$\Delta x = 0.5$ Der Startzeitpunkt ist $a = 1 s$ und der Endzeitpunkt ist $b =
+6 s$.
 
 ```{figure} pics/chapter03_sec01_fig03.png
 ---
 width: 600px
 name: chapter03_sec01_fig03
 ---
-Annäherung des Mittelwertes einer Funktion $f$ über die Summe von Produkten $f(x_i)\cdot \Delta x$ im Intervall $[a,b]$
+Annäherung des Mittelwertes einer Funktion $f$ über die Summe von Produkten
+$f(x_i)\cdot \Delta x$ im Intervall $[a,b]$
 ```
 
 Wir summieren also über die Flächeninhalte $f(x_i)\cdot \Delta x$. Wenn die
@@ -191,9 +195,11 @@ $$m = \frac{1}{b-a} \int_{a}^{b} f(x) \, dx.$$
 
 ```{admonition} Was ist ... der Mittelwert einer Funktion?
 :class: note
-Der Mittelwert einer Funktion in einem Intervall ist das bestimmte Integral auf diesem Intervall geteilt durch die Intervall-Länge.
+Der Mittelwert einer Funktion in einem Intervall ist das bestimmte Integral auf
+diesem Intervall geteilt durch die Intervall-Länge.
 
-Etwas präziser formuliert berechnet sich der Mittelwert $m$ einer stetigen Funktion $f$ im Intervall $[a,b]$ über die Formel
+Etwas präziser formuliert berechnet sich der Mittelwert $m$ einer stetigen
+Funktion $f$ im Intervall $[a,b]$ über die Formel
 
 $$m = \frac{1}{b-a} \int_{a}^{b} f(x) \, dx.$$
 ```
@@ -205,4 +211,13 @@ Intervall $[0,24]$. Vergleichen Sie anschließend Ihre Ergebnis mit der Rechnung
 in dem folgenden Video.
 
 ```{dropdown} Video "Mittelwert" von Magda liebt Mathe
-<iframe width="560" height="315" src="https://www.youtube.com/embed/FC-0Z_DIJs8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/FC-0Z_DIJs8"
+title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
+encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+```
+
+## Zusammenfassung und Ausblick
+
+In diesem Kapitel haben wir gelernt, dass das bestimmte Integral als eine
+Mittelung interpretiert werden kann. Im nächsten Kapitel gehen wir erneut auf
+den Aspekt ein, mit Hilfe von Integralen Flächen zu berechnen.

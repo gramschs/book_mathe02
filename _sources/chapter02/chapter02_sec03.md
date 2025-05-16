@@ -78,7 +78,8 @@ die Substitutionsregel benutzt werden muss. Wir setzen $z = 1 + \frac{9}{4}x$. D
 
 \begin{align*}
 L & = \int_{1}^{4} \sqrt{1 + \frac{9}{4}x}\, dx = \\
-  & = \int \sqrt{z} \cdot \frac{4}{9} \, dz  = \frac{4}{9}\cdot\frac{2}{3} \left[ z^{\frac{3}{2}}\right] = \\
+  & = \int \sqrt{z} \cdot \frac{4}{9} \, dz  =
+    \frac{4}{9}\cdot\frac{2}{3} \left[ z^{\frac{3}{2}}\right] = \\
   & = \frac{8}{27} \left[\left(1+\frac{9}{4}x\right)^{\frac{3}{2}}\right]_{1}^{4} = \\
   & \approx 7.6337.
 \end{align*}
@@ -105,8 +106,9 @@ $$L \approx \sqrt{\Delta x^2 + \Delta y^2} = \sqrt{(4-1)^2 + (13-4)^2}
 Dies ist nur eine grobe Näherung an die echte Bogenlänge. Besser wird es mit
 zwei Zwischenstopps.
 
-$$L \approx \sqrt{(\Delta x_1)^2 + (\Delta y_1)^2} + \sqrt{(\Delta x_2)^2 + (\Delta y_2)^2}
-+ \sqrt{(\Delta x_3)^2 + (\Delta y_3)^2} .$$
+$$L \approx
+\sqrt{(\Delta x_1)^2 + (\Delta y_1)^2} + \sqrt{(\Delta x_2)^2 + (\Delta y_2)^2}
++ \sqrt{(\Delta x_3)^2 + (\Delta y_3)^2}.$$
 
 Zwei Zwischenstopps ergeben drei Luftlinienstücke, deren Summe eine Schätzung
 für die echte Bogenlänge ist. Noch besser wird es, wenn es noch mehr
@@ -115,12 +117,12 @@ auf der x-Achse für die Zwischenstopps wählen, nämlich $\Delta x =
 \frac{b-a}{N}$. Dann sind es $N$ Luftlinienstücke, die aufsummiert werden.
 
 \begin{align*}
-L \approx L_1 + L_2 + \dots + L_N &= \sqrt{(\Delta x)^2 + (\Delta y_1)^2} + \sqrt{(\Delta x)^2
-+ (\Delta y_2)^2} + \ldots + \sqrt{(\Delta x)^2 + (\Delta y_N)^2} \\
+L \approx L_1 + L_2 + \dots + L_N &= \sqrt{(\Delta x)^2 + (\Delta y_1)^2} +
+\sqrt{(\Delta x)^2 + (\Delta y_2)^2} + \ldots + \sqrt{(\Delta x)^2 + (\Delta y_N)^2}\\
 & = \sum_{i=1}^{N} \sqrt{(\Delta x)^2 + (\Delta y_i)^2}.
 \end{align*}
 
-Jetzt wird ein Trick angewandet. Der Term $(\Delta x)^2$ wird ausgeklammert:
+Jetzt wird ein Trick angewendet. Der Term $(\Delta x)^2$ wird ausgeklammert:
 
 $$L \approx \sum_{i=1}^{N} \sqrt{\Big(1+\frac{(\Delta y_i)^2}{(\Delta
 x)^2}\Big)\cdot (\Delta x)^2}.$$
@@ -150,3 +152,9 @@ $$L = \lim_{N\to\infty} \sum_{i=1}^{N} \sqrt{1 + \left(\frac{\Delta y_i}{\Delta
 x}\right)^2} \Delta x = \int_{a}^{b} \sqrt{1+\left(f'(x)\right)^2}\, dx.$$
 
 Und so kann man die Formel zur Berechnung der Bogenlänge begründen.
+
+## Zusammenfassung und Ausblick
+
+Nun haben wir mit Integralen Flächen (2D) und Bogenlängen (1D) berechnet, fehlt
+noch eine Anwendung für 3D. Im nächsten Kapitel werden wir Volumina von
+Rotationskörpern berechnen.

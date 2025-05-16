@@ -34,7 +34,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=87e54e7c" />
     <link rel="stylesheet" type="text/css" href="../_static/jsxgraph.css?v=a7b027cb" />
@@ -443,6 +443,7 @@
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wie-wird-die-bogenlange-berechnet">Wie wird die Bogenlänge berechnet?</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#beispiel-zur-berechnung-der-bogenlange">Beispiel zur Berechnung der Bogenlänge</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wie-kommt-man-auf-die-formel-zur-berechnung-der-bogenlange">Wie kommt man auf die Formel zur Berechnung der Bogenlänge?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zusammenfassung-und-ausblick">Zusammenfassung und Ausblick</a></li>
 </ul>
             </nav>
         </div>
@@ -532,7 +533,8 @@ dass für die Berechnung des Integrals</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
 L &amp; = \int_{1}^{4} \sqrt{1 + \frac{9}{4}x}\, dx = \\
-  &amp; = \int \sqrt{z} \cdot \frac{4}{9} \, dz  = \frac{4}{9}\cdot\frac{2}{3} \left[ z^{\frac{3}{2}}\right] = \\
+  &amp; = \int \sqrt{z} \cdot \frac{4}{9} \, dz  =
+    \frac{4}{9}\cdot\frac{2}{3} \left[ z^{\frac{3}{2}}\right] = \\
   &amp; = \frac{8}{27} \left[\left(1+\frac{9}{4}x\right)^{\frac{3}{2}}\right]_{1}^{4} = \\
   &amp; \approx 7.6337.
 \end{align*}\]</div>
@@ -558,8 +560,9 @@ lässt sich mit dem Satz des Pythagoras berechnen:</p>
 <p>Dies ist nur eine grobe Näherung an die echte Bogenlänge. Besser wird es mit
 zwei Zwischenstopps.</p>
 <div class="math notranslate nohighlight">
-\[L \approx \sqrt{(\Delta x_1)^2 + (\Delta y_1)^2} + \sqrt{(\Delta x_2)^2 + (\Delta y_2)^2}
-+ \sqrt{(\Delta x_3)^2 + (\Delta y_3)^2} .\]</div>
+\[L \approx
+\sqrt{(\Delta x_1)^2 + (\Delta y_1)^2} + \sqrt{(\Delta x_2)^2 + (\Delta y_2)^2}
++ \sqrt{(\Delta x_3)^2 + (\Delta y_3)^2}.\]</div>
 <p>Zwei Zwischenstopps ergeben drei Luftlinienstücke, deren Summe eine Schätzung
 für die echte Bogenlänge ist. Noch besser wird es, wenn es noch mehr
 Zwischenstopps gibt. Am einfachsten ist es, wenn wir immer den gleichen Abstand
@@ -567,11 +570,11 @@ auf der x-Achse für die Zwischenstopps wählen, nämlich <span class="math notr
 \frac{b-a}{N}\)</span>. Dann sind es <span class="math notranslate nohighlight">\(N\)</span> Luftlinienstücke, die aufsummiert werden.</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
-L \approx L_1 + L_2 + \dots + L_N &amp;= \sqrt{(\Delta x)^2 + (\Delta y_1)^2} + \sqrt{(\Delta x)^2
-+ (\Delta y_2)^2} + \ldots + \sqrt{(\Delta x)^2 + (\Delta y_N)^2} \\
+L \approx L_1 + L_2 + \dots + L_N &amp;= \sqrt{(\Delta x)^2 + (\Delta y_1)^2} +
+\sqrt{(\Delta x)^2 + (\Delta y_2)^2} + \ldots + \sqrt{(\Delta x)^2 + (\Delta y_N)^2}\\
 &amp; = \sum_{i=1}^{N} \sqrt{(\Delta x)^2 + (\Delta y_i)^2}.
 \end{align*}\]</div>
-<p>Jetzt wird ein Trick angewandet. Der Term <span class="math notranslate nohighlight">\((\Delta x)^2\)</span> wird ausgeklammert:</p>
+<p>Jetzt wird ein Trick angewendet. Der Term <span class="math notranslate nohighlight">\((\Delta x)^2\)</span> wird ausgeklammert:</p>
 <div class="math notranslate nohighlight">
 \[L \approx \sum_{i=1}^{N} \sqrt{\Big(1+\frac{(\Delta y_i)^2}{(\Delta
 x)^2}\Big)\cdot (\Delta x)^2}.\]</div>
@@ -596,6 +599,12 @@ Differentialquotienten <span class="math notranslate nohighlight">\(\frac{dy}{dz
 \[L = \lim_{N\to\infty} \sum_{i=1}^{N} \sqrt{1 + \left(\frac{\Delta y_i}{\Delta
 x}\right)^2} \Delta x = \int_{a}^{b} \sqrt{1+\left(f'(x)\right)^2}\, dx.\]</div>
 <p>Und so kann man die Formel zur Berechnung der Bogenlänge begründen.</p>
+</section>
+<section id="zusammenfassung-und-ausblick">
+<h2>Zusammenfassung und Ausblick<a class="headerlink" href="#zusammenfassung-und-ausblick" title="Link to this heading">#</a></h2>
+<p>Nun haben wir mit Integralen Flächen (2D) und Bogenlängen (1D) berechnet, fehlt
+noch eine Anwendung für 3D. Im nächsten Kapitel werden wir Volumina von
+Rotationskörpern berechnen.</p>
 </section>
 </section>
 
@@ -669,6 +678,7 @@ x}\right)^2} \Delta x = \int_{a}^{b} \sqrt{1+\left(f'(x)\right)^2}\, dx.\]</div>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wie-wird-die-bogenlange-berechnet">Wie wird die Bogenlänge berechnet?</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#beispiel-zur-berechnung-der-bogenlange">Beispiel zur Berechnung der Bogenlänge</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wie-kommt-man-auf-die-formel-zur-berechnung-der-bogenlange">Wie kommt man auf die Formel zur Berechnung der Bogenlänge?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zusammenfassung-und-ausblick">Zusammenfassung und Ausblick</a></li>
 </ul>
   </nav></div>
 

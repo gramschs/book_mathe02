@@ -34,7 +34,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=87e54e7c" />
     <link rel="stylesheet" type="text/css" href="../_static/jsxgraph.css?v=a7b027cb" />
@@ -443,6 +443,7 @@
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#flacheninhalt-graph-unterhalb-der-x-achse">Flächeninhalt: Graph unterhalb der x-Achse</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#flacheninhalt-graph-oberhalb-und-unterhalb-der-x-achse">Flächeninhalt: Graph oberhalb und unterhalb der x-Achse</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#flache-zwischen-zwei-funktionsgraphen">Fläche zwischen zwei Funktionsgraphen</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zusammenfassung-und-ausblick">Zusammenfassung und Ausblick</a></li>
 </ul>
             </nav>
         </div>
@@ -485,9 +486,9 @@ berechnet.</p></li>
 <h2>Flächeninhalt: Graph oberhalb der x-Achse<a class="headerlink" href="#flacheninhalt-graph-oberhalb-der-x-achse" title="Link to this heading">#</a></h2>
 <p>Das Integral wurde in der Mathematik 1 als der orientierte Flächeninhalt
 zwischen Funktionsgraph <span class="math notranslate nohighlight">\(f(x)\)</span> und x-Achse eingeführt. Liegen die Funktionswerte
-<span class="math notranslate nohighlight">\(f(x)\)</span> alle oberhalb der x-Achse wie in dem nachfolgendem Beispiel, so ist der
-orientierte Flächeninhalt gleich dem Flächeninhalt. Damit ist die gesuchte Fläche
-<span class="math notranslate nohighlight">\(A\)</span> also</p>
+<span class="math notranslate nohighlight">\(f(x)\)</span> alle oberhalb der x-Achse wie in dem nachfolgenden Beispiel, so ist der
+orientierte Flächeninhalt gleich dem Flächeninhalt. Damit ist die gesuchte
+Fläche <span class="math notranslate nohighlight">\(A\)</span> also</p>
 <div class="math notranslate nohighlight">
 \[A = \int_{a}^{b} f(x) \, dx.\]</div>
 <p>Das bestimmte Integral lässt sich am einfachsten über eine Stammfunktion <span class="math notranslate nohighlight">\(F\)</span>
@@ -499,9 +500,10 @@ Formel:</p>
 <p>Beispiel: In der folgenden Abbildung ist der Funktionsgraph <span class="math notranslate nohighlight">\(f(x)\)</span> der Funktion
 <span class="math notranslate nohighlight">\(f(x)=x^2+1\)</span> zu sehen. Berechnet werden soll der rot gefärbte Flächeninhalt <span class="math notranslate nohighlight">\(A\)</span>
 zwischen <span class="math notranslate nohighlight">\(f(x)\)</span> und der x-Achse mit den Grenzen <span class="math notranslate nohighlight">\(x = -2\)</span> und <span class="math notranslate nohighlight">\(x = 3\)</span>.</p>
+<!-- markdownlint-disable MD033 -->
 <div id="chap03_sec02_fig01" class="jxgbox" style="width:75%; aspect-ratio:16/9; margin: 0 auto;"></div>
 <script type="text/javascript">
-    board = JXG.JSXGraph.initBoard('chap03_sec02_fig01', 
+    board = JXG.JSXGraph.initBoard('chap03_sec02_fig01',
         {boundingbox:[-5, 20, 5, -2], axis:true, showCopyright: false, showNavigation: false});
     let graph = board.create('functiongraph', [function(x) {return x**2+1;}, -5, 5], {strokeWidth:2, strokeColor:'#000000'});
     let area  = board.create('integral', [[-2.0, 3.0], graph],
@@ -514,12 +516,14 @@ folgendermaßen gerechnet:</p>
 <div class="math notranslate nohighlight">
 \[A = \int_{-2}^{3} f(x)\, dx = \int_{-2}^{3} x^2 + 1 \, dx =
 \big[\frac{1}{3}x^3+x\big]_{-2}^{3}=\frac{50}{3}\approx 16.6667.\]</div>
-<p>In dem folgenden Video wird die Vorgehensweise nochnmal ausführlich erklärt und
+<p>In dem folgenden Video wird die Vorgehensweise nochmal ausführlich erklärt und
 ein weiteres Beispiel vorgerechnet.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Video “Flächen oberhalb der x-Achse” von VisualX</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/L3m_jn9w1dU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/L3m_jn9w1dU"
+title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
+encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </div>
 </details></section>
 <section id="flacheninhalt-graph-unterhalb-der-x-achse">
@@ -559,7 +563,9 @@ folgenden Video präsentiert.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Video “Flächen unterhalb der x-Achse” von VisualX</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/_SA6iZNAKzw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/_SA6iZNAKzw"
+title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
+encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </div>
 </details></section>
 <section id="flacheninhalt-graph-oberhalb-und-unterhalb-der-x-achse">
@@ -575,7 +581,8 @@ liegt wie beispielsweise bei der Funktion <span class="math notranslate nohighli
     let area3b = board3.create('integral', [[-1.0, 1.0],  graph3], {fillColor:'#669cbe'});
     let area3c = board3.create('integral', [[1.0, 3.0],   graph3], {fillColor:'#f06666'});
 </script><br>
-<p>Würden wir jetzt einfach das bestimmte Integral im Intervall <span class="math notranslate nohighlight">\([-2,3]\)</span> berechnen, so erhielten wir</p>
+<p>Würden wir jetzt einfach das bestimmte Integral im Intervall <span class="math notranslate nohighlight">\([-2,3]\)</span> berechnen,
+so erhielten wir</p>
 <div class="math notranslate nohighlight">
 \[\int_{-2}^{3} f(x)\, dx = \int_{-2}^{3} x^2-1\, dx = \frac{20}{3} \approx 6.6667.\]</div>
 <p>Das ist zuwenig! Bereits die Fläche zwischen <span class="math notranslate nohighlight">\(f(x)\)</span> und der x-Achse im Intervall
@@ -612,19 +619,30 @@ Flächeninhalt ist daher</p>
 \[A = \frac{4}{3} \textcolor{red}{+} \frac{4}{3} + \frac{20}{3} = \frac{28}{3}.\]</div>
 <div class="note admonition">
 <p class="admonition-title">Kochrezept zur Berechnung des Flächeninhaltes zwischen einem Funktionsgraphen und der x-Achse</p>
-<p>Ist der Flächeninhalt <span class="math notranslate nohighlight">\(A\)</span> zwischen dem Funktionsgraphen <span class="math notranslate nohighlight">\(f(x)\)</span> und der x-Achse mit den Grenzen <span class="math notranslate nohighlight">\(x=a\)</span> und <span class="math notranslate nohighlight">\(x=b\)</span> gesucht, gehen Sie folgendermaßen vor:</p>
+<p>Ist der Flächeninhalt <span class="math notranslate nohighlight">\(A\)</span> zwischen dem Funktionsgraphen <span class="math notranslate nohighlight">\(f(x)\)</span> und der x-Achse
+mit den Grenzen <span class="math notranslate nohighlight">\(x=a\)</span> und <span class="math notranslate nohighlight">\(x=b\)</span> gesucht, gehen Sie folgendermaßen vor:</p>
 <ol class="arabic simple">
-<li><p>Fertigen Sie eine Skizze der Funktion an, um zu ermitteln, wo <span class="math notranslate nohighlight">\(f(x)\)</span> oberhalb und wo unterhalb der x-Achse verläuft.</p></li>
-<li><p>Berechnen Sie die Nullstellen der Funktion <span class="math notranslate nohighlight">\(f\)</span>. Unterteilen Sie damit das Intervall <span class="math notranslate nohighlight">\([a,b]\)</span> in Teilintervalle <span class="math notranslate nohighlight">\(I_1, I_2, \ldots\)</span>, so dass die Funktion <span class="math notranslate nohighlight">\(f\)</span> in einem solchen Teilintervall komplett oberhalb oder komplett unterhalb der x-Achse liegt.</p></li>
-<li><p>Berechnen Sie dann in jedem Teilintervall das Integral einzeln. Wenn die Funktion in dem Intervall negativ ist, multiplizieren Sie anschließend den orientierten Flächeninhalt mit (-1). Das Ergebnis sind die (positiven!) Teilflächen <span class="math notranslate nohighlight">\(A_1, A_2, \ldots\)</span>.</p></li>
-<li><p>Addieren Sie zuletzt alle Teilflächen <span class="math notranslate nohighlight">\(A = A_1 + A_2 + \dots\)</span>. Das Gesamtergebnis ist der gesuchte Flächeninhalt <span class="math notranslate nohighlight">\(A\)</span>.</p></li>
+<li><p>Fertigen Sie eine Skizze der Funktion an, um zu ermitteln, wo <span class="math notranslate nohighlight">\(f(x)\)</span> oberhalb
+und wo unterhalb der x-Achse verläuft.</p></li>
+<li><p>Berechnen Sie die Nullstellen der Funktion <span class="math notranslate nohighlight">\(f\)</span>. Unterteilen Sie damit das
+Intervall <span class="math notranslate nohighlight">\([a,b]\)</span> in Teilintervalle <span class="math notranslate nohighlight">\(I_1, I_2, \ldots\)</span>, so dass die Funktion
+<span class="math notranslate nohighlight">\(f\)</span> in einem solchen Teilintervall komplett oberhalb oder komplett unterhalb
+der x-Achse liegt.</p></li>
+<li><p>Berechnen Sie dann in jedem Teilintervall das Integral einzeln. Wenn die
+Funktion in dem Intervall negativ ist, multiplizieren Sie anschließend den
+orientierten Flächeninhalt mit (-1). Das Ergebnis sind die (positiven!)
+Teilflächen <span class="math notranslate nohighlight">\(A_1, A_2, \ldots\)</span>.</p></li>
+<li><p>Addieren Sie zuletzt alle Teilflächen <span class="math notranslate nohighlight">\(A = A_1 + A_2 + \dots\)</span>. Das
+Gesamtergebnis ist der gesuchte Flächeninhalt <span class="math notranslate nohighlight">\(A\)</span>.</p></li>
 </ol>
 </div>
 <p>Das folgende Video fasst die Vorgehensweise zusammen.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Video “Flächen zwischen Graph und x-Achse” von VisualX</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/vdSWk1bCnMA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/vdSWk1bCnMA"
+title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
+encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </div>
 </details></section>
 <section id="flache-zwischen-zwei-funktionsgraphen">
@@ -658,7 +676,9 @@ gesuchte Fläche zwischen den beiden Funktionsgraphen.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Video “Flächen zwischen Graphen mit Differenzfunktion” von VisualX</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/OXQvPFGb9uk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/OXQvPFGb9uk"
+title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
+encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </div>
 </details><p>Werden die Schnittpunkte nicht sorgfältig ermittelt und das Intervall, über das
 integriert wird, nicht sorgsam aufgeteilt, so passieren leicht Fehler, wie das
@@ -666,9 +686,17 @@ folgende Video demonstriert.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Video “Flächen zwischen Graphen mit mehreren Schnittstellen” von VisualX</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/nFG5_-kS7fI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/nFG5_-kS7fI"
+title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
+encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </div>
 </details></section>
+<section id="zusammenfassung-und-ausblick">
+<h2>Zusammenfassung und Ausblick<a class="headerlink" href="#zusammenfassung-und-ausblick" title="Link to this heading">#</a></h2>
+<p>In diesem Kapitel haben wir das Integral dazu genutzt, Flächeninhalte zu
+berechnen. Im nächsten Kapitel wenden wir das Integral auf eine neue Aufgabe an:
+die Berechnung der Länge von Funktionsgraphen.</p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -741,6 +769,7 @@ folgende Video demonstriert.</p>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#flacheninhalt-graph-unterhalb-der-x-achse">Flächeninhalt: Graph unterhalb der x-Achse</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#flacheninhalt-graph-oberhalb-und-unterhalb-der-x-achse">Flächeninhalt: Graph oberhalb und unterhalb der x-Achse</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#flache-zwischen-zwei-funktionsgraphen">Fläche zwischen zwei Funktionsgraphen</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zusammenfassung-und-ausblick">Zusammenfassung und Ausblick</a></li>
 </ul>
   </nav></div>
 
