@@ -71,7 +71,8 @@ p(x) &= a_0 + a_1\cdot(x-x_0) + a_2\cdot(x-x_0)^2 + a_3\cdot(x-x_0)^3 + \ldots =
      &= \sum_{k=0}^{\infty} a_k \cdot (x-x_0)^k.
 \end{align*}
 
-Die reellen Zahlen $a_0, a_1, a_2, \ldots$ nennt man **Koeffizienten** der Potenzreihe. Der Punkt $x_0$ wird **Entwicklungspunkt** genannt.
+Die reellen Zahlen $a_0, a_1, a_2, \ldots$ nennt man **Koeffizienten** der
+Potenzreihe. Der Punkt $x_0$ wird **Entwicklungspunkt** genannt.
 ```
 
 Dabei wird der spezielle Punkt $x_0$ in der Industrie **Arbeitspunkt** genannt,
@@ -81,3 +82,8 @@ Wert $y_0 =  a_0$ hat keinen besonderen Namen.
 Übrigens: Nur weil die Potenzfunktionen symmetrisch oder punktsymmetrisch zum
 Entwicklungspunkt sind, heißt das nicht, dass die Summe der Potenzfunktionen
 irgendeine Symmetrieeigenschaft besitzt.
+
+## Zusammenfassung und Ausblick
+
+In diesem Kapitel haben wir uns mit der Potenzreihe beschäftigt. Im nächsten
+Kapitel geht es um die Konvergenz.

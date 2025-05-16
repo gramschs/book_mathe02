@@ -86,7 +86,8 @@ $$\left|R_n(x) \right| \leq  \frac{M}{(n+1)!}\cdot d^{n+1}.$$
 Das folgende Video fasst die obigen Erklärungen zusammen.
 
 ```{dropdown} Video zu "Taylor Restglied" von Prof. Hoever
-<iframe width="560" height="315" src="https://www.youtube.com/embed/oz1hejsyNlk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/oz1hejsyNlk"
+title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 ```
 
 ## Beispiel
@@ -137,5 +138,11 @@ benötigt.
 Ein weiteres Beispiel können Sie sich in dem folgenden Video ansehen.
 
 ```{dropdown} Video zu "Taylorpolynom, Restglied" von Daniel Jung
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Rc_diK5l7iY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Rc_diK5l7iY"
+title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 ```
+
+## Zusammenfassung und Ausblick
+
+Den Fehler für Taylorreihen können wir nun abschätzen. Als nächstes gehen wir
+auf sehr bekannte Taylorreihen ein.
