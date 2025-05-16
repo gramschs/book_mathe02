@@ -134,3 +134,9 @@ alle Grenzwerte endlich sind, dürfen wir die Grenzwerte addieren bzw. subtrahie
 und erhalten so den gesuchten Grenzwert
 
 $$\lim_{x \to 0}\frac{\sin(x)}{x} = 1.$$
+
+## Zusammenfassung und Ausblick
+
+Taylorreihen sind für periodische Funktionen von Nachteil. Für periodische
+Funktionen werden normalerweise Fourierreihen zur Approximation genutzt, die wir
+in den nächsten Kapiteln einführen werden.

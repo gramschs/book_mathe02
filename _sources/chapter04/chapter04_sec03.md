@@ -53,3 +53,9 @@ $$\cos(x) = 1 - \frac{x^2}{2!} + \frac{x^4}{4!} - \ldots =
 Der Konvergenzradius ist unendlich, d.h. die Approximation der
 Kosinusfunktion durch ihre Taylorreihe gilt für alle reellen Zahlen
 $x\in\mathbb{R}$.
+
+## Zusammenfassung und Ausblick
+
+Im nächsten Kapitel werden wir nun die Vorzüge kennenlernen, die Taylorreihen
+haben, wenn es um die Summe oder das Produkt von Funktionen geht, die durch
+Taylorreihen dargestellt werden können.

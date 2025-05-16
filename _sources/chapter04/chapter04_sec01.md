@@ -113,3 +113,10 @@ $$T(x)=\sum_{k=0}^{\infty} \frac{f^{(k)}(x_0)}{k!} (x-x_0)^k$$
 gebildet werden. Diese Potenzreihe wird Taylorreihe zu $f$ am Entwicklungspunkt $x_
 0$ genannt.
 ```
+
+## Zusammenfassung und Ausblick
+
+Taylorreihen sind die wichtigsten Funktionenreihen für nicht-periodische
+Funktionen. In der Praxis ist es wichtig zu wissen, wie groß der Fehler wird,
+wenn wir eine Funktion durch ihre Taylorreihe ersetzen. Daher werden wir uns im
+nächsten Kapitel mit Fehlerabschätzungen beschäftigen.
