@@ -2,7 +2,7 @@
 
 In diesem Abschnitt führen wir zunächst Stammfunktionen und das bestimmte
 Integral ein, ohne die dazugehörigen Anwendungen und Herleitungen
-(Riemann-Integral oder Lesbegue-Integral) zu erläutern.
+(Riemann-Integral oder Lebesgue-Integral) zu erläutern.
 
 ## Lernziele
 
@@ -81,7 +81,7 @@ Stammfunktionen auswendig kennen.
 
 * $f(x) = a \Rightarrow F(x) = ax + c$
 * $f(x) = x^{n} \Rightarrow F(x) = \frac{1}{n+1} x^{n+1} + c$ ($n$ muss ungleich -1 sein)
-* $f(x) = x^{-1}=\frac{1}{x} \Rightarrow F(x) = |\ln(x)| + c$
+* $f(x) = x^{-1}=\frac{1}{x} \Rightarrow F(x) = \ln(|x|) + c$
 * $f(x) = e^{x} \Rightarrow F(x)=e^{x}+c$
 * $f(x) = \sin(x) \Rightarrow F(x)=-\cos(x)+c$
 * $f(x) = \cos(x) \Rightarrow F(x)=\sin(x)+c$
@@ -152,16 +152,16 @@ $$\int_{-1}^{3}  5x^2 \, dx.$$
 Das geschwungene $\int$ wird **Integralsymbol** genannt. Der Anfang des
 Intervalls, hier also -1, wird **untere Integrationsgrenze** genannt. Das Ende
 des Intervalls, hier also 3, wird **obere Integrationsgrenze** genannt. Die
-Funktion, von der die Stammfunktion gesucht wird, hier also $f(x)=5x^2\, dx$,
-wird **Integrand** genannt. Da manchmal Funktionen auch Parameter enthalten,
-muss eindeutig geklärt werden, welches die Variable der Funktion ist. Das wird
-durch die **Integrationsvariable** spezifiziert, hier $dx$. Warum da ein "d"
-dabei steht, kommt in einem späteren Kapitel.
+Funktion, von der die Stammfunktion gesucht wird, hier also $f(x)=5x^2\$, wird
+**Integrand** genannt. Da manchmal Funktionen auch Parameter enthalten, muss
+eindeutig geklärt werden, welches die Variable der Funktion ist. Das wird durch
+die **Integrationsvariable** spezifiziert, hier $dx$. Warum da ein "d" dabei
+steht, kommt in einem späteren Kapitel.
 
 In der Rechnung muss als erstes die Stammfunktion $F$ berechnet werden. Um klar
 zu machen, dass das jetzt die Stammfunktion ist, werden sehr große eckige
 Klammern verwendet, hier also $\left[\frac{5}{3}x^3\right]$. Für die
-Integrationsvariable $c$ wählen wir Null. In der anschließenden Differenzbildung
+Integrationskonstante $c$ wählen wir Null. In der anschließenden Differenzbildung
 würde sie ohnehin wegfallen. Zuletzt folgt noch das Einsetzen der
 Integrationsgrenzen in die Stammfunktion. Zuerst wird die obere
 Integrationsgrenze $b=3$ eingesetzt, hier also $F(3)=45$, und dann der Wert
@@ -205,3 +205,9 @@ Funktionen ausgenutzt werden kann, sich selbst das Rechnen etwas zu erleichtern.
 ```{dropdown} Video: bestimmtes Integral - Flächeninterpretation
 <iframe width="560" height="315" src="https://www.youtube.com/embed/6rJOt8mWY_I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 ```
+
+## Zusammenfassung und Ausblick
+
+In diesem Kapitel haben wir den Integralbegriff wiederholt, den wir schon in der
+Vorlesung Mathematik 1 kennengelernt haben. Im nächsten Kapitel wiederholen wir
+Eigenschaften von Integralen.

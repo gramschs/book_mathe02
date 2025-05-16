@@ -105,3 +105,9 @@ Beispiels demonstriert.
 ```{dropdown} Video: Eigenschaften/Rechenregeln des Integrals II
 <iframe width="560" height="315" src="https://www.youtube.com/embed/eMGWYY96Hno" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 ```
+
+## Zusammenfassung und Ausblick
+
+Nachdem wir in diesem Kapitel Eigenschaften von Integralen betrachtet haben,
+wenden wir uns Integrationstechniken zu. Zunächst lernen wir die partielle
+Integration, im übernächsten Kapitel dann die Integration durch Substitution.

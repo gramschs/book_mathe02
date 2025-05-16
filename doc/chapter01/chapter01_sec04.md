@@ -1,8 +1,8 @@
 # 1.4 Integration durch Substitution
 
 Auch verkettete Funktionen lassen sich nicht so einfach integrieren. Wenn $F$
-eine Stammfunktion der Funktion $f$ ist, dann gilt für die der verketten
-Funktion $F\circ g$ die Kettenregel:
+eine Stammfunktion der Funktion $f$ ist, dann gilt für die Ableitung der
+verketten Funktion $F\circ g$ die Kettenregel:
 
 $$\big(F(g(x))\big)^{\prime} = F'(g(x)) \cdot g'(x) = f(g(x))\cdot g'(x).$$
 
@@ -32,10 +32,9 @@ dz.$$
 
 Das klappt übrigens nur, wenn die Funktion $g$ stetig differenzierbar ist. In
 den Ingenieurswissenschaften ist das aber meistens der Fall, so dass diese
-Einschränkung kein Problem darstellt. Problematisch ist dahingegen, dass
-meistens nur die verkette Funktion ohne den Term $g'(x)$ im Integral steht.
-Daher muss sehr oft der Integrand passend erweitert werden, um ihn erstmal auf
-die Form
+Einschränkung kein Problem darstellt. Problematisch ist dagegen, dass meistens
+nur die verkette Funktion ohne den Term $g'(x)$ im Integral steht. Daher muss
+sehr oft der Integrand passend erweitert werden, um ihn erstmal auf die Form
 
 $$f(g(x))\cdot g^{\prime}(x)$$
 
@@ -86,34 +85,40 @@ $$\int_{0}^{1} \sqrt{1+3x^2}\cdot x \, dx = \frac{7}{9}.$$
 ## Weiteres Lernmaterial
 
 Integration durch Substitution ist nicht einfach. Daher folgen hier einige
-Videos zur Vertiefung.
+Videos zur Vertiefung, in denen auch **Tricks** zur vereinfachten Anwendung der
+Substitution gezeigt werden.
 
-```{dropdown} Video "Integration durch Substition I" von Mathematische Methoden
+```{dropdown} Video "Integration durch Substitution I" von Mathematische Methoden
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Bd7rrWT3fRA"
 title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
 encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 ```
 
-```{dropdown} Video "Integration durch Substition II" von Mathematische Methoden
+```{dropdown} Video "Integration durch Substitution II" von Mathematische Methoden
 <iframe width="560" height="315" src="https://www.youtube.com/embed/EJH2_GfoguI"
 title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
 encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 ```
 
-```{dropdown} Video "Integration durch Substition III" von Mathematische Methoden
+```{dropdown} Video "Integration durch Substitution III" von Mathematische Methoden
 <iframe width="560" height="315" src="https://www.youtube.com/embed/FHgo5FEM2bs"
 title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
 encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 ```
 
-```{dropdown} Video "Integration durch Substition IV" von Mathematische Methoden
+```{dropdown} Video "Integration durch Substitution IV" von Mathematische Methoden
 <iframe width="560" height="315" src="https://www.youtube.com/embed/fffJ6Y5OYNA"
 title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
 encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 ```
 
-```{dropdown} Video "Integration durch Substition" von Mathematrick
+```{dropdown} Video "Integration durch Substitution" von Mathematrick
 <iframe width="560" height="315" src="https://www.youtube.com/embed/0j55gTZVwy0"
 title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
 encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 ```
+
+## Zusammenfassung und Ausblick
+
+Mit diesem Kapitel haben wir die Wiederholung des Integralbegriffes
+abgeschlossen. In den nächsten Kapiteln folgen Anwendungen.

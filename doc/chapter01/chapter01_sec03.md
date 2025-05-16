@@ -93,3 +93,8 @@ wird und an Beispielen vorgeführt wird.
 ```{dropdown} Video "Partielle Integration: Beispiel" von Mathematische Methoden
 <iframe width="560" height="315" src="https://www.youtube.com/embed/LlGrOTQ9TlU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 ```
+
+## Zusammenfassung und Ausblick
+
+Neben der partiellen Integration gibt es auch noch die Substitutionsregel, die
+wir im nächsten Kapitel wiederholen werden.
