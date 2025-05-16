@@ -34,7 +34,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=87e54e7c" />
     <link rel="stylesheet" type="text/css" href="../_static/jsxgraph.css?v=a7b027cb" />
@@ -444,6 +444,7 @@
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bestimmtes-integral">Bestimmtes Integral</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#beispiel-fur-bestimmtes-integral">Beispiel für bestimmtes Integral</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#integrale-als-flache-interpretiert">Integrale als Fläche interpretiert</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zusammenfassung-und-ausblick">Zusammenfassung und Ausblick</a></li>
 </ul>
             </nav>
         </div>
@@ -459,7 +460,7 @@
 <h1>1.1 Stammfunktion und bestimmtes Integral<a class="headerlink" href="#stammfunktion-und-bestimmtes-integral" title="Link to this heading">#</a></h1>
 <p>In diesem Abschnitt führen wir zunächst Stammfunktionen und das bestimmte
 Integral ein, ohne die dazugehörigen Anwendungen und Herleitungen
-(Riemann-Integral oder Lesbegue-Integral) zu erläutern.</p>
+(Riemann-Integral oder Lebesgue-Integral) zu erläutern.</p>
 <section id="lernziele">
 <h2>Lernziele<a class="headerlink" href="#lernziele" title="Link to this heading">#</a></h2>
 <div class="goals admonition">
@@ -538,7 +539,7 @@ Stammfunktionen auswendig kennen.</p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(f(x) = a \Rightarrow F(x) = ax + c\)</span></p></li>
 <li><p><span class="math notranslate nohighlight">\(f(x) = x^{n} \Rightarrow F(x) = \frac{1}{n+1} x^{n+1} + c\)</span> (<span class="math notranslate nohighlight">\(n\)</span> muss ungleich -1 sein)</p></li>
-<li><p><span class="math notranslate nohighlight">\(f(x) = x^{-1}=\frac{1}{x} \Rightarrow F(x) = |\ln(x)| + c\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(f(x) = x^{-1}=\frac{1}{x} \Rightarrow F(x) = \ln(|x|) + c\)</span></p></li>
 <li><p><span class="math notranslate nohighlight">\(f(x) = e^{x} \Rightarrow F(x)=e^{x}+c\)</span></p></li>
 <li><p><span class="math notranslate nohighlight">\(f(x) = \sin(x) \Rightarrow F(x)=-\cos(x)+c\)</span></p></li>
 <li><p><span class="math notranslate nohighlight">\(f(x) = \cos(x) \Rightarrow F(x)=\sin(x)+c\)</span></p></li>
@@ -605,15 +606,15 @@ folgende Schreibweise üblich:</p>
 <p>Das geschwungene <span class="math notranslate nohighlight">\(\int\)</span> wird <strong>Integralsymbol</strong> genannt. Der Anfang des
 Intervalls, hier also -1, wird <strong>untere Integrationsgrenze</strong> genannt. Das Ende
 des Intervalls, hier also 3, wird <strong>obere Integrationsgrenze</strong> genannt. Die
-Funktion, von der die Stammfunktion gesucht wird, hier also <span class="math notranslate nohighlight">\(f(x)=5x^2\, dx\)</span>,
-wird <strong>Integrand</strong> genannt. Da manchmal Funktionen auch Parameter enthalten,
-muss eindeutig geklärt werden, welches die Variable der Funktion ist. Das wird
-durch die <strong>Integrationsvariable</strong> spezifiziert, hier <span class="math notranslate nohighlight">\(dx\)</span>. Warum da ein “d”
-dabei steht, kommt in einem späteren Kapitel.</p>
+Funktion, von der die Stammfunktion gesucht wird, hier also <span class="math notranslate nohighlight">\(f(x)=5x^2\$, wird
+**Integrand** genannt. Da manchmal Funktionen auch Parameter enthalten, muss
+eindeutig geklärt werden, welches die Variable der Funktion ist. Das wird durch
+die **Integrationsvariable** spezifiziert, hier \)</span>dx$. Warum da ein “d” dabei
+steht, kommt in einem späteren Kapitel.</p>
 <p>In der Rechnung muss als erstes die Stammfunktion <span class="math notranslate nohighlight">\(F\)</span> berechnet werden. Um klar
 zu machen, dass das jetzt die Stammfunktion ist, werden sehr große eckige
 Klammern verwendet, hier also <span class="math notranslate nohighlight">\(\left[\frac{5}{3}x^3\right]\)</span>. Für die
-Integrationsvariable <span class="math notranslate nohighlight">\(c\)</span> wählen wir Null. In der anschließenden Differenzbildung
+Integrationskonstante <span class="math notranslate nohighlight">\(c\)</span> wählen wir Null. In der anschließenden Differenzbildung
 würde sie ohnehin wegfallen. Zuletzt folgt noch das Einsetzen der
 Integrationsgrenzen in die Stammfunktion. Zuerst wird die obere
 Integrationsgrenze <span class="math notranslate nohighlight">\(b=3\)</span> eingesetzt, hier also <span class="math notranslate nohighlight">\(F(3)=45\)</span>, und dann der Wert
@@ -656,6 +657,12 @@ Funktionen ausgenutzt werden kann, sich selbst das Rechnen etwas zu erleichtern.
 <iframe width="560" height="315" src="https://www.youtube.com/embed/6rJOt8mWY_I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </div>
 </details></section>
+<section id="zusammenfassung-und-ausblick">
+<h2>Zusammenfassung und Ausblick<a class="headerlink" href="#zusammenfassung-und-ausblick" title="Link to this heading">#</a></h2>
+<p>In diesem Kapitel haben wir den Integralbegriff wiederholt, den wir schon in der
+Vorlesung Mathematik 1 kennengelernt haben. Im nächsten Kapitel wiederholen wir
+Eigenschaften von Integralen.</p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -729,6 +736,7 @@ Funktionen ausgenutzt werden kann, sich selbst das Rechnen etwas zu erleichtern.
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bestimmtes-integral">Bestimmtes Integral</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#beispiel-fur-bestimmtes-integral">Beispiel für bestimmtes Integral</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#integrale-als-flache-interpretiert">Integrale als Fläche interpretiert</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zusammenfassung-und-ausblick">Zusammenfassung und Ausblick</a></li>
 </ul>
   </nav></div>
 
