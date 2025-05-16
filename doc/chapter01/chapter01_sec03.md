@@ -58,8 +58,10 @@ können wir jetzt zwar direkt ausrechnen, aber übrig bleibt noch das Integral
 $\int_{0}^{\pi} 2 \cdot (-\cos(x)) \, dx$, das noch weiter ausgerechnet werden
 muss.
 
-Aber das geht jetzt relativ leicht, denn von der Funktion $v(x)=-\cos(x)$ kennen wir ebenfalls eine Stammfunktion, nämlich $V(x)=-\sin(x)$. Daher ist $\int_{0}^{\pi} 2
-\cdot (-\cos(x)) \, dx = 2 \big[-\sin(x)\big]_{0}^{\pi}$ und insgesamt gilt dann:
+Aber das geht jetzt relativ leicht, denn von der Funktion $v(x)=-\cos(x)$ kennen
+wir ebenfalls eine Stammfunktion, nämlich $V(x)=-\sin(x)$. Daher ist
+$\int_{0}^{\pi} 2 \cdot (-\cos(x)) \, dx = 2 \big[-\sin(x)\big]_{0}^{\pi}$ und
+insgesamt gilt dann:
 
 $$\int_{0}^{\pi} \sin(x)\cdot 2x \, dx = \big[2x \cdot
 \left(-\cos(x)\right)\big]_{0}^{\pi} - 2 \big[-\sin(x)\big]_{0}^{\pi}.$$
@@ -87,11 +89,13 @@ Hier finden Sie noch zwei Videos, in denen die partielle Integration erklärt
 wird und an Beispielen vorgeführt wird.
 
 ```{dropdown} Video "Partielle Integration: Rechenregel" von Mathematische Methoden
-<iframe width="560" height="315" src="https://www.youtube.com/embed/s-IDbDtRAbg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/s-IDbDtRAbg"
+title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 ```
 
 ```{dropdown} Video "Partielle Integration: Beispiel" von Mathematische Methoden
-<iframe width="560" height="315" src="https://www.youtube.com/embed/LlGrOTQ9TlU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/LlGrOTQ9TlU"
+title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 ```
 
 ## Zusammenfassung und Ausblick
