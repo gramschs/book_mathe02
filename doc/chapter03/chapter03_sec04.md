@@ -12,7 +12,7 @@
 * Sie kennen zwei Formeln auswendig, um den Konvergenzradius $r$ einer
   Potenzreihe zu berechnen, nämlich
 
-$$r = \lim_{k\to\infty}\left| \frac{a_k}{a_{k+1}}\right| \quad \text{ und } 
+$$r = \lim_{k\to\infty}\frac{1}{\left| \frac{a_{k+1}}{a_{k}}\right|} \quad \text{ und } 
 \quad r = \lim_{k\to\infty}\frac{1}{\sqrt[k]{|a_k|}},$$
 
 und können diese auch anwenden. 

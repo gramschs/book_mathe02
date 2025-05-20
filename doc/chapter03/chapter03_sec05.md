@@ -19,23 +19,23 @@ Wurzelkriterium:
 
 Zu bestimmen ist der Grenzwert (falls dieser existiert)  
 \begin{align*} 
-r & = \lim_{n\rightarrow \infty}\sqrt[n]{\left|a_n\right|}
+L & = \lim_{n\rightarrow \infty}\sqrt[n]{\left|a_n\right|}
     = \lim_{n\rightarrow \infty}{\left(\frac{4\cdot 3^{n+3}}{5^n}\right)}^{1/n}\\ 
 & = \lim_{n\rightarrow \infty}\frac{3\cdot {108}^{1/n}}{5}
     = \frac{3}{5}. 
 \end{align*} 
-Wegen $r<1$ ist die Reihe (absolut) konvergent. 
+Wegen $L<1$ ist die Reihe (absolut) konvergent. 
  
 Quotientenkriterium: 
 
 Zu bestimmen ist der Grenzwert (falls dieser existiert) 
 \begin{align*} 
-r & = \lim_{n\rightarrow \infty} \left|\frac{a_{n+1}}{a_n}\right|
+L & = \lim_{n\rightarrow \infty} \left|\frac{a_{n+1}}{a_n}\right|
     =\lim_{n\rightarrow \infty}3^{n+4}\,\frac{1}{3^{n+3}}\,\frac{1}{5^{n+1}}\,5^n\\ 
 & = \lim_{n\rightarrow \infty}\frac{3}{5}
     =\frac{3}{5}. 
 \end{align*} 
-Wegen $r<1$ ist die Reihe (absolut) konvergent.  
+Wegen $L<1$ ist die Reihe (absolut) konvergent.  
 ```
 ````
 
@@ -55,24 +55,24 @@ Die Reihe ist (absolut) konvergent.
 Wir definieren $a_n := 4\frac{6^n}{{11}^{n+4}}$. 
 
 Wurzelkriterium: 
- Zu bestimmen ist der Grenzwert (falls dieser existiert)  
+Zu bestimmen ist der Grenzwert (falls dieser existiert)  
 \begin{align*} 
-r & = \lim_{n\rightarrow \infty}\sqrt[n]{\left|a_n\right|}
+L & = \lim_{n\rightarrow \infty}\sqrt[n]{\left|a_n\right|}
     = \lim_{n\rightarrow \infty}{\left(4\frac{6^n}{{11}^{n+4}}\right)}^{1/n}\\ 
 & = \lim_{n\rightarrow \infty}\frac{6\,{\left(\frac{4}{14641}\right)}^{1/n}}{11}
     = \frac{6}{11}. 
 \end{align*} 
-Wegen $r<1$ ist die Reihe (absolut) konvergent. 
+Wegen $L<1$ ist die Reihe (absolut) konvergent. 
  
 Quotientenkriterium: 
 Zu bestimmen ist der Grenzwert (falls dieser existiert) 
 \begin{align*} 
-r & = \lim_{n\rightarrow \infty} \left|\frac{a_{n+1}}{a_n}\right|
+L & = \lim_{n\rightarrow \infty} \left|\frac{a_{n+1}}{a_n}\right|
     =\lim_{n\rightarrow \infty}\frac{6^{n+1}\,{11}^{n+4}\,\frac{1}{{11}^{n+5}}}{6^n}\\ 
 & = \lim_{n\rightarrow \infty}\frac{6}{11}
     =\frac{6}{11}. 
 \end{align*} 
-Wegen $r<1$ ist die Reihe (absolut) konvergent.  
+Wegen $L<1$ ist die Reihe (absolut) konvergent.  
 ```
 ````
 
