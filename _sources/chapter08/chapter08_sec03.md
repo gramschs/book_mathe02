@@ -11,7 +11,7 @@ von zwei unabhängigen Variablen.
 ```{admonition} Lernziele
 :class: goals
 Sie wissen, dass drei Bedingungen überprüft werden müssen, um zu entscheiden, ob die Funktion $f:\mathbb{R}^2\to\mathbb{R}$ Extremwerte hat.
-1. Ein Punkt $(x_0,y_0)$ ist ein Kandidatat für eine Extremstelle, wenn die folgende erste Bedingung erfüllt ist:
+1. Ein Punkt $(x_0,y_0)$ ist ein Kandidat für eine Extremstelle, wenn die folgende erste Bedingung erfüllt ist:
 
 $$\frac{\partial f(x_0,y_0)}{\partial x} = 0 \quad \text{ und } \quad 
 \frac{\partial f(x_0,y_0)}{\partial y} = 0.$$
@@ -21,9 +21,9 @@ $$\frac{\partial f(x_0,y_0)}{\partial x} = 0 \quad \text{ und } \quad
   
 $$\det(H_f(x_0, y_0)) = \frac{\partial^2 f(x_0, y_0)}{\partial x\partial x}\cdot
 \frac{\partial^2 f(x_0,y_0)}{\partial y \partial y} - \left(\frac{\partial^2
-f(x_0,y_0}{\partial x \partial y}\right)^2 > 0.$$
+f(x_0,y_0)}{\partial x \partial y}\right)^2 > 0.$$
 
-3. Zuletzt entscheidet dann das Vorzeichen von dem Term $\frac{\partial^2 f(x_0,y_0)}{\partial x \partial y}$ darüber, ob ein Minimum oder ein Maximum vorliegt:
+3. Zuletzt entscheidet dann das Vorzeichen von dem Term $\frac{\partial^2 f(x_0,y_0)}{\partial x \partial x}$ darüber, ob ein Minimum oder ein Maximum vorliegt:
   
 \begin{align*}
 \frac{\partial^2 f(x_0, y_0)}{\partial x \partial x} < 0 & \qquad \Rightarrow \text{relatives Maximum} \\
@@ -133,7 +133,7 @@ unsere obigen Betrachtungen.
 <iframe width="560" height="315" src="https://www.youtube.com/embed/eT0nrz_Mujo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 ```
 
-Da die Bestimmung von Extremwerten ein schwiriges, aber sehr wichtiges Thema
+Da die Bestimmung von Extremwerten ein schwieriges, aber sehr wichtiges Thema
 ist, folgen noch weitere Videos der Universität Köln, in denen Beispiel
 vorgerechnet werden.
 
@@ -218,7 +218,7 @@ Damit lautet die Hesse-Matrix:
 
 $$H_{f}(x,y) =
 \begin{pmatrix}
-\frac{6x^2 - 2(y^2+1)}{(1 + x^2 + y^2)^2} & \frac{8xy}{(1 + x^2 + y^2)^3} \\
+\frac{6x^2 - 2(y^2+1)}{(1 + x^2 + y^2)^3} & \frac{8xy}{(1 + x^2 + y^2)^3} \\
 \frac{8xy}{(1 + x^2 + y^2)^3} & -\frac{2(x^2 - 3y^2 +1)}{(x^2 + y^2 + 1)^3} \\
 \end{pmatrix}.
 $$

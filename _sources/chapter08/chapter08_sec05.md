@@ -4,7 +4,7 @@
 :class: miniexercise
 Bestimmen Sie die Gleichung der Tangentialebene bzw. die Linearisierung für die Funktion
 
-$$f:\mathbb{R}^2 \mapsto \mathbb{R}, \; f(x,y)=\frac{x^2+y^2}{1+x^2+y^2}$$
+$$f:\mathbb{R}^2 \rightarrow \mathbb{R}, \; f(x,y)=\frac{x^2+y^2}{1+x^2+y^2}$$
 
 am Punkt $(1,2)$.
 ```
@@ -12,12 +12,12 @@ am Punkt $(1,2)$.
 ````{admonition} Lösung
 :class: miniexercise, toggle
 
-$$T_{f,1}(x,y)=\frac{5}{6}+\frac{1}{18}\cdot (x-1)+\frac{1}{9}\cdot (y-2)$$
+$$T_{1,f}(x,y)=\frac{5}{6}+\frac{1}{18}\cdot (x-1)+\frac{1}{9}\cdot (y-2)$$
 
 ```{dropdown} Lösungsweg
 Das Taylorpolynom vom Grad 1 einer Funktion $f(x,y)$ bei $(x_0,y_0)$ hat die allgemeinen Form 
 
-$$T_{f,1}(x,y)
+$$T_{1,f}(x,y)
  = f(x_0,y_0)+\frac{\partial f(x_0,y_0)}{\partial x}\cdot(x-x_0)+\frac{\partial f(x_0,y_0)}{\partial y}\cdot(y-y_0).$$
 
 Der Funktionswert in Punkt $(1,2)$ ist $f(1,2) = \frac{5}{6}$. 
@@ -36,7 +36,7 @@ Die partiellen Ableitungen von $f$ lauten :
 Damit erhält man das Taylorpolynom von $f$ bei $(x_0,y_0)=(1,2)$ als 
 
 \begin{align*} 
-T_{f,1}(x,y)
+T_{1,f}(x,y)
 & = f(1,2)+\frac{\partial f}{\partial x}(1,2)\cdot(x-1)+\frac{\partial f}{\partial y}(1,2)\cdot(y-2)\\
 & = \frac{5}{6}+\frac{1}{18}\cdot (x-1)+\frac{1}{9}\cdot (y-2)\ . 
 \end{align*} 
@@ -47,7 +47,7 @@ T_{f,1}(x,y)
 :class: miniexercise
 Bestimmen Sie die Gleichung der Tangentialebene bzw. die Linearisierung für die Funktion
 
-$$f:\mathbb{R}^2 \mapsto \mathbb{R}, \; f(x,y)=\sqrt{x^2 + y^2}$$
+$$f:\mathbb{R}^2 \rightarrow \mathbb{R}, \; f(x,y)=\sqrt{x^2 + y^2}$$
 
 am Punkt $(1,0)$.
 ```
@@ -58,7 +58,7 @@ $$T_{1,f}(x,y) = x$$
 ```{dropdown} Lösungsweg
 Das Taylorpolynom vom Grad 1 einer Funktion $f(x,y)$ bei $(x_0,y_0)$ hat die allgemeinen Form 
 
-$$T_{f,1}(x,y)
+$$T_{1,f}(x,y)
  = f(x_0,y_0)+\frac{\partial f(x_0,y_0)}{\partial x}\cdot(x-x_0)+\frac{\partial f(x_0,y_0)}{\partial y}\cdot(y-y_0).$$
 
 Der Funktionswert im Punkt $(1,0)$ ist $f(1,0) = 1$. 
@@ -79,7 +79,7 @@ Am Entwicklungspunkt $(x_0,y_0)=(1,0)$ sind die partiellen Ableitungen
 
 Damit ist das Taylorpolynom  1. Grades von $f$ am Entwicklungspunkt $(x_0,y_0)=(1,0)$ 
 
-$$T_{f,1}(x,y) = 1 + 1\cdot(x-1) + 0\cdot (y-y_0) = x.$$
+$$T_{1,f}(x,y) = 1 + 1\cdot(x-1) + 0\cdot (y-y_0) = x.$$
 ```
 ````
 

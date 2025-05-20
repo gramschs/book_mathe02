@@ -34,7 +34,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=87e54e7c" />
     <link rel="stylesheet" type="text/css" href="../_static/jsxgraph.css?v=a7b027cb" />
@@ -446,19 +446,19 @@
 <p class="admonition-title">Übung 8.1</p>
 <p>Bestimmen Sie die Gleichung der Tangentialebene bzw. die Linearisierung für die Funktion</p>
 <div class="math notranslate nohighlight">
-\[f:\mathbb{R}^2 \mapsto \mathbb{R}, \; f(x,y)=\frac{x^2+y^2}{1+x^2+y^2}\]</div>
+\[f:\mathbb{R}^2 \rightarrow \mathbb{R}, \; f(x,y)=\frac{x^2+y^2}{1+x^2+y^2}\]</div>
 <p>am Punkt <span class="math notranslate nohighlight">\((1,2)\)</span>.</p>
 </div>
 <div class="miniexercise toggle admonition">
 <p class="admonition-title">Lösung</p>
 <div class="math notranslate nohighlight">
-\[T_{f,1}(x,y)=\frac{5}{6}+\frac{1}{18}\cdot (x-1)+\frac{1}{9}\cdot (y-2)\]</div>
+\[T_{1,f}(x,y)=\frac{5}{6}+\frac{1}{18}\cdot (x-1)+\frac{1}{9}\cdot (y-2)\]</div>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Lösungsweg</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <p class="sd-card-text">Das Taylorpolynom vom Grad 1 einer Funktion <span class="math notranslate nohighlight">\(f(x,y)\)</span> bei <span class="math notranslate nohighlight">\((x_0,y_0)\)</span> hat die allgemeinen Form</p>
 <div class="math notranslate nohighlight">
-\[T_{f,1}(x,y)
+\[T_{1,f}(x,y)
  = f(x_0,y_0)+\frac{\partial f(x_0,y_0)}{\partial x}\cdot(x-x_0)+\frac{\partial f(x_0,y_0)}{\partial y}\cdot(y-y_0).\]</div>
 <p class="sd-card-text">Der Funktionswert in Punkt <span class="math notranslate nohighlight">\((1,2)\)</span> ist <span class="math notranslate nohighlight">\(f(1,2) = \frac{5}{6}\)</span>.</p>
 <p class="sd-card-text">Die partiellen Ableitungen von <span class="math notranslate nohighlight">\(f\)</span> lauten :</p>
@@ -474,7 +474,7 @@
 <p class="sd-card-text">Damit erhält man das Taylorpolynom von <span class="math notranslate nohighlight">\(f\)</span> bei <span class="math notranslate nohighlight">\((x_0,y_0)=(1,2)\)</span> als</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*} 
-T_{f,1}(x,y)
+T_{1,f}(x,y)
 &amp; = f(1,2)+\frac{\partial f}{\partial x}(1,2)\cdot(x-1)+\frac{\partial f}{\partial y}(1,2)\cdot(y-2)\\
 &amp; = \frac{5}{6}+\frac{1}{18}\cdot (x-1)+\frac{1}{9}\cdot (y-2)\ . 
 \end{align*}\]</div>
@@ -484,7 +484,7 @@ T_{f,1}(x,y)
 <p class="admonition-title">Übung 8.2</p>
 <p>Bestimmen Sie die Gleichung der Tangentialebene bzw. die Linearisierung für die Funktion</p>
 <div class="math notranslate nohighlight">
-\[f:\mathbb{R}^2 \mapsto \mathbb{R}, \; f(x,y)=\sqrt{x^2 + y^2}\]</div>
+\[f:\mathbb{R}^2 \rightarrow \mathbb{R}, \; f(x,y)=\sqrt{x^2 + y^2}\]</div>
 <p>am Punkt <span class="math notranslate nohighlight">\((1,0)\)</span>.</p>
 </div>
 <div class="miniexercise toggle admonition">
@@ -496,7 +496,7 @@ T_{f,1}(x,y)
 <span class="sd-summary-text">Lösungsweg</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <p class="sd-card-text">Das Taylorpolynom vom Grad 1 einer Funktion <span class="math notranslate nohighlight">\(f(x,y)\)</span> bei <span class="math notranslate nohighlight">\((x_0,y_0)\)</span> hat die allgemeinen Form</p>
 <div class="math notranslate nohighlight">
-\[T_{f,1}(x,y)
+\[T_{1,f}(x,y)
  = f(x_0,y_0)+\frac{\partial f(x_0,y_0)}{\partial x}\cdot(x-x_0)+\frac{\partial f(x_0,y_0)}{\partial y}\cdot(y-y_0).\]</div>
 <p class="sd-card-text">Der Funktionswert im Punkt <span class="math notranslate nohighlight">\((1,0)\)</span> ist <span class="math notranslate nohighlight">\(f(1,0) = 1\)</span>.</p>
 <p class="sd-card-text">Die partiellen Ableitungen von <span class="math notranslate nohighlight">\(f\)</span> lauten:</p>
@@ -513,7 +513,7 @@ T_{f,1}(x,y)
 \end{align*}\]</div>
 <p class="sd-card-text">Damit ist das Taylorpolynom  1. Grades von <span class="math notranslate nohighlight">\(f\)</span> am Entwicklungspunkt <span class="math notranslate nohighlight">\((x_0,y_0)=(1,0)\)</span></p>
 <div class="math notranslate nohighlight">
-\[T_{f,1}(x,y) = 1 + 1\cdot(x-1) + 0\cdot (y-y_0) = x.\]</div>
+\[T_{1,f}(x,y) = 1 + 1\cdot(x-1) + 0\cdot (y-y_0) = x.\]</div>
 </div>
 </details></div>
 <div class="miniexercise admonition">

@@ -34,7 +34,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=87e54e7c" />
     <link rel="stylesheet" type="text/css" href="../_static/jsxgraph.css?v=a7b027cb" />
@@ -467,7 +467,7 @@ von zwei unabhängigen Variablen.</p>
 <p class="admonition-title">Lernziele</p>
 <p>Sie wissen, dass drei Bedingungen überprüft werden müssen, um zu entscheiden, ob die Funktion <span class="math notranslate nohighlight">\(f:\mathbb{R}^2\to\mathbb{R}\)</span> Extremwerte hat.</p>
 <ol class="arabic simple">
-<li><p>Ein Punkt <span class="math notranslate nohighlight">\((x_0,y_0)\)</span> ist ein Kandidatat für eine Extremstelle, wenn die folgende erste Bedingung erfüllt ist:</p></li>
+<li><p>Ein Punkt <span class="math notranslate nohighlight">\((x_0,y_0)\)</span> ist ein Kandidat für eine Extremstelle, wenn die folgende erste Bedingung erfüllt ist:</p></li>
 </ol>
 <div class="math notranslate nohighlight">
 \[\frac{\partial f(x_0,y_0)}{\partial x} = 0 \quad \text{ und } \quad 
@@ -479,9 +479,9 @@ die Determinante der Hesse-Matrix positiv sein, also:</p></li>
 <div class="math notranslate nohighlight">
 \[\det(H_f(x_0, y_0)) = \frac{\partial^2 f(x_0, y_0)}{\partial x\partial x}\cdot
 \frac{\partial^2 f(x_0,y_0)}{\partial y \partial y} - \left(\frac{\partial^2
-f(x_0,y_0}{\partial x \partial y}\right)^2 &gt; 0.\]</div>
+f(x_0,y_0)}{\partial x \partial y}\right)^2 &gt; 0.\]</div>
 <ol class="arabic simple" start="3">
-<li><p>Zuletzt entscheidet dann das Vorzeichen von dem Term <span class="math notranslate nohighlight">\(\frac{\partial^2 f(x_0,y_0)}{\partial x \partial y}\)</span> darüber, ob ein Minimum oder ein Maximum vorliegt:</p></li>
+<li><p>Zuletzt entscheidet dann das Vorzeichen von dem Term <span class="math notranslate nohighlight">\(\frac{\partial^2 f(x_0,y_0)}{\partial x \partial x}\)</span> darüber, ob ein Minimum oder ein Maximum vorliegt:</p></li>
 </ol>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
@@ -587,7 +587,7 @@ unsere obigen Betrachtungen.</p>
 <span class="sd-summary-text">Video zu “Hinreichende Bedingung für Extremwerte” von Mathematische Methoden</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/eT0nrz_Mujo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </div>
-</details><p>Da die Bestimmung von Extremwerten ein schwiriges, aber sehr wichtiges Thema
+</details><p>Da die Bestimmung von Extremwerten ein schwieriges, aber sehr wichtiges Thema
 ist, folgen noch weitere Videos der Universität Köln, in denen Beispiel
 vorgerechnet werden.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
@@ -674,7 +674,7 @@ gebildet:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}H_{f}(x,y) =
 \begin{pmatrix}
-\frac{6x^2 - 2(y^2+1)}{(1 + x^2 + y^2)^2} &amp; \frac{8xy}{(1 + x^2 + y^2)^3} \\
+\frac{6x^2 - 2(y^2+1)}{(1 + x^2 + y^2)^3} &amp; \frac{8xy}{(1 + x^2 + y^2)^3} \\
 \frac{8xy}{(1 + x^2 + y^2)^3} &amp; -\frac{2(x^2 - 3y^2 +1)}{(x^2 + y^2 + 1)^3} \\
 \end{pmatrix}.
 \end{split}\]</div>
