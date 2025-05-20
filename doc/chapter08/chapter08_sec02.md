@@ -16,13 +16,16 @@ Taylorpolynom im Entwicklungspunkt $x_0$:
 $$f(x) \approx f(x_0) + f'(x_0)\cdot (x-x_0).$$
 
 Wenn wir jetzt wissen wollen, um wieviel sich der Funktionswert $f(x_0)$ ändert,
-wenn wir $x_0$ um $\Delta x$ auf $x_0 + \Delta x$ erhöhen, können wir diese Approximation nutzen.
+wenn wir $x_0$ um $\Delta x$ auf $x_0 + \Delta x$ erhöhen, können wir diese
+Approximation nutzen.
 
-$$f(x_0 +\Delta x) \approx f(x_0) + f'(x_0) \cdot \left( (x_0+\Delta x) - x_0\right).$$
+$$f(x_0 +\Delta x) \approx f(x_0) + f'(x_0) \cdot \left( (x_0+\Delta x) -
+x_0\right).$$
 
 Die Änderung von $f(x_0)$ auf $f(x_0 + \Delta x)$ ist die Differenz, also
 
-$$f(x_0 +\Delta x) - f(x_0) = f(x_0) + f'(x_0) \cdot \left( (x_0+\Delta x) - x_0\right) - f(x_0).$$
+$$f(x_0 +\Delta x) - f(x_0) = f(x_0) + f'(x_0) \cdot \left( (x_0+\Delta x) -
+x_0\right) - f(x_0).$$
 
 Damit bleibt nur noch übrig:
 
@@ -42,18 +45,21 @@ Differential genannt. Das Differential beschreibt den linearen Anteil der
 
 ## Was ist das totale Differential?
 
-Da sich die Tangentenfunktion von eindimensionalen Funktionen auf mehrdimensionale Funktionen übertragen lässt, kann auch das Differential auf mehrdimensionale Funktionen übertragen werden. Es wird dann totales Differential genannt.
+Da sich die Tangentenfunktion von eindimensionalen Funktionen auf
+mehrdimensionale Funktionen übertragen lässt, kann auch das Differential auf
+mehrdimensionale Funktionen übertragen werden. Es wird dann totales Differential
+genannt.
 
 ```{admonition} Was ist ... das totale Differential?
 :class: note
 Existiert zu einer Funktion $f:\mathbb{R}^n\to\mathbb{R}$ die Tangentenfunktion,
-so wird 
+so wird
 
-$$\sum_{i=1}^n \frac{\partial f(\vec{x})}{x_i} \cdot \Delta x_i$$
+$$\sum_{i=1}^n \frac{\partial f(\vec{x})}{\partial x_i} \cdot \Delta x_i$$
 
 totales Differential genannt. Es beschreibt den linearen Anteil wie sich die
-Funktionswerte $f(\vec{x}$ ändern, wenn sich die Variablen $x_1, x_2, \ldots,
-x_n$ entlang der Koordinatenachsen sum $\Delta x_1, \Delta x_2, \ldots, \Delta
+Funktionswerte $f(\vec{x})$ ändern, wenn sich die Variablen $x_1, x_2, \ldots,
+x_n$ entlang der Koordinatenachsen um $\Delta x_1, \Delta x_2, \ldots, \Delta
 x_n$ ändern.
 ```
 
@@ -62,5 +68,12 @@ x_n$ ändern.
 ```
 
 ```{dropdown} Video zu "Totales Differential" von Mathematische Methoden
-<iframe width="560" height="315" src="https://www.youtube.com/embed/qDgsHyg928Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/qDgsHyg928Q"
+title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 ```
+
+## Zusammenfassung und Ausblick
+
+In diesem Kapitel haben wir das totale Differential als Maß für die Änderung des
+Funktionswerts bei kleinen Änderungen der Eingangsvariablen eingeführt. Im
+nächsten Kapitel werden wir uns mit Extremwerten beschäftigen.

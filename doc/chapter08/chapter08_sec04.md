@@ -4,7 +4,7 @@ Im letzten Abschnitt haben wir uns mit Extremwerten einer mehrdimensionalen
 Funktion beschäftigt. An die Variablen haben wir aber keinerlei Bedingungen
 gestellt. In der Praxis kommt es aber oft vor, dass Einschränkungen an die
 Variablen selbst gestellt werden. Diese werden oft als eine zusätzliche
-Gleichung formuliert. In diesem Kapitel lernen wir eine Lösungsmethoden kennen.
+Gleichung formuliert. In diesem Kapitel lernen wir eine Lösungsmethode kennen.
 
 ## Lernziele
 
@@ -36,7 +36,7 @@ $$A(x,y) = x \cdot y.$$
 Die Funktion $A$ wird **Zielfunktion** genannt. Sie hängt von zwei Variablen ab.
 Würden wir jetzt ohne weitere Einschränkungen das Maximum dieser Funktion
 suchen, so müssten wir die Seitenlängen $x$ und $y$ unendlich groß wählen. Ein
-Minimum liegt offensichtich vor, wenn $x = 0$ und $y = 0$. Aber das Minimum ist
+Minimum liegt offensichtlich vor, wenn $x = 0$ und $y = 0$. Aber das Minimum ist
 ja nicht gesucht.
 
 Erst durch die **Nebenbedingung**, dass die Länge des Drahtes 1 m ist, ist die
@@ -67,7 +67,7 @@ lösen wollen.
 4. Setzen Sie die aufgelöste Gleichung in die Zielfunktion ein.
 5. Jetzt hängt die Zielfunktion von einer Variable weniger ab und die Gleichung
    braucht nicht mehr berücksichtigt werden (sie ist ja indirekt jetzt in der
-   Zielfunktion enthalten0.
+   Zielfunktion enthalten).
 6. Bestimmen Sie die Extremwerte ohne Nebenbedingung.
 7. Beantworten Sie mit diesen Erkenntnissen die ursprüngliche Frage.
 

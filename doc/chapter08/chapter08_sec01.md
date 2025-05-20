@@ -1,6 +1,6 @@
 # 8.1 Tangentenfunktionen
 
-Für eindimensionale Funktionen haben wir die Linearisierung und die Annährung
+Für eindimensionale Funktionen haben wir die Linearisierung und die Annäherung
 einer Funktion durch eine Tangente bereits kennengelernt. Am einfachsten lässt
 sich die Tangente einer eindimensionalen Funktion berechnen, indem wir das 1.
 Taylorpolynom im Entwicklungspunkt $x_0$ berechnen:
@@ -29,6 +29,7 @@ $$T_{1,f}(\vec{x}) = f(\vec{x}_0) + \nabla f(\vec{x}_0) \cdot (\vec{x}-\vec{x}_0
 ## Was ist eine Tangentenfunktion?
 
 ```{admonition} Was ist ... eine Tangentenfunktion?
+:class: note
 Um eine Tangentenfunktion zu bilden, brauchen wir erst einmal eine skalarwertige
 Funktion, also $f:\mathbb{R}^n \to \mathbb{R}$. Außerdem brauchen wir einen
 Entwicklungspunkt $\vec{x}_0$. Dann wird die folgende Funktion Tangentenfunktion
@@ -58,7 +59,8 @@ $n=3$ oder größer durchführen. Darauf verzichten wir aber hier.
 Das folgende Video fasst Tangentenfunktion noch einmal zusammen.
 
 ```{dropdown} Video zu "Tangentenfunktion" von Mathematische Methoden
-<iframe width="560" height="315" src="https://www.youtube.com/embed/RFbjuIDKHG0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/RFbjuIDKHG0"
+title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 ```
 
 ## Beispiel zu Tangentialebene
@@ -71,11 +73,17 @@ $$f(x,y) = -x^2 - y^2.$$
 Als Entwicklungspunkt wird der Punkt $(-1,-1)$ gewählt. Das Ergebnis ist die
 Tangentialebene
 
-$$T_{1,f} = 2 + 2x + 2y.$$
+$$T_{1,f}(x,y) = 2 + 2x + 2y.$$
 
 Hier wird auf die detaillierte Berechnung der Tangentialebene verzichtet. Bitte
 schauen Sie sich stattdessen das Video an.
 
 ```{dropdown} Video zu "Beispiel Tangentenfunktion" von Mathematische Methoden
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Cms3lsrG0cM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Cms3lsrG0cM"
+title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 ```
+
+## Zusammenfassung und Ausblick
+
+Mit der Tangentenfunktion können wir das sogenannte totale Differential im
+nächsten Kapitel einführen.
