@@ -34,7 +34,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=87e54e7c" />
     <link rel="stylesheet" type="text/css" href="../_static/jsxgraph.css?v=a7b027cb" />
@@ -537,10 +537,10 @@ zuerst komplexere Techniken oder Kriterien anzuwenden.</p>
 <p>Das Quotienten-Kriterium besagt, dass eine Reihe <span class="math notranslate nohighlight">\(\sum_{k=1}^{\infty} a_k\)</span>
 konvergiert, wenn der Grenzwert</p>
 <div class="math notranslate nohighlight">
-\[r = \lim_{k\to\infty} \left| \frac{a_{k+1}}{a_k} \right|\]</div>
-<p>existiert und kleiner als 1 ist. Gilt <span class="math notranslate nohighlight">\(r &gt; 1\)</span>, so divergiert die Reihe. Gilt
-<span class="math notranslate nohighlight">\(r = 1\)</span>, so versagt das Kriterium und ein anderes Kriterium muss benutzt werden.</p>
-<p>Übrigens: Für <span class="math notranslate nohighlight">\(r &lt; 1\)</span> ist die Reihe sogar absolut konvergent.</p>
+\[L = \lim_{k\to\infty} \left| \frac{a_{k+1}}{a_k} \right|\]</div>
+<p>existiert und kleiner als 1 ist. Gilt <span class="math notranslate nohighlight">\(L &gt; 1\)</span>, so divergiert die Reihe. Gilt
+<span class="math notranslate nohighlight">\(L = 1\)</span>, so versagt das Kriterium und ein anderes Kriterium muss benutzt werden.</p>
+<p>Übrigens: Für <span class="math notranslate nohighlight">\(L &lt; 1\)</span> ist die Reihe sogar absolut konvergent.</p>
 </div>
 <p>Den Begriff <strong>absolute Konvergenz</strong> hatten wir bisher nicht. Absolute Konvergenz
 ist mehr als Konvergenz. Nicht nur die Reihe <span class="math notranslate nohighlight">\((s_n)\)</span> mit</p>
@@ -560,7 +560,7 @@ aufeinanderfolgenden Glieder:</p>
 \[\left|\frac{a_{k+1}}{a_k}\right| =
 \frac{\frac{2^{k+1}}{(k+1)!}}{\frac{2^k}{k!}} =
 \frac{2^{k+1}k!}{2^k(k+1)!} = \frac{2}{k+1}.\]</div>
-<p>Da <span class="math notranslate nohighlight">\(r = \lim_{k \to \infty} \frac{2}{k+1} = 0 &lt; 1\)</span>, konvergiert die Reihe
+<p>Da <span class="math notranslate nohighlight">\(L = \lim_{k \to \infty} \frac{2}{k+1} = 0 &lt; 1\)</span>, konvergiert die Reihe
 <span class="math notranslate nohighlight">\(\sum_{k=1}^{\infty} \frac{2^k}{k!}\)</span> nach dem Quotienten-Kriterium.</p>
 </section>
 <section id="das-wurzel-kriterium">
@@ -575,10 +575,10 @@ anwenden zu müssen.</p>
 <p>Das Wurzel-Kriterium besagt, dass eine Reihe <span class="math notranslate nohighlight">\(\sum_{k=1}^{\infty} a_k\)</span>
 konvergiert, wenn der Grenzwert</p>
 <div class="math notranslate nohighlight">
-\[r = \lim_{k\to\infty} \sqrt[k]{|a_k|}\]</div>
-<p>existiert und kleiner als 1 ist. Gilt <span class="math notranslate nohighlight">\(r &gt; 1\)</span>, so divergiert die Reihe. Gilt
-<span class="math notranslate nohighlight">\(r = 1\)</span>, so versagt das Kriterium und ein anderes Kriterium muss benutzt werden.</p>
-<p>Übrigens: Für <span class="math notranslate nohighlight">\(r &lt; 1\)</span> ist die Reihe sogar absolut konvergent, genau wie beim
+\[L = \lim_{k\to\infty} \sqrt[k]{|a_k|}\]</div>
+<p>existiert und kleiner als 1 ist. Gilt <span class="math notranslate nohighlight">\(L &gt; 1\)</span>, so divergiert die Reihe. Gilt
+<span class="math notranslate nohighlight">\(L = 1\)</span>, so versagt das Kriterium und ein anderes Kriterium muss benutzt werden.</p>
+<p>Übrigens: Für <span class="math notranslate nohighlight">\(L &lt; 1\)</span> ist die Reihe sogar absolut konvergent, genau wie beim
 Quotienten-Kriterium.</p>
 </div>
 <p>Als Beispiel betrachten wir die Reihe <span class="math notranslate nohighlight">\((s_n)\)</span> mit</p>
@@ -587,12 +587,12 @@ Quotienten-Kriterium.</p>
 <p>Wir wenden das Wurzel-Kriterium an:</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
-r &amp; = \lim_{k\rightarrow \infty}\sqrt[k]{\left|a_k\right|} = \\
+L &amp; = \lim_{k\rightarrow \infty}\sqrt[k]{\left|a_k\right|} = \\
 &amp;  = \lim_{k\rightarrow \infty}\left(\frac{1}{4} \cdot 4^{-k-2} 2^{k+4}\right)^{\left(\frac{1}{k} \right)} = \\
 &amp; = \lim_{k\rightarrow \infty} \left(4^{-k - 3} 2^{k + 4}\right)^{\left(\frac{1}{k}\right)} = \\
 &amp; = \frac{1}{2} .
  \end{align*}\]</div>
-<p>Wegen <span class="math notranslate nohighlight">\(r = \frac{1}{2} &lt;1\)</span> ist die Reihe (absolut) konvergent.</p>
+<p>Wegen <span class="math notranslate nohighlight">\(L = \frac{1}{2} &lt;1\)</span> ist die Reihe (absolut) konvergent.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Video “Wurzel- und Quotientenkriterium” von Prof. Hoever</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">

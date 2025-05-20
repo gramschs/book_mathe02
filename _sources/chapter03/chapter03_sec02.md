@@ -83,12 +83,12 @@ zuerst komplexere Techniken oder Kriterien anzuwenden.
 Das Quotienten-Kriterium besagt, dass eine Reihe $\sum_{k=1}^{\infty} a_k$
 konvergiert, wenn der Grenzwert
 
-$$r = \lim_{k\to\infty} \left| \frac{a_{k+1}}{a_k} \right|$$
+$$L = \lim_{k\to\infty} \left| \frac{a_{k+1}}{a_k} \right|$$
 
-existiert und kleiner als 1 ist. Gilt $r > 1$, so divergiert die Reihe. Gilt
-$r = 1$, so versagt das Kriterium und ein anderes Kriterium muss benutzt werden.
+existiert und kleiner als 1 ist. Gilt $L > 1$, so divergiert die Reihe. Gilt
+$L = 1$, so versagt das Kriterium und ein anderes Kriterium muss benutzt werden.
 
-Übrigens: Für $r < 1$ ist die Reihe sogar absolut konvergent.
+Übrigens: Für $L < 1$ ist die Reihe sogar absolut konvergent.
 ```
 
 Den Begriff **absolute Konvergenz** hatten wir bisher nicht. Absolute Konvergenz
@@ -114,7 +114,7 @@ $$\left|\frac{a_{k+1}}{a_k}\right| =
 \frac{\frac{2^{k+1}}{(k+1)!}}{\frac{2^k}{k!}} =
 \frac{2^{k+1}k!}{2^k(k+1)!} = \frac{2}{k+1}.$$
 
-Da $r = \lim_{k \to \infty} \frac{2}{k+1} = 0 < 1$, konvergiert die Reihe
+Da $L = \lim_{k \to \infty} \frac{2}{k+1} = 0 < 1$, konvergiert die Reihe
 $\sum_{k=1}^{\infty} \frac{2^k}{k!}$ nach dem Quotienten-Kriterium.
 
 ## Das Wurzel-Kriterium
@@ -130,12 +130,12 @@ anwenden zu müssen.
 Das Wurzel-Kriterium besagt, dass eine Reihe $\sum_{k=1}^{\infty} a_k$
 konvergiert, wenn der Grenzwert
 
-$$r = \lim_{k\to\infty} \sqrt[k]{|a_k|}$$
+$$L = \lim_{k\to\infty} \sqrt[k]{|a_k|}$$
 
-existiert und kleiner als 1 ist. Gilt $r > 1$, so divergiert die Reihe. Gilt
-$r = 1$, so versagt das Kriterium und ein anderes Kriterium muss benutzt werden.
+existiert und kleiner als 1 ist. Gilt $L > 1$, so divergiert die Reihe. Gilt
+$L = 1$, so versagt das Kriterium und ein anderes Kriterium muss benutzt werden.
 
-Übrigens: Für $r < 1$ ist die Reihe sogar absolut konvergent, genau wie beim
+Übrigens: Für $L < 1$ ist die Reihe sogar absolut konvergent, genau wie beim
 Quotienten-Kriterium.
 ```
 
@@ -146,12 +146,12 @@ $$s_n = \sum_{k=1}^{n} \left(-\frac{1}{4}\right) \cdot 4^{-k-2} \cdot 2^{k+4}.$$
 Wir wenden das Wurzel-Kriterium an:
 
 \begin{align*}
-r & = \lim_{k\rightarrow \infty}\sqrt[k]{\left|a_k\right|} = \\
+L & = \lim_{k\rightarrow \infty}\sqrt[k]{\left|a_k\right|} = \\
 &  = \lim_{k\rightarrow \infty}\left(\frac{1}{4} \cdot 4^{-k-2} 2^{k+4}\right)^{\left(\frac{1}{k} \right)} = \\
 & = \lim_{k\rightarrow \infty} \left(4^{-k - 3} 2^{k + 4}\right)^{\left(\frac{1}{k}\right)} = \\
 & = \frac{1}{2} .
  \end{align*}
- Wegen $r = \frac{1}{2} <1$ ist die Reihe (absolut) konvergent.
+ Wegen $L = \frac{1}{2} <1$ ist die Reihe (absolut) konvergent.
 
 ```{dropdown} Video "Wurzel- und Quotientenkriterium" von Prof. Hoever
 <iframe width="560" height="315" src="https://www.youtube.com/embed/G1GSAFrd6mE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
