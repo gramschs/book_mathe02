@@ -294,7 +294,7 @@ Damit ist der Punkt $(x_{4},y_{4})=(-2,-4)$ ein Extremum. Da das Vorzeichen von 
 
 ```{admonition} Übung 8.5
 :class: miniexercise
-Die Querschnittsfläche eines Tunnels kann als Rechteck beschrieben werden, auf
+Die Querschnittsfläche eines Tunnels kann als Rechteck beschrieben werden, über
 dem sich ein Halbkreis befindet. Wie müssen die geometrischen Abmessungen
 gewählt werden, wenn der Umfang minimal sein soll und der Flächeninhalt 50 m²
 betragen soll. 
