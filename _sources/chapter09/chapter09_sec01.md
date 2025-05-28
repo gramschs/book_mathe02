@@ -36,6 +36,7 @@ Funktionsgraphen von $f(x,y)$ (der „Decke") entsteht. Dabei stammen die Punkte
 <iframe src="https://gramschs.github.io/book_mathe02/_static/assets/doppelintegral_volumen.html"
 width=100% height="600" frameborder="0" scrolling="yes"></iframe>
 
+
 Doppelintegrale haben vielfältige Anwendungen in den Ingenieurwissenschaften.
 Sie dienen u.a. zur Berechnung von
 
