@@ -31,18 +31,25 @@ Integral entspricht dem Flächeninhalt
 
 Dementsprechend beschreibt das Doppelintegral einer Funktion von zwei Variablen
 das Volumen $V$, das zwischen dem Integrationsbereich $A$ (dem „Boden") und dem
-Funktionsgraphen von $f(x,y)$ (der „Decke") entsteht. Dabei stammen die Punkte $(x,y)$ aus dem Bereich $A$.
+Funktionsgraphen von $f(x,y)$ (der „Decke") entsteht. Dabei stammen die Punkte
+$(x,y)$ aus dem Bereich $A$.
+
+In der folgenden interaktiven Demonstration wird das Rechteck $A = [-2,2] \times
+[-4,4]$ als Definitionsgebiet bzw. Integrationsbereich verwendet. Sie können
+zwischen vier verschiedenen Funktionen wählen. Das Volumen zwischen der Fläche,
+die durch $f(x,y)$ und der xy-Ebene erzeugt wird, ist hellblau eingefärbt.
 
 <iframe src="https://gramschs.github.io/book_mathe02/_static/assets/doppelintegral_volumen.html"
 width=100% height="600" frameborder="0" scrolling="yes"></iframe>
 
+Doppelintegrale haben aber nicht nur die geometrische Anwendungen der
+Volumenberechnung, sondern mit Doppelintegralen werden u.a. auch
 
-Doppelintegrale haben vielfältige Anwendungen in den Ingenieurwissenschaften.
-Sie dienen u.a. zur Berechnung von
+* Flächeninhalte,
+* Schwerpunkte einer Fläche und
+* Flächenmomente
 
-* Flächeninhalt,
-* Schwerpunkt einer Fläche und
-* Flächenmoment.
+berechnet.
 
 ## Definition Doppelintegral
 
