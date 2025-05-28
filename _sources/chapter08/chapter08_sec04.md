@@ -3,8 +3,9 @@
 Im letzten Abschnitt haben wir uns mit Extremwerten einer mehrdimensionalen
 Funktion beschäftigt. An die Variablen haben wir aber keinerlei Bedingungen
 gestellt. In der Praxis kommt es aber oft vor, dass Einschränkungen an die
-Variablen selbst gestellt werden. Diese werden oft als eine zusätzliche
-Gleichung formuliert. In diesem Kapitel lernen wir eine Lösungsmethode kennen.
+Variablen selbst gestellt werden. Diese Einschränkungen werden als eine
+zusätzliche Gleichung formuliert. In diesem Kapitel lernen wir nur eine
+Lösungsmethode kennen, die sogenannte Eliminationsmethode.
 
 ## Lernziele
 
@@ -47,11 +48,20 @@ setzen:
 $$2\cdot x + 2 \cdot y = 1.$$
 
 Streng genommen haben wir damit den Definitionsbereich der Funktion $A$
-eingeschränkt. Das folgende Video erläutert nochmal, was ein Extremwertproblem
+eingeschränkt. Da Seitenlängen physikalisch nicht negativ sein können, muss
+gelten: $x \geq 0$ und $y \geq 0$. Aus der Nebenbedingung folgt außerdem: $x =
+\frac{1-2y}{2} = \frac{1}{2} - y$. Damit $x \geq 0$ gilt, muss $y \leq
+\frac{1}{2}$ sein. Analog gilt $x \leq \frac{1}{2}$. Der zulässige
+Definitionsbereich ist daher: $x, y \in (0, \frac{1}{2})$ mit der Nebenbedingung
+$2x + 2y = 1$.
+
+Das folgende Video erläutert nochmal, was ein Extremwertproblem
 mit Nebenbedingungen ist.
 
 ```{dropdown} Video zu "Extrema mit Nebenbedingungen" von Mathematische Methoden
-<iframe width="560" height="315" src="https://www.youtube.com/embed/MMpljay-naE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/MMpljay-naE"
+title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
+encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 ```
 
 ## Eliminationsmethode
@@ -64,12 +74,16 @@ lösen wollen.
 1. Formulieren Sie die Zielfunktion als Funktion von mehreren Variablen.
 2. Formulieren Sie die Nebenbedingung als Gleichung.
 3. Lösen Sie die Gleichung nach einer Variable auf.
-4. Setzen Sie die aufgelöste Gleichung in die Zielfunktion ein.
+4. Setzen Sie die aufgelöste Gleichung in die Zielfunktion ein. Machen Sie sich
+   bewusst, welches Definitionsgebiet für die Zielfunktion gilt.
 5. Jetzt hängt die Zielfunktion von einer Variable weniger ab und die Gleichung
    braucht nicht mehr berücksichtigt werden (sie ist ja indirekt jetzt in der
    Zielfunktion enthalten).
-6. Bestimmen Sie die Extremwerte ohne Nebenbedingung.
+6. Bestimmen Sie die Extremwerte der Zielfunktion unter Berücksichtigung der
+   Ränder des Definitionsgebietes.
 7. Beantworten Sie mit diesen Erkenntnissen die ursprüngliche Frage.
+
+## Fortführung des Beispiels
 
 Schritt 1 und 2 haben wir für das Beispiel mit dem Draht schon durchgeführt.
 Also lösen wir jetzt die Gleichung $2\cdot x + 2 \cdot y = 1$ nach $y$ auf:
@@ -85,6 +99,8 @@ wir ihr einen neuen Namen gegeben, nämlich $\tilde{A}$. Jetzt vereinfachen wir
 die Funktion noch, indem wir ausmultiplizieren:
 
 $$\tilde{A}(x) = x \cdot (-x+\frac{1}{2}) = -x^2 + \frac{1}{2}x.$$
+
+Das Definitionsgebiet für $\tilde{A}$ ist $x \in (0, \frac{1}{2})$.
 
 Als letztes folgt Schritt 6, die Bestimmung der Extremwerte. Dazu bilden wir die
 erste Ableitung
@@ -110,7 +126,8 @@ $$\tilde{A}''(\frac{1}{4}) = -2.$$
 
 Da die 2. Ableitung an der Stelle $x = \frac{1}{4}$ negativ ist, können wir
 schlussfolgern, dass $x = \frac{1}{4}$ eine Extremstelle ist und dass es sich
-dabei um ein Maximum (Hochpunkt) handelt.
+dabei um ein Maximum (Hochpunkt) handelt. Zudem liegt dieser Wert im zulässigen
+Intervall $(0, \frac{1}{2})$.
 
 Damit haben wir die erste Seitenlänge $x$ gefunden. Jetzt fehlt noch Schritt 7,
 die Beantwortung der ursprünglichen Frage. Es war ja nach den beiden
@@ -121,25 +138,40 @@ $$2\cdot x + 2 \cdot y = 1$$
 erhalten wir aber für $x = \frac{1}{4}$ sofort, dass $y=\frac{1}{4}$ gelten
 muss.
 
-Das vom Flächeninhalt her maximale Rechteckt mit einer Drahtlänge von 1 m
+Das vom Flächeninhalt her maximale Rechteck mit einer Drahtlänge von 1 m
 entsteht, wenn der Draht zu einem Quadrat gebogen wird, bei dem jede Seite eine
 Länge von 0.25 m hat.
 
 Das folgende Video zeigt die Eliminationsmethode.
 
 ```{dropdown} Video zu "Eliminationsmethode" von Mathematische Methoden
-<iframe width="560" height="315" src="https://www.youtube.com/embed/JOMh6OiGZbA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/JOMh6OiGZbA"
+title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
+encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 ```
 
 In dem folgenden Video werden mögliche Kandidaten für Extrema gesucht. Es wird
 allerdings nicht überprüft, ob die Kandidaten wirklich Extremwerte sind.
 
 ```{dropdown} Video zu "Beispiel Eliminationsmethode" von Mathematische Methoden
-<iframe width="560" height="315" src="https://www.youtube.com/embed/4AFGmSQwpH4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/4AFGmSQwpH4"
+title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
+encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 ```
 
 Ein weiteres Beispiel wird in dem folgenden Video gezeigt.
 
 ```{dropdown} Video zu "Extremwertaufgaben" von Magda liebt Mathe
-<iframe width="560" height="315" src="https://www.youtube.com/embed/4D4hpF8w69Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/4D4hpF8w69Q"
+title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
+encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 ```
+
+## Zusammenfassung und Ausblick
+
+In diesem Kapitel haben wir uns auf die Eliminiationsmethode beschränkt, um
+Extremwertprobleme mit Nebenbedingungen zu lösen. Eine weitere sehr bekannte
+Methode ist die
+[Lagrange-Multiplikator-Methode](https://de.wikipedia.org/wiki/Lagrange-Multiplikator),
+die wir in dieser Vorlesung nicht mehr behandeln werden. Stattdessen gehen wir
+zu Doppelintegralen über.

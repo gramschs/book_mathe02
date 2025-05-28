@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doppelintegral Demonstration</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/plotly.js/2.18.0/plotly.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .controls {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .control-group {
+            display: inline-block;
+            margin: 0 15px;
+            vertical-align: top;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #34495e;
+        }
+        input[type="range"] {
+            width: 120px;
+        }
+        select {
+            padding: 5px;
+            border-radius: 4px;
+            border: 1px solid #bdc3c7;
+        }
+        .value-display {
+            font-size: 12px;
+            color: #7f8c8d;
+            margin-top: 2px;
+        }
+        #plot {
+            height: 600px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .info-box {
+            background-color: #e8f4f8;
+            border: 1px solid #3498db;
+            border-radius: 4px;
+            padding: 15px;
+            margin-top: 20px;
+        }
+        .formula {
+            text-align: center;
+            font-size: 18px;
+            margin: 10px 0;
+            font-family: 'Times New Roman', serif;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Interaktive Demonstration: Doppelintegral</h1>
+        
+        <div class="controls">
+            <div class="control-group">
+                <label for="functionSelect">Funktion f(x,y):</label>
+                <select id="functionSelect">
+                    <option value="quadratic">f(x,y) = x² + y²</option>
+                    <option value="sine">f(x,y) = sin(x + y) + 2</option>
+                    <option value="saddle">f(x,y) = x² - y² + 25</option>
+                    <option value="gaussian">f(x,y) = 3·e^(-(x²+y²)/2)</option>
+                </select>
+            </div>
+            
+            <div class="control-group">
+                <label for="transparency">Volumen-Transparenz:</label>
+                <input type="range" id="transparency" min="0.1" max="0.8" step="0.1" value="0.4">
+                <div class="value-display" id="transparencyValue">0.4</div>
+            </div>
+        </div>
+        
+        <div id="plot"></div>
+    </div>
+
+    <script>
+        // Definiere das Definitionsgebiet (Rechteck)
+        function isInDomain(x, y) {
+            // Rechteckiger Bereich: [-2, 2] x [-4, 4]
+            return (x >= -2 && x <= 2 && y >= -4 && y <= 4);
+        }
+
+        // Funktionsdefinitionen
+        const functions = {
+            quadratic: (x, y) => x*x + y*y,
+            sine: (x, y) => Math.sin(x + y) + 2,
+            saddle: (x, y) => x*x - y*y + 25,
+            gaussian: (x, y) => 3 * Math.exp(-(x*x + y*y)/2)
+        };
+
+        // Erstelle Gitterpunkte
+        function createGrid(resolution = 100) {
+            const rangeX = 2.5; // Etwas größer als das Definitionsgebiet für bessere Darstellung
+            const rangeY = 5;   // Etwas größer als das Definitionsgebiet für bessere Darstellung
+            const stepX = (2 * rangeX) / resolution;
+            const stepY = (2 * rangeY) / resolution;
+            const x = [];
+            const y = [];
+            const z = [];
+            const domainX = [];
+            const domainY = [];
+            
+            for (let i = 0; i <= resolution; i++) {
+                const xi = -rangeX + i * stepX;
+                const xRow = [];
+                const yRow = [];
+                const zRow = [];
+                
+                for (let j = 0; j <= resolution; j++) {
+                    const yj = -rangeY + j * stepY;
+                    xRow.push(xi);
+                    yRow.push(yj);
+                    
+                    if (isInDomain(xi, yj)) {
+                        zRow.push(0); // Für Definitionsgebiet in xy-Ebene
+                        domainX.push(xi);
+                        domainY.push(yj);
+                    } else {
+                        zRow.push(null);
+                    }
+                }
+                x.push(xRow);
+                y.push(yRow);
+                z.push(zRow);
+            }
+            
+            return { x, y, z, domainX, domainY };
+        }
+
+        // Berechne Funktionswerte über dem Definitionsgebiet
+        function calculateFunction(funcName, heightScale, resolution = 100) {
+            const func = functions[funcName];
+            const rangeX = 2.5; // Etwas größer als das Definitionsgebiet
+            const rangeY = 5;   // Etwas größer als das Definitionsgebiet
+            const stepX = (2 * rangeX) / resolution;
+            const stepY = (2 * rangeY) / resolution;
+            
+            const x = [];
+            const y = [];
+            const z = [];
+            
+            for (let i = 0; i <= resolution; i++) {
+                const xi = -rangeX + i * stepX;
+                const xRow = [];
+                const yRow = [];
+                const zRow = [];
+                
+                for (let j = 0; j <= resolution; j++) {
+                    const yj = -rangeY + j * stepY;
+                    
+                    xRow.push(xi);
+                    yRow.push(yj);
+                    
+                    if (isInDomain(xi, yj)) {
+                        zRow.push(func(xi, yj) * heightScale);
+                    } else {
+                        zRow.push(null);
+                    }
+                }
+                x.push(xRow);
+                y.push(yRow);
+                z.push(zRow);
+            }
+            
+            return { x, y, z };
+        }
+
+        // Erstelle Volumenkörper (Seitenwände)
+        function createVolumeWalls(funcName, heightScale, transparency) {
+            const func = functions[funcName];
+            const vertices = [];
+            const faces = [];
+            
+            // Definiere die Eckpunkte des Rechtecks [-2, 2] x [-4, 4]
+            const corners = [
+                [-2, -4], [2, -4], [2, 4], [-2, 4], [-2, -4] // Schließe den Kreis
+            ];
+            
+            // Erstelle hochauflösende Randpunkte
+            const boundaryPoints = [];
+            const pointsPerSide = 50; // Punkte pro Rechteckseite
+            
+            for (let side = 0; side < 4; side++) {
+                const [x1, y1] = corners[side];
+                const [x2, y2] = corners[side + 1];
+                
+                for (let i = 0; i < pointsPerSide; i++) {
+                    const t = i / pointsPerSide;
+                    const x = x1 + t * (x2 - x1);
+                    const y = y1 + t * (y2 - y1);
+                    boundaryPoints.push([x, y]);
+                }
+            }
+            
+            // Erstelle Vertices für Boden und Decke
+            let vertexIndex = 0;
+            const bottomIndices = [];
+            const topIndices = [];
+            
+            boundaryPoints.forEach(([x, y]) => {
+                // Bodenpunkt
+                vertices.push([x, y, 0]);
+                bottomIndices.push(vertexIndex++);
+                
+                // Deckenpunkt
+                vertices.push([x, y, func(x, y) * heightScale]);
+                topIndices.push(vertexIndex++);
+            });
+            
+            // Erstelle Seitenflächen
+            for (let i = 0; i < boundaryPoints.length - 1; i++) {
+                const b1 = bottomIndices[i];
+                const t1 = topIndices[i];
+                const b2 = bottomIndices[i + 1];
+                const t2 = topIndices[i + 1];
+                
+                // Zwei Dreiecke pro Seitenfläche
+                faces.push([b1, b2, t1]);
+                faces.push([b2, t2, t1]);
+            }
+            
+            return {
+                type: 'mesh3d',
+                x: vertices.map(v => v[0]),
+                y: vertices.map(v => v[1]),
+                z: vertices.map(v => v[2]),
+                i: faces.map(f => f[0]),
+                j: faces.map(f => f[1]),
+                k: faces.map(f => f[2]),
+                color: 'lightblue',
+                opacity: transparency,
+                name: 'Volumen (Doppelintegral)'
+            };
+        }
+
+        // Plotte die Szene
+        function plotScene() {
+            const funcName = document.getElementById('functionSelect').value;
+            const heightScale = 1.0;
+            const transparency = parseFloat(document.getElementById('transparency').value);
+            
+            // Aktualisiere Werte-Anzeige
+            // document.getElementById('heightValue').textContent = heightScale.toFixed(1);
+            document.getElementById('transparencyValue').textContent = transparency.toFixed(1);
+            
+            const grid = createGrid(100);
+            const surface = calculateFunction(funcName, heightScale, 100);
+            const volume = createVolumeWalls(funcName, heightScale, transparency);
+            
+            const data = [
+                // Definitionsgebiet in xy-Ebene
+                {
+                    type: 'scatter3d',
+                    mode: 'markers',
+                    x: grid.domainX,
+                    y: grid.domainY,
+                    z: Array(grid.domainX.length).fill(0),
+                    marker: {
+                        size: 3,
+                        color: '#34495e',
+                        opacity: 0.8
+                    },
+                    name: ''
+                },
+                
+                // Funktionsoberfläche
+                {
+                    type: 'surface',
+                    x: surface.x,
+                    y: surface.y,
+                    z: surface.z,
+                    colorscale: 'Viridis',
+                    opacity: 0.8,
+                    name: 'f(x,y)'
+                },
+                
+                // Volumenkörper
+                volume
+            ];
+            
+            const layout = {
+                title: {
+                    text: `Doppelintegral: ∬<sub>A</sub> f(x,y) dA`,
+                    font: { size: 20 }
+                },
+                scene: {
+                    xaxis: { title: 'x', range: [-6, 6] },
+                    yaxis: { title: 'y', range: [-6, 6] },
+                    zaxis: { title: 'f(x,y)' },
+                    camera: {
+                        eye: { x: 1.5, y: 1.5, z: 1.2 }
+                    },
+                    aspectmode: 'manual',
+                    aspectratio: { x: 1, y: 1, z: 0.5 }
+                },
+                showlegend: true,
+                margin: { l: 0, r: 0, t: 40, b: 0 }
+            };
+            
+            const config = {
+                displayModeBar: true,
+                displaylogo: false,
+                modeBarButtonsToRemove: ['pan2d', 'select2d', 'lasso2d', 'autoScale2d']
+            };
+            
+            Plotly.newPlot('plot', data, layout, config);
+        }
+        
+        // Event Listeners
+        document.getElementById('functionSelect').addEventListener('change', plotScene);
+        //document.getElementById('heightScale').addEventListener('input', plotScene);
+        document.getElementById('transparency').addEventListener('input', plotScene);
+        
+        // Initialer Plot
+        plotScene();
+    </script>
+</body>
+</html>

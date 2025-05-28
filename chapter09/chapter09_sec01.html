@@ -34,7 +34,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=87e54e7c" />
     <link rel="stylesheet" type="text/css" href="../_static/jsxgraph.css?v=a7b027cb" />
@@ -464,7 +464,7 @@ Schwerpunktsberechnungen gebraucht.</p>
 <h2>Lernziele<a class="headerlink" href="#lernziele" title="Link to this heading">#</a></h2>
 <div class="goals admonition">
 <p class="admonition-title">Lernziele</p>
-<p>Sie können erklären, was ein <strong>Doppelintegral</strong> <span class="math notranslate nohighlight">\(\iint_{A} f(x,y)\, dA\)</span> ist.</p>
+<p>Sie können erklären, was ein <strong>Doppelintegral</strong> <span class="math notranslate nohighlight">\(\iint_{A} f(x,y)\, dA\)</span> ist und unter welchen Voraussetzungen es existiert.</p>
 </div>
 </section>
 <section id="grundkonzept">
@@ -481,14 +481,10 @@ dem Flächeninhalt der Fläche <span class="math notranslate nohighlight">\(A\)<
 </figcaption>
 </figure>
 <p>Dementsprechend beschreibt das Doppelintegral einer Funktion von zwei Variablen
-das Volumen <span class="math notranslate nohighlight">\(V\)</span>, das zwischen der Fläche <span class="math notranslate nohighlight">\(B\)</span> (B wie Boden oder Bereich) und der
-Fläche <span class="math notranslate nohighlight">\(f(x,y)\)</span> entsteht. Dabei stammen die Punkte <span class="math notranslate nohighlight">\((x,y)\)</span> aus <span class="math notranslate nohighlight">\(B\)</span>.</p>
-<figure class="align-default" id="fig-part10-sketch-doubleintegral">
-<a class="reference internal image-reference" href="../_images/part10_sketch_doubleintegral.svg"><img alt="../_images/part10_sketch_doubleintegral.svg" src="../_images/part10_sketch_doubleintegral.svg" width="600px" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 17 </span><span class="caption-text">Integral entspricht dem Volumen</span><a class="headerlink" href="#fig-part10-sketch-doubleintegral" title="Link to this image">#</a></p>
-</figcaption>
-</figure>
+das Volumen <span class="math notranslate nohighlight">\(V\)</span>, das zwischen dem Integrationsbereich <span class="math notranslate nohighlight">\(A\)</span> (dem „Boden”) und dem
+Funktionsgraphen von <span class="math notranslate nohighlight">\(f(x,y)\)</span> (der „Decke”) entsteht. Dabei stammen die Punkte <span class="math notranslate nohighlight">\((x,y)\)</span> aus dem Bereich <span class="math notranslate nohighlight">\(A\)</span>.</p>
+<iframe src="https://gramschs.github.io/book_mathe02/_static/assets/doppelintegral_volumen.html"
+width=100% height="600" frameborder="0" scrolling="yes"></iframe>
 <p>Doppelintegrale haben vielfältige Anwendungen in den Ingenieurwissenschaften.
 Sie dienen u.a. zur Berechnung von</p>
 <ul class="simple">
@@ -499,46 +495,47 @@ Sie dienen u.a. zur Berechnung von</p>
 </section>
 <section id="definition-doppelintegral">
 <h2>Definition Doppelintegral<a class="headerlink" href="#definition-doppelintegral" title="Link to this heading">#</a></h2>
-<p>Für die Berechnung des Volumens der Funktion <span class="math notranslate nohighlight">\(f(x,y)\)</span> über einem Bereich <span class="math notranslate nohighlight">\(B\)</span>
+<p>Für die Berechnung des Volumens der Funktion <span class="math notranslate nohighlight">\(f(x,y)\)</span> über einem Bereich <span class="math notranslate nohighlight">\(A\)</span>
 gehen wir so vor, wie im eindimensionalen Fall bei der Berechnung des
-Flächeninhaltes einer eindimensionalen Funktion. Wir zerlegen den Bereich <span class="math notranslate nohighlight">\(B\)</span>
-mit einem sogenannten <strong>Gitter</strong>, d.h. wir teilen den Bereich <span class="math notranslate nohighlight">\(B\)</span> in viele
-kleine Teilbereiche ein, die wir mit <span class="math notranslate nohighlight">\(B_i\)</span> durchnummerieren. Von jedem
-Teilbereich <span class="math notranslate nohighlight">\(B_i\)</span> können wir die x- und y-Koordinate des Mittelpunkts bestimmen.
+Flächeninhaltes einer eindimensionalen Funktion. Wir zerlegen den Bereich <span class="math notranslate nohighlight">\(A\)</span>
+mit einem sogenannten <strong>Gitter</strong>, d.h. wir teilen den Bereich <span class="math notranslate nohighlight">\(A\)</span> in viele
+kleine Teilbereiche ein, die wir mit <span class="math notranslate nohighlight">\(A_i\)</span> durchnummerieren. Von jedem
+Teilbereich <span class="math notranslate nohighlight">\(A_i\)</span> können wir die x- und y-Koordinate des Mittelpunkts bestimmen.
 Diese Koordinaten nennen wir <span class="math notranslate nohighlight">\((x_i,y_i)\)</span>.</p>
 <p>Wenn die Teilbereiche rechteckig sind (das müssen sie nicht sein, wir könnten
-auch beispielsweise Kreise oder andere Muster nehmen), dann kann das Volumen der
+auch beispielsweise andere geometrische Formen verwenden), dann kann das Volumen der
 Säule <span class="math notranslate nohighlight">\(V_i\)</span> (siehe Abbildung rote Säule) berechnet werden als</p>
 <div class="math notranslate nohighlight">
 \[V_i = f(x_i,y_i) \cdot \Delta x \cdot \Delta y.\]</div>
 <figure class="align-default" id="fig-part10-sketch-volume">
 <a class="reference internal image-reference" href="../_images/part10_sketch_volume.svg"><img alt="../_images/part10_sketch_volume.svg" src="../_images/part10_sketch_volume.svg" width="600px" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 18 </span><span class="caption-text">Volumen als Summe einzelner Säulen, hier mit rechteckigem Gitter</span><a class="headerlink" href="#fig-part10-sketch-volume" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 17 </span><span class="caption-text">Volumen als Summe einzelner Säulen, hier mit rechteckigem Gitter</span><a class="headerlink" href="#fig-part10-sketch-volume" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>Jetzt müssen wir noch alle Säulen aufaddieren, um eine Annäherung für das
-Volumen zwischen Boden und Deckel <span class="math notranslate nohighlight">\(f(x,y)\)</span> zu bekommen, also</p>
+Volumen zwischen dem Integrationsbereich und dem Funktionsgraphen <span class="math notranslate nohighlight">\(f(x,y)\)</span> zu
+bekommen, also</p>
 <div class="math notranslate nohighlight">
-\[V\approx f(x_1,y_1) \cdot \Delta y \cdot \Delta x + f(x_2,y_2) \cdot \Delta y
-\cdot \Delta x + \ldots f(x_N,y_N) \cdot \Delta y \cdot \Delta x.\]</div>
-<p>Dabei haben wir jetzt angenommen, dass alle Teilbereiche <span class="math notranslate nohighlight">\(B_i\)</span> die gleiche Form
+\[V\approx f(x_1,y_1) \cdot \Delta x \cdot \Delta y + f(x_2,y_2) \cdot \Delta x
+\cdot \Delta y + \ldots + f(x_N,y_N) \cdot \Delta x \cdot \Delta y.\]</div>
+<p>Dabei haben wir jetzt angenommen, dass alle Teilbereiche <span class="math notranslate nohighlight">\(A_i\)</span> die gleiche Form
 haben und als Rechtecke mit den Seitenlängen <span class="math notranslate nohighlight">\(\Delta x\)</span> und <span class="math notranslate nohighlight">\(\Delta y\)</span>
 beschrieben werden. Wir können das Summenzeichen verwenden:</p>
 <div class="math notranslate nohighlight">
-\[V\approx \sum_{i=1}^{N} f(x_i,y_i) \cdot \Delta y \cdot \Delta x .\]</div>
-<p>Wenn wir nun die Teilbereiche <span class="math notranslate nohighlight">\(B_i\)</span> immer kleiner machen, so brauchen wir immer
+\[V\approx \sum_{i=1}^{N} f(x_i,y_i) \cdot \Delta x \cdot \Delta y .\]</div>
+<p>Wenn wir nun die Teilbereiche <span class="math notranslate nohighlight">\(A_i\)</span> immer kleiner machen, so brauchen wir immer
 mehr Säulen, also <span class="math notranslate nohighlight">\(N\rightarrow\infty\)</span>. Falls der Grenzwert</p>
 <div class="math notranslate nohighlight">
-\[\lim_{N\rightarrow\infty} \sum_{i=1}^{N} f(x_i,y_i) \cdot \Delta y  \cdot
-\Delta x\]</div>
-<p>existiert, nennen wir ihn Integral von <span class="math notranslate nohighlight">\(f(x,y)\)</span> über <span class="math notranslate nohighlight">\(B\)</span> und schreiben das als
+\[\lim_{N\rightarrow\infty} \sum_{i=1}^{N} f(x_i,y_i) \cdot \Delta x  \cdot
+\Delta y\]</div>
+<p>existiert, nennen wir ihn Integral von <span class="math notranslate nohighlight">\(f(x,y)\)</span> über <span class="math notranslate nohighlight">\(A\)</span> und schreiben das als
 sogenanntes <strong>Doppelintegral</strong></p>
 <div class="math notranslate nohighlight">
-\[V = \iint_{B} f(x,y) \, dy \, dx.\]</div>
-<p>Bei den obigen Überlegungen sind wir davon ausgegangen, dass der Bereich <span class="math notranslate nohighlight">\(B\)</span> in
-rechteckige Teilbereiche <span class="math notranslate nohighlight">\(B_i\)</span> aufgeteilt wird. Das muss nicht so sein, wir
-hätten auch andere Aufteilungen wählen können. Daher ist die etwas allgemeiner
+\[V = \iint_{A} f(x,y) \, dx \, dy.\]</div>
+<p>Bei den obigen Überlegungen sind wir davon ausgegangen, dass der Bereich <span class="math notranslate nohighlight">\(A\)</span> in
+rechteckige Teilbereiche <span class="math notranslate nohighlight">\(A_i\)</span> aufgeteilt wird. Das muss nicht so sein, wir
+hätten auch andere Aufteilungen wählen können. Daher ist die allgemein
 formulierte Definition eines Doppelintegrals wie folgt:</p>
 <div class="note admonition">
 <p class="admonition-title">Was ist … ein Doppelintegral?</p>
@@ -554,16 +551,25 @@ bezeichnet. Wenn der Grenzwert</p>
 \[\iint_{A} f(x,y)\, dA\]</div>
 <p>abgekürzt.</p>
 </div>
-<p>Im folgenden Video wird das Grundkonzept des Doppelintegrals erklärt. Im nachfolgenden Video wird die geometrische Interpretation des Doppelintegrals zur Berechnung eines Volumens präsentiert.</p>
+<p>Das Doppelintegral existiert insbesondere dann, wenn die Funktion <span class="math notranslate nohighlight">\(f(x,y)\)</span> über
+dem Bereich <span class="math notranslate nohighlight">\(A\)</span> stetig ist und <span class="math notranslate nohighlight">\(A\)</span> ein messbarer Bereich ist (z.B. ein Rechteck,
+Kreis oder allgemein ein Bereich mit stückweise glatter Berandung).</p>
+<p>Im folgenden Video wird das Grundkonzept des Doppelintegrals erklärt. Im
+nachfolgenden Video wird die geometrische Interpretation des Doppelintegrals zur
+Berechnung eines Volumens präsentiert.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Video zu “Doppelintegral - Definition” von Mathematische Methoden</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/7VjP3jEGW24" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/7VjP3jEGW24"
+title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
+encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </div>
 </details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Video zu “Doppelintegral - Volumeninterpretation” von Mathematische Methoden</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/FtoHJaUR6T8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/FtoHJaUR6T8"
+title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
+encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </div>
 </details></section>
 </section>

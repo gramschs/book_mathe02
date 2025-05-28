@@ -2,8 +2,8 @@
 
 Neben der Linearisierung einer mehrdimensionalen Funktion ist auch die
 Berechnung von Minima (Tiefpunkten) und Maxima (Hochpunkten) interessant für die
-Praxis. Extremwerte können für beliebig mehrdimensionale skalarwertige
-Funktionen existieren, aber wir beschränken uns in diesem Kapitel auf Funktionen
+Praxis. Extremwerte können bei skalarwertigen Funktionen beliebig vieler
+Variablen auftreten, aber wir beschränken uns in diesem Kapitel auf Funktionen
 von zwei unabhängigen Variablen.
 
 ## Lernziele
@@ -113,6 +113,9 @@ ist positiv**.
 $$\det(H_f\,(x_0,y_0)) = \frac{\partial^2 f(x_0,y_0)}{\partial x\partial x}\cdot
 \frac{\partial^2 f(x_0,y_0)}{\partial y \partial y}
 - \left(\frac{\partial^2 f(x_0,y_0)}{\partial x \partial y}\right)^2 > 0.$$
+
+Ist die Determinante der Hesse-Matrix 0 oder negativ, so ist unbestimmt, ob ein
+Extremwert vorliegt.
 
 Sobald durch die zweite Bedingung geklärt ist, dass tatsächlich ein Extremwert
 vorliegt, muss noch berechnet werden, ob ein Maximum (Hochpunkt) oder ein
@@ -256,3 +259,9 @@ Das folgende Video zeigt ein weiteres Beispiel.
 ```{dropdown} Video zu "Extremwerte mehrdimensionaler Funktionen" von Mathematrick
 <iframe width="560" height="315" src="https://www.youtube.com/embed/GwyPVdoQ37g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 ```
+
+## Zusammenfassung und Ausblick
+
+Nachdem wir nun in diesem Kapitle gelernt haben, wie Extremwerte von
+mehrdimensionalen Funktionen bestimmt werden, nehmen wir im nächsten Kapitel
+noch Nebenbedingungen hinzu.
