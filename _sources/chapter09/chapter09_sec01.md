@@ -94,6 +94,7 @@ mehr Säulen, also $N\rightarrow\infty$. Falls der Grenzwert
 $$\lim_{N\rightarrow\infty} \sum_{i=1}^{N} f(x_i,y_i) \cdot \Delta x  \cdot
 \Delta y$$
 
+
 existiert, nennen wir ihn Integral von $f(x,y)$ über $A$ und schreiben das als
 sogenanntes **Doppelintegral**
 
