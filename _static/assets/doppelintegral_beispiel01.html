@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doppelintegral Animation - f(x,y) = xy</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/plotly.js/2.25.2/plotly.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .controls {
+            margin-bottom: 20px;
+            padding: 15px;
+            background-color: #f8f9fa;
+            border-radius: 5px;
+        }
+        .slider-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        .slider {
+            flex: 1;
+            height: 5px;
+            background: #ddd;
+            outline: none;
+            border-radius: 5px;
+        }
+        .slider::-webkit-slider-thumb {
+            appearance: none;
+            width: 20px;
+            height: 20px;
+            background: #007bff;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        .slider::-moz-range-thumb {
+            width: 20px;
+            height: 20px;
+            background: #007bff;
+            border-radius: 50%;
+            cursor: pointer;
+            border: none;
+        }
+        .value-display {
+            font-weight: bold;
+            color: #007bff;
+            min-width: 80px;
+        }
+        .info {
+            margin-top: 15px;
+            padding: 10px;
+            background-color: #e3f2fd;
+            border-left: 4px solid #2196f3;
+            border-radius: 5px;
+        }
+        #plot {
+            width: 100%;
+            height: 600px;
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .math {
+            font-family: 'Times New Roman', serif;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Doppelintegral <span class="math">f(x,y) = xy</span> über <span class="math">A = [0,1] × [1,2]</span></h1>
+        
+        <div class="controls">
+            <div class="info">
+                <strong>Visualisierung:</strong> Die <span style="color: #1565c0;">dunkelblaue Fläche</span> zeigt die innere Integration für den aktuellen x-Wert. 
+                Das <span style="color: #87ceeb;">hellblaue Volumen</span> repräsentiert das gesamte Doppelintegral.
+                Das <span style="color: #999;">hellgraue Rechteck</span> ist das Integrationsgebiet A. Bewegen Sie den Slider, um den aktuellen x-Wert zu verändern.
+            </div>
+            <br>
+            <div class="slider-container">
+                <label for="xSlider"><strong>x-Wert:</strong></label>
+                <input type="range" id="xSlider" class="slider" min="0" max="1" step="0.01" value="0.5">
+                <span class="value-display" id="xValue">0.50</span>
+            </div>
+
+        </div>
+
+        <div id="plot"></div>
+    </div>
+
+    <script>
+        // Erstelle Datenpunkte für die Funktion f(x,y) = xy
+        function createFunctionSurface() {
+            const xRange = [];
+            const yRange = [];
+            const zValues = [];
+            
+            const xSteps = 50;
+            const ySteps = 50;
+            
+            for (let i = 0; i <= xSteps; i++) {
+                xRange.push(i / xSteps);
+            }
+            
+            for (let j = 0; j <= ySteps; j++) {
+                yRange.push(1 + j / ySteps);
+            }
+            
+            for (let j = 0; j <= ySteps; j++) {
+                const row = [];
+                for (let i = 0; i <= xSteps; i++) {
+                    row.push(xRange[i] * yRange[j]);
+                }
+                zValues.push(row);
+            }
+            
+            return {
+                x: xRange,
+                y: yRange,
+                z: zValues,
+                type: 'surface',
+                colorscale: 'Viridis',
+                opacity: 0.8,
+                name: 'f(x,y) = xy',
+                showscale: true,
+                colorbar: {
+                    title: 'f(x,y)',
+                    titleside: 'right'
+                }
+            };
+        }
+
+        // Erstelle das Integrationsgebiet als hellgraue gefüllte Fläche
+        function createIntegrationRegion() {
+            return {
+                type: 'mesh3d',
+                x: [0, 1, 1, 0],
+                y: [1, 1, 2, 2],
+                z: [0, 0, 0, 0],
+                i: [0, 0],
+                j: [1, 2],
+                k: [2, 3],
+                color: '#999999',
+                opacity: 0.6,
+                name: 'Integrationsgebiet A',
+                showlegend: true
+            };
+        }
+
+        // Erstelle das hellblaue Volumen mit mesh3d
+        function createVolume() {
+            const resolution = 20;
+            const vertices = [];
+            const faces = [];
+            let vertexIndex = 0;
+            
+            // Erstelle Gitterpunkte für Boden und Decke
+            for (let i = 0; i <= resolution; i++) {
+                for (let j = 0; j <= resolution; j++) {
+                    const x = i / resolution;
+                    const y = 1 + j / resolution;
+                    
+                    // Bodenpunkt (z = 0)
+                    vertices.push([x, y, 0]);
+                    
+                    // Deckenpunkt (z = f(x,y) = xy)
+                    vertices.push([x, y, x * y]);
+                }
+            }
+            
+            // Erstelle Dreiecke für die Oberfläche und Verbindungen
+            for (let i = 0; i < resolution; i++) {
+                for (let j = 0; j < resolution; j++) {
+                    const baseIndex = (i * (resolution + 1) + j) * 2;
+                    
+                    // Indices für die vier Ecken des aktuellen Quadrats
+                    const bottomLeft = baseIndex;
+                    const topLeft = bottomLeft + 1;
+                    const bottomRight = baseIndex + 2 * (resolution + 1);
+                    const topRight = bottomRight + 1;
+                    const bottomLeftNext = baseIndex + 2;
+                    const topLeftNext = bottomLeftNext + 1;
+                    const bottomRightNext = baseIndex + 2 * (resolution + 1) + 2;
+                    const topRightNext = bottomRightNext + 1;
+                    
+                    if (i < resolution && j < resolution) {
+                        // Obere Fläche (Funktion)
+                        faces.push([topLeft, topRight, topLeftNext]);
+                        faces.push([topRight, topRightNext, topLeftNext]);
+                        
+                        // Untere Fläche (xy-Ebene)
+                        faces.push([bottomLeft, bottomLeftNext, bottomRight]);
+                        faces.push([bottomRight, bottomLeftNext, bottomRightNext]);
+                    }
+                    
+                    // Seitenflächen
+                    if (i === 0) { // Linke Seite
+                        faces.push([bottomLeft, topLeft, bottomLeftNext]);
+                        faces.push([topLeft, topLeftNext, bottomLeftNext]);
+                    }
+                    if (i === resolution - 1) { // Rechte Seite
+                        faces.push([bottomRight, bottomRightNext, topRight]);
+                        faces.push([topRight, bottomRightNext, topRightNext]);
+                    }
+                    if (j === 0) { // Vordere Seite
+                        faces.push([bottomLeft, bottomRight, topLeft]);
+                        faces.push([topLeft, bottomRight, topRight]);
+                    }
+                    if (j === resolution - 1) { // Hintere Seite
+                        faces.push([bottomLeftNext, topLeftNext, bottomRightNext]);
+                        faces.push([topLeftNext, topRightNext, bottomRightNext]);
+                    }
+                }
+            }
+            
+            return {
+                type: 'mesh3d',
+                x: vertices.map(v => v[0]),
+                y: vertices.map(v => v[1]),
+                z: vertices.map(v => v[2]),
+                i: faces.map(f => f[0]),
+                j: faces.map(f => f[1]),
+                k: faces.map(f => f[2]),
+                color: 'lightblue',
+                opacity: 0.4,
+                name: 'Volumen (Doppelintegral)',
+                showlegend: true
+            };
+        }
+
+        // Erstelle die innere Integration als gefüllte dunkelblaue Fläche
+        function createInnerIntegration(x0) {
+            const resolution = 30;
+            const vertices = [];
+            const faces = [];
+            
+            // Erstelle Vertices für die Schnittfläche bei x = x0
+            for (let i = 0; i <= resolution; i++) {
+                const y = 1 + i / resolution;
+                
+                // Unterer Punkt (y-Achse)
+                vertices.push([x0, y, 0]);
+                
+                // Oberer Punkt (Funktion)
+                vertices.push([x0, y, x0 * y]);
+            }
+            
+            // Erstelle Dreiecke für die gefüllte Fläche
+            for (let i = 0; i < resolution; i++) {
+                const bottomLeft = i * 2;
+                const topLeft = bottomLeft + 1;
+                const bottomRight = (i + 1) * 2;
+                const topRight = bottomRight + 1;
+                
+                // Zwei Dreiecke pro Segment
+                faces.push([bottomLeft, bottomRight, topLeft]);
+                faces.push([topLeft, bottomRight, topRight]);
+            }
+            
+            return {
+                type: 'mesh3d',
+                x: vertices.map(v => v[0]),
+                y: vertices.map(v => v[1]),
+                z: vertices.map(v => v[2]),
+                i: faces.map(f => f[0]),
+                j: faces.map(f => f[1]),
+                k: faces.map(f => f[2]),
+                color: '#1565c0',
+                opacity: 0.8,
+                name: `Innere Integration`,
+                showlegend: true
+            };
+        }
+
+        // Initialisiere den Plot
+        function initializePlot() {
+            const functionSurface = createFunctionSurface();
+            const integrationRegion = createIntegrationRegion();
+            const volume = createVolume();
+            const innerIntegration = createInnerIntegration(0.5);
+            
+            const data = [integrationRegion, volume, functionSurface, innerIntegration];
+            
+            const layout = {
+                title: {
+                    text: 'Visualisierung der inneren Integration',
+                    font: { size: 16 }
+                },
+                scene: {
+                    xaxis: {
+                        title: 'x',
+                        range: [-0.1, 1.1]
+                    },
+                    yaxis: {
+                        title: 'y',
+                        range: [0.8, 2.2]
+                    },
+                    zaxis: {
+                        title: 'f(x,y) = xy',
+                        range: [0, 2.5]
+                    },
+                    camera: {
+                        eye: {
+                            x: 1.5,
+                            y: 1.5,
+                            z: 1.2
+                        }
+                    },
+                    aspectratio: {
+                        x: 1,
+                        y: 1,
+                        z: 0.8
+                    }
+                },
+                margin: { l: 0, r: 0, b: 0, t: 40 },
+                showlegend: true,
+                legend: {
+                    x: 0,
+                    y: 1
+                }
+            };
+            
+            const config = {
+                responsive: true,
+                displayModeBar: true
+            };
+            
+            Plotly.newPlot('plot', data, layout, config);
+        }
+
+        // Update der inneren Integration
+        function updateInnerIntegration(x0) {
+            const integrationRegion = createIntegrationRegion();
+            const volume = createVolume();
+            const functionSurface = createFunctionSurface();
+            const innerIntegration = createInnerIntegration(x0);
+            
+            const newData = [integrationRegion, volume, functionSurface, innerIntegration];
+            
+            // Verwende Plotly.react für bessere Performance
+            Plotly.react('plot', newData, {
+                title: {
+                    text: 'Doppelintegral: Innere Integration visualisiert',
+                    font: { size: 16 }
+                },
+                scene: {
+                    xaxis: {
+                        title: 'x',
+                        range: [-0.1, 1.1]
+                    },
+                    yaxis: {
+                        title: 'y',
+                        range: [0.8, 2.2]
+                    },
+                    zaxis: {
+                        title: 'f(x,y) = xy',
+                        range: [0, 2.5]
+                    },
+                    camera: {
+                        eye: {
+                            x: 1.5,
+                            y: 1.5,
+                            z: 1.2
+                        }
+                    },
+                    aspectratio: {
+                        x: 1,
+                        y: 1,
+                        z: 0.8
+                    }
+                },
+                margin: { l: 0, r: 0, b: 0, t: 40 },
+                showlegend: true,
+                legend: {
+                    x: 0,
+                    y: 1
+                }
+            });
+        }
+
+        // Event Listener für den Slider
+        document.getElementById('xSlider').addEventListener('input', function(e) {
+            const x0 = parseFloat(e.target.value);
+            document.getElementById('xValue').textContent = x0.toFixed(2);
+            updateInnerIntegration(x0);
+        });
+
+        // Initialisiere den Plot beim Laden der Seite
+        window.addEventListener('load', function() {
+            initializePlot();
+        });
+    </script>
+</body>
+</html>

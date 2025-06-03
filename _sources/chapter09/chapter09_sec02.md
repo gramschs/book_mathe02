@@ -10,7 +10,9 @@ in kartesischen Koordinaten.
 
 ```{admonition} Lernziele
 :class: goals
-Sie können ein **Doppelintegral in kartesischen Koordinaten** berechnen, indem Sie zuerst die **innere Integration** und dann die **äußere Integration** durchführen:
+Sie können ein **Doppelintegral in kartesischen Koordinaten** berechnen, indem
+Sie zuerst die **innere Integration** und dann die **äußere Integration**
+durchführen:
 
 $$\iint_{A}f(x,y)\, dA = \int_{x=a}^{x=b} \left( \int_{y=f_u(x)}^{y=f_o(x)} f(x,y)\, dy\right)dx.$$
 
@@ -19,17 +21,17 @@ $$\iint_{A}f(x,y)\, dA = \int_{x=a}^{x=b} \left( \int_{y=f_u(x)}^{y=f_o(x)} f(x,
 ## Doppelintegral in kartesischen Koordinaten berechnen
 
 Wie wird nun ein Doppelintegral konkret ausgerechnet? Glücklicherweise können
-wir die Berechnung des Doppelintegrals durch zwei "normale" Integrationen
+ wir die Berechnung des Doppelintegrals durch zwei "normale" Integrationen
 ersetzen. Die Voraussetzung dafür ist, dass wir ein [kartesisches
 Koordinatensystem](https://de.wikipedia.org/wiki/Kartesisches_Koordinatensystem)
 betrachten.
 
-Zuerst brauchen wir eine Beschreibung der Fläche $A$, also des Bodens. Wenn man
-das Koordinatensystem von oben betrachtet, kann der Rand von $A$ durch zwei
-Funktionen beschrieben werden. Im einfachsten Fall besteht der obere und der
-untere Rand von $A$ nur aus Linien. Dann lautet die obere Funktion einfach nur
-$y=y_{\max}$ und die untere Funktion $y=y_{\min}$. Meist brauchen wir aber
-Funktionen zur Beschreibung des Randes.
+Zuerst brauchen wir eine Beschreibung der Fläche $A$, also des
+Integrationsgebietes. Wenn man das Koordinatensystem von oben betrachtet, kann
+der Rand von $A$ durch zwei Funktionen beschrieben werden. Im einfachsten Fall
+besteht der obere und der untere Rand von $A$ nur aus Linien. Dann lautet die
+obere Funktion einfach nur $y=y_{\max}$ und die untere Funktion $y=y_{\min}$.
+Meist brauchen wir aber Funktionen zur Beschreibung des Randes.
 
 **Schritt 1: Funktionen für den Rand von $A$ finden**
 
@@ -51,10 +53,11 @@ $f_u(x)$. Dadurch ist das Ergebnis der Integration wieder eine Funktion.
 
 Die in Schritt 2 entstandene Funktion wird wieder integriert, aber diesmal nach
 $x$. Diesmal setzen wir in die Stammfunktion die obere Grenze $b$ und die untere
-Grenze $a$ ein, so dass diesmal wirklich eine Zahl herauskommt.
+Grenze $a$ ein, so dass diesmal eine Zahl herauskommt.
 
-```{dropdown} Video zu "Doppenintegral, kein Rechteck" von Mathematische Methoden
-<iframe width="560" height="315" src="https://www.youtube.com/embed/ZesBkRCLLPY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+```{dropdown} Video zu "Doppelintegral, kein Rechteck" von Mathematische Methoden
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ZesBkRCLLPY"
+title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 ```
 
 ## Beispiel: A ist ein Rechteck
@@ -97,12 +100,20 @@ I(x) &= \int_{y=1}^{y=2} xy \, dy = \\
      &= \frac{3}{2}x.\\
 \end{align*}
 
+Die folgende interaktive Darstellung zeigt die Fläche der inneren Integration
+nach $y$ dunkelblau. Verändern Sie den aktuellen x-Wert.
+
+<iframe src="https://gramschs.github.io/book_mathe02/_static/assets/doppelintegral_beispiel01.html"
+width=100% height="600" frameborder="0" scrolling="yes"></iframe>
+
+
 **Schritt 3: äußere Integration (nach x)**
 
 Das innere Integral $I(x) = \frac{3}{2}x$ wird nun in das äußere Integral
 eingesetzt und nach $x$ integriert:
 
-$$\int_{x=0}^{x=1} \frac{3}{2}x \, dx = \left[ \frac{3}{4}x^2\right] =
+$$\int_{x=0}^{x=1} \frac{3}{2}x \, dx =
+\left[ \frac{3}{4}x^2\right]_{x=0}^{x=1} =
 \frac{3}{4}.$$
 
 Damit lautet das Doppelintegral von $f$ über $A$ mit $f(x,y)=xy$ und $A= [0, 1]
@@ -114,11 +125,13 @@ In den folgenden beiden Videos finden Sie zwei weitere Beispiele für
 Doppelintegrale auf einem Rechteckgebiet.
 
 ```{dropdown} Video zu "Beispiel Doppelintegral" von Mathematische Methoden
-<iframe width="560" height="315" src="https://www.youtube.com/embed/l_Fg_tDqx2E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/l_Fg_tDqx2E"
+title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 ```
 
 ```{dropdown} Video zu "Beispiel Doppelintegral" von Mathematische Methoden
-<iframe width="560" height="315" src="https://www.youtube.com/embed/7HRXCYZSYnI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/7HRXCYZSYnI"
+title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 ```
 
 ```{dropdown} Video zu "Mehrdimensionale INTEGRATION – Doppelintegral mit Grenzen" von Mathematrick
@@ -129,7 +142,7 @@ Doppelintegrale auf einem Rechteckgebiet.
 
 Als nächstes betrachten wir ein Beispiel, bei dem das Integrationsgebiet kein
 Rechteck ist. Die Funktion $f(x,y) = x^2\cdot(y+1)$ soll auf dem
-Definitionsgebiet $A$ integriert werden, dass durch die Gerade $y=-x+1$ und die
+Definitionsgebiet $A$ integriert werden, das durch die Gerade $y=-x+1$ und die
 Parabel $y=x^2-5$ begrenzt wird.
 
 **Schritt 1: obere und untere Funktion finden**
@@ -156,7 +169,8 @@ sind die beiden Stellen $x_1 = -3$ und $x_2 = 2$.
 width: 75%
 name: part10_plot_example02
 ---
-Draufsicht auf das Integrationsgebiet $A$, das durch die Gerade $f_o(x)=-x+1$ und die Parabel $f_u(x)=x^2-5$ umrandet wird.
+Draufsicht auf das Integrationsgebiet $A$, das durch die Gerade $f_o(x)=-x+1$
+und die Parabel $f_u(x)=x^2-5$ umrandet wird.
 ```
 
 Damit kann das Doppelintegral in zwei Integrale umgeschrieben werden:
@@ -194,5 +208,6 @@ x^2\cdot(y+1) \; dy\right)dx = \frac{625}{14} \approx 44.643.$$
 Das folgende Video zeigt ein weiteres Beispiel.
 
 ```{dropdown} Video zu "Beispiel Doppelintegral, kein Rechteck" von Mathematische Methoden
-<iframe width="560" height="315" src="https://www.youtube.com/embed/7HRXCYZSYnI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/7HRXCYZSYnI"
+title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 ```
