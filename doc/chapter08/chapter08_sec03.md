@@ -211,18 +211,18 @@ Nun wird die Hesse-Matrix berechnet. Dazu werden die 2. partiellen Ableitungen
 gebildet:
 
 \begin{align*}
-\frac{\partial^2 f(x,y)}{\partial x \partial x} &= \frac{6x^2 - 2(y^2+1)}{(1 + x^2 + y^2)^3} \\
+\frac{\partial^2 f(x,y)}{\partial x \partial x} &= \frac{6x^2-2y^2-2}{(1 + x^2 + y^2)^3} \\
 \frac{\partial^2 f(x,y)}{\partial y \partial x} &= \frac{8xy}{(1 + x^2 + y^2)^3} \\
 \frac{\partial^2 f(x,y)}{\partial x \partial y} &= \frac{8xy}{(1 + x^2 + y^2)^3} \\
-\frac{\partial^2 f(x,y)}{\partial y \partial y} &= -\frac{2(x^2 - 3y^2 +1)}{(x^2 + y^2 + 1)^3} \\
+\frac{\partial^2 f(x,y)}{\partial y \partial y} &= \frac{-2x^2 +6y^2-2}{(x^2 + y^2 + 1)^3} \\
 \end{align*}
 
 Damit lautet die Hesse-Matrix:
 
 $$H_{f}(x,y) =
 \begin{pmatrix}
-\frac{6x^2 - 2(y^2+1)}{(1 + x^2 + y^2)^3} & \frac{8xy}{(1 + x^2 + y^2)^3} \\
-\frac{8xy}{(1 + x^2 + y^2)^3} & -\frac{2(x^2 - 3y^2 +1)}{(x^2 + y^2 + 1)^3} \\
+\frac{6x^2-2y^2-2}{(1 + x^2 + y^2)^3} & \frac{8xy}{(1 + x^2 + y^2)^3} \\
+\frac{8xy}{(1 + x^2 + y^2)^3} & \frac{-2x^2 +6y^2-2}{(x^2 + y^2 + 1)^3} \\
 \end{pmatrix}.
 $$
 
