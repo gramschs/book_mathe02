@@ -34,7 +34,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=87e54e7c" />
     <link rel="stylesheet" type="text/css" href="../_static/jsxgraph.css?v=a7b027cb" />
@@ -440,6 +440,9 @@
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lernziele">Lernziele</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Doppelintegral in Polarkoordinaten</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#transformation-des-integrals">Transformation des Integrals</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#beispiel-flacheninhalt-eines-halbkreises">Beispiel: Flächeninhalt eines Halbkreises</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zusammenfassung-und-ausblick">Zusammenfassung und Ausblick</a></li>
 </ul>
             </nav>
         </div>
@@ -463,44 +466,101 @@ Integrale mit Polarkoordinaten umgeschrieben und dadurch berechnet.</p>
 <p>Sie können ein Doppelintegral in kartesischen Koordinaten in ein Doppelintegral in Polarkoordinaten umrechnen, d.h.</p>
 <div class="math notranslate nohighlight">
 \[\iint_{A}f(x,y)\, dA = \int_{\varphi=\alpha}^{\varphi=\beta}
-\left( \int_{r=r_\text{innen}(\varphi)}^{r=r_\text{außen}(\varphi)}f(r, \varphi) \cdot r\, dr \right) \, d\varphi.\]</div>
+\left(\int_{r=r_\text{innen}(\varphi)}^{r=r_\text{außen}(\varphi)}f(r, \varphi) \cdot r\, dr \right) \, d\varphi.\]</div>
 <p>Die Integration erfolgt dabei in zwei Schritten, zuerst kommt die innere Integration über <span class="math notranslate nohighlight">\(r\)</span>, danach die äußere Integration über <span class="math notranslate nohighlight">\(\varphi\)</span>.</p>
 </div>
 </section>
 <section id="id1">
 <h2>Doppelintegral in Polarkoordinaten<a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
-<p>Um ein Doppelintegral in kartesischen Koordinaten zu berechnen, werden als
-versucht, die Ränder des Integrationsgebietes mit dem folgenden Schema zu
-beschreiben. Für x wird ein Intervall <span class="math notranslate nohighlight">\([a,b]\)</span> genommen und für y wird der obere
-Rand des Integrationsgebietes durch eine obere Funktion <span class="math notranslate nohighlight">\(f_{\text{oben}}(x)\)</span> und
-der untere Rand durch eine untere Funktion <span class="math notranslate nohighlight">\(f_{\text{unten}}(x)\)</span> beschrieben.
-Soll das Doppelintegral in Polarkoordinaten ausgedrückt werden, wird für den
+<p>Doppelintegrale in Polarkoordinaten sind besonders nützlich, wenn das
+Integrationsgebiet kreisförmig oder rotationssymmetrisch ist. Solche Formen
+kommen im Maschinenbau häufig vor, beispielsweise bei der Berechnung von
+Trägheitsmomenten rotierender Scheiben oder Schwerpunkten kreisförmiger
+Bauteile.</p>
+<p>Um ein Doppelintegral in kartesischen Koordinaten zu berechnen, wird versucht,
+die Ränder des Integrationsgebietes mit dem folgenden Schema zu beschreiben. Für
+x wird ein Intervall <span class="math notranslate nohighlight">\([a,b]\)</span> genommen und für y wird der obere Rand des
+Integrationsgebietes durch eine obere Funktion <span class="math notranslate nohighlight">\(f_{\text{oben}}(x)\)</span> und der
+untere Rand durch eine untere Funktion <span class="math notranslate nohighlight">\(f_{\text{unten}}(x)\)</span> beschrieben.</p>
+<p>Soll das Doppelintegral in Polarkoordinaten ausgedrückt werden, wird für den
 Winkel <span class="math notranslate nohighlight">\(\varphi\)</span> ein Intervall von Winkeln <span class="math notranslate nohighlight">\([\alpha, \beta]\)</span> genommen und für
 <span class="math notranslate nohighlight">\(r\)</span> wird der äußere Rand des Integrationsgebietes durch die äußere Funktion
 <span class="math notranslate nohighlight">\(f_{\text{außen}}(\varphi)\)</span> und der innere Rand durch eine innere Funktion
-<span class="math notranslate nohighlight">\(f_{\text{innen}}(\varphi)\)</span> beschrieben. Es gibt nur einen Unterschied. Bei
-kartesischen Koordinaten wird dann das Flächenelement <span class="math notranslate nohighlight">\(dA\)</span> zum Produkt aus den
-Linienelementen <span class="math notranslate nohighlight">\(dy\)</span> und <span class="math notranslate nohighlight">\(dx\)</span>, also</p>
-<div class="math notranslate nohighlight">
-\[dA = dy \; dx.\]</div>
-<p>Bei Polarkoordinaten jedoch muss das Flächenelement <span class="math notranslate nohighlight">\(dA\)</span> noch mit <span class="math notranslate nohighlight">\(r\)</span>
-multipliziert werden, also</p>
+<span class="math notranslate nohighlight">\(f_{\text{innen}}(\varphi)\)</span> beschrieben.</p>
+<p>Der entscheidende Unterschied liegt im Flächenelement. Bei kartesischen
+Koordinaten wird das Flächenelement <span class="math notranslate nohighlight">\(dA\)</span> zum Produkt aus den Linienelementen
+<span class="math notranslate nohighlight">\(dy\)</span> und <span class="math notranslate nohighlight">\(dx\)</span>, also <span class="math notranslate nohighlight">\(dA = dy \, dx\)</span>.</p>
+<p>Bei Polarkoordinaten entsteht durch die Koordinatentransformation ein
+zusätzlicher Faktor <span class="math notranslate nohighlight">\(r\)</span>. Dies lässt sich geometrisch folgendermaßen verstehen.</p>
+<figure class="align-default" id="flaechenelement-polarkoordinaten">
+<a class="reference internal image-reference" href="../_images/flaechenelement_polarkoordinaten.svg"><img alt="../_images/flaechenelement_polarkoordinaten.svg" src="../_images/flaechenelement_polarkoordinaten.svg" width="30%" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 26 </span><span class="caption-text">Flächenelement in Polarkoordinaten: Das kleine Flächenstück hat die Seitenlängen <span class="math notranslate nohighlight">\(dr\)</span> und <span class="math notranslate nohighlight">\(r \, d\varphi\)</span> (Quelle: Von Michael Lenz - Eigenes Werk, CC0, <a class="reference external" href="https://commons.wikimedia.org/w/index.php?curid=65154297">https://commons.wikimedia.org/w/index.php?curid=65154297</a>)</span><a class="headerlink" href="#flaechenelement-polarkoordinaten" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Ein kleines Flächenelement in Polarkoordinaten ist näherungsweise ein Rechteck
+mit:</p>
+<ul class="simple">
+<li><p>Seitenlänge in radialer Richtung: <span class="math notranslate nohighlight">\(dr\)</span></p></li>
+<li><p>Seitenlänge in tangentialer Richtung: <span class="math notranslate nohighlight">\(r \, d\varphi\)</span> (Bogenlänge)</p></li>
+</ul>
+<p>Daher ergibt sich das Flächenelement in Polarkoordinaten als:</p>
 <div class="math notranslate nohighlight">
 \[dA = r \, dr \, d\varphi.\]</div>
+</section>
+<section id="transformation-des-integrals">
+<h2>Transformation des Integrals<a class="headerlink" href="#transformation-des-integrals" title="Link to this heading">#</a></h2>
+<p>Die vollständige Transformation eines Doppelintegrals von kartesischen zu Polarkoordinaten erfordert:</p>
+<ol class="arabic simple">
+<li><p><strong>Koordinatentransformation</strong>: <span class="math notranslate nohighlight">\(x = r\cos\varphi\)</span>, <span class="math notranslate nohighlight">\(y = r\sin\varphi\)</span></p></li>
+<li><p><strong>Funktionssubstitution</strong>: <span class="math notranslate nohighlight">\(f(x,y) \rightarrow f(r\cos\varphi, r\sin\varphi)\)</span></p></li>
+<li><p><strong>Flächenelement</strong>: <span class="math notranslate nohighlight">\(dA = dx \, dy \rightarrow r \, dr \, d\varphi\)</span></p></li>
+<li><p><strong>Integrationsgrenzen</strong>: Anpassung an das neue Koordinatensystem</p></li>
+</ol>
 <p>Damit erhalten wir das Doppelintegral in Polarkoordinaten als</p>
 <div class="math notranslate nohighlight">
 \[\iint_{A}f(x,y)\, dA = \int_{\varphi=\alpha}^{\varphi=\beta}
 \left( \int_{r=r_\text{innen}(\varphi)}^{r=r_\text{außen}(\varphi)}f(r, \varphi) \cdot r\, dr \right) \, d\varphi.\]</div>
+<p>Zuerst wird über <span class="math notranslate nohighlight">\(r\)</span> integriert (inneres Integral), dann über <span class="math notranslate nohighlight">\(\varphi\)</span> (äußeres
+Integral). Diese Reihenfolge entspricht dem Aufbau des Integrationsgebiets in
+Polarkoordinaten.</p>
+</section>
+<section id="beispiel-flacheninhalt-eines-halbkreises">
+<h2>Beispiel: Flächeninhalt eines Halbkreises<a class="headerlink" href="#beispiel-flacheninhalt-eines-halbkreises" title="Link to this heading">#</a></h2>
+<p>Wir berechnen den Flächeninhalt eines Halbkreises mit Radius <span class="math notranslate nohighlight">\(R\)</span>. Das
+Integrationsgebiet ist der Halbkreis mit <span class="math notranslate nohighlight">\(0 \leq r \leq R\)</span> und <span class="math notranslate nohighlight">\(0 \leq \varphi
+\leq \pi\)</span>. Die Funktion für die Flächenberechnung ist</p>
+<div class="math notranslate nohighlight">
+\[f(x,y) = 1.\]</div>
+<p>Damit erhalten wir für das transformierte Integral in Polarkoordinaten</p>
+<div class="math notranslate nohighlight">
+\[A = \iint_{A} 1 \, dA = \int_{\varphi=0}^{\varphi=\pi}
+\left(\int_{r=0}^{r=R} 1 \cdot r \, dr\right) \, d\varphi.\]</div>
+<p>Wir berechnen zuerst das innere Integral (über <span class="math notranslate nohighlight">\(r\)</span>):</p>
+<div class="math notranslate nohighlight">
+\[\int_{r=0}^{r=R} r \, dr = \left[\frac{1}{2}r^2\right]_0^R = \frac{1}{2}R^2.\]</div>
+<p>Danach berechnen wir das äußere Integral (über <span class="math notranslate nohighlight">\(\varphi\)</span>)</p>
+<div class="math notranslate nohighlight">
+\[A = \int_{\varphi=0}^{\varphi=\pi} \frac{1}{2}R^2 \, d\varphi =
+\frac{1}{2}R^2 \cdot \pi = \frac{\pi}{2}R^2\]</div>
+<p>und erhalten somit das aus der Geometrie bekannte Ergebnis <span class="math notranslate nohighlight">\(A = \frac{\pi}{2}R^2\)</span>.</p>
 <p>In dem folgenden Video wird sehr ausführlich der Flächeninhalt eines Halbkreises
 sowohl mit einem Doppelintegral in kartesischen Koordinaten als auch einem
-Doppelintegral in Polarkoordinaten erklärt. Nicht verwirren lassen, in dem Video
-wird das Doppelintegral Bereichsintegral genannt.</p>
+Doppelintegral in Polarkoordinaten erklärt. Lassen Sie sich nicht verwirren, in
+dem Video wird das Doppelintegral Bereichsintegral genannt.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Video zu “Bereichsintegrale / Doppelintegrale | Polarkoordinaten” von LernKompass - Mathe einfach erklärt</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/CghdXlwr5aY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/CghdXlwr5aY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay;
+clipboard-write; encrypted-media; gyroscope; picture-in-picture;
+web-share" allowfullscreen></iframe>
 </div>
 </details></section>
+<section id="zusammenfassung-und-ausblick">
+<h2>Zusammenfassung und Ausblick<a class="headerlink" href="#zusammenfassung-und-ausblick" title="Link to this heading">#</a></h2>
+<p>Im nächsten Kapitel kehren wir zu den kartesischen Koordinaten zurück, gehen
+dafür aber eine Dimension höher und berechnen Dreifachintegrale.</p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -570,6 +630,9 @@ wird das Doppelintegral Bereichsintegral genannt.</p>
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lernziele">Lernziele</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Doppelintegral in Polarkoordinaten</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#transformation-des-integrals">Transformation des Integrals</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#beispiel-flacheninhalt-eines-halbkreises">Beispiel: Flächeninhalt eines Halbkreises</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zusammenfassung-und-ausblick">Zusammenfassung und Ausblick</a></li>
 </ul>
   </nav></div>
 

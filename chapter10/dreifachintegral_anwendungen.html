@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>10.1 Polarkoordinaten &#8212; Mathematik 2 Maschinenbau</title>
+    <title>10.4 Anwendungen Dreifachintegral &#8212; Mathematik 2 Maschinenbau</title>
   
   
   
@@ -64,13 +64,11 @@
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'chapter10/chapter10_sec01';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'chapter10/dreifachintegral_anwendungen';</script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jsxgraph/1.3.5/jsxgraphcore.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="10.2 Doppelintegral in Polarkoordinaten" href="chapter10_sec02.html" />
-    <link rel="prev" title="10. Doppelintegral in Polarkoordinaten und Dreifachintegral" href="chapter10_sec00.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
@@ -121,6 +119,8 @@
     <div class="bd-container__inner bd-page-width">
       
       
+      
+        
       
       <dialog id="pst-primary-sidebar-modal"></dialog>
       <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
@@ -242,7 +242,7 @@
 </details></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Höhere Integralrechnung</span></p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="../chapter09/chapter09_sec00.html">9. Doppelintegral</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../chapter09/chapter09_sec01.html">9.1 Idee von Doppelintegralen</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter09/chapter09_sec02.html">9.2 Berechnung von Doppelintegralen in kartesischen Koordinaten</a></li>
@@ -251,8 +251,8 @@
 <li class="toctree-l2"><a class="reference internal" href="../chapter09/chapter09_sec05.html">Übungen</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="chapter10_sec00.html">10. Doppelintegral in Polarkoordinaten und Dreifachintegral</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">10.1 Polarkoordinaten</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="chapter10_sec00.html">10. Doppelintegral in Polarkoordinaten und Dreifachintegral</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="chapter10_sec01.html">10.1 Polarkoordinaten</a></li>
 <li class="toctree-l2"><a class="reference internal" href="chapter10_sec02.html">10.2 Doppelintegral in Polarkoordinaten</a></li>
 <li class="toctree-l2"><a class="reference internal" href="chapter10_sec03.html">10.3 Dreifachintegral</a></li>
 <li class="toctree-l2"><a class="reference internal" href="chapter10_sec04.html">10.4 Anwendungen Dreifachintegral</a></li>
@@ -352,7 +352,7 @@
       
       
       
-      <li><a href="../_sources/chapter10/chapter10_sec01.md" target="_blank"
+      <li><a href="../_sources/chapter10/dreifachintegral_anwendungen.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -428,7 +428,7 @@
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>10.1 Polarkoordinaten</h1>
+    <h1>10.4 Anwendungen Dreifachintegral</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -439,11 +439,19 @@
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lernziele">Lernziele</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kartesische-koordinaten">Kartesische Koordinaten</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Polarkoordinaten</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#umrechnung-von-polarkoordinaten-in-kartesische-koordinaten">Umrechnung von Polarkoordinaten in kartesische Koordinaten</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#umrechnung-von-kartesischen-koordinaten-in-polarkoordinaten">Umrechnung von kartesischen Koordinaten in Polarkoordinaten</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zusammenfassung-und-ausblick">Zusammenfassung und Ausblick</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#volumen-berechnen">10.4.1 Volumen berechnen</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#beispiel-1-volumen-einer-halbkugel">Beispiel 1: Volumen einer Halbkugel</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#berechnung-von-masse">10.4.2 Berechnung von Masse</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#beispiel-2-masse-eines-kegels-mit-linearer-dichteverteilung">Beispiel 2: Masse eines Kegels mit linearer Dichteverteilung</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#berechnung-des-schwerpunktes">10.4.3 Berechnung des Schwerpunktes</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#beispiel-3-schwerpunkt-einer-halbkugel">Beispiel 3: Schwerpunkt einer Halbkugel</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#weitere-anwendungen">10.4.4 Weitere Anwendungen</a></li>
 </ul>
             </nav>
         </div>
@@ -455,136 +463,165 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="polarkoordinaten">
-<h1>10.1 Polarkoordinaten<a class="headerlink" href="#polarkoordinaten" title="Link to this heading">#</a></h1>
-<p>Polarkoordinaten bieten eine alternative Möglichkeit, die Position von Punkten
-in der Ebene zu beschreiben. Die häufigste Beschreibung der Position von Punkten
-sind kartesische Koordinaten. Insbesondere bei technischen Systemen, bei denen
-Symmetrie oder Rotation wichtig sind, sind Polarkoordinaten jedoch eine bessere
-Möglichkeit, die Position der Punkte anzugeben.</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="anwendungen-dreifachintegral">
+<h1>10.4 Anwendungen Dreifachintegral<a class="headerlink" href="#anwendungen-dreifachintegral" title="Link to this heading">#</a></h1>
+<p>Nun betrachten wir die wichtigsten Anwendungen des Dreifachintegrals in der Ingenieurspraxis. Dreifachintegrale ermöglichen es uns, verschiedene physikalische und geometrische Eigenschaften dreidimensionaler Körper zu berechnen: Volumen, Masse und Schwerpunkt. Weitere wichtige Anwendungen wie Trägheitsmomente und Flächenmomente werden ausführlich in der Vorlesung Technische Mechanik behandelt.</p>
 <section id="lernziele">
 <h2>Lernziele<a class="headerlink" href="#lernziele" title="Link to this heading">#</a></h2>
 <div class="goals admonition">
 <p class="admonition-title">Lernziele</p>
 <ul class="simple">
-<li><p>Sie wissen, was <strong>Polarkoordinaten</strong> sind.</p></li>
-<li><p>Sie können kartesische Koordinaten in Polarkoordinaten umrechnen.</p></li>
-<li><p>Sie können Polarkoordinaten in kartesische Koordinaten umrechnen.</p></li>
+<li><p>Sie können mit einem Dreifachintegral das <strong>Volumen</strong> <span class="math notranslate nohighlight">\(V\)</span> eines Körpers berechnen:
+$<span class="math notranslate nohighlight">\(V=\iiint_{V}1\,dV\)</span>$</p></li>
+<li><p>Sie können mit einem Dreifachintegral die <strong>Masse</strong> <span class="math notranslate nohighlight">\(M\)</span> eines Körpers mit bekannter Dichte berechnen:
+$<span class="math notranslate nohighlight">\(M = \iiint_{V} \rho(x, y, z) \, dV\)</span>$</p></li>
+<li><p>Sie können mit drei Dreifachintegralen den <strong>Schwerpunkt</strong> <span class="math notranslate nohighlight">\(S(x_S,y_S,z_S)\)</span> eines homogenen Körpers berechnen:
+$<span class="math notranslate nohighlight">\(x_S = \frac{1}{V}\iiint_{V}x\, dV, \qquad y_S = \frac{1}{V}\iiint_{V}y\, dV, \qquad z_S = \frac{1}{V}\iiint_{V}z\, dV\)</span>$</p></li>
 </ul>
 </div>
 </section>
-<section id="kartesische-koordinaten">
-<h2>Kartesische Koordinaten<a class="headerlink" href="#kartesische-koordinaten" title="Link to this heading">#</a></h2>
-<p>Das am häufigsten verwendete Koordinatensystem ist das <strong>kartesische
-Koordinatensystem</strong>. Es ist nach dem Mathematiker <a class="reference external" href="https://de.wikipedia.org/wiki/Ren%C3%A9_Descartes">René
-Descartes</a> benannt, obwohl
-Descartes ein solches Koordinatensystem nie beschrieben hat. Das Hauptmerkmal
-von kartesischen Koordinatensytemen ist, dass die Koordinatenachsen senkrecht
-aufeinander stehen. Die folgende Abbildung zeigt ein zweidimensionales
-kartesisches Koordinatensystem mit dem Koordinatenursprung <span class="math notranslate nohighlight">\((0,0)\)</span> und einem
-Punkt an der Position <span class="math notranslate nohighlight">\(P(2\sqrt{3},2)\)</span>.</p>
-<figure class="align-default" id="fig11-01">
-<a class="reference internal image-reference" href="../_images/fig11_01.svg"><img alt="../_images/fig11_01.svg" src="../_images/fig11_01.svg" width="75%" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 23 </span><span class="caption-text">Kartesisches zweidimensionales Koordinatensystem</span><a class="headerlink" href="#fig11-01" title="Link to this image">#</a></p>
-</figcaption>
-</figure>
-</section>
-<section id="id1">
-<h2>Polarkoordinaten<a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
-<p>Eine alternative Beschreibung ist, die Entfernung und den Winkel zum Punkt
-anzugeben. Die Entfernung des Punktes wird bezogen auf den Koordinatenursprung
-angegeben. Der Winkel wird gegen den Uhrzeigersinn von der positiven x-Achse aus
-gemessen.  Üblicherweise wird zuerst die Entfernung <span class="math notranslate nohighlight">\(r\)</span> notiert und dann der
-Winkel <span class="math notranslate nohighlight">\(\varphi\)</span>, also</p>
+<section id="volumen-berechnen">
+<h2>10.4.1 Volumen berechnen<a class="headerlink" href="#volumen-berechnen" title="Link to this heading">#</a></h2>
+<p>Die Berechnung des Volumens eines dreidimensionalen Körpers ist eine der direktesten Anwendungen des Volumenintegrals. Hierbei ist die Funktion, die integriert wird, einfach die Konstante 1. Das Volumen <span class="math notranslate nohighlight">\(V\)</span> eines Körpers ist dann das Integral über den gesamten Körper:</p>
 <div class="math notranslate nohighlight">
-\[(r, \varphi).\]</div>
-<p>Diese Art von Koordinaten wird als <strong>Polarkoordinaten</strong> bezeichnet.</p>
-<p>In dem Beispiel wird so aus dem Punkt <span class="math notranslate nohighlight">\((2\sqrt{3},2)\)</span> in kartesischen
-Koordinaten der Punkt <span class="math notranslate nohighlight">\((4, 30^{\circ})\)</span>, wie wir gleich sehen, wenn wir die
-Umrechnung von kartesischen zu Polarkoordinaten behandeln.</p>
-<figure class="align-default" id="fig11-02">
-<a class="reference internal image-reference" href="../_images/fig11_02.svg"><img alt="../_images/fig11_02.svg" src="../_images/fig11_02.svg" width="75%" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 24 </span><span class="caption-text">Zweidimensionales Polarkoordinatensystem</span><a class="headerlink" href="#fig11-02" title="Link to this image">#</a></p>
-</figcaption>
-</figure>
+\[V = \iiint_{V} 1 \, dV\]</div>
+<section id="beispiel-1-volumen-einer-halbkugel">
+<h3>Beispiel 1: Volumen einer Halbkugel<a class="headerlink" href="#beispiel-1-volumen-einer-halbkugel" title="Link to this heading">#</a></h3>
+<p><strong>Aufgabe</strong>: Berechnen Sie das Volumen einer Halbkugel mit Radius <span class="math notranslate nohighlight">\(R = 2\)</span>.</p>
+<p><strong>Lösung</strong>:</p>
+<p>Wir betrachten eine Halbkugel, die auf der <span class="math notranslate nohighlight">\(xy\)</span>-Ebene liegt und deren Mittelpunkt im Koordinatenursprung ist. Die Halbkugel wird durch die Ungleichung <span class="math notranslate nohighlight">\(x^2 + y^2 + z^2 \leq R^2\)</span> mit <span class="math notranslate nohighlight">\(z \geq 0\)</span> beschrieben.</p>
+<p><strong>Integrationsgrenzen bestimmen</strong>:</p>
+<ul class="simple">
+<li><p>Für festes <span class="math notranslate nohighlight">\(z \in [0, R]\)</span> ist der Querschnitt ein Kreis mit Radius <span class="math notranslate nohighlight">\(r(z) = \sqrt{R^2 - z^2}\)</span></p></li>
+<li><p>Für festen Wert von <span class="math notranslate nohighlight">\(z\)</span> und <span class="math notranslate nohighlight">\(x \in [-\sqrt{R^2 - z^2}, +\sqrt{R^2 - z^2}]\)</span> gilt: <span class="math notranslate nohighlight">\(y \in [-\sqrt{R^2 - z^2 - x^2}, +\sqrt{R^2 - z^2 - x^2}]\)</span></p></li>
+</ul>
+<p><strong>Dreifachintegral aufstellen</strong>:
+$<span class="math notranslate nohighlight">\(V = \int_{z=0}^{R} \int_{x=-\sqrt{R^2-z^2}}^{+\sqrt{R^2-z^2}} \int_{y=-\sqrt{R^2-z^2-x^2}}^{+\sqrt{R^2-z^2-x^2}} 1 \, dy \, dx \, dz\)</span>$</p>
+<p><strong>Integration durchführen</strong>:</p>
+<p><strong>Inneres Integral</strong> (nach <span class="math notranslate nohighlight">\(y\)</span>):
+$<span class="math notranslate nohighlight">\(M(x,z) = \int_{y=-\sqrt{R^2-z^2-x^2}}^{+\sqrt{R^2-z^2-x^2}} 1 \, dy = 2\sqrt{R^2-z^2-x^2}\)</span>$</p>
+<p><strong>Mittleres Integral</strong> (nach <span class="math notranslate nohighlight">\(x\)</span>):
+$<span class="math notranslate nohighlight">\(I(z) = \int_{x=-\sqrt{R^2-z^2}}^{+\sqrt{R^2-z^2}} 2\sqrt{R^2-z^2-x^2} \, dx\)</span>$</p>
+<p>Dieses Integral entspricht der Fläche eines Halbkreises mit Radius <span class="math notranslate nohighlight">\(\sqrt{R^2-z^2}\)</span>:
+$<span class="math notranslate nohighlight">\(I(z) = \frac{\pi}{2} \cdot (R^2-z^2)\)</span>$</p>
+<p><strong>Äußeres Integral</strong> (nach <span class="math notranslate nohighlight">\(z\)</span>):
+$<span class="math notranslate nohighlight">\(V = \int_{z=0}^{R} \frac{\pi}{2} \cdot (R^2-z^2) \, dz = \frac{\pi}{2} \int_{0}^{R} (R^2-z^2) \, dz\)</span>$</p>
+<div class="math notranslate nohighlight">
+\[= \frac{\pi}{2} \left[R^2z - \frac{z^3}{3}\right]_0^R = \frac{\pi}{2} \left(R^3 - \frac{R^3}{3}\right) = \frac{\pi}{2} \cdot \frac{2R^3}{3} = \frac{\pi R^3}{3}\]</div>
+<p>Mit <span class="math notranslate nohighlight">\(R = 2\)</span>: <span class="math notranslate nohighlight">\(V = \frac{\pi \cdot 2^3}{3} = \frac{8\pi}{3}\)</span></p>
+<p><strong>Kontrolle</strong>: Das Volumen einer Halbkugel ist <span class="math notranslate nohighlight">\(V = \frac{1}{2} \cdot \frac{4}{3}\pi R^3 = \frac{2\pi R^3}{3} = \frac{2\pi \cdot 8}{3} = \frac{16\pi}{3}\)</span></p>
+<p><em>Korrektur</em>: <span class="math notranslate nohighlight">\(V = \frac{2\pi R^3}{3} = \frac{2\pi \cdot 8}{3} = \frac{16\pi}{3}\)</span> ✓</p>
 </section>
-<section id="umrechnung-von-polarkoordinaten-in-kartesische-koordinaten">
-<h2>Umrechnung von Polarkoordinaten in kartesische Koordinaten<a class="headerlink" href="#umrechnung-von-polarkoordinaten-in-kartesische-koordinaten" title="Link to this heading">#</a></h2>
-<p>Die Umrechnung von Polarkoordinaten in kartesische Koordinaten erfolgt mit den
-Formeln:</p>
-<div class="amsmath math notranslate nohighlight">
-\[\begin{align*}
-x &amp;= r\cdot \cos(\varphi) \\
-y &amp;= r\cdot \sin(\varphi)
-\end{align*}\]</div>
-<p>Bei dem obigen Beispiel ist <span class="math notranslate nohighlight">\(r=4\)</span> und <span class="math notranslate nohighlight">\(\varphi=30^{\circ}\)</span>. Mit den beiden
-Formeln zur Berechnung der kartesischen Koordinaten <span class="math notranslate nohighlight">\(x\)</span> und <span class="math notranslate nohighlight">\(y\)</span> erhalten wir</p>
-<div class="amsmath math notranslate nohighlight">
-\[\begin{align*}
-x &amp;= 4 \cdot \cos(30^{\circ}) = 2\sqrt{3}, \\
-y &amp;= 4 \cdot \sin(30^{\circ}) = 2.
-\end{align*}\]</div>
-<p>Zur Erinnerung folgt hier eine Einführung in Polarkoordinaten:</p>
+</section>
+<section id="berechnung-von-masse">
+<h2>10.4.2 Berechnung von Masse<a class="headerlink" href="#berechnung-von-masse" title="Link to this heading">#</a></h2>
+<p>Die Berechnung der Masse eines Körpers mit bekannter Dichte ist eine weitere wichtige Anwendung von Volumenintegralen. Wenn wir die Dichte <span class="math notranslate nohighlight">\(\rho(x, y, z)\)</span> des Körpers an jedem Punkt kennen, können wir die Masse <span class="math notranslate nohighlight">\(M\)</span> des Körpers berechnen, indem wir die Dichte über das gesamte Volumen des Körpers integrieren:</p>
+<div class="math notranslate nohighlight">
+\[M = \iiint_{V} \rho(x, y, z) \, dV\]</div>
+<p><strong>Spezialfall</strong>: Bei einem homogenen Körper mit konstanter Dichte <span class="math notranslate nohighlight">\(\rho\)</span> vereinfacht sich dies zu:
+$<span class="math notranslate nohighlight">\(M = \rho \cdot V = \rho \iiint_{V} 1 \, dV\)</span>$</p>
+<section id="beispiel-2-masse-eines-kegels-mit-linearer-dichteverteilung">
+<h3>Beispiel 2: Masse eines Kegels mit linearer Dichteverteilung<a class="headerlink" href="#beispiel-2-masse-eines-kegels-mit-linearer-dichteverteilung" title="Link to this heading">#</a></h3>
+<p><strong>Aufgabe</strong>: Ein Kegel mit Grundradius <span class="math notranslate nohighlight">\(R = 3\)</span> und Höhe <span class="math notranslate nohighlight">\(h = 4\)</span> hat eine linear mit der Höhe zunehmende Dichte <span class="math notranslate nohighlight">\(\rho(z) = \rho_0(1 + z)\)</span> mit <span class="math notranslate nohighlight">\(\rho_0 = 2\)</span> kg/m³. Berechnen Sie die Gesamtmasse.</p>
+<p><strong>Lösung</strong>:</p>
+<p>Der Kegel liegt mit der Grundfläche in der <span class="math notranslate nohighlight">\(xy\)</span>-Ebene (Kreis mit Radius 3) und die Spitze bei <span class="math notranslate nohighlight">\((0, 0, 4)\)</span>. Für eine gegebene Höhe <span class="math notranslate nohighlight">\(z\)</span> ist der Radius des kreisförmigen Querschnitts: <span class="math notranslate nohighlight">\(r(z) = R\left(1 - \frac{z}{h}\right) = 3\left(1 - \frac{z}{4}\right)\)</span></p>
+<p><strong>Integrationsgrenzen</strong>:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(z \in [0, 4]\)</span></p></li>
+<li><p>Für festes <span class="math notranslate nohighlight">\(z\)</span>: <span class="math notranslate nohighlight">\(x^2 + y^2 \leq r(z)^2 = 9\left(1 - \frac{z}{4}\right)^2\)</span></p></li>
+</ul>
+<p><strong>Dreifachintegral in kartesischen Koordinaten</strong>:
+$<span class="math notranslate nohighlight">\(M = \int_{z=0}^{4} \int_{x=-r(z)}^{+r(z)} \int_{y=-\sqrt{r(z)^2-x^2}}^{+\sqrt{r(z)^2-x^2}} \rho_0(1 + z) \, dy \, dx \, dz\)</span>$</p>
+<p><strong>Vereinfachung durch Flächenintegral</strong>:
+Da die Dichte nur von <span class="math notranslate nohighlight">\(z\)</span> abhängt, können wir das Doppelintegral über die Kreisfläche durch <span class="math notranslate nohighlight">\(\pi r(z)^2\)</span> ersetzen:</p>
+<div class="math notranslate nohighlight">
+\[M = \int_{z=0}^{4} \rho_0(1 + z) \cdot \pi r(z)^2 \, dz = \int_{z=0}^{4} 2(1 + z) \cdot \pi \cdot 9\left(1 - \frac{z}{4}\right)^2 \, dz\]</div>
+<div class="math notranslate nohighlight">
+\[= 18\pi \int_{z=0}^{4} (1 + z)\left(1 - \frac{z}{4}\right)^2 \, dz\]</div>
+<p>Ausmultiplizieren: <span class="math notranslate nohighlight">\(\left(1 - \frac{z}{4}\right)^2 = 1 - \frac{z}{2} + \frac{z^2}{16}\)</span></p>
+<div class="math notranslate nohighlight">
+\[(1 + z)\left(1 - \frac{z}{2} + \frac{z^2}{16}\right) = 1 - \frac{z}{2} + \frac{z^2}{16} + z - \frac{z^2}{2} + \frac{z^3}{16}\]</div>
+<div class="math notranslate nohighlight">
+\[= 1 + \frac{z}{2} - \frac{7z^2}{16} + \frac{z^3}{16}\]</div>
+<p><strong>Integration</strong>:
+$<span class="math notranslate nohighlight">\(M = 18\pi \int_{0}^{4} \left(1 + \frac{z}{2} - \frac{7z^2}{16} + \frac{z^3}{16}\right) dz\)</span>$</p>
+<div class="math notranslate nohighlight">
+\[= 18\pi \left[z + \frac{z^2}{4} - \frac{7z^3}{48} + \frac{z^4}{64}\right]_0^4\]</div>
+<div class="math notranslate nohighlight">
+\[= 18\pi \left(4 + 4 - \frac{7 \cdot 64}{48} + \frac{256}{64}\right) = 18\pi \left(8 - \frac{28}{3} + 4\right)\]</div>
+<div class="math notranslate nohighlight">
+\[= 18\pi \left(12 - \frac{28}{3}\right) = 18\pi \cdot \frac{8}{3} = 48\pi \text{ kg}\]</div>
+<p><strong>Ergebnis</strong>: <span class="math notranslate nohighlight">\(M = 48\pi \approx 150.8\)</span> kg</p>
+</section>
+</section>
+<section id="berechnung-des-schwerpunktes">
+<h2>10.4.3 Berechnung des Schwerpunktes<a class="headerlink" href="#berechnung-des-schwerpunktes" title="Link to this heading">#</a></h2>
+<p>Die Berechnung des Schwerpunktes <span class="math notranslate nohighlight">\(S(x_S, y_S, z_S)\)</span> eines dreidimensionalen Körpers erfolgt analog zur Berechnung des Schwerpunktes von Flächen, indem Volumenintegrale jeweils mit den Integranden <span class="math notranslate nohighlight">\(x\)</span>, <span class="math notranslate nohighlight">\(y\)</span> und <span class="math notranslate nohighlight">\(z\)</span> berechnet werden.</p>
+<p><strong>Für homogene Körper</strong> (konstante Dichte):</p>
+<div class="amsmath math notranslate nohighlight" id="equation-b0ceb31b-7b6f-46c7-bd7d-506836a082d5">
+<span class="eqno">()<a class="headerlink" href="#equation-b0ceb31b-7b6f-46c7-bd7d-506836a082d5" title="Permalink to this equation">#</a></span>\[\begin{align}
+x_S &amp;= \frac{1}{V} \iiint_{V} x \, dV \\
+y_S &amp;= \frac{1}{V} \iiint_{V} y \, dV \\
+z_S &amp;= \frac{1}{V} \iiint_{V} z \, dV
+\end{align}\]</div>
+<p><strong>Für inhomogene Körper</strong> (variable Dichte <span class="math notranslate nohighlight">\(\rho(x,y,z)\)</span>):</p>
+<div class="amsmath math notranslate nohighlight" id="equation-5c2aaa8d-759f-45ab-8355-f34a5b23f2a9">
+<span class="eqno">()<a class="headerlink" href="#equation-5c2aaa8d-759f-45ab-8355-f34a5b23f2a9" title="Permalink to this equation">#</a></span>\[\begin{align}
+x_S &amp;= \frac{1}{M} \iiint_{V} x \cdot \rho(x,y,z) \, dV \\
+y_S &amp;= \frac{1}{M} \iiint_{V} y \cdot \rho(x,y,z) \, dV \\
+z_S &amp;= \frac{1}{M} \iiint_{V} z \cdot \rho(x,y,z) \, dV
+\end{align}\]</div>
+<p>wobei <span class="math notranslate nohighlight">\(M\)</span> die Gesamtmasse ist.</p>
+<section id="beispiel-3-schwerpunkt-einer-halbkugel">
+<h3>Beispiel 3: Schwerpunkt einer Halbkugel<a class="headerlink" href="#beispiel-3-schwerpunkt-einer-halbkugel" title="Link to this heading">#</a></h3>
+<p><strong>Aufgabe</strong>: Bestimmen Sie den Schwerpunkt einer homogenen Halbkugel mit Radius <span class="math notranslate nohighlight">\(R\)</span>, die auf der <span class="math notranslate nohighlight">\(xy\)</span>-Ebene liegt.</p>
+<p><strong>Lösung</strong>:</p>
+<p>Aus Symmetriegründen liegen <span class="math notranslate nohighlight">\(x_S\)</span> und <span class="math notranslate nohighlight">\(y_S\)</span> im Koordinatenursprung: <span class="math notranslate nohighlight">\(x_S = y_S = 0\)</span>.</p>
+<p>Wir berechnen nur <span class="math notranslate nohighlight">\(z_S\)</span>:
+$<span class="math notranslate nohighlight">\(z_S = \frac{1}{V} \iiint_{V} z \, dV\)</span>$</p>
+<p>Mit dem Volumen der Halbkugel <span class="math notranslate nohighlight">\(V = \frac{2\pi R^3}{3}\)</span> (aus Beispiel 1) erhalten wir:</p>
+<div class="math notranslate nohighlight">
+\[z_S = \frac{3}{2\pi R^3} \iiint_{V} z \, dV\]</div>
+<p><strong>Dreifachintegral</strong>:
+$<span class="math notranslate nohighlight">\(\iiint_{V} z \, dV = \int_{z=0}^{R} \int_{x=-\sqrt{R^2-z^2}}^{+\sqrt{R^2-z^2}} \int_{y=-\sqrt{R^2-z^2-x^2}}^{+\sqrt{R^2-z^2-x^2}} z \, dy \, dx \, dz\)</span>$</p>
+<p>Da <span class="math notranslate nohighlight">\(z\)</span> konstant bezüglich <span class="math notranslate nohighlight">\(x\)</span> und <span class="math notranslate nohighlight">\(y\)</span> ist:
+$<span class="math notranslate nohighlight">\(= \int_{z=0}^{R} z \underbrace{\int_{x=-\sqrt{R^2-z^2}}^{+\sqrt{R^2-z^2}} \int_{y=-\sqrt{R^2-z^2-x^2}}^{+\sqrt{R^2-z^2-x^2}} 1 \, dy \, dx}_{=\pi(R^2-z^2)} dz\)</span>$</p>
+<div class="math notranslate nohighlight">
+\[= \int_{z=0}^{R} z \cdot \pi(R^2-z^2) \, dz = \pi \int_{z=0}^{R} z(R^2-z^2) \, dz\]</div>
+<div class="math notranslate nohighlight">
+\[= \pi \int_{z=0}^{R} (R^2z - z^3) \, dz = \pi \left[\frac{R^2z^2}{2} - \frac{z^4}{4}\right]_0^R\]</div>
+<div class="math notranslate nohighlight">
+\[= \pi \left(\frac{R^4}{2} - \frac{R^4}{4}\right) = \pi \cdot \frac{R^4}{4}\]</div>
+<p><strong>Schwerpunkt</strong>:
+$<span class="math notranslate nohighlight">\(z_S = \frac{3}{2\pi R^3} \cdot \frac{\pi R^4}{4} = \frac{3R}{8}\)</span>$</p>
+<p><strong>Ergebnis</strong>: Der Schwerpunkt liegt bei <span class="math notranslate nohighlight">\(S\left(0, 0, \frac{3R}{8}\right)\)</span>.</p>
+</section>
+</section>
+<section id="weitere-anwendungen">
+<h2>10.4.4 Weitere Anwendungen<a class="headerlink" href="#weitere-anwendungen" title="Link to this heading">#</a></h2>
+<p>Dreifachintegrale haben noch viele weitere wichtige Anwendungen in der Technik:</p>
+<p><strong>Trägheitsmomente</strong>: Die Berechnung von Trägheitsmomenten für rotierende Körper erfolgt mit Integralen der Form:</p>
+<ul class="simple">
+<li><p>Axiales Trägheitsmoment um die <span class="math notranslate nohighlight">\(z\)</span>-Achse: <span class="math notranslate nohighlight">\(I_z = \iiint_V (x^2 + y^2) \rho \, dV\)</span></p></li>
+<li><p>Polares Trägheitsmoment: <span class="math notranslate nohighlight">\(J_p = \iiint_V r^2 \rho \, dV\)</span></p></li>
+</ul>
+<p><strong>Flächenmomente und Widerstandsmomente</strong>: Diese sind wichtig für Festigkeitsberechnungen in der Strukturmechanik.</p>
+<p><strong>Weitere physikalische Größen</strong>: Potentielle Energie, elektrische/magnetische Felder in der Elektrotechnik.</p>
+<p>Die detaillierte Behandlung dieser Anwendungen erfolgt in den Vorlesungen Technische Mechanik I-III sowie in spezialisierten Fächern wie Festigkeitslehre und Dynamik.</p>
+<p>Das folgende Video geht auf die Bedeutung und Anwendung der Doppel- und Dreifachintegrale ein und zeigt deren praktische Relevanz in den Ingenieurswissenschaften.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
-<span class="sd-summary-text">Video “Ebene Polarkoordinaten” von Daniel Jung</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/l8ZF4m0fPxM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; 
-clipboard-write; encrypted-media; gyroscope; picture-in-picture; 
-web-share" allowfullscreen></iframe>
-</div>
-</details></section>
-<section id="umrechnung-von-kartesischen-koordinaten-in-polarkoordinaten">
-<h2>Umrechnung von kartesischen Koordinaten in Polarkoordinaten<a class="headerlink" href="#umrechnung-von-kartesischen-koordinaten-in-polarkoordinaten" title="Link to this heading">#</a></h2>
-<p>Die umgekehrte Berechnung von kartesischen Koordinaten in Polarkoordinaten ist
-etwas schwieriger. Die Berechnung des Radius <span class="math notranslate nohighlight">\(r\)</span> ist noch einfach, da ein
-rechtwinkliges Dreieck vorliegt und wir den Satz des Pythagoras anwenden können:</p>
-<div class="math notranslate nohighlight">
-\[r = \sqrt{x^2 + y^2}.\]</div>
-<p>Danach können wir entweder die Ankathete <span class="math notranslate nohighlight">\(x\)</span> oder die Gegenkathete <span class="math notranslate nohighlight">\(y\)</span> ausnutzen, um den Winkel <span class="math notranslate nohighlight">\(\varphi\)</span> zu bestimmen. Im rechtwinkligen Dreieck gelten</p>
-<div class="math notranslate nohighlight">
-\[\cos(\varphi) =
-\frac{x}{r} \quad \text{ oder } \quad \sin(\varphi) = \frac{y}{r}.\]</div>
-<figure class="align-default" id="fig11-03">
-<a class="reference internal image-reference" href="../_images/fig11_03.svg"><img alt="../_images/fig11_03.svg" src="../_images/fig11_03.svg" width="75%" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 25 </span><span class="caption-text">Die Umrechnung kartesische Koordinaten in Polarkoordinaten nutzt das
-rechtwinklige Dreieck aus.</span><a class="headerlink" href="#fig11-03" title="Link to this image">#</a></p>
-</figcaption>
-</figure>
-<p>Mit den Umkehrfunktionen der Sinus- und der Kosinusfunktion erhalten wir</p>
-<div class="math notranslate nohighlight">
-\[\varphi = \arccos\left(\frac{x}{r}\right) \quad \text{ oder } \quad \varphi =
-\arcsin\left( \frac{y}{r}\right).\]</div>
-<p>Wo ist jetzt das Problem? Lösen wir die Gleichung</p>
-<div class="math notranslate nohighlight">
-\[\sin(\varphi) = \frac{1}{2},\]</div>
-<p>so hat diese Gleichung innerhalb des Intervalls <span class="math notranslate nohighlight">\([0, 360^{\circ}]\)</span> zwei
-Lösungen, nämlich <span class="math notranslate nohighlight">\(30^{\circ}\)</span> und <span class="math notranslate nohighlight">\(150^{\circ}\)</span>. Aber welcher Winkel ist der
-richtige Winkel? Da die x-Koordinate positiv ist und der Punkt <span class="math notranslate nohighlight">\(P(2\sqrt{2},2)\)</span>
-im 1. Quadranten liegt, ist der richtige Winkel <span class="math notranslate nohighlight">\(\varphi = 30^{\circ}\)</span>.
-Überprüfen Sie daher immer durch eine Zeichnung, welches der richtige Winkel ist.</p>
-<p>In dem folgenden Video wird gezeigt, wie eine Funktion mit Variablen in
-kartesischen Koordinaten in eine Funktion mit Variablen in Polarkoordinaten
-umgerechnet werden kann:</p>
-<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
-<summary class="sd-summary-title sd-card-header">
-<span class="sd-summary-text">Video zu “Polarkoordinaten” von Prof. Hoever</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/MCRDcJKeR20" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay;
-clipboard-write; encrypted-media; gyroscope; picture-in-picture;
-web-share" allowfullscreen></iframe>
+<span class="sd-summary-text">Video zu “Mehrdimensionale Integration | Bedeutung und Anwendung” von MathePeter</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/H1Pj4SMVZ8s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </div>
 </details><div class="seealso admonition">
 <p class="admonition-title">Weiteres Lernmaterial</p>
-<p><a class="reference external" href="https://de.serlo.org/mathe/45643/polarkoordinaten">https://de.serlo.org/mathe/45643/polarkoordinaten</a>
-<a class="reference external" href="https://studyflix.de/mathematik/polarkoordinaten-1476">https://studyflix.de/mathematik/polarkoordinaten-1476</a></p>
+<ul class="simple">
+<li><p>Übungsaufgaben zu Volumen-, Masse- und Schwerpunktberechnungen</p></li>
+<li><p>Anwendungen in der Technischen Mechanik: Statik und Dynamik starrer Körper</p></li>
+<li><p>Berechnungsbeispiele aus der Konstruktionslehre</p></li>
+</ul>
 </div>
-</section>
-<section id="zusammenfassung-und-ausblick">
-<h2>Zusammenfassung und Ausblick<a class="headerlink" href="#zusammenfassung-und-ausblick" title="Link to this heading">#</a></h2>
-<p>Dieses Kapitel stellt eine kurze Wiederholung der Polarkoordinaten dar, die wir
-im nächsten Kapitel verwenden werden.</p>
 </section>
 </section>
 
@@ -618,24 +655,6 @@ im nächsten Kapitel verwenden werden.</p>
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
-    <a class="left-prev"
-       href="chapter10_sec00.html"
-       title="previous page">
-      <i class="fa-solid fa-angle-left"></i>
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">10. Doppelintegral in Polarkoordinaten und Dreifachintegral</p>
-      </div>
-    </a>
-    <a class="right-next"
-       href="chapter10_sec02.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">10.2 Doppelintegral in Polarkoordinaten</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
-    </a>
 </div>
                 </footer>
               
@@ -654,11 +673,19 @@ im nächsten Kapitel verwenden werden.</p>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lernziele">Lernziele</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kartesische-koordinaten">Kartesische Koordinaten</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Polarkoordinaten</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#umrechnung-von-polarkoordinaten-in-kartesische-koordinaten">Umrechnung von Polarkoordinaten in kartesische Koordinaten</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#umrechnung-von-kartesischen-koordinaten-in-polarkoordinaten">Umrechnung von kartesischen Koordinaten in Polarkoordinaten</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zusammenfassung-und-ausblick">Zusammenfassung und Ausblick</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#volumen-berechnen">10.4.1 Volumen berechnen</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#beispiel-1-volumen-einer-halbkugel">Beispiel 1: Volumen einer Halbkugel</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#berechnung-von-masse">10.4.2 Berechnung von Masse</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#beispiel-2-masse-eines-kegels-mit-linearer-dichteverteilung">Beispiel 2: Masse eines Kegels mit linearer Dichteverteilung</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#berechnung-des-schwerpunktes">10.4.3 Berechnung des Schwerpunktes</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#beispiel-3-schwerpunkt-einer-halbkugel">Beispiel 3: Schwerpunkt einer Halbkugel</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#weitere-anwendungen">10.4.4 Weitere Anwendungen</a></li>
 </ul>
   </nav></div>
 

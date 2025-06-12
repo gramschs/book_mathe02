@@ -34,7 +34,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=87e54e7c" />
     <link rel="stylesheet" type="text/css" href="../_static/jsxgraph.css?v=a7b027cb" />
@@ -442,6 +442,8 @@
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#volumen-berechnen">Volumen berechnen</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#berechnung-von-masse">Berechnung von Masse</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#berechnung-des-schwerpunktes">Berechnung des Schwerpunktes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#beispiel-volumen-eines-quaders">Beispiel: Volumen eines Quaders</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zusammenfassung-und-ausblick">Zusammenfassung und Ausblick</a></li>
 </ul>
             </nav>
         </div>
@@ -455,7 +457,7 @@
                   
   <section class="tex2jax_ignore mathjax_ignore" id="anwendungen-dreifachintegral">
 <h1>10.4 Anwendungen Dreifachintegral<a class="headerlink" href="#anwendungen-dreifachintegral" title="Link to this heading">#</a></h1>
-<p>Nun kommen Anwendungen des Dreifachintegrals.</p>
+<p>Nun betrachten wir Anwendungen des Dreifachintegrals.</p>
 <section id="lernziele">
 <h2>Lernziele<a class="headerlink" href="#lernziele" title="Link to this heading">#</a></h2>
 <div class="goals admonition">
@@ -490,7 +492,7 @@ integrieren:</p>
 </section>
 <section id="berechnung-des-schwerpunktes">
 <h2>Berechnung des Schwerpunktes<a class="headerlink" href="#berechnung-des-schwerpunktes" title="Link to this heading">#</a></h2>
-<p>Die Berechnung des Schwerpunktes <span class="math notranslate nohighlight">\(S(x_S, y_S, z_S)\)</span> eines dreidimensionalen
+<p>Die Berechnung des Schwerpunktes <span class="math notranslate nohighlight">\(S(x_s, y_s, z_s)\)</span> eines dreidimensionalen
 Körpers erfolgt analog zur Berechnung des Schwerpunktes von Flächen, indem das
 Volumenintegral jeweils über die Funktionen <span class="math notranslate nohighlight">\(x\)</span>, <span class="math notranslate nohighlight">\(y\)</span> und <span class="math notranslate nohighlight">\(z\)</span> berechnet wird. Dabei wird vorausgesetzt, dass wir einen homogenen Körper betrachten, dessen Dichte konstant ist.</p>
 <div class="amsmath math notranslate nohighlight">
@@ -507,6 +509,57 @@ Dreifachintegrale ein.</p>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/H1Pj4SMVZ8s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </div>
 </details></section>
+<section id="beispiel-volumen-eines-quaders">
+<h2>Beispiel: Volumen eines Quaders<a class="headerlink" href="#beispiel-volumen-eines-quaders" title="Link to this heading">#</a></h2>
+<p>Wir berechnen das Volumen eines Quaders mit den Kantenlängen <span class="math notranslate nohighlight">\(a = 2\)</span>, <span class="math notranslate nohighlight">\(b = 3\)</span>
+und <span class="math notranslate nohighlight">\(c = 4\)</span> mithilfe eines Dreifachintegrals.</p>
+<p>Das Volumen eines Körpers berechnet sich durch das Integral der konstanten
+Funktion <span class="math notranslate nohighlight">\(f(x,y,z) = 1\)</span> über das entsprechende Volumen:</p>
+<div class="math notranslate nohighlight">
+\[V = \iiint_{Quader} 1 \, dV\]</div>
+<p><strong>Schritt 1</strong>: Integrationsgebiet beschreiben</p>
+<p>Der Quader erstreckt sich von:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(x = 0\)</span> bis <span class="math notranslate nohighlight">\(x = a = 2\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(y = 0\)</span> bis <span class="math notranslate nohighlight">\(y = b = 3\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(z = 0\)</span> bis <span class="math notranslate nohighlight">\(z = c = 4\)</span></p></li>
+</ul>
+<p><strong>Schritt 2</strong>: Integrationsgrenzen festlegen</p>
+<p>Entsprechend unserer Notation:</p>
+<ul class="simple">
+<li><p>Äußeres Integral: <span class="math notranslate nohighlight">\(x \in [0, 2]\)</span> (d.h. <span class="math notranslate nohighlight">\(a = 0\)</span>, <span class="math notranslate nohighlight">\(b = 2\)</span>)</p></li>
+<li><p>Mittleres Integral: <span class="math notranslate nohighlight">\(y \in [0, 3]\)</span> (d.h. <span class="math notranslate nohighlight">\(g_u(x) = 0\)</span>, <span class="math notranslate nohighlight">\(g_o(x) = 3\)</span>)</p></li>
+<li><p>Inneres Integral: <span class="math notranslate nohighlight">\(z \in [0, 4]\)</span> (d.h. <span class="math notranslate nohighlight">\(F_u(x,y) = 0\)</span>, <span class="math notranslate nohighlight">\(F_o(x,y) = 4\)</span>)</p></li>
+</ul>
+<p><strong>Schritt 3</strong>: Dreifachintegral aufstellen</p>
+<div class="math notranslate nohighlight">
+\[V = \int_{x=0}^{x=2} \left( \int_{y=0}^{y=3} \left( \int_{z=0}^{z=4} 1 \, dz
+\right) dy \right) dx\]</div>
+<p><strong>Schritt 4</strong>: Integration durchführen</p>
+<p>Inneres Integral (nach <span class="math notranslate nohighlight">\(z\)</span>):</p>
+<div class="math notranslate nohighlight">
+\[I_1(x,y) = \int_{z=0}^{z=4} 1 \, dz = [z]_0^4 = 4 - 0 = 4\]</div>
+<p>Das Ergebnis ist die konstante Funktion <span class="math notranslate nohighlight">\(I_1(x,y) = 4\)</span>.</p>
+<p>Mittleres Integral (nach <span class="math notranslate nohighlight">\(y\)</span>):</p>
+<div class="math notranslate nohighlight">
+\[I_2(x) = \int_{y=0}^{y=3} I_1(x,y) \, dy = \int_{y=0}^{y=3} 4 \, dy = 4 \cdot
+[y]_0^3 = 4 \cdot (3 - 0) = 12\]</div>
+<p>Das Ergebnis ist die konstante Funktion <span class="math notranslate nohighlight">\(I_3(x) = 12\)</span>.</p>
+<p>Äußeres Integral (nach <span class="math notranslate nohighlight">\(x\)</span>):</p>
+<div class="math notranslate nohighlight">
+\[V = \int_{x=0}^{x=2} I_3(x) \, dx = \int_{x=0}^{x=2} 12 \, dx = 12 \cdot [x]_0^2
+= 12 \cdot (2 - 0) = 24\]</div>
+<p>Das Volumen des Quaders ist <span class="math notranslate nohighlight">\(V = 24\)</span> Volumeneinheiten. Zur Kontrolle berechnen
+wir das Volumen mit der aus der Geometrie bekannten Formel <span class="math notranslate nohighlight">\(V = a \cdot b \cdot
+c\)</span> und erhalten</p>
+<div class="math notranslate nohighlight">
+\[V = a \cdot b \cdot c = 2 \cdot 3 \cdot 4 = 24.\]</div>
+</section>
+<section id="zusammenfassung-und-ausblick">
+<h2>Zusammenfassung und Ausblick<a class="headerlink" href="#zusammenfassung-und-ausblick" title="Link to this heading">#</a></h2>
+<p>Mit diesen Anwendungen von Dreifachintegralen schließen wir das Kapitel
+mehrdimensionale Integration ab und widmen uns nun Differentialgleichungen.</p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -578,6 +631,8 @@ Dreifachintegrale ein.</p>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#volumen-berechnen">Volumen berechnen</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#berechnung-von-masse">Berechnung von Masse</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#berechnung-des-schwerpunktes">Berechnung des Schwerpunktes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#beispiel-volumen-eines-quaders">Beispiel: Volumen eines Quaders</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zusammenfassung-und-ausblick">Zusammenfassung und Ausblick</a></li>
 </ul>
   </nav></div>
 
