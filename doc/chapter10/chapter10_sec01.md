@@ -18,7 +18,7 @@ Möglichkeit, die Position der Punkte anzugeben.
 ## Kartesische Koordinaten
 
 Das am häufigsten verwendete Koordinatensystem ist das **kartesische
-koordinatensystem**. Es ist nach dem Methematiker [René
+Koordinatensystem**. Es ist nach dem Mathematiker [René
 Descartes](https://de.wikipedia.org/wiki/René_Descartes) benannt, obwohl
 Descartes ein solches Koordinatensystem nie beschrieben hat. Das Hauptmerkmal
 von kartesischen Koordinatensytemen ist, dass die Koordinatenachsen senkrecht
@@ -79,7 +79,9 @@ y &= 4 \cdot \sin(30^{\circ}) = 2.
 Zur Erinnerung folgt hier eine Einführung in Polarkoordinaten:
 
 ```{dropdown} Video "Ebene Polarkoordinaten" von Daniel Jung
-<iframe width="560" height="315" src="https://www.youtube.com/embed/l8ZF4m0fPxM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/l8ZF4m0fPxM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; 
+clipboard-write; encrypted-media; gyroscope; picture-in-picture; 
+web-share" allowfullscreen></iframe>
 ```
 
 ## Umrechnung von kartesischen Koordinaten in Polarkoordinaten
@@ -100,7 +102,8 @@ $$\cos(\varphi) =
 width: 75%
 name: fig11_03
 ---
-Die Umrechnung kartesische Koordinaten in Polarkoordinaten nutzt das rechtwinklige Dreieck aus.
+Die Umrechnung kartesische Koordinaten in Polarkoordinaten nutzt das
+rechtwinklige Dreieck aus.
 ```
 
 Mit den Umkehrfunktionen der Sinus- und der Kosinusfunktion erhalten wir
@@ -123,7 +126,9 @@ kartesischen Koordinaten in eine Funktion mit Variablen in Polarkoordinaten
 umgerechnet werden kann:
 
 ```{dropdown} Video zu "Polarkoordinaten" von Prof. Hoever
-<iframe width="560" height="315" src="https://www.youtube.com/embed/MCRDcJKeR20" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/MCRDcJKeR20" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay;
+clipboard-write; encrypted-media; gyroscope; picture-in-picture;
+web-share" allowfullscreen></iframe>
 ```
 
 ```{admonition} Weiteres Lernmaterial
@@ -131,3 +136,8 @@ umgerechnet werden kann:
 https://de.serlo.org/mathe/45643/polarkoordinaten
 https://studyflix.de/mathematik/polarkoordinaten-1476
 ```
+
+## Zusammenfassung und Ausblick
+
+Dieses Kapitel stellt eine kurze Wiederholung der Polarkoordinaten dar, die wir
+im nächsten Kapitel verwenden werden.
