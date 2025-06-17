@@ -106,7 +106,6 @@ nach $y$ dunkelblau. Verändern Sie den aktuellen x-Wert.
 <iframe src="https://gramschs.github.io/book_mathe02/_static/assets/doppelintegral_beispiel01.html"
 width=100% height="600" frameborder="0" scrolling="yes"></iframe>
 
-
 **Schritt 3: äußere Integration (nach x)**
 
 Das innere Integral $I(x) = \frac{3}{2}x$ wird nun in das äußere Integral
@@ -126,11 +125,6 @@ Doppelintegrale auf einem Rechteckgebiet.
 
 ```{dropdown} Video zu "Beispiel Doppelintegral" von Mathematische Methoden
 <iframe width="560" height="315" src="https://www.youtube.com/embed/l_Fg_tDqx2E"
-title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-```
-
-```{dropdown} Video zu "Beispiel Doppelintegral" von Mathematische Methoden
-<iframe width="560" height="315" src="https://www.youtube.com/embed/7HRXCYZSYnI"
 title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 ```
 
@@ -195,7 +189,7 @@ Das innere Integral $I(x) = -\frac{1}{2}x^6 + \frac{9}{2}x^4-2x^3-6x^2$ wird nun
 in das äußere Integral eingesetzt und nach $x$ integriert:
 
 \begin{align*}
-\int_{x=-3}^{x=2} I(x)\, dx &= \int_{x=-3}^{x=2} -\frac{1}{2}x^6 + \frac{9}{2}x^4-2x^3-6x^2 =\\
+\int_{x=-3}^{x=2} I(x)\, dx &= \int_{x=-3}^{x=2} -\frac{1}{2}x^6 + \frac{9}{2}x^4-2x^3-6x^2 \, dx =\\
 &= \left[-\frac{1}{14}x^7 + \frac{9}{10}x^5 - \frac{1}{2}x^4 - 2x^3\right]_{x=-3}^{x=2} = \\
 &= \frac{625}{14} \approx 44.643
 \end{align*}
