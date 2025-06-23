@@ -7,7 +7,7 @@ beschäftigen.
 
 ```{admonition} Lernziele
 :class: goals
-* Sie können anhand des Exaktheitskriterium überprüfen, ob eine
+* Sie können anhand des Exaktheitskriteriums überprüfen, ob eine
   Differentialgleichung 1. Ordnung der Form
   
   $$p(x, y) + q(x, y) \cdot y' = 0$$ 
@@ -54,14 +54,14 @@ Exaktheitsbedingung erfüllt ist.
 Beide partielle Ableitungen sind gleich und daher ist die Differentialgleichung
 exakt.
 
-## Wie werden exakte Differentialgleichugnen gelöst?
+## Wie werden exakte Differentialgleichungen gelöst?
 
 Liegt eine exakte Differentialgleichung vor, so wird die Differentialgleichung
 oft etwas informell mit dem Differentialquotienten $y'=\frac{dy}{dx}$
 folgendermaßen notiert:
 
 $$p(x, y) + q(x, y) \frac{dy}{dx} = 0 \quad
-\Rightarrow \quad p(x,y) \, dx + q(t, x) \, dy = 0. $$
+\Rightarrow \quad p(x,y) \, dx + q(x, y) \, dy = 0. $$
 
 Das erinnert an das totale Differential. Für die Lösungsidee starten wir mit
 einer Funktion $F$, die von zwei Variablen abhängt, nämlich $x_1$ und $x_2$, und

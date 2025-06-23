@@ -15,13 +15,14 @@ Differentialgleichungen und zeigt, wie man sie löst.
 
 ## Was sind separable Differentialgleichungen?
 
-Damit eine Differentialgleichung **separabel** ist, müssen zwei Bedigungen erfüllt sein.
+Damit eine Differentialgleichung **separabel** ist, müssen zwei Bedingungen
+erfüllt sein.
 
 1. Die Differentialgleichung muss von 1. Ordnung sein.
 2. Die rechte Seite (vorausgesetzt die 1. Ableitung der gesuchten Funktion steht
    links) lässt sich als ein Produkt von zwei Funktionen so umformen, dass eine
-   Funktion nur von der Variablen $x$ abhängt und die andere Funktion nur von
-   Terme mit $y$ enthält, also
+   Funktion nur von der Variablen $x$ abhängt und die andere Funktion nur Terme
+   mit $y$ enthält, also
 
 $$y' = f(x)\cdot g(y).$$
 
@@ -59,7 +60,8 @@ Wir betrachten erneut die separable Differentialgleichung
 
 $$y' = 5x \cdot y.$$
 
-**Schritt 1:** Zuerst ersetzen wir die 1. Ableitung durch den Differentialoperator
+**Schritt 1:** Zuerst ersetzen wir die 1. Ableitung durch den
+Differentialquotienten
 
 $$\frac{dy}{dx} = 5x \cdot y.$$
 
@@ -67,7 +69,8 @@ $$\frac{dy}{dx} = 5x \cdot y.$$
 
 $$\frac{1}{y} \, dy = 5x \, dx.$$
 
-**Schritt 3:** Dann integrieren wir die linke Seite nach $dy$ und die rechte Seite nach $dx$:
+**Schritt 3:** Dann integrieren wir die linke Seite nach $dy$ und die rechte
+Seite nach $dx$:
 
 $$
 \int \frac{1}{y} \, dy = \int 5x \, dx \quad
@@ -76,7 +79,7 @@ $$
 
 **Schritt 4:** Wir lösen nach $y$ auf. Zuerst sortieren wir die
 Integrationskonstante $C_1$ nach rechts und nennen die dadurch entstandene
-Differen $C_2 - C_1$ einfach nur $\tilde{C}$
+Differenz $C_2 - C_1$ einfach nur $\tilde{C}$
 
 $$\Rightarrow  \ln |y| = \frac{5}{2} x^2 + \tilde{C}.$$
 
@@ -86,7 +89,7 @@ Exponentialfunktion zu nutzen:
 $$\Rightarrow e^{\ln(|y|)} = e^{\frac{5}{2} x^2 + \tilde{C}}.$$
 
 Da die Exponentialfunktion die Umkehrfunktion der Logarithmusfunktion ist, gilt
-nämlich $e^{\ln(|y|)} = y$ und wir sind durch diesen Trick den Logarithmus
+nämlich $e^{\ln(|y|)} = |y|$ und wir sind durch diesen Trick den Logarithmus
 losgeworden:
 
 $$\Rightarrow |y(x)| = e^{\frac{5}{2} x^2 + \tilde{C}}.$$
