@@ -34,7 +34,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=87e54e7c" />
     <link rel="stylesheet" type="text/css" href="../_static/jsxgraph.css?v=a7b027cb" />
@@ -472,13 +472,14 @@ separable Differentialgleichung zu lösen.</p></li>
 </section>
 <section id="was-sind-separable-differentialgleichungen">
 <h2>Was sind separable Differentialgleichungen?<a class="headerlink" href="#was-sind-separable-differentialgleichungen" title="Link to this heading">#</a></h2>
-<p>Damit eine Differentialgleichung <strong>separabel</strong> ist, müssen zwei Bedigungen erfüllt sein.</p>
+<p>Damit eine Differentialgleichung <strong>separabel</strong> ist, müssen zwei Bedingungen
+erfüllt sein.</p>
 <ol class="arabic simple">
 <li><p>Die Differentialgleichung muss von 1. Ordnung sein.</p></li>
 <li><p>Die rechte Seite (vorausgesetzt die 1. Ableitung der gesuchten Funktion steht
 links) lässt sich als ein Produkt von zwei Funktionen so umformen, dass eine
-Funktion nur von der Variablen <span class="math notranslate nohighlight">\(x\)</span> abhängt und die andere Funktion nur von
-Terme mit <span class="math notranslate nohighlight">\(y\)</span> enthält, also</p></li>
+Funktion nur von der Variablen <span class="math notranslate nohighlight">\(x\)</span> abhängt und die andere Funktion nur Terme
+mit <span class="math notranslate nohighlight">\(y\)</span> enthält, also</p></li>
 </ol>
 <div class="math notranslate nohighlight">
 \[y' = f(x)\cdot g(y).\]</div>
@@ -515,13 +516,15 @@ Stammfunktion.</p></li>
 <p>Wir betrachten erneut die separable Differentialgleichung</p>
 <div class="math notranslate nohighlight">
 \[y' = 5x \cdot y.\]</div>
-<p><strong>Schritt 1:</strong> Zuerst ersetzen wir die 1. Ableitung durch den Differentialoperator</p>
+<p><strong>Schritt 1:</strong> Zuerst ersetzen wir die 1. Ableitung durch den
+Differentialquotienten</p>
 <div class="math notranslate nohighlight">
 \[\frac{dy}{dx} = 5x \cdot y.\]</div>
 <p><strong>Schritt 2:</strong> Als nächstes trennen wir die Variablen:</p>
 <div class="math notranslate nohighlight">
 \[\frac{1}{y} \, dy = 5x \, dx.\]</div>
-<p><strong>Schritt 3:</strong> Dann integrieren wir die linke Seite nach <span class="math notranslate nohighlight">\(dy\)</span> und die rechte Seite nach <span class="math notranslate nohighlight">\(dx\)</span>:</p>
+<p><strong>Schritt 3:</strong> Dann integrieren wir die linke Seite nach <span class="math notranslate nohighlight">\(dy\)</span> und die rechte
+Seite nach <span class="math notranslate nohighlight">\(dx\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[
 \int \frac{1}{y} \, dy = \int 5x \, dx \quad
@@ -529,7 +532,7 @@ Stammfunktion.</p></li>
 \]</div>
 <p><strong>Schritt 4:</strong> Wir lösen nach <span class="math notranslate nohighlight">\(y\)</span> auf. Zuerst sortieren wir die
 Integrationskonstante <span class="math notranslate nohighlight">\(C_1\)</span> nach rechts und nennen die dadurch entstandene
-Differen <span class="math notranslate nohighlight">\(C_2 - C_1\)</span> einfach nur <span class="math notranslate nohighlight">\(\tilde{C}\)</span></p>
+Differenz <span class="math notranslate nohighlight">\(C_2 - C_1\)</span> einfach nur <span class="math notranslate nohighlight">\(\tilde{C}\)</span></p>
 <div class="math notranslate nohighlight">
 \[\Rightarrow  \ln |y| = \frac{5}{2} x^2 + \tilde{C}.\]</div>
 <p>Nun verwenden wir den Trick, die linke und rechte Seite als Exponenten für die
@@ -537,7 +540,7 @@ Exponentialfunktion zu nutzen:</p>
 <div class="math notranslate nohighlight">
 \[\Rightarrow e^{\ln(|y|)} = e^{\frac{5}{2} x^2 + \tilde{C}}.\]</div>
 <p>Da die Exponentialfunktion die Umkehrfunktion der Logarithmusfunktion ist, gilt
-nämlich <span class="math notranslate nohighlight">\(e^{\ln(|y|)} = y\)</span> und wir sind durch diesen Trick den Logarithmus
+nämlich <span class="math notranslate nohighlight">\(e^{\ln(|y|)} = |y|\)</span> und wir sind durch diesen Trick den Logarithmus
 losgeworden:</p>
 <div class="math notranslate nohighlight">
 \[\Rightarrow |y(x)| = e^{\frac{5}{2} x^2 + \tilde{C}}.\]</div>

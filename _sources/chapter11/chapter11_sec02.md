@@ -34,7 +34,7 @@ $$y(x)=\sin(x)+C_1 x + C_2$$
 
 die Differentialgleichung $y''(x) = -\sin(x).$ Die beiden Integrationskonstanten
 $C_1$ und $C_2$ entstehen dadurch, dass die höchste auftretende Ableitung die
-zweite Ableitung ist. Die DGL hat Ordnung 2 und wir müssen zweimal ingtegrieren,
+zweite Ableitung ist. Die DGL hat Ordnung 2 und wir müssen zweimal integrieren,
 um zu einer Lösung zu gelangen. Und obwohl wir von *der* Lösung der DGL
 sprechen, meinen wir damit eigentlich unendlich viele Funktionen.
 
@@ -44,7 +44,7 @@ Enthält die Lösungsfunktion der Differentialgleichung noch Integrationskonstan
 die **allgemeine Lösung** der Differentialgleichung.
 ```
 
-```{dropdown} Video zu "Allgemeiner Lösung einer DGL"
+```{dropdown} Video zu "Allgemeine Lösung einer DGL"
 <iframe src="https://frankfurt-university.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=b7d5b60a-2bd6-42a6-9f6a-b01800ebb264&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=false&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
 ```
 
@@ -130,7 +130,7 @@ $$s(0)=s_0 \quad \text{ und } \quad v(0)=v_0.$$
 Wenn wir nun die allgemeine Lösung $s(t) = -\frac{1}{2}gt^2 + C_1 t + C_2$ zum
 Zeitpunkt $t=0$ betrachten, so gilt
 
-$$s(0)=-\frac{1}{2}g\cdot0^2 + C_1\cdot 0 + C_2 = C_2.$$
+$$s(0)=-\frac{1}{2}g\cdot 0^2 + C_1\cdot 0 + C_2 = C_2.$$
 
 Daraus können wir sofort ablesen, dass die Integrationskonstante $C_2$ der
 Anfangshöhe $s_0$ entsprechen muss.
@@ -142,7 +142,7 @@ $$\dot{s}(0)=-g\cdot 0 + C_1 = C_1.$$
 
 Damit erhalten wir die spezielle Lösung
 
-$$s(t)=\frac{1}{2}gt^2 + v_0 t + s_0$$
+$$s(t)=-\frac{1}{2}gt^2 + v_0 t + s_0$$
 
 passend zu den Anfangsbedingungen $s(0)=s_0$ und $v(0)=v_0$.
 
@@ -223,7 +223,10 @@ für die Biegelinie
 
 $$y(x)=\frac{q}{24 EI}\left(x^4 -2lx^3 + l^3x\right).$$
 
+Im folgenden Geogebra-Applet können Sie sich eine Visualisierung der Biegelinie
+ansehen.
+
 ```{admonition} GeoGebra
 :class: seealso
-https://www.geogebra.org/calculator/xuzuerpf?embed"
+https://www.geogebra.org/calculator/xuzuerpf?embed
 ```

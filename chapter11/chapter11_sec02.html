@@ -34,7 +34,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=87e54e7c" />
     <link rel="stylesheet" type="text/css" href="../_static/jsxgraph.css?v=a7b027cb" />
@@ -488,7 +488,7 @@ Funktionen</p>
 \[y(x)=\sin(x)+C_1 x + C_2\]</div>
 <p>die Differentialgleichung <span class="math notranslate nohighlight">\(y''(x) = -\sin(x).\)</span> Die beiden Integrationskonstanten
 <span class="math notranslate nohighlight">\(C_1\)</span> und <span class="math notranslate nohighlight">\(C_2\)</span> entstehen dadurch, dass die höchste auftretende Ableitung die
-zweite Ableitung ist. Die DGL hat Ordnung 2 und wir müssen zweimal ingtegrieren,
+zweite Ableitung ist. Die DGL hat Ordnung 2 und wir müssen zweimal integrieren,
 um zu einer Lösung zu gelangen. Und obwohl wir von <em>der</em> Lösung der DGL
 sprechen, meinen wir damit eigentlich unendlich viele Funktionen.</p>
 <div class="note admonition">
@@ -498,7 +498,7 @@ die <strong>allgemeine Lösung</strong> der Differentialgleichung.</p>
 </div>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
-<span class="sd-summary-text">Video zu “Allgemeiner Lösung einer DGL”</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<span class="sd-summary-text">Video zu “Allgemeine Lösung einer DGL”</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <iframe src="https://frankfurt-university.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=b7d5b60a-2bd6-42a6-9f6a-b01800ebb264&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=false&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
 </div>
 </details></section>
@@ -572,7 +572,7 @@ bezeichnen wir mit <span class="math notranslate nohighlight">\(v_0\)</span>. Es
 <p>Wenn wir nun die allgemeine Lösung <span class="math notranslate nohighlight">\(s(t) = -\frac{1}{2}gt^2 + C_1 t + C_2\)</span> zum
 Zeitpunkt <span class="math notranslate nohighlight">\(t=0\)</span> betrachten, so gilt</p>
 <div class="math notranslate nohighlight">
-\[s(0)=-\frac{1}{2}g\cdot0^2 + C_1\cdot 0 + C_2 = C_2.\]</div>
+\[s(0)=-\frac{1}{2}g\cdot 0^2 + C_1\cdot 0 + C_2 = C_2.\]</div>
 <p>Daraus können wir sofort ablesen, dass die Integrationskonstante <span class="math notranslate nohighlight">\(C_2\)</span> der
 Anfangshöhe <span class="math notranslate nohighlight">\(s_0\)</span> entsprechen muss.</p>
 <p>Als nächstes betrachten wir die 1. Ableitung der allgemeinen Lösung zum
@@ -581,7 +581,7 @@ Zeitpunkt <span class="math notranslate nohighlight">\(t=0\)</span>, also die Ge
 \[\dot{s}(0)=-g\cdot 0 + C_1 = C_1.\]</div>
 <p>Damit erhalten wir die spezielle Lösung</p>
 <div class="math notranslate nohighlight">
-\[s(t)=\frac{1}{2}gt^2 + v_0 t + s_0\]</div>
+\[s(t)=-\frac{1}{2}gt^2 + v_0 t + s_0\]</div>
 <p>passend zu den Anfangsbedingungen <span class="math notranslate nohighlight">\(s(0)=s_0\)</span> und <span class="math notranslate nohighlight">\(v(0)=v_0\)</span>.</p>
 <div class="note admonition">
 <p class="admonition-title">Was ist … ein Anfangswertproblem?</p>
@@ -648,9 +648,11 @@ Gleichung ein und erhalten</p>
 für die Biegelinie</p>
 <div class="math notranslate nohighlight">
 \[y(x)=\frac{q}{24 EI}\left(x^4 -2lx^3 + l^3x\right).\]</div>
+<p>Im folgenden Geogebra-Applet können Sie sich eine Visualisierung der Biegelinie
+ansehen.</p>
 <div class="seealso admonition">
 <p class="admonition-title">GeoGebra</p>
-<p><a class="reference external" href="https://www.geogebra.org/calculator/xuzuerpf?embed">https://www.geogebra.org/calculator/xuzuerpf?embed</a>”</p>
+<p><a class="reference external" href="https://www.geogebra.org/calculator/xuzuerpf?embed">https://www.geogebra.org/calculator/xuzuerpf?embed</a></p>
 </div>
 </section>
 </section>

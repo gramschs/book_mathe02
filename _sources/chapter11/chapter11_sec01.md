@@ -43,7 +43,7 @@ $$f''(x) = -f(x).$$
 
 Gesucht wird also eine Funktion, die zweimal abgeleitet die Funktion selbst
 wieder ergibt, nur mit umgekehrten Vorzeichen. Eine Funktion, die diese
-Gleichung löst, ist die Sinus-Funktion. Probieren wir es aus und bilden erst
+Gleichung erfüllt, ist die Sinus-Funktion. Probieren wir es aus und bilden erst
 einmal die Ableitungen:
 
 $$f(x) = \sin(x) \quad \Rightarrow f'(x) = \cos(x) \quad \Rightarrow f''(x) =
@@ -54,7 +54,7 @@ erfüllt die Sinus-Funktion die Gleichung $f''(x) = -f(x).$
 
 ```{admonition} Mini-Übung
 :class: miniexercise
-Welche der folgenden Funktionen ist erfüllt die Gleichung
+Welche der folgenden Funktionen erfüllt die Gleichung
 
 $$f''(x) = - f(x)?$$
 
@@ -70,7 +70,7 @@ a) ableiten: $f(x)=\cos(x) \quad \Rightarrow f'(x)=-\sin(x) \quad \Rightarrow f'
 eingesetzt: $-\cos(x) = -\cos(x)$ erfüllt die Gleichung
 
 b) ableiten: $f(x)=e^x \quad \Rightarrow f'(x)=e^x \quad \Rightarrow f''(x)=e^x$ <br>
-eingesetzt: $e^x \neq -e^x$ erfüllt die Gleichung nicht
+eingesetzt: $e^x \neq -e^x$, daher erfüllt die Funktion die Gleichung nicht
 
 c) ableiten:
 \begin{align*}
@@ -87,7 +87,9 @@ Art von Gleichungen, die sogenannten Differentialgleichungen.
 
 ```{admonition} Was ist ... eine Differentialgleichung?
 :class: note
-Eine Gleichung, bei der eine Funktion gesucht wird und ihre Ableitungen in der Gleichung ebenfalls vorkommen, nennen wir **Differentialgleichung**. Oft kürzen wir das Wort Differentialgleichung mit DGL ab.
+Eine Gleichung, bei der eine Funktion gesucht wird und ihre Ableitungen in der
+Gleichung ebenfalls vorkommen, nennen wir **Differentialgleichung**. Das Wort
+Differentialgleichung wird häufig mit DGL abgekürzt.
 ```
 
 ```{dropdown} Video zu "Gewöhnliche Differentialgleichung"
@@ -236,7 +238,8 @@ Definition fest.
 
 ```{admonition} Was ist ... die Ordnung einer Differentialgleichung?
 :class: note
-Die höchste vorkommene Ableitung der gesuchten Funktion nennen wir **Ordnung** der Differentialgleichung.
+Die höchste vorkommene Ableitung der gesuchten Funktion nennen wir **Ordnung**
+der Differentialgleichung.
 ```
 
 ```{dropdown} Video zu "Ordnung einer gewöhnlichen Differentialgleichung"

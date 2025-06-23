@@ -2,7 +2,7 @@
 
 ```{admonition} Übung 11.1
 :class: miniexercise
-Bestimmen Sie die Lösung des Anfangwertproblems
+Bestimmen Sie die Lösung des Anfangswertproblems
 
 $$y \, y'- e^{5x} = 0, \qquad \text{für} \quad y(0)=1.$$
 ```
@@ -85,7 +85,7 @@ $$y(x) = 5 \cdot e^{2x^3}.$$
 
 ```{admonition} Übung 11.3
 :class: miniexercise
-Bestimmen Sie die Lösung des Anfangwertproblemes
+Bestimmen Sie die Lösung des Anfangswertproblemes
 
 $$\dot{x} = e^{t-x} \quad \text{ für } \quad x(1)=1.$$
 ```
@@ -124,7 +124,7 @@ $$x(t) = \ln(e^t) = t.$$
 
 ```{admonition} Übung 11.4
 :class: miniexercise
-Bestimmen Sie die Lösung des Anfangwertproblemes
+Bestimmen Sie die Lösung des Anfangswertproblemes
 
 $$9x\dot{x} - 4t = 0 \quad \text{ für } \quad x(1.5)=-1.$$
 ```
@@ -158,7 +158,7 @@ $$x(1.5) = \pm \sqrt{\frac{4}{9}t^2 + \frac{2}{9}c} \overset{!}{=} -1$$
 
 nach $C$ auf und erhalten $C=0$. Damit ist die spezielle Lösung $x(1.5)=-1$
 
-$$x(t) = - \frac{2}{3}t.$$
+$$x(t) = -\frac{2}{3}t.$$
 ```
 ````
 
@@ -194,7 +194,7 @@ Setze $\tilde{C} = c_2 - c_1$ und löse nach $x$ auf:
 $$|x+1| = |t+1| \cdot e^{\tilde{C}} \quad 
 \Rightarrow x(t) = C\cdot (t+1) - 1$$
 
-Dabei wurden die Betragsstriche weggelassen, da die postitive Konstante $e^{\tilde{C}}$ durch eine reelle Zahl $C$ ersetzt wurde, die die drei möglichen Lösungen vereinigt.
+Dabei wurden die Betragsstriche weggelassen, da die positive Konstante $e^{\tilde{C}}$ durch eine reelle Zahl $C$ ersetzt wurde, die die drei möglichen Lösungen vereinigt.
 
 Für den Anfangswert $x(3)=3$ lösen wir die Gleichung
 
