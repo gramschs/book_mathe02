@@ -113,7 +113,7 @@ Skizze der beiden Funktionsgraphen:
 * Schnittpunkte: $x_1 = -4$ und $x_2 = 16$
 * Flächeninhalt:
 
-$$A = \int_{-4}^{16} \left(\frac{1}{4}x^2 + 16\right) - \left(-3x \right)  \, dx = \frac{1000}{3}$$
+$$A = \int_{-4}^{16} \left(-\frac{1}{4}x^2 + 16\right) - \left(-3x \right)  \, dx = \frac{1000}{3}$$
 ```
 ````
 
