@@ -182,6 +182,7 @@ $$x(t) = -\frac{1}{6} e^{-t} + C\cdot e^{2t}.$$
 Spezielle Lösung für $x(0)=0$
 
 $$x(t) = -\frac{1}{6} e^{-t} + \frac{1}{6}\cdot e^{2t}.$$
+
 ```{dropdown} Lösungsweg
 Die DGL ist eine lineare inhomogene DGL mit $a_1(t)=2$ und $a_0(t)=-4$. Daher bestimmen wir zuerst die allgemeine Lösung der homogenen DGL
 
@@ -197,7 +198,7 @@ $$x(t) = C(t)\cdot e^{2t}.$$
 
 Die erste Ableitung ist
 
-$$\dot(x)(t) = \dot{C}(t) e^{2t} + 2 C(t) e^{2t}.$$
+$$\dot{x}(t) = \dot{C}(t) e^{2t} + 2 C(t) e^{2t}.$$
 
 Jetzt werden die Lösungsansatzfunktion $x$ und deren Ableitung $\dot{x}$ in die inhomogene DGL eingesetzt:
 

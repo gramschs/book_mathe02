@@ -16,53 +16,43 @@ uns in diesem Kapitel auf den einfachsten Fall, der auftreten kann.
 
 ## Was ist ein System von Differentialgleichungen?
 
-Sind mehrere Differentialgleichungen nicht unabhängig voneinander, sondern
-treten die gesuchten Funktionen oder die Störfunktionen in mehreren
-Differentialgleichungen gleichzeitig auf, so sprechen wir von einem **System von
-Differentialgleichungen**. Wir betrachten in dieser Vorlesung nur Systeme von
-zwei Differentialgleichungen, bei denen beide Differentialgleichungen homogen,
-linear und von 1. Ordnung sind. Zusätzlich fordern wir, dass die Koeffizienten
-konstant sind.
+Sind mehrere Differentialgleichungen gekoppelt, d.h. die gesuchten Funktionen
+treten in verschiedenen Gleichungen gleichzeitig auf, so sprechen wir von einem
+**System von Differentialgleichungen**.
 
-Ein System von Differentialgleichungen
+Wir betrachten homogene Systeme von zwei linearen Differentialgleichungen 1.
+Ordnung mit konstanten Koeffizienten:
+
 \begin{align*}
 y_1' &= a_{11}y_1 + a_{12}y_2 \\
 y_2' &= a_{21}y_1 + a_{22}y_2
 \end{align*}
-heißt homogenes System von Differentialgleichungen 1. Ordnung mit konstanten
-Koeffizienten.
 
-Es werden also zwei Funktionen $y_1$ und $y_2$ gesucht, die jeweils in der
-anderen Differentialgleichung ebenfalls auftauchen. Um dem System jetzt auch
-eine Ordnung zuzuweisen, summieren wir über die Ordnungen der einzelnen
-Differentialgleichungen. Daher hat das System aus den beiden
-Differentialgleichungen 1. Ordnung insgesamt die Ordnung 2.
+Hier werden zwei Funktionen $y_1$ und $y_2$ gesucht, die miteinander gekoppelt
+sind. Da jede Gleichung die Ordnung 1 hat, bezeichnen wir das System als System
+der Ordnung 2.
 
-## Wie wird ein System 2. Ordnung gelöst?
-
-Zur Lösung von Systemen von linearen Differentialgleichungen kombinieren wir die
-Lösung einzelner Differentialgleichungen mit der Lösung von linearen
-Gleichungssystemen. Da wir uns auf konstante Koeffizienten beschränken, können
-wir die Koeffizienten in eine Matrix schreiben.
+Die Koeffizienten lassen sich in einer **Koeffizientenmatrix** zusammenfassen:
 
 $$A =
 \begin{pmatrix}
 a_{11} & a_{12} \\
 a_{21} & a_{22}
-\end{pmatrix}.$$
+\end{pmatrix}$$
 
-Dadurch können wir das System von Differentialgleichungen als
-Matrix-Vektor-Multiplikation darstellen:
+Dadurch können wir das System kompakt als **Matrix-Vektor-Gleichung** schreiben:
 
-$$\begin{pmatrix}
+$$\begin{pmatrix} y_{1}'\\ y_{2}' \end{pmatrix} =
+\begin{pmatrix}
 a_{11} & a_{12} \\
 a_{21} & a_{22} \end{pmatrix} \cdot
-\begin{pmatrix} y_1 \\ y_2 \end{pmatrix} =
-\begin{pmatrix} y_{1}'\\ y_{2}' \end{pmatrix}.$$
+\begin{pmatrix} y_1 \\ y_2 \end{pmatrix}$$
 
-Bei den homogenen lineare Differentialgleichungen zeigte sich, dass diese durch
-eine Exponentialfunktion gelöst werden können. Als Lösungsansatz wählen wir
-daher
+## Wie wird ein System 2. Ordnung gelöst?
+
+Von einzelnen homogenen linearen Differentialgleichungen wissen wir, dass deren
+Lösungen Exponentialfunktionen sind. Diese Erkenntnis übertragen wir auf das
+System und wählen als Lösungsansatz:
 
 $$y_1 = C_1 \, e^{\lambda x} \quad \text{ und }
 \quad y_2 = C_2 \, e^{\lambda x}.$$
@@ -91,7 +81,8 @@ C_1 \, \lambda  &= a_{11} C_1 + a_{12} C_2 \\
 C_2 \, \lambda  &= a_{21} C_1 + a_{22} C_2
 \end{align*}
 
-Bringen wir die Terme $C_1 \, \lambda$ und $C_2 \, \lambda$ jeweils auf die rechte Seite und schreiben das Gleichungssystem in Matrixform, so erhalten wir
+Bringen wir die Terme $C_1 \, \lambda$ und $C_2 \, \lambda$ jeweils auf die
+rechte Seite und schreiben das Gleichungssystem in Matrixform, so erhalten wir
 
 $$
 \begin{pmatrix}
@@ -99,13 +90,13 @@ a_{11} - \lambda & a_{21} \\
 a_{21} & a_{22} - \lambda
 \end{pmatrix} \cdot
 \begin{pmatrix} C_1 \\ C_2 \end{pmatrix} =
-\begin{pmatrix} 0 \\ 0 \end{pmatrix}. $$
+\begin{pmatrix} 0 \\ 0 \end{pmatrix}.$$
 
 Wenn die Determinante dieses linearen Gleichungssystems ungleich Null ist, dann
 kommen nur $C_1 = C_2 = 0$ als Lösung infrage. Damit wären aber auch $y_1$ und
-$y_2$ die Nullfunktionen. Das System von Differentialgleichungen hat nur
-Funktionen als Lösung, die nicht die Nullfunktion sind, wenn die Determinante
-dieses Gleichungssystems Null ist.
+$y_2$ die Nullfunktionen. Das System von Differentialgleichungen hat also nur
+dann Funktionen als Lösung, wenn die Determinante dieses Gleichungssystems Null
+ist.
 
 Wir setzen also
 
@@ -115,18 +106,20 @@ a_{21} & a_{22} - \lambda
 \end{pmatrix} \overset{!}{=} 0$$
 
 an und bestimmen $\lambda$ so, dass die Determinante Null ist. Diese Gleichung
-wird übrigens **charakteristische Gleichung** genannt und wird folgendermaßen notiert:
+wird **charakteristische Gleichung** genannt und folgendermaßen notiert:
 
 $$(a_{11}-\lambda) \cdot (a_{22}-\lambda) - a_{21} \, a_{12} = 0.$$
 
-Es gibt drei mögliche Lösungen, die sogenannten Eigenwerte der
-charakteristischen Gleichung:
+Die charakteristische Gleichung $(a_{11}-\lambda)(a_{22}-\lambda) - a_{21}a_{12}
+= 0$ ist eine quadratische Gleichung für $\lambda$. Je nach Art der Lösungen
+unterscheiden wir drei Fälle:
 
-* 2 Nullstellen, d.h. $\lambda_1 \neq \lambda_2$ reell
-* 1 Nullstelle, d.h. $\lambda_1 = \lambda_2$ reell
-* 0 Nullstellen, d.h. $\lambda_1 \neq \lambda_2$ komplex, weil für die komplexen Zahlen eine quadratische Gleichung immer zwei Lösungen hat
+* 2 Nullstellen, d.h. $\lambda_1 \neq \lambda_2$ reell,
+* 1 Nullstelle, d.h. $\lambda_1 = \lambda_2$ reell,
+* 0 Nullstellen, d.h. $\lambda_1 \neq \lambda_2$ komplex, weil für die komplexen Zahlen eine quadratische Gleichung immer zwei Lösungen hat.
 
-Je nachdem, welcher dieser dieser Fälle eintritt, lauten die Lösungen wie folgt.
+Je nachdem, welcher dieser dieser Fälle eintritt, lauten die beiden
+Lösungsfunktionen wie folgt.
 
 **1. Fall: 2 Nullstellen**
 
@@ -177,16 +170,23 @@ $$\det (A-\lambda I) = 0$$
 
 sind $\lambda_1 = -5$ und $\lambda_2 = 2$.
 
-Damit ist die erste Lösungsfunktion
+Der erste Fall liegt vor und damit ist die erste Lösungsfunktion
 
 $$y_1(x) = C_1 \, e^{-5x} + C_2 \, e^{2x}.$$
 
-Wir berechnen schon einmal die erste Ableitung davon, da wir $y_1'$ für die
-Berechnung von $y_2$ brauchen:
+Wir berechnen die erste Ableitung, da wir $y_1'$ für die Berechnung von $y_2$
+brauchen:
 
 $$y_1'(x) = -5 C_1 e^{-5x} + 2 C_2 e^{2x}.$$
 
 Die zweite Lösungsfunktion ist damit
 
-$$y_2(x) = \frac{1}{-2} (y_1' - (-8)\cdot y_1) = (\frac{5}{2}C_1+8) e^{-5x} +
-(8-C_2) e^{2x}.$$
+$$y_2(x) = \frac{1}{-2} \big(y_1' - (-8)\cdot y_1\big) =
+\big(\frac{5}{2}C_1+8\big) e^{-5x} + (8-C_2) e^{2x}.$$
+
+## Zusammenfassung
+
+In diesem Kapitel haben wir gelernt, homogene Systeme linearer
+Differentialgleichungen durch die Eigenwertmethode zu lösen. Der
+Exponentialansatz führt zur charakteristischen Gleichung, deren Eigenwerte das
+Verhalten des Systems bestimmen.
