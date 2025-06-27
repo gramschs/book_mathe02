@@ -1,13 +1,10 @@
 # 12.1 Lineare DGL 1. Ordnung
 
-Differentialgleichungen 1. Ordnung haben wir bereits in den vorherigen Kapiteln
-kennengelernt. Ein spezieller Typ von Differentialgleichung, der in den
-Ingenieurwissenschaften sehr häufig verwendet wird, ist die **lineare
-Differentialgleichung**. Obwohl es auch lineare Differentialgleichungen höherer
-Ordnung gibt, beschränken wir uns in dieser Vorlesung auf lineare
-Differentialgleichungen 1. Ordnung. Unser erstes Ziel in diesem Kapitel ist es
-zu lernen, wie man erkennt, ob eine gegebene Differentialgleichung von diesem
-Typ ist.
+Viele technische Prozesse lassen sich durch lineare Differentialgleichungen
+beschreiben: die Entladung eines Kondensators in einem elektrischen Schaltkreis,
+die Temperaturregelung in einem Industrieofen oder die Dämpfung von Schwingungen
+in einem Fahrzeugfahrwerk. Wir beginnen das Thema lineare
+Differentialgleichungen mit den linearen Differentialgleichungen 1. Ordnung.
 
 ## Lernziele
 
@@ -23,10 +20,11 @@ Typ ist.
 ## Lineare Differentialgleichungen 1. Ordnung
 
 Eine lineare Differentialgleichung ist eine Differentialgleichung, in der die
-Funktion und ihre Ableitungen ausschließlich linear auftreten. Das bedeutet, sie
-werden beispielsweise nicht quadriert, es gibt keine Produkterme und sie
-erscheinen nicht innerhalb von Funktionen wie Sinus oder Exponentialfunktion
-oder anderen nichtlinearen Funktionen.
+Funktion und ihre Ableitungen nur in der ersten Potenz und nicht als Argument
+nichtlinearer Funktionen auftreten. Das bedeutet, sie werden beispielsweise
+nicht quadriert, es gibt keine Produkterme und sie erscheinen nicht innerhalb
+von Funktionen wie Sinus oder Exponentialfunktion oder anderen nichtlinearen
+Funktionen.
 
 ```{admonition} Was ist ... eine lineare DGL 1. Ordnung?
 :class: note
@@ -34,8 +32,14 @@ Formal können wir eine lineare Differentialgleichung 1. Ordnung in der Form
 
 $$a_1(x)y' + a_0(x)y = r(x)$$
 
-darstellen. Die rechte Seite $r(x)$ wird **Störfunktion** genannt.
+darstellen. Die rechte Seite $r(x)$ heißt **Störfunktion**.
 ```
+
+Der Begriff **Störfunktion** stammt aus der Regelungstechnik und Physik. Die
+Gleichung $a_1(x)y' + a_0(x)y = 0$ würde ein System beschreiben, das sich im
+Gleichgewicht befindet. Die rechte Seite $r(x)$ repräsentiert eine äußere
+Einwirkung, die dieses Gleichgewicht "stört" und wird daher Störfunktion
+genannt.
 
 **Beispiel 1:** Die Differentialgleichung
 
@@ -43,8 +47,8 @@ $$3x \cdot y' - \sin(x)\cdot y = x^2$$
 
 ist eine lineare Differentialgleichung 1. Ordnung. Zwar treten in dieser
 Differentialgleichung nichtlineare Terme auf ($\sin(x)$ und $x^2$), doch
-beziehen sich diese ausschließlich auf die Variable $x$ und nicht auf die
-gesuchte Funktion $y$ oder ihre Ableitung $y'$.
+beziehen sich diese jedoch nur auf die Variable $x$ und nicht auf die gesuchte
+Funktion $y$ oder ihre Ableitung $y'$.
 
 **Beispiel 2:** Die Differentialgleichung
 
@@ -53,6 +57,10 @@ $$3x \cdot y' - x\cdot \sin(y) = x^2$$
 ist hingegen keine lineare Differentialgleichung, sondern eine nichtlineare
 Differentialgleichung 1. Ordnung, da die gesuchte Funktion $y$ innerhalb der
 nichtlinearen Sinus-Funktion $\sin(y)$ auftritt.
+
+Nachdem wir nun lineare von nichtlinearen Differentialgleichungen unterscheiden
+können, betrachten wir eine weitere wichtige Klassifikation: homogen und
+inhomogen.
 
 ## Störfunktion entscheidet über homogen und inhomogen
 
@@ -64,9 +72,8 @@ Begriffe auch für lineare Differentialgleichungen.
 
 ```{admonition} Was ist ... eine homogene lineare DGL?
 :class: note
-Eine lineare Differentialgleichung wird **homogen** genannt, wenn die
-Störfunktion gleich der Nullfunktion ist. Ansonsten wird sie **inhomogen**
-genannt.
+Eine lineare Differentialgleichung ist **homogen**, wenn die Störfunktion gleich
+der Nullfunktion ist. Ansonsten wird sie **inhomogen** genannt.
 ```
 
 **Beispiel 1:** Die Differentialgleichung
@@ -86,3 +93,35 @@ rechte Seite, also die Störfunktion $r(x)=x^2$, ist nicht die Nullfunktion.
 ```{dropdown} Video zu "Differentialgleichungen, linear/nicht linear, homogen/inhomogen" von Daniel Jung
 <iframe width="560" height="315" src="https://www.youtube.com/embed/dlAVRF4jWHA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 ```
+
+## Anwendungsbeispiel: Abkühlung eines Motorblocks
+
+Ein Motorblock hat nach dem Abstellen eine Temperatur von 80°C. Die
+Umgebungstemperatur beträgt 20°C. Die Abkühlgeschwindigkeit ist proportional zur
+Temperaturdifferenz zwischen Motor und Umgebung.
+
+Mathematisch lässt sich dieser Vorgang durch die Differentialgleichung
+
+$$\frac{dT}{dt} = -k(T - T_{\text{Umgebung}})$$
+
+beschreiben, wobei $T(t)$ die Motortemperatur zur Zeit $t$ und $k > 0$ eine
+Materialkonstante ist.
+
+Umgeformt erhalten wir:
+
+$$\frac{dT}{dt} + kT = kT_{\text{Umgebung}}$$
+
+Dies ist eine lineare Differentialgleichung 1. Ordnung mit konstanten
+Koeffizienten ($a_1 = 1$ bzw. $a_0 = k$). Da die rechte Seite $r(t) =
+kT_{\text{Umgebung}} = 20k \neq 0$ ist, handelt es sich um eine inhomogene
+lineare Differentialgleichung.
+
+## Zusammenfassung und Ausblick
+
+In diesem Kapitel haben wir gelernt, lineare Differentialgleichungen der Form
+$a_1(x)y' + a_0(x)y = r(x)$ zu erkennen und zwischen homogenen und inhomogenen
+Gleichungen zu unterscheiden. Diese Klassifikation ist entscheidend, da lineare
+Differentialgleichungen systematische Lösungsverfahren ermöglichen. In den
+folgenden Kapiteln werden wir diese Lösungsmethoden entwickeln und anwenden, um
+technische Probleme wie Temperaturverläufe, Schwingungen und Regelungsvorgänge
+mathematisch zu beschreiben und zu lösen.

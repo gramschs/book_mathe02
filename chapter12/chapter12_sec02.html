@@ -441,6 +441,7 @@
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lernziele">Lernziele</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wie-wird-eine-homogene-lineare-dgl-1-ordnung-gelost">Wie wird eine homogene lineare DGL 1. Ordnung gelöst?</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#beispiele-zur-losung-einer-homogenen-linearen-dgl-1-ordnung">Beispiele zur Lösung einer homogenen linearen DGL 1. Ordnung</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zusammenfassung-und-ausblick">Zusammenfassung und Ausblick</a></li>
 </ul>
             </nav>
         </div>
@@ -454,52 +455,63 @@
                   
   <section class="tex2jax_ignore mathjax_ignore" id="losung-homogene-lineare-dgl-1-ordnung">
 <h1>12.2 Lösung homogene lineare DGL 1. Ordnung<a class="headerlink" href="#losung-homogene-lineare-dgl-1-ordnung" title="Link to this heading">#</a></h1>
-<p>Dieses Kapitel stellt ein Lösungsverfahren vor, um eine homogene lineare
-Differentialgleichung 1. Ordnung zu lösen.</p>
+<p>Homogene lineare Differentialgleichungen beschreiben viele natürliche
+Abklingprozesse wie beispielsweise das Ausschwingen eines Pendels oder den
+radioaktiven Zerfall. Das Besondere an diesen Gleichungen ist, dass sie sich
+durch Trennung der Variablen elegant lösen lassen. In diesem Kapitel lernen wir
+diese Lösungstechnik kennen.</p>
 <section id="lernziele">
 <h2>Lernziele<a class="headerlink" href="#lernziele" title="Link to this heading">#</a></h2>
 <div class="goals admonition">
 <p class="admonition-title">Lernziel</p>
-<p>Sie können eine <strong>homogene lineare Differentialgleichung 1. Ordnung</strong> lösen.</p>
+<p>Sie können eine homogene lineare Differentialgleichung 1. Ordnung mit der
+Lösungsmethode <strong>Trennung der Variablen</strong> lösen.</p>
 </div>
 </section>
 <section id="wie-wird-eine-homogene-lineare-dgl-1-ordnung-gelost">
 <h2>Wie wird eine homogene lineare DGL 1. Ordnung gelöst?<a class="headerlink" href="#wie-wird-eine-homogene-lineare-dgl-1-ordnung-gelost" title="Link to this heading">#</a></h2>
-<p>Wir betrachten eine homogene lineare Differentialgleichung 1. Ordnung. Da die
-Differentialgleichung homogen sein soll, ist die Störfunktion gleich Null. Daher
-schreiben wir die Differentialgleichung in der Form</p>
+<p>Betrachten wir eine homogene lineare Differentialgleichung 1. Ordnung. Bei
+homogenen Gleichungen ist die Störfunktion gleich Null. Daher schreiben wir die
+Differentialgleichung in der Form</p>
 <div class="math notranslate nohighlight">
 \[a_1(x)y' + a_0(x)y = 0.\]</div>
 <p>Gegeben sind also zwei Funktionen <span class="math notranslate nohighlight">\(a_1\)</span> und <span class="math notranslate nohighlight">\(a_0\)</span>, die nur von der Variable <span class="math notranslate nohighlight">\(x\)</span>
 abhängen. Gesucht ist die Funktion <span class="math notranslate nohighlight">\(y\)</span>.</p>
-<p>Die homogene lineare Differentialgleichung 1. Ordnung kann auch als eine
-separable Differentialgleichung betrachtet werden. Dazu lösen wir die
-Differentialgleichung nach <span class="math notranslate nohighlight">\(y'\)</span> auf und erhalten</p>
+<p>Diese Gleichung kann auch als eine separable Differentialgleichung betrachtet
+werden. Dazu stellen wir zunächst nach <span class="math notranslate nohighlight">\(y'\)</span> um und erhalten</p>
 <div class="math notranslate nohighlight">
 \[y'= -\frac{a_0(x) y}{a_1(x)} \quad
 \Rightarrow \frac{dy}{dx} = -\frac{a_0(x)}{a_1(x)} \, y.\]</div>
 <p>Wir trennen die Veränderlichen:</p>
 <div class="math notranslate nohighlight">
 \[\frac{1}{y} \, dy = -\frac{a_0(x)}{a_1(x)} \, dx.\]</div>
-<p>Unbestimmte Integration der beiden Seiten liefert</p>
+<p>Integration der beiden Seiten (mit Integrationskonstante <span class="math notranslate nohighlight">\(c_1\)</span>) ergibt</p>
 <div class="math notranslate nohighlight">
 \[\ln |y| + c_1 = - \int \frac{a_0(x)}{a_1(x)} \, dx.\]</div>
 <p>Wir bringen <span class="math notranslate nohighlight">\(c_1\)</span> auf die rechte Seite der Gleichung und lösen nach <span class="math notranslate nohighlight">\(y\)</span> auf:</p>
 <div class="math notranslate nohighlight">
 \[|y(x)| = e^{-\int \frac{a_0(x)}{a_1(x)}\, dx - c_1}.\]</div>
-<p>Um die Betragsstriche weglassen zu dürfen, setzen wir <span class="math notranslate nohighlight">\(C = \pm e^{-c_1}\)</span>
-und erhalten als allgemeine Lösung der homogenen Differentialgleichung 1.
-Ordnung</p>
+<p>Um die Betragsstriche aufzulösen, unterscheiden wir zwei Fälle:</p>
+<ol class="arabic simple">
+<li><p>Ist <span class="math notranslate nohighlight">\(y(x) &gt; 0\)</span>, so erhalten wir <span class="math notranslate nohighlight">\(y(x) = e^{-\int \frac{a_0(x)}{a_1(x)} \, dx -
+c_1}\)</span>.</p></li>
+<li><p>Ist <span class="math notranslate nohighlight">\(y(x) &lt; 0\)</span>, so folgt <span class="math notranslate nohighlight">\(y(x) = -e^{-\int \frac{a_0(x)}{a_1(x)} \, dx -
+c_1}\)</span>.</p></li>
+</ol>
+<p>Da sowohl positive als auch negative Werte möglich sind, fassen wir beide Fälle
+zusammen, indem wir <span class="math notranslate nohighlight">\(C = \pm e^{-c_1}\)</span> setzen. Dabei kann <span class="math notranslate nohighlight">\(C\)</span> eine beliebige
+reelle Zahl (auch Null) sein. Somit erhalten wir als allgemeine Lösung</p>
 <div class="math notranslate nohighlight">
 \[y(x) = C \, e^{-\int \frac{a_0(x)}{a_1(x)} \, dx}.\]</div>
 <div class="note admonition">
-<p class="admonition-title">Wie wird die homogene lineare DGL 1. Ordnung gelöst?</p>
+<p class="admonition-title">Wie wird eine homogene lineare DGL 1. Ordnung gelöst?</p>
 <p>Die allgemeine Lösung der homogenen linearen Differentialgleichung 1. Ordnung</p>
 <div class="math notranslate nohighlight">
 \[a_1(x)y' + a_0(x)y = 0\]</div>
-<p>wird durch die Trennung der Variablen berechnet und lautet</p>
+<p>wird durch die <strong>Trennung der Variablen</strong> berechnet und lautet</p>
 <div class="math notranslate nohighlight">
 \[y(x) = C \, e^{-\int \frac{a_0(x)}{a_1(x)} \, dx}.\]</div>
+<p>Dabei ist <span class="math notranslate nohighlight">\(C \in \mathbb{R}\)</span> eine beliebige Integrationskonstante.</p>
 </div>
 </section>
 <section id="beispiele-zur-losung-einer-homogenen-linearen-dgl-1-ordnung">
@@ -529,6 +541,16 @@ Differentialgleichung</p>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Sm0Go9IioJ4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </div>
 </details></section>
+<section id="zusammenfassung-und-ausblick">
+<h2>Zusammenfassung und Ausblick<a class="headerlink" href="#zusammenfassung-und-ausblick" title="Link to this heading">#</a></h2>
+<p>In diesem Kapitel haben wir gelernt, homogene lineare Differentialgleichungen 1.
+Ordnung durch Trennung der Variablen zu lösen. Die Lösung ist stets eine
+Exponentialfunktion der Form <span class="math notranslate nohighlight">\(y(x) = C \cdot e^{-\int \frac{a_0(x)}{a_1(x)} \,
+dx}\)</span>, die exponentielles Wachstum oder exponentiellen Zerfall beschreibt. Diese
+universelle Lösungsstruktur erklärt, warum exponentiell verlaufende Prozesse in
+Natur und Technik so häufig auftreten. Im nächsten Kapitel wenden wir uns
+inhomogenen linearen Differentialgleichungen 1. Ordnung zu.</p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -599,6 +621,7 @@ Differentialgleichung</p>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lernziele">Lernziele</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wie-wird-eine-homogene-lineare-dgl-1-ordnung-gelost">Wie wird eine homogene lineare DGL 1. Ordnung gelöst?</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#beispiele-zur-losung-einer-homogenen-linearen-dgl-1-ordnung">Beispiele zur Lösung einer homogenen linearen DGL 1. Ordnung</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zusammenfassung-und-ausblick">Zusammenfassung und Ausblick</a></li>
 </ul>
   </nav></div>
 

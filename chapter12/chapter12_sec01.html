@@ -441,6 +441,8 @@
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lernziele">Lernziele</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lineare-differentialgleichungen-1-ordnung">Lineare Differentialgleichungen 1. Ordnung</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#storfunktion-entscheidet-uber-homogen-und-inhomogen">Störfunktion entscheidet über homogen und inhomogen</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#anwendungsbeispiel-abkuhlung-eines-motorblocks">Anwendungsbeispiel: Abkühlung eines Motorblocks</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zusammenfassung-und-ausblick">Zusammenfassung und Ausblick</a></li>
 </ul>
             </nav>
         </div>
@@ -454,14 +456,11 @@
                   
   <section class="tex2jax_ignore mathjax_ignore" id="lineare-dgl-1-ordnung">
 <h1>12.1 Lineare DGL 1. Ordnung<a class="headerlink" href="#lineare-dgl-1-ordnung" title="Link to this heading">#</a></h1>
-<p>Differentialgleichungen 1. Ordnung haben wir bereits in den vorherigen Kapiteln
-kennengelernt. Ein spezieller Typ von Differentialgleichung, der in den
-Ingenieurwissenschaften sehr häufig verwendet wird, ist die <strong>lineare
-Differentialgleichung</strong>. Obwohl es auch lineare Differentialgleichungen höherer
-Ordnung gibt, beschränken wir uns in dieser Vorlesung auf lineare
-Differentialgleichungen 1. Ordnung. Unser erstes Ziel in diesem Kapitel ist es
-zu lernen, wie man erkennt, ob eine gegebene Differentialgleichung von diesem
-Typ ist.</p>
+<p>Viele technische Prozesse lassen sich durch lineare Differentialgleichungen
+beschreiben: die Entladung eines Kondensators in einem elektrischen Schaltkreis,
+die Temperaturregelung in einem Industrieofen oder die Dämpfung von Schwingungen
+in einem Fahrzeugfahrwerk. Wir beginnen das Thema lineare
+Differentialgleichungen mit den linearen Differentialgleichungen 1. Ordnung.</p>
 <section id="lernziele">
 <h2>Lernziele<a class="headerlink" href="#lernziele" title="Link to this heading">#</a></h2>
 <div class="goals admonition">
@@ -478,30 +477,39 @@ diese eine <strong>homogene</strong> oder eine <strong>inhomogene</strong> Diffe
 <section id="lineare-differentialgleichungen-1-ordnung">
 <h2>Lineare Differentialgleichungen 1. Ordnung<a class="headerlink" href="#lineare-differentialgleichungen-1-ordnung" title="Link to this heading">#</a></h2>
 <p>Eine lineare Differentialgleichung ist eine Differentialgleichung, in der die
-Funktion und ihre Ableitungen ausschließlich linear auftreten. Das bedeutet, sie
-werden beispielsweise nicht quadriert, es gibt keine Produkterme und sie
-erscheinen nicht innerhalb von Funktionen wie Sinus oder Exponentialfunktion
-oder anderen nichtlinearen Funktionen.</p>
+Funktion und ihre Ableitungen nur in der ersten Potenz und nicht als Argument
+nichtlinearer Funktionen auftreten. Das bedeutet, sie werden beispielsweise
+nicht quadriert, es gibt keine Produkterme und sie erscheinen nicht innerhalb
+von Funktionen wie Sinus oder Exponentialfunktion oder anderen nichtlinearen
+Funktionen.</p>
 <div class="note admonition">
 <p class="admonition-title">Was ist … eine lineare DGL 1. Ordnung?</p>
 <p>Formal können wir eine lineare Differentialgleichung 1. Ordnung in der Form</p>
 <div class="math notranslate nohighlight">
 \[a_1(x)y' + a_0(x)y = r(x)\]</div>
-<p>darstellen. Die rechte Seite <span class="math notranslate nohighlight">\(r(x)\)</span> wird <strong>Störfunktion</strong> genannt.</p>
+<p>darstellen. Die rechte Seite <span class="math notranslate nohighlight">\(r(x)\)</span> heißt <strong>Störfunktion</strong>.</p>
 </div>
+<p>Der Begriff <strong>Störfunktion</strong> stammt aus der Regelungstechnik und Physik. Die
+Gleichung <span class="math notranslate nohighlight">\(a_1(x)y' + a_0(x)y = 0\)</span> würde ein System beschreiben, das sich im
+Gleichgewicht befindet. Die rechte Seite <span class="math notranslate nohighlight">\(r(x)\)</span> repräsentiert eine äußere
+Einwirkung, die dieses Gleichgewicht “stört” und wird daher Störfunktion
+genannt.</p>
 <p><strong>Beispiel 1:</strong> Die Differentialgleichung</p>
 <div class="math notranslate nohighlight">
 \[3x \cdot y' - \sin(x)\cdot y = x^2\]</div>
 <p>ist eine lineare Differentialgleichung 1. Ordnung. Zwar treten in dieser
 Differentialgleichung nichtlineare Terme auf (<span class="math notranslate nohighlight">\(\sin(x)\)</span> und <span class="math notranslate nohighlight">\(x^2\)</span>), doch
-beziehen sich diese ausschließlich auf die Variable <span class="math notranslate nohighlight">\(x\)</span> und nicht auf die
-gesuchte Funktion <span class="math notranslate nohighlight">\(y\)</span> oder ihre Ableitung <span class="math notranslate nohighlight">\(y'\)</span>.</p>
+beziehen sich diese jedoch nur auf die Variable <span class="math notranslate nohighlight">\(x\)</span> und nicht auf die gesuchte
+Funktion <span class="math notranslate nohighlight">\(y\)</span> oder ihre Ableitung <span class="math notranslate nohighlight">\(y'\)</span>.</p>
 <p><strong>Beispiel 2:</strong> Die Differentialgleichung</p>
 <div class="math notranslate nohighlight">
 \[3x \cdot y' - x\cdot \sin(y) = x^2\]</div>
 <p>ist hingegen keine lineare Differentialgleichung, sondern eine nichtlineare
 Differentialgleichung 1. Ordnung, da die gesuchte Funktion <span class="math notranslate nohighlight">\(y\)</span> innerhalb der
 nichtlinearen Sinus-Funktion <span class="math notranslate nohighlight">\(\sin(y)\)</span> auftritt.</p>
+<p>Nachdem wir nun lineare von nichtlinearen Differentialgleichungen unterscheiden
+können, betrachten wir eine weitere wichtige Klassifikation: homogen und
+inhomogen.</p>
 </section>
 <section id="storfunktion-entscheidet-uber-homogen-und-inhomogen">
 <h2>Störfunktion entscheidet über homogen und inhomogen<a class="headerlink" href="#storfunktion-entscheidet-uber-homogen-und-inhomogen" title="Link to this heading">#</a></h2>
@@ -512,9 +520,8 @@ Gleichungssystem homogen oder inhomogen ist. Daher adaptieren wir diese beiden
 Begriffe auch für lineare Differentialgleichungen.</p>
 <div class="note admonition">
 <p class="admonition-title">Was ist … eine homogene lineare DGL?</p>
-<p>Eine lineare Differentialgleichung wird <strong>homogen</strong> genannt, wenn die
-Störfunktion gleich der Nullfunktion ist. Ansonsten wird sie <strong>inhomogen</strong>
-genannt.</p>
+<p>Eine lineare Differentialgleichung ist <strong>homogen</strong>, wenn die Störfunktion gleich
+der Nullfunktion ist. Ansonsten wird sie <strong>inhomogen</strong> genannt.</p>
 </div>
 <p><strong>Beispiel 1:</strong> Die Differentialgleichung</p>
 <div class="math notranslate nohighlight">
@@ -532,6 +539,34 @@ rechte Seite, also die Störfunktion <span class="math notranslate nohighlight">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/dlAVRF4jWHA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </div>
 </details></section>
+<section id="anwendungsbeispiel-abkuhlung-eines-motorblocks">
+<h2>Anwendungsbeispiel: Abkühlung eines Motorblocks<a class="headerlink" href="#anwendungsbeispiel-abkuhlung-eines-motorblocks" title="Link to this heading">#</a></h2>
+<p>Ein Motorblock hat nach dem Abstellen eine Temperatur von 80°C. Die
+Umgebungstemperatur beträgt 20°C. Die Abkühlgeschwindigkeit ist proportional zur
+Temperaturdifferenz zwischen Motor und Umgebung.</p>
+<p>Mathematisch lässt sich dieser Vorgang durch die Differentialgleichung</p>
+<div class="math notranslate nohighlight">
+\[\frac{dT}{dt} = -k(T - T_{\text{Umgebung}})\]</div>
+<p>beschreiben, wobei <span class="math notranslate nohighlight">\(T(t)\)</span> die Motortemperatur zur Zeit <span class="math notranslate nohighlight">\(t\)</span> und <span class="math notranslate nohighlight">\(k &gt; 0\)</span> eine
+Materialkonstante ist.</p>
+<p>Umgeformt erhalten wir:</p>
+<div class="math notranslate nohighlight">
+\[\frac{dT}{dt} + kT = kT_{\text{Umgebung}}\]</div>
+<p>Dies ist eine lineare Differentialgleichung 1. Ordnung mit konstanten
+Koeffizienten (<span class="math notranslate nohighlight">\(a_1 = 1\)</span> bzw. <span class="math notranslate nohighlight">\(a_0 = k\)</span>). Da die rechte Seite <span class="math notranslate nohighlight">\(r(t) =
+kT_{\text{Umgebung}} = 20k \neq 0\)</span> ist, handelt es sich um eine inhomogene
+lineare Differentialgleichung.</p>
+</section>
+<section id="zusammenfassung-und-ausblick">
+<h2>Zusammenfassung und Ausblick<a class="headerlink" href="#zusammenfassung-und-ausblick" title="Link to this heading">#</a></h2>
+<p>In diesem Kapitel haben wir gelernt, lineare Differentialgleichungen der Form
+<span class="math notranslate nohighlight">\(a_1(x)y' + a_0(x)y = r(x)\)</span> zu erkennen und zwischen homogenen und inhomogenen
+Gleichungen zu unterscheiden. Diese Klassifikation ist entscheidend, da lineare
+Differentialgleichungen systematische Lösungsverfahren ermöglichen. In den
+folgenden Kapiteln werden wir diese Lösungsmethoden entwickeln und anwenden, um
+technische Probleme wie Temperaturverläufe, Schwingungen und Regelungsvorgänge
+mathematisch zu beschreiben und zu lösen.</p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -602,6 +637,8 @@ rechte Seite, also die Störfunktion <span class="math notranslate nohighlight">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lernziele">Lernziele</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lineare-differentialgleichungen-1-ordnung">Lineare Differentialgleichungen 1. Ordnung</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#storfunktion-entscheidet-uber-homogen-und-inhomogen">Störfunktion entscheidet über homogen und inhomogen</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#anwendungsbeispiel-abkuhlung-eines-motorblocks">Anwendungsbeispiel: Abkühlung eines Motorblocks</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zusammenfassung-und-ausblick">Zusammenfassung und Ausblick</a></li>
 </ul>
   </nav></div>
 

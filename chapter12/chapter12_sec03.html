@@ -441,6 +441,7 @@
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lernziele">Lernziele</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wie-wird-eine-inhomogene-lineare-differentialgleichung-1-ordnung-gelost">Wie wird eine inhomogene lineare Differentialgleichung 1. Ordnung gelöst?</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#beispiel-zur-losung-einer-inhomogenen-linearen-dgl-1-ordnung">Beispiel zur Lösung einer inhomogenen linearen DGL 1. Ordnung</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zusammenfassung-und-ausblick">Zusammenfassung und Ausblick</a></li>
 </ul>
             </nav>
         </div>
@@ -454,9 +455,11 @@
                   
   <section class="tex2jax_ignore mathjax_ignore" id="losung-inhomogene-lineare-dgl-1-ordnung">
 <h1>12.3 Lösung inhomogene lineare DGL 1. Ordnung<a class="headerlink" href="#losung-inhomogene-lineare-dgl-1-ordnung" title="Link to this heading">#</a></h1>
-<p>Nachdem im letzten Kapitel die Lösung einer homogenen linearen
-Differentialgleichung 1. Ordnung behandelt wurde, geht es nun um die Lösung
-inhomogenr linearer Differentialgleichungen 1. Ordnung.</p>
+<p>Homogene lineare Differentialgleichungen beschreiben natürliche Prozesse ohne
+äußere Einflüsse. In der Praxis wirken jedoch oft externe Kräfte: eine von außen
+angelegte Spannung, eine Wärmequelle oder eine mechanische Anregung. Diese
+äußeren Einwirkungen führen zu inhomogenen linearen Differentialgleichungen,
+deren Lösung wir mit der Methode der Variation der Konstanten bestimmen können.</p>
 <section id="lernziele">
 <h2>Lernziele<a class="headerlink" href="#lernziele" title="Link to this heading">#</a></h2>
 <div class="goals admonition">
@@ -465,46 +468,67 @@ inhomogenr linearer Differentialgleichungen 1. Ordnung.</p>
 <li><p>Sie können eine <strong>inhomogene lineare Differentialgleichung 1. Ordnung</strong> lösen.</p></li>
 <li><p>Sie können das Lösungsverfahren <strong>Variation der Konstanten</strong> anwenden, um die
 Lösung einer linearen Differentialgleichung zu bestimmen.</p></li>
+<li><p>Sie verstehen die <strong>Lösungsstruktur</strong> inhomogener linearer
+Differentialgleichungen.</p></li>
 </ul>
 </div>
 </section>
 <section id="wie-wird-eine-inhomogene-lineare-differentialgleichung-1-ordnung-gelost">
 <h2>Wie wird eine inhomogene lineare Differentialgleichung 1. Ordnung gelöst?<a class="headerlink" href="#wie-wird-eine-inhomogene-lineare-differentialgleichung-1-ordnung-gelost" title="Link to this heading">#</a></h2>
-<p>Nun betrachten wir eine inhomogene lineare Differentialgleichung 1. Ordnung,
-also</p>
+<p>Betrachten wir eine inhomogene lineare Differentialgleichung 1. Ordnung:</p>
 <div class="math notranslate nohighlight">
 \[a_1(x)y' + a_0(x) y = r(x).\]</div>
-<p>Obwohl unser Ziel ist, die inhomogene Differentialgleichung zu lösen, lassen wir
-zunächst einmal die Störfunktion weg und berechnen die homogene Lösung</p>
+<p>Die Grundidee des Lösungsverfahren ist, dass sich die allgemeine Lösung der inhomogenen linearen DGL aus zwei Teilen zusammensetzt:</p>
+<div class="math notranslate nohighlight">
+\[y(x)=y_h(x)+y_p(x).\]</div>
+<p>Dabei ist</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(y_h(x)\)</span> die homogene Lösung (löst die Gleichung ohne Störfunktion) und</p></li>
+<li><p><span class="math notranslate nohighlight">\(y_p(x)\)</span> partikuläre Lösung (eine spezielle Lösung der inhomogenen Gleichung).</p></li>
+</ul>
+<p><strong>Schritt 1:</strong> homogene Lösung bestimmen</p>
+<p>Zunächst lösen wir die zugehörige homogene Gleichung (Störfunktion weggelassen):</p>
+<div class="math notranslate nohighlight">
+\[a_1(x)y' + a_0(x) y = 0.\]</div>
+<p>Die homogene Lösung kennen wir bereits aus Kapitel 12.2:</p>
 <div class="math notranslate nohighlight">
 \[y_h(x)=C \cdot e^{-\int \frac{a_0(x)}{a_1(x)}\, dx}.\]</div>
 <p>Um auch kenntlich zu machen, dass diese die Lösung der homogenen
 Differentialgleichung ist, wird diese Lösung mit einem kleinen “h” markiert. Wie
-üblich enthält die homogene Lösung eine Integrationskonstante <span class="math notranslate nohighlight">\(C\in\mathbb{R}\)</span>.
-Der Trick, um die inhomogene Differentialgleichung zu lösen, beruht darauf, nun
-diese Integrationskonstante zu variieren. Wir ersetzen die Konstante <span class="math notranslate nohighlight">\(C\)</span> durch
-eine Funktion <span class="math notranslate nohighlight">\(C(x)\)</span> – das nennt man <strong>Variation der Konstanten</strong>. Der
-Lösungsansatz für die inhomogene lineare Differentialgleichung1. Ordnung lautet
-also</p>
+üblich enthält die homogene Lösung eine Integrationskonstante <span class="math notranslate nohighlight">\(C\in\mathbb{R}\)</span>.</p>
+<p><strong>Schritt 2:</strong> Variation der Konstanten</p>
+<p>Um eine partikuläre Lösung der inhomogenen Gleichung zu finden, verwenden wir
+einen cleveren Ansatz: Wir variieren die Konstante <span class="math notranslate nohighlight">\(C\)</span>, indem wir sie durch eine
+unbekannte Funktion <span class="math notranslate nohighlight">\(C(x)\)</span> ersetzen. Der Lösungsansatz für die inhomogene
+Gleichung lautet daher:</p>
 <div class="math notranslate nohighlight">
 \[y(x)=C(x) \cdot e^{-\int \frac{a_0(x)}{a_1(x)}\, dx}.\]</div>
+<p>Warum funktioniert das? Die homogene Lösung erfüllt bereits den “homogenen Teil”
+der Differentialgleichung. Durch die Variation von <span class="math notranslate nohighlight">\(C\)</span> zu <span class="math notranslate nohighlight">\(C(x)\)</span> erhält die
+Lösung die nötige Flexibilität, um auch die Störfunktion <span class="math notranslate nohighlight">\(r(x)\)</span> zu
+“kompensieren”.</p>
+<p><strong>Schritt 3:</strong> Bestimmung von <span class="math notranslate nohighlight">\(C(x)\)</span></p>
 <p>Um die noch fehlende Funktion <span class="math notranslate nohighlight">\(C(x)\)</span> zu bestimmen, leiten wir den Lösungsansatz
-einmal ab und setzen das Ergebnis in die Differentialgleichung ein. Dadurch
-entsteht eine neue Differentialgleichung für die unbekannte Funktion <span class="math notranslate nohighlight">\(C(x)\)</span>, die
-wir dann lösen.</p>
+ab und setzen das Ergebnis in die ursprüngliche Differentialgleichung ein.
+Dadurch entsteht eine neue Differentialgleichung für die unbekannte Funktion
+<span class="math notranslate nohighlight">\(C(x)\)</span>, die wir durch Integration lösen können.</p>
 </section>
 <section id="beispiel-zur-losung-einer-inhomogenen-linearen-dgl-1-ordnung">
 <h2>Beispiel zur Lösung einer inhomogenen linearen DGL 1. Ordnung<a class="headerlink" href="#beispiel-zur-losung-einer-inhomogenen-linearen-dgl-1-ordnung" title="Link to this heading">#</a></h2>
 <p>Gegeben ist die inhomogene lineare Differentialgleichung 1. Ordnung</p>
 <div class="math notranslate nohighlight">
 \[y'+3y=x^2.\]</div>
-<p>Die homogene Lösung ist <span class="math notranslate nohighlight">\(y_h(x)=C\cdot e^{-3x}\)</span>. Wir variieren die Konstante und
-erhalten den Lösungsansatz</p>
+<p><em>Schritt 1:</em> Die homogene Lösung ist</p>
+<div class="math notranslate nohighlight">
+\[y_h(x)=C\cdot e^{-3x}.\]</div>
+<p><em>Schritt 2</em>: Wir ersetzen die Konstante <span class="math notranslate nohighlight">\(C\)</span> durch die Funktion <span class="math notranslate nohighlight">\(C(x)\)</span> und
+erhalten den Ansatz:</p>
 <div class="math notranslate nohighlight">
 \[y(x)=C(x)\cdot e^{-3x}.\]</div>
-<p>Als nächstes wird dieser Lösungsansatz abgeleitet</p>
+<p><em>Schritt 3:</em> Als nächstes wird dieser Lösungsansatz mit der Prodduktregel
+abgeleitet</p>
 <div class="math notranslate nohighlight">
-\[\Rightarrow \quad y'(x)=C'(x)e^{-3x} + C(x)\cdot (-3) e^{-3x}\]</div>
+\[y'(x)=C'(x)e^{-3x} + C(x)\cdot (-3) e^{-3x}\]</div>
 <p>und in die ursprüngliche Differentialgleichung eingesetzt:</p>
 <div class="math notranslate nohighlight">
 \[C'(x) \, e^{-3x} -3 C(x) \, e^{-3x} + 3C(x)\cdot e^{-3x} = x^2.\]</div>
@@ -527,6 +551,27 @@ den Lösungsansatz ein und haben damit die allgemeine Lösung der inhomogenen
 Differentialgleichung bestimmt:</p>
 <div class="math notranslate nohighlight">
 \[y(x)= C_1e^{-3x} + \frac{1}{3}x^2 - \frac{2}{9}x + \frac{2}{27}.\]</div>
+<p>Wir prüfen unsere Lösung durch Einsetzen in die ursprüngliche
+Differentialgleichung:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(y'(x) = -3C_1e^{-3x} + \frac{2}{3}x - \frac{2}{9}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(y'(x) + 3y(x) = -3C_1e^{-3x} + \frac{2}{3}x - \frac{2}{9} + 3C_1e^{-3x} + 3
+\cdot \frac{1}{3}x^2 - 3 \cdot \frac{2}{9}x + 3 \cdot \frac{2}{27} = x^2\)</span></p></li>
+</ul>
+<div class="note admonition">
+<p class="admonition-title">Wie wird eine inhomogene lineare DGL 1. Ordnung gelöst?</p>
+<p>Die inhomogene lineare DGL</p>
+<div class="math notranslate nohighlight">
+\[a_1(x)y' + a_0(x)y = r(x)\]</div>
+<p>lösen wir mit den folgenden Schritten:</p>
+<ol class="arabic simple">
+<li><p>Homogene Lösung bestimmen: <span class="math notranslate nohighlight">\(y_h(x) = C \cdot e^{-\int \frac{a_0(x)}{a_1(x)} \, dx}\)</span></p></li>
+<li><p>Ansatz mit Variation der Konstanten: <span class="math notranslate nohighlight">\(y(x) = C(x) \cdot e^{-\int \frac{a_0(x)}{a_1(x)} \, dx}\)</span></p></li>
+<li><p>Ableiten und in die ursprüngliche DGL einsetzen</p></li>
+<li><p><span class="math notranslate nohighlight">\(C(x)\)</span> bestimmen durch Integration der entstehenden Gleichung</p></li>
+<li><p>Allgemeine Lösung hat die Form: <span class="math notranslate nohighlight">\(y(x) = y_h(x) + y_p(x)\)</span></p></li>
+</ol>
+</div>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Video zu “Differentialgleichung inhomogen lösen” von Mathematrick</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
@@ -538,6 +583,16 @@ Differentialgleichung bestimmt:</p>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/DD8blQLaHDM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </div>
 </details></section>
+<section id="zusammenfassung-und-ausblick">
+<h2>Zusammenfassung und Ausblick<a class="headerlink" href="#zusammenfassung-und-ausblick" title="Link to this heading">#</a></h2>
+<p>In diesem Kapitel haben wir die Methode der Variation der Konstanten
+kennengelernt, mit der sich inhomogene lineare Differentialgleichungen 1.
+Ordnung systematisch lösen lassen. Die Lösung setzt sich stets aus der homogenen
+Lösung (beschreibt das natürliche Verhalten des Systems) und einer partikulären
+Lösung (kompensiert die äußere Störung) zusammen. Weil lineare
+Differentialgiechungen in der Technik häufig eingesetzt werden, betrachten wir
+im nächsten Kapitel ein System aus linearen Differentialgleichungen.</p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -608,6 +663,7 @@ Differentialgleichung bestimmt:</p>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lernziele">Lernziele</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wie-wird-eine-inhomogene-lineare-differentialgleichung-1-ordnung-gelost">Wie wird eine inhomogene lineare Differentialgleichung 1. Ordnung gelöst?</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#beispiel-zur-losung-einer-inhomogenen-linearen-dgl-1-ordnung">Beispiel zur Lösung einer inhomogenen linearen DGL 1. Ordnung</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zusammenfassung-und-ausblick">Zusammenfassung und Ausblick</a></li>
 </ul>
   </nav></div>
 
