@@ -94,28 +94,6 @@ rechte Seite, also die Störfunktion $r(x)=x^2$, ist nicht die Nullfunktion.
 <iframe width="560" height="315" src="https://www.youtube.com/embed/dlAVRF4jWHA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 ```
 
-## Anwendungsbeispiel: Abkühlung eines Motorblocks
-
-Ein Motorblock hat nach dem Abstellen eine Temperatur von 80°C. Die
-Umgebungstemperatur beträgt 20°C. Die Abkühlgeschwindigkeit ist proportional zur
-Temperaturdifferenz zwischen Motor und Umgebung.
-
-Mathematisch lässt sich dieser Vorgang durch die Differentialgleichung
-
-$$\frac{dT}{dt} = -k(T - T_{\text{Umgebung}})$$
-
-beschreiben, wobei $T(t)$ die Motortemperatur zur Zeit $t$ und $k > 0$ eine
-Materialkonstante ist.
-
-Umgeformt erhalten wir:
-
-$$\frac{dT}{dt} + kT = kT_{\text{Umgebung}}$$
-
-Dies ist eine lineare Differentialgleichung 1. Ordnung mit konstanten
-Koeffizienten ($a_1 = 1$ bzw. $a_0 = k$). Da die rechte Seite $r(t) =
-kT_{\text{Umgebung}} = 20k \neq 0$ ist, handelt es sich um eine inhomogene
-lineare Differentialgleichung.
-
 ## Zusammenfassung und Ausblick
 
 In diesem Kapitel haben wir gelernt, lineare Differentialgleichungen der Form
