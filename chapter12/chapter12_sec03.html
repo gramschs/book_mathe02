@@ -34,7 +34,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=87e54e7c" />
     <link rel="stylesheet" type="text/css" href="../_static/jsxgraph.css?v=a7b027cb" />
@@ -468,8 +468,6 @@ deren Lösung wir mit der Methode der Variation der Konstanten bestimmen können
 <li><p>Sie können eine <strong>inhomogene lineare Differentialgleichung 1. Ordnung</strong> lösen.</p></li>
 <li><p>Sie können das Lösungsverfahren <strong>Variation der Konstanten</strong> anwenden, um die
 Lösung einer linearen Differentialgleichung zu bestimmen.</p></li>
-<li><p>Sie verstehen die <strong>Lösungsstruktur</strong> inhomogener linearer
-Differentialgleichungen.</p></li>
 </ul>
 </div>
 </section>
@@ -478,14 +476,8 @@ Differentialgleichungen.</p></li>
 <p>Betrachten wir eine inhomogene lineare Differentialgleichung 1. Ordnung:</p>
 <div class="math notranslate nohighlight">
 \[a_1(x)y' + a_0(x) y = r(x).\]</div>
-<p>Die Grundidee des Lösungsverfahren ist, dass sich die allgemeine Lösung der inhomogenen linearen DGL aus zwei Teilen zusammensetzt:</p>
-<div class="math notranslate nohighlight">
-\[y(x)=y_h(x)+y_p(x).\]</div>
-<p>Dabei ist</p>
-<ul class="simple">
-<li><p><span class="math notranslate nohighlight">\(y_h(x)\)</span> die homogene Lösung (löst die Gleichung ohne Störfunktion) und</p></li>
-<li><p><span class="math notranslate nohighlight">\(y_p(x)\)</span> partikuläre Lösung (eine spezielle Lösung der inhomogenen Gleichung).</p></li>
-</ul>
+<p>Die Grundidee des Lösungsverfahren ist, zuerst die dazugehörige homogene
+Differentialgleichung zu lösen.</p>
 <p><strong>Schritt 1:</strong> homogene Lösung bestimmen</p>
 <p>Zunächst lösen wir die zugehörige homogene Gleichung (Störfunktion weggelassen):</p>
 <div class="math notranslate nohighlight">
@@ -543,7 +535,8 @@ die partielle Integrationsregel anwenden:</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{multline*}
 C(x)= \left[x^2\cdot\frac{1}{3}e^{3x}\right] -\int 2x \frac{1}{3}e^{3x}\, dx = \\
-= \left[x^2\cdot\frac{1}{3}e^{3x}\right] - \left[2x\cdot\frac{1}{9}e^{3x}\right] + \int 2\cdot  \frac{1}{3}e^{3x} \, dx = \\
+= \left[x^2\cdot\frac{1}{3}e^{3x}\right] - \left[2x\cdot\frac{1}{9}e^{3x}\right] +
+  \int 2\cdot  \frac{1}{3}e^{3x} \, dx = \\
 = \frac{1}{27}e^{3x}(9x^2 - 6x + 2) + C_1
 \end{multline*}\]</div>
 <p>Nachdem wir nun die Funktion <span class="math notranslate nohighlight">\(C(x)\)</span> bestimmt haben, setzen wir diese Funktion in
@@ -567,9 +560,7 @@ Differentialgleichung:</p>
 <ol class="arabic simple">
 <li><p>Homogene Lösung bestimmen: <span class="math notranslate nohighlight">\(y_h(x) = C \cdot e^{-\int \frac{a_0(x)}{a_1(x)} \, dx}\)</span></p></li>
 <li><p>Ansatz mit Variation der Konstanten: <span class="math notranslate nohighlight">\(y(x) = C(x) \cdot e^{-\int \frac{a_0(x)}{a_1(x)} \, dx}\)</span></p></li>
-<li><p>Ableiten und in die ursprüngliche DGL einsetzen</p></li>
-<li><p><span class="math notranslate nohighlight">\(C(x)\)</span> bestimmen durch Integration der entstehenden Gleichung</p></li>
-<li><p>Allgemeine Lösung hat die Form: <span class="math notranslate nohighlight">\(y(x) = y_h(x) + y_p(x)\)</span></p></li>
+<li><p>Bestimmung von C(x) durch Ableiten, Einsetzen in die ursprüngliche DGL und Integration</p></li>
 </ol>
 </div>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
@@ -587,11 +578,9 @@ Differentialgleichung:</p>
 <h2>Zusammenfassung und Ausblick<a class="headerlink" href="#zusammenfassung-und-ausblick" title="Link to this heading">#</a></h2>
 <p>In diesem Kapitel haben wir die Methode der Variation der Konstanten
 kennengelernt, mit der sich inhomogene lineare Differentialgleichungen 1.
-Ordnung systematisch lösen lassen. Die Lösung setzt sich stets aus der homogenen
-Lösung (beschreibt das natürliche Verhalten des Systems) und einer partikulären
-Lösung (kompensiert die äußere Störung) zusammen. Weil lineare
-Differentialgiechungen in der Technik häufig eingesetzt werden, betrachten wir
-im nächsten Kapitel ein System aus linearen Differentialgleichungen.</p>
+Ordnung systematisch lösen lassen. Weil lineare Differentialgiechungen in der
+Technik häufig eingesetzt werden, betrachten wir im nächsten Kapitel ein System
+aus linearen Differentialgleichungen.</p>
 </section>
 </section>
 

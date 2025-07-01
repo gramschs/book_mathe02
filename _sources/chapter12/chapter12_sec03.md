@@ -13,8 +13,6 @@ deren Lösung wir mit der Methode der Variation der Konstanten bestimmen können
 * Sie können eine **inhomogene lineare Differentialgleichung 1. Ordnung** lösen.
 * Sie können das Lösungsverfahren **Variation der Konstanten** anwenden, um die
   Lösung einer linearen Differentialgleichung zu bestimmen.
-* Sie verstehen die **Lösungsstruktur** inhomogener linearer
-  Differentialgleichungen.
 ```
 
 ## Wie wird eine inhomogene lineare Differentialgleichung 1. Ordnung gelöst?
@@ -23,14 +21,8 @@ Betrachten wir eine inhomogene lineare Differentialgleichung 1. Ordnung:
 
 $$a_1(x)y' + a_0(x) y = r(x).$$
 
-Die Grundidee des Lösungsverfahren ist, dass sich die allgemeine Lösung der inhomogenen linearen DGL aus zwei Teilen zusammensetzt:
-
-$$y(x)=y_h(x)+y_p(x).$$
-
-Dabei ist
-
-* $y_h(x)$ die homogene Lösung (löst die Gleichung ohne Störfunktion) und
-* $y_p(x)$ partikuläre Lösung (eine spezielle Lösung der inhomogenen Gleichung).
+Die Grundidee des Lösungsverfahren ist, zuerst die dazugehörige homogene
+Differentialgleichung zu lösen.
 
 **Schritt 1:** homogene Lösung bestimmen
 
@@ -104,7 +96,8 @@ die partielle Integrationsregel anwenden:
 
 \begin{multline*}
 C(x)= \left[x^2\cdot\frac{1}{3}e^{3x}\right] -\int 2x \frac{1}{3}e^{3x}\, dx = \\
-= \left[x^2\cdot\frac{1}{3}e^{3x}\right] - \left[2x\cdot\frac{1}{9}e^{3x}\right] + \int 2\cdot  \frac{1}{3}e^{3x} \, dx = \\
+= \left[x^2\cdot\frac{1}{3}e^{3x}\right] - \left[2x\cdot\frac{1}{9}e^{3x}\right] +
+  \int 2\cdot  \frac{1}{3}e^{3x} \, dx = \\
 = \frac{1}{27}e^{3x}(9x^2 - 6x + 2) + C_1
 \end{multline*}
 
@@ -131,9 +124,7 @@ lösen wir mit den folgenden Schritten:
 
 1. Homogene Lösung bestimmen: $y_h(x) = C \cdot e^{-\int \frac{a_0(x)}{a_1(x)} \, dx}$
 2. Ansatz mit Variation der Konstanten: $y(x) = C(x) \cdot e^{-\int \frac{a_0(x)}{a_1(x)} \, dx}$
-3. Ableiten und in die ursprüngliche DGL einsetzen
-4. $C(x)$ bestimmen durch Integration der entstehenden Gleichung
-5. Allgemeine Lösung hat die Form: $y(x) = y_h(x) + y_p(x)$
+3. Bestimmung von C(x) durch Ableiten, Einsetzen in die ursprüngliche DGL und Integration
 ```
 
 ```{dropdown} Video zu "Differentialgleichung inhomogen lösen" von Mathematrick
@@ -148,8 +139,6 @@ lösen wir mit den folgenden Schritten:
 
 In diesem Kapitel haben wir die Methode der Variation der Konstanten
 kennengelernt, mit der sich inhomogene lineare Differentialgleichungen 1.
-Ordnung systematisch lösen lassen. Die Lösung setzt sich stets aus der homogenen
-Lösung (beschreibt das natürliche Verhalten des Systems) und einer partikulären
-Lösung (kompensiert die äußere Störung) zusammen. Weil lineare
-Differentialgiechungen in der Technik häufig eingesetzt werden, betrachten wir
-im nächsten Kapitel ein System aus linearen Differentialgleichungen.
+Ordnung systematisch lösen lassen. Weil lineare Differentialgiechungen in der
+Technik häufig eingesetzt werden, betrachten wir im nächsten Kapitel ein System
+aus linearen Differentialgleichungen.
