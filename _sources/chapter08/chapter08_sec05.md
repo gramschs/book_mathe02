@@ -327,11 +327,11 @@ In die Zielfunktion eingesetzt erhalten wir
 
 Die 1. Ableitung ist
 
-$$\tilde{U}'(x) = (1+\frac{\pi}{2}) - \frac{100}{x^2}.$$
+$$\tilde{U}'(x) = (1+\frac{\pi}{4}) - \frac{100}{x^2}.$$
 
 Wir setzen die 1. Ableitung gleich Null, um Kandidaten für Extrema zu bestimmen,
 
-$$(1+\frac{\pi}{2}) - \frac{100}{x^2} = 0$$
+$$(1+\frac{\pi}{4}) - \frac{100}{x^2} = 0$$
 
 und lösen die Gleichung. Das Ergebnis ist 
 
