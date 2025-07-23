@@ -258,7 +258,7 @@ $$y \, y'- e^{5x} = 0.$$
 :class: miniexercise, toggle
 Allgemeine Lösung:
 
-$$y(x) = \pm \sqrt{\frac{2}{5} e^{5x} + C}$$
+$$y(x) = \pm \sqrt{\frac{2}{5} e^{5x} + 2C}$$
 ```{dropdown} Lösungsweg
 Wir setzen 
 
@@ -286,7 +286,7 @@ $$C(y) = \int C'(y) \, dy = \int y \, dy = \frac{1}{2}y^2 + c_1.$$
 Zuletzt wird aus $F(x,y) = \tilde{c}$ nach $y$ aufgelöst (mit $C=\tilde{c}-c_1$):
 
 $$-\frac{1}{5} e^{5x} + \frac{1}{2} y^2 = C \quad
-\Rightarrow y(x) = \pm \sqrt{\frac{2}{5} e^{5x} + C}$$
+\Rightarrow y(x) = \pm \sqrt{\frac{2}{5} e^{5x} + 2C}$$
 ```
 ````
 
